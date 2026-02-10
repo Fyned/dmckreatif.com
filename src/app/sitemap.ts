@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 const baseUrl = "https://dmckreatif.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const locales = ["en", "fr"];
+  const locales = ["en", "fr", "tr", "de"];
   const pages = [
     "",
     "/services",

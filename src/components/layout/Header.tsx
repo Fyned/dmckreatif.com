@@ -49,21 +49,18 @@ export default function Header() {
         <div className="hidden lg:flex items-center gap-3">
           {/* Language switcher */}
           <div className="flex border-2 border-neo-black">
-            <Link
-              href={pathname}
-              locale="en"
-              className="px-2 py-1 text-xs font-mono font-bold hover:bg-neo-lime transition-colors"
-            >
-              EN
-            </Link>
-            <div className="w-0.5 bg-neo-black" />
-            <Link
-              href={pathname}
-              locale="fr"
-              className="px-2 py-1 text-xs font-mono font-bold hover:bg-neo-lime transition-colors"
-            >
-              FR
-            </Link>
+            {(["en", "fr", "tr", "de"] as const).map((lang, i) => (
+              <div key={lang} className="flex">
+                {i > 0 && <div className="w-0.5 bg-neo-black" />}
+                <Link
+                  href={pathname}
+                  locale={lang}
+                  className="px-2 py-1 text-xs font-mono font-bold hover:bg-neo-lime transition-colors"
+                >
+                  {lang.toUpperCase()}
+                </Link>
+              </div>
+            ))}
           </div>
 
           <NeoButton href="/contact" size="sm" color="neo-lime">
@@ -95,21 +92,17 @@ export default function Header() {
                 {t(key)}
               </Link>
             ))}
-            <div className="flex gap-2 mt-2">
-              <Link
-                href={pathname}
-                locale="en"
-                className="flex-1 text-center px-4 py-3 font-mono text-sm font-bold border-2 border-neo-black hover:bg-neo-lime transition-colors"
-              >
-                EN
-              </Link>
-              <Link
-                href={pathname}
-                locale="fr"
-                className="flex-1 text-center px-4 py-3 font-mono text-sm font-bold border-2 border-neo-black hover:bg-neo-lime transition-colors"
-              >
-                FR
-              </Link>
+            <div className="grid grid-cols-4 gap-2 mt-2">
+              {(["en", "fr", "tr", "de"] as const).map((lang) => (
+                <Link
+                  key={lang}
+                  href={pathname}
+                  locale={lang}
+                  className="text-center px-4 py-3 font-mono text-sm font-bold border-2 border-neo-black hover:bg-neo-lime transition-colors"
+                >
+                  {lang.toUpperCase()}
+                </Link>
+              ))}
             </div>
             <NeoButton
               href="/contact"
