@@ -1,0 +1,94 @@
+# ============================================
+# DMC Kreatif — .htaccess (Hostinger Apache)
+# ============================================
+
+# Enable Rewrite Engine
+RewriteEngine On
+
+# ── FORCE HTTPS ──────────────────────────────
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ── WWW → NON-WWW REDIRECT ──────────────────
+RewriteCond %{HTTP_HOST} ^www\.dmckreatif\.com [NC]
+RewriteRule ^(.*)$ https://dmckreatif.com/$1 [L,R=301]
+
+# ── SECURITY HEADERS ────────────────────────
+<IfModule mod_headers.c>
+  # Prevent MIME-type sniffing
+  Header set X-Content-Type-Options "nosniff"
+
+  # Prevent clickjacking
+  Header set X-Frame-Options "SAMEORIGIN"
+
+  # XSS Protection
+  Header set X-XSS-Protection "1; mode=block"
+
+  # Referrer Policy
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Permissions Policy — block camera, mic, geolocation
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+  # Content Security Policy — basic
+  Header set Content-Security-Policy "frame-ancestors 'self';"
+
+  # Strict Transport Security (HSTS) — 1 year
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+# ── CACHING — STATIC ASSETS (1 YEAR) ────────
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot|webp|avif)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # HTML — no-cache, always revalidate
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# ── GZIP COMPRESSION ────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/woff
+  AddOutputFilterByType DEFLATE font/woff2
+</IfModule>
+
+# ── BROTLI COMPRESSION (if available) ───────
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# ── BLOCK DIRECTORY LISTING ──────────────────
+Options -Indexes
+
+# ── BLOCK SENSITIVE FILES ────────────────────
+<FilesMatch "\.(env|env\.local|env\.production|gitignore|lock)$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+# Block dotfiles (except .htaccess itself)
+<FilesMatch "^\.(?!htaccess)">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+# ── CUSTOM ERROR PAGES ───────────────────────
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# ── PREVENT HOTLINKING ───────────────────────
+<IfModule mod_rewrite.c>
+  RewriteCond %{HTTP_REFERER} !^$
+  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?dmckreatif\.com [NC]
+  RewriteRule \.(jpg|jpeg|png|gif|svg|webp|avif)$ - [F,NC,L]
+</IfModule>

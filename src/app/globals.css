@@ -2,26 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  body {
+    @apply bg-neo-bg text-neo-black font-space;
+    background-image: radial-gradient(#121212 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-attachment: fixed;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  ::selection {
+    @apply bg-neo-lime text-neo-black;
+  }
+
+  * {
+    @apply border-neo-black;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-space font-bold uppercase;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .neo-border {
+    @apply border-2 border-neo-black;
+  }
+
+  .neo-border-thick {
+    @apply border-4 border-neo-black;
+  }
+
+  .neo-press {
+    @apply transition-all duration-150;
+  }
+
+  .neo-press:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px #121212;
+  }
+
+  .neo-press:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+  }
+
+  .section-alt {
+    @apply bg-neo-bg-alt;
+  }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .text-stroke {
+    -webkit-text-stroke: 2px #121212;
+    color: transparent;
   }
+
+  .glitch:hover {
+    animation: glitch 0.3s ease-in-out;
+  }
+
+  .pause-on-hover:hover .marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-3px, 3px); }
+  40% { transform: translate(3px, -3px); }
+  60% { transform: translate(-3px, -3px); }
+  80% { transform: translate(3px, 3px); }
+  100% { transform: translate(0); }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neo-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neo-black border-2 border-neo-bg;
 }
