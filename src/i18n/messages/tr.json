@@ -166,16 +166,6 @@
       "testimonialName": "K. Yilmaz",
       "testimonialRole": "Müdür, ISO Home Energy"
     },
-    "filenes": {
-      "sector": "SPOR E-TİCARET",
-      "country": "ULUSLARARASI",
-      "description": "Spor ekipmanı perakendecisi için full-stack e-ticaret platformu. Ürün kataloğu, kullanıcı hesapları ve ödeme entegrasyonu.",
-      "challenge": "Filenes Sports, çoklu para birimi desteğiyle uluslararası alanda spor ekipmanı satışı yapabilecek ölçeklenebilir bir e-ticaret platformuna ihtiyaç duyuyordu.",
-      "solution": "Supabase altyapısı, dinamik ürün kataloğu, kullanıcı kimlik doğrulama ve entegre ödeme işleme sistemi ile full-stack bir uygulama geliştirdik.",
-      "result1": "Önceki platforma kıyasla sayfa yükleme hızında %70 iyileşme",
-      "result2": "Kapsamlı e-ticaret işlevselliğiyle 93+ Lighthouse skoru",
-      "result3": "Sepet terk oranında %30 azalma"
-    },
     "ata": {
       "sector": "MUHASEBECİLİK",
       "country": "BİRLEŞİK KRALLIK",

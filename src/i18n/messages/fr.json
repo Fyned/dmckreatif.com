@@ -166,16 +166,6 @@
       "testimonialName": "K. Yilmaz",
       "testimonialRole": "Directeur, ISO Home Energy"
     },
-    "filenes": {
-      "sector": "E-COMMERCE SPORTIF",
-      "country": "INTERNATIONAL",
-      "description": "Plateforme e-commerce full-stack pour un d\u00e9taillant d'\u00e9quipements sportifs. Catalogue produits, comptes utilisateurs et int\u00e9gration de paiement.",
-      "challenge": "Filenes Sports avait besoin d'une plateforme e-commerce \u00e9volutive pour vendre des \u00e9quipements sportifs \u00e0 l'international avec support multi-devises.",
-      "solution": "Nous avons construit une application full-stack avec backend Supabase, catalogue produits dynamique, authentification utilisateur et traitement de paiement int\u00e9gr\u00e9.",
-      "result1": "70% d'am\u00e9lioration de la vitesse de chargement par rapport \u00e0 la plateforme pr\u00e9c\u00e9dente",
-      "result2": "Score Lighthouse 93+ avec fonctionnalit\u00e9s e-commerce complexes",
-      "result3": "Abandon de panier r\u00e9duit de 30%"
-    },
     "ata": {
       "sector": "COMPTABILIT\u00c9",
       "country": "ROYAUME-UNI",

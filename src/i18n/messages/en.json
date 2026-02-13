@@ -166,16 +166,6 @@
       "testimonialName": "K. Yilmaz",
       "testimonialRole": "Director, ISO Home Energy"
     },
-    "filenes": {
-      "sector": "SPORTS E-COMMERCE",
-      "country": "INTERNATIONAL",
-      "description": "Full-stack e-commerce platform for a sports equipment retailer. Product catalog, user accounts, and payment integration.",
-      "challenge": "Filenes Sports needed a scalable e-commerce platform to sell sports equipment internationally with multi-currency support.",
-      "solution": "We built a full-stack application with Supabase backend, dynamic product catalog, user authentication, and integrated payment processing.",
-      "result1": "70% improvement in page load speed vs previous platform",
-      "result2": "93+ Lighthouse score with complex e-commerce functionality",
-      "result3": "Shopping cart abandonment reduced by 30%"
-    },
     "ata": {
       "sector": "ACCOUNTING",
       "country": "UNITED KINGDOM",
