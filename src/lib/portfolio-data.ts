@@ -1,125 +1,248 @@
+export interface ProjectMetrics {
+  lighthouse: number;
+  loadTime: string;
+  improvement: string;
+}
+
+export interface ProjectTestimonial {
+  quoteKey: string;
+  nameKey: string;
+  roleKey: string;
+}
+
 export interface Project {
   id: string;
+  num: string;
   name: string;
-  sector: string;
+  sectorKey: string;
   country: "FR" | "BE" | "UK" | "INT";
-  countryName: string;
+  countryNameKey: string;
   flag: string;
   url: string;
   tech: string[];
   accentColor: string;
-  description: string;
+  descriptionKey: string;
+  category: "web" | "ecommerce" | "branding";
+  year: string;
+  challengeKey: string;
+  solutionKey: string;
+  resultsKeys: string[];
+  metrics: ProjectMetrics;
+  testimonial?: ProjectTestimonial;
+  featured: boolean;
 }
 
 export const projects: Project[] = [
   {
     id: "cakir-facades",
+    num: "01",
     name: "CAKIR FACADES",
-    sector: "Facade Renovation",
+    sectorKey: "projects.cakir.sector",
     country: "FR",
-    countryName: "France",
+    countryNameKey: "projects.cakir.country",
     flag: "\u{1F1EB}\u{1F1F7}",
     url: "https://cakirfacades.fr",
     tech: ["React", "Vite", "Tailwind"],
     accentColor: "neo-lime",
-    description: "Complete brand identity and web presence for a premium facade renovation company in France.",
+    descriptionKey: "projects.cakir.description",
+    category: "web",
+    year: "2024",
+    challengeKey: "projects.cakir.challenge",
+    solutionKey: "projects.cakir.solution",
+    resultsKeys: ["projects.cakir.result1", "projects.cakir.result2", "projects.cakir.result3"],
+    metrics: { lighthouse: 96, loadTime: "<1.4s", improvement: "+40%" },
+    testimonial: {
+      quoteKey: "projects.cakir.testimonialQuote",
+      nameKey: "projects.cakir.testimonialName",
+      roleKey: "projects.cakir.testimonialRole",
+    },
+    featured: true,
   },
   {
     id: "altinbas-moustiquaire",
+    num: "02",
     name: "ALTINBAS",
-    sector: "Manufacturing",
+    sectorKey: "projects.altinbas.sector",
     country: "FR",
-    countryName: "France",
+    countryNameKey: "projects.altinbas.country",
     flag: "\u{1F1EB}\u{1F1F7}",
     url: "https://altinbasmoustiquaire.fr",
     tech: ["React", "Vite", "Tailwind"],
     accentColor: "neo-yellow",
-    description: "E-commerce ready website for a French mosquito screen manufacturer.",
+    descriptionKey: "projects.altinbas.description",
+    category: "ecommerce",
+    year: "2024",
+    challengeKey: "projects.altinbas.challenge",
+    solutionKey: "projects.altinbas.solution",
+    resultsKeys: ["projects.altinbas.result1", "projects.altinbas.result2", "projects.altinbas.result3"],
+    metrics: { lighthouse: 94, loadTime: "<1.6s", improvement: "+55%" },
+    testimonial: {
+      quoteKey: "projects.altinbas.testimonialQuote",
+      nameKey: "projects.altinbas.testimonialName",
+      roleKey: "projects.altinbas.testimonialRole",
+    },
+    featured: true,
   },
   {
     id: "consulting-energy",
+    num: "03",
     name: "CONSULTING ENERGY",
-    sector: "Energy Consulting",
+    sectorKey: "projects.consulting.sector",
     country: "FR",
-    countryName: "France",
+    countryNameKey: "projects.consulting.country",
     flag: "\u{1F1EB}\u{1F1F7}",
     url: "https://consulting-energy.fr",
     tech: ["React", "Vite", "TypeScript"],
     accentColor: "neo-blue",
-    description: "Professional consulting website for an energy advisory firm in France.",
+    descriptionKey: "projects.consulting.description",
+    category: "web",
+    year: "2024",
+    challengeKey: "projects.consulting.challenge",
+    solutionKey: "projects.consulting.solution",
+    resultsKeys: ["projects.consulting.result1", "projects.consulting.result2", "projects.consulting.result3"],
+    metrics: { lighthouse: 97, loadTime: "<1.2s", improvement: "+35%" },
+    testimonial: {
+      quoteKey: "projects.consulting.testimonialQuote",
+      nameKey: "projects.consulting.testimonialName",
+      roleKey: "projects.consulting.testimonialRole",
+    },
+    featured: true,
   },
   {
     id: "archi-construction",
+    num: "04",
     name: "ARCHI CONSTRUCTION",
-    sector: "Construction & Veranda",
+    sectorKey: "projects.archi.sector",
     country: "BE",
-    countryName: "Belgium",
+    countryNameKey: "projects.archi.country",
     flag: "\u{1F1E7}\u{1F1EA}",
     url: "https://archi.constructionveranda.com",
     tech: ["React", "Vite", "TypeScript", "Tailwind"],
     accentColor: "neo-pink",
-    description: "Multi-language construction company website serving the Belgian market.",
+    descriptionKey: "projects.archi.description",
+    category: "web",
+    year: "2024",
+    challengeKey: "projects.archi.challenge",
+    solutionKey: "projects.archi.solution",
+    resultsKeys: ["projects.archi.result1", "projects.archi.result2", "projects.archi.result3"],
+    metrics: { lighthouse: 95, loadTime: "<1.5s", improvement: "+60%" },
+    testimonial: {
+      quoteKey: "projects.archi.testimonialQuote",
+      nameKey: "projects.archi.testimonialName",
+      roleKey: "projects.archi.testimonialRole",
+    },
+    featured: true,
   },
   {
     id: "adamsons",
+    num: "05",
     name: "ADAMSONS ACCOUNTANTS",
-    sector: "Accounting Firm",
+    sectorKey: "projects.adamsons.sector",
     country: "UK",
-    countryName: "United Kingdom",
+    countryNameKey: "projects.adamsons.country",
     flag: "\u{1F1EC}\u{1F1E7}",
     url: "https://adamsons.uk.com",
     tech: ["React", "Vite", "Tailwind"],
     accentColor: "neo-purple",
-    description: "Modern accountancy firm website with client portal integration.",
+    descriptionKey: "projects.adamsons.description",
+    category: "web",
+    year: "2024",
+    challengeKey: "projects.adamsons.challenge",
+    solutionKey: "projects.adamsons.solution",
+    resultsKeys: ["projects.adamsons.result1", "projects.adamsons.result2", "projects.adamsons.result3"],
+    metrics: { lighthouse: 98, loadTime: "<1.1s", improvement: "+25%" },
+    testimonial: {
+      quoteKey: "projects.adamsons.testimonialQuote",
+      nameKey: "projects.adamsons.testimonialName",
+      roleKey: "projects.adamsons.testimonialRole",
+    },
+    featured: true,
   },
   {
     id: "iso-home-energy",
+    num: "06",
     name: "ISO HOME ENERGY",
-    sector: "Energy & Insulation",
+    sectorKey: "projects.iso.sector",
     country: "FR",
-    countryName: "France",
+    countryNameKey: "projects.iso.country",
     flag: "\u{1F1EB}\u{1F1F7}",
     url: "https://ih-energy.fr",
     tech: ["React", "Vite", "TypeScript", "Tailwind"],
     accentColor: "neo-green",
-    description: "Lead generation website for a home insulation and energy company.",
+    descriptionKey: "projects.iso.description",
+    category: "web",
+    year: "2024",
+    challengeKey: "projects.iso.challenge",
+    solutionKey: "projects.iso.solution",
+    resultsKeys: ["projects.iso.result1", "projects.iso.result2", "projects.iso.result3"],
+    metrics: { lighthouse: 95, loadTime: "<1.5s", improvement: "+45%" },
+    testimonial: {
+      quoteKey: "projects.iso.testimonialQuote",
+      nameKey: "projects.iso.testimonialName",
+      roleKey: "projects.iso.testimonialRole",
+    },
+    featured: true,
   },
   {
     id: "filenes-sports",
+    num: "07",
     name: "FILENES SPORTS",
-    sector: "E-Commerce / Sports",
+    sectorKey: "projects.filenes.sector",
     country: "INT",
-    countryName: "International",
+    countryNameKey: "projects.filenes.country",
     flag: "\u{1F30D}",
     url: "",
     tech: ["React", "Vite", "TypeScript", "Supabase"],
     accentColor: "neo-orange",
-    description: "Full e-commerce platform for sports equipment with inventory management.",
+    descriptionKey: "projects.filenes.description",
+    category: "ecommerce",
+    year: "2024",
+    challengeKey: "projects.filenes.challenge",
+    solutionKey: "projects.filenes.solution",
+    resultsKeys: ["projects.filenes.result1", "projects.filenes.result2", "projects.filenes.result3"],
+    metrics: { lighthouse: 93, loadTime: "<1.8s", improvement: "+70%" },
+    featured: false,
   },
   {
     id: "ata-accountancy",
+    num: "08",
     name: "ATA ACCOUNTANCY",
-    sector: "Accounting Firm",
+    sectorKey: "projects.ata.sector",
     country: "UK",
-    countryName: "United Kingdom",
+    countryNameKey: "projects.ata.country",
     flag: "\u{1F1EC}\u{1F1E7}",
     url: "",
     tech: ["React", "Vite", "Tailwind"],
     accentColor: "neo-blue",
-    description: "Professional accounting firm website with service booking system.",
+    descriptionKey: "projects.ata.description",
+    category: "web",
+    year: "2024",
+    challengeKey: "projects.ata.challenge",
+    solutionKey: "projects.ata.solution",
+    resultsKeys: ["projects.ata.result1", "projects.ata.result2", "projects.ata.result3"],
+    metrics: { lighthouse: 97, loadTime: "<1.2s", improvement: "+30%" },
+    featured: false,
   },
   {
     id: "gmg-design",
+    num: "09",
     name: "GMG DESIGN",
-    sector: "Digital Agency",
+    sectorKey: "projects.gmg.sector",
     country: "INT",
-    countryName: "International",
+    countryNameKey: "projects.gmg.country",
     flag: "\u{1F30D}",
     url: "",
     tech: ["React", "Vite", "Tailwind"],
     accentColor: "neo-lime",
-    description: "Our sister brand's digital presence, built with the same quality standards.",
+    descriptionKey: "projects.gmg.description",
+    category: "branding",
+    year: "2024",
+    challengeKey: "projects.gmg.challenge",
+    solutionKey: "projects.gmg.solution",
+    resultsKeys: ["projects.gmg.result1", "projects.gmg.result2", "projects.gmg.result3"],
+    metrics: { lighthouse: 96, loadTime: "<1.3s", improvement: "+50%" },
+    featured: false,
   },
 ];
 
-export const featuredProjects = projects.slice(0, 6);
+export const featuredProjects = projects.filter((p) => p.featured);

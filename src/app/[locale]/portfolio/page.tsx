@@ -1,158 +1,131 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
-import { Eye } from "lucide-react";
-import { projects, type Project } from "@/lib/portfolio-data";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { projects } from "@/lib/portfolio-data";
+import type { Project } from "@/lib/portfolio-data";
+import ProjectCard from "@/components/portfolio/ProjectCard";
+import ProjectFilters from "@/components/portfolio/ProjectFilters";
+import CaseStudyModal from "@/components/portfolio/CaseStudyModal";
+import NeoButton from "@/components/ui/NeoButton";
 import NeoBadge from "@/components/ui/NeoBadge";
-import ProjectModal from "@/components/portfolio/ProjectModal";
-import { fadeInUp, staggerContainer } from "@/lib/animations";
-
-const accentBarMap: Record<string, string> = {
-  "neo-lime": "bg-neo-lime",
-  "neo-yellow": "bg-neo-yellow",
-  "neo-pink": "bg-neo-pink",
-  "neo-blue": "bg-neo-blue",
-  "neo-green": "bg-neo-green",
-  "neo-purple": "bg-neo-purple",
-  "neo-orange": "bg-neo-orange",
-};
-
-type FilterKey = "ALL" | "FR" | "BE" | "UK" | "INT";
-
-const filters: { key: FilterKey; labelKey: string }[] = [
-  { key: "ALL", labelKey: "filterAll" },
-  { key: "FR", labelKey: "filterFR" },
-  { key: "BE", labelKey: "filterBE" },
-  { key: "UK", labelKey: "filterUK" },
-  { key: "INT", labelKey: "filterINT" },
-];
+import { fadeInUp } from "@/lib/animations";
 
 export default function PortfolioPage() {
   const t = useTranslations("portfolio");
-  const [selected, setSelected] = useState<Project | null>(null);
-  const [filter, setFilter] = useState<FilterKey>("ALL");
-  const [hoveredId, setHoveredId] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCountry, setActiveCountry] = useState("all");
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const filtered =
-    filter === "ALL"
-      ? projects
-      : projects.filter((p) => p.country === filter);
+  const filteredProjects = useMemo(() => {
+    return projects.filter((p) => {
+      const matchCategory = activeCategory === "all" || p.category === activeCategory;
+      const matchCountry = activeCountry === "all" || p.country === activeCountry;
+      return matchCategory && matchCountry;
+    });
+  }, [activeCategory, activeCountry]);
+
+  const selectedIndex = selectedProject
+    ? filteredProjects.findIndex((p) => p.id === selectedProject.id)
+    : -1;
 
   return (
     <div className="py-section-sm lg:py-section">
       <div className="max-w-container mx-auto px-6 lg:px-10">
+        {/* Hero */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
           className="mb-10"
         >
-          <span className="inline-block font-mono text-xs font-bold tracking-[0.2em] text-neo-black mb-3 border-2 border-neo-black bg-neo-bg-alt px-3 py-1">
-            {t("sectionSubtitle")}
-          </span>
+          <div className="flex items-center gap-3 mb-3">
+            <span className="inline-block font-mono text-xs font-bold tracking-[0.2em] text-neo-black border-2 border-neo-black bg-neo-bg-alt px-3 py-1">
+              {t("sectionSubtitle")}
+            </span>
+            <NeoBadge color="neo-lime">
+              {projects.length} {t("projectCount")}
+            </NeoBadge>
+          </div>
           <h1 className="font-space font-bold text-h1 text-neo-black">
             {t("sectionTitle")}
           </h1>
+          <p className="font-mono text-sm text-neo-black/80 mt-3 max-w-xl leading-relaxed">
+            {t("heroDescription")}
+          </p>
           <div className="w-16 h-1 bg-neo-black mt-4" />
         </motion.div>
 
         {/* Filters */}
-        <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          animate="visible"
-          className="flex flex-wrap gap-2 mb-12"
-        >
-          {filters.map(({ key, labelKey }) => (
-            <button
-              key={key}
-              onClick={() => setFilter(key)}
-              className={`font-mono text-xs uppercase tracking-wider px-4 py-2 border-2 border-neo-black transition-all duration-150 ${
-                filter === key
-                  ? "bg-neo-lime shadow-hard-sm"
-                  : "bg-neo-white hover:bg-neo-yellow"
-              }`}
-            >
-              {t(labelKey)}
-            </button>
-          ))}
-        </motion.div>
+        <ProjectFilters
+          activeCategory={activeCategory}
+          activeCountry={activeCountry}
+          onCategoryChange={setActiveCategory}
+          onCountryChange={setActiveCountry}
+        />
 
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {filtered.map((project) => (
+        {/* Project Grid */}
+        <AnimatePresence mode="popLayout">
+          {filteredProjects.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredProjects.map((project, i) => (
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  index={i}
+                  onClick={() => setSelectedProject(project)}
+                />
+              ))}
+            </div>
+          ) : (
             <motion.div
-              key={project.id}
-              variants={fadeInUp}
-              onClick={() => setSelected(project)}
-              onMouseEnter={() => setHoveredId(project.id)}
-              onMouseLeave={() => setHoveredId(null)}
-              className="group cursor-pointer border-2 border-neo-black bg-neo-white shadow-hard-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-hard transition-all duration-200"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center py-20 border-2 border-dashed border-neo-black/30"
             >
-              <div className={`h-2 ${accentBarMap[project.accentColor] ?? "bg-neo-lime"}`} />
-              <div className="relative aspect-[4/3] bg-neo-bg overflow-hidden border-b-2 border-neo-black">
-                {project.url && hoveredId === project.id ? (
-                  <iframe
-                    src={project.url}
-                    title={project.name}
-                    className="w-[200%] h-[200%] origin-top-left scale-50 pointer-events-none border-0"
-                    loading="lazy"
-                    sandbox="allow-scripts allow-same-origin"
-                  />
-                ) : (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <span className="text-4xl mb-3 block">{project.flag}</span>
-                      <span className="font-space font-bold text-lg text-neo-black">
-                        {project.name}
-                      </span>
-                    </div>
-                  </div>
-                )}
-                <div className="absolute inset-0 bg-neo-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="text-center">
-                    <Eye size={32} className="text-neo-lime mx-auto mb-2" />
-                    <span className="font-mono text-xs text-neo-lime uppercase tracking-wider">
-                      {t("viewProject")}
-                    </span>
-                  </div>
-                </div>
-                <div className="absolute top-3 left-3">
-                  <NeoBadge color={project.accentColor}>
-                    {project.flag} {project.countryName}
-                  </NeoBadge>
-                </div>
-              </div>
-              <div className="p-5">
-                <h3 className="font-space font-bold text-base mb-1">
-                  {project.name}
-                </h3>
-                <p className="font-mono text-xs font-bold text-neo-black/80 uppercase tracking-wider mb-3">
-                  {project.sector}
-                </p>
-                <div className="flex flex-wrap gap-1">
-                  {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="font-mono text-xs px-2 py-0.5 border border-neo-black text-neo-black"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              <span className="font-mono text-sm text-neo-black/60">
+                {t("noResults")}
+              </span>
             </motion.div>
-          ))}
+          )}
+        </AnimatePresence>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-20 border-2 border-neo-black p-8 lg:p-12 bg-neo-bg text-center"
+        >
+          <h2 className="font-space font-bold text-2xl lg:text-3xl text-neo-black mb-3">
+            {t("ctaTitle")}
+          </h2>
+          <p className="font-mono text-sm text-neo-black/80 mb-6 max-w-lg mx-auto">
+            {t("ctaDescription")}
+          </p>
+          <NeoButton href="/contact" size="lg" color="neo-lime">
+            {t("ctaButton")} <ArrowRight size={16} />
+          </NeoButton>
         </motion.div>
       </div>
 
-      <ProjectModal project={selected} onClose={() => setSelected(null)} />
+      <CaseStudyModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+        onPrev={() => {
+          if (selectedIndex > 0)
+            setSelectedProject(filteredProjects[selectedIndex - 1]);
+        }}
+        onNext={() => {
+          if (selectedIndex < filteredProjects.length - 1)
+            setSelectedProject(filteredProjects[selectedIndex + 1]);
+        }}
+        hasPrev={selectedIndex > 0}
+        hasNext={selectedIndex < filteredProjects.length - 1}
+      />
     </div>
   );
 }
