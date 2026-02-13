@@ -3,11 +3,21 @@
 import { useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink, ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
+import { X, ExternalLink, ArrowLeft, ArrowRight, CheckCircle2, Globe } from "lucide-react";
 import type { Project } from "@/lib/portfolio-data";
 import NeoButton from "@/components/ui/NeoButton";
 import NeoBadge from "@/components/ui/NeoBadge";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
+
+const accentGradientMap: Record<string, string> = {
+  "neo-lime": "from-neo-lime/20 to-neo-lime/5",
+  "neo-yellow": "from-neo-yellow/20 to-neo-yellow/5",
+  "neo-blue": "from-neo-blue/20 to-neo-blue/5",
+  "neo-pink": "from-neo-pink/20 to-neo-pink/5",
+  "neo-purple": "from-neo-purple/20 to-neo-purple/5",
+  "neo-green": "from-neo-green/20 to-neo-green/5",
+  "neo-orange": "from-neo-orange/20 to-neo-orange/5",
+};
 
 interface CaseStudyModalProps {
   project: Project | null;
@@ -81,7 +91,7 @@ export default function CaseStudyModal({
               </button>
             </div>
 
-            {/* Browser preview */}
+            {/* Browser-style preview (no iframe) */}
             {project.url && (
               <div className="border-b-2 border-neo-black">
                 <div className="flex items-center gap-2 px-4 py-2 bg-neo-black/5 border-b border-neo-black/10">
@@ -94,15 +104,22 @@ export default function CaseStudyModal({
                     {project.url}
                   </span>
                 </div>
-                <div className="aspect-video bg-neo-bg">
-                  <iframe
-                    src={project.url}
-                    title={project.name}
-                    className="w-full h-full border-0"
-                    loading="lazy"
-                    sandbox="allow-scripts allow-same-origin"
-                  />
-                </div>
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block aspect-[16/7] bg-gradient-to-br ${accentGradientMap[project.accentColor] ?? "from-neo-lime/20 to-neo-lime/5"} relative group/preview cursor-pointer`}
+                >
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+                    <Globe size={48} className="text-neo-black/20 group-hover/preview:text-neo-black/40 transition-colors" />
+                    <span className="font-space font-bold text-2xl lg:text-3xl text-neo-black/30 group-hover/preview:text-neo-black/50 transition-colors">
+                      {project.name}
+                    </span>
+                    <span className="font-mono text-xs font-bold text-neo-black/60 border-2 border-neo-black/30 px-4 py-2 group-hover/preview:bg-neo-lime group-hover/preview:border-neo-black group-hover/preview:text-neo-black transition-all">
+                      {t("portfolio.visitSite")} →
+                    </span>
+                  </div>
+                </a>
               </div>
             )}
 
