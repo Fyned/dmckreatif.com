@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import type { Project } from "@/lib/portfolio-data";
 import NeoBadge from "@/components/ui/NeoBadge";
@@ -47,6 +48,20 @@ export default function ProjectCard({ project, index, onClick }: ProjectCardProp
     >
       {/* Accent color bar */}
       <div className={`h-1.5 ${accentBarMap[project.accentColor] ?? "bg-neo-lime"}`} />
+
+      {/* Screenshot preview */}
+      {project.imageDesktop && (
+        <div className="relative overflow-hidden border-b-2 border-neo-black">
+          <Image
+            src={project.imageDesktop}
+            alt={project.name}
+            width={1440}
+            height={900}
+            className="w-full h-auto aspect-[16/9] object-cover object-top group-hover:scale-105 transition-transform duration-500"
+            quality={75}
+          />
+        </div>
+      )}
 
       <div className="p-6 lg:p-8">
         {/* Project number */}

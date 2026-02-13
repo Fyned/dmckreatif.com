@@ -30,6 +30,8 @@ export interface Project {
   metrics: ProjectMetrics;
   testimonial?: ProjectTestimonial;
   featured: boolean;
+  imageDesktop?: string;
+  imageMobile?: string;
 }
 
 export const projects: Project[] = [
@@ -42,6 +44,8 @@ export const projects: Project[] = [
     countryNameKey: "projects.cakir.country",
     flag: "\u{1F1EB}\u{1F1F7}",
     url: "https://cakirfacades.fr",
+    imageDesktop: "/portfolio/cakir-desktop.webp",
+    imageMobile: "/portfolio/cakir-mobile.webp",
     tech: ["React", "Vite", "Tailwind"],
     accentColor: "neo-lime",
     descriptionKey: "projects.cakir.description",
@@ -67,6 +71,8 @@ export const projects: Project[] = [
     countryNameKey: "projects.altinbas.country",
     flag: "\u{1F1EB}\u{1F1F7}",
     url: "https://altinbasmoustiquaire.fr",
+    imageDesktop: "/portfolio/altinbas-desktop.webp",
+    imageMobile: "/portfolio/altinbas-mobile.webp",
     tech: ["React", "Vite", "Tailwind"],
     accentColor: "neo-yellow",
     descriptionKey: "projects.altinbas.description",
@@ -92,6 +98,8 @@ export const projects: Project[] = [
     countryNameKey: "projects.consulting.country",
     flag: "\u{1F1EB}\u{1F1F7}",
     url: "https://consulting-energy.fr",
+    imageDesktop: "/portfolio/consulting-desktop.webp",
+    imageMobile: "/portfolio/consulting-mobile.webp",
     tech: ["React", "Vite", "TypeScript"],
     accentColor: "neo-blue",
     descriptionKey: "projects.consulting.description",
@@ -117,6 +125,8 @@ export const projects: Project[] = [
     countryNameKey: "projects.archi.country",
     flag: "\u{1F1E7}\u{1F1EA}",
     url: "https://archi.constructionveranda.com",
+    imageDesktop: "/portfolio/archi-desktop.webp",
+    imageMobile: "/portfolio/archi-mobile.webp",
     tech: ["React", "Vite", "TypeScript", "Tailwind"],
     accentColor: "neo-pink",
     descriptionKey: "projects.archi.description",
@@ -142,6 +152,8 @@ export const projects: Project[] = [
     countryNameKey: "projects.adamsons.country",
     flag: "\u{1F1EC}\u{1F1E7}",
     url: "https://adamsons.uk.com",
+    imageDesktop: "/portfolio/adamsons-desktop.webp",
+    imageMobile: "/portfolio/adamsons-mobile.webp",
     tech: ["React", "Vite", "Tailwind"],
     accentColor: "neo-purple",
     descriptionKey: "projects.adamsons.description",
@@ -167,6 +179,8 @@ export const projects: Project[] = [
     countryNameKey: "projects.iso.country",
     flag: "\u{1F1EB}\u{1F1F7}",
     url: "https://ih-energy.fr",
+    imageDesktop: "/portfolio/iso-desktop.webp",
+    imageMobile: "/portfolio/iso-mobile.webp",
     tech: ["React", "Vite", "TypeScript", "Tailwind"],
     accentColor: "neo-green",
     descriptionKey: "projects.iso.description",
