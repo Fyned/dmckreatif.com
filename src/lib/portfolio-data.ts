@@ -281,6 +281,28 @@ export const projects: Project[] = [
     metrics: { lighthouse: 95, loadTime: "<1.5s", improvement: "+50%" },
     featured: false,
   },
+  {
+    id: "retro-kosar",
+    num: "11",
+    name: "RETRO KOŞAR TEKSTİL",
+    sectorKey: "projects.retro.sector",
+    country: "INT",
+    countryNameKey: "projects.retro.country",
+    flag: "\u{1F30D}",
+    url: "https://retrokosartekstil.com/fr",
+    imageDesktop: "/portfolio/retro-desktop.webp",
+    imageMobile: "/portfolio/retro-mobile.webp",
+    tech: ["React", "Vite", "TypeScript", "Tailwind", "i18next"],
+    accentColor: "neo-pink",
+    descriptionKey: "projects.retro.description",
+    category: "ecommerce",
+    year: "2025",
+    challengeKey: "projects.retro.challenge",
+    solutionKey: "projects.retro.solution",
+    resultsKeys: ["projects.retro.result1", "projects.retro.result2", "projects.retro.result3"],
+    metrics: { lighthouse: 95, loadTime: "<1.5s", improvement: "+55%" },
+    featured: false,
+  },
 ];
 
 export const featuredProjects = projects.filter((p) => p.featured);
