@@ -185,6 +185,26 @@
       "result1": "50% längere Verweildauer auf dem Portfolio",
       "result2": "96+ Lighthouse-Score trotz umfangreicher visueller Inhalte",
       "result3": "Anfragerate über die Portfolio-Seite verdreifacht"
+    },
+    "idhome": {
+      "sector": "HAUSRENOVIERUNG",
+      "country": "FRANKREICH",
+      "description": "Umfassende Hausrenovierungs- und Notfall-Reparaturplattform mit schneller 7/7-Intervention und transparenter Preisgestaltung.",
+      "challenge": "ID Home ben\u00f6tigte eine professionelle Webpr\u00e4senz, um ihre umfassenden Renovierungsdienste zu pr\u00e4sentieren und einen schnellen Kundenkontakt f\u00fcr Notfallreparaturen zu erm\u00f6glichen.",
+      "solution": "Wir haben eine schnelle, Mobile-First-Website gebaut, die ihr Serviceangebot mit auff\u00e4lligen CTAs f\u00fcr kostenlose Kostenvoranschl\u00e4ge und Notrufe hervorhebt.",
+      "result1": "Professionelle Online-Pr\u00e4senz steigert Kundenvertrauen und Anfragen",
+      "result2": "Mobil-optimiertes Design f\u00fcr Notfall-Serviceanfragen unterwegs",
+      "result3": "SEO-optimierte Seiten f\u00fcr lokale Sichtbarkeit bei Renovierungsdiensten"
+    },
+    "mkn": {
+      "sector": "ABBRUCH & ERDARBEITEN",
+      "country": "BELGIEN",
+      "description": "Professionelle Website f\u00fcr Abbruch- und Erdarbeiten f\u00fcr belgienweite Operationen mit zweisprachiger Niederl\u00e4ndisch/Franz\u00f6sisch-Unterst\u00fctzung.",
+      "challenge": "MKN Technisch ben\u00f6tigte eine zweisprachige Website, um sowohl niederl\u00e4ndisch- als auch franz\u00f6sischsprachige Kunden in ganz Belgien f\u00fcr ihre Abbruchdienste zu erreichen.",
+      "solution": "Wir haben eine mutige, professionelle Website erstellt, die ihre Abbruch-Expertise mit zweisprachiger Unterst\u00fctzung und einfachen Kontaktm\u00f6glichkeiten pr\u00e4sentiert.",
+      "result1": "Zweisprachige Plattform erreicht sowohl den niederl\u00e4ndisch- als auch franz\u00f6sischsprachigen belgischen Markt",
+      "result2": "Klare Servicepr\u00e4sentation generiert qualifizierte Abbruchprojekt-Anfragen",
+      "result3": "WhatsApp-Integration erm\u00f6glicht sofortige Kundenkommunikation"
     }
   },
   "stats": {

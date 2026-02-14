@@ -185,6 +185,26 @@
       "result1": "50% increase in portfolio engagement time",
       "result2": "96+ Lighthouse score with rich visual content",
       "result3": "Inquiry rate from portfolio page tripled"
+    },
+    "idhome": {
+      "sector": "HOME RENOVATION",
+      "country": "FRANCE",
+      "description": "Full-service home renovation and emergency repair platform with rapid 7/7 response and transparent pricing.",
+      "challenge": "ID Home needed a professional web presence to showcase their comprehensive renovation services and enable quick customer contact for emergency repairs.",
+      "solution": "We built a fast, mobile-first website highlighting their service range with prominent CTAs for free quotes and emergency calls.",
+      "result1": "Professional online presence increasing customer trust and inquiries",
+      "result2": "Mobile-optimized design for emergency service requests on-the-go",
+      "result3": "SEO-optimized pages for local search visibility in renovation services"
+    },
+    "mkn": {
+      "sector": "DEMOLITION & GROUNDWORK",
+      "country": "BELGIUM",
+      "description": "Professional demolition and groundwork services website for Belgium-wide operations with bilingual Dutch/French support.",
+      "challenge": "MKN Technisch needed a bilingual website to reach both Dutch and French-speaking clients across Belgium for their demolition services.",
+      "solution": "We created a bold, professional website showcasing their demolition expertise with dual-language support and easy contact options.",
+      "result1": "Bilingual platform reaching both Dutch and French-speaking Belgian market",
+      "result2": "Clear service presentation driving qualified demolition project inquiries",
+      "result3": "WhatsApp integration enabling instant client communication"
     }
   },
   "stats": {

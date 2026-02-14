@@ -185,6 +185,26 @@
       "result1": "50% d'augmentation du temps d'engagement sur le portfolio",
       "result2": "Score Lighthouse 96+ avec un contenu visuel riche",
       "result3": "Taux de demandes depuis la page portfolio tripl\u00e9"
+    },
+    "idhome": {
+      "sector": "R\u00c9NOVATION DOMICILE",
+      "country": "FRANCE",
+      "description": "Plateforme de r\u00e9novation et d\u00e9pannage d'urgence avec intervention rapide 7j/7 et tarification transparente.",
+      "challenge": "ID Home avait besoin d'une pr\u00e9sence web professionnelle pour pr\u00e9senter leurs services de r\u00e9novation complets et permettre un contact rapide pour les r\u00e9parations d'urgence.",
+      "solution": "Nous avons construit un site mobile-first rapide mettant en avant leur gamme de services avec des CTAs prominents pour les devis gratuits et appels d'urgence.",
+      "result1": "Pr\u00e9sence en ligne professionnelle augmentant la confiance et les demandes clients",
+      "result2": "Design optimis\u00e9 mobile pour les demandes de service d'urgence en d\u00e9placement",
+      "result3": "Pages optimis\u00e9es SEO pour la visibilit\u00e9 locale dans les services de r\u00e9novation"
+    },
+    "mkn": {
+      "sector": "D\u00c9MOLITION & TERRASSEMENT",
+      "country": "BELGIQUE",
+      "description": "Site web professionnel de services de d\u00e9molition et terrassement pour des op\u00e9rations dans toute la Belgique avec support bilingue n\u00e9erlandais/fran\u00e7ais.",
+      "challenge": "MKN Technisch avait besoin d'un site web bilingue pour atteindre les clients n\u00e9erlandophones et francophones \u00e0 travers la Belgique pour leurs services de d\u00e9molition.",
+      "solution": "Nous avons cr\u00e9\u00e9 un site web audacieux et professionnel pr\u00e9sentant leur expertise en d\u00e9molition avec un support bilingue et des options de contact faciles.",
+      "result1": "Plateforme bilingue atteignant le march\u00e9 belge n\u00e9erlandophone et francophone",
+      "result2": "Pr\u00e9sentation claire des services g\u00e9n\u00e9rant des demandes qualifi\u00e9es de projets de d\u00e9molition",
+      "result3": "Int\u00e9gration WhatsApp permettant une communication instantan\u00e9e avec les clients"
     }
   },
   "stats": {

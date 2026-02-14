@@ -185,6 +185,26 @@
       "result1": "Portfolio etkileşim süresinde %50 artış",
       "result2": "Zengin görsel içerikle 96+ Lighthouse skoru",
       "result3": "Portfolio sayfasından gelen talep oranı üç katına çıktı"
+    },
+    "idhome": {
+      "sector": "EV TADİLAT",
+      "country": "FRANSA",
+      "description": "7/7 hızlı müdahale ve şeffaf fiyatlandırma ile tam kapsamlı ev tadilat ve acil onarım platformu.",
+      "challenge": "ID Home, kapsamlı tadilat hizmetlerini sergilemek ve acil onarımlar için hızlı müşteri iletişimi sağlamak amacıyla profesyonel bir web varlığına ihtiyaç duyuyordu.",
+      "solution": "Ücretsiz teklif ve acil arama için belirgin CTA'larla hizmet yelpazelerini öne çıkaran hızlı, mobil öncelikli bir web sitesi inşa ettik.",
+      "result1": "Müşteri güvenini ve talepleri artıran profesyonel çevrimiçi varlık",
+      "result2": "Hareket halinde acil servis talepleri için mobil optimize tasarım",
+      "result3": "Tadilat hizmetlerinde yerel arama görünürlüğü için SEO optimize sayfalar"
+    },
+    "mkn": {
+      "sector": "YIKIM & HAFRIYAT",
+      "country": "BELÇİKA",
+      "description": "Belçika genelinde operasyonlar için iki dilli Hollandaca/Fransızca destekli profesyonel yıkım ve hafriyat hizmetleri web sitesi.",
+      "challenge": "MKN Technisch, yıkım hizmetleri için Belçika genelinde hem Hollandaca hem Fransızca konuşan müşterilere ulaşmak amacıyla iki dilli bir web sitesine ihtiyaç duyuyordu.",
+      "solution": "İki dilli destek ve kolay iletişim seçenekleri ile yıkım uzmanlıklarını sergileyen cesur, profesyonel bir web sitesi oluşturduk.",
+      "result1": "Hem Hollandaca hem Fransızca konuşan Belçika pazarına ulaşan iki dilli platform",
+      "result2": "Nitelikli yıkım projesi talepleri oluşturan net hizmet sunumu",
+      "result3": "Anında müşteri iletişimi sağlayan WhatsApp entegrasyonu"
     }
   },
   "stats": {
