@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dmckreatif.com/sitemap.xml
+
+# Disallow private/auth pages
+Disallow: /*/admin
+Disallow: /*/dashboard
+Disallow: /*/login
+Disallow: /*/register
+Disallow: /*/forgot-password
+Disallow: /*/reset-password
+Disallow: /*/editor
+Disallow: /*/site
+Disallow: /*/template-order

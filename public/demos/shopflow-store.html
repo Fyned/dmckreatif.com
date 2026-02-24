@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopFlow — Modern E-Commerce Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#fafafa;--surface:#fff;--purple:#6c2bd9;--purple-light:#8b5cf6;--coral:#ff6b6b;--dark:#111;--text:#666;--font-display:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);padding:14px 0;border-bottom:1px solid rgba(0,0,0,.04)}
+nav .inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--dark)}
+.logo span{color:var(--purple)}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-size:.82rem;font-weight:500;color:var(--text);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--purple)}
+.nav-right{display:flex;gap:16px;align-items:center}
+.cart-btn{position:relative;font-size:1.2rem;cursor:pointer;background:none;border:none;color:var(--dark)}
+.cart-btn .badge{position:absolute;top:-6px;right:-8px;width:16px;height:16px;border-radius:50%;background:var(--coral);color:#fff;font-size:.6rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+.hero{padding:120px 0 60px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero-text .tag{display:inline-block;padding:6px 14px;background:linear-gradient(135deg,var(--purple),var(--coral));color:#fff;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border-radius:100px;margin-bottom:16px}
+.hero-text h1{font-family:var(--font-display);font-size:clamp(2.5rem,4.5vw,3.8rem);color:var(--dark);line-height:1.1;font-weight:700;margin-bottom:16px}
+.hero-text p{font-size:1rem;line-height:1.8;margin-bottom:28px;max-width:440px}
+.btn-purple{padding:16px 36px;background:var(--purple);color:#fff;font-family:var(--font-display);font-size:.85rem;font-weight:600;border:none;border-radius:14px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.btn-purple:hover{background:var(--purple-light);transform:translateY(-2px);box-shadow:0 12px 40px rgba(108,43,217,.25)}
+.hero-img{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hero-img .product{background:var(--surface);border-radius:16px;overflow:hidden;border:1px solid rgba(0,0,0,.04);transition:all .3s}
+.hero-img .product:hover{box-shadow:0 12px 40px rgba(0,0,0,.08);transform:translateY(-4px)}
+.hero-img .product img{width:100%;aspect-ratio:1;object-fit:cover}
+.hero-img .product .info{padding:12px}
+.hero-img .product .info h3{font-size:.85rem;font-weight:600;color:var(--dark)}
+.hero-img .product .info .price{font-family:var(--font-display);font-size:.95rem;color:var(--purple);font-weight:700;margin-top:4px}
+
+.features{padding:80px 0}
+.sec-header{text-align:center;margin-bottom:48px}
+.sec-header .tag{font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--purple);display:block;margin-bottom:8px}
+.sec-header h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);color:var(--dark);font-weight:700}
+.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.feat-card{background:var(--surface);border-radius:16px;padding:28px;text-align:center;border:1px solid rgba(0,0,0,.04);transition:all .3s}
+.feat-card:hover{border-color:var(--purple);box-shadow:0 8px 32px rgba(108,43,217,.06)}
+.feat-card .icon{font-size:2rem;margin-bottom:12px}
+.feat-card h3{font-family:var(--font-display);font-size:.95rem;color:var(--dark);font-weight:600;margin-bottom:6px}
+.feat-card p{font-size:.8rem;line-height:1.6}
+
+.products{padding:80px 0;background:var(--surface)}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.p-card{border-radius:16px;overflow:hidden;border:1px solid rgba(0,0,0,.04);transition:all .3s;background:var(--bg)}
+.p-card:hover{box-shadow:0 16px 48px rgba(0,0,0,.06);transform:translateY(-4px)}
+.p-card img{width:100%;aspect-ratio:1;object-fit:cover}
+.p-card .p-info{padding:16px}
+.p-card .p-info h3{font-size:.88rem;font-weight:600;color:var(--dark);margin-bottom:4px}
+.p-card .p-info .cat{font-size:.72rem;color:var(--text);text-transform:uppercase;letter-spacing:.05em}
+.p-card .p-info .bottom{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.p-card .p-info .price{font-family:var(--font-display);font-size:1rem;color:var(--purple);font-weight:700}
+.p-card .p-info .add-btn{padding:8px 16px;background:var(--dark);color:#fff;font-size:.7rem;font-weight:600;border:none;border-radius:8px;cursor:pointer;transition:all .2s}
+.p-card .p-info .add-btn:hover{background:var(--purple)}
+
+.cta{padding:80px 0;text-align:center}
+.cta-box{background:linear-gradient(135deg,var(--purple),#4c1d95);border-radius:24px;padding:64px 40px;color:#fff}
+.cta-box h2{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;margin-bottom:12px}
+.cta-box p{font-size:1rem;opacity:.7;margin-bottom:28px}
+.cta-box .btn-white{padding:14px 32px;background:#fff;color:var(--purple);font-family:var(--font-display);font-weight:700;font-size:.85rem;border:none;border-radius:14px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.cta-box .btn-white:hover{transform:translateY(-2px)}
+
+footer{padding:40px 0;text-align:center;border-top:1px solid rgba(0,0,0,.04)}
+footer p{font-size:.78rem}
+
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;padding-top:100px}
+  .nav-links{display:none}
+  .feat-grid{grid-template-columns:repeat(2,1fr)}
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="inner"><div class="logo">Shop<span>Flow</span></div><ul class="nav-links"><li><a href="#products">Shop</a></li><li><a href="#features">Features</a></li></ul><div class="nav-right"><button class="cart-btn">&#128722;<span class="badge">3</span></button></div></div></nav>
+
+<div class="container">
+  <section class="hero">
+    <div class="hero-text">
+      <span class="tag">New Season Collection</span>
+      <h1>Your Style, Delivered.</h1>
+      <p>Discover curated fashion, accessories, and lifestyle products. Free shipping on orders over &euro;50.</p>
+      <a href="#products" class="btn-purple">Shop Now</a>
+    </div>
+    <div class="hero-img">
+      <div class="product"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400&q=80" alt="Watch"><div class="info"><h3>Classic Watch</h3><div class="price">&euro;149</div></div></div>
+      <div class="product"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=400&q=80" alt="Sunglasses"><div class="info"><h3>Retro Shades</h3><div class="price">&euro;89</div></div></div>
+      <div class="product"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=400&q=80" alt="Sneakers"><div class="info"><h3>Sport Sneaker</h3><div class="price">&euro;129</div></div></div>
+      <div class="product"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=400&q=80" alt="Bag"><div class="info"><h3>Canvas Backpack</h3><div class="price">&euro;79</div></div></div>
+    </div>
+  </section>
+</div>
+
+<section id="features" class="features">
+  <div class="container">
+    <div class="sec-header"><span class="tag">Why ShopFlow</span><h2>Built for Modern Shopping</h2></div>
+    <div class="feat-grid">
+      <div class="feat-card"><div class="icon">&#128666;</div><h3>Free Shipping</h3><p>Free delivery on all orders above &euro;50 across Europe.</p></div>
+      <div class="feat-card"><div class="icon">&#128260;</div><h3>Easy Returns</h3><p>30-day hassle-free returns on all products.</p></div>
+      <div class="feat-card"><div class="icon">&#128274;</div><h3>Secure Payment</h3><p>SSL encrypted checkout with all major cards and PayPal.</p></div>
+      <div class="feat-card"><div class="icon">&#128172;</div><h3>24/7 Support</h3><p>Live chat and email support around the clock.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="products">
+  <div class="container">
+    <div class="sec-header"><span class="tag">Shop</span><h2>Trending Products</h2></div>
+    <div class="product-grid">
+      <div class="p-card"><img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?auto=format&fit=crop&w=400&q=80" alt="Product"><div class="p-info"><h3>Minimalist Wallet</h3><div class="cat">Accessories</div><div class="bottom"><span class="price">&euro;39</span><button class="add-btn">Add to Cart</button></div></div></div>
+      <div class="p-card"><img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=400&q=80" alt="Product"><div class="p-info"><h3>Ceramic Mug Set</h3><div class="cat">Home &amp; Living</div><div class="bottom"><span class="price">&euro;28</span><button class="add-btn">Add to Cart</button></div></div></div>
+      <div class="p-card"><img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=400&q=80" alt="Product"><div class="p-info"><h3>Running Shoes</h3><div class="cat">Footwear</div><div class="bottom"><span class="price">&euro;119</span><button class="add-btn">Add to Cart</button></div></div></div>
+      <div class="p-card"><img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=400&q=80" alt="Product"><div class="p-info"><h3>Leather Belt</h3><div class="cat">Accessories</div><div class="bottom"><span class="price">&euro;49</span><button class="add-btn">Add to Cart</button></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta"><div class="container"><div class="cta-box"><h2>Join 10,000+ Happy Customers</h2><p>Sign up for exclusive deals and early access to new collections.</p><a href="#" class="btn-white">Subscribe for 10% Off</a></div></div></section>
+
+<footer><div class="container"><p>&copy; 2024 ShopFlow. All Rights Reserved.</p></div></footer>
+
+</body>
+</html>

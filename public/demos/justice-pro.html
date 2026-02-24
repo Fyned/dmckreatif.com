@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justice Pro — Attorney at Law</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f9f8f5;--dark:#1a3a2a;--bronze:#cd9b5a;--bronze-light:#ddb577;--cream:#f5f0e8;--text:#5e6b5e;--surface:#fff;--font-display:'Lora',Georgia,serif;--font-body:'DM Sans',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(249,248,245,.92);backdrop-filter:blur(16px);padding:14px 0;border-bottom:1px solid rgba(26,58,42,.06)}
+nav .inner{max-width:960px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-display);font-size:1.3rem;font-weight:600;color:var(--dark)}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{font-size:.82rem;font-weight:500;color:var(--text);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--dark)}
+.nav-btn{padding:10px 24px;background:var(--dark);color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.05em;border:none;border-radius:6px;text-decoration:none;transition:all .2s;cursor:pointer}
+.nav-btn:hover{background:#244d38}
+.container{max-width:960px;margin:0 auto;padding:0 24px}
+
+.hero{padding:140px 0 80px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero-text .tag{display:inline-block;padding:6px 16px;background:var(--cream);color:var(--dark);font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;border-radius:4px;margin-bottom:16px}
+.hero-text h1{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,2.8rem);color:var(--dark);line-height:1.25;margin-bottom:16px}
+.hero-text p{font-size:.95rem;line-height:1.8;margin-bottom:28px}
+.btn-dark{padding:14px 32px;background:var(--dark);color:#fff;font-size:.82rem;font-weight:600;border:none;border-radius:8px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.btn-dark:hover{background:#244d38;transform:translateY(-1px)}
+.hero-img img{width:100%;border-radius:16px;object-fit:cover;aspect-ratio:3/4}
+
+.services{padding:80px 0}
+.sec-head{text-align:center;margin-bottom:40px}
+.sec-head h2{font-family:var(--font-display);font-size:1.8rem;color:var(--dark)}
+.sec-head p{font-size:.9rem;margin-top:6px}
+.svc-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.svc-item{background:var(--surface);padding:28px;border-radius:12px;border:1px solid rgba(26,58,42,.06);transition:all .3s;display:flex;gap:16px;align-items:flex-start}
+.svc-item:hover{border-color:var(--bronze);box-shadow:0 8px 24px rgba(0,0,0,.04)}
+.svc-icon{width:40px;height:40px;border-radius:8px;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.svc-item h3{font-family:var(--font-display);font-size:1rem;color:var(--dark);margin-bottom:4px}
+.svc-item p{font-size:.82rem;line-height:1.6}
+
+.contact{padding:80px 0;text-align:center}
+.contact-box{background:var(--dark);border-radius:20px;padding:56px 32px;color:#fff}
+.contact-box h2{font-family:var(--font-display);font-size:1.8rem;margin-bottom:12px}
+.contact-box p{font-size:.95rem;opacity:.6;margin-bottom:28px}
+.contact-box .btn-bronze{padding:14px 32px;background:var(--bronze);color:var(--dark);font-weight:700;font-size:.82rem;letter-spacing:.05em;text-transform:uppercase;border:none;border-radius:8px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.contact-box .btn-bronze:hover{background:var(--bronze-light)}
+.contact-info{display:flex;gap:32px;justify-content:center;margin-top:24px;flex-wrap:wrap}
+.contact-info span{font-size:.85rem;opacity:.5}
+
+footer{padding:32px 0;text-align:center;border-top:1px solid rgba(26,58,42,.06)}
+footer p{font-size:.78rem}
+
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr}
+  .hero-img{order:-1}
+  .nav-links{display:none}
+  .svc-list{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <div class="logo">Justice Pro</div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-btn">Free Case Review</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container" style="display:contents">
+    <div class="hero-text" style="padding-left:max(24px,calc((100vw - 960px)/2))">
+      <span class="tag">Advocaat &amp; Attorney</span>
+      <h1>Dedicated Legal Representation for Individuals &amp; Families</h1>
+      <p>With over 15 years of experience in Dutch civil law, I provide compassionate and effective legal counsel for your most important matters.</p>
+      <a href="#contact" class="btn-dark">Request a Free Consultation</a>
+    </div>
+    <div class="hero-img" style="padding-right:max(24px,calc((100vw - 960px)/2))">
+      <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=600&q=80" alt="Office">
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="sec-head">
+      <h2>Practice Areas</h2>
+      <p>Comprehensive legal services tailored to your needs</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc-item"><div class="svc-icon">&#9878;</div><div><h3>Family Law</h3><p>Divorce, custody, alimony, and mediation proceedings.</p></div></div>
+      <div class="svc-item"><div class="svc-icon">&#127968;</div><div><h3>Real Estate</h3><p>Property purchases, lease disputes, and condominium law.</p></div></div>
+      <div class="svc-item"><div class="svc-icon">&#128188;</div><div><h3>Employment</h3><p>Dismissal, severance negotiations, and workplace conflicts.</p></div></div>
+      <div class="svc-item"><div class="svc-icon">&#128220;</div><div><h3>Inheritance</h3><p>Wills, estate planning, and succession disputes.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-box">
+      <h2>Let&rsquo;s Discuss Your Case</h2>
+      <p>First consultation is free and confidential. Based in The Hague.</p>
+      <a href="tel:+31705559012" class="btn-bronze">Call +31 70 555 90 12</a>
+      <div class="contact-info">
+        <span>Lange Voorhout 15, The Hague</span>
+        <span>&middot;</span>
+        <span>info@justicepro.nl</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container"><p>&copy; 2024 Justice Pro. The Hague, Netherlands.</p></div></footer>
+
+</body>
+</html>

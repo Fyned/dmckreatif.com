@@ -1,0 +1,3 @@
+// Launcher script for preview_start — ensures correct cwd
+process.chdir(__dirname);
+import("./node_modules/vite/bin/vite.js");

@@ -1,0 +1,260 @@
+/* GrapesJS Dark Theme — DMC Kreatif Editor */
+
+/* Canvas background */
+.gjs-cv-canvas {
+  background-color: #2a2a2a !important;
+}
+
+/* Frame wrapper */
+.gjs-frame-wrapper {
+  background-color: #2a2a2a;
+}
+
+/* Block items */
+.gjs-block {
+  background-color: #222 !important;
+  border: 1px solid #333 !important;
+  color: #ccc !important;
+  border-radius: 4px !important;
+  min-height: 60px !important;
+}
+
+.gjs-block:hover {
+  border-color: #CDFF50 !important;
+  box-shadow: 0 0 8px rgba(205, 255, 80, 0.15) !important;
+}
+
+.gjs-block svg {
+  fill: #999 !important;
+}
+
+.gjs-block:hover svg {
+  fill: #CDFF50 !important;
+}
+
+.gjs-block-label {
+  color: #999 !important;
+  font-size: 10px !important;
+}
+
+/* Block category */
+.gjs-block-categories,
+.gjs-block-category {
+  background-color: transparent !important;
+}
+
+.gjs-title {
+  background-color: #1a1a1a !important;
+  border-bottom: 1px solid #333 !important;
+  color: #ccc !important;
+  font-size: 11px !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  padding: 8px 10px !important;
+}
+
+/* Layers panel */
+.gjs-layers {
+  background-color: transparent !important;
+}
+
+.gjs-layer {
+  background-color: transparent !important;
+  border-bottom: 1px solid #222 !important;
+}
+
+.gjs-layer-name {
+  color: #ccc !important;
+  font-size: 11px !important;
+}
+
+.gjs-layer:hover .gjs-layer-name {
+  color: #CDFF50 !important;
+}
+
+.gjs-layer.gjs-selected .gjs-layer-name {
+  color: #CDFF50 !important;
+}
+
+.gjs-layer-vis {
+  color: #666 !important;
+}
+
+.gjs-layer-caret {
+  color: #666 !important;
+}
+
+.gjs-layer-count {
+  color: #555 !important;
+}
+
+/* Style manager */
+.gjs-sm-sector {
+  border-bottom: 1px solid #333 !important;
+}
+
+.gjs-sm-sector-title {
+  background-color: #1a1a1a !important;
+  color: #ccc !important;
+  border: none !important;
+  font-size: 11px !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+}
+
+.gjs-sm-sector-caret {
+  color: #666 !important;
+}
+
+.gjs-sm-property {
+  color: #999 !important;
+  font-size: 11px !important;
+}
+
+.gjs-sm-label {
+  color: #888 !important;
+}
+
+/* Input fields */
+.gjs-field {
+  background-color: #222 !important;
+  border: 1px solid #333 !important;
+  border-radius: 3px !important;
+  color: #ccc !important;
+}
+
+.gjs-field:focus-within {
+  border-color: #CDFF50 !important;
+}
+
+.gjs-field input,
+.gjs-field select,
+.gjs-field textarea {
+  color: #ccc !important;
+  background: transparent !important;
+}
+
+.gjs-field-arrow-u,
+.gjs-field-arrow-d {
+  border-top-color: #666 !important;
+  border-bottom-color: #666 !important;
+}
+
+/* Radio/button groups in style manager */
+.gjs-radio-item {
+  background-color: #222 !important;
+  border: 1px solid #333 !important;
+  color: #999 !important;
+}
+
+.gjs-radio-item:hover {
+  color: #ccc !important;
+}
+
+.gjs-radio-item input:checked + .gjs-radio-item-label {
+  background-color: rgba(205, 255, 80, 0.15) !important;
+  color: #CDFF50 !important;
+}
+
+/* Color picker */
+.gjs-field-color-picker {
+  background-color: #222 !important;
+}
+
+/* Selected element highlight */
+.gjs-selected {
+  outline: 2px solid #CDFF50 !important;
+  outline-offset: -2px;
+}
+
+/* Hover highlight */
+.gjs-hovered {
+  outline: 1px dashed rgba(205, 255, 80, 0.5) !important;
+}
+
+/* Toolbar (element action buttons) */
+.gjs-toolbar {
+  background-color: #111 !important;
+  border: 1px solid #333 !important;
+  border-radius: 4px !important;
+}
+
+.gjs-toolbar-item {
+  color: #999 !important;
+  padding: 4px 6px !important;
+}
+
+.gjs-toolbar-item:hover {
+  color: #CDFF50 !important;
+}
+
+/* Badge (element type label) */
+.gjs-badge {
+  background-color: #CDFF50 !important;
+  color: #111 !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  padding: 2px 6px !important;
+  border-radius: 2px !important;
+}
+
+/* Resizer handles */
+.gjs-resizer-h {
+  border-color: #CDFF50 !important;
+}
+
+/* Component placeholder */
+.gjs-placeholder {
+  border-color: #CDFF50 !important;
+}
+
+/* Scrollbar styling for panels */
+.gjs-blocks-c::-webkit-scrollbar,
+.gjs-layers::-webkit-scrollbar,
+.gjs-sm-sectors::-webkit-scrollbar {
+  width: 6px;
+}
+
+.gjs-blocks-c::-webkit-scrollbar-track,
+.gjs-layers::-webkit-scrollbar-track,
+.gjs-sm-sectors::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.gjs-blocks-c::-webkit-scrollbar-thumb,
+.gjs-layers::-webkit-scrollbar-thumb,
+.gjs-sm-sectors::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+.gjs-blocks-c::-webkit-scrollbar-thumb:hover,
+.gjs-layers::-webkit-scrollbar-thumb:hover,
+.gjs-sm-sectors::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* RTE (Rich Text Editor) toolbar */
+.gjs-rte-toolbar {
+  background-color: #111 !important;
+  border: 1px solid #333 !important;
+  border-radius: 4px !important;
+}
+
+.gjs-rte-actionbar .gjs-rte-action {
+  color: #999 !important;
+  border: none !important;
+}
+
+.gjs-rte-actionbar .gjs-rte-action:hover {
+  color: #CDFF50 !important;
+}
+
+/* Trait manager (component settings) */
+.gjs-trt-trait {
+  color: #999 !important;
+}
+
+.gjs-trt-trait .gjs-label {
+  color: #888 !important;
+}

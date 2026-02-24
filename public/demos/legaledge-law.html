@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LegalEdge — Trusted Law Firm</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f5f6f8;--surface:#fff;--navy:#1b2a4a;--gold:#c8a951;--gold-light:#dcc274;--dark:#111827;--text:#5b6577;--font-display:'Libre Baskerville',Georgia,serif;--font-body:'Source Sans 3',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);padding:14px 0}
+nav .inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:#fff}
+.logo span{color:var(--gold)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:.82rem;font-weight:400;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-btn{padding:10px 28px;border:1px solid var(--gold);color:var(--gold);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all .2s}
+.nav-btn:hover{background:var(--gold);color:var(--navy)}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+.hero{min-height:100vh;display:flex;align-items:center;background:var(--navy);position:relative;padding:100px 0 80px}
+.hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=80') center/cover;opacity:.08}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-text .tag{display:inline-block;padding:6px 16px;border:1px solid rgba(200,169,81,.3);color:var(--gold);font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;margin-bottom:20px}
+.hero-text h1{font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3.2rem);color:#fff;line-height:1.25;margin-bottom:20px}
+.hero-text p{font-size:1rem;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:32px;max-width:460px}
+.btn-gold{padding:16px 36px;background:var(--gold);color:var(--navy);font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:none;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
+.btn-gold:hover{background:var(--gold-light)}
+.hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.h-stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:24px;text-align:center}
+.h-stat .num{font-family:var(--font-display);font-size:2rem;color:var(--gold);font-weight:700}
+.h-stat .label{font-size:.75rem;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+
+.practices{padding:100px 0}
+.sec-header{text-align:center;margin-bottom:56px}
+.sec-header .tag{font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:8px}
+.sec-header h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);color:var(--dark)}
+.practice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.p-card{background:var(--surface);padding:32px;border-bottom:3px solid transparent;transition:all .3s}
+.p-card:hover{border-bottom-color:var(--gold);box-shadow:0 16px 48px rgba(0,0,0,.06);transform:translateY(-4px)}
+.p-card h3{font-family:var(--font-display);font-size:1.1rem;color:var(--dark);margin-bottom:12px}
+.p-card p{font-size:.88rem;line-height:1.7}
+
+.attorneys{padding:100px 0;background:var(--surface)}
+.att-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.att-card{text-align:center}
+.att-card img{width:160px;height:160px;border-radius:4px;object-fit:cover;margin:0 auto 16px;filter:grayscale(.3)}
+.att-card h3{font-family:var(--font-display);font-size:1.1rem;color:var(--dark)}
+.att-card .role{font-size:.8rem;color:var(--gold);font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-top:4px}
+.att-card p{font-size:.85rem;margin-top:8px;line-height:1.6}
+
+.cta{padding:100px 0;text-align:center}
+.cta-box{background:var(--navy);padding:72px 40px}
+.cta-box h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);color:#fff;margin-bottom:16px}
+.cta-box p{color:rgba(255,255,255,.5);font-size:1rem;margin-bottom:32px}
+
+footer{padding:40px 0;background:var(--dark);text-align:center}
+footer p{font-size:.78rem;color:rgba(255,255,255,.3)}
+
+@media(max-width:768px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-stats{display:none}
+  .nav-links{display:none}
+  .practice-grid{grid-template-columns:1fr}
+  .att-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <div class="logo">Legal<span>Edge</span></div>
+    <ul class="nav-links">
+      <li><a href="#practices">Practice Areas</a></li>
+      <li><a href="#attorneys">Attorneys</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-btn">Free Consultation</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="tag">Established 2005</span>
+        <h1>Strategic Legal Counsel for Complex Matters</h1>
+        <p>LegalEdge provides expert legal representation across corporate law, litigation, and international trade. Trusted by businesses throughout Europe.</p>
+        <a href="#contact" class="btn-gold">Schedule a Consultation</a>
+      </div>
+      <div class="hero-stats">
+        <div class="h-stat"><div class="num">500+</div><div class="label">Cases Won</div></div>
+        <div class="h-stat"><div class="num">19</div><div class="label">Years Active</div></div>
+        <div class="h-stat"><div class="num">12</div><div class="label">Senior Partners</div></div>
+        <div class="h-stat"><div class="num">6</div><div class="label">Offices in EU</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="practices" class="practices">
+  <div class="container">
+    <div class="sec-header">
+      <span class="tag">Expertise</span>
+      <h2>Practice Areas</h2>
+    </div>
+    <div class="practice-grid">
+      <div class="p-card"><h3>Corporate &amp; Commercial</h3><p>Mergers, acquisitions, joint ventures, corporate governance, and shareholder agreements.</p></div>
+      <div class="p-card"><h3>Litigation &amp; Dispute</h3><p>Commercial disputes, arbitration, mediation, and enforcement of judgments.</p></div>
+      <div class="p-card"><h3>Real Estate Law</h3><p>Property transactions, development agreements, zoning, and landlord-tenant disputes.</p></div>
+      <div class="p-card"><h3>Employment Law</h3><p>Contracts, terminations, workplace disputes, and regulatory compliance.</p></div>
+      <div class="p-card"><h3>Intellectual Property</h3><p>Patents, trademarks, copyrights, licensing, and IP enforcement strategies.</p></div>
+      <div class="p-card"><h3>International Trade</h3><p>Cross-border transactions, trade compliance, customs, and export controls.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="attorneys" class="attorneys">
+  <div class="container">
+    <div class="sec-header">
+      <span class="tag">Our Team</span>
+      <h2>Senior Partners</h2>
+    </div>
+    <div class="att-grid">
+      <div class="att-card">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Partner">
+        <h3>Hendrik Van Dijk</h3>
+        <div class="role">Managing Partner</div>
+        <p>20+ years in corporate law, former advisor to the European Commission.</p>
+      </div>
+      <div class="att-card">
+        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=300&q=80" alt="Partner">
+        <h3>Claire Fontaine</h3>
+        <div class="role">Litigation Lead</div>
+        <p>Specialist in complex commercial disputes and international arbitration.</p>
+      </div>
+      <div class="att-card">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80" alt="Partner">
+        <h3>Marcus Brandt</h3>
+        <div class="role">IP &amp; Trade</div>
+        <p>Former patent attorney with deep expertise in technology and life sciences.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="cta">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Protect What Matters Most</h2>
+      <p>Get a free 30-minute consultation with one of our senior partners.</p>
+      <a href="mailto:contact@legaledge.eu" class="btn-gold">contact@legaledge.eu</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container"><p>&copy; 2024 LegalEdge Law Firm. Brussels &middot; Paris &middot; Amsterdam &middot; London</p></div></footer>
+
+</body>
+</html>

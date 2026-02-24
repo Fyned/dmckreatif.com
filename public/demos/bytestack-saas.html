@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ByteStack — Project Management Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#fafafa;--surface:#fff;--violet:#7c3aed;--violet-light:#8b5cf6;--orange:#f97316;--dark:#0f172a;--text:#64748b;--font-display:'Syne',sans-serif;--font-body:'DM Sans',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,250,.92);backdrop-filter:blur(16px);padding:14px 0;border-bottom:1px solid rgba(0,0,0,.04)}
+nav .inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-display);font-size:1.3rem;font-weight:800;color:var(--dark)}
+.logo span{color:var(--violet)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:.82rem;font-weight:500;color:var(--text);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--violet)}
+.nav-right{display:flex;gap:12px;align-items:center}
+.nav-right a{font-size:.82rem;font-weight:500;color:var(--text);text-decoration:none}
+.nav-btn{padding:10px 24px;background:var(--violet);color:#fff;font-size:.78rem;font-weight:600;border:none;border-radius:10px;text-decoration:none;transition:all .2s;cursor:pointer}
+.nav-btn:hover{background:var(--violet-light)}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+.hero{padding:130px 0 60px;text-align:center}
+.hero .badge{display:inline-flex;gap:6px;align-items:center;padding:6px 14px;background:rgba(124,58,237,.08);color:var(--violet);font-size:.72rem;font-weight:600;border-radius:100px;margin-bottom:20px}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.4rem,4.5vw,3.6rem);color:var(--dark);font-weight:800;line-height:1.08;margin-bottom:16px}
+.hero p{font-size:1.05rem;max-width:540px;margin:0 auto 32px;line-height:1.8}
+.hero-btns{display:flex;gap:12px;justify-content:center}
+.btn-violet{padding:14px 32px;background:var(--violet);color:#fff;font-family:var(--font-display);font-size:.85rem;font-weight:600;border:none;border-radius:12px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.btn-violet:hover{background:var(--violet-light);transform:translateY(-2px);box-shadow:0 8px 32px rgba(124,58,237,.2)}
+.btn-outline{padding:14px 32px;border:2px solid var(--dark);color:var(--dark);font-family:var(--font-display);font-size:.85rem;font-weight:600;border-radius:12px;text-decoration:none;display:inline-block;transition:all .2s;background:transparent}
+.btn-outline:hover{background:var(--dark);color:#fff}
+.hero-screen{margin-top:48px;background:var(--surface);border:1px solid rgba(0,0,0,.06);border-radius:16px;padding:4px;max-width:960px;margin-left:auto;margin-right:auto}
+.hero-screen img{width:100%;border-radius:12px;aspect-ratio:16/9;object-fit:cover}
+
+.features{padding:100px 0}
+.sec-header{text-align:center;margin-bottom:56px}
+.sec-header .tag{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--violet);display:block;margin-bottom:8px}
+.sec-header h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);color:var(--dark);font-weight:800}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feat-card{background:var(--surface);border-radius:16px;padding:32px;border:1px solid rgba(0,0,0,.04);transition:all .3s}
+.feat-card:hover{border-color:rgba(124,58,237,.15);box-shadow:0 12px 40px rgba(0,0,0,.06);transform:translateY(-2px)}
+.feat-card .icon{width:44px;height:44px;border-radius:12px;background:rgba(124,58,237,.08);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:16px}
+.feat-card h3{font-family:var(--font-display);font-size:1rem;color:var(--dark);font-weight:700;margin-bottom:8px}
+.feat-card p{font-size:.85rem;line-height:1.7}
+
+.how{padding:100px 0;background:var(--surface);border-radius:24px;margin:0 24px}
+.how-inner{max-width:1200px;margin:0 auto;padding:0 24px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;counter-reset:step}
+.step{text-align:center;counter-increment:step}
+.step::before{content:counter(step);display:flex;width:48px;height:48px;border-radius:50%;background:var(--violet);color:#fff;font-family:var(--font-display);font-size:1.2rem;font-weight:800;align-items:center;justify-content:center;margin:0 auto 16px}
+.step h3{font-family:var(--font-display);font-size:1.05rem;color:var(--dark);font-weight:700;margin-bottom:8px}
+.step p{font-size:.85rem;line-height:1.7}
+
+.testimonials{padding:100px 0}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.test-card{background:var(--surface);border-radius:16px;padding:28px;border:1px solid rgba(0,0,0,.04)}
+.test-card p{font-size:.88rem;line-height:1.7;font-style:italic;color:var(--dark);margin-bottom:16px}
+.test-card .author{display:flex;align-items:center;gap:10px}
+.test-card .avatar{width:36px;height:36px;border-radius:50%;background:rgba(124,58,237,.08);display:flex;align-items:center;justify-content:center;font-size:.9rem}
+.test-card .name{font-size:.82rem;font-weight:600;color:var(--dark)}
+.test-card .role{font-size:.72rem;color:var(--text)}
+
+.cta{padding:100px 0;text-align:center}
+.cta-box{background:linear-gradient(135deg,var(--violet),#4c1d95);border-radius:24px;padding:64px 40px;color:#fff}
+.cta-box h2{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;margin-bottom:12px}
+.cta-box p{opacity:.7;margin-bottom:28px;font-size:1rem}
+.cta-box .btn-white{padding:14px 32px;background:#fff;color:var(--violet);font-family:var(--font-display);font-weight:700;font-size:.85rem;border:none;border-radius:12px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.cta-box .btn-white:hover{transform:translateY(-2px)}
+
+footer{padding:40px 0;text-align:center;border-top:1px solid rgba(0,0,0,.04)}
+footer p{font-size:.78rem}
+
+@media(max-width:768px){
+  .feat-grid,.test-grid,.steps{grid-template-columns:1fr}
+  .nav-links,.nav-right a{display:none}
+  .hero-btns{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="inner"><div class="logo">Byte<span>Stack</span></div><ul class="nav-links"><li><a href="#features">Features</a></li><li><a href="#how">How It Works</a></li><li><a href="#testimonials">Reviews</a></li></ul><div class="nav-right"><a href="#">Log In</a><a href="#" class="nav-btn">Try Free</a></div></div></nav>
+
+<section class="hero">
+  <div class="container">
+    <span class="badge">&#128640; 4,000+ teams use ByteStack</span>
+    <h1>Manage Projects.<br>Ship Products.</h1>
+    <p>The modern project management tool that adapts to your workflow. Boards, timelines, docs, and automations — all in one place.</p>
+    <div class="hero-btns">
+      <a href="#" class="btn-violet">Start Free &mdash; No Card Needed</a>
+      <a href="#how" class="btn-outline">Watch Demo</a>
+    </div>
+    <div class="hero-screen">
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Dashboard">
+    </div>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <div class="container">
+    <div class="sec-header"><span class="tag">Features</span><h2>Built for How You Actually Work</h2></div>
+    <div class="feat-grid">
+      <div class="feat-card"><div class="icon">&#128203;</div><h3>Smart Boards</h3><p>Kanban boards that auto-prioritise tasks based on deadlines, dependencies, and team capacity.</p></div>
+      <div class="feat-card"><div class="icon">&#128197;</div><h3>Timeline View</h3><p>Interactive Gantt charts with drag-and-drop scheduling, milestones, and critical path highlighting.</p></div>
+      <div class="feat-card"><div class="icon">&#128172;</div><h3>Built-in Docs</h3><p>Rich-text documents, wikis, and meeting notes. Embed anything — Figma, Loom, Google Sheets.</p></div>
+      <div class="feat-card"><div class="icon">&#9889;</div><h3>Automations</h3><p>If-then rules that handle repetitive work. Auto-assign, auto-notify, auto-move. Zero code required.</p></div>
+      <div class="feat-card"><div class="icon">&#128202;</div><h3>Dashboards</h3><p>Real-time reporting with custom widgets. Track velocity, burndown, workload, and team health.</p></div>
+      <div class="feat-card"><div class="icon">&#128279;</div><h3>Integrations</h3><p>Connect with Slack, GitHub, Figma, Google Workspace, and 200+ tools via native integrations.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="how">
+  <div class="how-inner">
+    <div class="sec-header"><span class="tag">How It Works</span><h2>Up and Running in Minutes</h2></div>
+    <div class="steps">
+      <div class="step"><h3>Create Your Space</h3><p>Set up your workspace, invite your team, and choose a template or start from scratch.</p></div>
+      <div class="step"><h3>Organise Your Work</h3><p>Add tasks, set priorities, assign owners, and choose your preferred view: board, list, or timeline.</p></div>
+      <div class="step"><h3>Ship With Confidence</h3><p>Track progress in real-time, automate workflows, and keep everyone aligned from planning to launch.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="testimonials">
+  <div class="container">
+    <div class="sec-header"><span class="tag">Reviews</span><h2>Teams Love ByteStack</h2></div>
+    <div class="test-grid">
+      <div class="test-card"><p>ByteStack replaced three tools for us. Everything is in one place now — tasks, docs, timelines. Our team is noticeably more productive.</p><div class="author"><div class="avatar">&#128100;</div><div><div class="name">Lisa De Vries</div><div class="role">Product Lead, FinTech Startup</div></div></div></div>
+      <div class="test-card"><p>The automations alone save us hours every week. Setting up rules took minutes and now tasks just flow through our pipeline automatically.</p><div class="author"><div class="avatar">&#128100;</div><div><div class="name">Marc Janssen</div><div class="role">CTO, Design Agency</div></div></div></div>
+      <div class="test-card"><p>We evaluated 5 PM tools and ByteStack won hands down. Clean interface, powerful features, and the onboarding was seamless.</p><div class="author"><div class="avatar">&#128100;</div><div><div class="name">Emma Laurent</div><div class="role">Ops Manager, SaaS Company</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta"><div class="container"><div class="cta-box"><h2>Start Managing Projects, Not Chaos.</h2><p>Free for teams up to 10. No credit card required. Set up in under 2 minutes.</p><a href="#" class="btn-white">Get Started Free</a></div></div></section>
+
+<footer><div class="container"><p>&copy; 2024 ByteStack. Made in Brussels with &#9829;</p></div></footer>
+
+</body>
+</html>

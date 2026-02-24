@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnSpace — Tutoring & Private School</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#fdfcf9;--surface:#fff;--green:#16a34a;--green-light:#22c55e;--yellow:#eab308;--dark:#1c1917;--text:#78716c;--font:'Outfit',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,252,249,.92);backdrop-filter:blur(16px);padding:14px 0;border-bottom:1px solid rgba(0,0,0,.04)}
+nav .inner{max-width:960px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.3rem;font-weight:700;color:var(--dark)}
+.logo span{color:var(--green)}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{font-size:.82rem;font-weight:500;color:var(--text);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--green)}
+.container{max-width:960px;margin:0 auto;padding:0 24px}
+
+.hero{padding:130px 0 60px;text-align:center}
+.hero .emoji{font-size:3rem;margin-bottom:16px}
+.hero h1{font-size:clamp(2rem,3.5vw,2.8rem);color:var(--dark);font-weight:700;line-height:1.2;margin-bottom:12px}
+.hero p{font-size:1rem;max-width:480px;margin:0 auto 28px;line-height:1.8}
+.hero-btns{display:flex;gap:12px;justify-content:center}
+.btn-green{padding:14px 32px;background:var(--green);color:#fff;font-size:.85rem;font-weight:600;border:none;border-radius:12px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.btn-green:hover{background:var(--green-light);transform:translateY(-2px)}
+.btn-outline{padding:14px 32px;border:2px solid var(--dark);color:var(--dark);font-size:.85rem;font-weight:600;border-radius:12px;text-decoration:none;display:inline-block;transition:all .2s;background:transparent}
+.btn-outline:hover{background:var(--dark);color:#fff}
+
+.subjects{padding:80px 0}
+.sec-header{text-align:center;margin-bottom:40px}
+.sec-header h2{font-size:1.8rem;color:var(--dark);font-weight:700}
+.sec-header p{font-size:.92rem;margin-top:6px}
+.subj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.subj-card{background:var(--surface);padding:28px;border-radius:16px;border:1px solid rgba(0,0,0,.04);text-align:center;transition:all .3s}
+.subj-card:hover{border-color:var(--green);box-shadow:0 8px 24px rgba(22,163,74,.06);transform:translateY(-2px)}
+.subj-card .icon{font-size:2rem;margin-bottom:10px}
+.subj-card h3{font-size:1rem;font-weight:600;color:var(--dark);margin-bottom:4px}
+.subj-card p{font-size:.82rem;line-height:1.6}
+.subj-card .ages{display:inline-block;padding:4px 10px;background:rgba(22,163,74,.08);color:var(--green);font-size:.68rem;font-weight:600;border-radius:4px;margin-top:8px}
+
+.approach{padding:80px 0;background:var(--surface);border-radius:24px;margin:40px 24px}
+.approach-inner{max-width:960px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.approach-inner img{width:100%;border-radius:16px;aspect-ratio:4/3;object-fit:cover}
+.approach-text h2{font-size:1.6rem;color:var(--dark);font-weight:700;margin-bottom:12px}
+.approach-text p{font-size:.92rem;line-height:1.8;margin-bottom:12px}
+.approach-text ul{list-style:none;margin-top:16px}
+.approach-text ul li{font-size:.88rem;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.04);display:flex;gap:8px;align-items:center}
+.approach-text ul li::before{content:'✓';color:var(--green);font-weight:700}
+
+.pricing{padding:80px 0}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.price-card{background:var(--surface);border-radius:16px;padding:32px;text-align:center;border:1px solid rgba(0,0,0,.04);transition:all .3s}
+.price-card:hover{border-color:var(--green)}
+.price-card.popular{border:2px solid var(--green);position:relative}
+.price-card.popular::before{content:'Most Popular';position:absolute;top:-10px;left:50%;transform:translateX(-50%);padding:4px 14px;background:var(--green);color:#fff;font-size:.68rem;font-weight:600;border-radius:100px}
+.price-card h3{font-size:1rem;font-weight:600;color:var(--dark);margin-bottom:8px}
+.price-card .price{font-size:2rem;font-weight:700;color:var(--dark);margin-bottom:4px}
+.price-card .price span{font-size:.85rem;font-weight:400;color:var(--text)}
+.price-card .desc{font-size:.82rem;margin-bottom:16px}
+.price-card .features{list-style:none;text-align:left;font-size:.82rem;margin-bottom:20px}
+.price-card .features li{padding:6px 0;border-bottom:1px solid rgba(0,0,0,.03)}
+
+.contact{padding:80px 0;text-align:center}
+.contact h2{font-size:1.6rem;color:var(--dark);font-weight:700;margin-bottom:12px}
+.contact p{margin-bottom:24px}
+.contact-row{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.c-box{background:var(--surface);padding:20px 28px;border-radius:12px;border:1px solid rgba(0,0,0,.04);text-align:center}
+.c-box h3{font-size:.88rem;font-weight:600;color:var(--dark);margin-bottom:4px}
+.c-box p{font-size:.82rem}
+
+footer{padding:32px 0;text-align:center;border-top:1px solid rgba(0,0,0,.04)}
+footer p{font-size:.78rem}
+
+@media(max-width:768px){
+  .subj-grid{grid-template-columns:1fr}
+  .approach-inner{grid-template-columns:1fr}
+  .price-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .hero-btns{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="inner"><div class="logo">Learn<span>Space</span></div><ul class="nav-links"><li><a href="#subjects">Subjects</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="emoji">&#127891;</div>
+    <h1>Every Child Can Succeed.</h1>
+    <p>Personalised tutoring and after-school programmes for ages 6-18. Small groups, big results. Based in central Ghent.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-green">Book a Free Trial</a>
+      <a href="#subjects" class="btn-outline">See Subjects</a>
+    </div>
+  </div>
+</section>
+
+<section id="subjects" class="subjects">
+  <div class="container">
+    <div class="sec-header"><h2>What We Teach</h2><p>Tailored support across all core subjects</p></div>
+    <div class="subj-grid">
+      <div class="subj-card"><div class="icon">&#128202;</div><h3>Mathematics</h3><p>From basic arithmetic to calculus. Build confidence and problem-solving skills.</p><span class="ages">Ages 6-18</span></div>
+      <div class="subj-card"><div class="icon">&#127758;</div><h3>Languages</h3><p>French, Dutch, English, German. Conversation, grammar, and exam preparation.</p><span class="ages">Ages 8-18</span></div>
+      <div class="subj-card"><div class="icon">&#128300;</div><h3>Sciences</h3><p>Physics, Chemistry, Biology. Hands-on experiments and clear explanations.</p><span class="ages">Ages 12-18</span></div>
+      <div class="subj-card"><div class="icon">&#128187;</div><h3>Coding</h3><p>Scratch, Python, web development. Future-proof skills through creative projects.</p><span class="ages">Ages 8-16</span></div>
+      <div class="subj-card"><div class="icon">&#128214;</div><h3>Homework Help</h3><p>Daily after-school sessions. Structured study time with tutor supervision.</p><span class="ages">Ages 6-14</span></div>
+      <div class="subj-card"><div class="icon">&#127942;</div><h3>Exam Prep</h3><p>CEB, CE1D, CESS preparation. Practice tests, study plans, and mock exams.</p><span class="ages">Ages 12-18</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="approach">
+  <div class="approach-inner">
+    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" alt="Students learning">
+    <div class="approach-text">
+      <h2>Our Approach</h2>
+      <p>We believe every student learns differently. Our small-group format (max 6 students) allows tutors to adapt to each child's pace, strengths, and challenges.</p>
+      <ul>
+        <li>Personalised learning plans</li>
+        <li>Maximum 6 students per group</li>
+        <li>Qualified, experienced tutors</li>
+        <li>Regular progress reports for parents</li>
+        <li>Safe, welcoming environment</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing">
+  <div class="container">
+    <div class="sec-header"><h2>Simple Pricing</h2><p>No long-term contracts. Cancel anytime.</p></div>
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>Single Session</h3>
+        <div class="price">&euro;35<span>/session</span></div>
+        <div class="desc">Pay as you go</div>
+        <ul class="features"><li>90-minute session</li><li>Any subject</li><li>1-on-1 or small group</li><li>Flexible scheduling</li></ul>
+        <a href="#contact" class="btn-green" style="width:100%;text-align:center">Book Now</a>
+      </div>
+      <div class="price-card popular">
+        <h3>Monthly Package</h3>
+        <div class="price">&euro;119<span>/month</span></div>
+        <div class="desc">4 sessions per month</div>
+        <ul class="features"><li>4 &times; 90-minute sessions</li><li>Any subject mix</li><li>Priority scheduling</li><li>Progress reports</li></ul>
+        <a href="#contact" class="btn-green" style="width:100%;text-align:center">Get Started</a>
+      </div>
+      <div class="price-card">
+        <h3>Intensive</h3>
+        <div class="price">&euro;249<span>/month</span></div>
+        <div class="desc">8 sessions per month</div>
+        <ul class="features"><li>8 &times; 90-minute sessions</li><li>Multi-subject support</li><li>Exam prep included</li><li>Parent consultations</li></ul>
+        <a href="#contact" class="btn-green" style="width:100%;text-align:center">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Ready to Get Started?</h2>
+    <p>First trial session is completely free. No obligation.</p>
+    <div class="contact-row">
+      <div class="c-box"><h3>Call Us</h3><p>+32 9 555 43 21</p></div>
+      <div class="c-box"><h3>Email</h3><p>hello@learnspace.be</p></div>
+      <div class="c-box"><h3>Visit</h3><p>Veldstraat 28, Ghent</p></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container"><p>&copy; 2024 LearnSpace. Nurturing potential in every student.</p></div></footer>
+
+</body>
+</html>

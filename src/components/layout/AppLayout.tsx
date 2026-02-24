@@ -1,0 +1,39 @@
+import { Outlet } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import Header from "./Header";
+import Footer from "./Footer";
+import ProgressBar from "./ProgressBar";
+import CampaignBanner from "./CampaignBanner";
+import TopPromoBanner from "./TopPromoBanner";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import ExitIntentPopup from "@/components/ui/ExitIntentPopup";
+import CampaignPopup from "@/components/ui/CampaignPopup";
+import SocialProofNotification from "@/components/ui/SocialProofNotification";
+
+export default function AppLayout() {
+  const { t } = useTranslation();
+
+  return (
+    <div className="min-h-screen flex flex-col bg-neo-bg">
+      {/* Skip to main content — accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-neo-lime focus:text-neo-black focus:border-2 focus:border-neo-black focus:font-mono focus:text-sm focus:font-bold focus:uppercase focus:tracking-wider focus:shadow-hard-sm"
+      >
+        {t("a11y.skipToContent", "Skip to main content")}
+      </a>
+      <TopPromoBanner />
+      <ProgressBar />
+      <Header />
+      <CampaignBanner />
+      <main id="main-content" className="flex-1" role="main">
+        <Outlet />
+      </main>
+      <Footer />
+      <WhatsAppButton />
+      <CampaignPopup />
+      <ExitIntentPopup />
+      <SocialProofNotification />
+    </div>
+  );
+}

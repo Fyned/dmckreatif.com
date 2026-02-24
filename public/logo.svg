@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" width="280" height="80">
+  <!-- DMC KREATIF - Lime background -->
+  <rect x="0" y="0" width="280" height="40" fill="#CDFF50" stroke="#121212" stroke-width="3"/>
+  <text x="140" y="28" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="20" fill="#121212" letter-spacing="2">DMC KREATIF</text>
+  <!-- GMG DESIGN - White background -->
+  <rect x="0" y="37" width="280" height="40" fill="#FFFFFF" stroke="#121212" stroke-width="3"/>
+  <text x="140" y="65" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="20" fill="#121212" letter-spacing="2">GMG DESIGN</text>
+</svg>

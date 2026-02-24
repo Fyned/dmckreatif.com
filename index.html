@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Fonts: Space Grotesk + JetBrains Mono — display=swap for no FOIT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Default meta (overridden by react-helmet-async per page) -->
+    <title>DMC Kreatif — Premium European Web Agency</title>
+    <meta name="description" content="Premium web development agency serving France, Belgium, UK, Netherlands, and Germany. Custom websites, e-commerce, SEO, and digital marketing." />
+    <meta property="og:title" content="DMC Kreatif — Premium European Web Agency" />
+    <meta property="og:description" content="Premium web development agency serving Europe." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dmckreatif.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="DMC Kreatif Blog" href="/rss.xml" />
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#FFFDF5" />
+  </head>
+  <body>
+    <!-- GTM noscript fallback — configured via VITE_GTM_ID env var and src/lib/analytics.ts -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

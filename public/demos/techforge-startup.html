@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechForge — SaaS Landing Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#09090b;--surface:#18181b;--blue:#3b82f6;--blue-light:#60a5fa;--cyan:#06b6d4;--dark:#fafafa;--text:#a1a1aa;--border:rgba(255,255,255,.06);--font-display:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(9,9,11,.85);backdrop-filter:blur(16px);padding:14px 0;border-bottom:1px solid var(--border)}
+nav .inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--dark)}
+.logo span{background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:.82rem;font-weight:500;color:var(--text);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--dark)}
+.nav-right{display:flex;gap:12px;align-items:center}
+.nav-right a{font-size:.82rem;font-weight:500;color:var(--text);text-decoration:none;transition:color .2s}
+.nav-btn{padding:10px 24px;background:var(--blue);color:#fff;font-size:.78rem;font-weight:600;border:none;border-radius:8px;text-decoration:none;transition:all .2s;cursor:pointer}
+.nav-btn:hover{background:var(--blue-light);box-shadow:0 0 24px rgba(59,130,246,.2)}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+.hero{padding:140px 0 80px;text-align:center;position:relative}
+.hero::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(59,130,246,.06),transparent 70%);pointer-events:none}
+.hero .badge{display:inline-flex;gap:6px;align-items:center;padding:6px 14px;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--text);font-size:.72rem;font-weight:500;border-radius:100px;margin-bottom:20px;position:relative}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.8rem,5vw,4.2rem);color:var(--dark);font-weight:700;line-height:1.08;margin-bottom:16px;position:relative}
+.hero h1 span{background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:1.05rem;max-width:540px;margin:0 auto 32px;line-height:1.8;position:relative}
+.hero-btns{display:flex;gap:12px;justify-content:center;position:relative}
+.btn-blue{padding:14px 32px;background:var(--blue);color:#fff;font-family:var(--font-display);font-size:.85rem;font-weight:600;border:none;border-radius:10px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.btn-blue:hover{background:var(--blue-light);transform:translateY(-2px);box-shadow:0 8px 32px rgba(59,130,246,.25)}
+.btn-glass{padding:14px 32px;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--dark);font-family:var(--font-display);font-size:.85rem;font-weight:600;border-radius:10px;text-decoration:none;display:inline-block;transition:all .2s}
+.btn-glass:hover{border-color:var(--blue);background:rgba(59,130,246,.06)}
+.hero-visual{margin-top:56px;position:relative}
+.hero-visual .screen{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:4px;max-width:900px;margin:0 auto}
+.hero-visual .screen img{width:100%;border-radius:12px;aspect-ratio:16/9;object-fit:cover}
+
+.logos{padding:60px 0;text-align:center}
+.logos p{font-size:.75rem;text-transform:uppercase;letter-spacing:.2em;margin-bottom:20px}
+.logo-row{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;opacity:.4;font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:var(--dark)}
+
+.features{padding:100px 0}
+.sec-header{text-align:center;margin-bottom:56px}
+.sec-header .tag{font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:block;margin-bottom:8px}
+.sec-header h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);color:var(--dark);font-weight:700}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feat-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:32px;transition:all .3s}
+.feat-card:hover{border-color:rgba(59,130,246,.2);box-shadow:0 16px 48px rgba(0,0,0,.2)}
+.feat-card .icon{width:40px;height:40px;border-radius:10px;background:rgba(59,130,246,.1);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:16px}
+.feat-card h3{font-family:var(--font-display);font-size:1rem;color:var(--dark);font-weight:600;margin-bottom:8px}
+.feat-card p{font-size:.85rem;line-height:1.7}
+
+.pricing{padding:100px 0}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.price-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:32px;transition:all .3s}
+.price-card:hover{border-color:rgba(59,130,246,.2)}
+.price-card.featured{border:2px solid var(--blue);position:relative}
+.price-card.featured::before{content:'Popular';position:absolute;top:-10px;left:50%;transform:translateX(-50%);padding:4px 14px;background:var(--blue);color:#fff;font-size:.68rem;font-weight:600;border-radius:100px}
+.price-card h3{font-size:.95rem;font-weight:600;color:var(--dark);margin-bottom:12px}
+.price-card .price{font-family:var(--font-display);font-size:2.2rem;color:var(--dark);font-weight:700;margin-bottom:4px}
+.price-card .price span{font-size:.85rem;font-weight:400;color:var(--text)}
+.price-card .desc{font-size:.82rem;margin-bottom:20px}
+.price-card ul{list-style:none;margin-bottom:24px}
+.price-card ul li{font-size:.82rem;padding:6px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;align-items:center}
+.price-card ul li::before{content:'✓';color:var(--blue);font-weight:700;font-size:.75rem}
+.price-card .btn{width:100%;text-align:center;padding:12px;border-radius:10px;font-size:.82rem;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none;display:block;border:none}
+.price-card .btn-primary{background:var(--blue);color:#fff}
+.price-card .btn-primary:hover{background:var(--blue-light)}
+.price-card .btn-secondary{background:rgba(255,255,255,.05);color:var(--dark);border:1px solid var(--border)}
+.price-card .btn-secondary:hover{border-color:var(--blue)}
+
+.cta{padding:100px 0;text-align:center}
+.cta-box{background:linear-gradient(135deg,rgba(59,130,246,.08),rgba(6,182,212,.08));border:1px solid var(--border);border-radius:24px;padding:64px 40px}
+.cta-box h2{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.4rem);color:var(--dark);font-weight:700;margin-bottom:12px}
+.cta-box p{font-size:1rem;margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto}
+
+footer{padding:40px 0;text-align:center;border-top:1px solid var(--border)}
+footer p{font-size:.78rem}
+
+@media(max-width:768px){
+  .feat-grid{grid-template-columns:1fr}
+  .price-grid{grid-template-columns:1fr}
+  .nav-links,.nav-right a{display:none}
+  .hero-btns{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="inner"><div class="logo">Tech<span>Forge</span></div><ul class="nav-links"><li><a href="#features">Features</a></li><li><a href="#pricing">Pricing</a></li></ul><div class="nav-right"><a href="#">Sign In</a><a href="#" class="nav-btn">Start Free</a></div></div></nav>
+
+<section class="hero">
+  <div class="container">
+    <span class="badge">&#9889; Now in Public Beta</span>
+    <h1>Ship Faster.<br><span>Build Smarter.</span></h1>
+    <p>The all-in-one developer platform for building, deploying, and scaling modern web applications. From prototype to production in minutes.</p>
+    <div class="hero-btns">
+      <a href="#pricing" class="btn-blue">Start for Free</a>
+      <a href="#features" class="btn-glass">See How It Works</a>
+    </div>
+    <div class="hero-visual">
+      <div class="screen">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80" alt="Code editor">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="logos">
+  <div class="container">
+    <p>Trusted by teams at</p>
+    <div class="logo-row">
+      <span>Stripe</span><span>Vercel</span><span>Linear</span><span>Notion</span><span>Figma</span>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <div class="container">
+    <div class="sec-header"><span class="tag">Features</span><h2>Everything You Need to Ship</h2></div>
+    <div class="feat-grid">
+      <div class="feat-card"><div class="icon">&#9889;</div><h3>Instant Deploys</h3><p>Push to Git and your changes go live instantly. Zero-config deployments with automatic SSL.</p></div>
+      <div class="feat-card"><div class="icon">&#128640;</div><h3>Edge Functions</h3><p>Run serverless functions at the edge, close to your users. Sub-10ms cold starts globally.</p></div>
+      <div class="feat-card"><div class="icon">&#128274;</div><h3>Built-in Auth</h3><p>Social logins, magic links, and JWTs out of the box. Secure by default, customizable by design.</p></div>
+      <div class="feat-card"><div class="icon">&#128202;</div><h3>Real-time Analytics</h3><p>Monitor performance, track errors, and understand your users with zero-impact observability.</p></div>
+      <div class="feat-card"><div class="icon">&#128736;</div><h3>Database + ORM</h3><p>Postgres with a type-safe ORM. Migrations, branching, and point-in-time recovery included.</p></div>
+      <div class="feat-card"><div class="icon">&#127760;</div><h3>Global CDN</h3><p>Content delivered from 300+ edge locations worldwide. Automatic image optimization and caching.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing">
+  <div class="container">
+    <div class="sec-header"><span class="tag">Pricing</span><h2>Start Free, Scale as You Grow</h2></div>
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>Hobby</h3>
+        <div class="price">&euro;0<span>/month</span></div>
+        <div class="desc">Perfect for side projects</div>
+        <ul><li>3 projects</li><li>100K requests/mo</li><li>1GB storage</li><li>Community support</li></ul>
+        <a href="#" class="btn btn-secondary">Get Started</a>
+      </div>
+      <div class="price-card featured">
+        <h3>Pro</h3>
+        <div class="price">&euro;29<span>/month</span></div>
+        <div class="desc">For growing teams</div>
+        <ul><li>Unlimited projects</li><li>10M requests/mo</li><li>50GB storage</li><li>Priority support</li><li>Custom domains</li></ul>
+        <a href="#" class="btn btn-primary">Start Free Trial</a>
+      </div>
+      <div class="price-card">
+        <h3>Enterprise</h3>
+        <div class="price">Custom</div>
+        <div class="desc">For large organizations</div>
+        <ul><li>Everything in Pro</li><li>Unlimited requests</li><li>1TB+ storage</li><li>Dedicated support</li><li>SLA &amp; SOC 2</li></ul>
+        <a href="#" class="btn btn-secondary">Contact Sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta"><div class="container"><div class="cta-box"><h2>Ready to Build Something Great?</h2><p>Join 25,000+ developers shipping faster with TechForge. No credit card required.</p><a href="#" class="btn-blue">Start Building for Free</a></div></div></section>
+
+<footer><div class="container"><p>&copy; 2024 TechForge. Built for developers, by developers.</p></div></footer>
+
+</body>
+</html>

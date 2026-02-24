@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HomeFinder — Your Local Property Expert</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f8f6f3;--surface:#fff;--blue:#2563eb;--blue-light:#3b82f6;--warm:#f59e0b;--dark:#1e293b;--text:#64748b;--font-display:'DM Serif Display',Georgia,serif;--font-body:'DM Sans',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(248,246,243,.92);backdrop-filter:blur(16px);padding:14px 0;border-bottom:1px solid rgba(0,0,0,.04)}
+nav .inner{max-width:1000px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-display);font-size:1.4rem;color:var(--dark)}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{font-size:.82rem;font-weight:500;color:var(--text);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--blue)}
+.container{max-width:1000px;margin:0 auto;padding:0 24px}
+
+.hero{padding:130px 0 60px;text-align:center}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3.2rem);color:var(--dark);margin-bottom:12px}
+.hero p{font-size:1rem;max-width:520px;margin:0 auto 32px;line-height:1.8}
+.hero-search{max-width:560px;margin:0 auto;display:flex;gap:8px}
+.hero-search select,.hero-search input{padding:14px 16px;border:1px solid rgba(0,0,0,.1);border-radius:10px;font-size:.88rem;font-family:var(--font-body);background:var(--surface);outline:none}
+.hero-search select{width:140px}
+.hero-search input{flex:1}
+.hero-search button{padding:14px 24px;background:var(--blue);color:#fff;border:none;border-radius:10px;font-weight:600;font-size:.85rem;cursor:pointer;transition:all .2s}
+.hero-search button:hover{background:var(--blue-light)}
+
+.featured{padding:60px 0}
+.featured-img{width:100%;border-radius:20px;overflow:hidden;position:relative}
+.featured-img img{width:100%;aspect-ratio:21/9;object-fit:cover}
+.featured-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.7));padding:32px;color:#fff}
+.featured-overlay .price{font-family:var(--font-display);font-size:1.8rem;margin-bottom:4px}
+.featured-overlay h3{font-size:1.1rem;font-weight:500;margin-bottom:8px}
+.featured-overlay .meta{display:flex;gap:16px;font-size:.82rem;opacity:.8}
+
+.properties{padding:60px 0}
+.sec-header{text-align:center;margin-bottom:40px}
+.sec-header h2{font-family:var(--font-display);font-size:1.8rem;color:var(--dark)}
+.prop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.prop-card{background:var(--surface);border-radius:14px;overflow:hidden;border:1px solid rgba(0,0,0,.04);transition:all .3s}
+.prop-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.06);transform:translateY(-4px)}
+.prop-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.prop-card .info{padding:16px}
+.prop-card .info .price{font-family:var(--font-display);font-size:1.15rem;color:var(--dark);margin-bottom:4px}
+.prop-card .info h3{font-size:.88rem;font-weight:500;color:var(--dark);margin-bottom:6px}
+.prop-card .info .meta{display:flex;gap:12px;font-size:.75rem}
+.prop-card .info .type{display:inline-block;padding:3px 8px;background:rgba(37,99,235,.08);color:var(--blue);font-size:.68rem;font-weight:600;border-radius:4px;text-transform:uppercase;margin-bottom:8px}
+
+.about{padding:80px 0;background:var(--surface);border-radius:24px;margin:40px 24px}
+.about-inner{max-width:1000px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about-inner img{width:100%;border-radius:16px;aspect-ratio:4/3;object-fit:cover}
+.about-text h2{font-family:var(--font-display);font-size:1.6rem;color:var(--dark);margin-bottom:12px}
+.about-text p{font-size:.92rem;line-height:1.8;margin-bottom:16px}
+.about-text .btn{padding:12px 28px;background:var(--blue);color:#fff;font-size:.82rem;font-weight:600;border:none;border-radius:10px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.about-text .btn:hover{background:var(--blue-light)}
+
+.contact{padding:80px 0;text-align:center}
+.contact h2{font-family:var(--font-display);font-size:1.6rem;color:var(--dark);margin-bottom:12px}
+.contact p{margin-bottom:24px}
+.contact-grid{display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
+.c-item{background:var(--surface);padding:24px 32px;border-radius:12px;border:1px solid rgba(0,0,0,.04);text-align:center;min-width:200px}
+.c-item .icon{font-size:1.5rem;margin-bottom:8px}
+.c-item h3{font-size:.88rem;font-weight:600;color:var(--dark);margin-bottom:4px}
+.c-item p{font-size:.82rem}
+
+footer{padding:32px 0;text-align:center;border-top:1px solid rgba(0,0,0,.04)}
+footer p{font-size:.78rem}
+
+@media(max-width:768px){
+  .prop-grid{grid-template-columns:1fr}
+  .about-inner{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .hero-search{flex-direction:column}
+  .hero-search select{width:100%}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="inner"><div class="logo">HomeFinder</div><ul class="nav-links"><li><a href="#properties">Properties</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+
+<section class="hero">
+  <div class="container">
+    <h1>Your Home, Your Story.</h1>
+    <p>Independent property broker helping families find their perfect home in the greater Brussels area since 2010.</p>
+    <div class="hero-search">
+      <select><option>Buy</option><option>Rent</option></select>
+      <input type="text" placeholder="Where do you want to live?">
+      <button>Search</button>
+    </div>
+  </div>
+</section>
+
+<section class="featured">
+  <div class="container">
+    <div class="featured-img">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Featured property">
+      <div class="featured-overlay">
+        <div class="price">&euro;595,000</div>
+        <h3>Stunning Townhouse in Saint-Gilles</h3>
+        <div class="meta"><span>5 Bedrooms</span><span>3 Bathrooms</span><span>280 m&sup2;</span><span>Garden</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="properties" class="properties">
+  <div class="container">
+    <div class="sec-header"><h2>Recent Listings</h2></div>
+    <div class="prop-grid">
+      <div class="prop-card">
+        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=400&q=80" alt="Property">
+        <div class="info"><span class="type">For Sale</span><div class="price">&euro;289,000</div><h3>Bright Apartment, Schaerbeek</h3><div class="meta"><span>2 Beds</span><span>1 Bath</span><span>85 m&sup2;</span></div></div>
+      </div>
+      <div class="prop-card">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=400&q=80" alt="Property">
+        <div class="info"><span class="type">For Rent</span><div class="price">&euro;1,350/mo</div><h3>Loft Space, Centre Ville</h3><div class="meta"><span>1 Bed</span><span>1 Bath</span><span>65 m&sup2;</span></div></div>
+      </div>
+      <div class="prop-card">
+        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=400&q=80" alt="Property">
+        <div class="info"><span class="type">For Sale</span><div class="price">&euro;445,000</div><h3>Family Home, Uccle</h3><div class="meta"><span>4 Beds</span><span>2 Baths</span><span>180 m&sup2;</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="about-inner">
+    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="Office">
+    <div class="about-text">
+      <h2>A Personal Approach to Property</h2>
+      <p>As an independent broker, I take the time to understand exactly what you need. No pressure, no rushing. Just honest advice and a genuine commitment to finding you the right home.</p>
+      <p>With 14 years of experience in the Brussels property market, I know every neighbourhood, every trend, and every opportunity.</p>
+      <a href="#contact" class="btn">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Let&rsquo;s Find Your Home</h2>
+    <p>Free initial consultation. No obligation.</p>
+    <div class="contact-grid">
+      <div class="c-item"><div class="icon">&#128222;</div><h3>Call</h3><p>+32 2 555 78 90</p></div>
+      <div class="c-item"><div class="icon">&#128231;</div><h3>Email</h3><p>sophie@homefinder.be</p></div>
+      <div class="c-item"><div class="icon">&#128205;</div><h3>Office</h3><p>Avenue Louise 42, Brussels</p></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container"><p>&copy; 2024 HomeFinder. Licensed Real Estate Broker, Brussels.</p></div></footer>
+
+</body>
+</html>

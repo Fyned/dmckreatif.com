@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduPortal — Academy & Learning Centre</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f8f9fc;--surface:#fff;--indigo:#4f46e5;--indigo-light:#6366f1;--teal:#0d9488;--dark:#111827;--text:#6b7280;--font:'Plus Jakarta Sans',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(248,249,252,.92);backdrop-filter:blur(16px);padding:14px 0;border-bottom:1px solid rgba(0,0,0,.04)}
+nav .inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.3rem;font-weight:800;color:var(--dark)}
+.logo span{color:var(--indigo)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:.82rem;font-weight:500;color:var(--text);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--indigo)}
+.nav-btn{padding:10px 24px;background:var(--indigo);color:#fff;font-size:.78rem;font-weight:600;border:none;border-radius:10px;text-decoration:none;transition:all .2s;cursor:pointer}
+.nav-btn:hover{background:var(--indigo-light)}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+.hero{padding:130px 0 60px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero-text .badge{display:inline-flex;gap:6px;align-items:center;padding:6px 14px;background:rgba(79,70,229,.08);color:var(--indigo);font-size:.72rem;font-weight:600;border-radius:100px;margin-bottom:16px}
+.hero-text h1{font-size:clamp(2.2rem,4vw,3.2rem);color:var(--dark);line-height:1.15;font-weight:800;margin-bottom:16px}
+.hero-text p{font-size:1rem;line-height:1.8;margin-bottom:28px;max-width:440px}
+.hero-btns{display:flex;gap:12px}
+.btn-indigo{padding:14px 32px;background:var(--indigo);color:#fff;font-size:.85rem;font-weight:600;border:none;border-radius:12px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.btn-indigo:hover{background:var(--indigo-light);transform:translateY(-2px);box-shadow:0 8px 32px rgba(79,70,229,.2)}
+.btn-ghost{padding:14px 32px;border:2px solid var(--dark);color:var(--dark);font-size:.85rem;font-weight:600;border-radius:12px;text-decoration:none;display:inline-block;transition:all .2s;background:transparent}
+.btn-ghost:hover{background:var(--dark);color:#fff}
+.hero-img{position:relative}
+.hero-img img{width:100%;border-radius:20px;aspect-ratio:4/3;object-fit:cover}
+.hero-stats{display:flex;gap:24px;margin-top:20px}
+.h-stat{background:var(--surface);padding:16px 20px;border-radius:12px;border:1px solid rgba(0,0,0,.04);text-align:center;flex:1}
+.h-stat .num{font-size:1.3rem;font-weight:800;color:var(--indigo)}
+.h-stat .label{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
+
+.programs{padding:80px 0}
+.sec-header{text-align:center;margin-bottom:48px}
+.sec-header .tag{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--indigo);display:block;margin-bottom:8px}
+.sec-header h2{font-size:clamp(1.8rem,3vw,2.4rem);color:var(--dark);font-weight:800}
+.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.prog-card{background:var(--surface);border-radius:16px;overflow:hidden;border:1px solid rgba(0,0,0,.04);transition:all .3s}
+.prog-card:hover{box-shadow:0 16px 48px rgba(0,0,0,.06);transform:translateY(-4px)}
+.prog-card img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.prog-card .info{padding:20px}
+.prog-card .info .cat{display:inline-block;padding:3px 10px;background:rgba(79,70,229,.08);color:var(--indigo);font-size:.68rem;font-weight:600;border-radius:4px;text-transform:uppercase;margin-bottom:8px}
+.prog-card .info h3{font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:6px}
+.prog-card .info p{font-size:.82rem;line-height:1.6;margin-bottom:10px}
+.prog-card .info .meta{display:flex;gap:16px;font-size:.75rem;color:var(--text)}
+
+.features{padding:80px 0;background:var(--surface);border-radius:24px;margin:0 24px}
+.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1200px;margin:0 auto;padding:0 24px}
+.feat-card{padding:28px;text-align:center;border:1px solid rgba(0,0,0,.04);border-radius:14px;transition:all .3s}
+.feat-card:hover{border-color:var(--indigo);box-shadow:0 8px 24px rgba(79,70,229,.06)}
+.feat-card .icon{width:48px;height:48px;border-radius:12px;background:rgba(79,70,229,.08);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.3rem}
+.feat-card h3{font-size:.9rem;font-weight:700;color:var(--dark);margin-bottom:6px}
+.feat-card p{font-size:.78rem;line-height:1.6}
+
+.cta{padding:80px 0;text-align:center}
+.cta-box{background:linear-gradient(135deg,var(--indigo),#312e81);border-radius:24px;padding:64px 40px;color:#fff}
+.cta-box h2{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;margin-bottom:12px}
+.cta-box p{opacity:.7;margin-bottom:28px;font-size:1rem}
+.cta-box .btn-white{padding:14px 32px;background:#fff;color:var(--indigo);font-weight:700;font-size:.85rem;border:none;border-radius:12px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.cta-box .btn-white:hover{transform:translateY(-2px)}
+
+footer{padding:40px 0;text-align:center;border-top:1px solid rgba(0,0,0,.04)}
+footer p{font-size:.78rem}
+
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;padding-top:100px}
+  .prog-grid{grid-template-columns:1fr}
+  .feat-grid{grid-template-columns:repeat(2,1fr)}
+  .nav-links{display:none}
+  .hero-btns{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="inner"><div class="logo">Edu<span>Portal</span></div><ul class="nav-links"><li><a href="#programs">Programs</a></li><li><a href="#features">Why Us</a></li><li><a href="#contact">Enrol</a></li></ul><a href="#contact" class="nav-btn">Apply Now</a></div></nav>
+
+<div class="container">
+  <section class="hero">
+    <div class="hero-text">
+      <span class="badge">&#127891; Now Enrolling 2024-2025</span>
+      <h1>Learn Without Limits.</h1>
+      <p>EduPortal Academy offers world-class programmes in technology, business, and the arts. Small classes, expert instructors, real-world skills.</p>
+      <div class="hero-btns">
+        <a href="#programs" class="btn-indigo">Explore Programs</a>
+        <a href="#contact" class="btn-ghost">Book a Tour</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c476?auto=format&fit=crop&w=600&q=80" alt="Students">
+      <div class="hero-stats">
+        <div class="h-stat"><div class="num">2,400+</div><div class="label">Students</div></div>
+        <div class="h-stat"><div class="num">96%</div><div class="label">Job Placement</div></div>
+        <div class="h-stat"><div class="num">45</div><div class="label">Programmes</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="programs" class="programs">
+  <div class="container">
+    <div class="sec-header"><span class="tag">Programmes</span><h2>What Will You Study?</h2></div>
+    <div class="prog-grid">
+      <div class="prog-card">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=80" alt="Coding">
+        <div class="info"><span class="cat">Technology</span><h3>Full-Stack Web Development</h3><p>Master React, Node.js, databases, and deployment in our intensive 12-week bootcamp.</p><div class="meta"><span>12 Weeks</span><span>Full-time</span><span>&euro;4,200</span></div></div>
+      </div>
+      <div class="prog-card">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&q=80" alt="Business">
+        <div class="info"><span class="cat">Business</span><h3>Digital Marketing & Growth</h3><p>SEO, paid ads, social media, analytics. Build real campaigns for real clients.</p><div class="meta"><span>8 Weeks</span><span>Part-time</span><span>&euro;2,800</span></div></div>
+      </div>
+      <div class="prog-card">
+        <img src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?auto=format&fit=crop&w=500&q=80" alt="Design">
+        <div class="info"><span class="cat">Design</span><h3>UX/UI Design Professional</h3><p>User research, wireframing, prototyping with Figma, design systems, portfolio building.</p><div class="meta"><span>10 Weeks</span><span>Full-time</span><span>&euro;3,500</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <div class="sec-header" style="max-width:1200px;margin:0 auto 48px;padding:0 24px"><span class="tag">Why EduPortal</span><h2>Built for Your Success</h2></div>
+  <div class="feat-grid">
+    <div class="feat-card"><div class="icon">&#128218;</div><h3>Small Classes</h3><p>Maximum 20 students per cohort for personalised learning.</p></div>
+    <div class="feat-card"><div class="icon">&#128187;</div><h3>Hands-On Projects</h3><p>Build real portfolio projects with industry mentors.</p></div>
+    <div class="feat-card"><div class="icon">&#127942;</div><h3>Career Support</h3><p>CV review, interview prep, and direct employer connections.</p></div>
+    <div class="feat-card"><div class="icon">&#127760;</div><h3>Global Network</h3><p>Join 8,000+ alumni across 30 countries.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="cta"><div class="container"><div class="cta-box"><h2>Start Your Journey Today</h2><p>Applications are open for the Spring 2025 intake. Limited spots available.</p><a href="mailto:admissions@eduportal.eu" class="btn-white">admissions@eduportal.eu</a></div></div></section>
+
+<footer><div class="container"><p>&copy; 2024 EduPortal Academy. Brussels &middot; Amsterdam &middot; Paris</p></div></footer>
+
+</body>
+</html>

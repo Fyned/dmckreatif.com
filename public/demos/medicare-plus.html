@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MediCare Plus — Modern Clinic</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f0f9f8;--surface:#fff;--teal:#00897b;--teal-light:#4db6ac;--teal-pale:#e0f2f1;--dark:#0d1b2a;--text:#546e7a;--font:'Plus Jakarta Sans',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);overflow-x:hidden}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);padding:14px 0;border-bottom:1px solid rgba(0,137,123,.08)}
+nav .inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.3rem;font-weight:700;color:var(--dark)}
+.logo span{color:var(--teal)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:.82rem;font-weight:500;color:var(--text);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--teal)}
+.nav-btn{padding:10px 28px;background:var(--teal);color:#fff;font-size:.78rem;font-weight:600;border:none;border-radius:100px;text-decoration:none;cursor:pointer;transition:all .2s}
+.nav-btn:hover{background:var(--teal-light)}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+.hero{padding:120px 0 80px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero-text .badge{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:var(--teal-pale);color:var(--teal);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border-radius:100px;margin-bottom:20px}
+.hero-text h1{font-size:clamp(2.2rem,4vw,3.2rem);color:var(--dark);line-height:1.15;font-weight:700;margin-bottom:16px}
+.hero-text h1 span{color:var(--teal)}
+.hero-text p{font-size:1rem;font-weight:400;line-height:1.8;margin-bottom:28px;max-width:460px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-teal{padding:14px 32px;background:var(--teal);color:#fff;font-size:.85rem;font-weight:600;border:none;border-radius:12px;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
+.btn-teal:hover{background:var(--teal-light);transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,137,123,.2)}
+.btn-outline{padding:14px 32px;border:2px solid var(--dark);color:var(--dark);font-size:.85rem;font-weight:600;border-radius:12px;text-decoration:none;display:inline-block;transition:all .2s;background:transparent}
+.btn-outline:hover{background:var(--dark);color:#fff}
+.hero-img{position:relative}
+.hero-img img{width:100%;border-radius:20px;object-fit:cover;aspect-ratio:4/3}
+.hero-img .card{position:absolute;bottom:-16px;left:-16px;background:var(--surface);padding:16px 20px;border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.06);display:flex;align-items:center;gap:12px}
+.card .dot{width:10px;height:10px;border-radius:50%;background:#4caf50;flex-shrink:0}
+.card span{font-size:.82rem;font-weight:600;color:var(--dark)}
+
+.departments{padding:80px 0}
+.sec-header{text-align:center;margin-bottom:48px}
+.sec-header .tag{font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:8px}
+.sec-header h2{font-size:clamp(1.6rem,3vw,2.2rem);color:var(--dark);font-weight:700}
+.dept-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.dept-card{background:var(--surface);border-radius:16px;padding:28px;border:1px solid rgba(0,137,123,.06);transition:all .3s}
+.dept-card:hover{border-color:var(--teal);box-shadow:0 12px 40px rgba(0,137,123,.08);transform:translateY(-4px)}
+.dept-card .icon{width:44px;height:44px;border-radius:12px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:14px}
+.dept-card h3{font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:6px}
+.dept-card p{font-size:.84rem;line-height:1.7}
+
+.doctors{padding:80px 0;background:var(--surface);border-radius:24px;margin:0 24px}
+.doc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.doc-card img{width:100px;height:100px;border-radius:50%;object-fit:cover;margin:0 auto 12px;border:3px solid var(--teal-pale)}
+.doc-card h3{font-size:.95rem;font-weight:700;color:var(--dark)}
+.doc-card p{font-size:.78rem;color:var(--teal);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+
+.cta{padding:80px 0;text-align:center}
+.cta-box{background:var(--teal);border-radius:24px;padding:64px 40px;color:#fff}
+.cta-box h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin-bottom:12px}
+.cta-box p{font-size:1rem;opacity:.8;margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto}
+.cta-box .btn-white{padding:14px 32px;background:#fff;color:var(--teal);font-size:.85rem;font-weight:700;border:none;border-radius:12px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.cta-box .btn-white:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,.15)}
+
+footer{padding:40px 0;text-align:center;border-top:1px solid rgba(0,137,123,.06)}
+footer p{font-size:.78rem}
+
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;padding-top:100px}
+  .hero-img .card{display:none}
+  .nav-links{display:none}
+  .dept-grid{grid-template-columns:1fr}
+  .doc-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <div class="logo">Medi<span>Care+</span></div>
+    <ul class="nav-links">
+      <li><a href="#departments">Departments</a></li>
+      <li><a href="#doctors">Doctors</a></li>
+      <li><a href="#appointment">Appointments</a></li>
+    </ul>
+    <a href="#appointment" class="nav-btn">Book Appointment</a>
+  </div>
+</nav>
+
+<div class="container">
+  <section class="hero">
+    <div class="hero-text">
+      <span class="badge">&#128994; Now Accepting Patients</span>
+      <h1>Your Health, Our <span>Priority</span></h1>
+      <p>MediCare Plus Clinic provides comprehensive medical care with state-of-the-art facilities and a team of experienced specialists. GDPR compliant.</p>
+      <div class="hero-btns">
+        <a href="#appointment" class="btn-teal">Book Appointment</a>
+        <a href="#departments" class="btn-outline">Our Services</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1559839914-17aae19cec71?auto=format&fit=crop&w=800&q=80" alt="Modern clinic">
+      <div class="card"><div class="dot"></div><span>Online booking available</span></div>
+    </div>
+  </section>
+</div>
+
+<section id="departments" class="departments">
+  <div class="container">
+    <div class="sec-header"><span class="tag">Departments</span><h2>Our Medical Services</h2></div>
+    <div class="dept-grid">
+      <div class="dept-card"><div class="icon">&#128153;</div><h3>Cardiology</h3><p>Heart health screenings, ECG, echocardiography, and preventive cardiology.</p></div>
+      <div class="dept-card"><div class="icon">&#129516;</div><h3>General Medicine</h3><p>Comprehensive check-ups, chronic disease management, and preventive care.</p></div>
+      <div class="dept-card"><div class="icon">&#129504;</div><h3>Neurology</h3><p>Headaches, sleep disorders, neurological assessments, and EEG diagnostics.</p></div>
+      <div class="dept-card"><div class="icon">&#129471;</div><h3>Dermatology</h3><p>Skin conditions, mole screening, cosmetic dermatology, and allergy testing.</p></div>
+      <div class="dept-card"><div class="icon">&#129468;</div><h3>Orthopaedics</h3><p>Joint pain, sports injuries, physiotherapy referrals, and imaging.</p></div>
+      <div class="dept-card"><div class="icon">&#128118;</div><h3>Paediatrics</h3><p>Child health check-ups, vaccinations, growth monitoring, and acute care.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="doctors" class="doctors">
+  <div class="container">
+    <div class="sec-header"><span class="tag">Our Team</span><h2>Meet Our Doctors</h2></div>
+    <div class="doc-grid">
+      <div class="doc-card"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=200&q=80" alt="Doctor"><h3>Dr. Anna Visser</h3><p>Cardiology</p></div>
+      <div class="doc-card"><img src="https://images.unsplash.com/photo-1559839914-17aae19cec71?auto=format&fit=crop&w=200&q=80" alt="Doctor"><h3>Dr. Mark Jansen</h3><p>General Medicine</p></div>
+      <div class="doc-card"><img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=200&q=80" alt="Doctor"><h3>Dr. Sophie Meyer</h3><p>Dermatology</p></div>
+      <div class="doc-card"><img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=200&q=80" alt="Doctor"><h3>Dr. Lucas De Vries</h3><p>Orthopaedics</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="appointment" class="cta">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Book Your Appointment Today</h2>
+      <p>Call us or book online. Same-day appointments available. Located at Keizersgracht 242, Amsterdam.</p>
+      <a href="tel:+31205554567" class="btn-white">Call +31 20 555 45 67</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container"><p>&copy; 2024 MediCare Plus Clinic. Amsterdam, Netherlands. All Rights Reserved.</p></div></footer>
+
+</body>
+</html>

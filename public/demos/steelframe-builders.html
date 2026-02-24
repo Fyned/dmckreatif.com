@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SteelFrame Builders — Local Builders You Can Trust</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f5f5f5;--dark:#1a1a1a;--yellow:#ffd100;--yellow-dark:#e6bc00;--text:#666;--surface:#fff;--font-display:'Bebas Neue',sans-serif;--font-body:'Inter',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--dark);padding:12px 0}
+nav .inner{max-width:1000px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-display);font-size:1.8rem;color:#fff;letter-spacing:.05em}
+.logo span{color:var(--yellow)}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{font-size:.82rem;font-weight:500;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--yellow)}
+.nav-btn{padding:8px 24px;background:var(--yellow);color:var(--dark);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;border:none;cursor:pointer;text-decoration:none;transition:background .2s}
+.nav-btn:hover{background:var(--yellow-dark)}
+.container{max-width:1000px;margin:0 auto;padding:0 24px}
+
+/* HERO */
+.hero{padding:100px 0 60px;text-align:center;background:var(--dark);color:#fff;position:relative}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(var(--dark),var(--bg))}
+.hero h1{font-family:var(--font-display);font-size:clamp(3rem,7vw,5.5rem);letter-spacing:.03em;line-height:1;margin-bottom:16px;position:relative;z-index:1}
+.hero h1 span{color:var(--yellow)}
+.hero p{font-size:1rem;color:rgba(255,255,255,.5);max-width:480px;margin:0 auto 32px;position:relative;z-index:1}
+.hero .btn{padding:16px 40px;background:var(--yellow);color:var(--dark);font-family:var(--font-display);font-size:1.2rem;letter-spacing:.08em;border:none;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block;position:relative;z-index:1}
+.hero .btn:hover{background:var(--yellow-dark);transform:translateY(-2px)}
+
+/* SERVICES */
+.services{padding:80px 0}
+.sec-head{text-align:center;margin-bottom:48px}
+.sec-head h2{font-family:var(--font-display);font-size:2.4rem;color:var(--dark);letter-spacing:.03em}
+.sec-head p{font-size:.9rem;color:var(--text);margin-top:8px}
+.svc-list{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.svc-item{background:var(--surface);padding:32px;border-left:4px solid var(--yellow);transition:all .3s}
+.svc-item:hover{box-shadow:0 8px 32px rgba(0,0,0,.06)}
+.svc-item h3{font-family:var(--font-display);font-size:1.4rem;color:var(--dark);letter-spacing:.03em;margin-bottom:8px}
+.svc-item p{font-size:.88rem;line-height:1.7}
+
+/* WHY US */
+.why{padding:80px 0;background:var(--dark);color:#fff}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;text-align:center}
+.why-item .icon{font-size:2.5rem;margin-bottom:12px}
+.why-item h3{font-family:var(--font-display);font-size:1.3rem;letter-spacing:.03em;margin-bottom:8px;color:var(--yellow)}
+.why-item p{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.7}
+
+/* CONTACT */
+.contact{padding:80px 0;text-align:center}
+.contact h2{font-family:var(--font-display);font-size:2.4rem;color:var(--dark);margin-bottom:8px}
+.contact p{font-size:1rem;margin-bottom:32px}
+.contact .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:700px;margin:0 auto 32px}
+.info-box{padding:24px;background:var(--surface);border-top:3px solid var(--yellow)}
+.info-box strong{display:block;font-family:var(--font-display);font-size:1.1rem;color:var(--dark);letter-spacing:.03em;margin-bottom:4px}
+.info-box span{font-size:.85rem}
+
+footer{padding:32px 0;background:var(--dark);text-align:center}
+footer p{font-size:.78rem;color:rgba(255,255,255,.3)}
+
+@media(max-width:768px){
+  .nav-links{display:none}
+  .svc-list{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .contact .info-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <div class="logo">STEEL<span>FRAME</span></div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-btn">Free Estimate</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <h1>YOUR LOCAL <span>BUILDERS</span></h1>
+    <p>Reliable, affordable, and built to last. Residential construction and renovation services across the greater Amsterdam area.</p>
+    <a href="#contact" class="btn">GET A FREE ESTIMATE</a>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="sec-head">
+      <h2>OUR SERVICES</h2>
+      <p>Everything you need under one roof</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc-item"><h3>KITCHEN &amp; BATHROOM</h3><p>Complete remodels from design to installation. Tiling, plumbing, cabinetry, and finishing.</p></div>
+      <div class="svc-item"><h3>EXTENSIONS &amp; LOFTS</h3><p>Add valuable living space to your home with expertly engineered extensions and loft conversions.</p></div>
+      <div class="svc-item"><h3>ROOFING &amp; INSULATION</h3><p>Flat and pitched roofing, insulation upgrades, and energy-efficient solutions.</p></div>
+      <div class="svc-item"><h3>GENERAL RENOVATION</h3><p>Flooring, painting, plastering, and structural work. No job too small.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="container">
+    <div class="sec-head" style="margin-bottom:48px">
+      <h2 style="color:var(--yellow)">WHY STEELFRAME?</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="icon">&#128170;</div>
+        <h3>15+ YEARS</h3>
+        <p>Over a decade and a half of trusted building experience in the Netherlands.</p>
+      </div>
+      <div class="why-item">
+        <div class="icon">&#9989;</div>
+        <h3>FULLY INSURED</h3>
+        <p>Complete liability insurance and all required certifications. Peace of mind guaranteed.</p>
+      </div>
+      <div class="why-item">
+        <div class="icon">&#128178;</div>
+        <h3>FAIR PRICING</h3>
+        <p>Transparent quotes with no hidden costs. You only pay for what was agreed upon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>GET IN TOUCH</h2>
+    <p>Call us or visit our office in Amsterdam-West</p>
+    <div class="info-grid">
+      <div class="info-box">
+        <strong>PHONE</strong>
+        <span>+31 20 555 7890</span>
+      </div>
+      <div class="info-box">
+        <strong>EMAIL</strong>
+        <span>info@steelframe.nl</span>
+      </div>
+      <div class="info-box">
+        <strong>ADDRESS</strong>
+        <span>Haarlemmerweg 42, Amsterdam</span>
+      </div>
+    </div>
+    <a href="tel:+31205557890" class="hero btn" style="background:var(--yellow);color:var(--dark);padding:16px 40px;font-family:var(--font-display);font-size:1.2rem;letter-spacing:.08em;border:none;text-decoration:none;display:inline-block">CALL NOW</a>
+  </div>
+</section>
+
+<footer><div class="container"><p>&copy; 2024 SteelFrame Builders. Amsterdam, Netherlands.</p></div></footer>
+
+</body>
+</html>
