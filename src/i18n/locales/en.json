@@ -639,7 +639,11 @@
     "deviceMobile": "Mobile",
     "loadingPreview": "Loading preview...",
     "openInNewTab": "OPEN IN NEW TAB",
-    "satisfactionGuarantee": "100% satisfaction guaranteed — free revisions until you are happy"
+    "satisfactionGuarantee": "100% satisfaction guaranteed — free revisions until you are happy",
+    "tryDifferent": "Try a different keyword or category.",
+    "loading": "Loading templates...",
+    "error": "Failed to load templates.",
+    "retry": "Retry"
   },
   "templateOrder": {
     "title": "ORDER TEMPLATE",
