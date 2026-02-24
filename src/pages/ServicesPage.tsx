@@ -202,17 +202,40 @@ export default function ServicesPage() {
             subtitle={t("services.sectionSubtitle", "SYS.SERVICES")}
           />
 
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+            className="flex items-center gap-3 -mt-8 mb-4"
+          >
+            <NeoBadge color="neo-blue">
+              <Code2 size={12} className="mr-1" />
+              {t("services.proTeamBadge", "BUILT BY SENIOR DEVELOPERS")}
+            </NeoBadge>
+          </motion.div>
+
           <motion.p
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
-            className="font-mono text-base lg:text-lg text-neo-black/80 max-w-2xl leading-relaxed -mt-8 mb-16"
+            className="font-mono text-base lg:text-lg text-neo-black/80 max-w-2xl leading-relaxed mb-3"
           >
             {t(
               "services.heroDescription",
               "From single-page sites to full e-commerce platforms. Every project is custom-built with modern technology and premium design standards."
             )}
+          </motion.p>
+
+          <motion.p
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+            className="font-mono text-xs text-neo-black/50 max-w-2xl leading-relaxed mb-16"
+          >
+            {t("services.proTeamDesc", "Every project is handcrafted by our professional development team with international experience across 8+ countries.")}
           </motion.p>
 
           {/* Service Cards Grid */}

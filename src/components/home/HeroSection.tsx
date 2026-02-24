@@ -47,7 +47,7 @@ export default function HeroSection() {
           {/* CTA Buttons */}
           <motion.div
             variants={fadeInUp}
-            className="flex flex-col sm:flex-row gap-4 mb-16"
+            className="flex flex-col sm:flex-row gap-4 mb-4"
           >
             <NeoButton href="/contact" size="lg" color="neo-lime">
               {t("hero.ctaPrimary")} <ArrowRight size={18} />
@@ -56,6 +56,14 @@ export default function HeroSection() {
               {t("hero.ctaSecondary")} <ExternalLink size={16} />
             </NeoButton>
           </motion.div>
+
+          {/* Micro-copy */}
+          <motion.p
+            variants={fadeInUp}
+            className="font-mono text-xs text-neo-black/50 tracking-wider mb-16"
+          >
+            {t("hero.microCopy", "Handcrafted by professional developers \u2022 10+ international projects delivered")}
+          </motion.p>
 
           {/* Stats row */}
           <motion.div

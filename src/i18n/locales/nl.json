@@ -1,40 +1,40 @@
 {
   "seo": {
     "home": {
-      "title": "DMC Kreatif \u2014 Website Laten Maken | Premium Webbureau voor Nederland & Belgi\u00eb",
-      "description": "Professionele websites, webshops en SEO voor bedrijven in Nederland en Belgi\u00eb. React, Next.js, meertalig. Lighthouse 95+, offerte binnen 24 uur."
+      "title": "DMC Kreatif — Website Laten Maken | Premium Webbureau voor Nederland & België",
+      "description": "Professionele websites, webshops en SEO voor bedrijven in Nederland en België. React, Next.js, meertalig. Lighthouse 95+, offerte binnen 24 uur."
     },
     "services": {
       "title": "Website Laten Maken & Webshop Ontwikkeling | DMC Kreatif",
-      "description": "Op maat gemaakte websites, webshops, zoekmachineoptimalisatie en online marketing voor Nederlandse en Belgische bedrijven. Vanaf \u20ac349."
+      "description": "Op maat gemaakte websites, webshops, zoekmachineoptimalisatie en online marketing voor Nederlandse en Belgische bedrijven. Vanaf €349."
     },
     "portfolio": {
-      "title": "Portfolio \u2014 10+ Websites voor Europese Bedrijven | DMC Kreatif",
-      "description": "Bekijk onze projecten: bouw, energie, boekhouding en e-commerce in Frankrijk, Belgi\u00eb en UK. Meetbare resultaten, Lighthouse scores 95+."
+      "title": "Portfolio — 10+ Websites voor Europese Bedrijven | DMC Kreatif",
+      "description": "Bekijk onze projecten: bouw, energie, boekhouding en e-commerce in Frankrijk, België en UK. Meetbare resultaten, Lighthouse scores 95+."
     },
     "pricing": {
-      "title": "Tarieven \u2014 Websites vanaf \u20ac349",
-      "description": "Starter \u20ac349, Growth \u20ac749, Scale \u20ac1.497, Commerce \u20ac2.497"
+      "title": "Website Prijzen — Op maat vanaf €349 | Templates vanaf €39 | DMC Kreatif",
+      "description": "Starter €349, Growth €749, Scale €1.497, Commerce €2.497"
     },
     "about": {
-      "title": "Over DMC Kreatif \u2014 Webdesign Bureau voor Nederland, Belgi\u00eb & Europa",
+      "title": "Over DMC Kreatif — Webdesign Bureau voor Nederland, België & Europa",
       "description": "Opgericht door Musa Kerem Demirci. 48+ internationale projecten in 8 landen. Expertise in React, Next.js en meertalige websites."
     },
     "blog": {
-      "title": "Webdesign Blog \u2014 SEO Tips, Webshop Gidsen | DMC Kreatif",
+      "title": "Webdesign Blog — SEO Tips, Webshop Gidsen | DMC Kreatif",
       "description": "Praktische gidsen over website ontwikkeling, zoekmachineoptimalisatie, webshops en online marketing voor Nederlandse bedrijven."
     },
     "contact": {
-      "title": "Contact DMC Kreatif \u2014 Gratis Adviesgesprek voor Uw Website",
-      "description": "Vraag een gratis offerte aan voor uw webproject. Reactie binnen 24 uur. Wij helpen bedrijven in Nederland, Belgi\u00eb, Frankrijk en Duitsland."
+      "title": "Contact DMC Kreatif — Gratis Adviesgesprek voor Uw Website",
+      "description": "Vraag een gratis offerte aan voor uw webproject. Reactie binnen 24 uur. Wij helpen bedrijven in Nederland, België, Frankrijk en Duitsland."
     },
     "caseStudies": {
-      "title": "Casestudies \u2014 Meetbare Resultaten voor Europese Bedrijven | DMC Kreatif",
+      "title": "Casestudies — Meetbare Resultaten voor Europese Bedrijven | DMC Kreatif",
       "description": "Hoe wij bedrijven in Europa hebben geholpen met snellere websites, betere vindbaarheid en hogere Lighthouse-scores van 95+."
     },
     "templates": {
-      "title": "Website Sjablonen \u2014 Professionele Ontwerpen vanaf \u20ac39 | DMC Kreatif",
-      "description": "Starter \u20ac39, Business \u20ac99, Premium \u20ac179. Op maat gemaakt en geleverd in 24u tot 5 dagen."
+      "title": "Website Sjablonen — Professionele Ontwerpen vanaf €39 | DMC Kreatif",
+      "description": "Starter €39, Business €99, Premium €179. Op maat gemaakt en geleverd in 24u tot 5 dagen."
     }
   },
   "nav": {
@@ -62,19 +62,20 @@
     "stat3": "100%",
     "stat3Label": "Op Tijd",
     "stat4": "98+",
-    "stat4Label": "Lighthouse"
+    "stat4Label": "Lighthouse",
+    "microCopy": "Handgemaakt door professionele ontwikkelaars • 10+ internationale projecten opgeleverd"
   },
   "choosePath": {
     "sectionTitle": "KIES UW PAD",
     "sectionSubtitle": "SYS.OPTIES",
-    "templatePrice": "VANAF \u20ac39",
+    "templatePrice": "VANAF €39",
     "templateTitle": "KANT-EN-KLARE TEMPLATES",
     "templateDelivery": "Website in 24 uur",
     "templateFeature1": "Vooraf ontworpen professionele designs",
     "templateFeature2": "Uw merkkleuren & logo",
     "templateFeature3": "Mobiel responsive & SEO-klaar",
     "templateCta": "TEMPLATES BEKIJKEN",
-    "customPrice": "VANAF \u20ac349",
+    "customPrice": "VANAF €349",
     "customTitle": "MAATWERK ONTWIKKELING",
     "customDelivery": "Vanaf nul gebouwd door ons team",
     "customFeature1": "100% uniek maatwerk design",
@@ -92,22 +93,22 @@
     "webDev": {
       "title": "WEBONTWIKKELING",
       "description": "Op maat gemaakte websites gebouwd met Next.js en React. Razendsnel, SEO-geoptimaliseerd en responsief op alle apparaten.",
-      "priceRange": "VANAF \u20ac349"
+      "priceRange": "VANAF €349"
     },
     "ecommerce": {
       "title": "E-COMMERCE",
       "description": "Volledige webshops met betalingsintegratie, voorraadbeheer en ondersteuning voor meerdere valuta's.",
-      "priceRange": "VANAF \u20ac2.497"
+      "priceRange": "VANAF €2.497"
     },
     "seo": {
       "title": "SEO & ANALYTICS",
       "description": "Technische SEO-audits, zoekwoordoptimalisatie, Google Analytics-configuratie en prestatiemonitoring.",
-      "priceRange": "VANAF \u20ac199"
+      "priceRange": "VANAF €199"
     },
     "marketing": {
       "title": "DIGITALE MARKETING",
       "description": "Google Ads-campagnes, social media-beheer, contentstrategie en conversieoptimalisatie.",
-      "priceRange": "VANAF \u20ac299"
+      "priceRange": "VANAF €299"
     },
     "seeWork": "Bekijk ons werk",
     "viewPricing": "Bekijk prijzen",
@@ -115,21 +116,23 @@
     "templateAlt": {
       "title": "IETS SNELLERS NODIG?",
       "subtitle": "SYS.SNEL_START",
-      "desc": "Krijg een professionele website vanaf \u20ac39 \u2014 geleverd in slechts 24 uur. Vooraf ontworpen designs aangepast met uw merk.",
+      "desc": "Krijg een professionele website vanaf €39 — geleverd in slechts 24 uur. Vooraf ontworpen designs aangepast met uw merk.",
       "feature1": "Geleverd in 24u tot 5 dagen",
       "feature2": "Uw logo, kleuren & content",
       "feature3": "Mobiel responsive & SEO-klaar",
       "cta": "TEMPLATES BEKIJKEN",
       "starterLabel": "STARTER",
-      "starterPrice": "\u20ac39",
+      "starterPrice": "€39",
       "starterPages": "1 pagina",
       "businessLabel": "BUSINESS",
-      "businessPrice": "\u20ac99",
+      "businessPrice": "€99",
       "businessPages": "3 pagina's",
       "premiumLabel": "PREMIUM",
-      "premiumPrice": "\u20ac179",
+      "premiumPrice": "€179",
       "premiumPages": "5+ pagina's"
-    }
+    },
+    "proTeamBadge": "GEBOUWD DOOR SENIOR ONTWIKKELAARS",
+    "proTeamDesc": "Elk project wordt op maat gemaakt door ons professioneel ontwikkelteam met internationale ervaring in meer dan 8 landen."
   },
   "portfolio": {
     "sectionTitle": "GESELECTEERD WERK",
@@ -157,7 +160,7 @@
     "noResults": "Geen projecten gevonden met de huidige filters. Probeer uw selectie aan te passen.",
     "filterAll": "ALLES",
     "filterFR": "FRANKRIJK",
-    "filterBE": "BELGI\u00cb",
+    "filterBE": "BELGIË",
     "filterUK": "VK",
     "filterINT": "INTERNATIONAAL",
     "filterByType": "OP TYPE",
@@ -219,7 +222,7 @@
     },
     "archi": {
       "sector": "BOUW",
-      "country": "BELGI\u00cb",
+      "country": "BELGIË",
       "description": "Presentatiewebsite voor een Belgisch bouw- en verandabedrijf. Visueel ontwerp met projectgalerijen en offerteaanvraagsysteem.",
       "challenge": "Archi Construction had een tweetalige website (FR/NL) nodig om zowel Franstalige als Nederlandstalige klanten in België te bedienen.",
       "solution": "Wij bouwden een visueel verbluffende portfoliosite met projectgalerijen in hoge resolutie, tweetalige content en een geïntegreerd offerteaanvraagsysteem.",
@@ -288,7 +291,7 @@
     },
     "mkn": {
       "sector": "SLOOP & GRONDWERK",
-      "country": "BELGI\u00cb",
+      "country": "BELGIË",
       "description": "Professionele sloop- en grondwerkdiensten website voor operaties in heel België met tweetalige Nederlands/Frans ondersteuning.",
       "challenge": "MKN Technisch had een tweetalige website nodig om zowel Nederlandstalige als Franstalige klanten in heel België te bereiken voor hun sloopdiensten.",
       "solution": "Wij creëerden een gedurfde, professionele website die hun sloopexpertise presenteert met tweetalige ondersteuning en eenvoudige contactopties.",
@@ -300,7 +303,7 @@
       "sector": "TEXTIELPRODUCTIE",
       "country": "FRANKRIJK",
       "description": "Meertalig B2B-textielproductieplatform voor Europese modemerken met 20+ jaar expertise en 6000+ tevreden klanten.",
-      "challenge": "Retro Ko\u015far Tekstil had een meertalig webplatform nodig om hun textielproductiecapaciteiten te presenteren aan Europese modemerken in 5 talen.",
+      "challenge": "Retro Koşar Tekstil had een meertalig webplatform nodig om hun textielproductiecapaciteiten te presenteren aan Europese modemerken in 5 talen.",
       "solution": "Wij bouwden een strakke, meertalige e-commerce-vitrine met collectiecatalogi, fabriekstourvisuals en direct contact via WhatsApp-integratie.",
       "result1": "5-talig platform (FR/EN/NL/DE/TR) dat alle grote Europese markten bereikt",
       "result2": "Productcatalogus met categoriefiltering die B2B-aanvragen stimuleert",
@@ -334,9 +337,9 @@
     "startingAt": "VANAF",
     "getStarted": "AAN DE SLAG",
     "delivery": "LEVERTIJD",
-    "launchFeatures": "Aangepaste landingspagina // Responsive design // Contactformulier // Basis hosting setup // 30 dagen support // \u2139\ufe0f SEO, Analytics & Blog beschikbaar als add-ons",
+    "launchFeatures": "Aangepaste landingspagina // Responsive design // Contactformulier // Basis hosting setup // 30 dagen support // ℹ️ SEO, Analytics & Blog beschikbaar als add-ons",
     "growthFeatures": "5-7 aangepaste pagina's // SEO-optimalisatie // Google Analytics // Blog-integratie // CMS dashboard // Contactformulieren // Afbeeldingengalerij // Social media links // Responsive design // 60 dagen support",
-    "scaleFeatures": "10+ aangepaste pagina's // Blog integratie // Geavanceerde SEO // Google Analytics 4 // Social media integratie // Meertalig (2-3 talen) // Video integratie // Google Ads setup // Prioritaire support // Contentstrategie // 90 dagen support // \ud83c\udf81 1000 gratis premium visitekaartjes",
+    "scaleFeatures": "10+ aangepaste pagina's // Blog integratie // Geavanceerde SEO // Google Analytics 4 // Social media integratie // Meertalig (2-3 talen) // Video integratie // Google Ads setup // Prioritaire support // Contentstrategie // 90 dagen support // 🎁 1000 gratis premium visitekaartjes",
     "commerceFeatures": "Alles in Scale + // Volledige webshop // Betaalgateway (Stripe/Shopify) // Voorraadbeheersysteem // Multi-valuta ondersteuning // Ordertracering dashboard // Blog integratie // Geavanceerde SEO // Google Analytics 4 // Social media integratie // Meertalig (2-3 talen) // Toegewijd accountmanager // 120 dagen support",
     "launchDelivery": "5-7 dagen",
     "growthDelivery": "10-14 dagen",
@@ -358,11 +361,11 @@
     "faq5Q": "Wat als ik niet tevreden ben met het resultaat?",
     "faq5A": "Wij bieden gratis revisies tot u 100% tevreden bent. Uw tevredenheid is onze prioriteit.",
     "faq6Q": "Hoe werken de onderhoudspakketten?",
-    "faq6A": "Onze pakketten dekken hosting, updates, beveiliging en support. Kies tussen Basis (\u20ac47/maand), Pro (\u20ac97/maand) en Enterprise (\u20ac197/maand).",
+    "faq6A": "Onze pakketten dekken hosting, updates, beveiliging en support. Kies tussen Basis (€47/maand), Pro (€97/maand) en Enterprise (€197/maand).",
     "faq7Q": "Werkt u ook met bedrijven buiten Europa?",
-    "faq7A": "We bedienen voornamelijk Frankrijk, Belgi\u00eb, het VK, Nederland en Duitsland. Neem contact op voor andere regio's.",
+    "faq7A": "We bedienen voornamelijk Frankrijk, België, het VK, Nederland en Duitsland. Neem contact op voor andere regio's.",
     "faq8Q": "Kan ik later upgraden van template naar maatwerk?",
-    "faq8A": "Absoluut! We kunnen uw template omzetten naar een maatwerksite, en uw initi\u00eble investering wordt verrekend.",
+    "faq8A": "Absoluut! We kunnen uw template omzetten naar een maatwerksite, en uw initiële investering wordt verrekend.",
     "customSectionTitle": "MAATWERK ONTWIKKELING",
     "customSectionSubtitle": "SYS.MAATWERK",
     "customSectionBadge": "PROFESSIONEEL ONTWIKKELTEAM",
@@ -372,10 +375,10 @@
     "starterIdealFor": "Ideaal voor: Freelancers, startups, persoonlijke merken",
     "growthIdealFor": "Ideaal voor: MKB, groeiende bedrijven",
     "scaleIdealFor": "Ideaal voor: Internationale bedrijven, meertalige sites",
-    "scalePromo": "\ud83c\udf81 GRATIS BONUS: 1000 premium visitekaartjes bezorgd op uw adres!",
-    "scaleValueNote": "\ud83d\udcb0 Deze functies als add-ons kopen zou \u20ac1.746+ kosten \u2014 u bespaart \u20ac249+",
-    "scaleUpgradeNote": "Al Growth? Upgrade naar Scale voor slechts \u20ac949 meer \u2014 en ontvang de visitekaartjesbonus!",
-    "growthUpgradeHint": "Upgrade op elk moment naar Scale voor \u20ac949 \u2014 inclusief 1000 gratis visitekaartjes!",
+    "scalePromo": "🎁 GRATIS BONUS: 1000 premium visitekaartjes bezorgd op uw adres!",
+    "scaleValueNote": "💰 Deze functies als add-ons kopen zou €1.746+ kosten — u bespaart €249+",
+    "scaleUpgradeNote": "Al Growth? Upgrade naar Scale voor slechts €949 meer — en ontvang de visitekaartjesbonus!",
+    "growthUpgradeHint": "Upgrade op elk moment naar Scale voor €949 — inclusief 1000 gratis visitekaartjes!",
     "commerceIdealFor": "Ideaal voor: Webshops, marktplaatsen",
     "carePlanBasic": "BASIS",
     "carePlanPro": "PRO",
@@ -392,7 +395,7 @@
     "seoAudit": "SEO Audit & Fix",
     "seoAuditDesc": "Volledige technische audit met correcties en aanbevelingen",
     "googleAds": "Google Ads Setup",
-    "googleAdsDesc": "Campagne-instelling, zoekwoordonderzoek en initi\u00eble targeting",
+    "googleAdsDesc": "Campagne-instelling, zoekwoordonderzoek en initiële targeting",
     "socialKit": "Social Media Kit",
     "socialKitDesc": "20 aangepaste templates voor Instagram, Facebook en LinkedIn",
     "videoProduction": "Videoproductie",
@@ -402,7 +405,7 @@
     "comparisonSectionTitle": "TEMPLATES VS MAATWERK",
     "comparisonSectionSubtitle": "SYS.VERGELIJK",
     "templateTitle": "KANT-EN-KLARE SJABLONEN",
-    "templateSubtitle": "Professionele websites vanaf \u20ac50",
+    "templateSubtitle": "Professionele websites vanaf €50",
     "templatePages": "pagina's",
     "templateDescription": "Kies een sjabloon, pas aan met uw merk, geleverd in 2-5 dagen.",
     "browseTemplates": "BEKIJK SJABLONEN",
@@ -440,10 +443,10 @@
     "consultDesc": "Boek een gratis 30 minuten consult. Wij analyseren uw behoeften en adviseren de beste oplossing.",
     "consultButton": "GRATIS GESPREK",
     "oneTimePrice": "EENMALIGE BETALING",
-    "oneTimePriceNote": "Geen maandelijkse kosten, geen abonnementen. U betaalt \u00e9\u00e9nmaal en uw website is voor altijd van u.",
+    "oneTimePriceNote": "Geen maandelijkse kosten, geen abonnementen. U betaalt éénmaal en uw website is voor altijd van u.",
     "seoTitle": "SEO PAKKETTEN",
     "seoSubtitle": "SYS.RANKINGS",
-    "seoDescription": "Word gevonden op Google. Onze SEO-experts optimaliseren uw website met bewezen strategie\u00ebn die meetbare resultaten opleveren.",
+    "seoDescription": "Word gevonden op Google. Onze SEO-experts optimaliseren uw website met bewezen strategieën die meetbare resultaten opleveren.",
     "seo": {
       "monthly": "MAANDELIJKS",
       "monthlyPrice": "300",
@@ -452,12 +455,12 @@
       "6month": "6 MAANDEN PLAN",
       "6monthPrice": "1.500",
       "6monthPeriod": "/6 maanden",
-      "6monthSave": "Bespaar \u20ac300 vs maandelijks",
+      "6monthSave": "Bespaar €300 vs maandelijks",
       "6monthFeatures": "Alles uit het Maandelijks plan // Geavanceerde zoekwoordtargeting // Backlink strategie en outreach // Content creatie (4 blogposts) // Google Business Profile optimalisatie // Schema markup implementatie // Afbeelding- en snelheidsoptimalisatie // Tweewekelijkse voortgangsrapporten // Social media SEO-integratie // Prioriteitsondersteuning",
       "yearly": "JAARPLAN",
       "yearlyPrice": "2.500",
       "yearlyPeriod": "/jaar",
-      "yearlySave": "Bespaar \u20ac1.100 vs maandelijks",
+      "yearlySave": "Bespaar €1.100 vs maandelijks",
       "yearlyFeatures": "Alles uit het 6 Maanden plan // Volledige contentstrategie (12 blogposts) // Geavanceerde linkbuilding // Driemaandelijkse SEO-strategie review // Conversie-optimalisatie // A/B-testen voor belangrijke pagina's // Toegewijd accountmanager // Gedetailleerde kwartaalrapporten // Video SEO-optimalisatie // Internationale SEO (meertalig) // Google Ads synergieplanning // 24/7 prioriteitsondersteuning",
       "whatWeDoTitle": "WAT WIJ DOEN VOOR UW SEO",
       "whatWeDo1Title": "Technische audit",
@@ -478,7 +481,7 @@
       "pages": "Aantal pagina's",
       "features": "Functies",
       "estimated": "Geschatte prijs",
-      "disclaimer": "De uiteindelijke prijs kan vari\u00ebren op basis van projectcomplexiteit",
+      "disclaimer": "De uiteindelijke prijs kan variëren op basis van projectcomplexiteit",
       "getQuote": "Exacte offerte aanvragen",
       "feat": {
         "multilingual": "Meertalig (4 talen)",
@@ -487,7 +490,10 @@
         "analytics": "Geavanceerde analytics",
         "animations": "Premium animaties"
       }
-    }
+    },
+    "revisionsIncluded": "2 revisierondes inbegrepen bij elk pakket",
+    "freeConsultNote": "Niet zeker? Boek een gratis consult van 30 min — vrijblijvend",
+    "proTeamNote": "Elk project wordt beoordeeld en gebouwd door senior ontwikkelaars met 10+ jaar ervaring"
   },
   "testimonials": {
     "sectionTitle": "KLANTRAPPORTEN",
@@ -515,7 +521,7 @@
   "promo": {
     "badgeText": "BEPERKTE AANBIEDING",
     "bannerShort": "TOT 25% KORTING",
-    "title": "LANCERINGSACTIE \u2014 TOT 25% KORTING",
+    "title": "LANCERINGSACTIE — TOT 25% KORTING",
     "description": "Alle maatwerk ontwikkelingspakketten zijn tijdelijk afgeprijsd. Profiteer van deze prijzen voordat ze terugkeren naar normaal!",
     "homeTitle": "TOT 25% KORTING OP ALLE PAKKETTEN",
     "homeDescription": "Lanceer uw professionele website tegen onverslaanbare prijzen. Maatwerk ontwikkelingspakketten zijn tijdelijk in de aanbieding!",
@@ -530,7 +536,7 @@
     "sec": "SEC",
     "popupTitle": "25% KORTING OP ALLE PAKKETTEN",
     "popupDescription": "Alle maatwerk ontwikkelingspakketten zijn afgeprijsd. Eenmalige betaling, geen verborgen kosten!",
-    "popupNote": "Geen verplichting \u2014 gratis adviesgesprek inbegrepen"
+    "popupNote": "Geen verplichting — gratis adviesgesprek inbegrepen"
   },
   "cta": {
     "title": "KLAAR OM IETS TE BOUWEN?",
@@ -597,7 +603,7 @@
     "deviceMobile": "Mobiel",
     "loadingPreview": "Voorbeeld laden...",
     "openInNewTab": "OPENEN IN NIEUW TABBLAD",
-    "heroPrice": "Vanaf \u20ac39",
+    "heroPrice": "Vanaf €39",
     "tierIdealFor": {
       "business_card": "Persoonlijk portfolio, freelancer landingspagina",
       "starter": "Kleine bedrijven, lokale diensten",
@@ -612,14 +618,14 @@
     "whyFast": "SNELLE LEVERING",
     "whyFastDesc": "Ontvang uw website in slechts 24 uur",
     "whyAffordable": "BETAALBAAR",
-    "whyAffordableDesc": "Professionele websites vanaf slechts \u20ac39",
+    "whyAffordableDesc": "Professionele websites vanaf slechts €39",
     "whyBrand": "UW MERK",
     "whyBrandDesc": "Aangepast met uw logo, kleuren en content",
     "customBannerTitle": "IETS UNIEKS NODIG?",
     "customBannerDesc": "Ons professioneel ontwikkelteam bouwt volledig aangepaste websites op maat van uw exacte behoeften. Alles vanaf nul, precies zoals u het wilt.",
     "customBannerCta": "MAATWERK PAKKETTEN ONTDEKKEN",
     "customBannerBadge": "PROFESSIONEEL ONTWIKKELTEAM",
-    "satisfactionGuarantee": "100% tevredenheidsgarantie \u2014 gratis revisies tot u tevreden bent"
+    "satisfactionGuarantee": "100% tevredenheidsgarantie — gratis revisies tot u tevreden bent"
   },
   "templateOrder": {
     "title": "SJABLOON BESTELLEN",
@@ -702,17 +708,17 @@
     "timelineTitle": "ONZE REIS",
     "timelineSubtitle": "SYS.TIJDLIJN",
     "milestone1Title": "DMC Kreatif Opgericht",
-    "milestone1Desc": "Gelanceerd als premium webbureau gericht op Europese bedrijven. Eerste kantoor opgezet en merkidentiteit gecre\u00eberd.",
+    "milestone1Desc": "Gelanceerd als premium webbureau gericht op Europese bedrijven. Eerste kantoor opgezet en merkidentiteit gecreëerd.",
     "milestone2Title": "Eerste Franse Projecten",
     "milestone2Desc": "Websites opgeleverd voor Cakir Facades en Altinbas Moustiquaire in Frankrijk. Sterke aanwezigheid op de Franse markt gevestigd.",
     "milestone3Title": "Uitbreiding naar het VK",
     "milestone3Desc": "Uitgebreid naar het Verenigd Koninkrijk met Adamsons Accountants. Britse bankrekening geopend en Britse marktpositie gevestigd.",
     "milestone4Title": "10+ Projecten Mijlpaal",
-    "milestone4Desc": "48+ internationale projecten voltooid in Frankrijk, Belgi\u00eb en het VK. 98+ Lighthouse-scores behouden bij elke oplevering.",
+    "milestone4Desc": "48+ internationale projecten voltooid in Frankrijk, België en het VK. 98+ Lighthouse-scores behouden bij elke oplevering.",
     "milestone5Title": "Europese Uitbreiding",
     "milestone5Desc": "Diensten uitgebreid naar Nederland en Duitsland. Nederlandse en Duitse taalondersteuning toegevoegd. Meertalig websiteplatform gelanceerd.",
     "milestone6Title": "Sjablonenplatform Lancering",
-    "milestone6Desc": "Kant-en-klare website sjablonenplatform gelanceerd. Schaalbare oplossingen voor Europese MKB-bedrijven vanaf \u20ac50."
+    "milestone6Desc": "Kant-en-klare website sjablonenplatform gelanceerd. Schaalbare oplossingen voor Europese MKB-bedrijven vanaf €50."
   },
   "contact": {
     "sectionTitle": "NEEM CONTACT OP",
@@ -748,33 +754,33 @@
     "invalidEmail": "Voer een geldig e-mailadres in",
     "directContact": "DIRECT CONTACT",
     "responseTime": "REACTIETIJD: < 24 UUR",
-    "serviceTemplateCard": "Sjabloon — Visitekaartje (\u20ac50)",
-    "serviceTemplateStarter": "Sjabloon — Starter (\u20ac100)",
-    "serviceTemplatePro": "Sjabloon — Professioneel (\u20ac150)",
+    "serviceTemplateCard": "Sjabloon — Visitekaartje (€50)",
+    "serviceTemplateStarter": "Sjabloon — Starter (€100)",
+    "serviceTemplatePro": "Sjabloon — Professioneel (€150)",
     "explore": "Ontdekken",
     "selectService": "Selecteer een dienst...",
-    "serviceLaunch": "Launch Pakket (\u20ac497)",
-    "serviceGrowth": "Groei Pakket (\u20ac997)",
-    "serviceScale": "Schaal Pakket (\u20ac1.997)",
-    "serviceCommerce": "Commerce Pakket (\u20ac2.997)",
+    "serviceLaunch": "Launch Pakket (€497)",
+    "serviceGrowth": "Groei Pakket (€997)",
+    "serviceScale": "Schaal Pakket (€1.997)",
+    "serviceCommerce": "Commerce Pakket (€2.997)",
     "selectBudget": "Selecteer uw budget...",
-    "budgetUnder500": "Minder dan \u20ac500",
-    "budget500": "\u20ac500 \u2014 \u20ac1.000",
-    "budget1000": "\u20ac1.000 \u2014 \u20ac2.000",
-    "budget2000": "\u20ac2.000 \u2014 \u20ac3.000",
-    "budget3000": "\u20ac3.000+",
+    "budgetUnder500": "Minder dan €500",
+    "budget500": "€500 — €1.000",
+    "budget1000": "€1.000 — €2.000",
+    "budget2000": "€2.000 — €3.000",
+    "budget3000": "€3.000+",
     "timeline": "Tijdlijn",
     "selectTimeline": "Wanneer heeft u het nodig?",
     "timelineAsap": "Zo snel mogelijk",
-    "timeline1_2Weeks": "1 \u2014 2 weken",
+    "timeline1_2Weeks": "1 — 2 weken",
     "timeline1Month": "Binnen 1 maand",
-    "timeline2_3Months": "2 \u2014 3 maanden",
+    "timeline2_3Months": "2 — 3 maanden",
     "timelineFlexible": "Flexibel / Geen haast",
     "phoneInvalid": "Voer een geldig telefoonnummer in (EU-formaat)",
     "rateLimited": "Wacht een paar minuten voordat u nog een bericht verzendt.",
     "openingHours": "Openingstijden",
-    "weekdays": "Maandag \u2014 Vrijdag",
-    "weekend": "Zaterdag \u2014 Zondag",
+    "weekdays": "Maandag — Vrijdag",
+    "weekend": "Zaterdag — Zondag",
     "closed": "Gesloten",
     "location": "Onze locatie",
     "reviewTitle": "Tevreden over ons werk?",
@@ -804,22 +810,22 @@
     "post5Content": "Europa is een meertalige markt met enorm potentieel. Een Frans bedrijf met een Engelse website kan Britse klanten bereiken. Moderne tools zoals next-intl maken het bouwen van meertalige sites efficiënt en SEO-vriendelijk.",
     "post6Title": "Hoeveel kost een website in Europa in 2025?",
     "post6Excerpt": "Een transparant overzicht van webontwikkeling prijzen op Europese markten. Van freelancer tarieven tot agentschap pakketten.",
-    "post6Content": "Websitekosten in Europa vari\u00ebren aanzienlijk per land en projectomvang. Een eenvoudige single-page site kost tussen 400 en 1500 euro, terwijl een volledige bedrijfswebsite met meertalige ondersteuning tussen 2000 en 8000 euro kan kosten. E-commerce platforms beginnen doorgaans bij 3000 euro. Bij DMC Kreatif beginnen onze transparante pakketten bij 497 euro omdat wij geloven dat premium kwaliteit toegankelijk moet zijn voor groeiende bedrijven.",
+    "post6Content": "Websitekosten in Europa variëren aanzienlijk per land en projectomvang. Een eenvoudige single-page site kost tussen 400 en 1500 euro, terwijl een volledige bedrijfswebsite met meertalige ondersteuning tussen 2000 en 8000 euro kan kosten. E-commerce platforms beginnen doorgaans bij 3000 euro. Bij DMC Kreatif beginnen onze transparante pakketten bij 497 euro omdat wij geloven dat premium kwaliteit toegankelijk moet zijn voor groeiende bedrijven.",
     "post7Title": "De belangrijkste webdesign trends van 2025",
-    "post7Excerpt": "Van dark mode interfaces tot micro-interacties, ontdek de designtrends die premium websites dit jaar defini\u00ebren.",
-    "post7Content": "Webdesign in 2025 wordt gedefinieerd door doelgerichte esthetiek en performance-first denken. Dark mode is de standaard geworden voor premium merken. Micro-interacties leiden gebruikers door interfaces met subtiele animaties. Typografie staat centraal met variabele lettertypen en kinetische tekst die memorabele eerste indrukken cre\u00ebren.",
+    "post7Excerpt": "Van dark mode interfaces tot micro-interacties, ontdek de designtrends die premium websites dit jaar definiëren.",
+    "post7Content": "Webdesign in 2025 wordt gedefinieerd door doelgerichte esthetiek en performance-first denken. Dark mode is de standaard geworden voor premium merken. Micro-interacties leiden gebruikers door interfaces met subtiele animaties. Typografie staat centraal met variabele lettertypen en kinetische tekst die memorabele eerste indrukken creëren.",
     "post8Title": "Waarom uw Franse bedrijf een professionele website nodig heeft",
     "post8Excerpt": "Frankrijk heeft meer dan 4 miljoen MKB-bedrijven, maar velen missen een goede online aanwezigheid. Hier is waarom een professionele website essentieel is.",
     "post8Content": "Frankrijk vertegenwoordigt een van de grootste digitale markten in Europa, met meer dan 92 procent van de bevolking die regelmatig internet gebruikt. Een professionele website bouwt direct geloofwaardigheid op. Franse consumenten doen online onderzoek voordat ze aankoopbeslissingen nemen. Lokale SEO-optimalisatie helpt uw bedrijf te verschijnen in Google Maps en lokale zoekresultaten.",
     "post9Title": "E-commerce gids voor Belgische bedrijven",
-    "post9Excerpt": "De unieke tweetalige markt van Belgi\u00eb vereist een aangepaste aanpak voor online verkoop. Leer een succesvolle e-commerce aanwezigheid op te bouwen.",
-    "post9Content": "Belgi\u00eb biedt een unieke e-commerce kans met zijn Franstalige en Nederlandstalige markten. Een succesvolle webshop bouwen betekent beide gemeenschappen effectief bedienen. Betalingsintegratie moet Bancontact bevatten, de dominante Belgische betaalmethode. De Belgische e-commercewetgeving vereist duidelijke prijzen inclusief BTW en een retourbeleid van 14 dagen.",
+    "post9Excerpt": "De unieke tweetalige markt van België vereist een aangepaste aanpak voor online verkoop. Leer een succesvolle e-commerce aanwezigheid op te bouwen.",
+    "post9Content": "België biedt een unieke e-commerce kans met zijn Franstalige en Nederlandstalige markten. Een succesvolle webshop bouwen betekent beide gemeenschappen effectief bedienen. Betalingsintegratie moet Bancontact bevatten, de dominante Belgische betaalmethode. De Belgische e-commercewetgeving vereist duidelijke prijzen inclusief BTW en een retourbeleid van 14 dagen.",
     "post10Title": "SEO-tips voor Britse kleine bedrijven in 2025",
-    "post10Excerpt": "Praktische, uitvoerbare SEO-strategie\u00ebn afgestemd op de competitieve Britse markt. Verbeter uw zoekresultaten zonder groot budget.",
-    "post10Content": "De Britse markt is zeer competitief online, maar slimme SEO-strategie\u00ebn kunnen kleine bedrijven helpen boven hun gewicht te presteren. Begin met Google Business Profile optimalisatie. Richt u op long-tail zoekwoorden specifiek voor uw locatie en dienst. Technische SEO-fundamenten zijn belangrijker dan ooit met Core Web Vitals als rankingfactor.",
+    "post10Excerpt": "Praktische, uitvoerbare SEO-strategieën afgestemd op de competitieve Britse markt. Verbeter uw zoekresultaten zonder groot budget.",
+    "post10Content": "De Britse markt is zeer competitief online, maar slimme SEO-strategieën kunnen kleine bedrijven helpen boven hun gewicht te presteren. Begin met Google Business Profile optimalisatie. Richt u op long-tail zoekwoorden specifiek voor uw locatie en dienst. Technische SEO-fundamenten zijn belangrijker dan ooit met Core Web Vitals als rankingfactor.",
     "post11Title": "Website snelheidsoptimalisatie: een complete gids",
-    "post11Excerpt": "Elke seconde laadtijd kost u conversies. Leer de technische strategie\u00ebn die websites razend snel maken.",
-    "post11Content": "Website snelheid heeft direct invloed op omzet. Onderzoek toont aan dat een vertraging van \u00e9\u00e9n seconde de conversies met 7 procent vermindert. Begin met beeldoptimalisatie met moderne formaten zoals WebP en AVIF. Minimaliseer JavaScript-bundels door code splitting en tree shaking. Implementeer een CDN om bestanden te serveren vanuit locaties dichtst bij uw Europese gebruikers.",
+    "post11Excerpt": "Elke seconde laadtijd kost u conversies. Leer de technische strategieën die websites razend snel maken.",
+    "post11Content": "Website snelheid heeft direct invloed op omzet. Onderzoek toont aan dat een vertraging van één seconde de conversies met 7 procent vermindert. Begin met beeldoptimalisatie met moderne formaten zoals WebP en AVIF. Minimaliseer JavaScript-bundels door code splitting en tree shaking. Implementeer een CDN om bestanden te serveren vanuit locaties dichtst bij uw Europese gebruikers.",
     "post12Title": "Hoe kiest u het juiste webontwikkeling bureau",
     "post12Excerpt": "Niet alle bureaus zijn gelijk. Hier zijn de belangrijkste criteria om een webontwikkelingspartner te evalueren voor uw bedrijf.",
     "post12Content": "Het kiezen van een webontwikkeling bureau is een kritieke bedrijfsbeslissing. Begin met het onderzoeken van hun portfolio. Controleer hun Lighthouse-scores. Elk competent bureau moet consequent scores van 90 of hoger behalen. Evalueer hun technologiestack. Moderne bureaus gebruiken React, Next.js of Vue met TypeScript en Tailwind CSS. Begrijp hun prijsstructuur duidelijk.",
@@ -828,15 +834,15 @@
     "post13Content": "De keuze tussen React en WordPress hangt af van uw bedrijfsprioriteiten. WordPress domineert de markt met 40 procent marktaandeel, maar React-oplossingen winnen snel terrein. React-sites gebouwd met Next.js leveren superieure prestaties. Statische generatie en server-side rendering produceren pagina's die in minder dan een seconde laden. Voor bedrijven die frequent updates nodig hebben, biedt een headless CMS het beste van beide werelden.",
     "post14Title": "AVG-conforme website checklist voor 2025",
     "post14Excerpt": "Een uitgebreide checklist om ervoor te zorgen dat uw website voldoet aan de AVG-vereisten. Vermijd boetes tot 20 miljoen euro.",
-    "post14Content": "AVG-naleving is verplicht voor elke website die Europese gebruikers bedient, met boetes tot 20 miljoen euro. Begin met een cookie-toestemmingsbanner die alle niet-essenti\u00eble cookies blokkeert tot actieve toestemming. Uw privacybeleid moet duidelijk uitleggen welke gegevens u verzamelt en waarom. Contactformulieren mogen alleen noodzakelijke informatie verzamelen.",
+    "post14Content": "AVG-naleving is verplicht voor elke website die Europese gebruikers bedient, met boetes tot 20 miljoen euro. Begin met een cookie-toestemmingsbanner die alle niet-essentiële cookies blokkeert tot actieve toestemming. Uw privacybeleid moet duidelijk uitleggen welke gegevens u verzamelt en waarom. Contactformulieren mogen alleen noodzakelijke informatie verzamelen.",
     "post15Title": "Lokale SEO-strategie voor Europese bedrijven",
     "post15Excerpt": "Domineer lokale zoekresultaten in uw stad en regio. Een praktische gids voor lokale SEO op Europese markten.",
-    "post15Content": "Lokale SEO is de meest kosteneffectieve digitale marketingstrategie voor dienstverlenende bedrijven in Europa. Google Business Profile is uw fundament. Maak locatiespecifieke landingspagina's voor elke stad of regio die u bedient. Registreer u bij Europese bedrijfsgidsen zoals Pages Jaunes in Frankrijk, Gouden Gids in Belgi\u00eb en Yell in het VK. Moedig tevreden klanten aan om Google-reviews achter te laten.",
+    "post15Content": "Lokale SEO is de meest kosteneffectieve digitale marketingstrategie voor dienstverlenende bedrijven in Europa. Google Business Profile is uw fundament. Maak locatiespecifieke landingspagina's voor elke stad of regio die u bedient. Registreer u bij Europese bedrijfsgidsen zoals Pages Jaunes in Frankrijk, Gouden Gids in België en Yell in het VK. Moedig tevreden klanten aan om Google-reviews achter te laten.",
     "linkServices": "Website nodig?",
-    "linkServicesDesc": "Wij bouwen premium websites voor Europese bedrijven. React, Vite, Next.js \u2014 vanaf \u20ac497.",
+    "linkServicesDesc": "Wij bouwen premium websites voor Europese bedrijven. React, Vite, Next.js — vanaf €497.",
     "viewServices": "BEKIJK DIENSTEN",
     "linkPortfolio": "Bekijk ons werk",
-    "linkPortfolioDesc": "Ontdek meer dan 10 projecten gebouwd voor bedrijven in Frankrijk, Belgi\u00eb, VK, Nederland en Duitsland.",
+    "linkPortfolioDesc": "Ontdek meer dan 10 projecten gebouwd voor bedrijven in Frankrijk, België, VK, Nederland en Duitsland.",
     "viewPortfolio": "BEKIJK PORTFOLIO"
   },
   "footer": {
@@ -934,7 +940,7 @@
     "viewTemplateOrders": "Sjabloonbestellingen"
   },
   "privacy": {
-    "seoTitle": "Privacybeleid \u2014 DMC Kreatif",
+    "seoTitle": "Privacybeleid — DMC Kreatif",
     "seoDescription": "Lees hoe DMC Kreatif uw persoonsgegevens verzamelt, gebruikt en beschermt. AVG-conform privacybeleid.",
     "badge": "JURIDISCH",
     "title": "Privacybeleid",
@@ -950,7 +956,7 @@
     },
     "cookies": {
       "title": "3. Cookies en tracking",
-      "content": "Onze website maakt gebruik van cookies voor:\n\n- Essenti\u00eble cookies: noodzakelijk voor de werking van de website (sessie, taalvoorkeur)\n- Analytische cookies: Google Analytics 4 om het gebruik van de website te begrijpen (alleen met toestemming)\n- Marketingcookies: om de effectiviteit van advertenties te meten (alleen met toestemming)\n\nU kunt uw cookievoorkeuren op elk moment beheren."
+      "content": "Onze website maakt gebruik van cookies voor:\n\n- Essentiële cookies: noodzakelijk voor de werking van de website (sessie, taalvoorkeur)\n- Analytische cookies: Google Analytics 4 om het gebruik van de website te begrijpen (alleen met toestemming)\n- Marketingcookies: om de effectiviteit van advertenties te meten (alleen met toestemming)\n\nU kunt uw cookievoorkeuren op elk moment beheren."
     },
     "thirdParty": {
       "title": "4. Diensten van derden",
@@ -978,7 +984,7 @@
     }
   },
   "terms": {
-    "seoTitle": "Algemene Voorwaarden \u2014 DMC Kreatif",
+    "seoTitle": "Algemene Voorwaarden — DMC Kreatif",
     "seoDescription": "Lees de algemene voorwaarden voor het gebruik van de webontwikkelingsdiensten van DMC Kreatif.",
     "badge": "JURIDISCH",
     "title": "Algemene Voorwaarden",
@@ -986,7 +992,7 @@
     "intro": "Deze Algemene Voorwaarden zijn van toepassing op uw gebruik van de website en diensten van DMC Kreatif. Door gebruik te maken van onze diensten, stemt u in met deze voorwaarden.",
     "services": {
       "title": "1. Diensten",
-      "content": "DMC Kreatif levert webontwikkeling, e-commerce, SEO en digitale marketingdiensten aan bedrijven in Europa en het Verenigd Koninkrijk.\n\n- Launch (\u20ac497): Responsieve one-page website\n- Growth (\u20ac997): Website met meerdere pagina's, blog en geavanceerde SEO\n- Scale (\u20ac1.997): Volledige meertalige website\n- Commerce (\u20ac2.997): E-commerceplatform\n- Care Plan (\u20ac97/maand): Onderhoud en ondersteuning"
+      "content": "DMC Kreatif levert webontwikkeling, e-commerce, SEO en digitale marketingdiensten aan bedrijven in Europa en het Verenigd Koninkrijk.\n\n- Launch (€497): Responsieve one-page website\n- Growth (€997): Website met meerdere pagina's, blog en geavanceerde SEO\n- Scale (€1.997): Volledige meertalige website\n- Commerce (€2.997): E-commerceplatform\n- Care Plan (€97/maand): Onderhoud en ondersteuning"
     },
     "payment": {
       "title": "2. Betalingsvoorwaarden",
@@ -994,7 +1000,7 @@
     },
     "delivery": {
       "title": "3. Projectoplevering",
-      "content": "- Geschatte levertijden worden bij aanvang van het project gecommuniceerd\n- Levertijden kunnen worden be\u00efnvloed door de reactietijd van de klant\n- 2 revisierondes zijn inbegrepen bij elk pakket\n- Aanvullende revisies worden in rekening gebracht tegen het standaard uurtarief\n- Definitieve bestanden worden geleverd na ontvangst van de volledige betaling"
+      "content": "- Geschatte levertijden worden bij aanvang van het project gecommuniceerd\n- Levertijden kunnen worden beïnvloed door de reactietijd van de klant\n- 2 revisierondes zijn inbegrepen bij elk pakket\n- Aanvullende revisies worden in rekening gebracht tegen het standaard uurtarief\n- Definitieve bestanden worden geleverd na ontvangst van de volledige betaling"
     },
     "ip": {
       "title": "4. Intellectueel eigendom",
@@ -1005,12 +1011,12 @@
       "content": "- De totale aansprakelijkheid van DMC Kreatif is beperkt tot het betaalde bedrag\n- Wij zijn niet aansprakelijk voor indirecte schade\n- Wij zijn niet verantwoordelijk voor onderbrekingen van diensten van derden\n- De klant is verantwoordelijk voor het maken van back-ups van zijn content"
     },
     "termination": {
-      "title": "6. Be\u00ebindiging",
+      "title": "6. Beëindiging",
       "content": "- Beide partijen kunnen opzeggen met een opzegtermijn van 30 dagen\n- Bij opzegging door de klant is betaling verschuldigd voor alle uitgevoerde werkzaamheden\n- Care Plan-abonnementen kunnen worden opgezegd met een opzegtermijn van 30 dagen"
     },
     "governing": {
       "title": "7. Toepasselijk recht",
-      "content": "Deze voorwaarden worden beheerst door het recht van de Europese Unie. De rechtbanken van Belgi\u00eb zijn exclusief bevoegd."
+      "content": "Deze voorwaarden worden beheerst door het recht van de Europese Unie. De rechtbanken van België zijn exclusief bevoegd."
     },
     "changes": {
       "title": "8. Wijzigingen in de voorwaarden",
@@ -1074,7 +1080,7 @@
     "step3Title": "Ontwikkeling",
     "step3Desc": "Wij bouwen uw website met moderne technologie (React, Vite, Tailwind). U ontvangt wekelijkse updates en een staging-preview.",
     "step4Title": "Lancering & Ondersteuning",
-    "step4Desc": "Na uw goedkeuring zetten wij de website live. Doorlopende ondersteuning is beschikbaar via ons Onderhoudsplan (\u20ac97/maand).",
+    "step4Desc": "Na uw goedkeuring zetten wij de website live. Doorlopende ondersteuning is beschikbaar via ons Onderhoudsplan (€97/maand).",
     "ctaText": "Klaar om uw project te starten? Laten we praten.",
     "ctaButton": "Gratis gesprek boeken"
   },
@@ -1083,20 +1089,20 @@
     "title": "Veelgestelde Vragen",
     "q1": "Hoe lang duurt het om een website te bouwen?",
     "a1": "Ons Launch-pakket (enkele pagina) wordt geleverd in 3-5 werkdagen. Het Growth-pakket (5-7 pagina's) duurt 7-10 dagen. De Scale- en Commerce-pakketten nemen 14-28 dagen in beslag, afhankelijk van de complexiteit. Wij leveren altijd op tijd, anders krijgt u uw geld terug.",
-    "q2": "Welke technologie\u00ebn gebruiken jullie?",
-    "a2": "Wij werken met moderne, snelle technologie\u00ebn: React 18, Next.js 14, Vite, TypeScript en Tailwind CSS. Voor e-commerce integreren we Stripe, LemonSqueezy of Shopify. Elke website scoort 95+ op de Google Lighthouse-prestatietests.",
+    "q2": "Welke technologieën gebruiken jullie?",
+    "a2": "Wij werken met moderne, snelle technologieën: React 18, Next.js 14, Vite, TypeScript en Tailwind CSS. Voor e-commerce integreren we Stripe, LemonSqueezy of Shopify. Elke website scoort 95+ op de Google Lighthouse-prestatietests.",
     "q3": "Ondersteunen jullie meertalige websites?",
     "a3": "Jazeker! Wij bouwen standaard meertalige websites. We ondersteunen Engels, Frans, Nederlands, Duits en elke andere Europese taal. Elke taal krijgt volledige SEO met hreflang-tags, gelokaliseerde URL's en vertalingen van moedertaalkwaliteit.",
     "q4": "Wat is inbegrepen in het Onderhoudsplan?",
-    "a4": "Het Onderhoudsplan (\u20ac97/maand) omvat: premium hosting, SSL-certificaat, maandelijkse beveiligingsupdates, prestatiemonitoring, 2 uur contentwijzigingen, maandelijks analyserapport, prioritaire e-mailondersteuning en een uptime-garantie van 99,9%.",
+    "a4": "Het Onderhoudsplan (€97/maand) omvat: premium hosting, SSL-certificaat, maandelijkse beveiligingsupdates, prestatiemonitoring, 2 uur contentwijzigingen, maandelijks analyserapport, prioritaire e-mailondersteuning en een uptime-garantie van 99,9%.",
     "q5": "Welke landen bedienen jullie?",
-    "a5": "Wij bedienen bedrijven in heel Europa: Frankrijk, Belgi\u00eb, Verenigd Koninkrijk, Nederland, Duitsland, Zwitserland en de Scandinavische landen. We communiceren in het Engels, Frans, Nederlands en Duits.",
+    "a5": "Wij bedienen bedrijven in heel Europa: Frankrijk, België, Verenigd Koninkrijk, Nederland, Duitsland, Zwitserland en de Scandinavische landen. We communiceren in het Engels, Frans, Nederlands en Duits.",
     "q6": "Bieden jullie SEO-diensten aan?",
-    "a6": "Elke website die wij bouwen bevat SEO-basisfuncties: correcte metatags, gestructureerde data (Schema.org), snelle laadtijden, mobiele optimalisatie en een XML-sitemap. Voor geavanceerde SEO bieden wij maandelijks SEO-beheer aan vanaf \u20ac247/maand.",
+    "a6": "Elke website die wij bouwen bevat SEO-basisfuncties: correcte metatags, gestructureerde data (Schema.org), snelle laadtijden, mobiele optimalisatie en een XML-sitemap. Voor geavanceerde SEO bieden wij maandelijks SEO-beheer aan vanaf €247/maand.",
     "q7": "Wat gebeurt er na oplevering van de website?",
     "a7": "Na oplevering bent u voor 100% eigenaar van de website. U kunt deze zelf beheren of een abonnement nemen op ons Onderhoudsplan voor doorlopend onderhoud, hosting en ondersteuning. We bieden ook trainingssessies aan om u te helpen zelfstandig content bij te werken.",
     "q8": "Kan ik voorbeelden van jullie werk bekijken?",
-    "a8": "Absoluut! Bezoek onze Portfolio-pagina voor live projecten in Frankrijk, Belgi\u00eb en het Verenigd Koninkrijk. Wij hebben websites gebouwd voor bouwbedrijven, energieadviseurs, accountantskantoren en webshops."
+    "a8": "Absoluut! Bezoek onze Portfolio-pagina voor live projecten in Frankrijk, België en het Verenigd Koninkrijk. Wij hebben websites gebouwd voor bouwbedrijven, energieadviseurs, accountantskantoren en webshops."
   },
   "newsletter": {
     "title": "NIEUWSBRIEF",
@@ -1242,7 +1248,7 @@
   "share": {
     "button": "Delen",
     "copied": "Gekopieerd!",
-    "copyLink": "Link kopi\u00ebren"
+    "copyLink": "Link kopiëren"
   },
   "whatsapp": {
     "ariaLabel": "Chat op WhatsApp",
@@ -1278,10 +1284,10 @@
     },
     "paris": {
       "name": "Parijs",
-      "title": "Webbureau in Parijs \u2014 Op Maat Gemaakte Websites voor Franse Bedrijven",
+      "title": "Webbureau in Parijs — Op Maat Gemaakte Websites voor Franse Bedrijven",
       "description": "DMC Kreatif is uw webontwikkelingspartner in Parijs. Op maat gemaakte websites, e-commerce en SEO voor bedrijven in de regio Parijs. Gratis consultatie.",
-      "intro": "Op zoek naar een professioneel webbureau in Parijs? DMC Kreatif bouwt krachtige websites voor bedrijven in de \u00cele-de-France regio. Van startups in Le Marais tot ondernemingen in La D\u00e9fense, wij leveren op maat gemaakte weboplossingen die resultaten opleveren.",
-      "benefit1": "Lokale expertise in het Parijse en \u00cele-de-France bedrijfslandschap",
+      "intro": "Op zoek naar een professioneel webbureau in Parijs? DMC Kreatif bouwt krachtige websites voor bedrijven in de Île-de-France regio. Van startups in Le Marais tot ondernemingen in La Défense, wij leveren op maat gemaakte weboplossingen die resultaten opleveren.",
+      "benefit1": "Lokale expertise in het Parijse en Île-de-France bedrijfslandschap",
       "benefit2": "Tweetalige websites (Frans & Engels) om internationale klanten te bereiken",
       "benefit3": "SEO geoptimaliseerd voor Parijs-specifieke zoekopdrachten",
       "benefit4": "95+ Google Lighthouse-scores op elk project",
@@ -1291,9 +1297,9 @@
     },
     "london": {
       "name": "Londen",
-      "title": "Webbureau in Londen \u2014 Premium Websites voor Britse Bedrijven",
+      "title": "Webbureau in Londen — Premium Websites voor Britse Bedrijven",
       "description": "DMC Kreatif bouwt krachtige websites voor Londense bedrijven. Op maat gemaakte webontwikkeling, e-commerce en SEO. Gratis consultatie binnen 24 uur.",
-      "intro": "Een webontwikkelingsbureau in Londen nodig? DMC Kreatif cre\u00ebert prachtige, snelle websites voor bedrijven in Groot-Londen. Van tech startups in Shoreditch tot professionele dienstverlening in de City, wij bouwen websites die bezoekers omzetten in klanten.",
+      "intro": "Een webontwikkelingsbureau in Londen nodig? DMC Kreatif creëert prachtige, snelle websites voor bedrijven in Groot-Londen. Van tech startups in Shoreditch tot professionele dienstverlening in de City, wij bouwen websites die bezoekers omzetten in klanten.",
       "benefit1": "Diepgaand begrip van de competitieve Britse digitale markt",
       "benefit2": "Meertalige websites voor de diverse klantenkring van Londen",
       "benefit3": "SEO op maat voor Londen en UK-brede zoekzichtbaarheid",
@@ -1303,19 +1309,19 @@
     },
     "brussels": {
       "name": "Brussel",
-      "title": "Webbureau in Brussel \u2014 Tweetalige Websites voor Belgische Bedrijven",
+      "title": "Webbureau in Brussel — Tweetalige Websites voor Belgische Bedrijven",
       "description": "DMC Kreatif maakt tweetalige websites voor bedrijven in Brussel. Frans & Nederlands webontwikkeling, e-commerce en SEO. Gratis offerte binnen 24 uur.",
-      "intro": "Op zoek naar een webbureau in Brussel? DMC Kreatif is gespecialiseerd in tweetalige websites voor de Belgische markt. Wij bedienen bedrijven in Brussel, Walloni\u00eb en Vlaanderen met websites die werken in zowel Frans als Nederlands.",
+      "intro": "Op zoek naar een webbureau in Brussel? DMC Kreatif is gespecialiseerd in tweetalige websites voor de Belgische markt. Wij bedienen bedrijven in Brussel, Wallonië en Vlaanderen met websites die werken in zowel Frans als Nederlands.",
       "benefit1": "Tweetalige expertise: Frans en Nederlandse websites als standaard",
       "benefit2": "Kennis van de Belgische bedrijfscultuur en regelgeving",
       "benefit3": "EU-instellingen en B2B website-ervaring",
       "benefit4": "Geoptimaliseerd voor Belgische zoekmachines en lokale SEO",
       "benefit5": "Portfolio met Belgische bouw- en dienstverlenende bedrijven",
-      "benefit6": "AVG-conform vanaf dag \u00e9\u00e9n"
+      "benefit6": "AVG-conform vanaf dag één"
     },
     "amsterdam": {
       "name": "Amsterdam",
-      "title": "Webbureau in Amsterdam \u2014 Moderne Websites voor Nederlandse Bedrijven",
+      "title": "Webbureau in Amsterdam — Moderne Websites voor Nederlandse Bedrijven",
       "description": "DMC Kreatif bouwt moderne websites voor bedrijven in Amsterdam en Nederland. Op maat gemaakte webontwikkeling, webshops en SEO. Gratis consultatie.",
       "intro": "Op zoek naar een webbureau in Amsterdam? DMC Kreatif levert moderne, krachtige websites voor Nederlandse bedrijven. Van creatieve bureaus aan de Herengracht tot techbedrijven in Amsterdam-Zuid, wij bouwen digitale ervaringen die opvallen.",
       "benefit1": "Nederlandse en Engelse websites voor de internationale Amsterdamse markt",
@@ -1323,13 +1329,13 @@
       "benefit3": "SEO geoptimaliseerd voor Nederlandse zoektermen en lokale zichtbaarheid",
       "benefit4": "Moderne tech stack: React, Next.js, Tailwind CSS",
       "benefit5": "Ervaring met Nederlandse startups en MKB-bedrijven",
-      "benefit6": "Competitieve prijzen vanaf \u20ac497"
+      "benefit6": "Competitieve prijzen vanaf €497"
     },
     "berlin": {
       "name": "Berlijn",
-      "title": "Webbureau in Berlijn \u2014 Professionele Websites voor Duitse Bedrijven",
+      "title": "Webbureau in Berlijn — Professionele Websites voor Duitse Bedrijven",
       "description": "DMC Kreatif ontwikkelt professionele websites voor bedrijven in Berlijn en Duitsland. Op maat gemaakte webontwikkeling, webshops en SEO. Gratis consultatie.",
-      "intro": "Een webbureau in Berlijn nodig? DMC Kreatif bouwt professionele, krachtige websites voor Duitse bedrijven. Van innovatieve startups in Kreuzberg tot gevestigde bedrijven in Mitte, wij cre\u00ebren digitale oplossingen die meetbare resultaten opleveren.",
+      "intro": "Een webbureau in Berlijn nodig? DMC Kreatif bouwt professionele, krachtige websites voor Duitse bedrijven. Van innovatieve startups in Kreuzberg tot gevestigde bedrijven in Mitte, wij creëren digitale oplossingen die meetbare resultaten opleveren.",
       "benefit1": "Duitse en Engelse websites voor de DACH-markt",
       "benefit2": "Webshop-ontwikkeling met Duitse betaalmethoden",
       "benefit3": "SEO geoptimaliseerd voor Duitse zoektermen en lokale rankings",
@@ -1359,8 +1365,5 @@
       "title": "Website kostengids 2025",
       "desc": "Hoeveel kost een professionele website in Europa?"
     }
-  },
-  "a11y": {
-    "skipToContent": "Ga naar hoofdinhoud"
   }
 }

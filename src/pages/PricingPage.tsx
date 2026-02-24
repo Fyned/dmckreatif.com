@@ -200,7 +200,7 @@ export default function PricingPage() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
-            className="flex flex-col sm:flex-row items-start sm:items-center gap-4 -mt-8 mb-12"
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-4 -mt-8 mb-6"
           >
             <NeoBadge color="neo-blue">
               <Code2 size={12} className="mr-1" />
@@ -213,12 +213,24 @@ export default function PricingPage() {
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
-            className="font-mono text-base lg:text-lg text-neo-black/80 max-w-2xl leading-relaxed mb-10"
+            className="font-mono text-base lg:text-lg text-neo-black/80 max-w-2xl leading-relaxed mb-3"
           >
             {t(
               "pricing.customSectionDesc",
               "100% custom-built websites by our professional development team. Everything exactly as you want it."
             )}
+          </motion.p>
+
+          <motion.p
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+            className="font-mono text-xs text-neo-black/50 max-w-2xl leading-relaxed mb-10"
+          >
+            {t("pricing.proTeamNote", "Every project is reviewed and built by senior developers with 10+ years of experience")}
+            {" \u2022 "}
+            {t("pricing.revisionsIncluded", "2 revision rounds included in every package")}
           </motion.p>
 
           {/* Promo Banner */}

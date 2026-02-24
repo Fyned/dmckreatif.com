@@ -65,7 +65,16 @@ export default function NeoButton({
   }
 
   if (href) {
-    const to = href.startsWith("http") ? href : `/${locale ?? "en"}${href}`;
+    // Guard against double-locale: don't prefix if href already starts with a supported locale
+    const supportedLocales = ["en", "fr", "nl", "de"];
+    const alreadyLocalized = supportedLocales.some(
+      (l) => href.startsWith(`/${l}/`) || href === `/${l}`
+    );
+    const to = href.startsWith("http")
+      ? href
+      : alreadyLocalized
+        ? href
+        : `/${locale ?? "en"}${href}`;
     return (
       <Link to={to} className={baseClasses}>
         {children}

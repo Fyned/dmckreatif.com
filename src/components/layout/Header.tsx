@@ -37,8 +37,11 @@ export default function Header() {
   };
 
   const switchLanguage = (lang: string) => {
-    const pathWithoutLocale = location.pathname.replace(`/${currentLocale}`, "") || "";
-    navigate(`/${lang}${pathWithoutLocale}`);
+    // Anchored regex: only strip locale from the START of the path
+    const pathWithoutLocale = location.pathname.replace(
+      new RegExp(`^/${currentLocale}(?=/|$)`), ""
+    );
+    navigate(`/${lang}${pathWithoutLocale || ""}`);
   };
 
   return (
