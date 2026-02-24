@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
-const WHATSAPP_NUMBER = "33612345678"; // Replace with actual WhatsApp Business number
+const WHATSAPP_NUMBER = "905511060846";
 
 export default function WhatsAppButton() {
   const { t } = useTranslation();

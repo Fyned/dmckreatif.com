@@ -51,7 +51,7 @@ export function buildLocalBusinessSchema() {
     logo: `${BASE_URL}/logo.png`,
     image: `${BASE_URL}/og-image.jpg`,
     email: "hello@dmckreatif.com",
-    telephone: "+33-6-00-00-00-00",
+    telephone: "+90-551-106-0846",
     priceRange: "\u20AC\u20AC",
     description: "Premium web development agency serving European businesses. Custom websites, e-commerce, SEO and digital marketing.",
     foundingDate: "2023",
