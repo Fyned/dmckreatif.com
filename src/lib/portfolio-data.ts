@@ -308,6 +308,28 @@ export const projects: Project[] = [
     metrics: { lighthouse: 95, loadTime: "<1.5s", improvement: "+55%" },
     featured: false,
   },
+  {
+    id: "northwest-ac",
+    num: "12",
+    name: "UNIVERSITY OF NORTHWEST",
+    sectorKey: "projects.northwest.sector",
+    country: "UK",
+    countryNameKey: "projects.northwest.country",
+    flag: "\u{1F1EC}\u{1F1E7}",
+    url: "https://northwest.ac",
+    imageDesktop: "/portfolio/northwest-desktop.webp",
+    imageMobile: "/portfolio/northwest-mobile.webp",
+    tech: ["React", "Vite", "TypeScript", "Tailwind"],
+    accentColor: "neo-yellow",
+    descriptionKey: "projects.northwest.description",
+    category: "web",
+    year: "2025",
+    challengeKey: "projects.northwest.challenge",
+    solutionKey: "projects.northwest.solution",
+    resultsKeys: ["projects.northwest.result1", "projects.northwest.result2", "projects.northwest.result3"],
+    metrics: { lighthouse: 96, loadTime: "<1.4s", improvement: "+45%" },
+    featured: true,
+  },
 ];
 
 export const featuredProjects = projects.filter((p) => p.featured);

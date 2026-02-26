@@ -289,6 +289,16 @@
       "result1": "Plateforme en 5 langues (FR/EN/NL/DE/TR) atteignant tous les marchés européens majeurs",
       "result2": "Catalogue produits avec filtrage par catégorie générant des demandes B2B",
       "result3": "55% d'augmentation de l'acquisition de clients européens via la présence en ligne"
+    },
+    "northwest": {
+      "sector": "ENSEIGNEMENT SUPÉRIEUR",
+      "country": "ROYAUME-UNI",
+      "description": "Site universitaire complet pour l'University of NorthWest avec recherche de programmes, visites virtuelles du campus et portail étudiant multilingue.",
+      "challenge": "L'University of NorthWest avait besoin d'une plateforme numérique moderne pour servir 9 000+ diplômés à travers 25 pays avec 478+ programmes accrédités.",
+      "solution": "Nous avons développé une plateforme académique premium en bleu marine et or, avec un moteur de recherche de programmes, une visite virtuelle du campus et un portail étudiant intégré.",
+      "result1": "Plateforme unifiée servant des étudiants internationaux dans 25 pays",
+      "result2": "Système de recherche couvrant 478+ formations accréditées",
+      "result3": "45% d'amélioration de l'engagement des futurs étudiants et des candidatures"
     }
   },
   "stats": {
