@@ -11,6 +11,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildBreadcrumbSchema } from "@/lib/seo-schemas";
 import { projects } from "@/lib/portfolio-data";
 import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
+import { useAnalytics } from "@/lib/useAnalytics";
 
 function buildCaseStudySchema(project: (typeof projects)[0], locale: string) {
   return {
@@ -34,6 +35,7 @@ function buildCaseStudySchema(project: (typeof projects)[0], locale: string) {
 export default function CaseStudiesPage() {
   const { t } = useTranslation();
   const { locale } = useParams();
+  useAnalytics("Case Studies");
   const currentLocale = locale ?? "en";
   const featured = projects.filter((p) => p.featured);
 

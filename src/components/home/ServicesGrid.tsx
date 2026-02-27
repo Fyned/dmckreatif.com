@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { Code2, ShoppingBag, TrendingUp, Megaphone } from "lucide-react";
+import { Code2, ShoppingBag, TrendingUp, Megaphone, ChevronDown } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
@@ -27,6 +28,7 @@ const iconBgMap: Record<string, string> = {
 
 export default function ServicesGrid() {
   const { t } = useTranslation();
+  const [expandedKey, setExpandedKey] = useState<string | null>(null);
 
   return (
     <section className="py-section-sm lg:py-section">
@@ -39,35 +41,51 @@ export default function ServicesGrid() {
           animate="visible"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border-2 border-neo-black"
         >
-          {services.map(({ key, Icon, color, num }, i) => (
-            <motion.div
-              key={key}
-              variants={fadeInUp}
-              className={`group bg-neo-white p-8 lg:p-10 transition-all duration-300 ${hoverBgMap[color] ?? ""} ${
-                i < services.length - 1
-                  ? "lg:border-r-2 border-b-2 lg:border-b-0 border-neo-black"
-                  : ""
-              }`}
-            >
-              <span className="font-mono text-xs font-bold text-neo-black/60 tracking-wider mb-4 block">
-                {`>_ SERVICE_${num}`}
-              </span>
+          {services.map(({ key, Icon, color, num }, i) => {
+            const isExpanded = expandedKey === key;
+            return (
+              <motion.div
+                key={key}
+                variants={fadeInUp}
+                className={`group bg-neo-white p-8 lg:p-10 transition-all duration-300 ${hoverBgMap[color] ?? ""} ${
+                  i < services.length - 1
+                    ? "lg:border-r-2 border-b-2 lg:border-b-0 border-neo-black"
+                    : ""
+                }`}
+              >
+                <span className="font-mono text-xs font-bold text-neo-black/60 tracking-wider mb-4 block">
+                  {`>_ SERVICE_${num}`}
+                </span>
 
-              <div className={`inline-flex items-center justify-center w-16 h-16 ${iconBgMap[color] ?? "bg-neo-lime"} border-2 border-neo-black shadow-hard-sm mb-6`}>
-                <Icon size={32} className="text-neo-black" strokeWidth={2} />
-              </div>
+                <div className={`inline-flex items-center justify-center w-16 h-16 ${iconBgMap[color] ?? "bg-neo-lime"} border-2 border-neo-black shadow-hard-sm mb-6`}>
+                  <Icon size={32} className="text-neo-black" strokeWidth={2} />
+                </div>
 
-              <h3 className="font-space font-bold text-xl mb-3 text-neo-black">
-                {t(`services.${key}.title`)}
-              </h3>
-              <p className="font-mono text-sm text-neo-black leading-relaxed mb-6">
-                {t(`services.${key}.description`)}
-              </p>
-              <span className="font-space font-bold text-lg text-neo-black">
-                {t(`services.${key}.priceRange`)}
-              </span>
-            </motion.div>
-          ))}
+                <h3 className="font-space font-bold text-xl mb-3 text-neo-black">
+                  {t(`services.${key}.title`)}
+                </h3>
+
+                <div className="relative mb-4">
+                  <p className={`font-mono text-sm text-neo-black leading-relaxed transition-all duration-300 ${
+                    isExpanded ? "" : "line-clamp-3"
+                  }`}>
+                    {t(`services.${key}.description`)}
+                  </p>
+                  <button
+                    onClick={() => setExpandedKey(isExpanded ? null : key)}
+                    className="mt-2 inline-flex items-center gap-1 font-mono text-xs font-bold text-neo-black/70 hover:text-neo-black transition-colors"
+                  >
+                    {isExpanded ? t("services.showLess") : t("services.readMore")}
+                    <ChevronDown size={12} className={`transition-transform duration-200 ${isExpanded ? "rotate-180" : ""}`} />
+                  </button>
+                </div>
+
+                <span className="font-space font-bold text-lg text-neo-black">
+                  {t(`services.${key}.priceRange`)}
+                </span>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>

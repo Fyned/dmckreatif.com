@@ -3,14 +3,18 @@ import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { CookieConsentProvider } from "@/contexts/CookieConsentContext";
-import { initGTM } from "@/lib/analytics";
+import { setConsentDefaults, initGTM, initClarity } from "@/lib/analytics";
 import "@/i18n";
 import "@/index.css";
 import App from "@/App";
 import ErrorBoundary from "@/components/ErrorBoundary";
 
-/* Initialize GTM/gtag — only fires if user previously granted analytics consent */
+/* Consent Mode v2: set defaults BEFORE any tracking scripts */
+setConsentDefaults();
+
+/* Initialize GTM/gtag + Clarity — only fires if user previously granted consent */
 initGTM();
+initClarity();
 
 /* Register service worker for PWA offline support */
 if ("serviceWorker" in navigator && import.meta.env.PROD) {

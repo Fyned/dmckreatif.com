@@ -15,8 +15,31 @@ declare global {
 const GTM_ID = import.meta.env.VITE_GTM_ID as string | undefined;
 const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID as string | undefined;
 const GOOGLE_ADS_CONVERSION_ID = import.meta.env.VITE_GOOGLE_ADS_CONVERSION_ID as string | undefined;
+const CLARITY_ID = import.meta.env.VITE_CLARITY_ID as string | undefined;
 
 let gtmInitialized = false;
+let clarityInitialized = false;
+
+/* ── Consent Mode v2: Set defaults BEFORE any Google script loads ── */
+/* Must run on every page load, even before user interacts with banner */
+export function setConsentDefaults(): void {
+  if (typeof window === "undefined") return;
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () {
+    // eslint-disable-next-line prefer-rest-params
+    window.dataLayer.push(arguments);
+  } as Window["gtag"];
+
+  // Default: deny all until user grants consent
+  window.gtag("consent", "default", {
+    analytics_storage: "denied",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    wait_for_update: 500,
+  });
+}
 
 /* ── Initialize GTM / gtag at runtime ── */
 /* Called ONLY when analytics consent is granted */
@@ -27,29 +50,19 @@ export function initGTM(): void {
   const measurementId = GA_MEASUREMENT_ID || GTM_ID;
   if (!measurementId) return;
 
-  // Check cookie consent before initializing
-  const consentAllowed = checkAnalyticsConsent();
-  if (!consentAllowed) return;
+  if (!checkAnalyticsConsent()) return;
 
-  // Initialize dataLayer
-  window.dataLayer = window.dataLayer || [];
-
-  // Define gtag function
-  window.gtag = function () {
-    // eslint-disable-next-line prefer-rest-params
-    window.dataLayer.push(arguments);
-  } as Window["gtag"];
-
-  // Set default consent state
-  window.gtag("consent", "default", {
+  // Update consent to granted
+  window.gtag("consent", "update", {
     analytics_storage: "granted",
     ad_storage: checkMarketingConsent() ? "granted" : "denied",
+    ad_user_data: checkMarketingConsent() ? "granted" : "denied",
+    ad_personalization: checkMarketingConsent() ? "granted" : "denied",
   });
 
   window.gtag("js", new Date());
   window.gtag("config", measurementId);
 
-  // Also configure Google Ads if present and marketing consent given
   if (GOOGLE_ADS_CONVERSION_ID && checkMarketingConsent()) {
     window.gtag("config", GOOGLE_ADS_CONVERSION_ID);
   }
@@ -60,19 +73,23 @@ export function initGTM(): void {
   script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
   document.head.appendChild(script);
 
-  // GTM noscript fallback (no-JS environments)
-  if (document.body) {
-    const noscript = document.createElement("noscript");
-    const iframe = document.createElement("iframe");
-    iframe.src = `https://www.googletagmanager.com/ns.html?id=${measurementId}`;
-    iframe.height = "0";
-    iframe.width = "0";
-    iframe.style.cssText = "display:none;visibility:hidden";
-    noscript.appendChild(iframe);
-    document.body.insertBefore(noscript, document.body.firstChild);
-  }
-
   gtmInitialized = true;
+}
+
+/* ── Microsoft Clarity: heatmaps & session recording ── */
+export function initClarity(): void {
+  if (typeof window === "undefined") return;
+  if (clarityInitialized) return;
+  if (!CLARITY_ID) return;
+  if (!checkAnalyticsConsent()) return;
+
+  const script = document.createElement("script");
+  script.type = "text/javascript";
+  script.async = true;
+  script.innerHTML = `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","${CLARITY_ID}");`;
+  document.head.appendChild(script);
+
+  clarityInitialized = true;
 }
 
 /* ── Consent Helpers ── */
@@ -103,16 +120,21 @@ export function reinitAnalyticsOnConsent(): void {
   if (gtmInitialized) {
     // Update consent state if already initialized
     if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      const analyticsGranted = checkAnalyticsConsent();
+      const marketingGranted = checkMarketingConsent();
       window.gtag("consent", "update", {
-        analytics_storage: checkAnalyticsConsent() ? "granted" : "denied",
-        ad_storage: checkMarketingConsent() ? "granted" : "denied",
+        analytics_storage: analyticsGranted ? "granted" : "denied",
+        ad_storage: marketingGranted ? "granted" : "denied",
+        ad_user_data: marketingGranted ? "granted" : "denied",
+        ad_personalization: marketingGranted ? "granted" : "denied",
       });
     }
-    return;
+  } else {
+    initGTM();
   }
 
-  // First-time init after consent
-  initGTM();
+  // Initialize Clarity if not yet done
+  initClarity();
 }
 
 function isGtagAvailable(): boolean {

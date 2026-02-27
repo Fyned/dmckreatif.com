@@ -14,10 +14,12 @@ import { projects, type Project } from "@/lib/portfolio-data";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildPortfolioPageSchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
 import { staggerContainer, fadeInUp, viewportConfig } from "@/lib/animations";
+import { useAnalytics } from "@/lib/useAnalytics";
 
 export default function PortfolioPage() {
   const { t } = useTranslation();
   const { locale } = useParams();
+  useAnalytics("Portfolio");
   const currentLocale = locale ?? "en";
   const [activeCategory, setActiveCategory] = useState("all");
   const [activeCountry, setActiveCountry] = useState("all");

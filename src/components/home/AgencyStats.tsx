@@ -31,7 +31,7 @@ export default function AgencyStats() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="mb-16"
+          className="mb-12 text-center"
         >
           <span className="inline-block font-mono text-xs tracking-[0.2em] text-neo-lime mb-3 border-2 border-neo-lime/30 px-3 py-1">
             {t("stats.sectionSubtitle")}
@@ -39,7 +39,7 @@ export default function AgencyStats() {
           <h2 className="font-space font-bold text-h2 text-neo-bg">
             {t("stats.sectionTitle")}
           </h2>
-          <div className="w-16 h-1 bg-neo-lime mt-4" />
+          <div className="w-16 h-1 bg-neo-lime mt-4 mx-auto" />
         </motion.div>
 
         <motion.div
@@ -52,7 +52,7 @@ export default function AgencyStats() {
             <motion.div
               key={key}
               variants={fadeInUp}
-              className="border-2 border-neo-bg/40 p-8 text-center group hover:border-neo-lime transition-colors"
+              className="border-2 border-neo-bg/20 p-6 lg:p-8 text-center group hover:border-neo-lime transition-colors"
             >
               <div className={`inline-block ${color} text-neo-black px-3 py-1 border-2 border-neo-black mb-4`}>
                 <span className="font-space font-bold text-3xl lg:text-4xl">

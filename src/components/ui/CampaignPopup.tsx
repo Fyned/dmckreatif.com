@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Zap, ArrowRight, Check } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
+import CountdownTimer from "@/components/ui/CountdownTimer";
 
 const STORAGE_KEY = "dmc_campaign_popup_shown";
 const SHOW_DELAY_MS = 1500;
@@ -55,10 +56,10 @@ export default function CampaignPopup() {
   }
 
   const tiers = [
-    { price: "\u20AC349", name: "Starter" },
-    { price: "\u20AC749", name: "Growth" },
-    { price: "\u20AC1,497", name: "Scale" },
-    { price: "\u20AC2,497", name: "Commerce" },
+    { original: "€497", price: "€349", name: "Starter" },
+    { original: "€997", price: "€749", name: "Growth" },
+    { original: "€1,997", price: "€1,497", name: "Scale" },
+    { original: "€2,997", price: "€2,497", name: "Commerce" },
   ];
 
   return (
@@ -108,29 +109,34 @@ export default function CampaignPopup() {
                 <div className="inline-flex items-center gap-2 bg-neo-lime/10 border-2 border-neo-lime px-4 py-1.5">
                   <Zap size={14} className="text-neo-lime" strokeWidth={3} />
                   <span className="font-mono text-[11px] font-bold text-neo-lime uppercase tracking-widest">
-                    {t("promo.badgeText", "COMPETITIVE PRICING")}
+                    {t("promo.badgeText", "LIMITED TIME — 25% OFF")}
                   </span>
                 </div>
               </div>
 
               {/* Title */}
               <h2 id="campaign-popup-title" className="font-space font-extrabold text-2xl sm:text-3xl text-neo-white text-center uppercase tracking-tight mb-2">
-                {t("promo.popupTitle", "PREMIUM QUALITY, FAIR PRICES")}
+                {t("promo.popupTitle", "25% OFF ALL PACKAGES")}
               </h2>
 
-              <p className="font-mono text-sm text-neo-white/60 text-center mb-6 max-w-sm mx-auto leading-relaxed">
+              <p className="font-mono text-sm text-neo-white/60 text-center mb-5 max-w-sm mx-auto leading-relaxed">
                 {t(
                   "promo.popupDescription",
-                  "Custom-built websites for European businesses. Transparent pricing, no surprises."
+                  "Premium websites at introductory prices. Don't miss out — offer expires soon."
                 )}
               </p>
 
+              {/* Countdown */}
+              <div className="flex justify-center mb-6">
+                <CountdownTimer variant="compact" />
+              </div>
+
               {/* Value props */}
-              <div className="flex flex-col gap-2 mb-6">
+              <div className="flex flex-col gap-2 mb-5">
                 {[
                   t("promo.perk1", "Free consultation"),
                   t("promo.perk2", "No hidden fees"),
-                  t("promo.perk3", "Satisfaction guaranteed"),
+                  t("promo.perk3", "Money-back guarantee"),
                 ].map((perk) => (
                   <div key={perk} className="flex items-center gap-2.5 px-3">
                     <Check size={14} className="text-neo-lime flex-shrink-0" />
@@ -149,6 +155,9 @@ export default function CampaignPopup() {
                     <span className="font-mono text-[10px] text-neo-white/50 uppercase tracking-wider block mb-1">
                       {tier.name}
                     </span>
+                    <span className="font-mono text-xs text-neo-white/30 line-through mr-1.5">
+                      {tier.original}
+                    </span>
                     <span className="font-space font-bold text-lg text-neo-lime">
                       {tier.price}
                     </span>
@@ -163,7 +172,7 @@ export default function CampaignPopup() {
                 className="w-full inline-flex items-center justify-center gap-3 bg-neo-lime text-neo-black border-4 border-neo-black px-8 py-4 font-space font-extrabold text-sm uppercase tracking-wider shadow-[4px_4px_0px_0px_#CDFF50] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"
               >
                 <Zap size={18} strokeWidth={3} />
-                {t("promo.ctaButton", "VIEW PRICING")}
+                {t("promo.ctaButton", "CLAIM YOUR DISCOUNT")}
                 <ArrowRight size={18} strokeWidth={3} />
               </Link>
 
@@ -171,7 +180,7 @@ export default function CampaignPopup() {
               <p className="font-mono text-[10px] text-neo-white/30 text-center mt-3 uppercase tracking-wider">
                 {t(
                   "promo.popupNote",
-                  "No commitment \u2014 free consultation included"
+                  "No commitment — free consultation included"
                 )}
               </p>
             </div>

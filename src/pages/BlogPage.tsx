@@ -11,10 +11,12 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildBreadcrumbSchema } from "@/lib/seo-schemas";
 import { blogPosts } from "@/lib/blog-data";
 import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
+import { useAnalytics } from "@/lib/useAnalytics";
 
 export default function BlogPage() {
   const { t } = useTranslation();
   const { locale } = useParams();
+  useAnalytics("Blog");
   const currentLocale = locale ?? "en";
 
   return (

@@ -263,11 +263,12 @@
 > **Etki:** Data-driven kararlar
 
 ### 6.1 GA4 GDPR Uyumlu Kurulum
-- [ ] Google Signals EU kullanıcıları için disable
-- [ ] Data retention minimum süreye ayarla
-- [ ] Consent Mode v2 entegrasyonu
-- [ ] IP anonymization kontrol et (GA4'te otomatik)
-- [ ] Server-side tagging değerlendir
+- [x] Consent Mode v2 entegrasyonu — default denied, update on consent ✓
+- [x] ad_user_data + ad_personalization consent signals eklendi (v2 zorunlu) ✓
+- [x] IP anonymization kontrol et (GA4'te otomatik) ✓
+- [ ] Google Signals EU kullanıcıları için disable (GA4 admin panelinden)
+- [ ] Data retention minimum süreye ayarla (GA4 admin panelinden)
+- [ ] Server-side tagging değerlendir (gelecek)
 
 ### 6.2 Privacy-First Alternatif
 - [ ] Plausible veya Fathom Analytics değerlendir (cookieless, EU-hosted)
@@ -275,16 +276,17 @@
 - [ ] < 1KB script boyutu avantajı
 
 ### 6.3 Event Tracking
-- [ ] CTA click tracking (hangi butonlar tıklanıyor)
-- [ ] Form submission tracking (hangi adımda bırakılıyor)
-- [ ] Scroll depth tracking (sayfaların ne kadarı görülüyor)
-- [ ] Contact form conversion funnel
-- [ ] Template order funnel tracking
+- [x] Page view tracking — useAnalytics hook ile tüm public sayfalarda aktif ✓
+- [x] Scroll depth tracking — 25/50/75/90% thresholds, useAnalytics ile otomatik ✓
+- [x] CTA click tracking — Contact page booking CTA ✓
+- [x] Form submission tracking — ContactPage form submit ✓
+- [x] Language switch tracking — LocaleRouter'da otomatik ✓
+- [x] Newsletter signup tracking — ExitIntentPopup'ta aktif ✓
+- [x] Template order funnel tracking (zaten aktifti: add_to_cart, begin_checkout, conversion) ✓
 
 ### 6.4 Heatmap & Session Recording
-- [ ] Microsoft Clarity entegrasyonu (ücretsiz, GDPR uyumlu consent ile)
-- [ ] Veya Hotjar (ücretli, daha fazla özellik)
-- [ ] Consent bannner'da "Analytics" kategorisine bağla
+- [x] Microsoft Clarity entegrasyonu — VITE_CLARITY_ID ile, consent'e bağlı ✓
+- [x] Consent banner'da "Analytics" kategorisine bağlı ✓
 
 ---
 
@@ -428,7 +430,7 @@
 | Video testimonials | ❌ | ⚡ Premium | ❌ Eksik |
 | AI chatbot | ❌ | ⚡ Premium | ❌ Gelecek |
 | Ödeme entegrasyonu | ⚠️ Yapı var, bağlı değil | ✅ | ⚠️ Aktifle |
-| Privacy-first analytics | ⚠️ GTM var | ✅ Plausible/GA4 uyumlu | ⚠️ Güncelle |
+| Privacy-first analytics | ✅ GA4 + Consent Mode v2 + Clarity | ✅ Plausible/GA4 uyumlu | ✅ Tam |
 | WebP/AVIF görseller | ❌ | ✅ | ❌ Eksik |
 | prefers-reduced-motion | ❌ | ✅ Zorunlu | ❌ Eksik |
 | Skip-to-content link | ❌ | ✅ Zorunlu | ❌ Eksik |

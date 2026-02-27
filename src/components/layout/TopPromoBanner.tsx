@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Sparkles } from "lucide-react";
+import { X, Zap } from "lucide-react";
+import CountdownTimer from "@/components/ui/CountdownTimer";
 
 const DISMISS_KEY = "top_promo_dismissed";
 
@@ -36,11 +37,16 @@ export default function TopPromoBanner() {
             {/* Icon + Text */}
             <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
               <div className="hidden sm:flex w-7 h-7 bg-neo-lime border border-neo-black items-center justify-center">
-                <Sparkles size={14} strokeWidth={3} />
+                <Zap size={14} strokeWidth={3} />
               </div>
               <span className="font-space font-bold text-xs sm:text-sm text-neo-lime uppercase tracking-wider whitespace-nowrap">
-                {t("promo.bannerShort", "LAUNCH PRICING — FROM €349")}
+                {t("promo.bannerShort", "25% OFF — LIMITED TIME")}
               </span>
+            </div>
+
+            {/* Inline countdown */}
+            <div className="hidden md:block">
+              <CountdownTimer variant="inline" />
             </div>
 
             {/* CTA Button */}
@@ -48,7 +54,7 @@ export default function TopPromoBanner() {
               to={`/${currentLocale}/pricing`}
               className="hidden md:inline-block bg-neo-lime border-2 border-neo-black px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider hover:bg-neo-lime/80 transition-colors whitespace-nowrap shadow-hard-sm"
             >
-              {t("promo.ctaButton", "VIEW PRICING")}
+              {t("promo.ctaButton", "CLAIM DISCOUNT")}
             </Link>
 
             {/* Close */}

@@ -18,6 +18,7 @@ import { useState, useRef, useEffect } from "react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import NeoButton from "@/components/ui/NeoButton";
 import NeoBadge from "@/components/ui/NeoBadge";
+import { useAnalytics } from "@/lib/useAnalytics";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildAllServicesSchema, buildFAQPageSchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
@@ -211,6 +212,7 @@ function FaqAccordion({ questionKey, answerKey }: FaqItem) {
 export default function ServicesPage() {
   const { t } = useTranslation();
   const { locale } = useParams();
+  useAnalytics("Services");
   const currentLocale = locale ?? "en";
 
   return (

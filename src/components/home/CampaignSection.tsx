@@ -1,9 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Check } from "lucide-react";
+import { ArrowRight, Zap, Check } from "lucide-react";
 import NeoButton from "@/components/ui/NeoButton";
 import NeoBadge from "@/components/ui/NeoBadge";
+import CountdownTimer from "@/components/ui/CountdownTimer";
 import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
 
 export default function CampaignSection() {
@@ -19,32 +20,37 @@ export default function CampaignSection() {
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="bg-neo-black border-4 border-neo-lime shadow-hard-lg overflow-hidden"
+          className="bg-neo-black border-4 border-neo-lime shadow-[8px_8px_0px_0px_#CDFF50] overflow-hidden relative"
         >
+          {/* Animated glow background */}
+          <div className="absolute inset-0 opacity-10 pointer-events-none">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-neo-lime rounded-full blur-[120px]" />
+          </div>
+
           {/* Top accent bar */}
           <div className="h-2 bg-neo-lime" />
 
-          <div className="p-6 lg:p-10">
+          <div className="relative p-6 lg:p-10">
             <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
               {/* Left: Content */}
               <motion.div variants={fadeInUp} className="flex-1 text-center lg:text-left">
                 <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
-                  <div className="w-12 h-12 bg-neo-lime border-2 border-neo-black flex items-center justify-center shadow-hard-sm">
-                    <Sparkles size={22} strokeWidth={2.5} />
+                  <div className="w-12 h-12 bg-neo-lime border-2 border-neo-black flex items-center justify-center shadow-hard-sm animate-pulse">
+                    <Zap size={22} strokeWidth={2.5} />
                   </div>
                   <NeoBadge color="neo-lime">
-                    {t("promo.badgeText", "LAUNCH PRICING")}
+                    {t("promo.badgeText", "LIMITED TIME OFFER")}
                   </NeoBadge>
                 </div>
 
-                <h2 className="font-space font-bold text-2xl lg:text-3xl text-neo-lime mb-3">
-                  {t("promo.homeTitle", "INTRODUCTORY PRICES FOR 2026")}
+                <h2 className="font-space font-extrabold text-2xl lg:text-4xl text-neo-lime mb-3 uppercase tracking-tight">
+                  {t("promo.homeTitle", "25% OFF ALL PACKAGES")}
                 </h2>
 
-                <p className="font-mono text-sm text-neo-lime/80 leading-relaxed mb-4 max-w-lg">
+                <p className="font-mono text-sm text-neo-lime/80 leading-relaxed mb-5 max-w-lg">
                   {t(
                     "promo.homeDescription",
-                    "We are growing our European client base. Take advantage of our introductory pricing — premium quality at accessible rates."
+                    "Launch your website at unbeatable prices. Limited-time introductory offer for new European clients."
                   )}
                 </p>
 
@@ -53,7 +59,7 @@ export default function CampaignSection() {
                   {[
                     t("promo.perk1", "Free consultation"),
                     t("promo.perk2", "No hidden fees"),
-                    t("promo.perk3", "Satisfaction guaranteed"),
+                    t("promo.perk3", "Money-back guarantee"),
                   ].map((perk) => (
                     <div
                       key={perk}
@@ -72,26 +78,35 @@ export default function CampaignSection() {
                   size="lg"
                   color="neo-lime"
                 >
-                  {t("promo.ctaButton", "VIEW PRICING")}{" "}
+                  {t("promo.ctaButton", "CLAIM YOUR DISCOUNT")}{" "}
                   <ArrowRight size={16} />
                 </NeoButton>
               </motion.div>
 
-              {/* Right: Price highlights */}
+              {/* Right: Countdown + Price */}
               <motion.div
                 variants={fadeInUp}
-                className="flex flex-col items-center gap-3 flex-shrink-0"
+                className="flex flex-col items-center gap-4 flex-shrink-0"
               >
                 <p className="font-mono text-xs text-neo-lime/60 uppercase tracking-widest">
-                  {t("promo.startingFrom", "STARTING FROM")}
+                  {t("promo.offerEndsIn", "OFFER ENDS IN")}
                 </p>
-                <div className="bg-neo-lime border-2 border-neo-black px-6 py-4 shadow-hard text-center">
-                  <span className="font-space font-bold text-3xl lg:text-4xl text-neo-black">
-                    {"\u20AC"}349
+
+                <CountdownTimer variant="large" />
+
+                <div className="flex items-center gap-3 mt-2">
+                  <span className="font-mono text-lg text-neo-lime/40 line-through">
+                    €497
                   </span>
+                  <div className="bg-neo-lime border-2 border-neo-black px-5 py-3 shadow-hard">
+                    <span className="font-space font-extrabold text-3xl lg:text-4xl text-neo-black">
+                      €349
+                    </span>
+                  </div>
                 </div>
+
                 <p className="font-mono text-[10px] text-neo-lime/40 uppercase tracking-wider">
-                  {t("promo.oneTime", "ONE-TIME PAYMENT")}
+                  {t("promo.oneTime", "ONE-TIME PAYMENT • SAVE 25%")}
                 </p>
               </motion.div>
             </div>

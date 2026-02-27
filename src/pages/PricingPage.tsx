@@ -47,6 +47,7 @@ import {
   scaleIn,
   viewportConfig,
 } from "@/lib/animations";
+import { useAnalytics } from "@/lib/useAnalytics";
 
 const tierIcons: Record<string, React.ElementType> = {
   launch: Zap,
@@ -137,6 +138,7 @@ function FaqAccordion({ questionKey, answerKey }: FaqItemProps) {
 export default function PricingPage() {
   const { t } = useTranslation();
   const { locale } = useParams();
+  useAnalytics("Pricing");
   const currentLocale = locale ?? "en";
 
   return (

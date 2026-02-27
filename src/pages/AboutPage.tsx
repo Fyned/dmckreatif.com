@@ -18,6 +18,7 @@ import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildOrganizationSchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
+import { useAnalytics } from "@/lib/useAnalytics";
 import {
   fadeInUp,
   staggerContainer,
@@ -145,6 +146,7 @@ const countriesServed: CountryItem[] = [
 export default function AboutPage() {
   const { t } = useTranslation();
   const { locale } = useParams();
+  useAnalytics("About");
   const currentLocale = locale ?? "en";
   return (
     <>

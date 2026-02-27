@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { featuredProjects } from "@/lib/portfolio-data";
+import { projects } from "@/lib/portfolio-data";
 import type { Project } from "@/lib/portfolio-data";
 import ProjectCard from "@/components/portfolio/ProjectCard";
 import CaseStudyModal from "@/components/portfolio/CaseStudyModal";
@@ -15,7 +15,7 @@ export default function PortfolioShowcase() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const selectedIndex = selectedProject
-    ? featuredProjects.findIndex((p) => p.id === selectedProject.id)
+    ? projects.findIndex((p) => p.id === selectedProject.id)
     : -1;
 
   return (
@@ -28,7 +28,7 @@ export default function PortfolioShowcase() {
 
         <AnimatePresence mode="popLayout">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredProjects.map((project, i) => (
+            {projects.map((project, i) => (
               <ProjectCard
                 key={project.id}
                 project={project}
@@ -56,14 +56,14 @@ export default function PortfolioShowcase() {
         project={selectedProject}
         onClose={() => setSelectedProject(null)}
         onPrev={() => {
-          if (selectedIndex > 0) setSelectedProject(featuredProjects[selectedIndex - 1]);
+          if (selectedIndex > 0) setSelectedProject(projects[selectedIndex - 1]);
         }}
         onNext={() => {
-          if (selectedIndex < featuredProjects.length - 1)
-            setSelectedProject(featuredProjects[selectedIndex + 1]);
+          if (selectedIndex < projects.length - 1)
+            setSelectedProject(projects[selectedIndex + 1]);
         }}
         hasPrev={selectedIndex > 0}
-        hasNext={selectedIndex < featuredProjects.length - 1}
+        hasNext={selectedIndex < projects.length - 1}
       />
     </section>
   );

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, Gift } from "lucide-react";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackNewsletterSignup } from "@/lib/analytics";
 import { supabase } from "@/lib/supabase";
 
 const SESSION_KEY = "dmc_exit_intent_shown";
@@ -70,6 +70,7 @@ export default function ExitIntentPopup() {
     setLoading(false);
     setSubmitted(true);
     trackEvent("exit_intent_conversion", "lead_generation", email);
+    trackNewsletterSignup("exit_intent_popup");
   };
 
   const l = locale ?? "en";

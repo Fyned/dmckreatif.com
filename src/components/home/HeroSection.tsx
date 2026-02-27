@@ -31,7 +31,7 @@ export default function HeroSection() {
             <h1 className="font-space font-bold text-hero leading-[0.95] tracking-tight">
               {t("hero.titleLine1")}
               <br />
-              <span className="inline-block bg-neo-lime px-4 py-1 border-4 border-neo-black shadow-hard-lg mt-2">
+              <span className="inline-block bg-neo-lime px-5 py-2 border-4 border-neo-black shadow-hard-lg mt-2 leading-tight">
                 {t("hero.titleAccent")}
               </span>
             </h1>

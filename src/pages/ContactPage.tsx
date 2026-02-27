@@ -14,6 +14,8 @@ import JsonLd from "@/components/seo/JsonLd";
 import { buildLocalBusinessSchema, buildContactPageSchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
 import { fadeInUp, viewportConfig } from "@/lib/animations";
 import { BOOKING_URL } from "@/lib/constants";
+import { useAnalytics } from "@/lib/useAnalytics";
+import { trackFormSubmission, trackCtaClick } from "@/lib/analytics";
 
 const EU_PHONE_REGEX = /^(\+?\d{1,4}[\s.-]?)?\(?\d{1,4}\)?[\s.-]?\d{2,4}[\s.-]?\d{2,4}[\s.-]?\d{0,4}$/;
 
@@ -90,6 +92,7 @@ const countries = [
 export default function ContactPage() {
   const { t } = useTranslation();
   const { locale } = useParams();
+  useAnalytics("Contact");
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>("idle");
 
   const {
@@ -137,6 +140,7 @@ export default function ContactPage() {
 
     setRateLimitTimestamp();
     setSubmitStatus("success");
+    trackFormSubmission("contact", "contact_page");
     reset();
   };
 
@@ -477,6 +481,7 @@ export default function ContactPage() {
                   href={BOOKING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackCtaClick("Book Now", "contact_sidebar", BOOKING_URL)}
                   className="inline-flex items-center gap-2 font-space font-bold text-xs uppercase tracking-wider text-neo-black border-2 border-neo-black px-4 py-2 bg-neo-lime hover:shadow-hard-sm transition-all"
                 >
                   {t("contact.bookNow", "BOOK NOW")}

@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useParams, Outlet, Navigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { isSupportedLocale, loadLocale } from "@/i18n";
 import type { SupportedLocale } from "@/i18n";
+import { trackLanguageSwitch } from "@/lib/analytics";
 
 export default function LocaleRouter() {
   const { locale } = useParams<{ locale: string }>();
   const { i18n } = useTranslation();
   const [ready, setReady] = useState(locale === "en" || !locale);
+  const prevLocale = useRef(i18n.language);
 
   useEffect(() => {
     if (!locale || !isSupportedLocale(locale)) return;
@@ -30,6 +32,12 @@ export default function LocaleRouter() {
       setReady(false);
       activate();
     }
+
+    // Track language switch
+    if (prevLocale.current && prevLocale.current !== locale) {
+      trackLanguageSwitch(prevLocale.current, locale);
+    }
+    prevLocale.current = locale;
 
     return () => { cancelled = true; };
   }, [locale, i18n]);

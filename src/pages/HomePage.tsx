@@ -21,9 +21,11 @@ import {
   buildFAQPageSchema,
   buildHowToSchema,
 } from "@/lib/seo-schemas";
+import { useAnalytics } from "@/lib/useAnalytics";
 
 export default function HomePage() {
   const { t } = useTranslation();
+  useAnalytics("Home");
 
   const homeFaqs = [
     { question: t("faq.q1", "How long does it take to build a website?"), answer: t("faq.a1", "Our Launch package (single page) takes 3-5 business days. Growth package (5-7 pages) takes 7-10 days. Scale and Commerce packages take 14-28 days depending on complexity. We always deliver on time or your money back.") },
