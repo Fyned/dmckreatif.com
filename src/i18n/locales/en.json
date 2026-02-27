@@ -127,6 +127,8 @@
     "proTeamDesc": "Every project is handcrafted by our professional development team with international experience across 8+ countries."
   },
   "portfolio": {
+    "introHeading": "Web Development Portfolio",
+    "introText": "We have designed and developed websites for businesses across France, Belgium, the United Kingdom, the Netherlands, and Germany. Each project is custom-built with React, Next.js, or Vite and optimized for performance, SEO, and conversion. From single-page landing sites to multilingual e-commerce platforms, our portfolio showcases real results delivered to real European businesses. Every website we build scores 95+ on Google Lighthouse and loads in under two seconds.",
     "sectionTitle": "SELECTED WORK",
     "sectionSubtitle": "SYS.PORTFOLIO",
     "viewProject": "VIEW PROJECT",
@@ -749,6 +751,8 @@
     "milestone6Desc": "Launched ready-made website template platform. Introduced scalable solutions for SMEs across Europe starting from €50."
   },
   "contact": {
+    "introHeading": "Start a Conversation About Your Project",
+    "introText": "Whether you need a new website, want to redesign an existing one, or are exploring e-commerce options, we are here to help. Fill out the form below and we will respond within 24 hours with a tailored proposal. We work with businesses across France, Belgium, the United Kingdom, the Netherlands, and Germany — in English, French, Dutch, or German. No commitment required. Just tell us about your business and what you are looking to achieve online.",
     "sectionTitle": "GET IN TOUCH",
     "sectionSubtitle": "SYS.CONTACT",
     "nameLabel": "YOUR NAME",
@@ -816,6 +820,8 @@
     "leaveReview": "Leave a Review"
   },
   "blog": {
+    "introHeading": "Web Development Insights for European Businesses",
+    "introText": "Practical articles on web development, SEO strategy, e-commerce, and digital marketing — written for business owners across France, Belgium, the UK, the Netherlands, and Germany. We share lessons from real client projects, explain modern technologies like React and Next.js in plain language, and break down what actually moves the needle for small and medium businesses online. Whether you are planning your first website or scaling an existing one, these posts will help you make better decisions.",
     "sectionTitle": "INSIGHTS",
     "sectionSubtitle": "SYS.BLOG",
     "readMore": "READ MORE",

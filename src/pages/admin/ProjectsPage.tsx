@@ -121,6 +121,22 @@ export default function ProjectsPage() {
     );
   }
 
+  async function handleDeleteProject(id: string, name: string) {
+    if (!window.confirm(`Delete project "${name}"? This cannot be undone.`)) return;
+
+    const { error: deleteErr } = await supabase
+      .from("projects")
+      .delete()
+      .eq("id", id);
+
+    if (deleteErr) {
+      setError(deleteErr.message);
+      return;
+    }
+
+    setProjects((prev) => prev.filter((p) => p.id !== id));
+  }
+
   async function handleAddProject() {
     if (!form.name.trim() || !form.client_id) return;
 
@@ -393,13 +409,13 @@ export default function ProjectsPage() {
                   <span className="font-mono text-xs text-neo-black/60">
                     {formatDate(project.end_date)}
                   </span>
-                  <div>
+                  <div className="flex items-center gap-2">
                     <select
                       value={project.status}
                       onChange={(e) =>
                         handleStatusChange(project.id, e.target.value as ProjectStatus)
                       }
-                      className="w-full border-2 border-neo-black bg-neo-white px-2 py-1 font-mono text-xs focus:outline-none focus:shadow-hard-sm"
+                      className="flex-1 border-2 border-neo-black bg-neo-white px-2 py-1 font-mono text-xs focus:outline-none focus:shadow-hard-sm"
                     >
                       {STATUS_OPTIONS.map((s) => (
                         <option key={s} value={s}>
@@ -407,6 +423,13 @@ export default function ProjectsPage() {
                         </option>
                       ))}
                     </select>
+                    <button
+                      onClick={() => handleDeleteProject(project.id, project.name)}
+                      className="border-2 border-neo-black bg-neo-red/10 hover:bg-neo-red hover:text-neo-white px-2 py-1 font-mono text-xs font-bold transition-colors"
+                      title={t("common.delete", "Delete")}
+                    >
+                      ✕
+                    </button>
                   </div>
                 </motion.div>
               ))

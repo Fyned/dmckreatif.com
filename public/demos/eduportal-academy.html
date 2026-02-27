@@ -3,140 +3,390 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EduPortal — Academy & Learning Centre</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="description" content="{{short_description}}">
+<title>{{business_name}} — Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#f8f9fc;--surface:#fff;--indigo:#4f46e5;--indigo-light:#6366f1;--teal:#0d9488;--dark:#111827;--text:#6b7280;--font:'Plus Jakarta Sans',sans-serif}
+:root{--brand-primary:#8b5cf6;--brand-secondary:#0f172a;--bg:#0a0a12;--bg-card:#111119;--bg-elevated:#18182a;--text:#e2e8f0;--text-muted:#64748b;--white:#ffffff;--radius:16px;--glow:0 0 40px rgba(139,92,246,0.15);--cyan:#06b6d4}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:var(--font);background:var(--bg);color:var(--text);overflow-x:hidden}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(248,249,252,.92);backdrop-filter:blur(16px);padding:14px 0;border-bottom:1px solid rgba(0,0,0,.04)}
-nav .inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:1.3rem;font-weight:800;color:var(--dark)}
-.logo span{color:var(--indigo)}
-.nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{font-size:.82rem;font-weight:500;color:var(--text);text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:var(--indigo)}
-.nav-btn{padding:10px 24px;background:var(--indigo);color:#fff;font-size:.78rem;font-weight:600;border:none;border-radius:10px;text-decoration:none;transition:all .2s;cursor:pointer}
-.nav-btn:hover{background:var(--indigo-light)}
-.container{max-width:1200px;margin:0 auto;padding:0 24px}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--bg);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.2}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
 
-.hero{padding:130px 0 60px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.hero-text .badge{display:inline-flex;gap:6px;align-items:center;padding:6px 14px;background:rgba(79,70,229,.08);color:var(--indigo);font-size:.72rem;font-weight:600;border-radius:100px;margin-bottom:16px}
-.hero-text h1{font-size:clamp(2.2rem,4vw,3.2rem);color:var(--dark);line-height:1.15;font-weight:800;margin-bottom:16px}
-.hero-text p{font-size:1rem;line-height:1.8;margin-bottom:28px;max-width:440px}
-.hero-btns{display:flex;gap:12px}
-.btn-indigo{padding:14px 32px;background:var(--indigo);color:#fff;font-size:.85rem;font-weight:600;border:none;border-radius:12px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
-.btn-indigo:hover{background:var(--indigo-light);transform:translateY(-2px);box-shadow:0 8px 32px rgba(79,70,229,.2)}
-.btn-ghost{padding:14px 32px;border:2px solid var(--dark);color:var(--dark);font-size:.85rem;font-weight:600;border-radius:12px;text-decoration:none;display:inline-block;transition:all .2s;background:transparent}
-.btn-ghost:hover{background:var(--dark);color:#fff}
-.hero-img{position:relative}
-.hero-img img{width:100%;border-radius:20px;aspect-ratio:4/3;object-fit:cover}
-.hero-stats{display:flex;gap:24px;margin-top:20px}
-.h-stat{background:var(--surface);padding:16px 20px;border-radius:12px;border:1px solid rgba(0,0,0,.04);text-align:center;flex:1}
-.h-stat .num{font-size:1.3rem;font-weight:800;color:var(--indigo)}
-.h-stat .label{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
+/* NAV */
+.nav{position:fixed;top:0;left:0;width:100%;background:rgba(10,10,18,0.85);backdrop-filter:blur(20px);z-index:1000;border-bottom:1px solid rgba(139,92,246,0.08)}
+.nav-inner{max-width:1240px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav-logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.35rem;color:var(--white);display:flex;align-items:center;gap:8px}
+.nav-logo span{background:linear-gradient(135deg,var(--brand-primary),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{font-size:.9rem;font-weight:500;color:var(--text-muted);transition:color .3s}
+.nav-links a:hover{color:var(--brand-primary)}
+.nav-cta{background:var(--brand-primary);color:var(--white);padding:10px 24px;border-radius:10px;font-weight:600;font-size:.88rem;transition:all .3s}
+.nav-cta:hover{box-shadow:0 4px 20px rgba(139,92,246,0.4);transform:translateY(-1px)}
 
-.programs{padding:80px 0}
-.sec-header{text-align:center;margin-bottom:48px}
-.sec-header .tag{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--indigo);display:block;margin-bottom:8px}
-.sec-header h2{font-size:clamp(1.8rem,3vw,2.4rem);color:var(--dark);font-weight:800}
-.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.prog-card{background:var(--surface);border-radius:16px;overflow:hidden;border:1px solid rgba(0,0,0,.04);transition:all .3s}
-.prog-card:hover{box-shadow:0 16px 48px rgba(0,0,0,.06);transform:translateY(-4px)}
-.prog-card img{width:100%;aspect-ratio:16/10;object-fit:cover}
-.prog-card .info{padding:20px}
-.prog-card .info .cat{display:inline-block;padding:3px 10px;background:rgba(79,70,229,.08);color:var(--indigo);font-size:.68rem;font-weight:600;border-radius:4px;text-transform:uppercase;margin-bottom:8px}
-.prog-card .info h3{font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:6px}
-.prog-card .info p{font-size:.82rem;line-height:1.6;margin-bottom:10px}
-.prog-card .info .meta{display:flex;gap:16px;font-size:.75rem;color:var(--text)}
+/* HAMBURGER */
+.menu-check{display:none}
+.hamburger{display:none;cursor:pointer;width:28px;height:20px;position:relative;z-index:1001}
+.hamburger span,.hamburger span::before,.hamburger span::after{display:block;width:100%;height:1.5px;background:var(--brand-primary);position:absolute;transition:0.3s}
+.hamburger span{top:50%;transform:translateY(-50%)}
+.hamburger span::before{content:'';top:-8px}
+.hamburger span::after{content:'';top:8px}
+.menu-check:checked~.hamburger span{background:transparent}
+.menu-check:checked~.hamburger span::before{top:0;transform:rotate(45deg)}
+.menu-check:checked~.hamburger span::after{top:0;transform:rotate(-45deg)}
 
-.features{padding:80px 0;background:var(--surface);border-radius:24px;margin:0 24px}
-.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1200px;margin:0 auto;padding:0 24px}
-.feat-card{padding:28px;text-align:center;border:1px solid rgba(0,0,0,.04);border-radius:14px;transition:all .3s}
-.feat-card:hover{border-color:var(--indigo);box-shadow:0 8px 24px rgba(79,70,229,.06)}
-.feat-card .icon{width:48px;height:48px;border-radius:12px;background:rgba(79,70,229,.08);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.3rem}
-.feat-card h3{font-size:.9rem;font-weight:700;color:var(--dark);margin-bottom:6px}
-.feat-card p{font-size:.78rem;line-height:1.6}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:120px 24px 80px;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(139,92,246,0.15),transparent 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(6,182,212,0.1),transparent 70%);pointer-events:none}
+.hero-inner{max-width:1240px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.2);border-radius:50px;padding:6px 18px;color:var(--brand-primary);font-weight:600;font-size:.8rem;margin-bottom:24px;letter-spacing:.03em;text-transform:uppercase}
+.hero h1{font-size:clamp(2.5rem,4.5vw+1rem,4rem);color:var(--white);font-weight:700;margin-bottom:16px;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--brand-primary),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero .slogan{font-size:1.15rem;color:var(--text);max-width:480px;margin-bottom:12px;font-weight:500}
+.hero .desc{font-size:1rem;color:var(--text-muted);max-width:440px;margin-bottom:32px;line-height:1.8}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary{background:var(--brand-primary);color:var(--white);padding:14px 32px;border-radius:12px;font-weight:600;font-size:1rem;transition:all .3s;border:none;cursor:pointer}
+.btn-primary:hover{box-shadow:0 8px 32px rgba(139,92,246,0.4);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--text);padding:14px 32px;border-radius:12px;font-weight:600;font-size:1rem;border:1px solid rgba(255,255,255,0.1);transition:all .3s;cursor:pointer}
+.btn-ghost:hover{border-color:var(--brand-primary);color:var(--brand-primary)}
+.hero-visual{position:relative}
+.hero-visual img{width:100%;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.06)}
+.hero-float{position:absolute;background:var(--bg-card);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:12px 18px;display:flex;align-items:center;gap:10px;font-size:.85rem;font-weight:500}
+.hero-float.top-right{top:-12px;right:-12px;color:var(--cyan)}
+.hero-float.bottom-left{bottom:24px;left:-16px;color:var(--brand-primary)}
+.float-dot{width:8px;height:8px;border-radius:50%;background:currentColor}
 
-.cta{padding:80px 0;text-align:center}
-.cta-box{background:linear-gradient(135deg,var(--indigo),#312e81);border-radius:24px;padding:64px 40px;color:#fff}
-.cta-box h2{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;margin-bottom:12px}
-.cta-box p{opacity:.7;margin-bottom:28px;font-size:1rem}
-.cta-box .btn-white{padding:14px 32px;background:#fff;color:var(--indigo);font-weight:700;font-size:.85rem;border:none;border-radius:12px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
-.cta-box .btn-white:hover{transform:translateY(-2px)}
+/* STATS */
+.stats{border-top:1px solid rgba(255,255,255,0.04);border-bottom:1px solid rgba(255,255,255,0.04);background:var(--bg-card)}
+.stats-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);padding:0}
+.stat-item{padding:48px 24px;text-align:center;border-right:1px solid rgba(255,255,255,0.04)}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,3vw,2.75rem);font-weight:700;background:linear-gradient(135deg,var(--brand-primary),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px}
+.stat-label{color:var(--text-muted);font-size:.88rem;font-weight:500}
 
-footer{padding:40px 0;text-align:center;border-top:1px solid rgba(0,0,0,.04)}
-footer p{font-size:.78rem}
+/* SECTIONS */
+.section{padding:100px 24px}
+.section-center{max-width:1240px;margin:0 auto}
+.section-tag{display:inline-block;background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.15);color:var(--brand-primary);font-weight:600;font-size:.78rem;padding:6px 16px;border-radius:8px;margin-bottom:16px;text-transform:uppercase;letter-spacing:.06em}
+.section-title{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;color:var(--white);margin-bottom:14px;letter-spacing:-.02em}
+.section-sub{color:var(--text-muted);font-size:1rem;max-width:540px;margin-bottom:48px;line-height:1.8}
 
+/* COURSES */
+.courses-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.course-card{background:var(--bg-card);border:1px solid rgba(255,255,255,0.05);border-radius:var(--radius);overflow:hidden;transition:all .35s}
+.course-card:hover{transform:translateY(-6px);border-color:rgba(139,92,246,0.2);box-shadow:var(--glow)}
+.course-thumb{width:100%;height:180px;object-fit:cover}
+.course-body{padding:20px}
+.course-tag{display:inline-block;background:rgba(139,92,246,0.1);color:var(--brand-primary);font-size:.72rem;font-weight:600;padding:4px 10px;border-radius:6px;margin-bottom:10px;text-transform:uppercase}
+.course-body h3{font-size:1.05rem;color:var(--white);margin-bottom:8px}
+.course-body p{color:var(--text-muted);font-size:.85rem;margin-bottom:14px;line-height:1.6}
+.course-meta{display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid rgba(255,255,255,0.05)}
+.course-price{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--cyan);font-size:1.1rem}
+.course-duration{color:var(--text-muted);font-size:.8rem}
+
+/* CATEGORIES */
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cat-card{background:var(--bg-card);border:1px solid rgba(255,255,255,0.05);border-radius:14px;padding:28px 24px;display:flex;align-items:center;gap:16px;transition:all .3s;cursor:pointer}
+.cat-card:hover{border-color:var(--brand-primary);background:var(--bg-elevated)}
+.cat-icon{width:48px;height:48px;border-radius:12px;background:rgba(139,92,246,0.1);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
+.cat-card h3{font-size:1rem;color:var(--white);margin-bottom:4px}
+.cat-card p{color:var(--text-muted);font-size:.82rem}
+
+/* HOW IT WORKS */
+.hiw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.hiw-card{background:var(--bg-card);border:1px solid rgba(255,255,255,0.05);border-radius:var(--radius);padding:36px 28px;text-align:center;position:relative}
+.hiw-num{font-family:'Space Grotesk',sans-serif;font-size:3rem;font-weight:700;color:rgba(139,92,246,0.15);position:absolute;top:16px;right:20px}
+.hiw-icon{font-size:2.2rem;margin-bottom:18px}
+.hiw-card h3{font-size:1.1rem;color:var(--white);margin-bottom:10px}
+.hiw-card p{color:var(--text-muted);font-size:.9rem;line-height:1.7}
+
+/* INSTRUCTORS */
+.inst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.inst-card{background:var(--bg-card);border:1px solid rgba(255,255,255,0.05);border-radius:var(--radius);overflow:hidden;transition:all .3s}
+.inst-card:hover{border-color:rgba(139,92,246,0.2);transform:translateY(-4px)}
+.inst-img{width:100%;height:240px;object-fit:cover}
+.inst-body{padding:20px}
+.inst-body h3{font-size:1.05rem;color:var(--white);margin-bottom:4px}
+.inst-body .inst-role{color:var(--brand-primary);font-size:.82rem;font-weight:500;margin-bottom:8px}
+.inst-body p{color:var(--text-muted);font-size:.85rem;line-height:1.6}
+
+/* NEWSLETTER */
+.newsletter{background:linear-gradient(135deg,rgba(139,92,246,0.08),rgba(6,182,212,0.06));border:1px solid rgba(139,92,246,0.1);border-radius:20px;padding:64px 48px;text-align:center;position:relative;overflow:hidden}
+.newsletter::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(139,92,246,0.1),transparent);pointer-events:none}
+.newsletter h2{font-size:clamp(1.6rem,2.5vw,2.2rem);color:var(--white);margin-bottom:12px}
+.newsletter p{color:var(--text-muted);margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto}
+.newsletter-form{display:flex;gap:12px;max-width:480px;margin:0 auto}
+.newsletter-form input{flex:1;padding:14px 18px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;font-size:.95rem;outline:none}
+.newsletter-form input:focus{border-color:var(--brand-primary)}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:64px}
+.contact-form{display:flex;flex-direction:column;gap:16px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.contact-form input,.contact-form textarea{width:100%;padding:14px 18px;border:1px solid rgba(255,255,255,0.06);border-radius:12px;background:var(--bg-card);color:var(--white);font-family:'Inter',sans-serif;font-size:.95rem;outline:none;transition:border-color .3s}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--brand-primary)}
+.contact-form textarea{min-height:120px;resize:vertical}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--text-muted)}
+.contact-info{display:flex;flex-direction:column;gap:24px}
+.contact-item{display:flex;gap:16px;align-items:flex-start}
+.contact-icon{width:48px;height:48px;background:rgba(139,92,246,0.08);border:1px solid rgba(139,92,246,0.12);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.contact-item h4{font-size:.92rem;color:var(--white);margin-bottom:4px}
+.contact-item p{color:var(--text-muted);font-size:.88rem;line-height:1.6}
+
+/* FOOTER */
+.footer{background:var(--bg-card);border-top:1px solid rgba(255,255,255,0.04);padding:64px 24px 32px}
+.footer-inner{max-width:1240px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.footer-brand h3{font-family:'Space Grotesk',sans-serif;color:var(--white);font-size:1.25rem;margin-bottom:12px}
+.footer-brand h3 span{background:linear-gradient(135deg,var(--brand-primary),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.footer-brand p{color:var(--text-muted);font-size:.85rem;line-height:1.7;max-width:280px}
+.footer h4{color:var(--white);font-size:.92rem;margin-bottom:16px;font-family:'Space Grotesk',sans-serif}
+.footer ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer ul a{color:var(--text-muted);font-size:.85rem;transition:color .3s}
+.footer ul a:hover{color:var(--brand-primary)}
+.footer-social{display:flex;gap:10px;margin-top:16px}
+.footer-social a{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:.9rem;transition:all .3s}
+.footer-social a:hover{background:var(--brand-primary);color:var(--white);border-color:var(--brand-primary)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.05);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{color:var(--text-muted);font-size:.8rem}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-visual{display:none}
+  .courses-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .inst-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:768px){
-  .hero{grid-template-columns:1fr;padding-top:100px}
-  .prog-grid{grid-template-columns:1fr}
-  .feat-grid{grid-template-columns:repeat(2,1fr)}
-  .nav-links{display:none}
-  .hero-btns{flex-direction:column}
+  .hamburger{display:block}
+  .nav-links{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:var(--bg);flex-direction:column;justify-content:center;align-items:center;gap:28px;transition:right 0.4s ease;box-shadow:-4px 0 24px rgba(0,0,0,0.3)}
+  .menu-check:checked~.nav-inner .nav-links{right:0}
+  .nav-cta{display:none}
+  .menu-check:checked~.nav-inner .nav-cta{display:inline-block}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .stat-item:nth-child(2){border-right:none}
+  .courses-grid,.hiw-grid,.cat-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .newsletter{padding:40px 24px}
+  .newsletter-form{flex-direction:column}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
 }
 </style>
 </head>
 <body>
 
-<nav><div class="inner"><div class="logo">Edu<span>Portal</span></div><ul class="nav-links"><li><a href="#programs">Programs</a></li><li><a href="#features">Why Us</a></li><li><a href="#contact">Enrol</a></li></ul><a href="#contact" class="nav-btn">Apply Now</a></div></nav>
+<!-- NAV -->
+<nav class="nav">
+  <input type="checkbox" id="menu-check" class="menu-check">
+  <label for="menu-check" class="hamburger"><span></span></label>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo"><span>{{business_name}}</span></a>
+    <ul class="nav-links">
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#instructors">Instructors</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:{{phone}}" class="nav-cta">{{phone}}</a>
+  </div>
+</nav>
 
-<div class="container">
-  <section class="hero">
-    <div class="hero-text">
-      <span class="badge">&#127891; Now Enrolling 2024-2025</span>
-      <h1>Learn Without Limits.</h1>
-      <p>EduPortal Academy offers world-class programmes in technology, business, and the arts. Small classes, expert instructors, real-world skills.</p>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">&#128640; New Courses Added Weekly</div>
+      <h1>Master New Skills with <em>{{business_name}}</em></h1>
+      <p class="slogan">{{slogan}}</p>
+      <p class="desc">{{short_description}}</p>
       <div class="hero-btns">
-        <a href="#programs" class="btn-indigo">Explore Programs</a>
-        <a href="#contact" class="btn-ghost">Book a Tour</a>
+        <a href="#courses" class="btn-primary">Explore Courses</a>
+        <a href="#how" class="btn-ghost">How It Works</a>
       </div>
     </div>
-    <div class="hero-img">
-      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c476?auto=format&fit=crop&w=600&q=80" alt="Students">
-      <div class="hero-stats">
-        <div class="h-stat"><div class="num">2,400+</div><div class="label">Students</div></div>
-        <div class="h-stat"><div class="num">96%</div><div class="label">Job Placement</div></div>
-        <div class="h-stat"><div class="num">45</div><div class="label">Programmes</div></div>
-      </div>
+    <div class="hero-visual">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700&q=80" alt="Student learning online">
+      <div class="hero-float top-right"><span class="float-dot"></span> 500+ Live Sessions</div>
+      <div class="hero-float bottom-left"><span class="float-dot"></span> Expert Instructors</div>
     </div>
-  </section>
-</div>
+  </div>
+</section>
 
-<section id="programs" class="programs">
-  <div class="container">
-    <div class="sec-header"><span class="tag">Programmes</span><h2>What Will You Study?</h2></div>
-    <div class="prog-grid">
-      <div class="prog-card">
-        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=80" alt="Coding">
-        <div class="info"><span class="cat">Technology</span><h3>Full-Stack Web Development</h3><p>Master React, Node.js, databases, and deployment in our intensive 12-week bootcamp.</p><div class="meta"><span>12 Weeks</span><span>Full-time</span><span>&euro;4,200</span></div></div>
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-num">240+</div><div class="stat-label">Courses Available</div></div>
+    <div class="stat-item"><div class="stat-num">45K</div><div class="stat-label">Students Enrolled</div></div>
+    <div class="stat-item"><div class="stat-num">120</div><div class="stat-label">Expert Instructors</div></div>
+    <div class="stat-item"><div class="stat-num">94%</div><div class="stat-label">Completion Rate</div></div>
+  </div>
+</section>
+
+<!-- FEATURED COURSES -->
+<section class="section" id="courses">
+  <div class="section-center">
+    <span class="section-tag">Featured Courses</span>
+    <h2 class="section-title">Popular Right Now</h2>
+    <p class="section-sub">Handpicked courses to accelerate your career and expand your expertise.</p>
+    <div class="courses-grid">
+      <div class="course-card">
+        <img class="course-thumb" src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=500&q=80" alt="Web Development">
+        <div class="course-body"><span class="course-tag">Development</span><h3>Full-Stack Web Development</h3><p>Build modern web applications from scratch using React, Node.js, and cloud deployment.</p><div class="course-meta"><span class="course-price">&euro;89</span><span class="course-duration">48 hours</span></div></div>
       </div>
-      <div class="prog-card">
-        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&q=80" alt="Business">
-        <div class="info"><span class="cat">Business</span><h3>Digital Marketing & Growth</h3><p>SEO, paid ads, social media, analytics. Build real campaigns for real clients.</p><div class="meta"><span>8 Weeks</span><span>Part-time</span><span>&euro;2,800</span></div></div>
+      <div class="course-card">
+        <img class="course-thumb" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80" alt="Data Science">
+        <div class="course-body"><span class="course-tag">Data Science</span><h3>Machine Learning Fundamentals</h3><p>Master Python, TensorFlow, and data analysis techniques used by top tech companies.</p><div class="course-meta"><span class="course-price">&euro;129</span><span class="course-duration">56 hours</span></div></div>
       </div>
-      <div class="prog-card">
-        <img src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?auto=format&fit=crop&w=500&q=80" alt="Design">
-        <div class="info"><span class="cat">Design</span><h3>UX/UI Design Professional</h3><p>User research, wireframing, prototyping with Figma, design systems, portfolio building.</p><div class="meta"><span>10 Weeks</span><span>Full-time</span><span>&euro;3,500</span></div></div>
+      <div class="course-card">
+        <img class="course-thumb" src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=500&q=80" alt="UX Design">
+        <div class="course-body"><span class="course-tag">Design</span><h3>UX/UI Design Masterclass</h3><p>Create stunning user interfaces with Figma, design systems, and research-driven methodology.</p><div class="course-meta"><span class="course-price">&euro;79</span><span class="course-duration">36 hours</span></div></div>
+      </div>
+      <div class="course-card">
+        <img class="course-thumb" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" alt="Digital Marketing">
+        <div class="course-body"><span class="course-tag">Marketing</span><h3>Digital Marketing Strategy</h3><p>Learn SEO, paid advertising, social media marketing, and analytics that drive real results.</p><div class="course-meta"><span class="course-price">&euro;69</span><span class="course-duration">32 hours</span></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="features" class="features">
-  <div class="sec-header" style="max-width:1200px;margin:0 auto 48px;padding:0 24px"><span class="tag">Why EduPortal</span><h2>Built for Your Success</h2></div>
-  <div class="feat-grid">
-    <div class="feat-card"><div class="icon">&#128218;</div><h3>Small Classes</h3><p>Maximum 20 students per cohort for personalised learning.</p></div>
-    <div class="feat-card"><div class="icon">&#128187;</div><h3>Hands-On Projects</h3><p>Build real portfolio projects with industry mentors.</p></div>
-    <div class="feat-card"><div class="icon">&#127942;</div><h3>Career Support</h3><p>CV review, interview prep, and direct employer connections.</p></div>
-    <div class="feat-card"><div class="icon">&#127760;</div><h3>Global Network</h3><p>Join 8,000+ alumni across 30 countries.</p></div>
+<!-- CATEGORIES -->
+<section class="section" id="categories" style="background:var(--bg-card)">
+  <div class="section-center">
+    <span class="section-tag">Browse Topics</span>
+    <h2 class="section-title">Explore Categories</h2>
+    <p class="section-sub">Find the perfect course in any field that matches your career goals.</p>
+    <div class="cat-grid">
+      <div class="cat-card"><div class="cat-icon">&#128187;</div><div><h3>Web Development</h3><p>42 courses</p></div></div>
+      <div class="cat-card"><div class="cat-icon">&#128202;</div><div><h3>Data &amp; Analytics</h3><p>28 courses</p></div></div>
+      <div class="cat-card"><div class="cat-icon">&#127912;</div><div><h3>Design &amp; Creative</h3><p>35 courses</p></div></div>
+      <div class="cat-card"><div class="cat-icon">&#128200;</div><div><h3>Business &amp; Finance</h3><p>31 courses</p></div></div>
+      <div class="cat-card"><div class="cat-icon">&#128272;</div><div><h3>Cybersecurity</h3><p>18 courses</p></div></div>
+      <div class="cat-card"><div class="cat-icon">&#129302;</div><div><h3>AI &amp; Machine Learning</h3><p>24 courses</p></div></div>
+    </div>
   </div>
 </section>
 
-<section id="contact" class="cta"><div class="container"><div class="cta-box"><h2>Start Your Journey Today</h2><p>Applications are open for the Spring 2025 intake. Limited spots available.</p><a href="mailto:admissions@eduportal.eu" class="btn-white">admissions@eduportal.eu</a></div></div></section>
+<!-- HOW IT WORKS -->
+<section class="section" id="how">
+  <div class="section-center">
+    <div style="text-align:center;margin-bottom:56px">
+      <span class="section-tag">Simple Process</span>
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub" style="margin:12px auto 0">Get started in three easy steps and begin learning today.</p>
+    </div>
+    <div class="hiw-grid">
+      <div class="hiw-card"><div class="hiw-num">01</div><div class="hiw-icon">&#128100;</div><h3>Create Your Account</h3><p>Sign up for free and set your learning preferences and career goals to personalize your experience.</p></div>
+      <div class="hiw-card"><div class="hiw-num">02</div><div class="hiw-icon">&#127891;</div><h3>Choose Your Course</h3><p>Browse hundreds of expert-led courses, watch previews, and enroll in the ones that match your interests.</p></div>
+      <div class="hiw-card"><div class="hiw-num">03</div><div class="hiw-icon">&#127941;</div><h3>Earn Your Certificate</h3><p>Complete courses at your own pace, pass assessments, and receive industry-recognized certifications.</p></div>
+    </div>
+  </div>
+</section>
 
-<footer><div class="container"><p>&copy; 2024 EduPortal Academy. Brussels &middot; Amsterdam &middot; Paris</p></div></footer>
+<!-- INSTRUCTORS -->
+<section class="section" id="instructors" style="background:var(--bg-card)">
+  <div class="section-center">
+    <span class="section-tag">Expert Team</span>
+    <h2 class="section-title">Meet Our Instructors</h2>
+    <p class="section-sub">Learn from industry professionals with years of real-world experience.</p>
+    <div class="inst-grid">
+      <div class="inst-card">
+        <img class="inst-img" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" alt="Instructor">
+        <div class="inst-body"><h3>Dr. James Mitchell</h3><div class="inst-role">AI &amp; Data Science Lead</div><p>Former Google researcher with 15+ years in machine learning and neural networks.</p></div>
+      </div>
+      <div class="inst-card">
+        <img class="inst-img" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Instructor">
+        <div class="inst-body"><h3>Elena Rodriguez</h3><div class="inst-role">UX Design Director</div><p>Award-winning designer who led product design at Spotify and Airbnb for 10 years.</p></div>
+      </div>
+      <div class="inst-card">
+        <img class="inst-img" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" alt="Instructor">
+        <div class="inst-body"><h3>Thomas Bergmann</h3><div class="inst-role">Full-Stack Engineering</div><p>Senior engineer and open-source contributor building scalable web applications since 2010.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section">
+  <div class="section-center">
+    <div class="newsletter">
+      <h2>Stay Ahead of the Curve</h2>
+      <p>Get weekly insights on new courses, learning tips, and exclusive discounts delivered to your inbox.</p>
+      <form class="newsletter-form" onsubmit="return false">
+        <input type="email" placeholder="Enter your email address">
+        <button class="btn-primary" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-center">
+    <span class="section-tag">Contact</span>
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-sub">Questions about our platform or courses? Our team is here to help.</p>
+    <div class="contact-grid">
+      <form class="contact-form" onsubmit="return false">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Email Address" required>
+        </div>
+        <input type="tel" placeholder="Phone Number">
+        <textarea placeholder="Your Message" required></textarea>
+        <button class="btn-primary" type="submit" style="align-self:flex-start">Send Message</button>
+      </form>
+      <div class="contact-info">
+        <div class="contact-item"><div class="contact-icon">&#128205;</div><div><h4>Address</h4><p>{{address}}</p></div></div>
+        <div class="contact-item"><div class="contact-icon">&#128222;</div><div><h4>Phone</h4><p>{{phone}}</p></div></div>
+        <div class="contact-item"><div class="contact-icon">&#9993;</div><div><h4>Email</h4><p>{{email}}</p></div></div>
+        <div class="contact-item"><div class="contact-icon">&#128336;</div><div><h4>Support Hours</h4><p>{{hours}}</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3><span>{{business_name}}</span></h3>
+        <p>Empowering learners worldwide with expert-led courses and industry-recognized certifications.</p>
+        <div class="footer-social">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Twitter">t</a>
+          <a href="#" title="LinkedIn">in</a>
+          <a href="#" title="YouTube">y</a>
+        </div>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <ul><li><a href="#courses">Courses</a></li><li><a href="#categories">Categories</a></li><li><a href="#instructors">Instructors</a></li><li><a href="#">Pricing</a></li><li><a href="#">Blog</a></li></ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul><li><a href="#">Help Center</a></li><li><a href="#">Student FAQ</a></li><li><a href="#">Refund Policy</a></li><li><a href="#">Accessibility</a></li><li><a href="#contact">Contact</a></li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul><li><a href="tel:{{phone}}">{{phone}}</a></li><li><a href="mailto:{{email}}">{{email}}</a></li><li><a href="#">{{address}}</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 {{business_name}}. All rights reserved.</p>
+      <p>Designed by <a href="https://dmckreatif.com" style="color:var(--brand-primary)">DMC Kreatif</a></p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

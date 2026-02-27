@@ -34,6 +34,7 @@ import { getPublishedUrl } from "@/lib/subdomain";
 import { getQuickStats } from "@/lib/site-analytics";
 import SiteAnalyticsPanel from "@/components/dashboard/SiteAnalyticsPanel";
 import FormSubmissionsPanel from "@/components/dashboard/FormSubmissionsPanel";
+import { SkeletonGrid } from "@/components/ui/Skeleton";
 
 /* ── helpers ─────────────────────────────────────── */
 
@@ -415,11 +416,7 @@ export default function MySitesPage() {
         )}
 
         {/* Loading */}
-        {loading && (
-          <div className="flex items-center justify-center py-20">
-            <Loader2 className="animate-spin text-neo-black/40" size={32} />
-          </div>
-        )}
+        {loading && <SkeletonGrid count={6} />}
 
         {/* Empty state */}
         {!loading && sites.length === 0 && (

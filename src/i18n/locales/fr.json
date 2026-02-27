@@ -116,6 +116,8 @@
     "proTeamDesc": "Chaque projet est réalisé par notre équipe de développement professionnel avec une expérience internationale dans plus de 8 pays."
   },
   "portfolio": {
+    "introHeading": "Portfolio de développement web",
+    "introText": "Nous avons conçu et développé des sites web pour des entreprises en France, en Belgique, au Royaume-Uni, aux Pays-Bas et en Allemagne. Chaque projet est construit sur mesure avec React, Next.js ou Vite, et optimisé pour la performance, le SEO et la conversion. Des pages d'atterrissage aux plateformes e-commerce multilingues, notre portfolio présente des résultats concrets pour de vraies entreprises européennes. Chaque site que nous construisons obtient un score de 95+ sur Google Lighthouse et se charge en moins de deux secondes.",
     "sectionTitle": "RÉALISATIONS",
     "sectionSubtitle": "SYS.PORTFOLIO",
     "viewProject": "VOIR LE PROJET",
@@ -745,6 +747,8 @@
     "milestone6Desc": "Lancement de la plateforme de modèles de sites web prêts à l'emploi. Solutions évolutives pour les PME européennes à partir de 50€."
   },
   "contact": {
+    "introHeading": "Parlons de votre projet",
+    "introText": "Que vous ayez besoin d'un nouveau site web, d'une refonte ou d'une solution e-commerce, nous sommes là pour vous aider. Remplissez le formulaire ci-dessous et nous vous répondrons sous 24 heures avec une proposition personnalisée. Nous travaillons avec des entreprises en France, en Belgique, au Royaume-Uni, aux Pays-Bas et en Allemagne — en français, anglais, néerlandais ou allemand. Sans engagement. Décrivez simplement votre activité et vos objectifs en ligne.",
     "sectionTitle": "CONTACTEZ-NOUS",
     "sectionSubtitle": "SYS.CONTACT",
     "nameLabel": "VOTRE NOM",
@@ -812,6 +816,8 @@
     "leaveReview": "Laisser un avis"
   },
   "blog": {
+    "introHeading": "Conseils web pour les entreprises européennes",
+    "introText": "Articles pratiques sur le développement web, la stratégie SEO, l'e-commerce et le marketing digital — rédigés pour les dirigeants d'entreprises en France, en Belgique, au Royaume-Uni, aux Pays-Bas et en Allemagne. Nous partageons les leçons tirées de vrais projets clients, expliquons les technologies modernes comme React et Next.js dans un langage clair, et analysons ce qui fait vraiment la différence pour les PME en ligne. Que vous planifiiez votre premier site ou que vous développiez un site existant, ces articles vous aideront à prendre de meilleures décisions.",
     "sectionTitle": "INSIGHTS",
     "sectionSubtitle": "SYS.BLOG",
     "readMore": "LIRE LA SUITE",

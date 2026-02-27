@@ -20,6 +20,7 @@ import NeoBadge from "@/components/ui/NeoBadge";
 import TemplateCard from "@/components/templates/TemplateCard";
 import TemplateTierCard from "@/components/templates/TemplateTierCard";
 import TemplateCategoryFilter from "@/components/templates/TemplateCategoryFilter";
+import { SkeletonGrid } from "@/components/ui/Skeleton";
 import { templateTiers } from "@/lib/template-data";
 import { supabase } from "@/lib/supabase";
 import {
@@ -338,13 +339,7 @@ export default function TemplatesPage() {
           </motion.div>
 
           {/* Loading State */}
-          {loading && (
-            <div className="flex items-center justify-center py-20">
-              <div className="border-2 border-neo-black bg-neo-lime/20 shadow-hard px-8 py-4 font-space font-bold text-neo-black uppercase animate-pulse">
-                {t("templates.loading", "Loading...")}
-              </div>
-            </div>
-          )}
+          {loading && <SkeletonGrid count={6} />}
 
           {/* Error State */}
           {!loading && error && (

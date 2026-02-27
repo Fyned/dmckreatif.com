@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { useParams, useNavigate, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { logger } from "@/lib/logger";
 import grapesjs from "grapesjs";
 import "grapesjs/dist/css/grapes.min.css";
 import "@/styles/grapesjs-dark.css";
@@ -270,7 +271,7 @@ export default function EditorPage() {
                   ),
                 );
               } catch (err) {
-                console.error("[editor] asset upload error:", err);
+                logger.error("editor", "asset upload error:", err);
               }
             },
           },

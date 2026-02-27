@@ -152,6 +152,22 @@ export default function InvoicesPage() {
     );
   }
 
+  async function handleDeleteInvoice(id: string, invoiceNumber: string) {
+    if (!window.confirm(`Delete invoice "${invoiceNumber}"? This cannot be undone.`)) return;
+
+    const { error: deleteErr } = await supabase
+      .from("invoices")
+      .delete()
+      .eq("id", id);
+
+    if (deleteErr) {
+      setError(deleteErr.message);
+      return;
+    }
+
+    setInvoices((prev) => prev.filter((inv) => inv.id !== id));
+  }
+
   async function handleAddInvoice() {
     if (!form.invoice_number.trim() || !form.client_id || !form.amount) return;
 
@@ -464,7 +480,7 @@ export default function InvoicesPage() {
                   <span className="font-mono text-xs text-neo-black/60">
                     {formatDate(invoice.due_date)}
                   </span>
-                  <div>
+                  <div className="flex items-center gap-2">
                     <select
                       value={invoice.status}
                       onChange={(e) =>
@@ -473,7 +489,7 @@ export default function InvoicesPage() {
                           e.target.value as InvoiceStatus,
                         )
                       }
-                      className="w-full border-2 border-neo-black bg-neo-white px-2 py-1 font-mono text-xs focus:outline-none focus:shadow-hard-sm"
+                      className="flex-1 border-2 border-neo-black bg-neo-white px-2 py-1 font-mono text-xs focus:outline-none focus:shadow-hard-sm"
                     >
                       {STATUS_OPTIONS.map((s) => (
                         <option key={s} value={s}>
@@ -481,6 +497,13 @@ export default function InvoicesPage() {
                         </option>
                       ))}
                     </select>
+                    <button
+                      onClick={() => handleDeleteInvoice(invoice.id, invoice.invoice_number)}
+                      className="border-2 border-neo-black bg-neo-red/10 hover:bg-neo-red hover:text-neo-white px-2 py-1 font-mono text-xs font-bold transition-colors"
+                      title={t("common.delete", "Delete")}
+                    >
+                      ✕
+                    </button>
                   </div>
                 </motion.div>
               ))

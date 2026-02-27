@@ -1,4 +1,5 @@
 import { supabase } from "@/lib/supabase";
+import { logger } from "@/lib/logger";
 
 /** A single form submission record. */
 export interface FormSubmission {
@@ -33,7 +34,7 @@ export async function getFormSubmissions(
     .range(offset, offset + limit - 1);
 
   if (error) {
-    console.error("getFormSubmissions error:", error);
+    logger.error("form-submissions", "getFormSubmissions error:", error);
     return { data: [], count: 0 };
   }
 
@@ -82,7 +83,7 @@ export async function deleteFormSubmission(id: string): Promise<boolean> {
     .eq("id", id);
 
   if (error) {
-    console.error("deleteFormSubmission error:", error);
+    logger.error("form-submissions", "deleteFormSubmission error:", error);
     return false;
   }
   return true;
@@ -102,7 +103,7 @@ export async function getFormCountsForSites(
     .in("site_id", siteIds);
 
   if (error) {
-    console.error("getFormCountsForSites error:", error);
+    logger.error("form-submissions", "getFormCountsForSites error:", error);
     return {};
   }
 

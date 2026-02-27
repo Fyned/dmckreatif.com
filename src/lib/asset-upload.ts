@@ -1,4 +1,5 @@
 import { supabase } from "@/lib/supabase";
+import { logger } from "@/lib/logger";
 
 /** Storage bucket name for user-uploaded assets. */
 const ASSETS_BUCKET = "site-assets";
@@ -98,7 +99,7 @@ export async function uploadAsset(
     });
 
   if (error) {
-    console.error("[asset-upload] upload error:", error.message);
+    logger.error("asset-upload", "upload error:", error.message);
     throw new Error(`Upload failed: ${error.message}`);
   }
 
@@ -130,7 +131,7 @@ export async function uploadMultipleAssets(
     if (result.status === "fulfilled") {
       uploaded.push(result.value);
     } else {
-      console.warn("[asset-upload] file failed:", result.reason);
+      logger.warn("asset-upload", "file failed:", result.reason);
     }
   }
   return uploaded;
@@ -154,7 +155,7 @@ export async function listProjectAssets(
     });
 
   if (error) {
-    console.error("[asset-upload] list error:", error.message);
+    logger.error("asset-upload", "list error:", error.message);
     return [];
   }
 
@@ -178,7 +179,7 @@ export async function deleteAsset(path: string): Promise<boolean> {
     .remove([path]);
 
   if (error) {
-    console.error("[asset-upload] delete error:", error.message);
+    logger.error("asset-upload", "delete error:", error.message);
     return false;
   }
   return true;

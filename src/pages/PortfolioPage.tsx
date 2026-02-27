@@ -60,6 +60,22 @@ export default function PortfolioPage() {
             subtitle={t("portfolio.tag", "PORTFOLIO")}
           />
 
+          {/* SEO intro paragraph */}
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+            className="mb-12 max-w-3xl"
+          >
+            <h2 className="font-space font-bold text-xl lg:text-2xl text-neo-black mb-4">
+              {t("portfolio.introHeading", "Web Development Portfolio")}
+            </h2>
+            <p className="font-mono text-sm lg:text-base text-neo-black/70 leading-relaxed">
+              {t("portfolio.introText", "We have designed and developed websites for businesses across France, Belgium, the United Kingdom, the Netherlands, and Germany.")}
+            </p>
+          </motion.div>
+
           <ProjectFilters
             activeCategory={activeCategory}
             activeCountry={activeCountry}

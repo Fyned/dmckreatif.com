@@ -38,7 +38,7 @@ import NeoBadge from "@/components/ui/NeoBadge";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import PromoBanner from "@/components/ui/PromoBanner";
 import JsonLd from "@/components/seo/JsonLd";
-import { buildOfferSchema, buildFaqSchema } from "@/lib/seo-schemas";
+import { buildOfferSchema } from "@/lib/seo-schemas";
 import { pricingTiers, addOns, carePlanTiers, seoPlans } from "@/lib/pricing-data";
 import { templateTiers } from "@/lib/template-data";
 import {
@@ -174,14 +174,6 @@ export default function PricingPage() {
             deliveryDays: "21-30",
           },
         ])}
-      />
-      <JsonLd
-        data={buildFaqSchema(
-          faqItems.map((faq) => ({
-            question: t(faq.questionKey),
-            answer: t(faq.answerKey),
-          }))
-        )}
       />
 
       <Breadcrumbs items={[{ label: t("nav.pricing", "PRICING") }]} />

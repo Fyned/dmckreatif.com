@@ -41,6 +41,22 @@ export default function BlogPage() {
             subtitle={t("blog.subtitle", "INSIGHTS & ARTICLES")}
           />
 
+          {/* SEO intro paragraph */}
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+            className="mb-12 max-w-3xl"
+          >
+            <h2 className="font-space font-bold text-xl lg:text-2xl text-neo-black mb-4">
+              {t("blog.introHeading", "Web Development Insights for European Businesses")}
+            </h2>
+            <p className="font-mono text-sm lg:text-base text-neo-black/70 leading-relaxed">
+              {t("blog.introText", "Practical articles about web development, SEO, and digital marketing written specifically for European small and medium businesses.")}
+            </p>
+          </motion.div>
+
           <motion.div
             variants={staggerContainer}
             initial="hidden"

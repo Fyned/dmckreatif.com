@@ -5,6 +5,10 @@ interface BreadcrumbItem {
   path: string;
 }
 
+/**
+ * Organization schema for the homepage.
+ * Includes logo, sameAs, and proper knowsAbout instead of invalid serviceType.
+ */
 export function buildOrganizationSchema() {
   return {
     "@context": "https://schema.org",
@@ -12,8 +16,15 @@ export function buildOrganizationSchema() {
     name: "DMC Kreatif",
     alternateName: "GMG Design",
     url: BASE_URL,
+    logo: `${BASE_URL}/logo.svg`,
     email: "hello@dmckreatif.com",
-    founder: { "@type": "Person", name: "Musa Kerem Demirci" },
+    founder: {
+      "@type": "Person",
+      name: "Musa Kerem Demirci",
+      jobTitle: "Founder & Lead Developer",
+      url: "https://www.linkedin.com/in/musakeremdemirci",
+    },
+    foundingDate: "2023-01-01",
     areaServed: [
       { "@type": "Country", name: "France" },
       { "@type": "Country", name: "Belgium" },
@@ -22,39 +33,72 @@ export function buildOrganizationSchema() {
       { "@type": "Country", name: "Germany" },
       { "@type": "Country", name: "Switzerland" },
     ],
-    serviceType: [
+    knowsAbout: [
       "Web Development",
       "E-Commerce Development",
       "SEO Optimization",
       "Digital Marketing",
+      "React",
+      "Next.js",
+      "TypeScript",
+    ],
+    knowsLanguage: ["en", "fr", "nl", "de"],
+    sameAs: [
+      "https://www.linkedin.com/company/dmckreatif",
     ],
   };
 }
 
+/**
+ * WebSite schema for the homepage.
+ * Includes publisher reference.
+ */
 export function buildWebSiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "DMC Kreatif",
+    alternateName: "DMC Kreatif Web Agency",
     url: BASE_URL,
     inLanguage: ["en", "fr", "nl", "de"],
+    publisher: {
+      "@type": "Organization",
+      name: "DMC Kreatif",
+      url: BASE_URL,
+      logo: `${BASE_URL}/logo.svg`,
+    },
   };
 }
 
-export function buildLocalBusinessSchema() {
-  return {
+/**
+ * ProfessionalService schema (LocalBusiness subtype) with aggregateRating
+ * and reviews embedded. Used on the contact page and optionally homepage.
+ *
+ * Merges what was previously separate Organization, AggregateRating, and
+ * Review schemas into one coherent entity to avoid duplicate entities
+ * and to make AggregateRating eligible for rich results.
+ */
+export function buildProfessionalServiceSchema(reviews?: Array<{
+  author: string;
+  rating: number;
+  body: string;
+  company: string;
+  datePublished: string;
+}>) {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": `${BASE_URL}/#organization`,
     name: "DMC Kreatif",
     alternateName: "DMC Kreatif Web Agency",
     url: BASE_URL,
-    logo: `${BASE_URL}/logo.png`,
-    image: `${BASE_URL}/og-image.jpg`,
+    logo: `${BASE_URL}/logo.svg`,
+    image: `${BASE_URL}/og-image.png`,
     email: "hello@dmckreatif.com",
-    telephone: "+90-551-106-0846",
-    priceRange: "\u20AC\u20AC",
-    description: "Premium web development agency serving European businesses. Custom websites, e-commerce, SEO and digital marketing.",
-    foundingDate: "2023",
+    priceRange: "€€",
+    description:
+      "Premium web development agency serving European businesses. Custom websites, e-commerce, SEO and digital marketing.",
+    foundingDate: "2023-01-01",
     founder: {
       "@type": "Person",
       name: "Musa Kerem Demirci",
@@ -62,17 +106,24 @@ export function buildLocalBusinessSchema() {
     address: {
       "@type": "PostalAddress",
       addressCountry: "FR",
-      addressRegion: "Europe",
+      addressLocality: "Paris",
+      addressRegion: "Ile-de-France",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "48.8566",
-      longitude: "2.3522",
+      latitude: 48.8566,
+      longitude: 2.3522,
     },
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+        ],
         opens: "09:00",
         closes: "18:00",
       },
@@ -85,36 +136,89 @@ export function buildLocalBusinessSchema() {
       { "@type": "Country", name: "Germany" },
       { "@type": "Country", name: "Switzerland" },
     ],
-    serviceType: [
-      "Web Development",
-      "E-Commerce Development",
-      "SEO Optimization",
-      "Digital Marketing",
-    ],
     knowsLanguage: ["en", "fr", "nl", "de"],
     paymentAccepted: "Bank Transfer, Credit Card",
     sameAs: [
       "https://www.linkedin.com/company/dmckreatif",
     ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: 4.9,
+      bestRating: 5,
+      worstRating: 1,
+      ratingCount: 6,
+      reviewCount: 6,
+    },
   };
+
+  if (reviews && reviews.length > 0) {
+    schema.review = reviews.map((review) => ({
+      "@type": "Review",
+      author: {
+        "@type": "Person",
+        name: review.author,
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: review.rating,
+        bestRating: 5,
+      },
+      reviewBody: review.body,
+      datePublished: review.datePublished,
+      publisher: {
+        "@type": "Organization",
+        name: "DMC Kreatif",
+      },
+    }));
+  }
+
+  return schema;
 }
 
+/**
+ * @deprecated Use buildProfessionalServiceSchema instead.
+ * Kept for backward compatibility during migration.
+ */
+export function buildLocalBusinessSchema() {
+  return buildProfessionalServiceSchema();
+}
+
+/**
+ * BreadcrumbList schema.
+ * Now includes the current page (last item) without a URL, per Google guidelines.
+ */
 export function buildBreadcrumbSchema(
   locale: string,
-  items: BreadcrumbItem[]
+  items: BreadcrumbItem[],
+  currentPageName?: string
 ) {
+  const listItems = items.map((item, index) => ({
+    "@type": "ListItem" as const,
+    position: index + 1,
+    name: item.name,
+    item: `${BASE_URL}/${locale}${item.path}`,
+  }));
+
+  // Add the current page as the last item (no URL per Google spec)
+  if (currentPageName) {
+    listItems.push({
+      "@type": "ListItem" as const,
+      position: listItems.length + 1,
+      name: currentPageName,
+      item: undefined as unknown as string,
+    });
+  }
+
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((item, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: item.name,
-      item: `${BASE_URL}/${locale}${item.path}`,
-    })),
+    itemListElement: listItems,
   };
 }
 
+/**
+ * Service schema with proper Country objects in areaServed.
+ */
 export function buildServiceSchema(params: {
   name: string;
   description: string;
@@ -124,113 +228,66 @@ export function buildServiceSchema(params: {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    provider: { "@type": "Organization", name: "DMC Kreatif" },
+    provider: {
+      "@type": "Organization",
+      name: "DMC Kreatif",
+      url: BASE_URL,
+    },
     name: params.name,
     description: params.description,
     offers: {
       "@type": "Offer",
       price: params.price,
       priceCurrency: "EUR",
+      availability: "https://schema.org/InStock",
     },
     areaServed: [
-      "France",
-      "Belgium",
-      "United Kingdom",
-      "Netherlands",
-      "Germany",
+      { "@type": "Country", name: "France" },
+      { "@type": "Country", name: "Belgium" },
+      { "@type": "Country", name: "United Kingdom" },
+      { "@type": "Country", name: "Netherlands" },
+      { "@type": "Country", name: "Germany" },
     ],
   };
 }
 
-export function buildBlogPostingSchema(params: {
-  title: string;
-  description: string;
-  datePublished: string;
-  slug: string;
-  locale: string;
-}) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: params.title,
-    description: params.description,
-    datePublished: params.datePublished,
-    author: { "@type": "Person", name: "Musa Kerem Demirci" },
-    publisher: { "@type": "Organization", name: "DMC Kreatif" },
-    mainEntityOfPage: `${BASE_URL}/${params.locale}/blog/${params.slug}`,
-  };
-}
-
-export function buildFaqSchema(
-  faqs: Array<{ question: string; answer: string }>
-) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
-}
-
-export function buildAggregateRatingSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "DMC Kreatif",
-    url: BASE_URL,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      bestRating: "5",
-      worstRating: "1",
-      ratingCount: "6",
-      reviewCount: "6",
+/**
+ * Multiple Service schemas for the services page.
+ * Each service gets its own schema block.
+ */
+export function buildAllServicesSchema(locale: string) {
+  const services = [
+    {
+      name: "Custom Web Development",
+      description:
+        "Custom websites built with React, Next.js, and Vite. Responsive design, SEO optimized, 95+ Lighthouse score.",
+      price: "497",
+      url: `${BASE_URL}/${locale}/services#web-development`,
     },
-  };
-}
+    {
+      name: "E-Commerce Development",
+      description:
+        "Full e-commerce solutions with payment integration, inventory management, multi-currency support, and secure checkout.",
+      price: "2497",
+      url: `${BASE_URL}/${locale}/services#e-commerce`,
+    },
+    {
+      name: "SEO Optimization",
+      description:
+        "Technical SEO audit, keyword research, Google Analytics setup, Search Console configuration, and monthly reports.",
+      price: "297",
+      url: `${BASE_URL}/${locale}/services#seo`,
+    },
+    {
+      name: "Website Maintenance & Care Plan",
+      description:
+        "Hosting, SSL, monthly updates, security monitoring, performance reports, priority support, and uptime guarantee.",
+      price: "97",
+      url: `${BASE_URL}/${locale}/services#maintenance`,
+    },
+  ];
 
-export function buildReviewSchema(reviews: Array<{
-  author: string;
-  rating: number;
-  body: string;
-  company: string;
-  datePublished: string;
-}>) {
-  return reviews.map((review) => ({
-    "@context": "https://schema.org",
-    "@type": "Review",
-    author: { "@type": "Person", name: review.author },
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: String(review.rating),
-      bestRating: "5",
-    },
-    reviewBody: review.body,
-    itemReviewed: {
-      "@type": "Organization",
-      name: "DMC Kreatif",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: review.company,
-    },
-    datePublished: review.datePublished,
-  }));
-}
-
-export function buildOfferSchema(offers: Array<{
-  name: string;
-  description: string;
-  price: number;
-  deliveryDays: string;
-}>) {
-  return {
+  return services.map((service) => ({
     "@context": "https://schema.org",
     "@type": "Service",
     provider: {
@@ -238,8 +295,89 @@ export function buildOfferSchema(offers: Array<{
       name: "DMC Kreatif",
       url: BASE_URL,
     },
+    name: service.name,
+    description: service.description,
+    url: service.url,
+    offers: {
+      "@type": "Offer",
+      price: service.price,
+      priceCurrency: "EUR",
+      availability: "https://schema.org/InStock",
+    },
+    areaServed: [
+      { "@type": "Country", name: "France" },
+      { "@type": "Country", name: "Belgium" },
+      { "@type": "Country", name: "United Kingdom" },
+      { "@type": "Country", name: "Netherlands" },
+      { "@type": "Country", name: "Germany" },
+    ],
+  }));
+}
+
+/**
+ * BlogPosting schema with proper publisher logo.
+ */
+export function buildBlogPostingSchema(params: {
+  title: string;
+  description: string;
+  datePublished: string;
+  dateModified?: string;
+  slug: string;
+  locale: string;
+  image?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: params.title,
+    description: params.description,
+    datePublished: params.datePublished,
+    dateModified: params.dateModified ?? params.datePublished,
+    image: params.image ?? `${BASE_URL}/og-image.png`,
+    author: {
+      "@type": "Person",
+      name: "Musa Kerem Demirci",
+      url: "https://www.linkedin.com/in/musakeremdemirci",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "DMC Kreatif",
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/logo.svg`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${BASE_URL}/${params.locale}/blog/${params.slug}`,
+    },
+  };
+}
+
+/**
+ * Service with OfferCatalog for the pricing page.
+ * Fixed: deliveryLeadTime uses maxValue for ranges.
+ */
+export function buildOfferSchema(
+  offers: Array<{
+    name: string;
+    description: string;
+    price: number;
+    deliveryDays: string;
+  }>
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    provider: {
+      "@type": "Organization",
+      name: "DMC Kreatif",
+      url: BASE_URL,
+      logo: `${BASE_URL}/logo.svg`,
+    },
     name: "Web Development Services",
-    serviceType: "Web Development",
+    description:
+      "Professional web development packages for European businesses, from single-page sites to full e-commerce platforms.",
     areaServed: [
       { "@type": "Country", name: "France" },
       { "@type": "Country", name: "Belgium" },
@@ -250,57 +388,168 @@ export function buildOfferSchema(offers: Array<{
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Web Development Packages",
-      itemListElement: offers.map((offer) => ({
-        "@type": "Offer",
-        name: offer.name,
-        description: offer.description,
-        price: String(offer.price),
-        priceCurrency: "EUR",
-        availability: "https://schema.org/InStock",
-        deliveryLeadTime: {
-          "@type": "QuantitativeValue",
-          value: offer.deliveryDays,
-          unitCode: "DAY",
-        },
-        seller: {
-          "@type": "Organization",
-          name: "DMC Kreatif",
-        },
+      itemListElement: offers.map((offer) => {
+        // Parse delivery days range, use max value
+        const days = offer.deliveryDays.split("-");
+        const maxDays = parseInt(days[days.length - 1], 10);
+        return {
+          "@type": "Offer",
+          name: offer.name,
+          description: offer.description,
+          price: offer.price,
+          priceCurrency: "EUR",
+          availability: "https://schema.org/InStock",
+          deliveryLeadTime: {
+            "@type": "QuantitativeValue",
+            value: maxDays,
+            unitCode: "DAY",
+          },
+          seller: {
+            "@type": "Organization",
+            name: "DMC Kreatif",
+          },
+        };
+      }),
+    },
+  };
+}
+
+/**
+ * WebPage schema for generic pages.
+ */
+export function buildWebPageSchema(params: {
+  name: string;
+  description: string;
+  url: string;
+  locale: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: params.name,
+    description: params.description,
+    url: params.url,
+    inLanguage: params.locale,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "DMC Kreatif",
+      url: BASE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "DMC Kreatif",
+      url: BASE_URL,
+    },
+  };
+}
+
+/**
+ * ContactPage schema for the contact page.
+ */
+export function buildContactPageSchema(locale: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contact DMC Kreatif",
+    description:
+      "Get in touch with DMC Kreatif for premium web development services across Europe.",
+    url: `${BASE_URL}/${locale}/contact`,
+    inLanguage: locale,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "DMC Kreatif",
+      url: BASE_URL,
+    },
+    mainEntity: {
+      "@type": "Organization",
+      name: "DMC Kreatif",
+      email: "hello@dmckreatif.com",
+      url: BASE_URL,
+    },
+  };
+}
+
+/**
+ * CollectionPage schema for the portfolio page.
+ */
+export function buildPortfolioPageSchema(
+  locale: string,
+  projects: Array<{
+    name: string;
+    url: string;
+    description?: string;
+  }>
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Portfolio - DMC Kreatif",
+    description:
+      "Web development portfolio showcasing projects for businesses across France, Belgium, and the UK.",
+    url: `${BASE_URL}/${locale}/portfolio`,
+    inLanguage: locale,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "DMC Kreatif",
+      url: BASE_URL,
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: projects.length,
+      itemListElement: projects.map((project, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: project.name,
+        url: project.url,
+        description: project.description,
       })),
     },
   };
 }
 
-export function buildHowToSchema(steps: Array<{
-  name: string;
-  text: string;
-  position: number;
-}>) {
+/**
+ * CreativeWork schema for individual case studies / portfolio items.
+ */
+export function buildCaseStudySchema(
+  project: {
+    name: string;
+    url: string;
+    year: number;
+    description?: string;
+    image?: string;
+  },
+  locale: string
+) {
   return {
     "@context": "https://schema.org",
-    "@type": "HowTo",
-    name: "How to Get a Professional Website Built by DMC Kreatif",
-    description: "Our streamlined 4-step process takes you from initial concept to a fully launched website.",
-    totalTime: "P14D",
-    estimatedCost: {
-      "@type": "MonetaryAmount",
-      currency: "EUR",
-      value: "497",
+    "@type": "CreativeWork",
+    name: project.name,
+    description: project.description,
+    url: `${BASE_URL}/${locale}/case-studies`,
+    image: project.image,
+    dateCreated: `${project.year}-01-01`,
+    creator: {
+      "@type": "Organization",
+      name: "DMC Kreatif",
+      url: BASE_URL,
     },
-    step: steps.map((step) => ({
-      "@type": "HowToStep",
-      position: step.position,
-      name: step.name,
-      text: step.text,
-    })),
+    about: {
+      "@type": "WebSite",
+      url: project.url,
+    },
   };
 }
 
+/**
+ * SoftwareApplication schema for templates.
+ * Added required screenshot and rating properties.
+ */
 export function buildSoftwareApplicationSchema(params: {
   name: string;
   description: string;
   price: string;
   category: string;
+  screenshot?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -308,7 +557,8 @@ export function buildSoftwareApplicationSchema(params: {
     name: params.name,
     description: params.description,
     applicationCategory: "WebApplication",
-    operatingSystem: "Web",
+    operatingSystem: "All",
+    screenshot: params.screenshot ?? `${BASE_URL}/og-image.png`,
     offers: {
       "@type": "Offer",
       price: params.price,
@@ -320,7 +570,6 @@ export function buildSoftwareApplicationSchema(params: {
       name: "DMC Kreatif",
       url: BASE_URL,
     },
-    softwareVersion: "1.0",
     applicationSubCategory: params.category,
   };
 }

@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import SectionHeader from "@/components/ui/SectionHeader";
-import { buildHowToSchema } from "@/lib/seo-schemas";
 import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
 
 interface StepProps {
@@ -75,32 +74,19 @@ export default function ProcessSection() {
     {
       number: "04",
       title: t("process.step4Title", "Launch & Support"),
-      description: t("process.step4Desc", "After your approval, we deploy the site live. Ongoing support available through our Care Plan (€97/mo)."),
+      description: t("process.step4Desc", "After your approval, we deploy the site live. Ongoing support available through our Care Plan (\u20AC97/mo)."),
       color: "yellow",
       icon: "[!]",
     },
   ];
 
-  const howToSteps = steps.map((step, i) => ({
-    name: step.title,
-    text: step.description,
-    position: i + 1,
-  }));
-
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildHowToSchema(howToSteps)),
-        }}
-      />
-      <section className="py-20 md:py-28 px-6">
-        <div className="max-w-6xl mx-auto">
-          <SectionHeader
-            subtitle={t("process.badge", "HOW WE WORK")}
-            title={t("process.title", "From Idea to Launch in 4 Steps")}
-          />
+    <section className="py-20 md:py-28 px-6">
+      <div className="max-w-6xl mx-auto">
+        <SectionHeader
+          subtitle={t("process.badge", "HOW WE WORK")}
+          title={t("process.title", "From Idea to Launch in 4 Steps")}
+        />
 
         <motion.div
           variants={staggerContainer}
@@ -134,6 +120,5 @@ export default function ProcessSection() {
         </motion.div>
       </div>
     </section>
-    </>
   );
 }

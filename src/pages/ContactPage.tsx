@@ -158,6 +158,22 @@ export default function ContactPage() {
             subtitle={t("contact.subtitle", "CONTACT")}
           />
 
+          {/* SEO intro paragraph */}
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+            className="mb-12 max-w-3xl"
+          >
+            <h2 className="font-space font-bold text-xl lg:text-2xl text-neo-black mb-4">
+              {t("contact.introHeading", "Start a Conversation About Your Project")}
+            </h2>
+            <p className="font-mono text-sm lg:text-base text-neo-black/70 leading-relaxed">
+              {t("contact.introText", "Whether you need a new website, want to redesign an existing one, or are exploring e-commerce options, we are here to help.")}
+            </p>
+          </motion.div>
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {/* Form */}
             <motion.div

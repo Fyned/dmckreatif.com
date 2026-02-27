@@ -7,6 +7,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { supabase } from "@/lib/supabase";
 import type { Project, TemplateOrder } from "@/types/database";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
+import Skeleton from "@/components/ui/Skeleton";
 
 interface DashboardStats {
   activeProjects: number;
@@ -53,21 +54,6 @@ function StatCard({
         </p>
       </div>
     </motion.div>
-  );
-}
-
-function SkeletonCard() {
-  return (
-    <div className="bg-neo-white border-2 border-neo-black shadow-hard overflow-hidden animate-pulse">
-      <div className="h-2 bg-neo-black/10" />
-      <div className="p-6">
-        <div className="flex items-center justify-between mb-3">
-          <div className="w-8 h-8 bg-neo-black/10 rounded" />
-          <div className="w-12 h-10 bg-neo-black/10 rounded" />
-        </div>
-        <div className="w-24 h-3 bg-neo-black/10 rounded" />
-      </div>
-    </div>
   );
 }
 
@@ -202,9 +188,10 @@ export default function DashboardPage() {
           >
             {loading ? (
               <>
-                <SkeletonCard />
-                <SkeletonCard />
-                <SkeletonCard />
+                <Skeleton variant="card" />
+                <Skeleton variant="card" />
+                <Skeleton variant="card" />
+                <Skeleton variant="card" />
               </>
             ) : stats ? (
               <>
@@ -258,13 +245,7 @@ export default function DashboardPage() {
             {loading ? (
               <div className="space-y-4">
                 {[1, 2, 3].map((i) => (
-                  <div
-                    key={i}
-                    className="bg-neo-white border-2 border-neo-black shadow-hard p-5 animate-pulse"
-                  >
-                    <div className="h-4 w-48 bg-neo-black/10 rounded mb-2" />
-                    <div className="h-3 w-24 bg-neo-black/10 rounded" />
-                  </div>
+                  <Skeleton key={i} variant="card" />
                 ))}
               </div>
             ) : recentProjects.length === 0 ? (

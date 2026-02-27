@@ -19,7 +19,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import NeoButton from "@/components/ui/NeoButton";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import JsonLd from "@/components/seo/JsonLd";
-import { buildServiceSchema, buildFaqSchema } from "@/lib/seo-schemas";
+import { buildServiceSchema } from "@/lib/seo-schemas";
 import {
   fadeInUp,
   staggerContainer,
@@ -218,14 +218,6 @@ export default function ServiceDetailPage() {
           price: service.priceFrom,
           locale: currentLocale,
         })}
-      />
-      <JsonLd
-        data={buildFaqSchema(
-          service.faqKeys.map((key) => ({
-            question: t(`serviceDetail.faq.${key}Q`),
-            answer: t(`serviceDetail.faq.${key}A`),
-          }))
-        )}
       />
 
       {/* Hero */}

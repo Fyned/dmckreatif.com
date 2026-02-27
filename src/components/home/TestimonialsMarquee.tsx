@@ -4,10 +4,8 @@ import { Star } from "lucide-react";
 import { testimonials } from "@/lib/testimonials-data";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { fadeInUp, viewportConfig } from "@/lib/animations";
-import {
-  buildAggregateRatingSchema,
-  buildReviewSchema,
-} from "@/lib/seo-schemas";
+import JsonLd from "@/components/seo/JsonLd";
+import { buildProfessionalServiceSchema } from "@/lib/seo-schemas";
 
 const borderColorMap: Record<string, string> = {
   "neo-lime": "border-neo-lime",
@@ -50,19 +48,8 @@ export default function TestimonialsMarquee() {
 
   return (
     <section className="py-section-sm lg:py-section section-alt">
-      {/* Schema.org AggregateRating + Review */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildAggregateRatingSchema()),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildReviewSchema(reviewSchemaData)),
-        }}
-      />
+      {/* ProfessionalService with embedded AggregateRating + Reviews */}
+      <JsonLd data={buildProfessionalServiceSchema(reviewSchemaData)} />
 
       <div className="max-w-container mx-auto px-6 lg:px-10">
         <SectionHeader

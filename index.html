@@ -1,10 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Crawl & Index directives -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
     <!-- Favicons -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -25,21 +30,130 @@
     <!-- Default meta (overridden by react-helmet-async per page) -->
     <title>DMC Kreatif — Premium European Web Agency</title>
     <meta name="description" content="Premium web development agency serving France, Belgium, UK, Netherlands, and Germany. Custom websites, e-commerce, SEO, and digital marketing." />
+    <link rel="canonical" href="https://dmckreatif.com/en" />
+
+    <!-- Open Graph -->
     <meta property="og:title" content="DMC Kreatif — Premium European Web Agency" />
-    <meta property="og:description" content="Premium web development agency serving Europe." />
+    <meta property="og:description" content="Premium web development agency serving France, Belgium, UK, Netherlands, and Germany. Custom websites, e-commerce, SEO, and digital marketing." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dmckreatif.com" />
+    <meta property="og:image" content="https://dmckreatif.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="DMC Kreatif — Premium European Web Agency" />
+    <meta property="og:site_name" content="DMC Kreatif" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:locale:alternate" content="fr" />
+    <meta property="og:locale:alternate" content="nl" />
+    <meta property="og:locale:alternate" content="de" />
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DMC Kreatif — Premium European Web Agency" />
+    <meta name="twitter:description" content="Premium web development agency serving France, Belgium, UK, Netherlands, and Germany." />
+    <meta name="twitter:image" content="https://dmckreatif.com/og-image.png" />
+
+    <!-- Hreflang — static fallback (react-helmet-async overrides per page) -->
+    <link rel="alternate" hreflang="en" href="https://dmckreatif.com/en" />
+    <link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr" />
+    <link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl" />
+    <link rel="alternate" hreflang="de" href="https://dmckreatif.com/de" />
+    <link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en" />
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title="DMC Kreatif Blog" href="/rss.xml" />
 
     <!-- Theme color -->
     <meta name="theme-color" content="#FFFDF5" />
+
+    <!-- Static JSON-LD for crawlers that don't execute JS -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "DMC Kreatif",
+      "alternateName": "GMG Design",
+      "url": "https://dmckreatif.com",
+      "logo": "https://dmckreatif.com/logo.svg",
+      "email": "hello@dmckreatif.com",
+      "foundingDate": "2023-01-01",
+      "founder": {
+        "@type": "Person",
+        "name": "Musa Kerem Demirci",
+        "jobTitle": "Founder & Lead Developer"
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "France" },
+        { "@type": "Country", "name": "Belgium" },
+        { "@type": "Country", "name": "United Kingdom" },
+        { "@type": "Country", "name": "Netherlands" },
+        { "@type": "Country", "name": "Germany" },
+        { "@type": "Country", "name": "Switzerland" }
+      ],
+      "knowsAbout": ["Web Development", "E-Commerce Development", "SEO Optimization", "Digital Marketing"],
+      "knowsLanguage": ["en", "fr", "nl", "de"],
+      "sameAs": ["https://www.linkedin.com/company/dmckreatif"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "DMC Kreatif",
+      "url": "https://dmckreatif.com",
+      "inLanguage": ["en", "fr", "nl", "de"],
+      "publisher": {
+        "@type": "Organization",
+        "name": "DMC Kreatif",
+        "url": "https://dmckreatif.com"
+      }
+    }
+    </script>
   </head>
   <body>
-    <!-- GTM noscript fallback — configured via VITE_GTM_ID env var and src/lib/analytics.ts -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Fallback content for search engines that don't execute JavaScript -->
+    <noscript>
+      <div style="max-width:800px;margin:0 auto;padding:40px 20px;font-family:system-ui,sans-serif;color:#121212">
+        <h1>DMC Kreatif — Premium European Web Agency</h1>
+        <p>Premium web development agency serving businesses across France, Belgium, United Kingdom, Netherlands, Germany, and Switzerland. We build custom websites, e-commerce platforms, and deliver SEO optimization and digital marketing solutions.</p>
+
+        <h2>Our Services</h2>
+        <ul>
+          <li><strong>Custom Web Development</strong> — Responsive websites built with React, Next.js, and modern frameworks. SEO-optimized with 95+ Lighthouse scores.</li>
+          <li><strong>E-Commerce Development</strong> — Full online store solutions with payment integration, inventory management, and multi-currency support.</li>
+          <li><strong>SEO Optimization</strong> — Technical SEO audits, keyword research, Google Analytics setup, and monthly performance reports.</li>
+          <li><strong>Website Maintenance</strong> — Hosting, SSL, security monitoring, performance reports, and priority support.</li>
+        </ul>
+
+        <h2>Why Choose DMC Kreatif?</h2>
+        <ul>
+          <li>95+ Lighthouse performance scores on every project</li>
+          <li>Multilingual websites in English, French, Dutch, and German</li>
+          <li>Serving businesses across 6 European countries</li>
+          <li>Modern tech stack: React, Next.js, TypeScript, Tailwind CSS</li>
+        </ul>
+
+        <h2>Our Packages</h2>
+        <ul>
+          <li><strong>Launch Package</strong> — Starting at &euro;349. Single-page website with responsive design and SEO basics.</li>
+          <li><strong>Growth Package</strong> — Starting at &euro;749. Multi-page website with blog, advanced SEO, and analytics.</li>
+          <li><strong>Scale Package</strong> — Starting at &euro;1,497. Full website with multilingual support and video integration.</li>
+          <li><strong>Commerce Package</strong> — Starting at &euro;2,497. Complete e-commerce solution with payments and inventory.</li>
+        </ul>
+
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:hello@dmckreatif.com">hello@dmckreatif.com</a></p>
+        <p>Visit our website in your language:</p>
+        <ul>
+          <li><a href="/en">English</a></li>
+          <li><a href="/fr">Fran&ccedil;ais</a></li>
+          <li><a href="/nl">Nederlands</a></li>
+          <li><a href="/de">Deutsch</a></li>
+        </ul>
+      </div>
+    </noscript>
   </body>
 </html>

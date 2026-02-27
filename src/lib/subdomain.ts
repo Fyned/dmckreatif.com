@@ -1,4 +1,5 @@
 import { supabase } from "@/lib/supabase";
+import { logger } from "@/lib/logger";
 
 /** Storage bucket name for published HTML sites in Supabase. */
 const PUBLISHED_BUCKET = "published-sites";
@@ -130,7 +131,7 @@ async function uploadPublishedHtml(
     });
 
   if (error) {
-    console.error("[subdomain] uploadPublishedHtml error:", error.message);
+    logger.error("subdomain", "uploadPublishedHtml error:", error.message);
     return false;
   }
   return true;
@@ -147,7 +148,7 @@ async function removePublishedHtml(subdomain: string): Promise<boolean> {
     .remove([filePath]);
 
   if (error) {
-    console.error("[subdomain] removePublishedHtml error:", error.message);
+    logger.error("subdomain", "removePublishedHtml error:", error.message);
     return false;
   }
   return true;
@@ -181,7 +182,7 @@ export async function publishSite(
     .eq("id", siteId);
 
   if (error) {
-    console.error("[subdomain] publishSite DB error:", error.message);
+    logger.error("subdomain", "publishSite DB error:", error.message);
     // Attempt to roll back storage upload
     await removePublishedHtml(subdomain);
     return false;
@@ -219,7 +220,7 @@ export async function unpublishSite(siteId: string): Promise<boolean> {
     .eq("id", siteId);
 
   if (error) {
-    console.error("[subdomain] unpublishSite error:", error.message);
+    logger.error("subdomain", "unpublishSite error:", error.message);
     return false;
   }
   return true;

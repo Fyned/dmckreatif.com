@@ -2,8 +2,6 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionHeader from "@/components/ui/SectionHeader";
-import JsonLd from "@/components/seo/JsonLd";
-import { buildFaqSchema } from "@/lib/seo-schemas";
 import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
 
 interface FaqItemProps {
@@ -80,7 +78,7 @@ export default function FaqSection() {
     },
     {
       question: t("faq.q4", "What is included in the Care Plan?"),
-      answer: t("faq.a4", "The Care Plan (€97/month) includes: premium hosting, SSL certificate, monthly security updates, performance monitoring, 2 hours of content changes, monthly analytics report, priority email support, and 99.9% uptime guarantee."),
+      answer: t("faq.a4", "The Care Plan (\u20AC97/month) includes: premium hosting, SSL certificate, monthly security updates, performance monitoring, 2 hours of content changes, monthly analytics report, priority email support, and 99.9% uptime guarantee."),
     },
     {
       question: t("faq.q5", "Which countries do you serve?"),
@@ -88,7 +86,7 @@ export default function FaqSection() {
     },
     {
       question: t("faq.q6", "Do you offer SEO services?"),
-      answer: t("faq.a6", "Every website we build includes SEO basics: proper meta tags, structured data (Schema.org), fast loading times, mobile optimization, and XML sitemap. For advanced SEO, we offer monthly SEO management starting at €247/month."),
+      answer: t("faq.a6", "Every website we build includes SEO basics: proper meta tags, structured data (Schema.org), fast loading times, mobile optimization, and XML sitemap. For advanced SEO, we offer monthly SEO management starting at \u20AC247/month."),
     },
     {
       question: t("faq.q7", "What happens after the website is delivered?"),
@@ -127,8 +125,7 @@ export default function FaqSection() {
           ))}
         </motion.div>
 
-        {/* FAQ Schema.org JSON-LD */}
-        <JsonLd data={buildFaqSchema(faqs)} />
+        {/* FAQPage schema removed: restricted to government/healthcare sites since August 2023 */}
       </div>
     </section>
   );

@@ -116,6 +116,8 @@
     "proTeamDesc": "Jedes Projekt wird von unserem professionellen Entwicklungsteam mit internationaler Erfahrung in mehr als 8 Ländern maßgefertigt."
   },
   "portfolio": {
+    "introHeading": "Webentwicklungs-Portfolio",
+    "introText": "Wir haben Websites für Unternehmen in Frankreich, Belgien, Großbritannien, den Niederlanden und Deutschland entwickelt. Jedes Projekt wird individuell mit React, Next.js oder Vite erstellt und für Performance, SEO und Conversion optimiert. Von einseitigen Landingpages bis hin zu mehrsprachigen E-Commerce-Plattformen zeigt unser Portfolio echte Ergebnisse für echte europäische Unternehmen. Jede Website, die wir erstellen, erreicht 95+ Punkte bei Google Lighthouse und lädt in unter zwei Sekunden.",
     "sectionTitle": "AUSGEWÄHLTE ARBEITEN",
     "sectionSubtitle": "SYS.PORTFOLIO",
     "viewProject": "PROJEKT ANSEHEN",
@@ -738,6 +740,8 @@
     "milestone6Desc": "Fertige Website-Vorlagen-Plattform eingeführt. Skalierbare Lösungen für europäische KMU ab €39."
   },
   "contact": {
+    "introHeading": "Starten Sie ein Gespräch über Ihr Projekt",
+    "introText": "Ob Sie eine neue Website benötigen, eine bestehende neu gestalten möchten oder E-Commerce-Optionen erkunden — wir sind für Sie da. Füllen Sie das untenstehende Formular aus und wir antworten innerhalb von 24 Stunden mit einem maßgeschneiderten Angebot. Wir arbeiten mit Unternehmen in Frankreich, Belgien, Großbritannien, den Niederlanden und Deutschland — auf Englisch, Französisch, Niederländisch oder Deutsch. Keine Verpflichtung. Erzählen Sie uns einfach von Ihrem Unternehmen und was Sie online erreichen möchten.",
     "sectionTitle": "KONTAKTIEREN SIE UNS",
     "sectionSubtitle": "SYS.KONTAKT",
     "nameLabel": "IHR NAME",
@@ -805,6 +809,8 @@
     "leaveReview": "Bewertung abgeben"
   },
   "blog": {
+    "introHeading": "Webentwicklungs-Einblicke für europäische Unternehmen",
+    "introText": "Praktische Artikel über Webentwicklung, SEO und digitales Marketing, speziell für europäische kleine und mittlere Unternehmen. Jeder Beitrag basiert auf Erfahrungen aus echten Kundenprojekten in Frankreich, Belgien und Großbritannien. Ob Sie sich fragen, wie viel eine Website in Europa kostet, welches Framework Sie wählen sollten oder wie Sie Besucher in Kunden verwandeln — unsere Leitfäden helfen Ihnen, fundierte Entscheidungen für Ihr Unternehmen zu treffen.",
     "sectionTitle": "EINBLICKE",
     "sectionSubtitle": "SYS.BLOG",
     "readMore": "WEITERLESEN",

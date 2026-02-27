@@ -135,6 +135,8 @@
     "proTeamDesc": "Elk project wordt op maat gemaakt door ons professioneel ontwikkelteam met internationale ervaring in meer dan 8 landen."
   },
   "portfolio": {
+    "introHeading": "Webontwikkeling Portfolio",
+    "introText": "Wij hebben websites ontworpen en ontwikkeld voor bedrijven in Frankrijk, België, het Verenigd Koninkrijk, Nederland en Duitsland. Elk project is op maat gebouwd met React, Next.js of Vite en geoptimaliseerd voor prestaties, SEO en conversie. Van landingspagina's tot meertalige e-commerce platforms, ons portfolio toont echte resultaten voor echte Europese bedrijven. Elke website die wij bouwen scoort 95+ op Google Lighthouse en laadt in minder dan twee seconden.",
     "sectionTitle": "GESELECTEERD WERK",
     "sectionSubtitle": "SYS.PORTFOLIO",
     "viewProject": "BEKIJK PROJECT",
@@ -745,6 +747,8 @@
     "milestone6Desc": "Kant-en-klare website sjablonenplatform gelanceerd. Schaalbare oplossingen voor Europese MKB-bedrijven vanaf €50."
   },
   "contact": {
+    "introHeading": "Laten we praten over uw project",
+    "introText": "Of u nu een nieuwe website nodig heeft, een bestaande wilt vernieuwen of e-commerce opties verkent, wij helpen u graag. Vul het onderstaande formulier in en wij reageren binnen 24 uur met een op maat gemaakt voorstel. Wij werken met bedrijven in Frankrijk, België, het Verenigd Koninkrijk, Nederland en Duitsland — in het Engels, Frans, Nederlands of Duits. Vrijblijvend. Vertel ons over uw bedrijf en wat u online wilt bereiken.",
     "sectionTitle": "NEEM CONTACT OP",
     "sectionSubtitle": "SYS.CONTACT",
     "nameLabel": "UW NAAM",
@@ -812,6 +816,8 @@
     "leaveReview": "Beoordeling achterlaten"
   },
   "blog": {
+    "introHeading": "Webontwikkelingstips voor Europese bedrijven",
+    "introText": "Praktische artikelen over webontwikkeling, SEO-strategie, e-commerce en digitale marketing — geschreven voor ondernemers in Frankrijk, België, het Verenigd Koninkrijk, Nederland en Duitsland. We delen lessen uit echte klantprojecten, leggen moderne technologieën zoals React en Next.js uit in begrijpelijke taal, en analyseren wat echt verschil maakt voor het MKB online. Of u nu uw eerste website plant of een bestaande opschaalt, deze artikelen helpen u betere beslissingen te nemen.",
     "sectionTitle": "INZICHTEN",
     "sectionSubtitle": "SYS.BLOG",
     "readMore": "LEES MEER",

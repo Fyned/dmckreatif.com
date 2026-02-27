@@ -3,163 +3,443 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LegalEdge — Trusted Law Firm</title>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<meta name="description" content="{{short_description}}">
+<title>{{business_name}} — Trusted Legal Counsel</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#f5f6f8;--surface:#fff;--navy:#1b2a4a;--gold:#c8a951;--gold-light:#dcc274;--dark:#111827;--text:#5b6577;--font-display:'Libre Baskerville',Georgia,serif;--font-body:'Source Sans 3',sans-serif}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --brand-primary:#b8860b;
+  --brand-secondary:#1a2744;
+  --bg:#f8f7f4;
+  --bg-dark:#1a2744;
+  --bg-card:#fff;
+  --surface:#eee9e0;
+  --text:#4a4a4a;
+  --text-light:#7a7a7a;
+  --gold-glow:rgba(184,134,11,.12);
+  --font-display:'EB Garamond',Georgia,serif;
+  --font-body:'Source Sans 3',sans-serif;
+  --radius:8px;
+  --max-w:1200px;
+}
 html{scroll-behavior:smooth}
-body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.7;font-size:16px}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);padding:14px 0}
-nav .inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:#fff}
-.logo span{color:var(--gold)}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(26,39,68,.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav-logo{font-family:var(--font-display);font-size:1.45rem;font-weight:600;color:#fff;letter-spacing:.02em}
+.nav-logo span{color:var(--brand-primary)}
 .nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{font-size:.82rem;font-weight:400;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:var(--gold)}
-.nav-btn{padding:10px 28px;border:1px solid var(--gold);color:var(--gold);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:all .2s}
-.nav-btn:hover{background:var(--gold);color:var(--navy)}
-.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.nav-links a{font-size:.8rem;font-weight:500;color:rgba(255,255,255,.6);letter-spacing:.06em;text-transform:uppercase;transition:color .3s}
+.nav-links a:hover{color:var(--brand-primary)}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;padding:10px 28px;background:var(--brand-primary);color:#fff;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:none;border-radius:4px;cursor:pointer;transition:all .3s}
+.nav-cta:hover{background:#d4a017;transform:translateY(-1px)}
 
-.hero{min-height:100vh;display:flex;align-items:center;background:var(--navy);position:relative;padding:100px 0 80px}
-.hero::before{content:'';position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=80') center/cover;opacity:.08}
-.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.hero-text .tag{display:inline-block;padding:6px 16px;border:1px solid rgba(200,169,81,.3);color:var(--gold);font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;margin-bottom:20px}
-.hero-text h1{font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3.2rem);color:#fff;line-height:1.25;margin-bottom:20px}
-.hero-text p{font-size:1rem;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:32px;max-width:460px}
-.btn-gold{padding:16px 36px;background:var(--gold);color:var(--navy);font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:none;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block}
-.btn-gold:hover{background:var(--gold-light)}
-.hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.h-stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:24px;text-align:center}
-.h-stat .num{font-family:var(--font-display);font-size:2rem;color:var(--gold);font-weight:700}
-.h-stat .label{font-size:.75rem;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+/* HAMBURGER */
+.menu-check{display:none}
+.hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;width:32px;height:32px;cursor:pointer;z-index:1001}
+.hamburger span,.hamburger span::before,.hamburger span::after{display:block;width:22px;height:2px;background:#fff;border-radius:1px;transition:all .3s}
+.hamburger span{position:relative}
+.hamburger span::before,.hamburger span::after{content:'';position:absolute;left:0}
+.hamburger span::before{top:-7px}
+.hamburger span::after{top:7px}
+.menu-check:checked~.hamburger span{background:transparent}
+.menu-check:checked~.hamburger span::before{transform:rotate(45deg);top:0}
+.menu-check:checked~.hamburger span::after{transform:rotate(-45deg);top:0}
 
-.practices{padding:100px 0}
-.sec-header{text-align:center;margin-bottom:56px}
-.sec-header .tag{font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:8px}
-.sec-header h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);color:var(--dark)}
+/* HERO */
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,39,68,.92) 0%,rgba(26,39,68,.75) 60%,rgba(26,39,68,.6) 100%)}
+.hero-content{position:relative;z-index:2;max-width:640px;padding:0 24px}
+.hero-accent{display:block;width:48px;height:3px;background:var(--brand-primary);margin-bottom:24px}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.6rem,5vw,4.2rem);color:#fff;line-height:1.15;margin-bottom:16px;font-weight:500}
+.hero-sub{font-size:1.15rem;font-family:var(--font-display);font-style:italic;color:var(--brand-primary);margin-bottom:16px;font-weight:400}
+.hero p{font-size:1rem;color:rgba(255,255,255,.65);margin-bottom:40px;font-weight:300;line-height:1.8;max-width:500px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn-gold{padding:14px 36px;background:var(--brand-primary);color:#fff;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border:none;border-radius:4px;cursor:pointer;transition:all .3s}
+.btn-gold:hover{background:#d4a017;box-shadow:0 4px 20px rgba(184,134,11,.3)}
+.btn-white{padding:14px 36px;background:transparent;color:#fff;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border:1.5px solid rgba(255,255,255,.3);border-radius:4px;cursor:pointer;transition:all .3s}
+.btn-white:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+
+/* STATS */
+.stats{padding:60px 0;background:#fff;border-bottom:1px solid rgba(184,134,11,.1)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;text-align:center}
+.stat-num{font-family:var(--font-display);font-size:clamp(2.2rem,3vw,3rem);font-weight:600;color:var(--brand-secondary);line-height:1}
+.stat-num span{color:var(--brand-primary)}
+.stat-label{font-size:.78rem;font-weight:500;color:var(--text-light);letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
+
+/* SECTION STYLING */
+.section-header{text-align:center;margin-bottom:56px}
+.section-label{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--brand-primary);margin-bottom:10px;display:block}
+.section-title{font-family:var(--font-display);font-size:clamp(2rem,3vw,2.8rem);color:var(--brand-secondary);font-weight:500}
+.section-subtitle{font-size:.95rem;color:var(--text-light);margin-top:12px;font-weight:300;max-width:540px;margin-left:auto;margin-right:auto}
+
+/* PRACTICE AREAS */
+.practice{padding:120px 0}
 .practice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.p-card{background:var(--surface);padding:32px;border-bottom:3px solid transparent;transition:all .3s}
-.p-card:hover{border-bottom-color:var(--gold);box-shadow:0 16px 48px rgba(0,0,0,.06);transform:translateY(-4px)}
-.p-card h3{font-family:var(--font-display);font-size:1.1rem;color:var(--dark);margin-bottom:12px}
-.p-card p{font-size:.88rem;line-height:1.7}
+.practice-card{background:var(--bg-card);border-radius:var(--radius);padding:40px 32px;border:1px solid rgba(184,134,11,.08);transition:all .3s;position:relative;overflow:hidden}
+.practice-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--brand-primary);transition:height .4s}
+.practice-card:hover::before{height:100%}
+.practice-card:hover{box-shadow:0 8px 32px rgba(26,39,68,.08);transform:translateY(-4px)}
+.practice-icon{font-size:2rem;margin-bottom:20px;display:block}
+.practice-card h3{font-family:var(--font-display);font-size:1.25rem;color:var(--brand-secondary);margin-bottom:12px;font-weight:600}
+.practice-card p{font-size:.88rem;color:var(--text-light);line-height:1.7;font-weight:300}
 
-.attorneys{padding:100px 0;background:var(--surface)}
-.att-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.att-card{text-align:center}
-.att-card img{width:160px;height:160px;border-radius:4px;object-fit:cover;margin:0 auto 16px;filter:grayscale(.3)}
-.att-card h3{font-family:var(--font-display);font-size:1.1rem;color:var(--dark)}
-.att-card .role{font-size:.8rem;color:var(--gold);font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-top:4px}
-.att-card p{font-size:.85rem;margin-top:8px;line-height:1.6}
+/* ATTORNEYS */
+.attorneys{padding:120px 0;background:var(--bg-dark)}
+.attorneys .section-label{color:var(--brand-primary)}
+.attorneys .section-title{color:#fff}
+.attorneys .section-subtitle{color:rgba(255,255,255,.5)}
+.attorney-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.attorney-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);overflow:hidden;transition:all .3s}
+.attorney-card:hover{background:rgba(255,255,255,.08);transform:translateY(-4px)}
+.attorney-img{aspect-ratio:3/4;overflow:hidden}
+.attorney-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(20%);transition:all .5s}
+.attorney-card:hover .attorney-img img{filter:grayscale(0%);transform:scale(1.03)}
+.attorney-info{padding:24px}
+.attorney-info h3{font-family:var(--font-display);font-size:1.2rem;color:#fff;margin-bottom:4px;font-weight:500}
+.attorney-info .title{font-size:.78rem;color:var(--brand-primary);font-weight:500;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px;display:block}
+.attorney-info p{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.6;font-weight:300}
 
-.cta{padding:100px 0;text-align:center}
-.cta-box{background:var(--navy);padding:72px 40px}
-.cta-box h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);color:#fff;margin-bottom:16px}
-.cta-box p{color:rgba(255,255,255,.5);font-size:1rem;margin-bottom:32px}
+/* WHY US */
+.why{padding:120px 0}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.why-card{text-align:center;padding:40px 24px}
+.why-icon{width:64px;height:64px;margin:0 auto 20px;background:var(--gold-glow);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem}
+.why-card h3{font-family:var(--font-display);font-size:1.2rem;color:var(--brand-secondary);margin-bottom:12px;font-weight:600}
+.why-card p{font-size:.88rem;color:var(--text-light);line-height:1.7;font-weight:300}
 
-footer{padding:40px 0;background:var(--dark);text-align:center}
-footer p{font-size:.78rem;color:rgba(255,255,255,.3)}
+/* CONTACT */
+.contact{padding:120px 0;background:var(--bg-dark)}
+.contact .section-label{color:var(--brand-primary)}
+.contact .section-title{color:#fff}
+.contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:start;margin-top:56px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:.72rem;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:14px 16px;border:1px solid rgba(255,255,255,.1);border-radius:4px;font-family:var(--font-body);font-size:.9rem;color:#fff;background:rgba(255,255,255,.04);transition:border-color .3s;outline:none}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--brand-primary)}
+.form-group textarea{height:120px;resize:vertical}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.3)}
+.form-group select{appearance:none;cursor:pointer}
+.form-group select option{background:var(--bg-dark);color:#fff}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.contact-sidebar{color:rgba(255,255,255,.6)}
+.contact-sidebar h3{font-family:var(--font-display);font-size:1.5rem;color:#fff;margin-bottom:24px;font-weight:500}
+.sidebar-item{margin-bottom:28px}
+.sidebar-item h4{font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--brand-primary);margin-bottom:6px}
+.sidebar-item p{font-size:.9rem;line-height:1.7;font-weight:300}
 
+/* FOOTER */
+footer{padding:56px 0 28px;background:#111b30;color:rgba(255,255,255,.4)}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.footer-brand{font-family:var(--font-display);font-size:1.4rem;color:#fff;font-weight:600;margin-bottom:12px}
+.footer-brand span{color:var(--brand-primary)}
+footer .footer-desc{font-size:.85rem;line-height:1.7;margin-bottom:16px}
+.footer-heading{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:16px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links a,.footer-links li{font-size:.85rem;color:rgba(255,255,255,.4);transition:color .3s}
+.footer-links a:hover{color:var(--brand-primary)}
+.social-links{display:flex;gap:10px;margin-top:12px}
+.social-links a{width:34px;height:34px;border:1px solid rgba(255,255,255,.1);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.8rem;transition:all .3s}
+.social-links a:hover{border-color:var(--brand-primary);background:var(--brand-primary);color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:24px;display:flex;justify-content:space-between;font-size:.75rem}
+
+/* RESPONSIVE */
 @media(max-width:768px){
-  .hero-inner{grid-template-columns:1fr}
-  .hero-stats{display:none}
-  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-links{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(26,39,68,.98);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:28px;opacity:0;pointer-events:none;transition:opacity .3s}
+  .menu-check:checked~.nav-links{opacity:1;pointer-events:all}
+  .nav-cta{display:none}
+  .hero h1{font-size:2.2rem}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:24px}
   .practice-grid{grid-template-columns:1fr}
-  .att-grid{grid-template-columns:1fr}
+  .attorney-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:8px;text-align:center}
+  .hero-btns{flex-direction:column;align-items:flex-start}
 }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <div class="inner">
-    <div class="logo">Legal<span>Edge</span></div>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">{{business_name}}</a>
+    <input type="checkbox" id="menu-toggle" class="menu-check">
+    <label for="menu-toggle" class="hamburger"><span></span></label>
     <ul class="nav-links">
-      <li><a href="#practices">Practice Areas</a></li>
+      <li><a href="#practice">Practice Areas</a></li>
       <li><a href="#attorneys">Attorneys</a></li>
+      <li><a href="#why">Why Us</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="#contact" class="nav-btn">Free Consultation</a>
+    <a href="tel:{{phone}}" class="nav-cta">&#9743; {{phone}}</a>
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=80" alt="Law office">
+  </div>
+  <div class="hero-overlay"></div>
   <div class="container">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <span class="tag">Established 2005</span>
-        <h1>Strategic Legal Counsel for Complex Matters</h1>
-        <p>LegalEdge provides expert legal representation across corporate law, litigation, and international trade. Trusted by businesses throughout Europe.</p>
-        <a href="#contact" class="btn-gold">Schedule a Consultation</a>
-      </div>
-      <div class="hero-stats">
-        <div class="h-stat"><div class="num">500+</div><div class="label">Cases Won</div></div>
-        <div class="h-stat"><div class="num">19</div><div class="label">Years Active</div></div>
-        <div class="h-stat"><div class="num">12</div><div class="label">Senior Partners</div></div>
-        <div class="h-stat"><div class="num">6</div><div class="label">Offices in EU</div></div>
+    <div class="hero-content">
+      <span class="hero-accent"></span>
+      <h1>{{business_name}}</h1>
+      <p class="hero-sub">{{slogan}}</p>
+      <p>{{short_description}}</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-gold">Free Consultation</a>
+        <a href="#practice" class="btn-white">Our Practice Areas</a>
       </div>
     </div>
   </div>
 </section>
 
-<section id="practices" class="practices">
+<!-- STATS -->
+<section class="stats">
   <div class="container">
-    <div class="sec-header">
-      <span class="tag">Expertise</span>
-      <h2>Practice Areas</h2>
+    <div class="stats-grid">
+      <div><div class="stat-num">30<span>+</span></div><div class="stat-label">Years of Practice</div></div>
+      <div><div class="stat-num">2,500<span>+</span></div><div class="stat-label">Cases Won</div></div>
+      <div><div class="stat-num">98<span>%</span></div><div class="stat-label">Client Satisfaction</div></div>
+      <div><div class="stat-num">3</div><div class="stat-label">European Offices</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICE AREAS -->
+<section class="practice" id="practice">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Expertise</span>
+      <h2 class="section-title">Practice Areas</h2>
+      <p class="section-subtitle">Comprehensive legal services across multiple jurisdictions, backed by decades of international experience.</p>
     </div>
     <div class="practice-grid">
-      <div class="p-card"><h3>Corporate &amp; Commercial</h3><p>Mergers, acquisitions, joint ventures, corporate governance, and shareholder agreements.</p></div>
-      <div class="p-card"><h3>Litigation &amp; Dispute</h3><p>Commercial disputes, arbitration, mediation, and enforcement of judgments.</p></div>
-      <div class="p-card"><h3>Real Estate Law</h3><p>Property transactions, development agreements, zoning, and landlord-tenant disputes.</p></div>
-      <div class="p-card"><h3>Employment Law</h3><p>Contracts, terminations, workplace disputes, and regulatory compliance.</p></div>
-      <div class="p-card"><h3>Intellectual Property</h3><p>Patents, trademarks, copyrights, licensing, and IP enforcement strategies.</p></div>
-      <div class="p-card"><h3>International Trade</h3><p>Cross-border transactions, trade compliance, customs, and export controls.</p></div>
+      <div class="practice-card">
+        <span class="practice-icon">&#127970;</span>
+        <h3>Corporate Law</h3>
+        <p>Company formation, mergers and acquisitions, corporate governance, and cross-border transactions for businesses of all sizes.</p>
+      </div>
+      <div class="practice-card">
+        <span class="practice-icon">&#128106;</span>
+        <h3>Family Law</h3>
+        <p>Divorce proceedings, child custody, prenuptial agreements, and international family disputes handled with discretion.</p>
+      </div>
+      <div class="practice-card">
+        <span class="practice-icon">&#127968;</span>
+        <h3>Real Estate</h3>
+        <p>Property transactions, commercial leases, land disputes, and planning permission across European jurisdictions.</p>
+      </div>
+      <div class="practice-card">
+        <span class="practice-icon">&#128188;</span>
+        <h3>Employment Law</h3>
+        <p>Employment contracts, workplace disputes, redundancy guidance, and regulatory compliance for employers and employees.</p>
+      </div>
+      <div class="practice-card">
+        <span class="practice-icon">&#9878;</span>
+        <h3>Litigation</h3>
+        <p>Civil and commercial litigation, dispute resolution, arbitration, and mediation services to protect your interests.</p>
+      </div>
+      <div class="practice-card">
+        <span class="practice-icon">&#127758;</span>
+        <h3>Immigration</h3>
+        <p>Work permits, visa applications, citizenship pathways, and EU settlement assistance for individuals and businesses.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="attorneys" class="attorneys">
+<!-- ATTORNEYS -->
+<section class="attorneys" id="attorneys">
   <div class="container">
-    <div class="sec-header">
-      <span class="tag">Our Team</span>
-      <h2>Senior Partners</h2>
+    <div class="section-header">
+      <span class="section-label">Our Team</span>
+      <h2 class="section-title">Meet Our Attorneys</h2>
+      <p class="section-subtitle">Experienced professionals committed to achieving the best outcomes for our clients.</p>
     </div>
-    <div class="att-grid">
-      <div class="att-card">
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Partner">
-        <h3>Hendrik Van Dijk</h3>
-        <div class="role">Managing Partner</div>
-        <p>20+ years in corporate law, former advisor to the European Commission.</p>
+    <div class="attorney-grid">
+      <div class="attorney-card">
+        <div class="attorney-img"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Senior Partner"></div>
+        <div class="attorney-info">
+          <h3>Marcus van den Berg</h3>
+          <span class="title">Senior Partner &mdash; Corporate Law</span>
+          <p>25 years of expertise in international corporate transactions, M&amp;A, and European business regulation.</p>
+        </div>
       </div>
-      <div class="att-card">
-        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=300&q=80" alt="Partner">
-        <h3>Claire Fontaine</h3>
-        <div class="role">Litigation Lead</div>
-        <p>Specialist in complex commercial disputes and international arbitration.</p>
+      <div class="attorney-card">
+        <div class="attorney-img"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Partner"></div>
+        <div class="attorney-info">
+          <h3>Claire Fontaine</h3>
+          <span class="title">Partner &mdash; Family Law</span>
+          <p>Specialist in cross-border family disputes, custody matters, and high-net-worth divorce proceedings.</p>
+        </div>
       </div>
-      <div class="att-card">
-        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80" alt="Partner">
-        <h3>Marcus Brandt</h3>
-        <div class="role">IP &amp; Trade</div>
-        <p>Former patent attorney with deep expertise in technology and life sciences.</p>
+      <div class="attorney-card">
+        <div class="attorney-img"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Associate"></div>
+        <div class="attorney-info">
+          <h3>James Whitworth</h3>
+          <span class="title">Senior Associate &mdash; Litigation</span>
+          <p>Award-winning litigator with a track record of successful outcomes in complex commercial disputes.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="contact" class="cta">
+<!-- WHY US -->
+<section class="why" id="why">
   <div class="container">
-    <div class="cta-box">
-      <h2>Protect What Matters Most</h2>
-      <p>Get a free 30-minute consultation with one of our senior partners.</p>
-      <a href="mailto:contact@legaledge.eu" class="btn-gold">contact@legaledge.eu</a>
+    <div class="section-header">
+      <span class="section-label">Our Advantage</span>
+      <h2 class="section-title">Why Choose {{business_name}}</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">&#128161;</div>
+        <h3>Strategic Thinking</h3>
+        <p>We develop tailored legal strategies that align with your goals, anticipating challenges before they arise.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">&#127760;</div>
+        <h3>International Reach</h3>
+        <p>With offices across Europe and a network of global partners, we handle cross-border matters seamlessly.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">&#129309;</div>
+        <h3>Personal Attention</h3>
+        <p>Every client receives dedicated counsel from senior attorneys who are personally invested in your outcome.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<footer><div class="container"><p>&copy; 2024 LegalEdge Law Firm. Brussels &middot; Paris &middot; Amsterdam &middot; London</p></div></footer>
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Get Started</span>
+      <h2 class="section-title">Schedule a Consultation</h2>
+    </div>
+    <div class="contact-grid">
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="c-name">Full Name</label>
+            <input type="text" id="c-name" placeholder="Your full name">
+          </div>
+          <div class="form-group">
+            <label for="c-email">Email Address</label>
+            <input type="email" id="c-email" placeholder="your@email.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="c-phone">Phone Number</label>
+            <input type="tel" id="c-phone" placeholder="Phone number">
+          </div>
+          <div class="form-group">
+            <label for="c-area">Practice Area</label>
+            <select id="c-area">
+              <option value="">Select a practice area</option>
+              <option>Corporate Law</option>
+              <option>Family Law</option>
+              <option>Real Estate</option>
+              <option>Employment</option>
+              <option>Litigation</option>
+              <option>Immigration</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="c-msg">Brief Description of Your Matter</label>
+          <textarea id="c-msg" placeholder="Please provide a brief overview of your legal needs..."></textarea>
+        </div>
+        <button type="submit" class="btn-gold" style="width:100%;border:none;padding:16px">Request Consultation</button>
+      </form>
+      <div class="contact-sidebar">
+        <h3>Contact Information</h3>
+        <div class="sidebar-item">
+          <h4>&#128205; Office Address</h4>
+          <p>{{address}}</p>
+        </div>
+        <div class="sidebar-item">
+          <h4>&#128222; Telephone</h4>
+          <p>{{phone}}</p>
+        </div>
+        <div class="sidebar-item">
+          <h4>&#9993; Email</h4>
+          <p>{{email}}</p>
+        </div>
+        <div class="sidebar-item">
+          <h4>&#128340; Office Hours</h4>
+          <p>{{hours}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">{{business_name}}</div>
+        <p class="footer-desc">Established legal practice providing expert counsel across multiple jurisdictions. Trusted by individuals and businesses throughout Europe.</p>
+        <div class="social-links">
+          <a href="#">Li</a>
+          <a href="#">Tw</a>
+          <a href="#">Fb</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Practice Areas</div>
+        <ul class="footer-links">
+          <li><a href="#practice">Corporate</a></li>
+          <li><a href="#practice">Family Law</a></li>
+          <li><a href="#practice">Real Estate</a></li>
+          <li><a href="#practice">Employment</a></li>
+          <li><a href="#practice">Litigation</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#attorneys">Our Team</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <ul class="footer-links">
+          <li>{{address}}</li>
+          <li>{{phone}}</li>
+          <li>{{email}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 {{business_name}}. All rights reserved.</span>
+      <span>Website by DMC Kreatif</span>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

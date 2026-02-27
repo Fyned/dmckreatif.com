@@ -17,7 +17,7 @@ export default function SeoHead({
   title,
   description,
   path = "",
-  ogImage = "/og-default.png",
+  ogImage = "/og-image.png",
   ogType = "website",
   noIndex = false,
 }: SeoHeadProps) {

@@ -1,4 +1,5 @@
 import { supabase } from "@/lib/supabase";
+import { logger } from "@/lib/logger";
 import type { BusinessInfo } from "@/lib/template-placeholders";
 import type { Editor } from "grapesjs";
 import { getProjectJson, exportFullHtml } from "@/lib/grapesjs-utils";
@@ -50,7 +51,7 @@ export async function createSite(
     .single();
 
   if (error) {
-    console.error("[user-sites] createSite error:", error.message);
+    logger.error("user-sites", "createSite error:", error.message);
     return null;
   }
   return data as unknown as UserSite;
@@ -86,7 +87,7 @@ export async function saveSite(
     .eq("id", siteId);
 
   if (error) {
-    console.error("[user-sites] saveSite error:", error.message);
+    logger.error("user-sites", "saveSite error:", error.message);
     return false;
   }
   return true;
@@ -124,7 +125,7 @@ export async function deleteSite(siteId: string): Promise<boolean> {
     .eq("id", siteId);
 
   if (error) {
-    console.error("[user-sites] deleteSite error:", error.message);
+    logger.error("user-sites", "deleteSite error:", error.message);
     return false;
   }
   return true;
@@ -163,7 +164,7 @@ export async function savePublishedHtml(
     .eq("id", siteId);
 
   if (error) {
-    console.error("[user-sites] savePublishedHtml error:", error.message);
+    logger.error("user-sites", "savePublishedHtml error:", error.message);
     return false;
   }
   return true;
@@ -199,7 +200,7 @@ export async function duplicateSite(
     .single();
 
   if (error) {
-    console.error("[user-sites] duplicateSite error:", error.message);
+    logger.error("user-sites", "duplicateSite error:", error.message);
     return null;
   }
   return data as unknown as UserSite;
@@ -221,7 +222,7 @@ export async function updateSeoSettings(
     .eq("id", siteId);
 
   if (error) {
-    console.error("[user-sites] updateSeoSettings error:", error.message);
+    logger.error("user-sites", "updateSeoSettings error:", error.message);
     return false;
   }
   return true;

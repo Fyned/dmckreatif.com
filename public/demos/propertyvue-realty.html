@@ -3,32 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PropertyVue — Premium Real Estate</title>
+<meta name="description" content="{{short_description}}">
+<title>{{business_name}} — Premium Real Estate</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#fafaf8;--surface:#fff;--emerald:#1a6b4a;--emerald-light:#2d8f64;--gold:#c9a84c;--dark:#1a1a1a;--text:#6b7280;--font-display:'Playfair Display',Georgia,serif;--font-body:'Inter',sans-serif}
+:root{--bg:#fafaf8;--surface:#fff;--emerald:#1a6b4a;--emerald-light:#2d8f64;--gold:#c9a84c;--dark:#1a1a1a;--text:#6b7280;--font-display:'Playfair Display',Georgia,serif;--font-body:'Inter',sans-serif;--brand-primary:#1a6b4a;--brand-secondary:#c9a84c}
 html{scroll-behavior:smooth}
 body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,248,.92);backdrop-filter:blur(16px);padding:14px 0;border-bottom:1px solid rgba(0,0,0,.04)}
 nav .inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
 .logo{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--dark)}
-.logo span{color:var(--emerald)}
+.logo span{color:var(--brand-primary)}
 .nav-links{display:flex;gap:28px;list-style:none}
 .nav-links a{font-size:.82rem;font-weight:500;color:var(--text);text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:var(--emerald)}
-.nav-btn{padding:10px 28px;background:var(--emerald);color:#fff;font-size:.78rem;font-weight:600;border:none;border-radius:8px;text-decoration:none;transition:all .2s;cursor:pointer}
+.nav-links a:hover{color:var(--brand-primary)}
+.nav-btn{padding:10px 28px;background:var(--brand-primary);color:#fff;font-size:.78rem;font-weight:600;border:none;border-radius:8px;text-decoration:none;transition:all .2s;cursor:pointer}
 .nav-btn:hover{background:var(--emerald-light)}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
 
+/* Hamburger Menu */
+.menu-check{display:none}
+.hamburger{display:none;cursor:pointer;width:28px;height:20px;position:relative;z-index:1001}
+.hamburger span,.hamburger span::before,.hamburger span::after{display:block;width:100%;height:1.5px;background:var(--brand-primary);position:absolute;transition:0.3s}
+.hamburger span{top:50%;transform:translateY(-50%)}
+.hamburger span::before{content:'';top:-8px}
+.hamburger span::after{content:'';top:8px}
+.menu-check:checked ~ .hamburger span{background:transparent}
+.menu-check:checked ~ .hamburger span::before{top:0;transform:rotate(45deg)}
+.menu-check:checked ~ .hamburger span::after{top:0;transform:rotate(-45deg)}
+
 .hero{padding:120px 0 60px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.hero-text .tag{display:inline-block;padding:6px 16px;background:rgba(26,107,74,.08);color:var(--emerald);font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;border-radius:100px;margin-bottom:16px}
+.hero-text .tag{display:inline-block;padding:6px 16px;background:rgba(26,107,74,.08);color:var(--brand-primary);font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;border-radius:100px;margin-bottom:16px}
 .hero-text h1{font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3.4rem);color:var(--dark);line-height:1.15;margin-bottom:16px}
+.hero-text .slogan{font-size:1.05rem;color:var(--brand-primary);font-weight:500;margin-bottom:12px;font-family:var(--font-display)}
 .hero-text p{font-size:1rem;line-height:1.8;margin-bottom:28px;max-width:440px}
 .search-bar{display:flex;gap:8px;max-width:460px}
 .search-bar input{flex:1;padding:14px 18px;border:1px solid rgba(0,0,0,.1);border-radius:10px;font-size:.88rem;font-family:var(--font-body);outline:none}
-.search-bar input:focus{border-color:var(--emerald)}
-.search-bar button{padding:14px 24px;background:var(--emerald);color:#fff;border:none;border-radius:10px;font-weight:600;font-size:.85rem;cursor:pointer;transition:all .2s;white-space:nowrap}
+.search-bar input:focus{border-color:var(--brand-primary)}
+.search-bar button{padding:14px 24px;background:var(--brand-primary);color:#fff;border:none;border-radius:10px;font-weight:600;font-size:.85rem;cursor:pointer;transition:all .2s;white-space:nowrap}
 .search-bar button:hover{background:var(--emerald-light)}
 .hero-img{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .hero-img img{width:100%;border-radius:12px;object-fit:cover;aspect-ratio:3/4}
@@ -36,12 +49,12 @@ nav .inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-item
 
 .stats-bar{padding:40px 0;display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
 .stat{text-align:center}
-.stat .num{font-family:var(--font-display);font-size:2rem;color:var(--emerald);font-weight:700}
+.stat .num{font-family:var(--font-display);font-size:2rem;color:var(--brand-primary);font-weight:700}
 .stat .label{font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;margin-top:2px}
 
 .listings{padding:80px 0}
 .sec-header{text-align:center;margin-bottom:48px}
-.sec-header .tag{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--emerald);display:block;margin-bottom:8px}
+.sec-header .tag{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--brand-primary);display:block;margin-bottom:8px}
 .sec-header h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);color:var(--dark)}
 .listing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .l-card{background:var(--surface);border-radius:16px;overflow:hidden;border:1px solid rgba(0,0,0,.04);transition:all .3s}
@@ -51,12 +64,12 @@ nav .inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-item
 .l-card .info .price{font-family:var(--font-display);font-size:1.3rem;color:var(--dark);font-weight:700;margin-bottom:4px}
 .l-card .info h3{font-size:.95rem;font-weight:500;color:var(--dark);margin-bottom:8px}
 .l-card .info .meta{display:flex;gap:16px;font-size:.78rem;color:var(--text)}
-.l-card .info .badge-new{display:inline-block;padding:3px 10px;background:var(--emerald);color:#fff;font-size:.65rem;font-weight:600;border-radius:4px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.l-card .info .badge-new{display:inline-block;padding:3px 10px;background:var(--brand-primary);color:#fff;font-size:.65rem;font-weight:600;border-radius:4px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
 
 .services{padding:80px 0;background:var(--surface);border-radius:24px;margin:0 24px}
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto;padding:0 24px}
 .svc-card{padding:32px;text-align:center;border:1px solid rgba(0,0,0,.04);border-radius:16px;transition:all .3s}
-.svc-card:hover{border-color:var(--emerald);box-shadow:0 8px 24px rgba(26,107,74,.06)}
+.svc-card:hover{border-color:var(--brand-primary);box-shadow:0 8px 24px rgba(26,107,74,.06)}
 .svc-card .icon{font-size:2rem;margin-bottom:12px}
 .svc-card h3{font-family:var(--font-display);font-size:1.05rem;color:var(--dark);margin-bottom:8px}
 .svc-card p{font-size:.85rem;line-height:1.6}
@@ -65,8 +78,17 @@ nav .inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-item
 .cta-box{background:var(--dark);border-radius:24px;padding:64px 40px;color:#fff}
 .cta-box h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:12px}
 .cta-box p{opacity:.6;margin-bottom:28px}
-.cta-box .btn-gold{padding:14px 32px;background:var(--gold);color:var(--dark);font-weight:700;font-size:.85rem;border:none;border-radius:10px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
+.cta-box .btn-gold{padding:14px 32px;background:var(--brand-secondary);color:var(--dark);font-weight:700;font-size:.85rem;border:none;border-radius:10px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
 .cta-box .btn-gold:hover{transform:translateY(-2px)}
+
+/* Contact Form */
+.contact-section{padding:80px 0}
+.contact-form{max-width:560px;margin:0 auto 32px;display:flex;flex-direction:column;gap:14px}
+.contact-form input,.contact-form textarea{padding:14px 18px;border:1px solid rgba(0,0,0,.1);border-radius:10px;font-size:.88rem;font-family:var(--font-body);outline:none;background:var(--surface);transition:border-color .2s}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--brand-primary)}
+.contact-form button{padding:14px 32px;background:var(--brand-primary);color:#fff;font-family:var(--font-display);font-size:.85rem;font-weight:600;border:none;border-radius:10px;cursor:pointer;transition:all .2s}
+.contact-form button:hover{background:var(--emerald-light);transform:translateY(-2px)}
+.contact-info-block{text-align:center;font-size:.88rem;line-height:1.8}
 
 footer{padding:40px 0;text-align:center;border-top:1px solid rgba(0,0,0,.04)}
 footer p{font-size:.78rem}
@@ -76,21 +98,24 @@ footer p{font-size:.78rem}
   .hero-img{display:none}
   .listing-grid{grid-template-columns:1fr}
   .svc-grid{grid-template-columns:1fr}
-  .nav-links{display:none}
+  .hamburger{display:block}
+  .nav-links{position:fixed;top:0;right:-100%;width:280px;height:100vh;flex-direction:column;justify-content:center;align-items:center;gap:28px;transition:right 0.4s ease;background:var(--surface);box-shadow:-4px 0 24px rgba(0,0,0,.08)}
+  .menu-check:checked ~ .nav-links{right:0}
   .stats-bar{gap:24px}
 }
 </style>
 </head>
 <body>
 
-<nav><div class="inner"><div class="logo">Property<span>Vue</span></div><ul class="nav-links"><li><a href="#listings">Listings</a></li><li><a href="#services">Services</a></li><li><a href="#contact">Contact</a></li></ul><a href="#contact" class="nav-btn">Free Valuation</a></div></nav>
+<nav><div class="inner"><div class="logo">{{business_name}}</div><input type="checkbox" id="menu-toggle" class="menu-check"><label for="menu-toggle" class="hamburger"><span></span></label><ul class="nav-links"><li><a href="#listings">Listings</a></li><li><a href="#services">Services</a></li><li><a href="#contact">Contact</a></li></ul><a href="#contact" class="nav-btn">Free Valuation</a></div></nav>
 
 <div class="container">
   <section class="hero">
     <div class="hero-text">
       <span class="tag">Premium Real Estate</span>
       <h1>Find Your Dream Home in Europe</h1>
-      <p>PropertyVue connects discerning buyers with exceptional properties across Belgium, France, and the Netherlands. Expert guidance from search to settlement.</p>
+      <p class="slogan">{{slogan}}</p>
+      <p>{{business_name}} connects discerning buyers with exceptional properties across Belgium, France, and the Netherlands. Expert guidance from search to settlement.</p>
       <div class="search-bar">
         <input type="text" placeholder="City, neighbourhood, or postcode...">
         <button>Search</button>
@@ -139,9 +164,27 @@ footer p{font-size:.78rem}
   </div>
 </section>
 
-<section id="contact" class="cta"><div class="container"><div class="cta-box"><h2>Ready to Make Your Move?</h2><p>Book a free property valuation or speak with one of our agents today.</p><a href="mailto:info@propertyvue.eu" class="btn-gold">info@propertyvue.eu</a></div></div></section>
+<section class="cta"><div class="container"><div class="cta-box"><h2>Ready to Make Your Move?</h2><p>Book a free property valuation or speak with one of our agents today.</p><a href="mailto:{{email}}" class="btn-gold">{{email}}</a></div></div></section>
 
-<footer><div class="container"><p>&copy; 2024 PropertyVue. Brussels &middot; Antwerp &middot; Amsterdam</p></div></footer>
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="sec-header"><span class="tag">Contact</span><h2>Get In Touch</h2></div>
+    <form class="contact-form" onsubmit="return false;">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="tel" placeholder="{{phone}}">
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-info-block">
+      <p>{{address}}</p>
+      <p>{{phone}} &middot; {{email}}</p>
+      <p>{{hours}}</p>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container"><p>&copy; 2024 {{business_name}}. All Rights Reserved.</p></div></footer>
 
 </body>
 </html>

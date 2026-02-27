@@ -1,4 +1,5 @@
 import { supabase } from "@/lib/supabase";
+import { logger } from "@/lib/logger";
 
 /* ── Category seed data ─────────────────────────────── */
 
@@ -498,7 +499,7 @@ export async function seedTemplates(
     const rows = SEED_DATA.map(({ category_slug, ...rest }) => {
       const category_id = categoryMap.get(category_slug);
       if (!category_id) {
-        console.warn(`Category not found: ${category_slug}`);
+        logger.warn("seed-templates", `Category not found: ${category_slug}`);
       }
       return { ...rest, category_id: category_id ?? "" };
     }).filter((r) => r.category_id !== "");
