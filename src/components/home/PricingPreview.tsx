@@ -4,8 +4,6 @@ import { ArrowRight, Zap, Star } from "lucide-react";
 import { pricingTiers } from "@/lib/pricing-data";
 import { templateTiers } from "@/lib/template-data";
 import NeoButton from "@/components/ui/NeoButton";
-import NeoBadge from "@/components/ui/NeoBadge";
-import SectionHeader from "@/components/ui/SectionHeader";
 import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
 
 const bgMap: Record<string, string> = {
