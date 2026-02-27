@@ -105,7 +105,7 @@ export default function TemplateCard({ template }: TemplateCardProps) {
             {t("templates.preview", "Preview")}
           </Link>
           <Link
-            to={`/${locale ?? "en"}/editor/${template.slug}`}
+            to={`/${locale ?? "en"}/template-order/${template.slug}`}
             className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-space font-bold uppercase tracking-wider border-2 border-neo-black bg-neo-lime shadow-hard transition-all duration-150 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-hard-sm active:translate-x-[4px] active:translate-y-[4px] active:shadow-none"
           >
             <Pencil size={14} />

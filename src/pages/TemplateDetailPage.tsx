@@ -274,7 +274,7 @@ export default function TemplateDetailPage() {
                   </Link>
                 )}
                 <Link
-                  to={`/${currentLocale}/editor/${template.slug}`}
+                  to={`/${currentLocale}/template-order/${template.slug}`}
                   className="inline-flex items-center gap-2 px-6 py-3 border-2 border-neo-black bg-neo-lime font-space font-bold text-sm uppercase shadow-hard hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-hard-sm transition-all"
                 >
                   <Pencil size={16} />
