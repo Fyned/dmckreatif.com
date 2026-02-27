@@ -5,6 +5,8 @@ import SeoHead from "@/components/seo/SeoHead";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import StartProjectCTA from "@/components/ui/StartProjectCTA";
 import SectionHeader from "@/components/ui/SectionHeader";
+import JsonLd from "@/components/seo/JsonLd";
+import { buildWebPageSchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
 import { fadeInUp, viewportConfig } from "@/lib/animations";
 
 export default function PrivacyPage() {
@@ -31,6 +33,18 @@ export default function PrivacyPage() {
         description={t("privacy.seoDescription", "Learn how DMC Kreatif collects, uses, and protects your personal data. GDPR compliant privacy policy.")}
         path="/privacy"
       />
+      <JsonLd
+        data={buildWebPageSchema({
+          name: t("privacy.seoTitle", "Privacy Policy — DMC Kreatif"),
+          description: t("privacy.seoDescription", "Learn how DMC Kreatif collects, uses, and protects your personal data. GDPR compliant privacy policy."),
+          url: `https://dmckreatif.com/${l}/privacy`,
+          locale: l,
+        })}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema(l, [{ name: "Home", path: "" }], t("privacy.breadcrumb", "Privacy Policy"))}
+      />
+
       <Breadcrumbs
         items={[
           { label: t("privacy.breadcrumb", "PRIVACY POLICY") },
@@ -87,11 +101,17 @@ export default function PrivacyPage() {
             <Link to={`/${l}/terms`} className="border-2 border-neo-black bg-neo-white px-4 py-2 shadow-hard hover:bg-neo-lime transition-colors">
               {t("nav.terms", "Terms of Service")}
             </Link>
+            <Link to={`/${l}/legal`} className="border-2 border-neo-black bg-neo-white px-4 py-2 shadow-hard hover:bg-neo-lime transition-colors">
+              {t("footer.legal", "Legal Notice")}
+            </Link>
+            <Link to={`/${l}/cookie-policy`} className="border-2 border-neo-black bg-neo-white px-4 py-2 shadow-hard hover:bg-neo-lime transition-colors">
+              {t("footer.cookiePolicy", "Cookie Policy")}
+            </Link>
+            <Link to={`/${l}/refund-policy`} className="border-2 border-neo-black bg-neo-white px-4 py-2 shadow-hard hover:bg-neo-lime transition-colors">
+              {t("footer.refundPolicy", "Refund Policy")}
+            </Link>
             <Link to={`/${l}/contact`} className="border-2 border-neo-black bg-neo-white px-4 py-2 shadow-hard hover:bg-neo-lime transition-colors">
               {t("nav.contact", "Contact Us")}
-            </Link>
-            <Link to={`/${l}/services`} className="border-2 border-neo-black bg-neo-white px-4 py-2 shadow-hard hover:bg-neo-lime transition-colors">
-              {t("nav.services", "Services")}
             </Link>
           </div>
         </div>

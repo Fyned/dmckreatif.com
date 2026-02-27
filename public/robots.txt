@@ -15,8 +15,14 @@ Disallow: /*/site
 Disallow: /*/template-order
 Disallow: /api/
 
-# AI Crawlers — allow indexing for visibility
+# AI Crawlers — allow indexing for GEO visibility
 User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: Google-Extended
@@ -28,5 +34,18 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: CCBot
+User-agent: Applebot
 Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Block training-only crawlers (no search visibility benefit)
+User-agent: CCBot
+Disallow: /

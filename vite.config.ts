@@ -29,7 +29,7 @@ export default defineConfig({
     },
   },
   build: {
-    chunkSizeWarningLimit: 600,
+    chunkSizeWarningLimit: 1200,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -38,6 +38,13 @@ export default defineConfig({
           motion: ["framer-motion"],
           supabase: ["@supabase/supabase-js"],
           ui: ["react-helmet-async", "lucide-react"],
+          forms: ["react-hook-form", "zod"],
+          grapesjs: [
+            "grapesjs",
+            "grapesjs-blocks-basic",
+            "grapesjs-plugin-forms",
+            "grapesjs-preset-webpage",
+          ],
         },
       },
     },

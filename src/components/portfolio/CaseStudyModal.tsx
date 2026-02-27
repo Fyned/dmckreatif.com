@@ -70,6 +70,9 @@ export default function CaseStudyModal({
           onClick={onClose}
         >
           <motion.div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="case-study-title"
             initial={{ scale: 0.95, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.95, opacity: 0, y: 20 }}
@@ -115,12 +118,18 @@ export default function CaseStudyModal({
                       <img
                         src={project.imageDesktop}
                         alt={`${project.name} — Desktop`}
-                        className="hidden md:block w-full h-auto"
+                        width={1200}
+                        height={675}
+                        decoding="async"
+                        className="hidden md:block w-full h-auto aspect-[16/9]"
                       />
                       <img
                         src={project.imageMobile}
                         alt={`${project.name} — Mobile`}
-                        className="block md:hidden w-full h-auto max-h-[60vh] object-cover object-top"
+                        width={390}
+                        height={844}
+                        decoding="async"
+                        className="block md:hidden w-full h-auto max-h-[60vh] object-cover object-top aspect-[9/19]"
                       />
                     </>
                   ) : (
@@ -148,7 +157,7 @@ export default function CaseStudyModal({
                   <NeoBadge color={project.accentColor}>{t(project.sectorKey)}</NeoBadge>
                   <span className="font-mono text-xs text-neo-black/60">{project.year}</span>
                 </div>
-                <h2 className="font-space font-bold text-3xl lg:text-4xl text-neo-black">
+                <h2 id="case-study-title" className="font-space font-bold text-3xl lg:text-4xl text-neo-black">
                   {project.name}
                 </h2>
                 <p className="font-mono text-sm text-neo-black/80 mt-2 leading-relaxed">

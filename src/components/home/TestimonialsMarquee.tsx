@@ -38,12 +38,21 @@ function StarRating({ rating }: { rating: number }) {
 export default function TestimonialsMarquee() {
   const { t } = useTranslation();
 
-  const reviewSchemaData = testimonials.map((item) => ({
+  const reviewDates = [
+    "2023-09-20",
+    "2024-01-15",
+    "2024-04-08",
+    "2024-06-22",
+    "2024-10-05",
+    "2025-02-12",
+  ];
+
+  const reviewSchemaData = testimonials.map((item, i) => ({
     author: t(`testimonials.${item.nameKey}`),
     rating: item.rating,
     body: t(`testimonials.${item.quoteKey}`),
     company: item.company,
-    datePublished: "2024-01-15",
+    datePublished: reviewDates[i] ?? "2024-01-15",
   }));
 
   return (

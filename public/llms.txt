@@ -1,0 +1,82 @@
+# DMC Kreatif — Premium European Web Agency
+> A boutique web development agency founded by Musa Kerem Demirci, serving businesses across France, Belgium, United Kingdom, Netherlands, Germany, and Switzerland. We build high-performance websites and e-commerce platforms using React, Next.js, TypeScript, and Tailwind CSS.
+
+## Key Facts
+- Founded: 2023 by Musa Kerem Demirci
+- Headquarters: Serving Europe remotely (FR, BE, UK, NL, DE, CH)
+- Projects delivered: 33+ international projects across 4 countries
+- Tech stack: React 18, Next.js 14, Vite, TypeScript, Tailwind CSS, Supabase
+- Performance: 95+ Google Lighthouse scores on every project
+- Languages supported: English, French, Dutch, German
+- Delivery record: 100% on-time
+- Starting price: EUR 349 (Launch package)
+- Care Plan: EUR 97/month (hosting, updates, support)
+
+## Services
+- [Custom Web Development](https://dmckreatif.com/en/services): Responsive websites with React/Next.js, SEO-optimized, 95+ Lighthouse scores. From EUR 349.
+- [E-Commerce Development](https://dmckreatif.com/en/services): Full online stores with Stripe/LemonSqueezy payment integration, inventory management, multi-currency support. From EUR 2,497.
+- [SEO Optimization](https://dmckreatif.com/en/services): Technical audits, keyword research, Google Analytics/Search Console setup, Schema.org structured data. From EUR 297.
+- [Website Maintenance](https://dmckreatif.com/en/services): Hosting, SSL, monthly security updates, performance reports, priority support, 99.9% uptime guarantee. EUR 97/month.
+- [Website Templates](https://dmckreatif.com/en/templates): Ready-made professional templates for restaurants, construction, beauty salons. From EUR 39.
+
+## Pricing Packages
+- Launch: EUR 349 — Single-page responsive site, SEO basics, contact form. Delivery 3-5 business days.
+- Growth: EUR 749 — 5-7 pages, blog, advanced SEO, analytics. Delivery 7-10 business days.
+- Scale: EUR 1,497 — Full site, multilingual support, video integration. Delivery 14-18 business days.
+- Commerce: EUR 2,497 — E-commerce platform, payment integration, inventory, multilingual. Delivery 21-28 business days.
+- Care Plan: EUR 97/month — Hosting, updates, support, monthly performance reports.
+
+## Markets Served
+- France (primary market) — 4 completed projects including CAKIR Facades, Altinbas Moustiquaire, Consulting Energy, ISO Home Energy
+- Belgium — Archi Construction & Veranda project, FR + NL language support
+- United Kingdom — Adamsons Accountants project
+- Netherlands — NL language support available
+- Germany — DE language support available
+- Switzerland — FR + DE language support available
+
+## Portfolio Highlights
+- [CAKIR Facades](https://cakirfacades.fr): Facade renovation company website, France — React + Vite + Tailwind CSS
+- [Altinbas Moustiquaire](https://altinbasmoustiquaire.fr): Insect screen manufacturer website, France — React + Vite + Tailwind CSS
+- [Consulting Energy](https://consulting-energy.fr): Energy consulting firm website, France — React + Vite + TypeScript
+- [ISO Home Energy](https://ih-energy.fr): Energy insulation services website, France — React + Vite + TypeScript + Tailwind CSS
+- [Archi Construction & Veranda](https://archi.constructionveranda.com): Construction company website, Belgium — React + Vite + TypeScript + Tailwind CSS
+- [Adamsons Accountants](https://adamsons.uk.com): Accounting firm website, United Kingdom — React + Vite + Tailwind CSS
+
+## Frequently Asked Questions
+
+### How long does it take to build a website?
+The Launch package (single-page site) takes 3-5 business days. The Growth package (5-7 pages) takes 7-10 business days. Scale and Commerce packages take 14-28 business days depending on complexity. DMC Kreatif maintains a 100% on-time delivery record across all projects. Rush delivery is available for urgent projects at an additional fee.
+
+### What technologies does DMC Kreatif use?
+DMC Kreatif uses React 18, Next.js 14, Vite, TypeScript, and Tailwind CSS for frontend development. For backend services, the agency uses Supabase (PostgreSQL, authentication, storage, and edge functions). E-commerce projects integrate Stripe or LemonSqueezy for payment processing. Every website scores 95+ on Google Lighthouse performance tests and is fully responsive across all devices.
+
+### Does DMC Kreatif support multilingual websites?
+Yes. DMC Kreatif builds multilingual websites as standard for European clients. Supported languages include English, French, Dutch, and German. Each language version receives proper SEO optimization with hreflang tags, localized URLs, and native-quality translations. The agency uses i18next for translation management, ensuring consistent content across all language versions.
+
+### How much does a website cost?
+DMC Kreatif offers four main packages: Launch (EUR 349) for single-page sites, Growth (EUR 749) for multi-page sites with blog and SEO, Scale (EUR 1,497) for full multilingual sites, and Commerce (EUR 2,497) for complete e-commerce platforms. An optional Care Plan at EUR 97/month provides ongoing hosting, updates, and support. All prices are competitive for the European market while maintaining premium quality standards.
+
+## Unique Differentiators
+- Every project achieves 95+ Lighthouse scores across Performance, Accessibility, Best Practices, and SEO
+- Multilingual by default — all sites support EN, FR, NL, DE with proper hreflang and i18n
+- European market specialist — understanding of GDPR compliance, EU payment providers, and local business needs
+- Full-stack capability — from frontend design to backend infrastructure, database, and deployment
+- Modern stack only — no WordPress, no page builders, only custom React/Next.js development
+
+## About the Founder
+Musa Kerem Demirci is a full-stack developer and the founder of DMC Kreatif. With expertise in React, Next.js, TypeScript, and modern web technologies, he has personally built 33+ production websites for clients across France, Belgium, and the United Kingdom. He founded DMC Kreatif in 2023 with the mission to deliver premium web solutions that help European businesses establish a strong online presence.
+
+## Contact
+- Email: hello@dmckreatif.com
+- Website: https://dmckreatif.com
+- LinkedIn: https://www.linkedin.com/company/dmckreatif
+
+## Key Pages
+- [Homepage](https://dmckreatif.com/en): Overview of DMC Kreatif services and portfolio
+- [Services](https://dmckreatif.com/en/services): Detailed service descriptions and process
+- [Portfolio](https://dmckreatif.com/en/portfolio): International project showcase
+- [Pricing](https://dmckreatif.com/en/pricing): Package details and pricing calculator
+- [Blog](https://dmckreatif.com/en/blog): Web development insights for European businesses
+- [Templates](https://dmckreatif.com/en/templates): Ready-made website templates
+- [Contact](https://dmckreatif.com/en/contact): Get in touch for a free consultation
+- [About](https://dmckreatif.com/en/about): Agency story, values, and team

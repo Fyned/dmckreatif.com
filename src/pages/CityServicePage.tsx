@@ -149,7 +149,7 @@ function buildCitySchema(city: CityData) {
       latitude: city.lat,
       longitude: city.lng,
     },
-    serviceType: [
+    knowsAbout: [
       "Web Development",
       "E-Commerce Development",
       "SEO Optimization",

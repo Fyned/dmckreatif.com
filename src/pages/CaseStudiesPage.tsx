@@ -8,6 +8,7 @@ import NeoButton from "@/components/ui/NeoButton";
 import NeoBadge from "@/components/ui/NeoBadge";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import JsonLd from "@/components/seo/JsonLd";
+import { buildBreadcrumbSchema } from "@/lib/seo-schemas";
 import { projects } from "@/lib/portfolio-data";
 import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
 
@@ -42,6 +43,10 @@ export default function CaseStudiesPage() {
         title={t("seo.caseStudies.title", "Case Studies — Real Results for European Businesses | DMC Kreatif")}
         description={t("seo.caseStudies.description", "Detailed case studies showing how we helped businesses in France, Belgium, UK achieve 95+ Lighthouse scores and increased online visibility.")}
         path="/case-studies"
+      />
+
+      <JsonLd
+        data={buildBreadcrumbSchema(currentLocale, [{ name: "Home", path: "" }], t("caseStudies.breadcrumb", "Case Studies"))}
       />
 
       <Breadcrumbs items={[{ label: t("caseStudies.breadcrumb", "CASE STUDIES") }]} />

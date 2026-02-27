@@ -17,7 +17,7 @@ import NeoButton from "@/components/ui/NeoButton";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import JsonLd from "@/components/seo/JsonLd";
-import { buildOrganizationSchema } from "@/lib/seo-schemas";
+import { buildOrganizationSchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
 import {
   fadeInUp,
   staggerContainer,
@@ -157,6 +157,9 @@ export default function AboutPage() {
       <Breadcrumbs items={[{ label: t("nav.about", "ABOUT") }]} />
 
       <JsonLd data={buildOrganizationSchema()} />
+      <JsonLd
+        data={buildBreadcrumbSchema(currentLocale, [{ name: "Home", path: "" }], t("nav.about", "About"))}
+      />
 
       {/* Hero Section */}
       <section className="py-20 lg:py-28">
@@ -195,7 +198,7 @@ export default function AboutPage() {
               className="flex flex-wrap border-2 border-neo-black bg-neo-white shadow-hard"
             >
               {[
-                { value: 10, suffix: "+", label: "PROJECTS" },
+                { value: 33, suffix: "+", label: "PROJECTS" },
                 { value: 4, suffix: "", label: "COUNTRIES" },
                 { value: 95, suffix: "+", label: "LIGHTHOUSE" },
                 { value: 100, suffix: "%", label: "ON-TIME" },
@@ -263,9 +266,9 @@ export default function AboutPage() {
                 )}
               </p>
               <div className="bg-neo-lime border-2 border-neo-black shadow-hard p-5">
-                <h4 className="font-space font-bold text-sm mb-2">
+                <h3 className="font-space font-bold text-sm mb-2">
                   {t("about.mission", "OUR MISSION")}
-                </h4>
+                </h3>
                 <p className="font-mono text-xs text-neo-black/80 leading-relaxed">
                   {t(
                     "about.missionText",

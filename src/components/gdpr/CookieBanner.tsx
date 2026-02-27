@@ -84,7 +84,7 @@ export default function CookieBanner() {
                 "We use cookies to improve your experience. Necessary cookies are required for the site to function. Analytics and marketing cookies help us understand traffic and improve our services."
               )}{" "}
               <Link
-                to={`/${locale ?? "en"}/privacy`}
+                to={`/${locale ?? "en"}/cookie-policy`}
                 className="underline underline-offset-2 decoration-neo-lime decoration-2 text-neo-black font-bold hover:text-neo-lime transition-colors"
               >
                 {t("cookies.learnMore", "Learn more")}

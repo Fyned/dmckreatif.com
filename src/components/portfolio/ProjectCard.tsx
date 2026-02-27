@@ -54,6 +54,9 @@ export default function ProjectCard({ project, index, onClick }: ProjectCardProp
             src={project.imageDesktop}
             alt={project.name}
             loading="lazy"
+            width={1200}
+            height={675}
+            decoding="async"
             className="w-full h-auto aspect-[16/9] object-cover object-top group-hover:scale-105 transition-transform duration-500"
           />
         </div>

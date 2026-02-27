@@ -11,6 +11,8 @@ import ProjectCard from "@/components/portfolio/ProjectCard";
 import ProjectFilters from "@/components/portfolio/ProjectFilters";
 import CaseStudyModal from "@/components/portfolio/CaseStudyModal";
 import { projects, type Project } from "@/lib/portfolio-data";
+import JsonLd from "@/components/seo/JsonLd";
+import { buildPortfolioPageSchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
 import { staggerContainer, fadeInUp, viewportConfig } from "@/lib/animations";
 
 export default function PortfolioPage() {
@@ -49,6 +51,20 @@ export default function PortfolioPage() {
         title={t("seo.portfolio.title", "Our Work — Web Development Portfolio | DMC Kreatif")}
         description={t("seo.portfolio.description", "Explore our portfolio of 10+ websites built for businesses across France, Belgium and the UK.")}
         path="/portfolio"
+      />
+
+      <JsonLd
+        data={buildPortfolioPageSchema(
+          currentLocale,
+          projects.map((p) => ({
+            name: p.name,
+            url: p.url,
+            description: t(`portfolio.${p.descriptionKey}`, p.descriptionKey),
+          }))
+        )}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema(currentLocale, [{ name: "Home", path: "" }], t("nav.portfolio", "Portfolio"))}
       />
 
       <Breadcrumbs items={[{ label: t("nav.portfolio", "PORTFOLIO") }]} />

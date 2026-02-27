@@ -4,7 +4,7 @@ import SeoHead from "@/components/seo/SeoHead";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildBlogPostingSchema } from "@/lib/seo-schemas";
 import { motion } from "framer-motion";
-import { ArrowLeft, Clock, ArrowRight } from "lucide-react";
+import { ArrowLeft, Clock, ArrowRight, Code2 } from "lucide-react";
 import NeoBadge from "@/components/ui/NeoBadge";
 import NeoButton from "@/components/ui/NeoButton";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
@@ -34,7 +34,7 @@ export default function BlogPostPage() {
                 "The blog post you are looking for does not exist or has been moved."
               )}
             </p>
-            <NeoButton href="/blog" color="neo-lime">
+            <NeoButton href={`/${locale ?? "en"}/blog`} color="neo-lime">
               <ArrowLeft size={14} />
               {t("blog.backToBlog", "Back to Blog")}
             </NeoButton>
@@ -140,10 +140,32 @@ export default function BlogPostPage() {
               viewport={viewportConfig}
               className="font-mono text-sm text-neo-black leading-relaxed space-y-6 mb-16 [&_h2]:font-space [&_h2]:font-bold [&_h2]:text-xl [&_h2]:text-neo-black [&_h2]:mt-10 [&_h2]:mb-4 [&_h3]:font-space [&_h3]:font-bold [&_h3]:text-lg [&_h3]:text-neo-black [&_h3]:mt-8 [&_h3]:mb-3 [&_strong]:font-bold [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2 [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:space-y-2 [&_a]:text-neo-lime [&_a]:underline [&_a]:underline-offset-2 [&_blockquote]:border-l-4 [&_blockquote]:border-neo-lime [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-neo-black/70"
             >
-              <p className="text-base leading-relaxed">
-                {t(`blog.${post.contentKey}`, post.contentKey)}
-              </p>
+              <div
+                className="blog-content"
+                dangerouslySetInnerHTML={{ __html: t(`blog.${post.contentKey}`, post.contentKey) }}
+              />
             </motion.div>
+
+            {/* Author Bio */}
+            <div className="flex items-start gap-4 border-2 border-neo-black bg-neo-bg p-6 mb-12">
+              <div className="w-14 h-14 bg-neo-lime border-2 border-neo-black flex items-center justify-center flex-shrink-0">
+                <Code2 size={24} strokeWidth={2.5} />
+              </div>
+              <div>
+                <span className="font-space font-bold text-sm block">
+                  {t("blog.authorName", "Musa Kerem Demirci")}
+                </span>
+                <span className="font-mono text-xs text-neo-black/60 block mb-2">
+                  {t("blog.authorRole", "Founder & Lead Developer")}
+                </span>
+                <p className="font-mono text-xs text-neo-black/70 leading-relaxed">
+                  {t("blog.authorBio", "Full-stack developer with expertise in React, Next.js, and modern web technologies.")}
+                </p>
+                <a href="https://www.linkedin.com/in/musakeremdemirci" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 mt-2 font-mono text-xs font-bold text-neo-black hover:text-neo-lime transition-colors">
+                  LinkedIn <ArrowRight size={12} />
+                </a>
+              </div>
+            </div>
 
             {/* CTA section */}
             <motion.div
@@ -162,7 +184,7 @@ export default function BlogPostPage() {
                   "Let's discuss how we can help your business grow with a premium web presence."
                 )}
               </p>
-              <NeoButton href="/contact" color="neo-lime" size="lg">
+              <NeoButton href={`/${locale ?? "en"}/contact`} color="neo-lime" size="lg">
                 {t("blog.ctaButton", "Get in touch")}
                 <ArrowRight size={16} />
               </NeoButton>

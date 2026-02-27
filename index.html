@@ -14,16 +14,20 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
 
+    <!-- DNS prefetch for third-party origins -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+
     <!-- Fonts: Space Grotesk + JetBrains Mono — display=swap for no FOIT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
@@ -109,6 +113,74 @@
       }
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://dmckreatif.com/#organization",
+      "name": "DMC Kreatif",
+      "alternateName": "DMC Kreatif Web Agency",
+      "url": "https://dmckreatif.com",
+      "logo": "https://dmckreatif.com/logo.svg",
+      "image": "https://dmckreatif.com/og-image.png",
+      "email": "hello@dmckreatif.com",
+      "priceRange": "€€",
+      "description": "Premium web development agency serving European businesses. Custom websites, e-commerce, SEO and digital marketing.",
+      "foundingDate": "2023-01-01",
+      "founder": {
+        "@type": "Person",
+        "name": "Musa Kerem Demirci",
+        "jobTitle": "Founder & Lead Developer",
+        "url": "https://www.linkedin.com/in/musakeremdemirci"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "FR",
+        "addressLocality": "Paris",
+        "addressRegion": "Ile-de-France"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.8566,
+        "longitude": 2.3522
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "France" },
+        { "@type": "Country", "name": "Belgium" },
+        { "@type": "Country", "name": "United Kingdom" },
+        { "@type": "Country", "name": "Netherlands" },
+        { "@type": "Country", "name": "Germany" },
+        { "@type": "Country", "name": "Switzerland" }
+      ],
+      "knowsLanguage": ["en", "fr", "nl", "de"],
+      "paymentAccepted": "Bank Transfer, Credit Card",
+      "sameAs": ["https://www.linkedin.com/company/dmckreatif"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.9,
+        "bestRating": 5,
+        "worstRating": 1,
+        "ratingCount": 6,
+        "reviewCount": 6
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Musa Kerem Demirci",
+      "jobTitle": "Founder & Lead Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "DMC Kreatif",
+        "url": "https://dmckreatif.com"
+      },
+      "knowsAbout": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Web Development", "E-Commerce", "SEO"],
+      "knowsLanguage": ["en", "fr", "nl", "de"],
+      "sameAs": ["https://www.linkedin.com/in/musakeremdemirci"]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
@@ -118,34 +190,69 @@
     <noscript>
       <div style="max-width:800px;margin:0 auto;padding:40px 20px;font-family:system-ui,sans-serif;color:#121212">
         <h1>DMC Kreatif — Premium European Web Agency</h1>
-        <p>Premium web development agency serving businesses across France, Belgium, United Kingdom, Netherlands, Germany, and Switzerland. We build custom websites, e-commerce platforms, and deliver SEO optimization and digital marketing solutions.</p>
+
+        <p>DMC Kreatif is a premium web development agency founded by Musa Kerem Demirci, serving European businesses across France, Belgium, the United Kingdom, Netherlands, Germany, and Switzerland. The agency specializes in custom websites built with React and Next.js, e-commerce platforms with secure payment integration, SEO optimization, and ongoing website maintenance. With 10+ international projects delivered across 4 countries and a consistent track record of 95+ Google Lighthouse performance scores, DMC Kreatif offers web development packages starting from &euro;349 for single-page sites up to &euro;2,497 for full e-commerce solutions. All websites include multilingual support in English, French, Dutch, and German, with proper hreflang implementation and localized SEO for each target market.</p>
+
+        <h2>What Does DMC Kreatif Do?</h2>
+        <p>DMC Kreatif builds high-performance websites and e-commerce platforms for small and medium businesses across Western Europe. Every project is handcrafted using React 18, Next.js 14, TypeScript, and Tailwind CSS, delivering fast load times under 2 seconds, mobile-first responsive design, and built-in SEO optimization. The agency serves clients in multiple languages and handles everything from initial design to deployment and ongoing maintenance.</p>
 
         <h2>Our Services</h2>
         <ul>
-          <li><strong>Custom Web Development</strong> — Responsive websites built with React, Next.js, and modern frameworks. SEO-optimized with 95+ Lighthouse scores.</li>
-          <li><strong>E-Commerce Development</strong> — Full online store solutions with payment integration, inventory management, and multi-currency support.</li>
-          <li><strong>SEO Optimization</strong> — Technical SEO audits, keyword research, Google Analytics setup, and monthly performance reports.</li>
-          <li><strong>Website Maintenance</strong> — Hosting, SSL, security monitoring, performance reports, and priority support.</li>
+          <li><strong>Custom Web Development</strong> — Responsive websites built with React, Next.js, and Vite. Every site is SEO-optimized and scores 95+ on Google Lighthouse. Includes contact forms, analytics integration, and 30 days of free support. Starting from &euro;349.</li>
+          <li><strong>E-Commerce Development</strong> — Full online store solutions with Stripe or LemonSqueezy payment integration, inventory management, multi-currency support, order tracking, and secure checkout. Starting from &euro;2,497.</li>
+          <li><strong>SEO Optimization</strong> — Technical SEO audits, keyword research, Google Analytics and Search Console setup, Schema.org structured data, and monthly performance reports. Starting from &euro;297.</li>
+          <li><strong>Website Maintenance (Care Plan)</strong> — Premium hosting, SSL certificates, monthly security updates, performance monitoring, 2 hours of content changes, monthly analytics report, and priority support with 99.9% uptime guarantee. &euro;97/month.</li>
+        </ul>
+
+        <h2>Web Development Packages</h2>
+        <ul>
+          <li><strong>Launch Package — &euro;349</strong> — Single-page responsive website with SEO basics and contact form. Delivered in 3-5 business days.</li>
+          <li><strong>Growth Package — &euro;749</strong> — 5-7 page website with blog, advanced SEO, and analytics integration. Delivered in 7-10 business days.</li>
+          <li><strong>Scale Package — &euro;1,497</strong> — Full website with multilingual support, video integration, and advanced features. Delivered in 14-18 business days.</li>
+          <li><strong>Commerce Package — &euro;2,497</strong> — Complete e-commerce platform with payment integration, inventory management, and multilingual support. Delivered in 21-28 business days.</li>
+          <li><strong>Care Plan — &euro;97/month</strong> — Ongoing hosting, updates, support, and monthly performance reports.</li>
         </ul>
 
         <h2>Why Choose DMC Kreatif?</h2>
         <ul>
           <li>95+ Lighthouse performance scores on every project</li>
+          <li>10+ international projects delivered across France, Belgium, and the UK</li>
           <li>Multilingual websites in English, French, Dutch, and German</li>
           <li>Serving businesses across 6 European countries</li>
-          <li>Modern tech stack: React, Next.js, TypeScript, Tailwind CSS</li>
+          <li>Modern tech stack: React 18, Next.js 14, TypeScript, Tailwind CSS</li>
+          <li>Delivery guarantee with clear timelines for every package</li>
+          <li>100% on-time delivery record</li>
         </ul>
 
-        <h2>Our Packages</h2>
+        <h2>Portfolio Highlights</h2>
         <ul>
-          <li><strong>Launch Package</strong> — Starting at &euro;349. Single-page website with responsive design and SEO basics.</li>
-          <li><strong>Growth Package</strong> — Starting at &euro;749. Multi-page website with blog, advanced SEO, and analytics.</li>
-          <li><strong>Scale Package</strong> — Starting at &euro;1,497. Full website with multilingual support and video integration.</li>
-          <li><strong>Commerce Package</strong> — Starting at &euro;2,497. Complete e-commerce solution with payments and inventory.</li>
+          <li><strong>CAKIR Facades</strong> (cakirfacades.fr) — Facade renovation company, France</li>
+          <li><strong>Altinbas Moustiquaire</strong> (altinbasmoustiquaire.fr) — Insect screen manufacturer, France</li>
+          <li><strong>Consulting Energy</strong> (consulting-energy.fr) — Energy consulting firm, France</li>
+          <li><strong>ISO Home Energy</strong> (ih-energy.fr) — Energy insulation services, France</li>
+          <li><strong>Archi Construction &amp; Veranda</strong> (archi.constructionveranda.com) — Construction and veranda builder, Belgium</li>
+          <li><strong>Adamsons Accountants</strong> (adamsons.uk.com) — Accounting firm, United Kingdom</li>
         </ul>
+
+        <h2>Frequently Asked Questions</h2>
+        <h3>How long does it take to build a website?</h3>
+        <p>The Launch package (single page) takes 3-5 business days. The Growth package (5-7 pages) takes 7-10 days. Scale and Commerce packages take 14-28 days depending on complexity.</p>
+
+        <h3>What technologies do you use?</h3>
+        <p>We use React 18, Next.js 14, Vite, TypeScript, and Tailwind CSS. For e-commerce, we integrate Stripe, LemonSqueezy, or Shopify. Every site scores 95+ on Google Lighthouse.</p>
+
+        <h3>Do you support multilingual websites?</h3>
+        <p>Yes. We build multilingual websites as standard with English, French, Dutch, and German support. Each language gets proper SEO with hreflang tags, localized URLs, and native-quality translations.</p>
+
+        <h3>Which countries do you serve?</h3>
+        <p>We serve businesses across France, Belgium, United Kingdom, Netherlands, Germany, and Switzerland. We communicate in English, French, Dutch, and German.</p>
+
+        <h2>About the Founder</h2>
+        <p>Musa Kerem Demirci is a full-stack developer and the founder of DMC Kreatif. With expertise in React, Next.js, and modern web technologies, he has built 10+ production websites for clients across France, Belgium, and the United Kingdom. DMC Kreatif was founded in 2023 with the mission to deliver premium web solutions that help European businesses grow online.</p>
 
         <h2>Contact Us</h2>
         <p>Email: <a href="mailto:hello@dmckreatif.com">hello@dmckreatif.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/company/dmckreatif">DMC Kreatif on LinkedIn</a></p>
         <p>Visit our website in your language:</p>
         <ul>
           <li><a href="/en">English</a></li>

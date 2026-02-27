@@ -4,15 +4,16 @@ import { useParams, Link } from "react-router-dom";
 import SeoHead from "@/components/seo/SeoHead";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
-import { Send, CheckCircle2, AlertTriangle, Mail, Globe, ArrowRight, Clock, MapPin, Star, ExternalLink } from "lucide-react";
+import { Send, CheckCircle2, AlertTriangle, Mail, Globe, ArrowRight, Clock, MapPin, Star, ExternalLink, Calendar } from "lucide-react";
 import { z } from "zod";
 import SectionHeader from "@/components/ui/SectionHeader";
 import NeoButton from "@/components/ui/NeoButton";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { supabase } from "@/lib/supabase";
 import JsonLd from "@/components/seo/JsonLd";
-import { buildLocalBusinessSchema } from "@/lib/seo-schemas";
+import { buildLocalBusinessSchema, buildContactPageSchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
 import { fadeInUp, viewportConfig } from "@/lib/animations";
+import { BOOKING_URL } from "@/lib/constants";
 
 const EU_PHONE_REGEX = /^(\+?\d{1,4}[\s.-]?)?\(?\d{1,4}\)?[\s.-]?\d{2,4}[\s.-]?\d{2,4}[\s.-]?\d{0,4}$/;
 
@@ -148,6 +149,10 @@ export default function ContactPage() {
       />
 
       <JsonLd data={buildLocalBusinessSchema()} />
+      <JsonLd data={buildContactPageSchema(locale ?? "en")} />
+      <JsonLd
+        data={buildBreadcrumbSchema(locale ?? "en", [{ name: "Home", path: "" }], t("nav.contact", "Contact"))}
+      />
 
       <Breadcrumbs items={[{ label: t("nav.contact", "CONTACT") }]} />
 
@@ -184,7 +189,7 @@ export default function ContactPage() {
               className="lg:col-span-2"
             >
               {submitStatus === "success" ? (
-                <div className="border-2 border-neo-black bg-neo-lime/20 shadow-hard p-10 text-center">
+                <div role="status" aria-live="polite" className="border-2 border-neo-black bg-neo-lime/20 shadow-hard p-10 text-center">
                   <CheckCircle2
                     size={48}
                     className="text-neo-green mx-auto mb-4"
@@ -403,7 +408,7 @@ export default function ContactPage() {
 
                   {/* Rate limited state */}
                   {submitStatus === "rate-limited" && (
-                    <div className="flex items-center gap-3 p-4 border-2 border-neo-yellow bg-neo-yellow/10">
+                    <div role="alert" aria-live="assertive" className="flex items-center gap-3 p-4 border-2 border-neo-yellow bg-neo-yellow/10">
                       <Clock size={20} className="text-neo-black flex-shrink-0" />
                       <p className="font-mono text-sm text-neo-black">
                         {t(
@@ -416,7 +421,7 @@ export default function ContactPage() {
 
                   {/* Error state */}
                   {submitStatus === "error" && (
-                    <div className="flex items-center gap-3 p-4 border-2 border-neo-red bg-neo-red/10">
+                    <div role="alert" aria-live="assertive" className="flex items-center gap-3 p-4 border-2 border-neo-red bg-neo-red/10">
                       <AlertTriangle size={20} className="text-neo-red flex-shrink-0" />
                       <p className="font-mono text-sm text-neo-red">
                         {t(
@@ -459,6 +464,26 @@ export default function ContactPage() {
               viewport={viewportConfig}
               className="space-y-8"
             >
+              {/* Booking card */}
+              <div className="border-2 border-neo-lime bg-neo-lime/10 shadow-hard p-6 text-center">
+                <Calendar size={24} className="text-neo-black mx-auto mb-3" />
+                <h3 className="font-space font-bold text-sm text-neo-black mb-2">
+                  {t("contact.bookCall", "Book a Free Discovery Call")}
+                </h3>
+                <p className="font-mono text-xs text-neo-black/70 mb-4 leading-relaxed">
+                  {t("contact.bookCallDesc", "15-minute video call to discuss your project. No commitment.")}
+                </p>
+                <a
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-space font-bold text-xs uppercase tracking-wider text-neo-black border-2 border-neo-black px-4 py-2 bg-neo-lime hover:shadow-hard-sm transition-all"
+                >
+                  {t("contact.bookNow", "BOOK NOW")}
+                  <ArrowRight size={12} />
+                </a>
+              </div>
+
               {/* Email card */}
               <div className="border-2 border-neo-black bg-neo-white shadow-hard p-6">
                 <div className="flex items-center gap-3 mb-4">
@@ -505,7 +530,7 @@ export default function ContactPage() {
               {/* Response time card */}
               <div className="border-2 border-neo-black bg-neo-lime/20 shadow-hard p-6 text-center">
                 <span className="font-space font-bold text-3xl text-neo-black block mb-1">
-                  24h
+                  4h
                 </span>
                 <span className="font-mono text-xs font-bold text-neo-black/70 uppercase tracking-wider">
                   {t("contact.responseTime", "Average Response Time")}

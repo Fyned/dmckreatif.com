@@ -48,6 +48,7 @@
   /* ── Animations ── */
   --animate-marquee: marquee 40s linear infinite;
   --animate-marquee-reverse: marquee-reverse 40s linear infinite;
+  --animate-marquee-logos: marquee 30s linear infinite;
 }
 
 /* ── Marquee Keyframes (MUST be outside @theme) ── */
@@ -67,9 +68,8 @@
     @apply bg-neo-bg text-neo-black font-space;
     background-image: radial-gradient(#121212 1px, transparent 1px);
     background-size: 40px 40px;
-    background-attachment: fixed;
     font-synthesis: none;
-    text-rendering: optimizeLegibility;
+    text-rendering: optimizeSpeed;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

@@ -50,20 +50,21 @@
   },
   "hero": {
     "status": "AGENCY_STATUS: PROJECTEN ACCEPTEREN",
-    "titleLine1": "WIJ BOUWEN WEBSITES",
-    "titleAccent": "DIE CONVERTEREN",
+    "titleLine1": "PREMIUM WEBSITES",
+    "titleAccent": "VOOR EUROPA",
     "subtitle": "Premium webontwikkeling voor Europese bedrijven. Op maat gemaakt, razendsnel, meertalig.",
     "ctaPrimary": "START UW PROJECT",
     "ctaSecondary": "BEKIJK ONS WERK",
-    "stat1": "48+",
+    "stat1": "33+",
     "stat1Label": "Projecten",
-    "stat2": "44+",
+    "stat2": "4",
     "stat2Label": "Landen",
     "stat3": "100%",
     "stat3Label": "Op Tijd",
     "stat4": "98+",
     "stat4Label": "Lighthouse",
-    "microCopy": "Handgemaakt door professionele ontwikkelaars • 10+ internationale projecten opgeleverd"
+    "microCopy": "Handgemaakt door professionele ontwikkelaars • 33+ internationale projecten opgeleverd",
+    "bookCall": "of boek een gratis gesprek van 15 min →"
   },
   "choosePath": {
     "sectionTitle": "KIES UW PAD",
@@ -92,24 +93,33 @@
     "sectionSubtitle": "SYS.DIENSTEN",
     "webDev": {
       "title": "WEBONTWIKKELING",
-      "description": "Op maat gemaakte websites gebouwd met Next.js en React. Razendsnel, SEO-geoptimaliseerd en responsief op alle apparaten.",
-      "priceRange": "VANAF €349"
+      "description": "Wij ontwerpen en bouwen websites op maat die bezoekers omzetten in klanten. Elk project begint met een grondige analyse van uw merk, doelgroep en bedrijfsdoelen, zodat het eindresultaat uw identiteit weerspiegelt — geen standaard template. Onze technische stack draait om React, Next.js en Vite, wat zorgt voor server-side rendering voor SEO, razendsnelle paginaovergangen en code-splitting die de initiële laadtijd onder 1,5 seconde houdt. Elke website is volledig responsief van mobiel tot ultra-breed, scoort 95+ op Google Lighthouse voor Prestaties, Toegankelijkheid, Best Practices en SEO, en wordt geleverd met gestructureerde data-markup zodat zoekmachines uw content vanaf dag één begrijpen. Wij koppelen contactformulieren, analytics-dashboards en CRM-integraties aan en bieden u wekelijks een live preview-link ter beoordeling. Na lancering ontvangt u 30 dagen prioritaire ondersteuning, volledig eigendom van de broncode en documentatie waarmee uw team — of elke andere ontwikkelaar — de site zelfstandig kan onderhouden. Of u nu een enkele landingspagina nodig heeft of een meertalige bedrijfswebsite voor Frankrijk, België, Nederland en Duitsland, wij leveren op tijd en binnen budget.",
+      "priceRange": "VANAF €349",
+      "idealFor": "MKB, Startups, Professionals, Bureaus"
     },
     "ecommerce": {
       "title": "E-COMMERCE",
-      "description": "Volledige webshops met betalingsintegratie, voorraadbeheer en ondersteuning voor meerdere valuta's.",
-      "priceRange": "VANAF €2.497"
+      "description": "Wij bouwen webshops die ontworpen zijn om te verkopen op Europese markten. Van productcatalogus tot bestelbevestiging — elke stap is geoptimaliseerd voor conversie: snelladende productpagina's, intuïtieve filtering, één-klik toevoegen aan winkelwagen en een gestroomlijnd afrekenproces dat creditcards, iDEAL, Bancontact, SEPA en meer ondersteunt via Stripe. Voorraad synchroniseert realtime, multi-valuta prijzen passen automatisch aan en belastingregels voldoen direct aan de EU-btw-wetgeving. Het beheerpaneel laat u producten beheren, bestellingen volgen, kortingscodes toepassen en verkooprapporten genereren zonder code aan te raken. Wij integreren verzendcalculators, e-mails voor achtergelaten winkelwagens en reviewsystemen die sociaal bewijs opbouwen. Technisch gezien worden productpagina's vooraf gerenderd voor directe Google-indexering, gestructureerde data zorgen voor rijke zoekresultaten en beeldoptimalisatie houdt het paginagewicht laag. Elke webshop is volledig responsief, ondersteunt standaard vier talen en bevat 30 dagen ondersteuning na lancering plus training van uw team op het admin-dashboard.",
+      "priceRange": "VANAF €2.497",
+      "idealFor": "Retailers, D2C-merken, Multi-land verkopers"
     },
     "seo": {
       "title": "SEO & ANALYTICS",
-      "description": "Technische SEO-audits, zoekwoordoptimalisatie, Google Analytics-configuratie en prestatiemonitoring.",
-      "priceRange": "VANAF €199"
+      "description": "Wij helpen Europese bedrijven om gevonden te worden op Google — en daar te blijven. Ons proces begint met een uitgebreide technische audit: crawlbaarheid, indexatie, Core Web Vitals, mobiele bruikbaarheid, gestructureerde data en interne linkarchitectuur. We lossen elk probleem op dat zoekmachines belemmert uw site te begrijpen, en gaan vervolgens over op zoekwoordenonderzoek afgestemd op uw markt — of dat nu Amsterdam, Brussel, Rotterdam of Antwerpen is. On-page optimalisatie omvat metatitels, beschrijvingen, koppenstructuur, alt-teksten voor afbeeldingen en Schema-markup voor rijke zoekresultaten. Wij configureren Google Search Console en Analytics 4 zodat u impressies, klikken, posities en conversies realtime kunt volgen. Voor doorlopende klanten leveren wij maandelijkse prestatierapporten met concrete actiepunten: contentaanbevelingen, backlinkmogelijkheden en concurrentieanalyse. Onze aanpak is datagedreven en transparant — geen black-hat technieken, geen ijdelheidsstatistieken, alleen meetbare organische groei. Klanten zien doorgaans een toename van 40 tot 120% in organisch verkeer binnen de eerste zes maanden.",
+      "priceRange": "VANAF €199",
+      "idealFor": "Lokale bedrijven, Groeiende ondernemingen, Webshops"
+    },
+    "carePlan": {
+      "idealFor": "Alle bestaande klanten, Drukke ondernemers"
     },
     "marketing": {
       "title": "DIGITALE MARKETING",
       "description": "Google Ads-campagnes, social media-beheer, contentstrategie en conversieoptimalisatie.",
       "priceRange": "VANAF €299"
     },
+    "idealFor": "Ideaal voor",
+    "readMore": "Lees meer",
+    "showLess": "Minder tonen",
     "seeWork": "Bekijk ons werk",
     "viewPricing": "Bekijk prijzen",
     "readBlog": "Lees onze blog",
@@ -359,7 +369,7 @@
     "commerceDelivery": "21-30 dagen",
     "carePlan": "ONDERHOUDSPLAN",
     "carePlanPrice": "€97/maand",
-    "carePlanDescription": "Hosting, updates, ondersteuning en maandelijkse prestatierapporten.",
+    "carePlanDescription": "Uw website is een levend bezit — het heeft regelmatig onderhoud nodig om snel, veilig en zichtbaar te blijven. Ons Onderhoudsplan dekt alles na de lancering zodat u zich kunt concentreren op uw bedrijf. Wij verzorgen managed hosting met SSL, CDN en 99,9% uptime, passen CMS- en dependency-updates toe voordat kwetsbaarheden uitgebuit kunnen worden, en voeren geautomatiseerde beveiligingsscans uit die problemen realtime signaleren. Elke maand ontvangt u een helder prestatierapport met uptime, paginasnelheid, verkeersstrends en SEO-rankings, inclusief concrete aanbevelingen. Een tekstwijziging nodig, een nieuwe banner of een seizoenspromotie? Contentupdates zijn inbegrepen — mail ons gewoon de details. Prioritaire ondersteuning betekent dat uw verzoeken voorrang krijgen: kritieke fixes binnen 4 uur, standaardverzoeken binnen 24 uur. Wij monitoren ook Core Web Vitals en optimaliseren proactief afbeeldingen, caching en codebundels zodat uw Lighthouse-scores boven de 95 blijven. Voor Pro- en Enterprise-pakketten voegen wij wekelijkse check-ins, A/B-testen, kwartaalstrategiegesprekken en een dedicated accountmanager toe.",
     "viewAll": "BEKIJK ALLE PLANNEN",
     "faqTitle": "VEELGESTELDE VRAGEN",
     "faq1Q": "Wat is inbegrepen in de prijs?",
@@ -541,24 +551,23 @@
     "reviewsLabel": "beoordelingen"
   },
   "promo": {
-    "badgeText": "BEPERKTE AANBIEDING",
-    "bannerShort": "TOT 25% KORTING",
-    "title": "TIJDELIJKE ACTIE — TOT 25% KORTING",
-    "description": "Alle maatwerk ontwikkelingspakketten zijn tijdelijk afgeprijsd. Profiteer van deze prijzen voordat ze terugkeren naar normaal!",
-    "homeTitle": "TOT 25% KORTING OP ALLE PAKKETTEN",
-    "homeDescription": "Krijg uw professionele website tegen onverslaanbare prijzen. Maatwerk ontwikkelingspakketten zijn tijdelijk in de aanbieding!",
-    "endsIn": "AANBIEDING EINDIGT OVER",
-    "dontMiss": "MIS DIT NIET",
-    "save": "BESPAAR",
-    "saveUpTo": "Bespaar tot 25%",
-    "ctaButton": "BEKIJK KORTINGSPRIJZEN",
-    "days": "DAGEN",
-    "hours": "UUR",
-    "min": "MIN",
-    "sec": "SEC",
-    "popupTitle": "25% KORTING OP ALLE PAKKETTEN",
-    "popupDescription": "Alle maatwerk ontwikkelingspakketten zijn afgeprijsd. Eenmalige betaling, geen verborgen kosten!",
-    "popupNote": "Geen verplichting — gratis adviesgesprek inbegrepen"
+    "badgeText": "SCHERPE PRIJZEN",
+    "bannerShort": "WEBSITES VANAF €349",
+    "title": "PREMIUM KWALITEIT, EERLIJKE PRIJZEN",
+    "description": "Websites op maat voor Europese bedrijven. Geen verborgen kosten, geen verrassingen — gewoon premium kwaliteit tegen eerlijke prijzen.",
+    "homeTitle": "WEBSITES VOOR EUROPESE BEDRIJVEN",
+    "homeDescription": "Wij leveren premium webontwikkeling tegen scherpe tarieven. Op maat ontwerp, moderne technologie, meertalige ondersteuning — alles wat uw bedrijf nodig heeft om online te groeien.",
+    "startingFrom": "VANAF",
+    "oneTime": "EENMALIGE BETALING",
+    "perk1": "Gratis adviesgesprek",
+    "perk2": "Geen verborgen kosten",
+    "perk3": "Tevredenheidsgarantie",
+    "fromPrice": "Vanaf €349",
+    "saveUpTo": "Scherpe tarieven voor Europese bedrijven",
+    "ctaButton": "BEKIJK PRIJZEN",
+    "popupTitle": "PREMIUM KWALITEIT, EERLIJKE PRIJZEN",
+    "popupDescription": "Websites op maat voor Europese bedrijven. Transparante prijzen, geen verrassingen.",
+    "popupNote": "Vrijblijvend — gratis adviesgesprek inbegrepen"
   },
   "cta": {
     "title": "KLAAR OM IETS TE BOUWEN?",
@@ -711,7 +720,7 @@
     "description": "Een digitaal agentschapspartnerschap dat Europese bedrijven bedient. DMC Kreatif behandelt internationale markten, GMG Design dekt de binnenlandse markt. Hetzelfde team, dezelfde kwaliteit, dubbel bereik.",
     "founderName": "Musa Kerem Demirci",
     "founderRole": "OPRICHTER & HOOFDONTWIKKELAAR",
-    "founderBio": "Full-stack ontwikkelaar met expertise in React, Next.js en moderne webtechnologieën. Heeft 10+ productiewebsites gebouwd voor klanten in Frankrijk, België en het VK.",
+    "founderBio": "Musa Kerem Demirci is full-stack developer en oprichter van DMC Kreatif, een webontwikkelingsbureau dat bedrijven in West-Europa bedient. Met diepgaande expertise in React, Next.js, TypeScript en Tailwind CSS heeft hij persoonlijk meer dan 33 websites ontworpen en ontwikkeld voor klanten in Frankrijk, België, het Verenigd Koninkrijk, Nederland en Duitsland. Zijn aanpak combineert technische precisie met designgevoel — elk project streeft naar 95+ Google Lighthouse-scores, laadtijden onder de 2 seconden en volledige meertalige SEO-implementatie. Voordat hij DMC Kreatif in 2023 oprichtte, deed Musa internationale ervaring op met klanten in diverse sectoren, waaronder bouw, energie, boekhouding en e-commerce. Hij spreekt Engels, Frans en Turks en werkt nauw samen met Nederlandstalige en Duitstalige klanten via gelokaliseerde communicatie. Zijn filosofie is eenvoudig: elke pixel telt, elke milliseconde doet ertoe, en elk bedrijf verdient een website die het merk echt vertegenwoordigt. Met een achtergrond in Computer Engineering en meer dan 3 jaar professionele webontwikkelingservaring combineert Kerem technische diepgang met creatief designdenken.",
     "mission": "ONZE MISSIE",
     "missionText": "Premium weboplossingen leveren die Europese bedrijven helpen groeien. Elke pixel telt. Elke milliseconde doet ertoe.",
     "value1Title": "KWALITEIT EERST",
@@ -739,8 +748,8 @@
     "milestone2Desc": "Websites opgeleverd voor Cakir Facades en Altinbas Moustiquaire in Frankrijk. Sterke aanwezigheid op de Franse markt gevestigd.",
     "milestone3Title": "Uitbreiding naar het VK",
     "milestone3Desc": "Uitgebreid naar het Verenigd Koninkrijk met Adamsons Accountants. Britse bankrekening geopend en Britse marktpositie gevestigd.",
-    "milestone4Title": "10+ Projecten Mijlpaal",
-    "milestone4Desc": "48+ internationale projecten voltooid in Frankrijk, België en het VK. 98+ Lighthouse-scores behouden bij elke oplevering.",
+    "milestone4Title": "33+ Projecten Mijlpaal",
+    "milestone4Desc": "33+ internationale projecten voltooid in Frankrijk, België en het VK. 98+ Lighthouse-scores behouden bij elke oplevering.",
     "milestone5Title": "Europese Uitbreiding",
     "milestone5Desc": "Diensten uitgebreid naar Nederland en Duitsland. Nederlandse en Duitse taalondersteuning toegevoegd. Meertalig websiteplatform gelanceerd.",
     "milestone6Title": "Sjablonenplatform Lancering",
@@ -813,7 +822,10 @@
     "location": "Onze locatie",
     "reviewTitle": "Tevreden over ons werk?",
     "reviewDescription": "Wij waarderen uw feedback. Laat een beoordeling achter op Google.",
-    "leaveReview": "Beoordeling achterlaten"
+    "leaveReview": "Beoordeling achterlaten",
+    "bookCall": "Boek een gratis kennismakingsgesprek",
+    "bookCallDesc": "15 minuten videogesprek om uw project te bespreken. Vrijblijvend.",
+    "bookNow": "BOEK NU"
   },
   "blog": {
     "introHeading": "Webontwikkelingstips voor Europese bedrijven",
@@ -823,57 +835,29 @@
     "readMore": "LEES MEER",
     "backToBlog": "TERUG NAAR BLOG",
     "readTime": "LEESTIJD",
-    "post1Title": "Waarom Uw Bedrijf in 2025 een Website Nodig Heeft",
-    "post1Excerpt": "In het digitale tijdperk is geen website hebben als geen visitekaartje hebben. Ontdek waarom elk Europees bedrijf een professionele webpresentie nodig heeft.",
-    "post1Content": "Een professionele website is niet langer optioneel voor Europese bedrijven. Het is de eerste plek waar potentiële klanten kijken en het vormt hun perceptie van uw merk. In 2025 zijn mobile-first ontwerp, snelle laadtijden en meertalige ondersteuning essentieel.",
-    "post2Title": "SEO-Basisprincipes Die Elk Klein Bedrijf Moet Kennen",
-    "post2Excerpt": "Technische SEO hoeft niet ingewikkeld te zijn. Leer de fundamenten die de zichtbaarheid van uw website in zoekmachines kunnen verbeteren.",
-    "post2Content": "Zoekmachineoptimalisatie begint met de basis: juiste metatags, snelle laadsnelheden, mobiele responsiviteit en kwaliteitscontent. Voor Europese bedrijven is lokale SEO cruciaal.",
-    "post3Title": "Next.js vs WordPress: Wat Is Beter voor Uw Bedrijf?",
-    "post3Excerpt": "Een technische vergelijking van moderne webframeworks versus traditionele CMS-platforms. Snelheid, beveiliging en schaalbaarheid vergeleken.",
-    "post3Content": "WordPress drijft 40% van het web aan, maar moderne frameworks zoals Next.js bieden aanzienlijke voordelen. Next.js biedt server-side rendering voor betere SEO en statische generatie voor razendsnelle snelheid.",
-    "post4Title": "Hoe U het Conversiepercentage van Uw Website Kunt Verhogen",
-    "post4Excerpt": "Uw website krijgt verkeer maar geen leads? Hier zijn bewezen strategieën om bezoekers om te zetten in betalende klanten.",
-    "post4Content": "Conversieoptimalisatie begint met het begrijpen van uw bezoekers. Duidelijke call-to-action knoppen, snelle laadtijden en vertrouwenssignalen zijn essentieel.",
-    "post5Title": "Meertalige Websites: Vergroot Uw Bereik in Heel Europa",
-    "post5Excerpt": "Hoe het bouwen van een meertalige website deuren kan openen naar nieuwe markten en de omzet kan verhogen in Europese landen.",
-    "post5Content": "Europa is een meertalige markt met enorm potentieel. Een Frans bedrijf met een Engelse website kan Britse klanten bereiken. Moderne tools zoals next-intl maken het bouwen van meertalige sites efficiënt en SEO-vriendelijk.",
-    "post6Title": "Hoeveel kost een website in Europa in 2025?",
-    "post6Excerpt": "Een transparant overzicht van webontwikkeling prijzen op Europese markten. Van freelancer tarieven tot agentschap pakketten.",
-    "post6Content": "Websitekosten in Europa variëren aanzienlijk per land en projectomvang. Een eenvoudige single-page site kost tussen 400 en 1500 euro, terwijl een volledige bedrijfswebsite met meertalige ondersteuning tussen 2000 en 8000 euro kan kosten. E-commerce platforms beginnen doorgaans bij 3000 euro. Bij DMC Kreatif beginnen onze transparante pakketten bij 497 euro omdat wij geloven dat premium kwaliteit toegankelijk moet zijn voor groeiende bedrijven.",
-    "post7Title": "De belangrijkste webdesign trends van 2025",
-    "post7Excerpt": "Van dark mode interfaces tot micro-interacties, ontdek de designtrends die premium websites dit jaar definiëren.",
-    "post7Content": "Webdesign in 2025 wordt gedefinieerd door doelgerichte esthetiek en performance-first denken. Dark mode is de standaard geworden voor premium merken. Micro-interacties leiden gebruikers door interfaces met subtiele animaties. Typografie staat centraal met variabele lettertypen en kinetische tekst die memorabele eerste indrukken creëren.",
-    "post8Title": "Waarom uw Franse bedrijf een professionele website nodig heeft",
-    "post8Excerpt": "Frankrijk heeft meer dan 4 miljoen MKB-bedrijven, maar velen missen een goede online aanwezigheid. Hier is waarom een professionele website essentieel is.",
-    "post8Content": "Frankrijk vertegenwoordigt een van de grootste digitale markten in Europa, met meer dan 92 procent van de bevolking die regelmatig internet gebruikt. Een professionele website bouwt direct geloofwaardigheid op. Franse consumenten doen online onderzoek voordat ze aankoopbeslissingen nemen. Lokale SEO-optimalisatie helpt uw bedrijf te verschijnen in Google Maps en lokale zoekresultaten.",
-    "post9Title": "E-commerce gids voor Belgische bedrijven",
-    "post9Excerpt": "De unieke tweetalige markt van België vereist een aangepaste aanpak voor online verkoop. Leer een succesvolle e-commerce aanwezigheid op te bouwen.",
-    "post9Content": "België biedt een unieke e-commerce kans met zijn Franstalige en Nederlandstalige markten. Een succesvolle webshop bouwen betekent beide gemeenschappen effectief bedienen. Betalingsintegratie moet Bancontact bevatten, de dominante Belgische betaalmethode. De Belgische e-commercewetgeving vereist duidelijke prijzen inclusief BTW en een retourbeleid van 14 dagen.",
-    "post10Title": "SEO-tips voor Britse kleine bedrijven in 2025",
-    "post10Excerpt": "Praktische, uitvoerbare SEO-strategieën afgestemd op de competitieve Britse markt. Verbeter uw zoekresultaten zonder groot budget.",
-    "post10Content": "De Britse markt is zeer competitief online, maar slimme SEO-strategieën kunnen kleine bedrijven helpen boven hun gewicht te presteren. Begin met Google Business Profile optimalisatie. Richt u op long-tail zoekwoorden specifiek voor uw locatie en dienst. Technische SEO-fundamenten zijn belangrijker dan ooit met Core Web Vitals als rankingfactor.",
-    "post11Title": "Website snelheidsoptimalisatie: een complete gids",
-    "post11Excerpt": "Elke seconde laadtijd kost u conversies. Leer de technische strategieën die websites razend snel maken.",
-    "post11Content": "Website snelheid heeft direct invloed op omzet. Onderzoek toont aan dat een vertraging van één seconde de conversies met 7 procent vermindert. Begin met beeldoptimalisatie met moderne formaten zoals WebP en AVIF. Minimaliseer JavaScript-bundels door code splitting en tree shaking. Implementeer een CDN om bestanden te serveren vanuit locaties dichtst bij uw Europese gebruikers.",
-    "post12Title": "Hoe kiest u het juiste webontwikkeling bureau",
-    "post12Excerpt": "Niet alle bureaus zijn gelijk. Hier zijn de belangrijkste criteria om een webontwikkelingspartner te evalueren voor uw bedrijf.",
-    "post12Content": "Het kiezen van een webontwikkeling bureau is een kritieke bedrijfsbeslissing. Begin met het onderzoeken van hun portfolio. Controleer hun Lighthouse-scores. Elk competent bureau moet consequent scores van 90 of hoger behalen. Evalueer hun technologiestack. Moderne bureaus gebruiken React, Next.js of Vue met TypeScript en Tailwind CSS. Begrijp hun prijsstructuur duidelijk.",
-    "post13Title": "React vs WordPress: wat moet uw bedrijf kiezen?",
-    "post13Excerpt": "Een gedetailleerde vergelijking van React-websites versus WordPress voor zakelijk gebruik. Prestaties, kosten, beveiliging en onderhoud geanalyseerd.",
-    "post13Content": "De keuze tussen React en WordPress hangt af van uw bedrijfsprioriteiten. WordPress domineert de markt met 40 procent marktaandeel, maar React-oplossingen winnen snel terrein. React-sites gebouwd met Next.js leveren superieure prestaties. Statische generatie en server-side rendering produceren pagina's die in minder dan een seconde laden. Voor bedrijven die frequent updates nodig hebben, biedt een headless CMS het beste van beide werelden.",
-    "post14Title": "AVG-conforme website checklist voor 2025",
-    "post14Excerpt": "Een uitgebreide checklist om ervoor te zorgen dat uw website voldoet aan de AVG-vereisten. Vermijd boetes tot 20 miljoen euro.",
-    "post14Content": "AVG-naleving is verplicht voor elke website die Europese gebruikers bedient, met boetes tot 20 miljoen euro. Begin met een cookie-toestemmingsbanner die alle niet-essentiële cookies blokkeert tot actieve toestemming. Uw privacybeleid moet duidelijk uitleggen welke gegevens u verzamelt en waarom. Contactformulieren mogen alleen noodzakelijke informatie verzamelen.",
-    "post15Title": "Lokale SEO-strategie voor Europese bedrijven",
-    "post15Excerpt": "Domineer lokale zoekresultaten in uw stad en regio. Een praktische gids voor lokale SEO op Europese markten.",
-    "post15Content": "Lokale SEO is de meest kosteneffectieve digitale marketingstrategie voor dienstverlenende bedrijven in Europa. Google Business Profile is uw fundament. Maak locatiespecifieke landingspagina's voor elke stad of regio die u bedient. Registreer u bij Europese bedrijfsgidsen zoals Pages Jaunes in Frankrijk, Gouden Gids in België en Yell in het VK. Moedig tevreden klanten aan om Google-reviews achter te laten.",
+    "comingSoonTitle": "Nieuwe artikelen komen binnenkort",
+    "comingSoonText": "We bereiden diepgaande artikelen voor over webontwikkeling, SEO en digitale marketing voor Europese bedrijven. Kwaliteitscontent kost tijd — kom binnenkort terug.",
     "linkServices": "Website nodig?",
     "linkServicesDesc": "Wij bouwen premium websites voor Europese bedrijven. React, Vite, Next.js — vanaf €497.",
     "viewServices": "BEKIJK DIENSTEN",
     "linkPortfolio": "Bekijk ons werk",
-    "linkPortfolioDesc": "Ontdek meer dan 10 projecten gebouwd voor bedrijven in Frankrijk, België, VK, Nederland en Duitsland.",
-    "viewPortfolio": "BEKIJK PORTFOLIO"
+    "linkPortfolioDesc": "Ontdek meer dan 33 projecten gebouwd voor bedrijven in Frankrijk, België, VK, Nederland en Duitsland.",
+    "viewPortfolio": "BEKIJK PORTFOLIO",
+    "authorName": "Musa Kerem Demirci",
+    "authorRole": "Oprichter & Hoofdontwikkelaar",
+    "authorBio": "Full-stack developer die Europese bedrijven bedient met premium weboplossingen. React, Next.js en TypeScript specialist met meer dan 33 internationale projecten.",
+    "category": "Categorie",
+    "allPosts": "Alle artikelen",
+    "minuteRead": "min leestijd",
+    "publishedOn": "Gepubliceerd op",
+    "websiteCostTitle": "Hoeveel kost een website in Europa in 2026?",
+    "websiteCostExcerpt": "Een transparante analyse van websiteontwikkelingskosten in Europa. Van freelancetarieven tot agentschapspakketten, ontdek wat de kosten bepaalt en hoe u uw volgende project kunt budgetteren.",
+    "reactVsWpTitle": "React vs. WordPress voor Europese MKB: welke keuze in 2026?",
+    "reactVsWpExcerpt": "Een praktische vergelijking van React-frameworks en WordPress voor kleine en middelgrote bedrijven in Europa. Prestaties, SEO, onderhoud en totale eigendomskosten.",
+    "seoFranceTitle": "SEO-gids voor kleine bedrijven in Frankrijk: hoe hoog ranken op Google in 2026",
+    "seoFranceExcerpt": "Een stapsgewijze SEO-gids voor Franse kleine bedrijven. Technische optimalisatie, lokale SEO, contentstrategie en praktische tips om uw Google-ranking te verbeteren.",
+    "multilingualTitle": "Waarom elk Europees bedrijf een meertalige website nodig heeft",
+    "multilingualExcerpt": "Ontdek waarom een meertalige website essentieel is voor bedrijven die actief zijn op Europese markten. Impact op omzet, SEO-voordelen en best practices voor implementatie."
   },
   "footer": {
     "tagline": "PREMIUM WEBONTWIKKELING VOOR EUROPESE BEDRIJVEN",
@@ -882,6 +866,10 @@
     "legal": "JURIDISCH",
     "privacy": "PRIVACYBELEID",
     "terms": "ALGEMENE VOORWAARDEN",
+    "legalNotice": "Juridische Kennisgeving",
+    "cookiePolicy": "Cookiebeleid",
+    "refundPolicy": "Restitutiebeleid",
+    "manageCookies": "Cookies Beheren",
     "copyright": "ALLE RECHTEN VOORBEHOUDEN",
     "builtWith": "GEBOUWD MET REACT + VITE + TAILWIND"
   },
@@ -1055,6 +1043,122 @@
     "contact": {
       "title": "9. Contact",
       "content": "Heeft u vragen? Neem contact met ons op:\n\nDMC Kreatif\nE-mail: hello@dmckreatif.com\nWebsite: https://dmckreatif.com"
+    }
+  },
+  "legal": {
+    "seoTitle": "Juridische Kennisgeving — DMC Kreatif",
+    "seoDescription": "Juridische informatie, bedrijfsgegevens en regelgevende vermeldingen van webbureau DMC Kreatif.",
+    "breadcrumb": "JURIDISCHE KENNISGEVING",
+    "badge": "JURIDISCH",
+    "title": "Juridische Kennisgeving",
+    "subtitle": "Laatst bijgewerkt: februari 2026",
+    "intro": "In overeenstemming met Europese regelgeving en toepasselijke nationale wetgeving verstrekt DMC Kreatif de volgende juridische informatie over het bedrijf en deze website.",
+    "company": {
+      "title": "Bedrijfsinformatie",
+      "content": "Bedrijfsnaam: DMC Kreatif\nEigenaar: Musa Kerem Demirci\nBedrijfstype: Eenmanszaak — Digitale diensten\nE-mail: hello@dmckreatif.com\nWebsite: https://dmckreatif.com\n\nDMC Kreatif opereert als digitaal bureau dat webontwikkeling, e-commerce, SEO en onderhoudsdiensten levert aan bedrijven in heel Europa."
+    },
+    "vatId": {
+      "title": "BTW & Fiscale informatie",
+      "content": "BTW-identificatienummer: Beschikbaar op aanvraag\nAlle prijzen op deze website zijn in euro's (EUR) en exclusief BTW, tenzij anders vermeld. BTW wordt toegepast conform de geldende regelgeving in het land van verblijf van de klant."
+    },
+    "registration": {
+      "title": "Professionele registratie",
+      "content": "DMC Kreatif is een geregistreerde aanbieder van digitale diensten die opereert in overeenstemming met de Europese e-commercerichtlijn (Richtlijn 2000/31/EG) en lokale bedrijfsregelgeving in elke bediende markt."
+    },
+    "hosting": {
+      "title": "Website Hosting",
+      "content": "Deze website wordt gehost door:\nHostinger International Ltd\nSvitrigailos str. 34, Vilnius 03230, Litouwen\nhttps://www.hostinger.com\n\nDe website is gebouwd met React, Vite en Tailwind CSS. Backend-diensten worden geleverd door Supabase (Supabase Inc., San Francisco, CA, VS) onder hun AVG-conforme gegevensverwerkingsovereenkomst."
+    },
+    "editorial": {
+      "title": "Redactionele verantwoordelijkheid",
+      "content": "Verantwoordelijke uitgever: Musa Kerem Demirci\nAlle content op deze website — inclusief tekst, afbeeldingen, design en code — is intellectueel eigendom van DMC Kreatif tenzij anders vermeld. Reproductie zonder schriftelijke toestemming is verboden."
+    },
+    "disputes": {
+      "title": "Geschillenbeslechting",
+      "content": "Bij een geschil komen de klant en DMC Kreatif overeen eerst een minnelijke oplossing te zoeken alvorens juridische stappen te ondernemen. Voor EU-consumenten is het Europees platform voor onlinegeschillenbeslechting beschikbaar op: https://ec.europa.eu/consumers/odr\n\nVoor zaken die niet minnelijk worden opgelost, zijn de bevoegde rechtbanken bevoegd conform het toepasselijke recht van het land van verblijf van de klant binnen de Europese Unie."
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "Voor vragen over deze juridische kennisgeving kunt u contact met ons opnemen:\nE-mail: hello@dmckreatif.com\nContactformulier: https://dmckreatif.com/nl/contact"
+    }
+  },
+  "cookiePolicy": {
+    "seoTitle": "Cookiebeleid — DMC Kreatif",
+    "seoDescription": "Gedetailleerde informatie over de cookies op dmckreatif.com, hun doel, duur en het beheren van uw voorkeuren.",
+    "breadcrumb": "COOKIEBELEID",
+    "badge": "AVG",
+    "title": "Cookiebeleid",
+    "subtitle": "Laatst bijgewerkt: februari 2026",
+    "intro": "Dit cookiebeleid legt uit hoe DMC Kreatif cookies en vergelijkbare trackingtechnologieën gebruikt op dmckreatif.com. Wij respecteren uw privacy en geven u volledige controle over welke cookies actief zijn.",
+    "whatAreCookies": {
+      "title": "Wat zijn cookies?",
+      "content": "Cookies zijn kleine tekstbestanden die op uw apparaat worden opgeslagen wanneer u een website bezoekt. Ze helpen de site uw voorkeuren te onthouden en te begrijpen hoe u ermee omgaat. Cookies kunnen 'sessie'-cookies zijn (verwijderd bij het sluiten van uw browser) of 'persistente' cookies (blijven bestaan tot ze verlopen of u ze verwijdert)."
+    },
+    "necessary": {
+      "title": "Strikt noodzakelijke cookies",
+      "content": "Deze cookies zijn essentieel voor het functioneren van de website en kunnen niet worden uitgeschakeld.\n\n• dmc_cookie_consent — Slaat uw cookievoorkeuren op (persistent, 365 dagen)\n• supabase-auth-token — Houdt uw inlogsessie bij (persistent, 7 dagen)\n• i18nextLng — Onthoudt uw taalvoorkeur (persistent, 365 dagen)\n\nRechtsgrondslag: Gerechtvaardigd belang (Artikel 6(1)(f) AVG). Deze cookies vereisen geen toestemming omdat ze strikt noodzakelijk zijn voor de door u gevraagde dienst."
+    },
+    "analytics": {
+      "title": "Analytische cookies",
+      "content": "Deze cookies helpen ons te begrijpen hoe bezoekers onze website gebruiken door anonieme gebruiksgegevens te verzamelen.\n\n• _ga — Google Analytics: Onderscheidt unieke gebruikers (persistent, 2 jaar)\n• _ga_* — Google Analytics: Houdt sessiestatus bij (persistent, 2 jaar)\n• _gid — Google Analytics: Onderscheidt gebruikers (persistent, 24 uur)\n\nAanbieder: Google LLC (VS), opererend onder het EU-VS Data Privacy Framework.\nRechtsgrondslag: Toestemming (Artikel 6(1)(a) AVG). Deze cookies worden alleen geplaatst nadat u analytische cookies expliciet accepteert."
+    },
+    "marketing": {
+      "title": "Marketing cookies",
+      "content": "Deze cookies worden gebruikt om de prestaties van advertentiecampagnes te meten en relevante advertenties te tonen.\n\n• _gcl_au — Google Ads: Slaat conversiegegevens op (persistent, 90 dagen)\n• _gac_* — Google Ads: Campagne-informatie (persistent, 90 dagen)\n\nAanbieder: Google LLC (VS), opererend onder het EU-VS Data Privacy Framework.\nRechtsgrondslag: Toestemming (Artikel 6(1)(a) AVG). Deze cookies worden alleen geplaatst nadat u marketingcookies expliciet accepteert."
+    },
+    "thirdParty": {
+      "title": "Diensten van derden",
+      "content": "Onze website kan bronnen laden van de volgende diensten van derden:\n\n• Google Fonts — Webfontlevering (geen cookies geplaatst, IP-adres verzonden)\n• Supabase — Backend-diensten, authenticatie en bestandsopslag\n• Google Tag Manager — Tagbeheersysteem (afhankelijk van toestemming)\n\nElke externe aanbieder heeft een eigen privacybeleid. Wij laden niet-essentiële scripts van derden alleen na het verkrijgen van uw toestemming."
+    },
+    "manage": {
+      "title": "Uw cookievoorkeuren beheren",
+      "content": "U kunt uw cookievoorkeuren op elk moment beheren door op de knop 'Cookies beheren' hieronder te klikken of in de footer van de website. U kunt cookies ook verwijderen via uw browserinstellingen:\n\n• Chrome: Instellingen → Privacy en beveiliging → Cookies\n• Firefox: Instellingen → Privacy en beveiliging → Cookies\n• Safari: Voorkeuren → Privacy → Websitegegevens beheren\n• Edge: Instellingen → Cookies en sitemachtigingen\n\nHoud er rekening mee dat het uitschakelen van bepaalde cookies de functionaliteit van onze website kan beïnvloeden."
+    },
+    "changes": {
+      "title": "Wijzigingen in dit beleid",
+      "content": "Wij kunnen dit cookiebeleid van tijd tot tijd bijwerken om wijzigingen in de gebruikte cookies of andere operationele, juridische of regelgevende redenen weer te geven. Wij raden u aan deze pagina regelmatig te raadplegen. De datum 'Laatst bijgewerkt' bovenaan geeft aan wanneer dit beleid voor het laatst is herzien."
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "Bij vragen over ons cookiegebruik kunt u contact met ons opnemen:\nE-mail: hello@dmckreatif.com\nContactformulier: https://dmckreatif.com/nl/contact"
+    },
+    "manageCookiesBtn": "Cookievoorkeuren beheren"
+  },
+  "refund": {
+    "seoTitle": "Restitutie- en annuleringsbeleid — DMC Kreatif",
+    "seoDescription": "Restitutie- en annuleringsvoorwaarden van DMC Kreatif voor maatwerkprojecten, templates en onderhoudsplannen.",
+    "breadcrumb": "RESTITUTIEBELEID",
+    "badge": "JURIDISCH",
+    "title": "Restitutie- en annuleringsbeleid",
+    "subtitle": "Laatst bijgewerkt: februari 2026",
+    "intro": "Bij DMC Kreatif zetten wij ons in voor het leveren van hoogwaardige digitale diensten. Dit beleid beschrijft de voorwaarden voor restitutie en annulering van al onze diensten.",
+    "customProjects": {
+      "title": "Maatwerk webontwikkelingsprojecten",
+      "content": "Maatwerkprojecten (Launch, Growth, Scale en Commerce) volgen een mijlpaalgebaseerde betalingsstructuur:\n\n• 50% aanbetaling is vereist voor aanvang van de werkzaamheden\n• 50% restant is verschuldigd bij oplevering (of betaling in 3 delen voor Scale en Commerce)\n\nAnnuleringsvoorwaarden:\n• Vóór aanvang designfase: Volledige restitutie van aanbetaling minus €50 administratiekosten\n• Tijdens designfase: 50% van aanbetaling gerestitueerd\n• Na goedkeuring design: Geen restitutie van aanbetaling; restant wordt niet gefactureerd\n• Na aanvang ontwikkeling: Geen restitutie; tot dan voltooid werk wordt opgeleverd\n\nAlle annuleringen moeten schriftelijk worden ingediend bij hello@dmckreatif.com."
+    },
+    "templates": {
+      "title": "Website templates",
+      "content": "Vooraf gebouwde templates gekocht via onze marketplace zijn digitale producten die direct of binnen 24 uur tot 5 dagen worden geleverd, afhankelijk van het pakket.\n\n• Business Card (€39): Geleverd binnen 24 uur — geen restitutie na levering\n• Starter (€99): Geleverd binnen 1-3 dagen — geen restitutie na levering\n• Professional (€179): Geleverd binnen 3-5 dagen — geen restitutie na levering\n\nU kunt restitutie aanvragen vóór aanvang van de levering als de personalisatie nog niet is gestart. Zodra personalisatie (logo, kleuren, content) is toegepast, wordt het template beschouwd als een maatwerkproduct en is het niet restitueerbaar."
+    },
+    "carePlans": {
+      "title": "Onderhoudsplannen (Care Plans)",
+      "content": "Care Plan-abonnementen kunnen op elk moment worden opgezegd met 30 dagen schriftelijke opzegtermijn.\n\n• Geen restitutie voor de lopende factureringsperiode\n• Diensten lopen door tot het einde van de betaalde periode\n• Na opzegging stoppen hosting en ondersteuning tenzij overgedragen aan een andere aanbieder\n• Domeinnamen die namens u zijn aangeschaft blijven uw eigendom\n\nOm op te zeggen, stuur een e-mail naar hello@dmckreatif.com met uw accountgegevens."
+    },
+    "euRights": {
+      "title": "Uw rechten onder EU-wetgeving",
+      "content": "Op grond van de Europese Richtlijn Consumentenrechten (2011/83/EU) hebben consumenten een herroepingsrecht van 14 dagen voor online aankopen. Dit recht is echter niet van toepassing op:\n\n• Digitale inhoud die is geopend of gedownload (Artikel 16(m))\n• Diensten die volledig zijn uitgevoerd met voorafgaande uitdrukkelijke toestemming van de consument (Artikel 16(a))\n• Goederen of diensten die duidelijk gepersonaliseerd zijn (Artikel 16(c))\n\nDoor een bestelling te plaatsen en akkoord te gaan met onmiddellijke aanvang van de werkzaamheden, erkent u dat u afstand doet van uw herroepingsrecht zodra de dienst is begonnen of het digitale product is geleverd."
+    },
+    "process": {
+      "title": "Hoe een restitutie aanvragen",
+      "content": "Om restitutie aan te vragen:\n\n1. Stuur een e-mail naar hello@dmckreatif.com met als onderwerp 'Restitutieaanvraag — [Bestelnummer]'\n2. Vermeld uw volledige naam, bestelnummer en reden van de aanvraag\n3. Wij beoordelen uw aanvraag binnen 2 werkdagen\n4. Goedgekeurde restituties worden binnen 5-10 werkdagen verwerkt op de oorspronkelijke betaalmethode\n\nVoor vragen kunt u ook contact opnemen via het contactformulier op onze website."
+    },
+    "exceptions": {
+      "title": "Uitzonderingen en bijzondere omstandigheden",
+      "content": "Wij begrijpen dat uitzonderlijke situaties zich kunnen voordoen. In de volgende gevallen kunnen wij naar eigen inzicht een volledige of gedeeltelijke restitutie aanbieden:\n\n• Aanzienlijke vertraging in de levering voorbij de afgesproken termijn (meer dan 14 dagen)\n• Het geleverde werk wijkt materieel af van de overeengekomen specificatie\n• Technische problemen aan onze kant die voltooiing van het project verhinderen\n\nElk geval wordt individueel beoordeeld. Wij streven altijd naar een eerlijke oplossing voor beide partijen."
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "Voor vragen over restitutie of annulering:\nE-mail: hello@dmckreatif.com\nContactformulier: https://dmckreatif.com/nl/contact\n\nWij streven ernaar alle restitutieaanvragen binnen 2 werkdagen te beantwoorden."
     }
   },
   "cookies": {
@@ -1395,5 +1499,14 @@
       "title": "Website kostengids 2025",
       "desc": "Hoeveel kost een professionele website in Europa?"
     }
+  },
+  "stickyMobile": {
+    "text": "Start uw project vandaag",
+    "cta": "OFFERTE AANVRAGEN",
+    "close": "Sluiten"
+  },
+  "clientLogos": {
+    "trustedBy": "VERTROUWD DOOR BEDRIJVEN IN HEEL EUROPA",
+    "projectsDelivered": "33+ projecten geleverd in 4 landen"
   }
 }

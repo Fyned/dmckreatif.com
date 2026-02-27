@@ -48,6 +48,9 @@ const CaseStudiesPage = lazy(() => import("@/pages/CaseStudiesPage"));
 const ServiceDetailPage = lazy(() => import("@/pages/ServiceDetailPage"));
 const PrivacyPage = lazy(() => import("@/pages/PrivacyPage"));
 const TermsPage = lazy(() => import("@/pages/TermsPage"));
+const LegalNoticePage = lazy(() => import("@/pages/LegalNoticePage"));
+const CookiePolicyPage = lazy(() => import("@/pages/CookiePolicyPage"));
+const RefundPolicyPage = lazy(() => import("@/pages/RefundPolicyPage"));
 const CityServicePage = lazy(() => import("@/pages/CityServicePage"));
 const NotFoundPage = lazy(() => import("@/pages/NotFoundPage"));
 
@@ -106,6 +109,9 @@ export default function App() {
             <Route path="templates/order/confirm/:orderId" element={<TemplateOrderConfirmPage />} />
             <Route path="privacy" element={<PrivacyPage />} />
             <Route path="terms" element={<TermsPage />} />
+            <Route path="legal" element={<LegalNoticePage />} />
+            <Route path="cookie-policy" element={<CookiePolicyPage />} />
+            <Route path="refund-policy" element={<RefundPolicyPage />} />
             <Route path="login" element={<LoginPage />} />
             <Route path="register" element={<RegisterPage />} />
             <Route path="forgot-password" element={<ForgotPasswordPage />} />

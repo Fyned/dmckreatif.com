@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, Gift } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
+import { supabase } from "@/lib/supabase";
 
 const SESSION_KEY = "dmc_exit_intent_shown";
 
@@ -13,6 +14,7 @@ export default function ExitIntentPopup() {
   const [isVisible, setIsVisible] = useState(false);
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const showPopup = useCallback(() => {
     if (sessionStorage.getItem(SESSION_KEY)) return;
@@ -51,10 +53,21 @@ export default function ExitIntentPopup() {
     trackEvent("exit_intent_dismissed", "engagement", "popup");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email.trim()) return;
+    if (!email.trim() || loading) return;
 
+    setLoading(true);
+
+    const { error } = await supabase
+      .from("lead_magnet_downloads")
+      .insert({ email: email.trim(), resource: "exit_intent_audit" });
+
+    if (error && error.code !== "23505") {
+      console.error("Exit intent save error:", error);
+    }
+
+    setLoading(false);
     setSubmitted(true);
     trackEvent("exit_intent_conversion", "lead_generation", email);
   };
@@ -127,10 +140,20 @@ export default function ExitIntentPopup() {
                     />
                     <button
                       type="submit"
-                      className="w-full inline-flex items-center justify-center gap-2 bg-neo-black text-neo-white border-2 border-neo-black px-6 py-3 font-space font-bold text-sm uppercase tracking-wider shadow-hard hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"
+                      disabled={loading}
+                      className="w-full inline-flex items-center justify-center gap-2 bg-neo-black text-neo-white border-2 border-neo-black px-6 py-3 font-space font-bold text-sm uppercase tracking-wider shadow-hard hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all disabled:opacity-60 disabled:cursor-not-allowed"
                     >
-                      {t("exitIntent.cta", "GET FREE AUDIT")}
-                      <ArrowRight size={16} />
+                      {loading ? (
+                        <span className="flex items-center justify-center gap-2">
+                          <span className="w-4 h-4 border-2 border-neo-white border-t-transparent rounded-full animate-spin" />
+                          Sending...
+                        </span>
+                      ) : (
+                        <>
+                          {t("exitIntent.cta", "GET FREE AUDIT")}
+                          <ArrowRight size={16} />
+                        </>
+                      )}
                     </button>
                   </form>
 

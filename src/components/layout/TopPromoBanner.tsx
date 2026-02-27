@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Percent } from "lucide-react";
-import CountdownTimer from "@/components/ui/CountdownTimer";
+import { X, Sparkles } from "lucide-react";
 
 const DISMISS_KEY = "top_promo_dismissed";
 
@@ -15,7 +14,6 @@ export default function TopPromoBanner() {
   const [dismissed, setDismissed] = useState(() => {
     const ts = sessionStorage.getItem(DISMISS_KEY);
     if (!ts) return false;
-    // Re-show after 1 hour even in same session
     return Date.now() - Number(ts) < 3600000;
   });
 
@@ -23,13 +21,6 @@ export default function TopPromoBanner() {
     sessionStorage.setItem(DISMISS_KEY, String(Date.now()));
     setDismissed(true);
   }
-
-  const countdownLabels = {
-    days: t("promo.days", "DAYS"),
-    hours: t("promo.hours", "HRS"),
-    min: t("promo.min", "MIN"),
-    sec: t("promo.sec", "SEC"),
-  };
 
   return (
     <AnimatePresence>
@@ -45,16 +36,11 @@ export default function TopPromoBanner() {
             {/* Icon + Text */}
             <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
               <div className="hidden sm:flex w-7 h-7 bg-neo-lime border border-neo-black items-center justify-center">
-                <Percent size={14} strokeWidth={3} />
+                <Sparkles size={14} strokeWidth={3} />
               </div>
               <span className="font-space font-bold text-xs sm:text-sm text-neo-lime uppercase tracking-wider whitespace-nowrap">
-                {t("promo.bannerShort", "UP TO 25% OFF")}
+                {t("promo.bannerShort", "LAUNCH PRICING — FROM €349")}
               </span>
-            </div>
-
-            {/* Countdown */}
-            <div className="flex-shrink-0">
-              <CountdownTimer labels={countdownLabels} size="xs" />
             </div>
 
             {/* CTA Button */}
@@ -62,7 +48,7 @@ export default function TopPromoBanner() {
               to={`/${currentLocale}/pricing`}
               className="hidden md:inline-block bg-neo-lime border-2 border-neo-black px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider hover:bg-neo-lime/80 transition-colors whitespace-nowrap shadow-hard-sm"
             >
-              {t("promo.ctaButton", "VIEW DISCOUNTED PRICES")}
+              {t("promo.ctaButton", "VIEW PRICING")}
             </Link>
 
             {/* Close */}

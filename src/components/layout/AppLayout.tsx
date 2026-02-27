@@ -6,6 +6,7 @@ import ProgressBar from "./ProgressBar";
 import CampaignBanner from "./CampaignBanner";
 import TopPromoBanner from "./TopPromoBanner";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import ExitIntentPopup from "@/components/ui/ExitIntentPopup";
 import CampaignPopup from "@/components/ui/CampaignPopup";
 import SocialProofNotification from "@/components/ui/SocialProofNotification";
@@ -31,6 +32,7 @@ export default function AppLayout() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <StickyMobileCTA />
       <CampaignPopup />
       <ExitIntentPopup />
       <SocialProofNotification />

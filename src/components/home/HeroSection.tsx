@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import NeoButton from "@/components/ui/NeoButton";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
+import { BOOKING_URL } from "@/lib/constants";
 
 export default function HeroSection() {
   const { t } = useTranslation();
@@ -55,6 +56,19 @@ export default function HeroSection() {
             <NeoButton href="/portfolio" variant="outline" size="lg">
               {t("hero.ctaSecondary")} <ExternalLink size={16} />
             </NeoButton>
+          </motion.div>
+
+          {/* Book a call link */}
+          <motion.div variants={fadeInUp} className="mb-2">
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-mono text-xs text-neo-black/50 hover:text-neo-lime transition-colors"
+            >
+              {t("hero.bookCall", "or book a free 15-min call \u2192")}
+              <ArrowRight size={12} />
+            </a>
           </motion.div>
 
           {/* Micro-copy */}

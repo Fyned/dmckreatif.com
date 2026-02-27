@@ -2,10 +2,12 @@ import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
 import DualLogo from "./DualLogo";
 import NewsletterSignup from "@/components/ui/NewsletterSignup";
+import { useCookieConsent } from "@/contexts/CookieConsentContext";
 
 export default function Footer() {
   const { t } = useTranslation();
   const { locale } = useParams();
+  const { openManager } = useCookieConsent();
   const currentLocale = locale ?? "en";
   const currentYear = new Date().getFullYear();
 
@@ -90,6 +92,30 @@ export default function Footer() {
               >
                 {t("footer.terms", "Terms of Service")}
               </Link>
+              <Link
+                to={`/${currentLocale}/legal`}
+                className="font-mono text-xs text-neo-bg hover:text-neo-lime transition-colors"
+              >
+                {t("footer.legal", "Legal Notice")}
+              </Link>
+              <Link
+                to={`/${currentLocale}/cookie-policy`}
+                className="font-mono text-xs text-neo-bg hover:text-neo-lime transition-colors"
+              >
+                {t("footer.cookiePolicy", "Cookie Policy")}
+              </Link>
+              <Link
+                to={`/${currentLocale}/refund-policy`}
+                className="font-mono text-xs text-neo-bg hover:text-neo-lime transition-colors"
+              >
+                {t("footer.refundPolicy", "Refund Policy")}
+              </Link>
+              <button
+                onClick={openManager}
+                className="font-mono text-xs text-neo-bg hover:text-neo-lime transition-colors text-left"
+              >
+                {t("footer.manageCookies", "Manage Cookies")}
+              </button>
             </div>
           </div>
 

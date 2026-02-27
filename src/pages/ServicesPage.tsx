@@ -14,13 +14,13 @@ import {
   Clock,
   Rocket,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import NeoButton from "@/components/ui/NeoButton";
 import NeoBadge from "@/components/ui/NeoBadge";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import JsonLd from "@/components/seo/JsonLd";
-import { buildServiceSchema } from "@/lib/seo-schemas";
+import { buildAllServicesSchema, buildFAQPageSchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
 import {
   fadeInUp,
   staggerContainer,
@@ -38,6 +38,7 @@ interface ServiceCard {
   titleKey: string;
   descKey: string;
   features: string[];
+  idealForKey?: string;
 }
 
 const services: ServiceCard[] = [
@@ -50,6 +51,7 @@ const services: ServiceCard[] = [
     priceKey: "services.webDev.priceRange",
     titleKey: "services.webDev.title",
     descKey: "services.webDev.description",
+    idealForKey: "services.webDev.idealFor",
     features: [
       "React / Next.js / Vite",
       "Responsive Design",
@@ -68,6 +70,7 @@ const services: ServiceCard[] = [
     priceKey: "services.ecommerce.priceRange",
     titleKey: "services.ecommerce.title",
     descKey: "services.ecommerce.description",
+    idealForKey: "services.ecommerce.idealFor",
     features: [
       "Payment Integration",
       "Inventory Management",
@@ -86,6 +89,7 @@ const services: ServiceCard[] = [
     priceKey: "services.seo.priceRange",
     titleKey: "services.seo.title",
     descKey: "services.seo.description",
+    idealForKey: "services.seo.idealFor",
     features: [
       "Technical SEO Audit",
       "Keyword Research",
@@ -104,6 +108,7 @@ const services: ServiceCard[] = [
     priceKey: "pricing.carePlanPrice",
     titleKey: "pricing.carePlan",
     descKey: "pricing.carePlanDescription",
+    idealForKey: "services.carePlan.idealFor",
     features: [
       "Hosting & SSL",
       "Monthly Updates",
@@ -127,6 +132,40 @@ const faqItems: FaqItem[] = [
   { questionKey: "pricing.faq4Q", answerKey: "pricing.faq4A" },
   { questionKey: "pricing.faq5Q", answerKey: "pricing.faq5A" },
 ];
+
+function ServiceDescription({ text }: { text: string }) {
+  const { t } = useTranslation();
+  const [expanded, setExpanded] = useState(false);
+  const [clamped, setClamped] = useState(false);
+  const ref = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (el) setClamped(el.scrollHeight > el.clientHeight + 2);
+  }, [text]);
+
+  return (
+    <div className="mb-6">
+      <p
+        ref={ref}
+        className={`font-mono text-sm text-neo-black/80 leading-relaxed ${
+          expanded ? "" : "line-clamp-4"
+        }`}
+      >
+        {text}
+      </p>
+      {clamped && (
+        <button
+          type="button"
+          onClick={() => setExpanded(!expanded)}
+          className="mt-2 font-mono text-xs font-bold uppercase tracking-wider text-neo-black/60 hover:text-neo-black transition-colors"
+        >
+          {expanded ? t("services.showLess", "Show less") : t("services.readMore", "Read more")}
+        </button>
+      )}
+    </div>
+  );
+}
 
 function FaqAccordion({ questionKey, answerKey }: FaqItem) {
   const { t } = useTranslation();
@@ -184,14 +223,19 @@ export default function ServicesPage() {
 
       <Breadcrumbs items={[{ label: t("nav.services", "SERVICES") }]} />
 
+      {buildAllServicesSchema(currentLocale).map((schema, i) => (
+        <JsonLd key={i} data={schema} />
+      ))}
       <JsonLd
-        data={buildServiceSchema({
-          name: "Web Development",
-          description:
-            "Custom websites built with React, Next.js, and Vite for European businesses.",
-          price: "497",
-          locale: currentLocale,
-        })}
+        data={buildFAQPageSchema(
+          faqItems.map((faq) => ({
+            question: t(faq.questionKey),
+            answer: t(faq.answerKey),
+          }))
+        )}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema(currentLocale, [{ name: "Home", path: "" }], t("nav.services", "Services"))}
       />
 
       {/* Hero Section */}
@@ -276,9 +320,21 @@ export default function ServicesPage() {
                     </div>
 
                     {/* Description */}
-                    <p className="font-mono text-sm text-neo-black/80 leading-relaxed mb-6">
-                      {t(service.descKey)}
-                    </p>
+                    <ServiceDescription text={t(service.descKey)} />
+
+                    {/* Ideal For Badges */}
+                    {service.idealForKey && (
+                      <div className="flex flex-wrap items-center gap-2 mb-4">
+                        <span className="font-mono text-[10px] font-bold text-neo-black/50 uppercase tracking-wider">
+                          {t("services.idealFor", "IDEAL FOR:")}
+                        </span>
+                        {t(service.idealForKey, "").split(",").filter(Boolean).map((audience) => (
+                          <span key={audience.trim()} className="font-mono text-[10px] bg-neo-bg border border-neo-black/20 px-2 py-0.5">
+                            {audience.trim()}
+                          </span>
+                        ))}
+                      </div>
+                    )}
 
                     {/* Feature List */}
                     <ul className="space-y-2 mb-6">

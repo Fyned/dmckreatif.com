@@ -205,8 +205,7 @@ export function buildBreadcrumbSchema(
       "@type": "ListItem" as const,
       position: listItems.length + 1,
       name: currentPageName,
-      item: undefined as unknown as string,
-    });
+    } as typeof listItems[number]);
   }
 
   return {
@@ -537,6 +536,52 @@ export function buildCaseStudySchema(
       "@type": "WebSite",
       url: project.url,
     },
+  };
+}
+
+/**
+ * FAQPage schema for rich snippets in SERPs.
+ * Use on pricing, services, and dedicated FAQ pages.
+ */
+export function buildFAQPageSchema(
+  faqs: Array<{ question: string; answer: string }>
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
+/**
+ * HowTo schema for process/workflow pages.
+ * Eligible for rich snippets showing steps in SERPs.
+ */
+export function buildHowToSchema(params: {
+  name: string;
+  description: string;
+  totalTime?: string;
+  steps: Array<{ name: string; text: string }>;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: params.name,
+    description: params.description,
+    ...(params.totalTime && { totalTime: params.totalTime }),
+    step: params.steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+    })),
   };
 }
 

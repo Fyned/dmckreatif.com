@@ -50,20 +50,21 @@
   },
   "hero": {
     "status": "AGENTUR_STATUS: PROJEKTE WERDEN ANGENOMMEN",
-    "titleLine1": "WIR BAUEN WEBSITES",
-    "titleAccent": "DIE KONVERTIEREN",
+    "titleLine1": "PREMIUM WEBSITES",
+    "titleAccent": "FÜR EUROPA",
     "subtitle": "Premium-Webentwicklung für europäische Unternehmen. Maßgeschneidert, blitzschnell, mehrsprachig.",
     "ctaPrimary": "STARTEN SIE IHR PROJEKT",
     "ctaSecondary": "UNSERE ARBEITEN ANSEHEN",
-    "stat1": "48+",
+    "stat1": "33+",
     "stat1Label": "Projekte",
-    "stat2": "44+",
+    "stat2": "4",
     "stat2Label": "Länder",
     "stat3": "100%",
     "stat3Label": "Pünktlich",
     "stat4": "98+",
     "stat4Label": "Lighthouse",
-    "microCopy": "Handgefertigt von professionellen Entwicklern • 10+ internationale Projekte geliefert"
+    "microCopy": "Handgefertigt von professionellen Entwicklern • 33+ internationale Projekte geliefert",
+    "bookCall": "oder buchen Sie ein kostenloses 15-Min-Gespräch →"
   },
   "marquee": {
     "items": "WEBENTWICKLUNG // E-COMMERCE // SEO-OPTIMIERUNG // NEXT.JS // REACT // TAILWIND // MEHRSPRACHIG // FRAMER MOTION // TYPESCRIPT // RESPONSIVES DESIGN"
@@ -73,24 +74,33 @@
     "sectionSubtitle": "SYS.LEISTUNGEN",
     "webDev": {
       "title": "WEBENTWICKLUNG",
-      "description": "Maßgeschneiderte Websites mit Next.js und React. Blitzschnell, SEO-optimiert und responsive auf allen Geräten.",
-      "priceRange": "AB €349"
+      "description": "Wir entwerfen und entwickeln maßgeschneiderte Websites, die Besucher in Kunden verwandeln. Jedes Projekt beginnt mit einer eingehenden Analyse Ihrer Marke, Zielgruppe und Geschäftsziele, damit das Ergebnis Ihre Identität widerspiegelt — kein generisches Template. Unser Tech-Stack basiert auf React, Next.js und Vite und bietet serverseitiges Rendering für SEO, blitzschnelle Seitenübergänge und Code-Splitting, das die initiale Ladezeit unter 1,5 Sekunden hält. Jede Website ist vollständig responsive von Mobil bis Ultra-Wide, erzielt 95+ Punkte bei Google Lighthouse in Performance, Barrierefreiheit, Best Practices und SEO und wird mit strukturiertem Daten-Markup ausgeliefert, damit Suchmaschinen Ihre Inhalte vom ersten Tag an verstehen. Wir binden Kontaktformulare, Analytics-Dashboards und CRM-Integrationen ein und stellen Ihnen wöchentlich einen Live-Staging-Link zur Überprüfung bereit. Nach dem Launch erhalten Sie 30 Tage Prioritäts-Support, vollständiges Quellcode-Eigentum und Dokumentation, damit Ihr Team — oder jeder andere Entwickler — die Website eigenständig pflegen kann. Ob Sie eine einzelne Landingpage oder eine mehrsprachige Unternehmenswebsite für Frankreich, Belgien, die Niederlande und Deutschland benötigen — wir liefern pünktlich und im Budget.",
+      "priceRange": "AB €349",
+      "idealFor": "KMU, Startups, Freiberufler, Agenturen"
     },
     "ecommerce": {
       "title": "E-COMMERCE",
-      "description": "Vollständige Online-Shops mit Zahlungsintegration, Bestandsverwaltung und Mehrwährungsunterstützung.",
-      "priceRange": "AB €2.497"
+      "description": "Wir bauen Online-Shops, die für den Verkauf auf europäischen Märkten entwickelt sind. Vom Produktkatalog bis zur Bestellbestätigung — jeder Schritt ist auf Conversion optimiert: schnell ladende Produktseiten, intuitive Filterung, Ein-Klick-Warenkorb und ein optimierter Checkout-Prozess, der Kreditkarten, iDEAL, Bancontact, SEPA und mehr über Stripe unterstützt. Der Bestand synchronisiert sich in Echtzeit, Multi-Währungs-Preise passen sich automatisch an und Steuerregeln erfüllen die EU-MwSt-Vorschriften ab Installation. Das Admin-Panel ermöglicht Ihnen Produktverwaltung, Bestellverfolgung, Rabattcodes und Verkaufsberichte ohne eine Zeile Code zu berühren. Wir integrieren Versandrechner, E-Mails zur Warenkorbwiederherstellung und Bewertungssysteme, die Social Proof aufbauen. Technisch werden Produktseiten vorgerendert für sofortige Google-Indexierung, strukturierte Daten ermöglichen Rich-Suchergebnisse und Bildoptimierung hält das Seitengewicht niedrig. Jeder Shop ist vollständig responsive, unterstützt standardmäßig vier Sprachen und beinhaltet 30 Tage Post-Launch-Support sowie die Schulung Ihres Teams am Admin-Dashboard.",
+      "priceRange": "AB €2.497",
+      "idealFor": "Einzelhändler, D2C-Marken, Länderübergreifende Verkäufer"
     },
     "seo": {
       "title": "SEO & ANALYTICS",
-      "description": "Technische SEO-Audits, Keyword-Optimierung, Google Analytics-Einrichtung und Performance-Überwachung.",
-      "priceRange": "AB €297"
+      "description": "Wir helfen europäischen Unternehmen, bei Google gefunden zu werden — und dort zu bleiben. Unser Prozess beginnt mit einem umfassenden technischen Audit: Crawlbarkeit, Indexierung, Core Web Vitals, mobile Benutzerfreundlichkeit, strukturierte Daten und interne Linkarchitektur. Wir beheben jedes Problem, das Suchmaschinen daran hindert, Ihre Website zu verstehen, und gehen dann zur Keyword-Recherche über, die auf Ihren Markt zugeschnitten ist — ob Berlin, München, Hamburg oder Wien. On-Page-Optimierung umfasst Meta-Titel, Beschreibungen, Überschriftenhierarchie, Bild-Alt-Texte und Schema-Markup für Rich Results. Wir richten Google Search Console und Analytics 4 ein, damit Sie Impressionen, Klicks, Rankings und Conversions in Echtzeit verfolgen können. Für laufende Kunden liefern wir monatliche Performance-Berichte mit konkreten Handlungsempfehlungen: Content-Empfehlungen, Backlink-Möglichkeiten und Wettbewerbsanalyse. Unser Ansatz ist datengesteuert und transparent — keine Black-Hat-Techniken, keine Eitelkeitsmetriken, nur messbar organisches Wachstum. Kunden verzeichnen typischerweise eine Steigerung des organischen Traffics von 40 bis 120 % innerhalb der ersten sechs Monate.",
+      "priceRange": "AB €297",
+      "idealFor": "Lokale Unternehmen, Wachsende Firmen, Online-Shops"
+    },
+    "carePlan": {
+      "idealFor": "Alle bestehenden Kunden, Vielbeschäftigte Unternehmer"
     },
     "marketing": {
       "title": "DIGITALES MARKETING",
       "description": "Google Ads-Kampagnen, Social-Media-Management, Content-Strategie und Conversion-Optimierung.",
       "priceRange": "AB €397"
     },
+    "idealFor": "Ideal für",
+    "readMore": "Mehr lesen",
+    "showLess": "Weniger anzeigen",
     "seeWork": "Unsere Arbeit",
     "viewPricing": "Preise ansehen",
     "readBlog": "Blog lesen",
@@ -382,7 +392,7 @@
     "carePlanProFeatures": "Alles aus Basis // Wöchentliche Updates // Prioritäts-Support // Monatlicher Bericht // Inhaltsaktualisierungen (2/Monat)",
     "carePlanEnterpriseFeatures": "Alles aus Pro // Tägliche Überwachung // 24/7 dedizierter Support // A/B-Tests // Performance-Optimierung // Vierteljahr-Strategiegespräch",
     "carePlanPrice": "ab €47/Monat",
-    "carePlanDescription": "Hosting, Updates, Support und monatliche Performance-Berichte.",
+    "carePlanDescription": "Ihre Website ist ein lebendiges Gut — sie braucht regelmäßige Pflege, um schnell, sicher und sichtbar zu bleiben. Unser Wartungsplan deckt alles nach dem Launch ab, damit Sie sich auf Ihr Geschäft konzentrieren können. Wir übernehmen Managed Hosting mit SSL, CDN und 99,9 % Verfügbarkeit, wenden CMS- und Dependency-Updates an, bevor Schwachstellen ausgenutzt werden können, und führen automatisierte Sicherheitsscans durch, die Probleme in Echtzeit melden. Jeden Monat erhalten Sie einen klaren Performance-Bericht zu Verfügbarkeit, Seitengeschwindigkeit, Traffic-Trends und SEO-Rankings mit umsetzbaren Empfehlungen. Eine Textänderung, ein neues Banner oder eine saisonale Aktion nötig? Content-Updates sind inklusive — schicken Sie uns einfach die Details per E-Mail. Prioritäts-Support bedeutet, dass Ihre Anfragen Vorrang erhalten: kritische Fixes innerhalb von 4 Stunden, Standardanfragen innerhalb von 24 Stunden. Wir überwachen auch Core Web Vitals und optimieren proaktiv Bilder, Caching und Code-Bundles, damit Ihre Lighthouse-Scores über 95 bleiben. Für Pro- und Enterprise-Pakete ergänzen wir wöchentliche Check-ins, A/B-Tests, vierteljährliche Strategiegespräche und einen dedizierten Account Manager.",
     "viewAll": "ALLE PLÄNE ANSEHEN",
     "faqTitle": "FAQ",
     "faq1Q": "Was ist der Unterschied zwischen Vorlagen und individueller Entwicklung?",
@@ -534,24 +544,23 @@
     "reviewsLabel": "Bewertungen"
   },
   "promo": {
-    "badgeText": "ZEITLICH BEGRENZTES ANGEBOT",
-    "bannerShort": "BIS ZU 25% RABATT",
-    "title": "ZEITLICH BEGRENZT \u2014 BIS ZU 25% RABATT",
-    "description": "Alle ma\u00dfgeschneiderten Entwicklungspakete sind f\u00fcr begrenzte Zeit reduziert. Sichern Sie sich diese Preise, bevor sie zur\u00fcckkehren!",
-    "homeTitle": "BIS ZU 25% RABATT AUF ALLE PAKETE",
-    "homeDescription": "Holen Sie sich Ihre professionelle Website zu unschlagbaren Preisen. Ma\u00dfgeschneiderte Entwicklungspakete sind nur f\u00fcr kurze Zeit im Angebot!",
-    "endsIn": "ANGEBOT ENDET IN",
-    "dontMiss": "NICHT VERPASSEN",
-    "save": "SPAREN",
-    "saveUpTo": "Sparen Sie bis zu 25%",
-    "ctaButton": "RABATTPREISE ANSEHEN",
-    "days": "TAGE",
-    "hours": "STD",
-    "min": "MIN",
-    "sec": "SEK",
-    "popupTitle": "25% RABATT AUF ALLE PAKETE",
-    "popupDescription": "Alle maßgeschneiderten Entwicklungspakete sind reduziert. Einmalige Zahlung, keine versteckten Kosten!",
-    "popupNote": "Keine Verpflichtung — kostenlose Beratung inklusive"
+    "badgeText": "FAIRE PREISE",
+    "bannerShort": "WEBSITES AB 349€",
+    "title": "PREMIUM-QUALITÄT, TRANSPARENTE PREISE",
+    "description": "Maßgeschneiderte Websites für europäische Unternehmen. Keine versteckten Kosten, keine Überraschungen — nur Premium-Qualität zu fairen Preisen.",
+    "homeTitle": "WEBSITES FÜR EUROPÄISCHE UNTERNEHMEN",
+    "homeDescription": "Wir liefern Premium-Webentwicklung zu wettbewerbsfähigen Preisen. Individuelles Design, moderne Technologie, mehrsprachige Unterstützung — alles, was Ihr Unternehmen braucht, um online zu wachsen.",
+    "startingFrom": "AB",
+    "oneTime": "EINMALZAHLUNG",
+    "perk1": "Kostenlose Beratung",
+    "perk2": "Keine versteckten Kosten",
+    "perk3": "Zufriedenheitsgarantie",
+    "fromPrice": "Ab 349€",
+    "saveUpTo": "Faire Preise für europäische Unternehmen",
+    "ctaButton": "PREISE ANSEHEN",
+    "popupTitle": "PREMIUM-QUALITÄT, FAIRE PREISE",
+    "popupDescription": "Maßgeschneiderte Websites für europäische Unternehmen. Transparente Preise, keine Überraschungen.",
+    "popupNote": "Unverbindlich — kostenloses Beratungsgespräch inklusive"
   },
   "cta": {
     "title": "BEREIT, ETWAS ZU BAUEN?",
@@ -704,7 +713,7 @@
     "description": "Eine Digital-Agentur-Partnerschaft im Dienste europäischer Unternehmen. DMC Kreatif betreut internationale Märkte, GMG Design den Inlandsmarkt. Gleiches Team, gleiche Qualität, doppelte Reichweite.",
     "founderName": "Musa Kerem Demirci",
     "founderRole": "GRÜNDER & LEITENDER ENTWICKLER",
-    "founderBio": "Full-Stack-Entwickler mit Expertise in React, Next.js und modernen Webtechnologien. Über 10 Produktions-Websites für Kunden in Frankreich, Belgien und Großbritannien erstellt.",
+    "founderBio": "Musa Kerem Demirci ist Full-Stack-Entwickler und Gründer von DMC Kreatif, einer Webentwicklungsagentur für Unternehmen in Westeuropa. Mit fundierter Expertise in React, Next.js, TypeScript und Tailwind CSS hat er persönlich über 33 Websites für Kunden in Frankreich, Belgien, dem Vereinigten Königreich, den Niederlanden und Deutschland entworfen und entwickelt. Sein Ansatz verbindet technische Präzision mit Designgefühl — jedes Projekt zielt auf 95+ Google Lighthouse-Scores, Ladezeiten unter 2 Sekunden und vollständige mehrsprachige SEO-Implementierung. Bevor er DMC Kreatif 2023 gründete, sammelte Musa internationale Erfahrung mit Kunden aus verschiedenen Branchen wie Bau, Energie, Buchhaltung und E-Commerce. Er spricht Englisch, Französisch und Türkisch und arbeitet eng mit niederländisch- und deutschsprachigen Kunden durch lokalisierte Kommunikation zusammen. Seine Philosophie ist einfach: Jedes Pixel zählt, jede Millisekunde ist wichtig, und jedes Unternehmen verdient eine Website, die seine Marke wirklich repräsentiert. Mit einem Hintergrund in Informatik-Ingenieurwesen und über 3 Jahren professioneller Webentwicklungserfahrung verbindet Kerem technische Tiefe mit kreativem Designdenken.",
     "mission": "UNSERE MISSION",
     "missionText": "Premium-Weblösungen liefern, die europäischen Unternehmen beim Wachstum helfen. Jeder Pixel zählt. Jede Millisekunde zählt.",
     "value1Title": "QUALITÄT ZUERST",
@@ -732,8 +741,8 @@
     "milestone2Desc": "Websites für Cakir Facades und Altinbas Moustiquaire in Frankreich geliefert. Starke Präsenz auf dem französischen Markt etabliert.",
     "milestone3Title": "Expansion nach Großbritannien",
     "milestone3Desc": "Expansion nach Großbritannien mit Adamsons Accountants. Britisches Bankkonto eröffnet und britische Marktpräsenz aufgebaut.",
-    "milestone4Title": "48+ Projekte Meilenstein",
-    "milestone4Desc": "48+ internationale Projekte in Frankreich, Belgien und UK abgeschlossen. 98+ Lighthouse-Scores bei jeder Auslieferung beibehalten.",
+    "milestone4Title": "33+ Projekte Meilenstein",
+    "milestone4Desc": "33+ internationale Projekte in Frankreich, Belgien und UK abgeschlossen. 98+ Lighthouse-Scores bei jeder Auslieferung beibehalten.",
     "milestone5Title": "Europäische Expansion",
     "milestone5Desc": "Dienstleistungen auf die Niederlande und Deutschland erweitert. Niederländische und deutsche Sprachunterstützung hinzugefügt. Mehrsprachige Website-Plattform gestartet.",
     "milestone6Title": "Vorlagen-Plattform Einführung",
@@ -806,7 +815,10 @@
     "location": "Unser Standort",
     "reviewTitle": "Zufrieden mit unserer Arbeit?",
     "reviewDescription": "Ihr Feedback ist uns wichtig. Hinterlassen Sie uns eine Bewertung auf Google.",
-    "leaveReview": "Bewertung abgeben"
+    "leaveReview": "Bewertung abgeben",
+    "bookCall": "Buchen Sie ein kostenloses Kennenlerngespräch",
+    "bookCallDesc": "15-minütiger Videoanruf, um Ihr Projekt zu besprechen. Unverbindlich.",
+    "bookNow": "JETZT BUCHEN"
   },
   "blog": {
     "introHeading": "Webentwicklungs-Einblicke für europäische Unternehmen",
@@ -816,57 +828,29 @@
     "readMore": "WEITERLESEN",
     "backToBlog": "ZURÜCK ZUM BLOG",
     "readTime": "LESEZEIT",
-    "post1Title": "Warum Ihr Unternehmen 2025 eine Website braucht",
-    "post1Excerpt": "Im digitalen Zeitalter ist keine Website zu haben wie keine Visitenkarte zu haben. Warum jedes europäische Unternehmen eine professionelle Webpräsenz braucht.",
-    "post1Content": "Eine professionelle Website ist für europäische Unternehmen nicht mehr optional. Sie ist der erste Ort, an dem potenzielle Kunden schauen, und sie prägt deren Wahrnehmung Ihrer Marke. 2025 sind Mobile-First-Design, schnelle Ladezeiten und mehrsprachige Unterstützung unerlässlich.",
-    "post2Title": "SEO-Grundlagen, die jedes kleine Unternehmen kennen sollte",
-    "post2Excerpt": "Technisches SEO muss nicht kompliziert sein. Lernen Sie die Grundlagen, die die Sichtbarkeit Ihrer Website in Suchmaschinen steigern können.",
-    "post2Content": "Suchmaschinenoptimierung beginnt mit den Grundlagen: korrekte Meta-Tags, schnelle Ladegeschwindigkeiten, mobile Responsivität und qualitativ hochwertiger Content. Für europäische Unternehmen ist lokales SEO entscheidend.",
-    "post3Title": "Next.js vs WordPress: Was ist besser für Ihr Unternehmen?",
-    "post3Excerpt": "Ein technischer Vergleich moderner Web-Frameworks mit traditionellen CMS-Plattformen. Geschwindigkeit, Sicherheit und Skalierbarkeit im Vergleich.",
-    "post3Content": "WordPress betreibt 40% des Webs, aber moderne Frameworks wie Next.js bieten erhebliche Vorteile. Next.js bietet serverseitiges Rendering für besseres SEO und statische Generierung für blitzschnelle Geschwindigkeit.",
-    "post4Title": "Wie Sie die Conversion-Rate Ihrer Website steigern",
-    "post4Excerpt": "Ihre Website bekommt Traffic, aber keine Leads? Hier sind bewährte Strategien, um Besucher in zahlende Kunden zu verwandeln.",
-    "post4Content": "Conversion-Optimierung beginnt mit dem Verständnis Ihrer Besucher. Klare Call-to-Action-Buttons, schnelle Ladezeiten und Vertrauenssignale sind unerlässlich.",
-    "post5Title": "Mehrsprachige Websites: Erweitern Sie Ihre Reichweite in Europa",
-    "post5Excerpt": "Wie der Aufbau einer mehrsprachigen Website Türen zu neuen Märkten öffnen und den Umsatz in europäischen Ländern steigern kann.",
-    "post5Content": "Europa ist ein mehrsprachiger Markt mit enormem Potenzial. Ein französisches Unternehmen mit einer englischen Website kann britische Kunden erreichen. Moderne Tools wie next-intl machen den Aufbau mehrsprachiger Websites effizient und SEO-freundlich.",
-    "post6Title": "Was kostet eine Website in Europa 2025?",
-    "post6Excerpt": "Eine transparente Aufschlüsselung der Webentwicklungspreise auf europäischen Märkten. Von Freelancer-Sätzen bis Agenturpaketen.",
-    "post6Content": "Websitekosten in Europa variieren erheblich je nach Land und Projektumfang. Eine einfache Einzelseite kostet zwischen 400 und 1500 Euro, während eine vollständige Unternehmenswebsite mit mehrsprachiger Unterstützung zwischen 2000 und 8000 Euro kosten kann. E-Commerce-Plattformen beginnen typischerweise bei 3000 Euro. Bei DMC Kreatif beginnen unsere transparenten Pakete bei 497 Euro, weil wir glauben, dass Premium-Qualität für wachsende Unternehmen zugänglich sein sollte.",
-    "post7Title": "Die wichtigsten Webdesign-Trends 2025",
-    "post7Excerpt": "Von Dark-Mode-Interfaces bis zu Mikro-Interaktionen — entdecken Sie die Designtrends, die Premium-Websites in diesem Jahr definieren.",
-    "post7Content": "Webdesign im Jahr 2025 wird durch zielgerichtete Ästhetik und Performance-First-Denken definiert. Dark Mode ist zum Standard für Premium-Marken geworden. Mikro-Interaktionen führen Benutzer mit subtilen Animationen durch Interfaces. Typografie steht im Mittelpunkt mit variablen Schriften und kinetischem Text, die einprägsame erste Eindrücke schaffen.",
-    "post8Title": "Warum Ihr französisches Unternehmen eine professionelle Website braucht",
-    "post8Excerpt": "Frankreich hat über 4 Millionen KMU, aber viele haben keine adäquate Online-Präsenz. Warum eine professionelle Website für das Wachstum unerlässlich ist.",
-    "post8Content": "Frankreich repräsentiert einen der größten digitalen Märkte in Europa, mit über 92 Prozent der Bevölkerung, die regelmäßig das Internet nutzen. Eine professionelle Website baut sofort Glaubwürdigkeit auf. Französische Verbraucher recherchieren online, bevor sie Kaufentscheidungen treffen. Lokale SEO-Optimierung hilft Ihrem Unternehmen, in Google Maps und lokalen Suchergebnissen zu erscheinen.",
-    "post9Title": "E-Commerce-Leitfaden für belgische Unternehmen",
-    "post9Excerpt": "Belgiens einzigartiger zweisprachiger Markt erfordert einen maßgeschneiderten Ansatz für den Online-Verkauf. Lernen Sie, eine erfolgreiche E-Commerce-Präsenz aufzubauen.",
-    "post9Content": "Belgien bietet eine einzigartige E-Commerce-Chance mit seinen französisch- und niederländischsprachigen Märkten. Einen erfolgreichen Online-Shop aufzubauen bedeutet, beide Gemeinschaften effektiv zu bedienen. Die Zahlungsintegration muss Bancontact umfassen, die dominierende belgische Zahlungsmethode. Das belgische E-Commerce-Recht verlangt klare Preise inklusive Mehrwertsteuer und ein 14-tägiges Rückgaberecht.",
-    "post10Title": "SEO-Tipps für britische Kleinunternehmen 2025",
-    "post10Excerpt": "Praktische, umsetzbare SEO-Strategien für den wettbewerbsintensiven britischen Markt. Verbessern Sie Ihre Rankings ohne großes Budget.",
-    "post10Content": "Der britische Markt ist online äußerst wettbewerbsfähig, aber kluge SEO-Strategien können kleinen Unternehmen helfen, über ihrem Gewicht zu punchen. Beginnen Sie mit der Google Business Profile Optimierung. Konzentrieren Sie sich auf Long-Tail-Keywords spezifisch für Ihren Standort und Service. Technische SEO-Grundlagen sind wichtiger denn je mit Core Web Vitals als Rankingfaktor.",
-    "post11Title": "Website-Geschwindigkeitsoptimierung: Ein vollständiger Leitfaden",
-    "post11Excerpt": "Jede Sekunde Ladezeit kostet Sie Conversions. Lernen Sie die technischen Strategien für blitzschnelle Websites.",
-    "post11Content": "Website-Geschwindigkeit beeinflusst direkt den Umsatz. Studien zeigen, dass eine Verzögerung von einer Sekunde die Conversions um 7 Prozent reduziert. Beginnen Sie mit Bildoptimierung mit modernen Formaten wie WebP und AVIF. Minimieren Sie JavaScript-Bundles durch Code-Splitting und Tree-Shaking. Implementieren Sie ein CDN, um Assets von Standorten zu liefern, die Ihren europäischen Nutzern am nächsten sind.",
-    "post12Title": "Wie Sie die richtige Webentwicklungsagentur wählen",
-    "post12Excerpt": "Nicht alle Agenturen sind gleich. Hier sind die Schlüsselkriterien zur Bewertung eines Webentwicklungspartners für Ihr Unternehmen.",
-    "post12Content": "Die Wahl einer Webentwicklungsagentur ist eine kritische Geschäftsentscheidung. Beginnen Sie mit der Prüfung ihres Portfolios. Überprüfen Sie ihre Lighthouse-Scores. Jede kompetente Agentur sollte konstant Werte von 90 oder höher erreichen. Bewerten Sie ihren Technologie-Stack. Moderne Agenturen verwenden React, Next.js oder Vue mit TypeScript und Tailwind CSS. Verstehen Sie ihre Preisstruktur klar.",
-    "post13Title": "React vs WordPress: Was sollte Ihr Unternehmen wählen?",
-    "post13Excerpt": "Ein detaillierter Vergleich von React-Websites gegenüber WordPress für den geschäftlichen Einsatz. Leistung, Kosten, Sicherheit und Wartung analysiert.",
-    "post13Content": "Die Wahl zwischen React und WordPress hängt von Ihren Geschäftsprioritäten ab. WordPress dominiert den Markt mit 40 Prozent Marktanteil, aber React-Lösungen gewinnen schnell an Boden. React-Websites mit Next.js bieten überlegene Leistung. Statische Generierung und serverseitiges Rendering erzeugen Seiten, die in unter einer Sekunde laden. Für Unternehmen mit häufigen Updates bietet ein Headless CMS das Beste aus beiden Welten.",
-    "post14Title": "DSGVO-konforme Website-Checkliste für 2025",
-    "post14Excerpt": "Eine umfassende Checkliste zur Sicherstellung der DSGVO-Konformität Ihrer Website. Vermeiden Sie Bußgelder bis zu 20 Millionen Euro.",
-    "post14Content": "DSGVO-Konformität ist für jede Website, die europäische Nutzer bedient, verpflichtend, mit Bußgeldern bis zu 20 Millionen Euro. Beginnen Sie mit einem Cookie-Einwilligungsbanner, das alle nicht-essenziellen Cookies bis zur aktiven Zustimmung blockiert. Ihre Datenschutzerklärung muss klar erläutern, welche Daten Sie sammeln und warum. Kontaktformulare dürfen nur notwendige Informationen erfassen.",
-    "post15Title": "Lokale SEO-Strategie für europäische Unternehmen",
-    "post15Excerpt": "Dominieren Sie lokale Suchergebnisse in Ihrer Stadt und Region. Ein praktischer Leitfaden für lokales SEO auf europäischen Märkten.",
-    "post15Content": "Lokales SEO ist die kosteneffektivste digitale Marketingstrategie für dienstleistungsorientierte Unternehmen in Europa. Google Business Profile ist Ihr Fundament. Erstellen Sie standortspezifische Landingpages für jede Stadt oder Region. Registrieren Sie sich bei europäischen Branchenverzeichnissen wie Pages Jaunes in Frankreich, Gouden Gids in Belgien und Yell im UK. Ermutigen Sie zufriedene Kunden, Google-Bewertungen zu hinterlassen.",
+    "comingSoonTitle": "Neue Artikel kommen bald",
+    "comingSoonText": "Wir bereiten ausführliche Artikel über Webentwicklung, SEO und digitales Marketing für europäische Unternehmen vor. Qualitätsinhalte brauchen Zeit — schauen Sie bald wieder vorbei.",
     "linkServices": "Website benötigt?",
     "linkServicesDesc": "Wir erstellen Premium-Websites für europäische Unternehmen. React, Vite, Next.js — ab 497 €.",
     "viewServices": "DIENSTE ANSEHEN",
     "linkPortfolio": "Unsere Arbeit",
-    "linkPortfolioDesc": "Entdecken Sie über 10 Projekte für Unternehmen in Frankreich, Belgien, UK, Niederlande und Deutschland.",
-    "viewPortfolio": "PORTFOLIO ANSEHEN"
+    "linkPortfolioDesc": "Entdecken Sie über 33 Projekte für Unternehmen in Frankreich, Belgien, UK, Niederlande und Deutschland.",
+    "viewPortfolio": "PORTFOLIO ANSEHEN",
+    "authorName": "Musa Kerem Demirci",
+    "authorRole": "Gründer & Leitender Entwickler",
+    "authorBio": "Full-Stack-Entwickler für europäische Unternehmen mit Premium-Weblösungen. React, Next.js und TypeScript Spezialist mit über 33 internationalen Projekten.",
+    "category": "Kategorie",
+    "allPosts": "Alle Beiträge",
+    "minuteRead": "Min. Lesezeit",
+    "publishedOn": "Veröffentlicht am",
+    "websiteCostTitle": "Was kostet eine Website in Europa 2026?",
+    "websiteCostExcerpt": "Eine transparente Aufschlüsselung der Websiteentwicklungskosten in Europa. Von Freelancer-Tarifen bis Agenturpaketen — erfahren Sie, was die Kosten bestimmt und wie Sie Ihr nächstes Projekt budgetieren.",
+    "reactVsWpTitle": "React vs. WordPress für europäische KMU: Was ist die richtige Wahl 2026?",
+    "reactVsWpExcerpt": "Ein praktischer Vergleich von React-Frameworks und WordPress für kleine und mittlere Unternehmen in Europa. Performance, SEO, Wartung und Gesamtbetriebskosten.",
+    "seoFranceTitle": "SEO-Leitfaden für kleine Unternehmen in Frankreich: So ranken Sie 2026 bei Google",
+    "seoFranceExcerpt": "Ein Schritt-für-Schritt SEO-Leitfaden für französische Kleinunternehmen. Technische Optimierung, lokale SEO, Content-Strategie und praktische Tipps zur Verbesserung Ihres Google-Rankings.",
+    "multilingualTitle": "Warum jedes europäische Unternehmen eine mehrsprachige Website braucht",
+    "multilingualExcerpt": "Erfahren Sie, warum eine mehrsprachige Website für Unternehmen auf europäischen Märkten unverzichtbar ist. Umsatzwirkung, SEO-Vorteile und Best Practices für die Umsetzung."
   },
   "footer": {
     "tagline": "PREMIUM-WEBENTWICKLUNG FÜR EUROPÄISCHE UNTERNEHMEN",
@@ -875,6 +859,10 @@
     "legal": "RECHTLICHES",
     "privacy": "DATENSCHUTZERKLÄRUNG",
     "terms": "NUTZUNGSBEDINGUNGEN",
+    "legalNotice": "Impressum",
+    "cookiePolicy": "Cookie-Richtlinie",
+    "refundPolicy": "Rückerstattungsrichtlinie",
+    "manageCookies": "Cookies Verwalten",
     "copyright": "ALLE RECHTE VORBEHALTEN",
     "builtWith": "GEBAUT MIT REACT + VITE + TAILWIND"
   },
@@ -1048,6 +1036,122 @@
     "contact": {
       "title": "9. Kontakt",
       "content": "Bei Fragen kontaktieren Sie uns:\n\nDMC Kreatif\nE-Mail: hello@dmckreatif.com\nWebsite: https://dmckreatif.com"
+    }
+  },
+  "legal": {
+    "seoTitle": "Impressum — DMC Kreatif",
+    "seoDescription": "Rechtliche Informationen, Unternehmensangaben und regulatorische Hinweise der Webagentur DMC Kreatif.",
+    "breadcrumb": "IMPRESSUM",
+    "badge": "RECHTLICHES",
+    "title": "Impressum",
+    "subtitle": "Letzte Aktualisierung: Februar 2026",
+    "intro": "Gemäß europäischen Vorschriften und geltenden nationalen Gesetzen stellt DMC Kreatif die folgenden rechtlichen Informationen über das Unternehmen und diese Website bereit.",
+    "company": {
+      "title": "Unternehmensangaben",
+      "content": "Firmenname: DMC Kreatif\nInhaber: Musa Kerem Demirci\nUnternehmensform: Einzelunternehmen — Digitale Dienstleistungen\nE-Mail: hello@dmckreatif.com\nWebsite: https://dmckreatif.com\n\nDMC Kreatif ist eine Digitalagentur, die Webentwicklung, E-Commerce, SEO und Wartungsdienste für Unternehmen in ganz Europa anbietet."
+    },
+    "vatId": {
+      "title": "USt-IdNr. & Steuerliche Angaben",
+      "content": "Umsatzsteuer-Identifikationsnummer: Auf Anfrage erhältlich\nAlle auf dieser Website angezeigten Preise verstehen sich in Euro (EUR) und ohne Mehrwertsteuer, sofern nicht anders angegeben. Die Mehrwertsteuer wird gemäß den geltenden Vorschriften im Wohnsitzland des Kunden angewendet."
+    },
+    "registration": {
+      "title": "Gewerbliche Registrierung",
+      "content": "DMC Kreatif ist ein registrierter Anbieter digitaler Dienstleistungen, der in Übereinstimmung mit den EU-E-Commerce-Richtlinien (Richtlinie 2000/31/EG) und den lokalen Geschäftsvorschriften in jedem bedienten Markt operiert."
+    },
+    "hosting": {
+      "title": "Website-Hosting",
+      "content": "Diese Website wird gehostet von:\nHostinger International Ltd\nSvitrigailos str. 34, Vilnius 03230, Litauen\nhttps://www.hostinger.com\n\nDie Website wurde mit React, Vite und Tailwind CSS erstellt. Backend-Dienste werden von Supabase (Supabase Inc., San Francisco, CA, USA) im Rahmen ihrer DSGVO-konformen Datenverarbeitungsvereinbarung bereitgestellt."
+    },
+    "editorial": {
+      "title": "Redaktionelle Verantwortung",
+      "content": "Verantwortlicher für den Inhalt: Musa Kerem Demirci\nAlle auf dieser Website veröffentlichten Inhalte — einschließlich Text, Bilder, Design und Code — sind geistiges Eigentum von DMC Kreatif, sofern nicht anders angegeben. Eine Vervielfältigung ohne schriftliche Genehmigung ist untersagt."
+    },
+    "disputes": {
+      "title": "Streitbeilegung",
+      "content": "Im Falle einer Streitigkeit vereinbaren der Kunde und DMC Kreatif, zunächst eine gütliche Lösung zu suchen, bevor rechtliche Schritte eingeleitet werden. Für EU-Verbraucher ist die Europäische Plattform zur Online-Streitbeilegung verfügbar unter: https://ec.europa.eu/consumers/odr\n\nFür nicht gütlich gelöste Angelegenheiten sind die zuständigen Gerichte gemäß dem anwendbaren Recht des Wohnsitzlandes des Kunden innerhalb der Europäischen Union zuständig."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "content": "Bei Fragen zu diesem Impressum kontaktieren Sie uns bitte:\nE-Mail: hello@dmckreatif.com\nKontaktformular: https://dmckreatif.com/de/contact"
+    }
+  },
+  "cookiePolicy": {
+    "seoTitle": "Cookie-Richtlinie — DMC Kreatif",
+    "seoDescription": "Detaillierte Informationen über die auf dmckreatif.com verwendeten Cookies, ihren Zweck, ihre Dauer und die Verwaltung Ihrer Einstellungen.",
+    "breadcrumb": "COOKIE-RICHTLINIE",
+    "badge": "DSGVO",
+    "title": "Cookie-Richtlinie",
+    "subtitle": "Letzte Aktualisierung: Februar 2026",
+    "intro": "Diese Cookie-Richtlinie erklärt, wie DMC Kreatif Cookies und ähnliche Tracking-Technologien auf dmckreatif.com verwendet. Wir respektieren Ihre Privatsphäre und geben Ihnen die volle Kontrolle darüber, welche Cookies aktiv sind.",
+    "whatAreCookies": {
+      "title": "Was sind Cookies?",
+      "content": "Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden, wenn Sie eine Website besuchen. Sie helfen der Website, Ihre Einstellungen zu speichern und zu verstehen, wie Sie mit ihr interagieren. Cookies können 'Sitzungs'-Cookies (beim Schließen des Browsers gelöscht) oder 'persistente' Cookies (bleiben bestehen, bis sie ablaufen oder Sie sie löschen) sein."
+    },
+    "necessary": {
+      "title": "Unbedingt erforderliche Cookies",
+      "content": "Diese Cookies sind für die Funktion der Website unerlässlich und können nicht deaktiviert werden.\n\n• dmc_cookie_consent — Speichert Ihre Cookie-Einstellungen (persistent, 365 Tage)\n• supabase-auth-token — Hält Ihre Anmeldesitzung aufrecht (persistent, 7 Tage)\n• i18nextLng — Merkt sich Ihre Sprachpräferenz (persistent, 365 Tage)\n\nRechtsgrundlage: Berechtigtes Interesse (Artikel 6(1)(f) DSGVO). Diese Cookies erfordern keine Einwilligung, da sie für den von Ihnen angeforderten Dienst unbedingt erforderlich sind."
+    },
+    "analytics": {
+      "title": "Analyse-Cookies",
+      "content": "Diese Cookies helfen uns zu verstehen, wie Besucher unsere Website nutzen, indem sie anonyme Nutzungsdaten sammeln.\n\n• _ga — Google Analytics: Unterscheidet eindeutige Benutzer (persistent, 2 Jahre)\n• _ga_* — Google Analytics: Hält den Sitzungsstatus aufrecht (persistent, 2 Jahre)\n• _gid — Google Analytics: Unterscheidet Benutzer (persistent, 24 Stunden)\n\nAnbieter: Google LLC (USA), operierend unter dem EU-US Data Privacy Framework.\nRechtsgrundlage: Einwilligung (Artikel 6(1)(a) DSGVO). Diese Cookies werden nur gesetzt, nachdem Sie Analyse-Cookies ausdrücklich akzeptiert haben."
+    },
+    "marketing": {
+      "title": "Marketing-Cookies",
+      "content": "Diese Cookies werden verwendet, um die Leistung von Werbekampagnen zu messen und relevante Anzeigen zu schalten.\n\n• _gcl_au — Google Ads: Speichert Konversionsdaten (persistent, 90 Tage)\n• _gac_* — Google Ads: Kampagneninformationen (persistent, 90 Tage)\n\nAnbieter: Google LLC (USA), operierend unter dem EU-US Data Privacy Framework.\nRechtsgrundlage: Einwilligung (Artikel 6(1)(a) DSGVO). Diese Cookies werden nur gesetzt, nachdem Sie Marketing-Cookies ausdrücklich akzeptiert haben."
+    },
+    "thirdParty": {
+      "title": "Drittanbieterdienste",
+      "content": "Unsere Website kann Ressourcen von folgenden Drittanbieterdiensten laden:\n\n• Google Fonts — Webfont-Bereitstellung (keine Cookies gesetzt, IP-Adresse übermittelt)\n• Supabase — Backend-Dienste, Authentifizierung und Dateispeicherung\n• Google Tag Manager — Tag-Management-System (einwilligungsabhängig)\n\nJeder Drittanbieter hat seine eigene Datenschutzrichtlinie. Wir laden nicht-essentielle Drittanbieter-Skripte nur nach Einholung Ihrer Einwilligung."
+    },
+    "manage": {
+      "title": "Ihre Cookie-Einstellungen verwalten",
+      "content": "Sie können Ihre Cookie-Einstellungen jederzeit verwalten, indem Sie auf die Schaltfläche 'Cookies verwalten' unten oder im Website-Footer klicken. Sie können Cookies auch über Ihre Browsereinstellungen löschen:\n\n• Chrome: Einstellungen → Datenschutz und Sicherheit → Cookies\n• Firefox: Einstellungen → Datenschutz & Sicherheit → Cookies\n• Safari: Einstellungen → Datenschutz → Websitedaten verwalten\n• Edge: Einstellungen → Cookies und Websiteberechtigungen\n\nBitte beachten Sie, dass das Deaktivieren bestimmter Cookies die Funktionalität unserer Website beeinträchtigen kann."
+    },
+    "changes": {
+      "title": "Änderungen dieser Richtlinie",
+      "content": "Wir können diese Cookie-Richtlinie von Zeit zu Zeit aktualisieren, um Änderungen bei den verwendeten Cookies oder andere betriebliche, rechtliche oder regulatorische Gründe widerzuspiegeln. Wir empfehlen Ihnen, diese Seite regelmäßig zu überprüfen. Das Datum 'Letzte Aktualisierung' oben gibt an, wann diese Richtlinie zuletzt überarbeitet wurde."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "content": "Bei Fragen zu unserer Cookie-Nutzung kontaktieren Sie uns bitte:\nE-Mail: hello@dmckreatif.com\nKontaktformular: https://dmckreatif.com/de/contact"
+    },
+    "manageCookiesBtn": "Cookie-Einstellungen verwalten"
+  },
+  "refund": {
+    "seoTitle": "Erstattungs- und Stornierungsrichtlinie — DMC Kreatif",
+    "seoDescription": "Erstattungs- und Stornierungsbedingungen von DMC Kreatif für individuelle Webprojekte, Templates und Wartungspläne.",
+    "breadcrumb": "ERSTATTUNGSRICHTLINIE",
+    "badge": "RECHTLICHES",
+    "title": "Erstattungs- und Stornierungsrichtlinie",
+    "subtitle": "Letzte Aktualisierung: Februar 2026",
+    "intro": "Bei DMC Kreatif setzen wir uns für die Bereitstellung hochwertiger digitaler Dienstleistungen ein. Diese Richtlinie beschreibt die Bedingungen für Erstattungen und Stornierungen unserer Serviceangebote.",
+    "customProjects": {
+      "title": "Individuelle Webentwicklungsprojekte",
+      "content": "Individuelle Projekte (Launch, Growth, Scale und Commerce) folgen einer meilensteinbasierten Zahlungsstruktur:\n\n• 50% Anzahlung ist vor Arbeitsbeginn erforderlich\n• 50% Restbetrag ist bei Lieferung fällig (oder 3-teilige Zahlung für Scale und Commerce)\n\nStornierungsbedingungen:\n• Vor Beginn der Designphase: Vollständige Erstattung der Anzahlung abzüglich 50€ Verwaltungsgebühr\n• Während der Designphase: 50% der Anzahlung erstattet\n• Nach Design-Freigabe: Keine Erstattung der Anzahlung; Restbetrag wird nicht berechnet\n• Nach Entwicklungsbeginn: Keine Erstattung; bis dahin fertiggestellte Arbeit wird geliefert\n\nAlle Stornierungen müssen schriftlich an hello@dmckreatif.com gerichtet werden."
+    },
+    "templates": {
+      "title": "Website-Templates",
+      "content": "Vorgefertigte Templates, die über unseren Marktplatz erworben werden, sind digitale Produkte, die sofort oder innerhalb von 24 Stunden bis 5 Tagen je nach Paket geliefert werden.\n\n• Business Card (39€): Lieferung innerhalb von 24h — keine Erstattung nach Lieferung\n• Starter (99€): Lieferung innerhalb von 1-3 Tagen — keine Erstattung nach Lieferung\n• Professional (179€): Lieferung innerhalb von 3-5 Tagen — keine Erstattung nach Lieferung\n\nSie können eine Erstattung vor Lieferbeginn beantragen, wenn die Personalisierung noch nicht begonnen hat. Sobald die Personalisierung (Logo, Farben, Inhalte) angewendet wurde, gilt das Template als Maßanfertigung und ist nicht erstattungsfähig."
+    },
+    "carePlans": {
+      "title": "Wartungspläne (Care Plans)",
+      "content": "Care Plan-Abonnements können jederzeit mit 30 Tagen schriftlicher Kündigungsfrist gekündigt werden.\n\n• Keine Erstattung für den laufenden Abrechnungszeitraum\n• Dienste laufen bis zum Ende des bezahlten Zeitraums weiter\n• Nach Kündigung enden Hosting und Support, es sei denn, sie werden an einen anderen Anbieter übertragen\n• In Ihrem Auftrag erworbene Domainnamen bleiben Ihr Eigentum\n\nZur Kündigung senden Sie eine E-Mail an hello@dmckreatif.com mit Ihren Kontodaten."
+    },
+    "euRights": {
+      "title": "Ihre Rechte nach EU-Recht",
+      "content": "Gemäß der EU-Verbraucherrechterichtlinie (2011/83/EU) haben Verbraucher ein 14-tägiges Widerrufsrecht bei Online-Käufen. Dieses Recht gilt jedoch nicht für:\n\n• Digitale Inhalte, auf die zugegriffen oder die heruntergeladen wurden (Artikel 16(m))\n• Dienstleistungen, die mit vorheriger ausdrücklicher Zustimmung des Verbrauchers vollständig erbracht wurden (Artikel 16(a))\n• Waren oder Dienstleistungen, die eindeutig auf den Verbraucher zugeschnitten sind (Artikel 16(c))\n\nMit der Bestellung und der Zustimmung zum sofortigen Arbeitsbeginn erkennen Sie an, dass Sie auf Ihr Widerrufsrecht verzichten, sobald die Dienstleistung begonnen hat oder das digitale Produkt geliefert wurde."
+    },
+    "process": {
+      "title": "So beantragen Sie eine Erstattung",
+      "content": "Um eine Erstattung zu beantragen:\n\n1. Senden Sie eine E-Mail an hello@dmckreatif.com mit dem Betreff 'Erstattungsantrag — [Bestellnummer]'\n2. Geben Sie Ihren vollständigen Namen, Ihre Bestellnummer und den Grund des Antrags an\n3. Wir prüfen Ihren Antrag innerhalb von 2 Werktagen\n4. Genehmigte Erstattungen werden innerhalb von 5-10 Werktagen auf die ursprüngliche Zahlungsmethode verarbeitet\n\nBei Fragen können Sie uns auch über das Kontaktformular auf unserer Website erreichen."
+    },
+    "exceptions": {
+      "title": "Ausnahmen und besondere Umstände",
+      "content": "Wir verstehen, dass außergewöhnliche Situationen auftreten können. In den folgenden Fällen können wir nach eigenem Ermessen eine vollständige oder teilweise Erstattung anbieten:\n\n• Erhebliche Lieferverzögerung über den vereinbarten Zeitrahmen hinaus (mehr als 14 Tage)\n• Die gelieferte Arbeit weicht wesentlich von der vereinbarten Spezifikation ab\n• Technische Probleme auf unserer Seite, die den Projektabschluss verhindern\n\nJeder Fall wird individuell bewertet. Wir streben stets eine faire Lösung für beide Seiten an."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "content": "Für Erstattungs- oder Stornierungsfragen:\nE-Mail: hello@dmckreatif.com\nKontaktformular: https://dmckreatif.com/de/contact\n\nWir bemühen uns, alle Erstattungsanfragen innerhalb von 2 Werktagen zu beantworten."
     }
   },
   "cookies": {
@@ -1388,5 +1492,14 @@
       "title": "Website-Kostenleitfaden 2025",
       "desc": "Was kostet eine professionelle Website in Europa?"
     }
+  },
+  "stickyMobile": {
+    "text": "Starten Sie Ihr Projekt heute",
+    "cta": "ANGEBOT ERHALTEN",
+    "close": "Schließen"
+  },
+  "clientLogos": {
+    "trustedBy": "VERTRAUT VON UNTERNEHMEN IN GANZ EUROPA",
+    "projectsDelivered": "33+ Projekte geliefert in 4 Ländern"
   }
 }

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Homepage -->
+  <!-- ==================== HOMEPAGE ==================== -->
   <url>
     <loc>https://dmckreatif.com/en</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en"/>
@@ -11,6 +11,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/fr</loc>
@@ -20,6 +22,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/nl</loc>
@@ -29,6 +33,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/de</loc>
@@ -38,9 +44,11 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 
-  <!-- Services -->
+  <!-- ==================== SERVICES ==================== -->
   <url>
     <loc>https://dmckreatif.com/en/services</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/services"/>
@@ -49,6 +57,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/fr/services</loc>
@@ -58,6 +68,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/nl/services</loc>
@@ -67,6 +79,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/de/services</loc>
@@ -76,9 +90,195 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
-  <!-- Portfolio -->
+  <!-- Service Detail: Web Development -->
+  <url>
+    <loc>https://dmckreatif.com/en/services/web-development</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/services/web-development"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/services/web-development"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/services/web-development"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services/web-development"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services/web-development"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/services/web-development</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/services/web-development"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/services/web-development"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/services/web-development"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services/web-development"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services/web-development"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/nl/services/web-development</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/services/web-development"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/services/web-development"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/services/web-development"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services/web-development"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services/web-development"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/de/services/web-development</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/services/web-development"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/services/web-development"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/services/web-development"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services/web-development"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services/web-development"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Service Detail: E-Commerce -->
+  <url>
+    <loc>https://dmckreatif.com/en/services/ecommerce</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/services/ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/services/ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/services/ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services/ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services/ecommerce"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/services/ecommerce</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/services/ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/services/ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/services/ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services/ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services/ecommerce"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/nl/services/ecommerce</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/services/ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/services/ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/services/ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services/ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services/ecommerce"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/de/services/ecommerce</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/services/ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/services/ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/services/ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services/ecommerce"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services/ecommerce"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Service Detail: SEO -->
+  <url>
+    <loc>https://dmckreatif.com/en/services/seo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/services/seo"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/services/seo"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/services/seo"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services/seo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services/seo"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/services/seo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/services/seo"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/services/seo"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/services/seo"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services/seo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services/seo"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/nl/services/seo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/services/seo"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/services/seo"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/services/seo"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services/seo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services/seo"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/de/services/seo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/services/seo"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/services/seo"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/services/seo"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services/seo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services/seo"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Service Detail: Digital Marketing -->
+  <url>
+    <loc>https://dmckreatif.com/en/services/digital-marketing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/services/digital-marketing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/services/digital-marketing"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/services/digital-marketing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services/digital-marketing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services/digital-marketing"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/services/digital-marketing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/services/digital-marketing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/services/digital-marketing"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/services/digital-marketing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services/digital-marketing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services/digital-marketing"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/nl/services/digital-marketing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/services/digital-marketing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/services/digital-marketing"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/services/digital-marketing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services/digital-marketing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services/digital-marketing"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/de/services/digital-marketing</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/services/digital-marketing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/services/digital-marketing"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/services/digital-marketing"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/services/digital-marketing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/services/digital-marketing"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ==================== PORTFOLIO ==================== -->
   <url>
     <loc>https://dmckreatif.com/en/portfolio</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/portfolio"/>
@@ -87,6 +287,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/portfolio"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/portfolio"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/fr/portfolio</loc>
@@ -96,6 +298,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/portfolio"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/portfolio"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/nl/portfolio</loc>
@@ -105,6 +309,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/portfolio"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/portfolio"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/de/portfolio</loc>
@@ -114,9 +320,57 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/portfolio"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/portfolio"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
-  <!-- Pricing -->
+  <!-- ==================== CASE STUDIES ==================== -->
+  <url>
+    <loc>https://dmckreatif.com/en/case-studies</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/case-studies"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/case-studies</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/case-studies"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/nl/case-studies</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/case-studies"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/de/case-studies</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/case-studies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/case-studies"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ==================== PRICING ==================== -->
   <url>
     <loc>https://dmckreatif.com/en/pricing</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/pricing"/>
@@ -125,6 +379,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/pricing"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/pricing"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/fr/pricing</loc>
@@ -134,6 +390,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/pricing"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/pricing"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/nl/pricing</loc>
@@ -143,6 +401,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/pricing"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/pricing"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/de/pricing</loc>
@@ -152,9 +412,11 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/pricing"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/pricing"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
-  <!-- Templates -->
+  <!-- ==================== TEMPLATES ==================== -->
   <url>
     <loc>https://dmckreatif.com/en/templates</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/templates"/>
@@ -163,6 +425,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/templates"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/templates"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/fr/templates</loc>
@@ -172,6 +436,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/templates"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/templates"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/nl/templates</loc>
@@ -181,6 +447,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/templates"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/templates"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/de/templates</loc>
@@ -190,9 +458,11 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/templates"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/templates"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
-  <!-- About -->
+  <!-- ==================== ABOUT ==================== -->
   <url>
     <loc>https://dmckreatif.com/en/about</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/about"/>
@@ -201,6 +471,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/about"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/about"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/fr/about</loc>
@@ -210,6 +482,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/about"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/about"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/nl/about</loc>
@@ -219,6 +493,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/about"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/about"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/de/about</loc>
@@ -228,9 +504,11 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/about"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/about"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
-  <!-- Blog -->
+  <!-- ==================== BLOG (List) ==================== -->
   <url>
     <loc>https://dmckreatif.com/en/blog</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/blog"/>
@@ -239,6 +517,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/fr/blog</loc>
@@ -248,6 +528,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/nl/blog</loc>
@@ -257,6 +539,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/de/blog</loc>
@@ -266,9 +550,11 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
-  <!-- Contact -->
+  <!-- ==================== CONTACT ==================== -->
   <url>
     <loc>https://dmckreatif.com/en/contact</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/contact"/>
@@ -277,6 +563,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/contact"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/contact"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/fr/contact</loc>
@@ -286,6 +574,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/contact"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/contact"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/nl/contact</loc>
@@ -295,6 +585,8 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/contact"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/contact"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dmckreatif.com/de/contact</loc>
@@ -304,6 +596,246 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/contact"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/contact"/>
     <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ==================== CITY PAGES (Local SEO) ==================== -->
+  <!-- Paris -->
+  <url>
+    <loc>https://dmckreatif.com/en/web-agency-paris</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/web-agency-paris"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/web-agency-paris"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/web-agency-paris"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/web-agency-paris</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/web-agency-paris"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/web-agency-paris"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/web-agency-paris"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- London -->
+  <url>
+    <loc>https://dmckreatif.com/en/web-agency-london</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/web-agency-london"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/web-agency-london"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Brussels -->
+  <url>
+    <loc>https://dmckreatif.com/en/web-agency-brussels</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/web-agency-brussels"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/web-agency-brussels"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/web-agency-brussels"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/web-agency-brussels"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/web-agency-brussels</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/web-agency-brussels"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/web-agency-brussels"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/web-agency-brussels"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/web-agency-brussels"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/nl/web-agency-brussels</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/web-agency-brussels"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/web-agency-brussels"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/web-agency-brussels"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/web-agency-brussels"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Amsterdam -->
+  <url>
+    <loc>https://dmckreatif.com/en/web-agency-amsterdam</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/web-agency-amsterdam"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/web-agency-amsterdam"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/web-agency-amsterdam"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/nl/web-agency-amsterdam</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/web-agency-amsterdam"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/web-agency-amsterdam"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/web-agency-amsterdam"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Berlin -->
+  <url>
+    <loc>https://dmckreatif.com/en/web-agency-berlin</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/web-agency-berlin"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/web-agency-berlin"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/web-agency-berlin"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/de/web-agency-berlin</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/web-agency-berlin"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/web-agency-berlin"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/web-agency-berlin"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ==================== LEGAL ==================== -->
+  <!-- Legal Notice -->
+  <url>
+    <loc>https://dmckreatif.com/en/legal</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/legal"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/legal"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/legal"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/legal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/legal"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/legal</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/legal"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/legal"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/legal"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/legal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/legal"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/nl/legal</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/legal"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/legal"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/legal"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/legal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/legal"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/de/legal</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/legal"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/legal"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/legal"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/legal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/legal"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Cookie Policy -->
+  <url>
+    <loc>https://dmckreatif.com/en/cookie-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/cookie-policy"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/cookie-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/cookie-policy"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/nl/cookie-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/cookie-policy"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/de/cookie-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/cookie-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/cookie-policy"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Refund Policy -->
+  <url>
+    <loc>https://dmckreatif.com/en/refund-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/refund-policy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/refund-policy"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/refund-policy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/refund-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/refund-policy"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/refund-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/refund-policy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/refund-policy"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/refund-policy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/refund-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/refund-policy"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/nl/refund-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/refund-policy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/refund-policy"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/refund-policy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/refund-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/refund-policy"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/de/refund-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/refund-policy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/refund-policy"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/refund-policy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/refund-policy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/refund-policy"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
   <!-- Privacy Policy -->
@@ -315,9 +847,42 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/privacy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/privacy"/>
     <lastmod>2026-02-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
-
-  <!-- Terms of Service -->
+  <url>
+    <loc>https://dmckreatif.com/fr/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/privacy"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/nl/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/privacy"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/de/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/privacy"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
   <url>
     <loc>https://dmckreatif.com/en/terms</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/terms"/>
@@ -326,6 +891,226 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/terms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/terms"/>
     <lastmod>2026-02-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/terms"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/nl/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/terms"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/de/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/terms"/>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- ==================== BLOG POSTS ==================== -->
+  <!-- Article 1: How Much Does a Website Cost in Europe in 2026? -->
+  <url>
+    <loc>https://dmckreatif.com/en/blog/how-much-does-a-website-cost-in-europe-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/blog/how-much-does-a-website-cost-in-europe-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/nl/blog/how-much-does-a-website-cost-in-europe-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/de/blog/how-much-does-a-website-cost-in-europe-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog/how-much-does-a-website-cost-in-europe-2026"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Article 2: React vs WordPress for European SMBs -->
+  <url>
+    <loc>https://dmckreatif.com/en/blog/react-vs-wordpress-for-european-smbs</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/blog/react-vs-wordpress-for-european-smbs"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/react-vs-wordpress-for-european-smbs"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/blog/react-vs-wordpress-for-european-smbs"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog/react-vs-wordpress-for-european-smbs"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog/react-vs-wordpress-for-european-smbs"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/blog/react-vs-wordpress-for-european-smbs</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/blog/react-vs-wordpress-for-european-smbs"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/react-vs-wordpress-for-european-smbs"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/blog/react-vs-wordpress-for-european-smbs"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog/react-vs-wordpress-for-european-smbs"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog/react-vs-wordpress-for-european-smbs"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/nl/blog/react-vs-wordpress-for-european-smbs</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/blog/react-vs-wordpress-for-european-smbs"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/react-vs-wordpress-for-european-smbs"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/blog/react-vs-wordpress-for-european-smbs"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog/react-vs-wordpress-for-european-smbs"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog/react-vs-wordpress-for-european-smbs"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/de/blog/react-vs-wordpress-for-european-smbs</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/blog/react-vs-wordpress-for-european-smbs"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/react-vs-wordpress-for-european-smbs"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/blog/react-vs-wordpress-for-european-smbs"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog/react-vs-wordpress-for-european-smbs"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog/react-vs-wordpress-for-european-smbs"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Article 3: SEO Guide for Small Businesses in France -->
+  <url>
+    <loc>https://dmckreatif.com/en/blog/seo-guide-small-businesses-france</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/blog/seo-guide-small-businesses-france"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/seo-guide-small-businesses-france"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/blog/seo-guide-small-businesses-france"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog/seo-guide-small-businesses-france"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog/seo-guide-small-businesses-france"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/blog/seo-guide-small-businesses-france</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/blog/seo-guide-small-businesses-france"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/seo-guide-small-businesses-france"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/blog/seo-guide-small-businesses-france"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog/seo-guide-small-businesses-france"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog/seo-guide-small-businesses-france"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/nl/blog/seo-guide-small-businesses-france</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/blog/seo-guide-small-businesses-france"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/seo-guide-small-businesses-france"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/blog/seo-guide-small-businesses-france"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog/seo-guide-small-businesses-france"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog/seo-guide-small-businesses-france"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/de/blog/seo-guide-small-businesses-france</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/blog/seo-guide-small-businesses-france"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/seo-guide-small-businesses-france"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/blog/seo-guide-small-businesses-france"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog/seo-guide-small-businesses-france"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog/seo-guide-small-businesses-france"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Article 4: Why Your Business Needs a Multilingual Website -->
+  <url>
+    <loc>https://dmckreatif.com/en/blog/why-multilingual-website-european-business</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/blog/why-multilingual-website-european-business"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/why-multilingual-website-european-business"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/blog/why-multilingual-website-european-business"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog/why-multilingual-website-european-business"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog/why-multilingual-website-european-business"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/blog/why-multilingual-website-european-business</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/blog/why-multilingual-website-european-business"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/why-multilingual-website-european-business"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/blog/why-multilingual-website-european-business"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog/why-multilingual-website-european-business"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog/why-multilingual-website-european-business"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/nl/blog/why-multilingual-website-european-business</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/blog/why-multilingual-website-european-business"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/why-multilingual-website-european-business"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/blog/why-multilingual-website-european-business"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog/why-multilingual-website-european-business"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog/why-multilingual-website-european-business"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/de/blog/why-multilingual-website-european-business</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/blog/why-multilingual-website-european-business"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/why-multilingual-website-european-business"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/blog/why-multilingual-website-european-business"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/blog/why-multilingual-website-european-business"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog/why-multilingual-website-european-business"/>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>

@@ -78,6 +78,9 @@ export default function BeforeAfterSlider({
         <img
           src={afterImage}
           alt={`${projectName} — ${t("portfolio.after", "After")}`}
+          width={1200}
+          height={675}
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover object-top"
           draggable={false}
         />
@@ -90,6 +93,9 @@ export default function BeforeAfterSlider({
           <img
             src={beforeImage}
             alt={`${projectName} — ${t("portfolio.before", "Before")}`}
+            width={1200}
+            height={675}
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover object-top"
             style={{ width: `${containerRef.current?.offsetWidth ?? 0}px`, maxWidth: "none" }}
             draggable={false}

@@ -9,8 +9,11 @@ interface SeoHeadProps {
   description: string;
   path?: string;
   ogImage?: string;
+  ogImageAlt?: string;
   ogType?: string;
   noIndex?: boolean;
+  publishedTime?: string;
+  modifiedTime?: string;
 }
 
 export default function SeoHead({
@@ -18,8 +21,11 @@ export default function SeoHead({
   description,
   path = "",
   ogImage = "/og-image.png",
+  ogImageAlt,
   ogType = "website",
   noIndex = false,
+  publishedTime,
+  modifiedTime,
 }: SeoHeadProps) {
   const { locale } = useParams();
   const currentLocale = locale ?? "en";
@@ -27,6 +33,9 @@ export default function SeoHead({
   const fullOgImage = ogImage.startsWith("http")
     ? ogImage
     : `${BASE_URL}${ogImage}`;
+  const alternateLocales = SUPPORTED_LOCALES.filter(
+    (l) => l !== currentLocale
+  );
 
   return (
     <Helmet>
@@ -55,15 +64,38 @@ export default function SeoHead({
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={fullOgImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta
+        property="og:image:alt"
+        content={ogImageAlt ?? title}
+      />
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content="DMC Kreatif" />
-      <meta property="og:locale" content={currentLocale} />
+      <meta property="og:locale" content={{ en: "en_US", fr: "fr_FR", nl: "nl_NL", de: "de_DE" }[currentLocale] ?? "en_US"} />
+      {alternateLocales.map((lang) => (
+        <meta
+          key={`og-alt-${lang}`}
+          property="og:locale:alternate"
+          content={{ en: "en_US", fr: "fr_FR", nl: "nl_NL", de: "de_DE" }[lang] ?? lang}
+        />
+      ))}
+      {publishedTime && (
+        <meta property="article:published_time" content={publishedTime} />
+      )}
+      {modifiedTime && (
+        <meta property="article:modified_time" content={modifiedTime} />
+      )}
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullOgImage} />
+      <meta
+        name="twitter:image:alt"
+        content={ogImageAlt ?? title}
+      />
 
       {/* Robots */}
       {noIndex && <meta name="robots" content="noindex, nofollow" />}
