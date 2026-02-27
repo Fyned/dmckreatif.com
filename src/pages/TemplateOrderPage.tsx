@@ -179,18 +179,25 @@ export default function TemplateOrderPage() {
     setLogoUrl(url);
   }, []);
 
-  const handleImagesUpload = useCallback(
-    (url: string) => {
-      setUploadedImages((prev) => {
-        if (prev.length >= 10) return prev;
-        return [...prev, url];
-      });
+  const handleImagesSelect = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const files = e.target.files;
+      if (!files) return;
+      const remaining = 10 - uploadedImages.length;
+      const selected = Array.from(files).slice(0, remaining);
+      const blobUrls = selected.map((f) => URL.createObjectURL(f));
+      setUploadedImages((prev) => [...prev, ...blobUrls]);
+      e.target.value = "";
     },
-    []
+    [uploadedImages.length],
   );
 
   const removeImage = useCallback((index: number) => {
-    setUploadedImages((prev) => prev.filter((_, i) => i !== index));
+    setUploadedImages((prev) => {
+      const url = prev[index];
+      if (url?.startsWith("blob:")) URL.revokeObjectURL(url);
+      return prev.filter((_, i) => i !== index);
+    });
   }, []);
 
   /* ── Submit Order ── */
@@ -457,21 +464,6 @@ export default function TemplateOrderPage() {
                   onUpload={handleLogoUpload}
                   accept="image/*"
                 />
-                {logoUrl && (
-                  <div className="mt-4 flex items-center gap-3">
-                    <div className="w-16 h-16 border-2 border-neo-black bg-neo-bg overflow-hidden">
-                      <img
-                        src={logoUrl}
-                        alt={t("templates.order.logoPreview", "Logo preview")}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                    <NeoBadge color="neo-green">
-                      <CheckCircle2 size={12} className="mr-1" />
-                      {t("templates.order.uploaded", "Uploaded")}
-                    </NeoBadge>
-                  </div>
-                )}
               </div>
 
               {/* Color Pickers */}
@@ -517,48 +509,45 @@ export default function TemplateOrderPage() {
                     "Upload up to 10 images for your website. Products, team photos, office, etc."
                   )}
                 </p>
-                {uploadedImages.length < 10 && (
-                  <FileUpload
-                    bucket="order-uploads"
-                    path={`images/${Date.now()}`}
-                    onUpload={handleImagesUpload}
-                    accept="image/*"
-                  />
-                )}
-
-                {/* Image Thumbnails */}
-                {uploadedImages.length > 0 && (
-                  <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 mt-4">
-                    {uploadedImages.map((img, idx) => (
-                      <div
-                        key={`${img}-${idx}`}
-                        className="relative group"
-                      >
-                        <div className="aspect-square border-2 border-neo-black overflow-hidden bg-neo-bg">
-                          <img
-                            src={img}
-                            alt={`${t("templates.order.imageAlt", "Upload")} ${idx + 1}`}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <button
-                          type="button"
-                          onClick={() => removeImage(idx)}
-                          className="absolute -top-2 -right-2 w-6 h-6 bg-neo-red border-2 border-neo-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
-                          aria-label={t(
-                            "templates.order.removeImage",
-                            "Remove image"
-                          )}
-                        >
-                          <Trash2
-                            size={12}
-                            className="text-neo-white"
-                          />
-                        </button>
+                {/* Image Grid — thumbnails + add button */}
+                <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
+                  {uploadedImages.map((img, idx) => (
+                    <div key={`img-${idx}`} className="relative group">
+                      <div className="aspect-square border-2 border-neo-black overflow-hidden bg-neo-bg">
+                        <img
+                          src={img}
+                          alt=""
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                    ))}
-                  </div>
-                )}
+                      <button
+                        type="button"
+                        onClick={() => removeImage(idx)}
+                        className="absolute -top-2 -right-2 w-6 h-6 bg-neo-red border-2 border-neo-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                        aria-label={t("templates.order.removeImage", "Remove image")}
+                      >
+                        <Trash2 size={12} className="text-neo-white" />
+                      </button>
+                    </div>
+                  ))}
+
+                  {/* Add more button */}
+                  {uploadedImages.length < 10 && (
+                    <label className="aspect-square border-2 border-dashed border-neo-black/30 flex flex-col items-center justify-center cursor-pointer hover:border-neo-lime hover:bg-neo-lime/5 transition-colors">
+                      <ImageIcon size={24} className="text-neo-black/40 mb-1" />
+                      <span className="font-mono text-[10px] font-bold text-neo-black/50">
+                        + ADD
+                      </span>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        multiple
+                        onChange={handleImagesSelect}
+                        className="hidden"
+                      />
+                    </label>
+                  )}
+                </div>
                 <p className="font-mono text-xs text-neo-black/40 mt-3">
                   {uploadedImages.length}/10{" "}
                   {t("templates.order.imagesUploaded", "images uploaded")}
