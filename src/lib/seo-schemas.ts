@@ -21,10 +21,14 @@ export function buildOrganizationSchema() {
     founder: {
       "@type": "Person",
       name: "Musa Kerem Demirci",
-      jobTitle: "Founder & Lead Developer",
+      jobTitle: "CEO & Founder",
       url: "https://www.linkedin.com/in/musakeremdemirci",
     },
     foundingDate: "2023-01-01",
+    numberOfEmployees: {
+      "@type": "QuantitativeValue",
+      minValue: 100,
+    },
     areaServed: [
       { "@type": "Country", name: "France" },
       { "@type": "Country", name: "Belgium" },
@@ -97,22 +101,27 @@ export function buildProfessionalServiceSchema(reviews?: Array<{
     email: "hello@dmckreatif.com",
     priceRange: "€€",
     description:
-      "Premium web development agency serving European businesses. Custom websites, e-commerce, SEO and digital marketing.",
+      "UK-registered web development agency with 100+ professionals serving European businesses. Custom websites, e-commerce, SEO and digital marketing across 6 countries.",
     foundingDate: "2023-01-01",
     founder: {
       "@type": "Person",
       name: "Musa Kerem Demirci",
+      jobTitle: "CEO & Founder",
+    },
+    numberOfEmployees: {
+      "@type": "QuantitativeValue",
+      minValue: 100,
     },
     address: {
       "@type": "PostalAddress",
-      addressCountry: "FR",
-      addressLocality: "Paris",
-      addressRegion: "Ile-de-France",
+      addressCountry: "GB",
+      addressLocality: "London",
+      addressRegion: "England",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 48.8566,
-      longitude: 2.3522,
+      latitude: 51.5074,
+      longitude: -0.1278,
     },
     openingHoursSpecification: [
       {
@@ -414,6 +423,38 @@ export function buildOfferSchema(
 }
 
 /**
+ * SoftwareApplication schema for technology detail pages.
+ */
+export function buildTechnologySchema(params: {
+  name: string;
+  description: string;
+  version: string;
+  url: string;
+  locale: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: params.name,
+    description: params.description,
+    softwareVersion: params.version,
+    url: params.url,
+    applicationCategory: "DeveloperApplication",
+    operatingSystem: "All",
+    author: {
+      "@type": "Organization",
+      name: "DMC Kreatif",
+      url: BASE_URL,
+    },
+    review: {
+      "@type": "Review",
+      author: { "@type": "Organization", name: "DMC Kreatif" },
+      reviewBody: params.description,
+    },
+  };
+}
+
+/**
  * WebPage schema for generic pages.
  */
 export function buildWebPageSchema(params: {
@@ -582,6 +623,83 @@ export function buildHowToSchema(params: {
       name: step.name,
       text: step.text,
     })),
+  };
+}
+
+/**
+ * ProfessionalService schema scoped to a specific city.
+ * Used on city/local SEO landing pages.
+ */
+export function buildCitySchema(params: {
+  cityName: string;
+  lat: string;
+  lng: string;
+  locale: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "DMC Kreatif",
+    url: BASE_URL,
+    email: "hello@dmckreatif.com",
+    priceRange: "\u20AC\u20AC",
+    areaServed: {
+      "@type": "City",
+      name: params.cityName,
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: params.lat,
+      longitude: params.lng,
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: params.cityName,
+    },
+    knowsAbout: [
+      "Web Development",
+      "E-Commerce Development",
+      "SEO Optimization",
+      "Digital Marketing",
+    ],
+    knowsLanguage: ["en", "fr", "nl", "de"],
+    sameAs: [
+      "https://www.linkedin.com/company/dmckreatif",
+    ],
+  };
+}
+
+/**
+ * Industry-specific service schema for industry/vertical pages.
+ */
+export function buildIndustrySchema(params: {
+  name: string;
+  description: string;
+  slug: string;
+  locale: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    provider: {
+      "@type": "Organization",
+      name: "DMC Kreatif",
+      url: BASE_URL,
+    },
+    name: `Web Development for ${params.name}`,
+    description: params.description,
+    url: `${BASE_URL}/${params.locale}/industries/${params.slug}`,
+    areaServed: [
+      { "@type": "Country", name: "France" },
+      { "@type": "Country", name: "Belgium" },
+      { "@type": "Country", name: "United Kingdom" },
+      { "@type": "Country", name: "Netherlands" },
+      { "@type": "Country", name: "Germany" },
+    ],
+    audience: {
+      "@type": "Audience",
+      audienceType: params.name,
+    },
   };
 }
 

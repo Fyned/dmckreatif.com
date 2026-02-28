@@ -16,8 +16,6 @@ import TrustSection from "@/components/home/TrustSection";
 import SeoHead from "@/components/seo/SeoHead";
 import JsonLd from "@/components/seo/JsonLd";
 import {
-  buildOrganizationSchema,
-  buildWebSiteSchema,
   buildFAQPageSchema,
   buildHowToSchema,
 } from "@/lib/seo-schemas";
@@ -51,8 +49,6 @@ export default function HomePage() {
         title={t("seo.home.title", "DMC Kreatif — Premium Web Development Agency")}
         description={t("seo.home.description", "Premium web development for European businesses. React, Next.js, Vite. France, Belgium, UK, Netherlands, Germany.")}
       />
-      <JsonLd data={buildOrganizationSchema()} />
-      <JsonLd data={buildWebSiteSchema()} />
       <JsonLd data={buildFAQPageSchema(homeFaqs)} />
       <JsonLd
         data={buildHowToSchema({

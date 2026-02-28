@@ -4,15 +4,54 @@ import SeoHead from "@/components/seo/SeoHead";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
-  Code2,
-  ShoppingCart,
-  Search,
-  Settings,
   Check,
   Gauge,
   Clock,
   TrendingUp,
   ChevronDown,
+  Code2,
+  ShoppingCart,
+  Search,
+  Settings,
+  Atom,
+  Globe,
+  FileCode2,
+  Layout,
+  Laptop,
+  Smartphone,
+  Webhook,
+  RefreshCw,
+  ArrowUpCircle,
+  Wrench,
+  Database,
+  Zap,
+  Eye,
+  Shield,
+  Plug,
+  ShoppingBag,
+  Store,
+  Package,
+  Building2,
+  Coins,
+  CreditCard,
+  BarChart3,
+  Settings2,
+  MapPin,
+  Languages,
+  FileText,
+  Link2,
+  MessageSquare,
+  Target,
+  LineChart,
+  Bot,
+  Globe2,
+  Palette,
+  Compass,
+  Fingerprint,
+  Component,
+  PenTool,
+  TabletSmartphone,
+  Megaphone,
 } from "lucide-react";
 import { useState } from "react";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -26,136 +65,16 @@ import {
   scaleIn,
   viewportConfig,
 } from "@/lib/animations";
+import { allServices, getServiceBySlug } from "@/data/services";
 
-interface ServiceDetail {
-  slug: string;
-  icon: React.ElementType;
-  color: string;
-  bgAccent: string;
-  priceFrom: string;
-  titleKey: string;
-  descKey: string;
-  longDescKey: string;
-  features: string[];
-  processSteps: string[];
-  faqKeys: string[];
-  relatedSlugs: string[];
-}
-
-const serviceDetails: ServiceDetail[] = [
-  {
-    slug: "web-development",
-    icon: Code2,
-    color: "neo-lime",
-    bgAccent: "bg-neo-lime",
-    priceFrom: "497",
-    titleKey: "serviceDetail.webDev.title",
-    descKey: "serviceDetail.webDev.desc",
-    longDescKey: "serviceDetail.webDev.longDesc",
-    features: [
-      "serviceDetail.webDev.f1",
-      "serviceDetail.webDev.f2",
-      "serviceDetail.webDev.f3",
-      "serviceDetail.webDev.f4",
-      "serviceDetail.webDev.f5",
-      "serviceDetail.webDev.f6",
-      "serviceDetail.webDev.f7",
-      "serviceDetail.webDev.f8",
-    ],
-    processSteps: [
-      "serviceDetail.webDev.step1",
-      "serviceDetail.webDev.step2",
-      "serviceDetail.webDev.step3",
-      "serviceDetail.webDev.step4",
-    ],
-    faqKeys: ["webDev1", "webDev2", "webDev3", "webDev4"],
-    relatedSlugs: ["ecommerce", "seo"],
-  },
-  {
-    slug: "ecommerce",
-    icon: ShoppingCart,
-    color: "neo-yellow",
-    bgAccent: "bg-neo-yellow",
-    priceFrom: "2997",
-    titleKey: "serviceDetail.ecommerce.title",
-    descKey: "serviceDetail.ecommerce.desc",
-    longDescKey: "serviceDetail.ecommerce.longDesc",
-    features: [
-      "serviceDetail.ecommerce.f1",
-      "serviceDetail.ecommerce.f2",
-      "serviceDetail.ecommerce.f3",
-      "serviceDetail.ecommerce.f4",
-      "serviceDetail.ecommerce.f5",
-      "serviceDetail.ecommerce.f6",
-      "serviceDetail.ecommerce.f7",
-      "serviceDetail.ecommerce.f8",
-    ],
-    processSteps: [
-      "serviceDetail.ecommerce.step1",
-      "serviceDetail.ecommerce.step2",
-      "serviceDetail.ecommerce.step3",
-      "serviceDetail.ecommerce.step4",
-    ],
-    faqKeys: ["ecommerce1", "ecommerce2", "ecommerce3", "ecommerce4"],
-    relatedSlugs: ["web-development", "seo"],
-  },
-  {
-    slug: "seo",
-    icon: Search,
-    color: "neo-blue",
-    bgAccent: "bg-neo-blue",
-    priceFrom: "297",
-    titleKey: "serviceDetail.seo.title",
-    descKey: "serviceDetail.seo.desc",
-    longDescKey: "serviceDetail.seo.longDesc",
-    features: [
-      "serviceDetail.seo.f1",
-      "serviceDetail.seo.f2",
-      "serviceDetail.seo.f3",
-      "serviceDetail.seo.f4",
-      "serviceDetail.seo.f5",
-      "serviceDetail.seo.f6",
-      "serviceDetail.seo.f7",
-      "serviceDetail.seo.f8",
-    ],
-    processSteps: [
-      "serviceDetail.seo.step1",
-      "serviceDetail.seo.step2",
-      "serviceDetail.seo.step3",
-      "serviceDetail.seo.step4",
-    ],
-    faqKeys: ["seo1", "seo2", "seo3", "seo4"],
-    relatedSlugs: ["web-development", "digital-marketing"],
-  },
-  {
-    slug: "digital-marketing",
-    icon: Settings,
-    color: "neo-pink",
-    bgAccent: "bg-neo-pink",
-    priceFrom: "247",
-    titleKey: "serviceDetail.marketing.title",
-    descKey: "serviceDetail.marketing.desc",
-    longDescKey: "serviceDetail.marketing.longDesc",
-    features: [
-      "serviceDetail.marketing.f1",
-      "serviceDetail.marketing.f2",
-      "serviceDetail.marketing.f3",
-      "serviceDetail.marketing.f4",
-      "serviceDetail.marketing.f5",
-      "serviceDetail.marketing.f6",
-      "serviceDetail.marketing.f7",
-      "serviceDetail.marketing.f8",
-    ],
-    processSteps: [
-      "serviceDetail.marketing.step1",
-      "serviceDetail.marketing.step2",
-      "serviceDetail.marketing.step3",
-      "serviceDetail.marketing.step4",
-    ],
-    faqKeys: ["marketing1", "marketing2", "marketing3", "marketing4"],
-    relatedSlugs: ["seo", "ecommerce"],
-  },
-];
+const ICON_MAP: Record<string, React.ElementType> = {
+  Code2, ShoppingCart, Search, Settings, Atom, Globe, FileCode2, Layout,
+  Laptop, Smartphone, Webhook, RefreshCw, ArrowUpCircle, Wrench, Database,
+  Zap, Eye, Shield, Plug, ShoppingBag, Store, Package, Building2, Coins,
+  CreditCard, TrendingUp, BarChart3, Settings2, MapPin, Languages, FileText,
+  Link2, MessageSquare, Target, LineChart, Bot, Globe2, Palette, Compass,
+  Fingerprint, Component, PenTool, TabletSmartphone, Megaphone,
+};
 
 function FaqAccordionItem({ qKey, aKey }: { qKey: string; aKey: string }) {
   const { t } = useTranslation();
@@ -189,12 +108,12 @@ export default function ServiceDetailPage() {
   const { locale, slug } = useParams();
   const currentLocale = locale ?? "en";
 
-  const service = serviceDetails.find((s) => s.slug === slug);
+  const service = getServiceBySlug(slug ?? "");
   if (!service) {
     return <Navigate to={`/${currentLocale}/services`} replace />;
   }
 
-  const Icon = service.icon;
+  const Icon = ICON_MAP[service.icon] ?? Code2;
 
   return (
     <>
@@ -440,9 +359,9 @@ export default function ServiceDetailPage() {
             className="grid grid-cols-1 sm:grid-cols-2 gap-6"
           >
             {service.relatedSlugs.map((relSlug) => {
-              const rel = serviceDetails.find((s) => s.slug === relSlug);
+              const rel = allServices.find((s) => s.slug === relSlug);
               if (!rel) return null;
-              const RelIcon = rel.icon;
+              const RelIcon = ICON_MAP[rel.icon] ?? Code2;
               return (
                 <motion.div key={relSlug} variants={scaleIn}>
                   <Link

@@ -65,9 +65,38 @@ export default function CookieBanner() {
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 100, opacity: 0 }}
         transition={{ duration: 0.4, ease: [0.25, 0.4, 0, 1] }}
-        className="fixed bottom-0 left-0 right-0 z-[9999] p-4 md:p-6"
+        className="fixed bottom-0 left-0 right-0 z-[9999] p-3 md:p-6"
       >
-        <div className="max-w-4xl mx-auto bg-neo-bg border-2 border-neo-black shadow-hard">
+        {/* Mobile slim bar */}
+        <div className="md:hidden bg-neo-bg border-2 border-neo-black shadow-hard flex items-center justify-between gap-3 px-4 py-3">
+          <span className="font-mono text-[11px] text-neo-black/70 leading-tight flex-1 min-w-0">
+            {t("cookies.mobileShort", "We use cookies.")}
+            {" "}
+            <Link
+              to={`/${locale ?? "en"}/cookie-policy`}
+              className="underline underline-offset-2 text-neo-black font-bold"
+            >
+              {t("cookies.learnMore", "Learn more")}
+            </Link>
+          </span>
+          <div className="flex gap-2 shrink-0">
+            <button
+              onClick={rejectAll}
+              className="bg-neo-white border-2 border-neo-black px-3 py-1.5 font-space font-bold text-[10px] uppercase tracking-wider text-neo-black shadow-hard-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all duration-150"
+            >
+              {t("cookies.rejectAll", "Reject")}
+            </button>
+            <button
+              onClick={acceptAll}
+              className="bg-neo-lime border-2 border-neo-black px-3 py-1.5 font-space font-bold text-[10px] uppercase tracking-wider text-neo-black shadow-hard-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all duration-150"
+            >
+              {t("cookies.acceptAll", "Accept")}
+            </button>
+          </div>
+        </div>
+
+        {/* Desktop full panel */}
+        <div className="hidden md:block max-w-4xl mx-auto bg-neo-bg border-2 border-neo-black shadow-hard">
           {/* Header */}
           <div className="bg-neo-black px-5 py-3 flex items-center justify-between">
             <span className="font-space font-bold text-sm uppercase tracking-wider text-neo-lime">

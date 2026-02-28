@@ -8,159 +8,13 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import NeoButton from "@/components/ui/NeoButton";
 import JsonLd from "@/components/seo/JsonLd";
 import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
-
-interface CityData {
-  slug: string;
-  nameKey: string;
-  country: string;
-  flag: string;
-  titleKey: string;
-  descriptionKey: string;
-  introKey: string;
-  benefitsKeys: string[];
-  ctaKey: string;
-  mapQuery: string;
-  lat: string;
-  lng: string;
-}
-
-const cityData: Record<string, CityData> = {
-  paris: {
-    slug: "paris",
-    nameKey: "cityPages.paris.name",
-    country: "FR",
-    flag: "\u{1F1EB}\u{1F1F7}",
-    titleKey: "cityPages.paris.title",
-    descriptionKey: "cityPages.paris.description",
-    introKey: "cityPages.paris.intro",
-    benefitsKeys: [
-      "cityPages.paris.benefit1",
-      "cityPages.paris.benefit2",
-      "cityPages.paris.benefit3",
-      "cityPages.paris.benefit4",
-      "cityPages.paris.benefit5",
-      "cityPages.paris.benefit6",
-    ],
-    ctaKey: "cityPages.paris.cta",
-    mapQuery: "Paris,France",
-    lat: "48.8566",
-    lng: "2.3522",
-  },
-  london: {
-    slug: "london",
-    nameKey: "cityPages.london.name",
-    country: "GB",
-    flag: "\u{1F1EC}\u{1F1E7}",
-    titleKey: "cityPages.london.title",
-    descriptionKey: "cityPages.london.description",
-    introKey: "cityPages.london.intro",
-    benefitsKeys: [
-      "cityPages.london.benefit1",
-      "cityPages.london.benefit2",
-      "cityPages.london.benefit3",
-      "cityPages.london.benefit4",
-      "cityPages.london.benefit5",
-      "cityPages.london.benefit6",
-    ],
-    ctaKey: "cityPages.london.cta",
-    mapQuery: "London,UK",
-    lat: "51.5074",
-    lng: "-0.1278",
-  },
-  brussels: {
-    slug: "brussels",
-    nameKey: "cityPages.brussels.name",
-    country: "BE",
-    flag: "\u{1F1E7}\u{1F1EA}",
-    titleKey: "cityPages.brussels.title",
-    descriptionKey: "cityPages.brussels.description",
-    introKey: "cityPages.brussels.intro",
-    benefitsKeys: [
-      "cityPages.brussels.benefit1",
-      "cityPages.brussels.benefit2",
-      "cityPages.brussels.benefit3",
-      "cityPages.brussels.benefit4",
-      "cityPages.brussels.benefit5",
-      "cityPages.brussels.benefit6",
-    ],
-    ctaKey: "cityPages.brussels.cta",
-    mapQuery: "Brussels,Belgium",
-    lat: "50.8503",
-    lng: "4.3517",
-  },
-  amsterdam: {
-    slug: "amsterdam",
-    nameKey: "cityPages.amsterdam.name",
-    country: "NL",
-    flag: "\u{1F1F3}\u{1F1F1}",
-    titleKey: "cityPages.amsterdam.title",
-    descriptionKey: "cityPages.amsterdam.description",
-    introKey: "cityPages.amsterdam.intro",
-    benefitsKeys: [
-      "cityPages.amsterdam.benefit1",
-      "cityPages.amsterdam.benefit2",
-      "cityPages.amsterdam.benefit3",
-      "cityPages.amsterdam.benefit4",
-      "cityPages.amsterdam.benefit5",
-      "cityPages.amsterdam.benefit6",
-    ],
-    ctaKey: "cityPages.amsterdam.cta",
-    mapQuery: "Amsterdam,Netherlands",
-    lat: "52.3676",
-    lng: "4.9041",
-  },
-  berlin: {
-    slug: "berlin",
-    nameKey: "cityPages.berlin.name",
-    country: "DE",
-    flag: "\u{1F1E9}\u{1F1EA}",
-    titleKey: "cityPages.berlin.title",
-    descriptionKey: "cityPages.berlin.description",
-    introKey: "cityPages.berlin.intro",
-    benefitsKeys: [
-      "cityPages.berlin.benefit1",
-      "cityPages.berlin.benefit2",
-      "cityPages.berlin.benefit3",
-      "cityPages.berlin.benefit4",
-      "cityPages.berlin.benefit5",
-      "cityPages.berlin.benefit6",
-    ],
-    ctaKey: "cityPages.berlin.cta",
-    mapQuery: "Berlin,Germany",
-    lat: "52.5200",
-    lng: "13.4050",
-  },
-};
-
-function buildCitySchema(city: CityData) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "DMC Kreatif",
-    url: "https://dmckreatif.com",
-    email: "hello@dmckreatif.com",
-    priceRange: "\u20AC\u20AC",
-    areaServed: {
-      "@type": "City",
-      name: city.slug.charAt(0).toUpperCase() + city.slug.slice(1),
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: city.lat,
-      longitude: city.lng,
-    },
-    knowsAbout: [
-      "Web Development",
-      "E-Commerce Development",
-      "SEO Optimization",
-    ],
-  };
-}
+import { buildCitySchema } from "@/lib/seo-schemas";
+import { getCityBySlug } from "@/data/cities";
 
 export default function CityServicePage() {
   const { t } = useTranslation();
   const { locale, city: citySlug } = useParams();
-  const city = citySlug ? cityData[citySlug] : null;
+  const city = citySlug ? getCityBySlug(citySlug) : null;
 
   if (!city) {
     return (
@@ -169,6 +23,8 @@ export default function CityServicePage() {
       </div>
     );
   }
+
+  const cityName = city.slug.charAt(0).toUpperCase() + city.slug.slice(1);
 
   const services = [
     { key: "cityPages.serviceWeb", icon: "\u{1F4BB}" },
@@ -184,7 +40,7 @@ export default function CityServicePage() {
         description={t(city.descriptionKey)}
         path={`/web-agency-${city.slug}`}
       />
-      <JsonLd data={buildCitySchema(city)} />
+      <JsonLd data={buildCitySchema({ cityName, lat: city.lat, lng: city.lng, locale: locale ?? "en" })} />
 
       <Breadcrumbs
         items={[

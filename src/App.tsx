@@ -46,12 +46,21 @@ const EditorPage = lazy(() => import("@/pages/EditorPage"));
 const PublishedSitePage = lazy(() => import("@/pages/PublishedSitePage"));
 const CaseStudiesPage = lazy(() => import("@/pages/CaseStudiesPage"));
 const ServiceDetailPage = lazy(() => import("@/pages/ServiceDetailPage"));
+const TechnologiesPage = lazy(() => import("@/pages/TechnologiesPage"));
+const TechnologyDetailPage = lazy(() => import("@/pages/TechnologyDetailPage"));
+const IndustriesPage = lazy(() => import("@/pages/IndustriesPage"));
+const IndustryDetailPage = lazy(() => import("@/pages/IndustryDetailPage"));
 const PrivacyPage = lazy(() => import("@/pages/PrivacyPage"));
 const TermsPage = lazy(() => import("@/pages/TermsPage"));
 const LegalNoticePage = lazy(() => import("@/pages/LegalNoticePage"));
 const CookiePolicyPage = lazy(() => import("@/pages/CookiePolicyPage"));
 const RefundPolicyPage = lazy(() => import("@/pages/RefundPolicyPage"));
 const CityServicePage = lazy(() => import("@/pages/CityServicePage"));
+const TeamPage = lazy(() => import("@/pages/TeamPage"));
+const ProcessPage = lazy(() => import("@/pages/ProcessPage"));
+const WhyUsPage = lazy(() => import("@/pages/WhyUsPage"));
+const PartnersPage = lazy(() => import("@/pages/PartnersPage"));
+const CareersPage = lazy(() => import("@/pages/CareersPage"));
 const NotFoundPage = lazy(() => import("@/pages/NotFoundPage"));
 
 function LoadingFallback() {
@@ -95,9 +104,18 @@ export default function App() {
             <Route index element={<HomePage />} />
             <Route path="services" element={<ServicesPage />} />
             <Route path="services/:slug" element={<ServiceDetailPage />} />
+            <Route path="technologies" element={<TechnologiesPage />} />
+            <Route path="technologies/:slug" element={<TechnologyDetailPage />} />
+            <Route path="industries" element={<IndustriesPage />} />
+            <Route path="industries/:slug" element={<IndustryDetailPage />} />
             <Route path="portfolio" element={<PortfolioPage />} />
             <Route path="pricing" element={<PricingPage />} />
             <Route path="about" element={<AboutPage />} />
+            <Route path="about/team" element={<TeamPage />} />
+            <Route path="about/process" element={<ProcessPage />} />
+            <Route path="about/why-us" element={<WhyUsPage />} />
+            <Route path="about/partners" element={<PartnersPage />} />
+            <Route path="about/careers" element={<CareersPage />} />
             <Route path="blog" element={<BlogPage />} />
             <Route path="blog/:slug" element={<BlogPostPage />} />
             <Route path="contact" element={<ContactPage />} />

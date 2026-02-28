@@ -69,6 +69,36 @@ export default function Footer() {
                 {t("nav.about")}
               </Link>
               <Link
+                to={`/${currentLocale}/about/team`}
+                className="font-mono text-xs text-neo-bg hover:text-neo-lime transition-colors"
+              >
+                {t("footer.team", "Our Team")}
+              </Link>
+              <Link
+                to={`/${currentLocale}/about/process`}
+                className="font-mono text-xs text-neo-bg hover:text-neo-lime transition-colors"
+              >
+                {t("footer.process", "Our Process")}
+              </Link>
+              <Link
+                to={`/${currentLocale}/about/why-us`}
+                className="font-mono text-xs text-neo-bg hover:text-neo-lime transition-colors"
+              >
+                {t("footer.whyUs", "Why DMC Kreatif")}
+              </Link>
+              <Link
+                to={`/${currentLocale}/about/partners`}
+                className="font-mono text-xs text-neo-bg hover:text-neo-lime transition-colors"
+              >
+                {t("footer.partners", "Partners")}
+              </Link>
+              <Link
+                to={`/${currentLocale}/about/careers`}
+                className="font-mono text-xs text-neo-bg hover:text-neo-lime transition-colors"
+              >
+                {t("footer.careers", "Careers")}
+              </Link>
+              <Link
                 to={`/${currentLocale}/blog`}
                 className="font-mono text-xs text-neo-bg hover:text-neo-lime transition-colors"
               >

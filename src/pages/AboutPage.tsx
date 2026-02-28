@@ -200,10 +200,10 @@ export default function AboutPage() {
               className="flex flex-wrap border-2 border-neo-black bg-neo-white shadow-hard"
             >
               {[
-                { value: 33, suffix: "+", label: "PROJECTS" },
-                { value: 4, suffix: "", label: "COUNTRIES" },
+                { value: 200, suffix: "+", label: "PROJECTS" },
+                { value: 100, suffix: "+", label: "TEAM" },
+                { value: 6, suffix: "", label: "COUNTRIES" },
                 { value: 95, suffix: "+", label: "LIGHTHOUSE" },
-                { value: 100, suffix: "%", label: "ON-TIME" },
               ].map((stat, i) => (
                 <div
                   key={stat.label}
@@ -455,28 +455,24 @@ export default function AboutPage() {
             <motion.h3 variants={fadeInUp} className="font-space font-bold text-lg uppercase tracking-wider mb-6">
               {t("about.exploreMore", "EXPLORE MORE")}
             </motion.h3>
-            <motion.div variants={fadeInUp} className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <Link
-                to={`/${currentLocale}/services`}
-                className="flex items-center justify-between border-2 border-neo-black bg-neo-white shadow-hard p-5 font-space font-bold text-sm uppercase tracking-wider hover:bg-neo-lime transition-colors group"
-              >
-                {t("nav.services", "SERVICES")}
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to={`/${currentLocale}/portfolio`}
-                className="flex items-center justify-between border-2 border-neo-black bg-neo-white shadow-hard p-5 font-space font-bold text-sm uppercase tracking-wider hover:bg-neo-yellow transition-colors group"
-              >
-                {t("nav.portfolio", "PORTFOLIO")}
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to={`/${currentLocale}/blog`}
-                className="flex items-center justify-between border-2 border-neo-black bg-neo-white shadow-hard p-5 font-space font-bold text-sm uppercase tracking-wider hover:bg-neo-blue transition-colors group"
-              >
-                {t("nav.blog", "BLOG")}
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
+            <motion.div variants={fadeInUp} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                { to: "about/team", label: t("footer.team", "OUR TEAM"), color: "hover:bg-neo-lime" },
+                { to: "about/process", label: t("footer.process", "OUR PROCESS"), color: "hover:bg-neo-yellow" },
+                { to: "about/why-us", label: t("footer.whyUs", "WHY DMC KREATIF"), color: "hover:bg-neo-blue" },
+                { to: "about/partners", label: t("footer.partners", "PARTNERS"), color: "hover:bg-neo-pink" },
+                { to: "about/careers", label: t("footer.careers", "CAREERS"), color: "hover:bg-neo-green" },
+                { to: "services", label: t("nav.services", "SERVICES"), color: "hover:bg-neo-purple" },
+              ].map((link) => (
+                <Link
+                  key={link.to}
+                  to={`/${currentLocale}/${link.to}`}
+                  className={`flex items-center justify-between border-2 border-neo-black bg-neo-white shadow-hard p-5 font-space font-bold text-sm uppercase tracking-wider ${link.color} transition-colors group`}
+                >
+                  {link.label}
+                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              ))}
             </motion.div>
           </motion.div>
         </div>

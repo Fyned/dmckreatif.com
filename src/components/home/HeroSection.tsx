@@ -26,8 +26,8 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Main heading */}
-          <motion.div variants={fadeInUp} className="mb-8">
+          {/* Main heading — rendered directly for LCP (no opacity:0 delay) */}
+          <div className="mb-8">
             <h1 className="font-space font-bold text-hero leading-[0.95] tracking-tight">
               {t("hero.titleLine1")}
               <br />
@@ -35,7 +35,7 @@ export default function HeroSection() {
                 {t("hero.titleAccent")}
               </span>
             </h1>
-          </motion.div>
+          </div>
 
           {/* Subtitle */}
           <motion.p

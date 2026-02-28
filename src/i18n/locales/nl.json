@@ -17,8 +17,28 @@
       "description": "Starter €349, Growth €749, Scale €1.497, Commerce €2.497"
     },
     "about": {
-      "title": "Over DMC Kreatif — Webdesign Bureau voor Nederland, België & Europa",
-      "description": "Opgericht door Musa Kerem Demirci. 48+ internationale projecten in 8 landen. Expertise in React, Next.js en meertalige websites."
+      "title": "Over DMC Kreatif — Europees Webontwikkelingsbureau | 100+ Professionals",
+      "description": "In het VK geregistreerd webontwikkelingsbureau met 100+ professionals voor bedrijven in Frankrijk, België, VK, Nederland en Duitsland. 200+ projecten, 6 landen, 4 talen."
+    },
+    "team": {
+      "title": "Ons Team — 100+ Webontwikkeling Professionals | DMC Kreatif",
+      "description": "Maak kennis met ons team van 100+ webontwikkelingsprofessionals verdeeld over 12 afdelingen. Frontend engineers, UX designers, SEO-specialisten voor Europese bedrijven."
+    },
+    "process": {
+      "title": "Ons Proces — Hoe Wij Premium Websites Bouwen | DMC Kreatif",
+      "description": "Ons bewezen 6-stappen webontwikkelingsproces: Ontdekking, UX Design, UI Design, Ontwikkeling, Testen en Lancering. 98% tijdige levering, 500+ sprints voltooid."
+    },
+    "whyUs": {
+      "title": "Waarom DMC Kreatif — 8 Redenen Waarom Wij Uitblinken | Webbureau Europa",
+      "description": "Moderne React/Next.js stack, 95+ Lighthouse gegarandeerd, standaard meertalig, transparante prijzen, toegewijde teams. Ontdek waarom 200+ bedrijven voor ons kozen."
+    },
+    "partners": {
+      "title": "Technologiepartners — Vercel, Supabase, Stripe, Google | DMC Kreatif",
+      "description": "Wij werken samen met de beste technologieplatforms: Vercel, Supabase, Stripe, Google, Cloudflare, Shopify. Gecertificeerd en geïntegreerd voor optimale resultaten."
+    },
+    "careers": {
+      "title": "Carrières bij DMC Kreatif — Word Deel van Ons Europees Webbureau",
+      "description": "Sluit je aan bij 100+ professionals die de toekomst van het Europese web bouwen. Remote-first, cutting-edge stack, premium klanten. Vacatures in React, Next.js, UX, SEO."
     },
     "blog": {
       "title": "Webdesign Blog — SEO Tips, Webshop Gidsen | DMC Kreatif",
@@ -35,6 +55,382 @@
     "templates": {
       "title": "Website Sjablonen — Professionele Ontwerpen vanaf €39 | DMC Kreatif",
       "description": "Starter €39, Business €99, Premium €179. Op maat gemaakt en geleverd in 24u tot 5 dagen."
+    },
+    "serviceDetail": {
+      "react-development": {
+        "title": "React Ontwikkeling — Expert React Bureau | DMC Kreatif",
+        "description": "Maatwerk React ontwikkeling voor Europese bedrijven. Component-architectuur, razendsnelle SPAs en 95+ Lighthouse scores."
+      },
+      "nextjs-development": {
+        "title": "Next.js Ontwikkeling — SSR & SSG Experts | DMC Kreatif",
+        "description": "Next.js ontwikkeling met server-side rendering, statische generatie en App Router. SEO-geoptimaliseerde webapps."
+      },
+      "typescript-development": {
+        "title": "TypeScript Ontwikkeling — Type-Safe Web Apps | DMC Kreatif",
+        "description": "TypeScript ontwikkeling voor enterprise webapplicaties. Strikt typen, minder bugs en onderhoudbare codebases."
+      },
+      "frontend-development": {
+        "title": "Frontend Ontwikkeling — Moderne UI Engineering | DMC Kreatif",
+        "description": "Expert frontend ontwikkeling met React, TypeScript en Tailwind CSS. Pixel-perfecte, toegankelijke interfaces."
+      },
+      "custom-web-apps": {
+        "title": "Maatwerk Webapplicaties — Op Maat Gemaakte Oplossingen | DMC Kreatif",
+        "description": "Webapplicaties op maat gebouwd volgens uw exacte vereisten. Dashboards, portalen en SaaS-platforms."
+      },
+      "progressive-web-apps": {
+        "title": "Progressive Web Apps — Offline-First PWAs | DMC Kreatif",
+        "description": "Progressive web apps die offline werken, direct laden en native aanvoelen. Cross-platform oplossingen."
+      },
+      "api-development": {
+        "title": "API Ontwikkeling — RESTful & GraphQL APIs | DMC Kreatif",
+        "description": "Maatwerk API ontwikkeling met Node.js, Supabase en Edge Functions. Veilige, schaalbare backends."
+      },
+      "website-redesign": {
+        "title": "Website Herontwerp — Moderniseer Uw Aanwezigheid | DMC Kreatif",
+        "description": "Website herontwerp dat conversies, snelheid en SEO verbetert. Transformeer uw verouderde site naar een modern platform."
+      },
+      "legacy-modernization": {
+        "title": "Legacy Modernisering — Migreer naar Moderne Tech | DMC Kreatif",
+        "description": "Moderniseer legacy websites naar React, Next.js en moderne architectuur. Zero-downtime migratie."
+      },
+      "maintenance-support": {
+        "title": "Website Onderhoud & Support — Doorlopende Zorg | DMC Kreatif",
+        "description": "Proactief website onderhoud, beveiligingsupdates, prestatiemonitoring en prioritaire support."
+      },
+      "headless-cms": {
+        "title": "Headless CMS Ontwikkeling — Content-First Websites | DMC Kreatif",
+        "description": "Headless CMS oplossingen met Payload CMS, Strapi en Sanity. Flexibel contentbeheer voor Europese bedrijven."
+      },
+      "performance-optimization": {
+        "title": "Webprestatie Optimalisatie — Versnel Uw Site | DMC Kreatif",
+        "description": "Core Web Vitals optimalisatie, lazy loading, code splitting en caching strategieën. 95+ Lighthouse scores gegarandeerd."
+      },
+      "accessibility": {
+        "title": "Webtoegankelijkheid — WCAG 2.1 AA Compliance | DMC Kreatif",
+        "description": "Toegankelijkheidsaudits en WCAG 2.1 AA compliance. Maak uw website bruikbaar voor iedereen en voldoe aan EU-vereisten."
+      },
+      "gdpr-compliance": {
+        "title": "AVG Compliance voor Websites — EU Gegevensbescherming | DMC Kreatif",
+        "description": "AVG-conforme websites met cookieconsent, privacybeleid en gegevensbescherming. Voldoe aan EU-regelgeving."
+      },
+      "integrations": {
+        "title": "Integraties met Derden — Verbind Uw Tools | DMC Kreatif",
+        "description": "CRM, betaal, analytics en marketing tool integraties voor uw website. Naadloze verbindingen."
+      },
+      "shopify-development": {
+        "title": "Shopify Ontwikkeling — Maatwerk Shopify Winkels | DMC Kreatif",
+        "description": "Maatwerk Shopify ontwikkeling met unieke themas, apps en multi-valuta support voor Europese e-commerce."
+      },
+      "woocommerce-development": {
+        "title": "WooCommerce Ontwikkeling — WordPress E-Commerce | DMC Kreatif",
+        "description": "WooCommerce ontwikkeling met maatwerk themas, plugins en EU betaalintegratie voor Europese webwinkels."
+      },
+      "custom-ecommerce": {
+        "title": "Maatwerk E-Commerce — Vanaf Nul Gebouwd | DMC Kreatif",
+        "description": "E-commerce platforms op maat met React en Supabase. Volledige controle over uw webwinkel architectuur."
+      },
+      "b2b-ecommerce": {
+        "title": "B2B E-Commerce — Groothandel Platforms | DMC Kreatif",
+        "description": "B2B e-commerce platforms met gedifferentieerde prijzen, bulkbestellingen en accountbeheer voor Europese groothandels."
+      },
+      "multi-currency-stores": {
+        "title": "Multi-Valuta Webwinkels — Verkoop in Heel Europa | DMC Kreatif",
+        "description": "Multi-valuta webwinkels met EUR, GBP, CHF ondersteuning, automatische BTW-berekening en gelokaliseerde checkout."
+      },
+      "payment-integration": {
+        "title": "Betaalintegratie — Stripe, iDEAL, Bancontact | DMC Kreatif",
+        "description": "Europese payment gateway integratie inclusief Stripe, iDEAL, Bancontact, Klarna en SEPA automatische incasso."
+      },
+      "ecommerce-seo": {
+        "title": "E-Commerce SEO — Laat Uw Producten Hoger Ranken | DMC Kreatif",
+        "description": "E-commerce SEO met product schema markup, categorie optimalisatie en conversiegericht content voor Europese markten."
+      },
+      "ecommerce-analytics": {
+        "title": "E-Commerce Analytics — Meet Wat Ertoe Doet | DMC Kreatif",
+        "description": "E-commerce analytics met GA4 Enhanced, conversiefunnels en omzetattributie voor webwinkels."
+      },
+      "technical-seo": {
+        "title": "Technische SEO — Los Problemen Op Die Uw Site Remmen | DMC Kreatif",
+        "description": "Technische SEO audits over Core Web Vitals, crawlbaarheid, indexatie en gestructureerde data voor Europese websites."
+      },
+      "local-seo": {
+        "title": "Lokale SEO — Domineer Uw Stad in Zoekresultaten | DMC Kreatif",
+        "description": "Lokale SEO diensten met Google Bedrijfsprofiel optimalisatie, lokale vermeldingen en geo-gerichte content."
+      },
+      "international-seo": {
+        "title": "Internationale SEO — Rangschik in Meerdere Landen | DMC Kreatif",
+        "description": "Internationale SEO met hreflang implementatie, marktspecifiek zoekwoordonderzoek en meertalige contentstrategieën."
+      },
+      "content-seo": {
+        "title": "Content SEO — Creëer Content Die Rankt | DMC Kreatif",
+        "description": "Content SEO strategie met zoekwoordonderzoek, topic clustering en redactiekalenders voor Europese bedrijven."
+      },
+      "link-building": {
+        "title": "Linkbuilding — Verdien Kwaliteitsbacklinks | DMC Kreatif",
+        "description": "White-hat linkbuilding met digitale PR, gastbloggen en Europese branche directories. Bouw domeinautoriteit op."
+      },
+      "seo-consulting": {
+        "title": "SEO Consulting — Expert Strategie & Begeleiding | DMC Kreatif",
+        "description": "SEO consulting voor Europese bedrijven. Audits, strategiesessies en teamtraining door ervaren specialisten."
+      },
+      "google-ads": {
+        "title": "Google Ads Beheer — PPC voor Europese Markten | DMC Kreatif",
+        "description": "Google Ads beheer met search, display en remarketing campagnes geoptimaliseerd voor Europese markten en talen."
+      },
+      "analytics-setup": {
+        "title": "Analytics Setup — GA4 & Conversietracking | DMC Kreatif",
+        "description": "Google Analytics 4 setup met Consent Mode v2, custom events, conversietracking en AVG-conforme dashboards."
+      },
+      "marketing-automation": {
+        "title": "Marketing Automatisering — Nurture Leads op Schaal | DMC Kreatif",
+        "description": "Marketing automatisering met e-mailsequenties, lead scoring en CRM-integratie voor Europese B2B bedrijven."
+      },
+      "geo-optimization": {
+        "title": "Geo-Optimalisatie — Richt Specifieke Markten | DMC Kreatif",
+        "description": "Geo-gerichte weboptimalisatie voor specifieke Europese markten. Taal, valuta en content lokalisatiestrategieën."
+      },
+      "ux-ui-design": {
+        "title": "UX/UI Design — Gebruikersgericht Digitaal Design | DMC Kreatif",
+        "description": "UX/UI design met gebruikersonderzoek, wireframing en pixel-perfecte interfaces. Conversiegericht design voor Europa."
+      },
+      "digital-strategy": {
+        "title": "Digitale Strategie — Routekaart voor Online Groei | DMC Kreatif",
+        "description": "Digitale strategie consulting met marktanalyse, concurrentieonderzoek en actieplannen voor Europese bedrijven."
+      },
+      "brand-identity": {
+        "title": "Merkidentiteit Design — Logo, Kleuren & Richtlijnen | DMC Kreatif",
+        "description": "Merkidentiteit design met logo, kleurenpalet, typografie en brand guidelines voor Europese bedrijven."
+      },
+      "design-systems": {
+        "title": "Design Systems — Schaalbare UI Componentbibliotheken | DMC Kreatif",
+        "description": "Design system ontwikkeling met herbruikbare componenten, tokens en documentatie. Schaal uw productdesign consistent."
+      },
+      "prototyping": {
+        "title": "Snel Prototypen — Van Concept naar Klikbare Demo | DMC Kreatif",
+        "description": "Interactieve prototypes met Figma en code. Valideer ideeën snel voordat u volledig gaat ontwikkelen."
+      },
+      "mobile-first-design": {
+        "title": "Mobile-First Design — Geoptimaliseerd voor Elk Scherm | DMC Kreatif",
+        "description": "Mobile-first responsive design dat perfecte ervaringen garandeert op telefoons, tablets en desktops."
+      },
+      "content-marketing": {
+        "title": "Content Marketing — Autoriteit Opbouwende Content | DMC Kreatif",
+        "description": "Content marketing met blogposts, case studies en thought leadership. Bouw autoriteit en trek organisch verkeer aan."
+      }
+    },
+    "techDetail": {
+      "react": {
+        "title": "React Ontwikkeling — Expert React Bureau | DMC Kreatif",
+        "description": "Premium React-applicaties voor Europese bedrijven. Component-architectuur, 95+ Lighthouse scores, TypeScript-first."
+      },
+      "nextjs": {
+        "title": "Next.js Ontwikkeling — Full-Stack React Framework | DMC Kreatif",
+        "description": "Expert Next.js ontwikkeling met SSR, SSG en ISR. SEO-geoptimaliseerde React-applicaties voor Europese bedrijven."
+      },
+      "typescript": {
+        "title": "TypeScript Ontwikkeling — Type-Safe Webapplicaties | DMC Kreatif",
+        "description": "TypeScript-first webontwikkeling voor Europese bedrijven. Bugs opvangen tijdens compilatie, betrouwbare code leveren."
+      },
+      "vite": {
+        "title": "Vite Ontwikkeling — Razendsnelle Build Tool | DMC Kreatif",
+        "description": "Razendsnelle webontwikkeling met Vite. Directe HMR, geoptimaliseerde builds en moderne DX voor Europese bedrijven."
+      },
+      "tailwindcss": {
+        "title": "Tailwind CSS Ontwikkeling — Utility-First Styling | DMC Kreatif",
+        "description": "Op maat gemaakte Tailwind CSS designs voor Europese bedrijven. Pixel-perfect, responsive en onderhoudbaar."
+      },
+      "framer-motion": {
+        "title": "Framer Motion Animaties — React Animatie Bureau | DMC Kreatif",
+        "description": "Premium webanimaties met Framer Motion. Scroll-getriggerde effecten, paginatransities en micro-interacties."
+      },
+      "supabase": {
+        "title": "Supabase Ontwikkeling — Open Source Backend Platform | DMC Kreatif",
+        "description": "Supabase-applicaties met realtime data, authenticatie, opslag en edge functions voor Europese bedrijven."
+      },
+      "vercel": {
+        "title": "Vercel Deployment — Edge-First Hosting Platform | DMC Kreatif",
+        "description": "Vercel deployment met wereldwijd CDN, serverless functies en automatische CI/CD. Laadtijden onder een seconde."
+      },
+      "shopify": {
+        "title": "Shopify Ontwikkeling — Webshops Op Maat | DMC Kreatif",
+        "description": "Op maat gemaakte Shopify ontwikkeling met Hydrogen, Liquid thema's en multi-valuta voor Europese e-commerce."
+      },
+      "headless-wordpress": {
+        "title": "Headless WordPress — Ontkoppeld CMS | DMC Kreatif",
+        "description": "Headless WordPress met React frontends. Het beste van twee werelden: vertrouwd CMS, moderne prestaties."
+      },
+      "postgresql": {
+        "title": "PostgreSQL Ontwikkeling — Enterprise Database Oplossingen | DMC Kreatif",
+        "description": "PostgreSQL-applicaties met geavanceerde queries, JSONB, volledige tekstzoekopdrachten en row-level security."
+      },
+      "nodejs": {
+        "title": "Node.js Ontwikkeling — Server-Side JavaScript | DMC Kreatif",
+        "description": "Node.js backend ontwikkeling met Express, Fastify en serverless. Schaalbare APIs voor Europese bedrijven."
+      }
+    },
+    "technologies": {
+      "title": "Technologieën Die Wij Gebruiken — React, Next.js, TypeScript & Meer | DMC Kreatif",
+      "description": "Ontdek de geavanceerde technologieën achter onze premium webontwikkeling: React, Next.js, TypeScript, Tailwind CSS, Supabase."
+    },
+    "industries": {
+      "title": "Sectoren die wij bedienen | Websites per sector | DMC Kreatif",
+      "description": "Premium websites voor bouw, energie, boekhouding, gezondheidszorg, onderwijs, e-commerce, zakelijke diensten en toerisme in Europa."
+    },
+    "industryDetail": {
+      "construction": {
+        "title": "Websites voor bouwbedrijven | DMC Kreatif",
+        "description": "Maatwerkwebsites voor bouw, renovatie en gevelbedrijven in Europa. Referentieprojecten, SEO-geoptimaliseerd."
+      },
+      "energy": {
+        "title": "Websites voor energie- en isolatiebedrijven | DMC Kreatif",
+        "description": "Professionele websites voor energieadviseurs, isolatiebedrijven en hernieuwbare energie."
+      },
+      "accounting": {
+        "title": "Websites voor accountants en financiele diensten | DMC Kreatif",
+        "description": "Moderne websites voor accountantskantoren en belastingadviseurs. GDPR-conform, meertalig."
+      },
+      "healthcare": {
+        "title": "Websites voor gezondheidszorg en medische praktijken | DMC Kreatif",
+        "description": "GDPR-conforme websites voor artsen, klinieken en tandartsen. Toegankelijk, veilig."
+      },
+      "education": {
+        "title": "Websites voor onderwijs en opleidingen | DMC Kreatif",
+        "description": "Websites voor scholen, universiteiten en opleidingscentra. WCAG-toegankelijk, meertalig."
+      },
+      "ecommerce": {
+        "title": "E-commerce ontwikkeling voor online retailers | DMC Kreatif",
+        "description": "Complete e-commerce oplossingen met multi-valuta, betalingsintegratie en voorraadbeheer."
+      },
+      "professional-services": {
+        "title": "Websites voor zakelijke dienstverlening | DMC Kreatif",
+        "description": "Websites voor advocatenkantoren, adviesbureaus en architecten. Leadgeneratie, SEO-geoptimaliseerd."
+      },
+      "tourism": {
+        "title": "Websites voor toerisme en horeca | DMC Kreatif",
+        "description": "Meertalige websites voor hotels, reisbureaus en restaurants. Boekingsintegratie, lokale SEO."
+      }
+    },
+    "blogPost": {
+      "how-much-does-a-website-cost-in-europe-2026": {
+        "title": "Hoeveel kost een website in Europa in 2026? — DMC Kreatif Blog",
+        "description": "Een transparant overzicht van de kosten voor websiteontwikkeling in Europa in 2026. Vergelijk prijzen voor maatwerkwebsites, e-commerce, templates en onderhoud."
+      },
+      "how-to-choose-a-web-agency-in-europe": {
+        "title": "Hoe kies je een webbureau in Europa — DMC Kreatif Blog",
+        "description": "Een praktische gids voor het evalueren en selecteren van het juiste webbureau voor uw Europees bedrijf. Belangrijke criteria en beslissingskader."
+      },
+      "technical-seo-checklist-europe": {
+        "title": "Technische SEO checklist voor Europese websites — DMC Kreatif Blog",
+        "description": "Volledige technische SEO-checklist voor Europese websites. Core Web Vitals, crawlbaarheid, indexering, gestructureerde data, hreflang en meertalige optimalisatie."
+      },
+      "core-web-vitals-lighthouse-guide": {
+        "title": "Core Web Vitals: hoe je een 95+ Lighthouse-score behaalt — DMC Kreatif Blog",
+        "description": "Stapsgewijze handleiding voor het behalen van een 95+ Lighthouse-score. Optimaliseer LCP, FID, CLS en INP voor betere prestaties en SEO-rankings."
+      },
+      "website-redesign-guide": {
+        "title": "Gids voor website-redesign: wanneer en hoe — DMC Kreatif Blog",
+        "description": "Weet wanneer uw website een redesign nodig heeft en hoe u dit uitvoert zonder SEO-rankings te verliezen. Planning, migratiestrategie en optimalisatie."
+      },
+      "multilingual-website-guide": {
+        "title": "Hoe bouw je een meertalige website: complete gids — DMC Kreatif Blog",
+        "description": "Alles wat u moet weten over het bouwen van een meertalige website voor Europese markten. i18n-architectuur, hreflang, contentstrategie en vertaalworkflow."
+      },
+      "gdpr-compliance-checklist": {
+        "title": "AVG-compliancechecklist voor websites in 2026 — DMC Kreatif Blog",
+        "description": "Uitgebreide AVG-compliancechecklist voor Europese websites. Cookietoestemming, privacybeleid, verwerkersovereenkomsten en technische implementatie."
+      },
+      "ecommerce-conversion-optimization": {
+        "title": "Hoe u uw e-commerce conversieratio optimaliseert — DMC Kreatif Blog",
+        "description": "Bewezen strategieen om uw e-commerce conversieratio te verhogen. Checkout-optimalisatie, productpaginaontwerp, vertrouwenssignalen en A/B-testen."
+      },
+      "seo-audit-guide-2026": {
+        "title": "SEO-audit stap-voor-stap gids voor 2026 — DMC Kreatif Blog",
+        "description": "Hoe u een complete SEO-audit uitvoert in 2026. Technische analyse, on-page optimalisatie, contentlacunes, backlinkprofiel en concurrentiebenchmark."
+      },
+      "website-migration-seo": {
+        "title": "Hoe u uw website migreert zonder SEO te verliezen — DMC Kreatif Blog",
+        "description": "Complete gids voor websitemigratie die uw SEO-rankings behoudt. Redirect-mapping, crawlbudget, contentmigratie en monitoring na migratie."
+      },
+      "shopify-vs-woocommerce-vs-custom": {
+        "title": "Shopify vs WooCommerce vs maatwerk e-commerce — DMC Kreatif Blog",
+        "description": "Gedetailleerde vergelijking van Shopify, WooCommerce en maatwerk e-commerce-oplossingen voor Europese bedrijven. Functies, prijzen en toepassingen."
+      },
+      "nextjs-vs-gatsby-vs-remix": {
+        "title": "Next.js vs Gatsby vs Remix: volledige vergelijking 2026 — DMC Kreatif Blog",
+        "description": "Diepgaande vergelijking van Next.js, Gatsby en Remix voor moderne webontwikkeling. Prestaties, developer experience, SEO-mogelijkheden en productiegereedheid."
+      },
+      "react-vs-wordpress-2026": {
+        "title": "React vs WordPress: wanneer wat kiezen in 2026 — DMC Kreatif Blog",
+        "description": "Eerlijke vergelijking van React-gebaseerde ontwikkeling vs WordPress voor zakelijke websites in 2026. Kosten, prestaties, beveiliging en ROI op lange termijn."
+      },
+      "supabase-vs-firebase": {
+        "title": "Supabase vs Firebase: backend-vergelijking 2026 — DMC Kreatif Blog",
+        "description": "Volledige vergelijking van Supabase en Firebase als backend-platformen. PostgreSQL vs NoSQL, authenticatie, realtime functies, prijzen en vendor lock-in."
+      },
+      "agency-vs-freelancer-development": {
+        "title": "Bureau vs freelancer vs intern: ontwikkelingsvergelijking — DMC Kreatif Blog",
+        "description": "Voor- en nadelen van het inhuren van een webbureau, freelancer of het opbouwen van een intern team. Kostenanalyse, kwaliteit en projectmanagement."
+      },
+      "headless-vs-traditional-cms": {
+        "title": "Headless CMS vs traditioneel CMS: volledige vergelijking — DMC Kreatif Blog",
+        "description": "Headless CMS vs traditioneel CMS uitgelegd. Architectuurverschillen, contentlevering, developer experience en welke aanpak bij uw bedrijf past."
+      },
+      "tailwind-vs-bootstrap": {
+        "title": "Tailwind CSS vs Bootstrap vs CSS Modules: stylingvergelijking — DMC Kreatif Blog",
+        "description": "Uitgebreide vergelijking van Tailwind CSS, Bootstrap en CSS Modules. Prestaties, aanpasbaarheid, leercurve en welke te kiezen voor uw project."
+      },
+      "vercel-vs-netlify-vs-aws": {
+        "title": "Vercel vs Netlify vs AWS: deployment-platformvergelijking — DMC Kreatif Blog",
+        "description": "Vergelijk Vercel, Netlify en AWS voor webdeployment. Prijzen, prestaties, CI/CD, serverless functies en welk platform het beste is voor Europese bedrijven."
+      },
+      "shopify-vs-prestashop-europe": {
+        "title": "Shopify vs PrestaShop voor Europese e-commerce — DMC Kreatif Blog",
+        "description": "Shopify vs PrestaShop vergelijking voor Europese webwinkels. Multi-valuta, btw-compliance, betaalgateways, lokalisatie en totale eigendomskosten."
+      },
+      "wordpress-vs-custom-cost": {
+        "title": "WordPress vs maatwerkontwikkeling: totale kostenanalyse — DMC Kreatif Blog",
+        "description": "Werkelijke kostenvergelijking van WordPress vs maatwerkontwikkeling over 3 jaar. Licenties, hosting, beveiliging, prestaties en verborgen onderhoudskosten."
+      },
+      "seo-guide-small-businesses-france": {
+        "title": "SEO-gids voor kleine bedrijven in Frankrijk — DMC Kreatif Blog",
+        "description": "Praktische SEO-gids voor Franse kleine bedrijven. Lokale SEO, Google My Business, Frans zoekwoordenonderzoek, linkbuilding en contentstrategie."
+      },
+      "why-multilingual-website-european-business": {
+        "title": "Waarom elk Europees bedrijf een meertalige website nodig heeft — DMC Kreatif Blog",
+        "description": "Onderbouwde redenen waarom Europese bedrijven meertalige websites nodig hebben. Marktbereik, SEO-voordelen, klantvertrouwen en concurrentievoordeel."
+      },
+      "what-is-headless-cms": {
+        "title": "Wat is een headless CMS? Complete gids voor 2026 — DMC Kreatif Blog",
+        "description": "Alles wat u moet weten over headless CMS in 2026. Hoe het werkt, voordelen ten opzichte van traditioneel CMS, topplatformen en implementatie best practices."
+      },
+      "ecommerce-platform-comparison-europe": {
+        "title": "E-commerceplatformvergelijking voor Europese MKB's — DMC Kreatif Blog",
+        "description": "Vergelijk de beste e-commerceplatformen voor Europese kleine bedrijven. Shopify, WooCommerce, PrestaShop, Magento en maatwerk beoordeeld op 10 criteria."
+      },
+      "state-of-web-development-2026": {
+        "title": "De staat van webontwikkeling in 2026 — DMC Kreatif Blog",
+        "description": "Belangrijke trends in webontwikkeling in 2026. AI-integratie, edge computing, server components, WebAssembly en de veranderende rol van frontend-ontwikkelaars."
+      },
+      "multilingual-seo-europe": {
+        "title": "Waarom Europese bedrijven meertalige SEO nodig hebben — DMC Kreatif Blog",
+        "description": "Hoe meertalige SEO organische groei stimuleert op Europese markten. Hreflang-implementatie, gelokaliseerde zoekwoordstrategie en cross-border contentoptimalisatie."
+      },
+      "web-design-construction": {
+        "title": "Webdesign voor bouwbedrijven: best practices — DMC Kreatif Blog",
+        "description": "Hoe u een effectieve website ontwerpt voor bouwbedrijven. Portfoliopresentatie, leadgeneratie, projectgalerijen en branchespecifieke UX-patronen."
+      },
+      "ai-web-development-2026": {
+        "title": "AI in webontwikkeling: wat het betekent voor uw bedrijf — DMC Kreatif Blog",
+        "description": "Hoe AI webontwikkeling transformeert in 2026. Codegeneratie, designautomatisering, personalisatie-engines en wat bedrijfseigenaren moeten weten."
+      },
+      "core-web-vitals-explained": {
+        "title": "Core Web Vitals uitgelegd voor ondernemers — DMC Kreatif Blog",
+        "description": "Een niet-technische gids over Core Web Vitals. Wat LCP, INP en CLS betekenen voor uw bedrijf, waarom Google erom geeft en hoe u uw scores verbetert."
+      },
+      "roi-professional-web-design": {
+        "title": "De werkelijke ROI van investeren in professioneel webdesign — DMC Kreatif Blog",
+        "description": "Kwantificeer het rendement van professioneel webdesign. Impact op omzet, merkperceptie, conversieratio's en langetermijnwaarde-analyse."
+      }
     }
   },
   "nav": {
@@ -46,7 +442,8 @@
     "blog": "BLOG",
     "contact": "CONTACT",
     "startProject": "PROJECT STARTEN",
-    "templates": "SJABLONEN"
+    "templates": "SJABLONEN",
+    "industries": "SECTOREN"
   },
   "hero": {
     "status": "AGENCY_STATUS: PROJECTEN ACCEPTEREN",
@@ -55,15 +452,15 @@
     "subtitle": "Premium webontwikkeling voor Europese bedrijven. Op maat gemaakt, razendsnel, meertalig.",
     "ctaPrimary": "START UW PROJECT",
     "ctaSecondary": "BEKIJK ONS WERK",
-    "stat1": "33+",
+    "stat1": "200+",
     "stat1Label": "Projecten",
-    "stat2": "4",
-    "stat2Label": "Landen",
-    "stat3": "100%",
-    "stat3Label": "Op Tijd",
-    "stat4": "98+",
+    "stat2": "100+",
+    "stat2Label": "Team",
+    "stat3": "6",
+    "stat3Label": "Landen",
+    "stat4": "95+",
     "stat4Label": "Lighthouse",
-    "microCopy": "Handgemaakt door professionele ontwikkelaars • 33+ internationale projecten opgeleverd",
+    "microCopy": "100+ professionals • 200+ internationale projecten opgeleverd in 6 Europese landen",
     "bookCall": "of boek een gratis gesprek van 15 min →"
   },
   "choosePath": {
@@ -424,7 +821,7 @@
       "seoAudit": "SEO AUDIT & FIX",
       "seoAuditDesc": "Volledige technische audit met correcties en aanbevelingen",
       "googleAds": "GOOGLE ADS SETUP",
-      "googleAdsDesc": "Campagne-instelling, zoekwoordonderzoek en initi\u00eble targeting",
+      "googleAdsDesc": "Campagne-instelling, zoekwoordonderzoek en initiële targeting",
       "socialKit": "SOCIAL MEDIA KIT",
       "socialKitDesc": "20 aangepaste templates voor Instagram, Facebook en LinkedIn",
       "videoProduction": "VIDEOPRODUCTIE",
@@ -445,13 +842,13 @@
     "templateCompare1": "Levering in 2-5 dagen",
     "templateCompare2": "Uw logo & kleuren",
     "templateCompare3": "Voorgebouwde layouts",
-    "templateComparePrice": "Vanaf \u20ac39",
+    "templateComparePrice": "Vanaf €39",
     "premiumCompareTitle": "OP MAAT GEMAAKT",
     "premiumCompareDescription": "Volledig op maat gemaakte website. Onbeperkte revisies, prioritaire ondersteuning.",
     "premiumCompare1": "Levering in 3-28 dagen",
     "premiumCompare2": "Op maat ontworpen design",
     "premiumCompare3": "Revisies & support inbegrepen",
-    "premiumComparePrice": "Vanaf \u20ac349",
+    "premiumComparePrice": "Vanaf €349",
     "guarantee": "TEVREDENHEIDSGARANTIE",
     "guaranteeDesc": "Gratis revisies tot u 100% tevreden bent",
     "payment": "VEILIGE BETALING",
@@ -723,11 +1120,11 @@
   "about": {
     "sectionTitle": "OVER ONS",
     "sectionSubtitle": "SYS.OVER",
-    "headline": "WIJ ZIJN DMC KREATIF & GMG DESIGN",
-    "description": "Een digitaal agentschapspartnerschap dat Europese bedrijven bedient. DMC Kreatif behandelt internationale markten, GMG Design dekt de binnenlandse markt. Hetzelfde team, dezelfde kwaliteit, dubbel bereik.",
+    "headline": "WIJ ZIJN DMC KREATIF",
+    "description": "Een in het VK geregistreerd webontwikkelingsbureau met meer dan 100 professionals die Europese bedrijven bedienen in 6 landen. Wij combineren geavanceerde React en Next.js technologie met premium design om websites te leveren die converteren.",
     "founderName": "Musa Kerem Demirci",
-    "founderRole": "OPRICHTER & HOOFDONTWIKKELAAR",
-    "founderBio": "Musa Kerem Demirci is full-stack developer en oprichter van DMC Kreatif, een webontwikkelingsbureau dat bedrijven in West-Europa bedient. Met diepgaande expertise in React, Next.js, TypeScript en Tailwind CSS heeft hij persoonlijk meer dan 33 websites ontworpen en ontwikkeld voor klanten in Frankrijk, België, het Verenigd Koninkrijk, Nederland en Duitsland. Zijn aanpak combineert technische precisie met designgevoel — elk project streeft naar 95+ Google Lighthouse-scores, laadtijden onder de 2 seconden en volledige meertalige SEO-implementatie. Voordat hij DMC Kreatif in 2023 oprichtte, deed Musa internationale ervaring op met klanten in diverse sectoren, waaronder bouw, energie, boekhouding en e-commerce. Hij spreekt Engels, Frans en Turks en werkt nauw samen met Nederlandstalige en Duitstalige klanten via gelokaliseerde communicatie. Zijn filosofie is eenvoudig: elke pixel telt, elke milliseconde doet ertoe, en elk bedrijf verdient een website die het merk echt vertegenwoordigt. Met een achtergrond in Computer Engineering en meer dan 3 jaar professionele webontwikkelingservaring combineert Kerem technische diepgang met creatief designdenken.",
+    "founderRole": "CEO & OPRICHTER",
+    "founderBio": "Musa Kerem Demirci is de CEO en oprichter van DMC Kreatif, een in het VK geregistreerd webontwikkelingsbureau met meer dan 100 professionals die bedrijven in West-Europa bedienen. Onder zijn leiding is het bureau gegroeid van een boutique studio tot een volledige digitale krachtcentrale met toegewijde afdelingen voor frontend engineering, UX/UI design, SEO, e-commerce, content, QA en klantsucces. Met diepgaande expertise in React, Next.js, TypeScript en moderne webarchitectuur houdt Musa persoonlijk toezicht op de technische richting van elk groot project — met 95+ Google Lighthouse-scores, laadtijden onder 2 seconden en meertalige SEO-implementatie bij alle leveringen. Voordat hij DMC Kreatif in 2023 oprichtte, deed hij internationale ervaring op met enterprise en MKB-klanten in de sectoren bouw, energie, financiën, onderwijs en e-commerce. Het bureau heeft sindsdien 200+ projecten opgeleverd voor klanten in Frankrijk, België, het Verenigd Koninkrijk, Nederland, Duitsland en Zwitserland, met een leveringspercentage van 98% op tijd en een klanttevredenheidsscore van 4.9/5. Musa heeft een diploma in Computer Engineering en spreekt Engels, Frans en Turks. Zijn gedistribueerde teammodel — 35 kernmedewerkers plus een gecertificeerd specialistennetwerk — geeft klanten toegang tot talent van wereldklasse tegen concurrerende Europese tarieven. Zijn filosofie is eenvoudig: elke pixel telt, elke milliseconde doet ertoe, en elk Europees bedrijf verdient een website die echt converteert.",
     "mission": "ONZE MISSIE",
     "missionText": "Premium weboplossingen leveren die Europese bedrijven helpen groeien. Elke pixel telt. Elke milliseconde doet ertoe.",
     "value1Title": "KWALITEIT EERST",
@@ -750,17 +1147,17 @@
     "timelineTitle": "ONZE REIS",
     "timelineSubtitle": "SYS.TIJDLIJN",
     "milestone1Title": "DMC Kreatif Opgericht",
-    "milestone1Desc": "Gelanceerd als premium webbureau gericht op Europese bedrijven. Eerste kantoor opgezet en merkidentiteit gecreëerd.",
-    "milestone2Title": "Eerste Franse Projecten",
-    "milestone2Desc": "Websites opgeleverd voor Cakir Facades en Altinbas Moustiquaire in Frankrijk. Sterke aanwezigheid op de Franse markt gevestigd.",
-    "milestone3Title": "Uitbreiding naar het VK",
-    "milestone3Desc": "Uitgebreid naar het Verenigd Koninkrijk met Adamsons Accountants. Britse bankrekening geopend en Britse marktpositie gevestigd.",
-    "milestone4Title": "33+ Projecten Mijlpaal",
-    "milestone4Desc": "33+ internationale projecten voltooid in Frankrijk, België en het VK. 98+ Lighthouse-scores behouden bij elke oplevering.",
+    "milestone1Desc": "Gelanceerd als premium webbureau gericht op Europese bedrijven. Oprichtingsteam van frontend engineers, designers en SEO-specialisten samengesteld.",
+    "milestone2Title": "Franse Markt Gevestigd",
+    "milestone2Desc": "Eerste grote projecten opgeleverd voor Cakir Facades, Altinbas Moustiquaire en Consulting Energy in Frankrijk. Team gegroeid naar 25+ professionals.",
+    "milestone3Title": "VK Hoofdkantoor Geregistreerd",
+    "milestone3Desc": "Bedrijf geregistreerd in het Verenigd Koninkrijk. Londense hoofdkantoor geopend en uitgebreid naar Britse klanten waaronder Adamsons Accountants.",
+    "milestone4Title": "100+ Projecten Mijlpaal",
+    "milestone4Desc": "100 voltooide internationale projecten overtroffen in Frankrijk, België en het VK. Team uitgebreid naar 50+ met dedicated afdelingen voor design, ontwikkeling en SEO.",
     "milestone5Title": "Europese Uitbreiding",
-    "milestone5Desc": "Diensten uitgebreid naar Nederland en Duitsland. Nederlandse en Duitse taalondersteuning toegevoegd. Meertalig websiteplatform gelanceerd.",
-    "milestone6Title": "Sjablonenplatform Lancering",
-    "milestone6Desc": "Kant-en-klare website sjablonenplatform gelanceerd. Schaalbare oplossingen voor Europese MKB-bedrijven vanaf €50."
+    "milestone5Desc": "Diensten uitgebreid naar Nederland, Duitsland en Zwitserland. Team gegroeid naar 100+ professionals in 12 afdelingen. Meertalig platform gelanceerd met 4 talen.",
+    "milestone6Title": "200+ Projecten & Sjablonenplatform",
+    "milestone6Desc": "200+ voltooide projecten bereikt in 6 Europese landen. Kant-en-klare website sjablonen gelanceerd. Specialistisch partnernetwerk opgezet in 4 landen."
   },
   "contact": {
     "introHeading": "Laten we praten over uw project",
@@ -803,7 +1200,7 @@
     "serviceTemplatePro": "Sjabloon — Professioneel (€150)",
     "explore": "Ontdekken",
     "selectService": "Selecteer een dienst...",
-    "serviceLaunch": "Starter Pakket (\u20ac349)",
+    "serviceLaunch": "Starter Pakket (€349)",
     "serviceGrowth": "Groei Pakket (€997)",
     "serviceScale": "Schaal Pakket (€1.997)",
     "serviceCommerce": "Commerce Pakket (€2.997)",
@@ -867,18 +1264,23 @@
     "multilingualExcerpt": "Ontdek waarom een meertalige website essentieel is voor bedrijven die actief zijn op Europese markten. Impact op omzet, SEO-voordelen en best practices voor implementatie."
   },
   "footer": {
-    "tagline": "PREMIUM WEBONTWIKKELING VOOR EUROPESE BEDRIJVEN",
+    "tagline": "Premium webontwikkeling voor Europese bedrijven. Maatwerk websites, webshops en digitale marketing.",
     "services": "DIENSTEN",
     "company": "BEDRIJF",
     "legal": "JURIDISCH",
-    "privacy": "PRIVACYBELEID",
-    "terms": "ALGEMENE VOORWAARDEN",
+    "privacy": "Privacybeleid",
+    "terms": "Algemene Voorwaarden",
     "legalNotice": "Juridische Kennisgeving",
     "cookiePolicy": "Cookiebeleid",
     "refundPolicy": "Restitutiebeleid",
     "manageCookies": "Cookies Beheren",
-    "copyright": "ALLE RECHTEN VOORBEHOUDEN",
-    "builtWith": "GEBOUWD MET REACT + VITE + TAILWIND"
+    "copyright": "Alle rechten voorbehouden",
+    "builtWith": "Gebouwd met React, Tailwind & Passie",
+    "team": "Ons Team",
+    "process": "Ons Proces",
+    "whyUs": "Waarom DMC Kreatif",
+    "partners": "Partners",
+    "careers": "Carrières"
   },
   "auth": {
     "loginTitle": "Welkom Terug",
@@ -1170,6 +1572,7 @@
   },
   "cookies": {
     "title": "Cookie-instellingen",
+    "mobileShort": "Wij gebruiken cookies om uw ervaring te verbeteren.",
     "description": "Wij gebruiken cookies om uw ervaring te verbeteren. Noodzakelijke cookies zijn vereist voor de werking van de website. Analytische en marketingcookies helpen ons het verkeer te begrijpen en onze diensten te verbeteren.",
     "learnMore": "Meer informatie",
     "acceptAll": "Alles accepteren",
@@ -1483,6 +1886,102 @@
       "benefit4": "DSGVO-conforme (Duitse AVG) webontwikkeling",
       "benefit5": "Ervaring met bedrijven in Duitsland, Oostenrijk en Zwitserland",
       "benefit6": "Premiumkwaliteit tegen competitieve Europese tarieven"
+    },
+    "lyon": {
+      "name": "Lyon",
+      "title": "Webbureau in Lyon — Websites op Maat voor Auvergne-Rhône-Alpes",
+      "description": "DMC Kreatif bouwt krachtige websites voor bedrijven in Lyon. Webontwikkeling, e-commerce en SEO voor de regio Auvergne-Rhône-Alpes.",
+      "intro": "Op zoek naar een professioneel webbureau in Lyon? DMC Kreatif creëert moderne, krachtige websites voor bedrijven in de regio Auvergne-Rhône-Alpes. Van innovatieve startups in Part-Dieu tot gevestigde bedrijven in Confluence, wij leveren digitale oplossingen die groei stimuleren.",
+      "benefit1": "Diepgaande kennis van het Lyonnese en regionale bedrijfsecosysteem",
+      "benefit2": "Tweetalige websites (Frans & Engels) voor internationaal bereik",
+      "benefit3": "SEO geoptimaliseerd voor Lyon-specifieke en regionale zoekopdrachten",
+      "benefit4": "95+ Google Lighthouse scores op elk project",
+      "benefit5": "Ervaring met de bloeiende tech- en startupscene van Lyon",
+      "benefit6": "Snelle levering: websites gelanceerd in 3-28 dagen"
+    },
+    "marseille": {
+      "name": "Marseille",
+      "title": "Webbureau in Marseille — Professionele Websites voor Mediterrane Bedrijven",
+      "description": "DMC Kreatif ontwikkelt professionele websites voor bedrijven in Marseille. Webontwikkeling, webshops en SEO voor de PACA-regio.",
+      "intro": "Een webbureau in Marseille nodig? DMC Kreatif bouwt verbluffende, snelle websites voor bedrijven in de regio Provence-Alpes-Côte d'Azur. Van maritieme bedrijven in Vieux-Port tot toerismebedrijven bij de Calanques, wij creëren digitale ervaringen vol Mediterrane energie.",
+      "benefit1": "Begrip van de unieke Mediterrane bedrijfscultuur van Marseille",
+      "benefit2": "Meertalige websites voor toerisme en internationale handel",
+      "benefit3": "SEO geoptimaliseerd voor Marseille en PACA-regionale zoektermen",
+      "benefit4": "E-commerce oplossingen voor de levendige retailsector van Marseille",
+      "benefit5": "Ervaring met maritieme, toeristische en horecabedrijven",
+      "benefit6": "Competitieve prijzen vanaf €497"
+    },
+    "manchester": {
+      "name": "Manchester",
+      "title": "Webbureau in Manchester — Moderne Websites voor Noord-Engelse Bedrijven",
+      "description": "DMC Kreatif maakt moderne websites voor bedrijven in Manchester en het Noordwesten. Webontwikkeling, e-commerce en SEO.",
+      "intro": "Op zoek naar een webontwikkelingsbureau in Manchester? DMC Kreatif levert moderne, krachtige websites voor bedrijven in het Noordwesten van Engeland. Van creatieve bureaus in het Northern Quarter tot techbedrijven in MediaCityUK, wij bouwen digitale oplossingen die wereldwijd concurreren.",
+      "benefit1": "Begrip van de snelgroeiende digitale economie van Manchester",
+      "benefit2": "Meertalige websites voor de meest diverse stad van het VK",
+      "benefit3": "SEO afgestemd op zichtbaarheid in Manchester en Noordwest-Engeland",
+      "benefit4": "Laadtijden onder de 2 seconden op elk project",
+      "benefit5": "Ervaring met de creatieve en technische industrieën van Noord-Engeland",
+      "benefit6": "VK-bedrijfservaring met transparante GBP/EUR-prijzen"
+    },
+    "antwerp": {
+      "name": "Antwerpen",
+      "title": "Webbureau in Antwerpen — Tweetalige Websites voor Vlaamse Bedrijven",
+      "description": "DMC Kreatif bouwt tweetalige websites voor bedrijven in Antwerpen en Vlaanderen. Nederlands & Engels webontwikkeling, webshops en SEO.",
+      "intro": "Op zoek naar een webbureau in Antwerpen? DMC Kreatif is gespecialiseerd in tweetalige websites voor de Vlaamse markt. Wij bedienen bedrijven in heel Antwerpen, van modehuizen in de Diamantwijk tot logistieke bedrijven in het havengebied, met websites die naadloos werken in het Nederlands en Engels.",
+      "benefit1": "Tweetalige expertise: Nederlands en Engelse websites als standaard",
+      "benefit2": "Kennis van het Antwerpse en Vlaamse bedrijfslandschap",
+      "benefit3": "E-commerce oplossingen voor de mode- en diamantindustrie van Antwerpen",
+      "benefit4": "SEO geoptimaliseerd voor Nederlandse en Vlaamse zoektermen",
+      "benefit5": "Ervaring met Belgische handel, logistiek en retailsectoren",
+      "benefit6": "AVG-conform vanaf dag één"
+    },
+    "rotterdam": {
+      "name": "Rotterdam",
+      "title": "Webbureau in Rotterdam — Innovatieve Websites voor Nederlandse Bedrijven",
+      "description": "DMC Kreatif ontwikkelt innovatieve websites voor bedrijven in Rotterdam en Zuid-Holland. Webontwikkeling, webshops en SEO.",
+      "intro": "Een webbureau in Rotterdam nodig? DMC Kreatif creëert innovatieve, krachtige websites voor bedrijven in de grootste havenstad van Europa. Van logistieke bedrijven op de Maasvlakte tot creatieve studio's aan de Witte de Withstraat, wij bouwen digitale oplossingen die passen bij de vooruitstrevende geest van Rotterdam.",
+      "benefit1": "Nederlandse en Engelse websites voor de internationale zakelijke hub van Rotterdam",
+      "benefit2": "Webshop-ontwikkeling met iDEAL en Nederlandse betaalintegratie",
+      "benefit3": "SEO geoptimaliseerd voor Rotterdam en Zuid-Holland zichtbaarheid",
+      "benefit4": "Moderne tech stack: React, Next.js, Tailwind CSS",
+      "benefit5": "Ervaring met logistieke, maritieme en creatieve industrieën",
+      "benefit6": "Competitieve prijzen vanaf €497"
+    },
+    "lille": {
+      "name": "Rijsel",
+      "title": "Webbureau in Rijsel — Websites op Maat voor Hauts-de-France",
+      "description": "DMC Kreatif maakt websites op maat voor bedrijven in Rijsel en de regio Hauts-de-France. Webontwikkeling, e-commerce en SEO.",
+      "intro": "Op zoek naar een webbureau in Rijsel? DMC Kreatif bouwt professionele, krachtige websites voor bedrijven in de regio Hauts-de-France. Van retailbedrijven in Vieux-Lille tot techbedrijven in EuraTechnologies, wij leveren digitale oplossingen die profiteren van Rijsels strategische ligging.",
+      "benefit1": "Strategische locatie-expertise: Rijsel op het kruispunt van Parijs, Londen en Brussel",
+      "benefit2": "Tweetalige websites (Frans & Engels) voor grensoverschrijdende handel",
+      "benefit3": "SEO geoptimaliseerd voor Rijsel en Hauts-de-France regionale zoekopdrachten",
+      "benefit4": "95+ Google Lighthouse scores op elk project",
+      "benefit5": "Ervaring met het groeiende tech-ecosysteem van Rijsel en EuraTechnologies",
+      "benefit6": "Snelle levering: websites gelanceerd in 3-28 dagen"
+    },
+    "birmingham": {
+      "name": "Birmingham",
+      "title": "Webbureau in Birmingham — Professionele Websites voor West Midlands",
+      "description": "DMC Kreatif bouwt professionele websites voor bedrijven in Birmingham en de West Midlands. Webontwikkeling, e-commerce en SEO.",
+      "intro": "Op zoek naar een webbureau in Birmingham? DMC Kreatif maakt professionele, krachtige websites voor bedrijven in de West Midlands. Van fabrikanten in het Jewellery Quarter tot professionele diensten aan Colmore Row, wij bouwen websites die uw digitale aanwezigheid vergroten.",
+      "benefit1": "Begrip van de diverse productie- en diensteneconomie van Birmingham",
+      "benefit2": "Meertalige websites voor de meest multiculturele stad van het VK",
+      "benefit3": "SEO afgestemd op zichtbaarheid in Birmingham en de West Midlands",
+      "benefit4": "Laadtijden onder de 2 seconden op elk project",
+      "benefit5": "Ervaring met productie, professionele diensten en retailsectoren",
+      "benefit6": "Transparante prijzen in GBP en EUR"
+    },
+    "nantes": {
+      "name": "Nantes",
+      "title": "Webbureau in Nantes — Creatieve Websites voor Loire-Atlantique",
+      "description": "DMC Kreatif ontwikkelt creatieve websites voor bedrijven in Nantes en de regio Pays de la Loire. Webontwikkeling, e-commerce en SEO.",
+      "intro": "Een webbureau in Nantes nodig? DMC Kreatif bouwt creatieve, krachtige websites voor bedrijven in de regio Pays de la Loire. Van creatieve industrieën op het Île de Nantes tot tech-startups in het Quartier de la Création, wij creëren digitale ervaringen die de innovatieve geest van Nantes weerspiegelen.",
+      "benefit1": "Kennis van de creatieve en innovatiegedreven economie van Nantes",
+      "benefit2": "Tweetalige websites (Frans & Engels) voor internationale klanten",
+      "benefit3": "SEO geoptimaliseerd voor Nantes en Pays de la Loire zoekopdrachten",
+      "benefit4": "95+ Google Lighthouse scores op elk project",
+      "benefit5": "Ervaring met creatieve, tech- en maritieme bedrijven",
+      "benefit6": "Competitieve prijzen vanaf €497"
     }
   },
   "leadMagnet": {

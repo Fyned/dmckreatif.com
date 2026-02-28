@@ -14,6 +14,8 @@ interface SeoHeadProps {
   noIndex?: boolean;
   publishedTime?: string;
   modifiedTime?: string;
+  /** Override which locales get hreflang tags. Defaults to all 4. Pass ["en"] for EN-only content. */
+  locales?: string[];
 }
 
 export default function SeoHead({
@@ -26,6 +28,7 @@ export default function SeoHead({
   noIndex = false,
   publishedTime,
   modifiedTime,
+  locales,
 }: SeoHeadProps) {
   const { locale } = useParams();
   const currentLocale = locale ?? "en";
@@ -33,7 +36,8 @@ export default function SeoHead({
   const fullOgImage = ogImage.startsWith("http")
     ? ogImage
     : `${BASE_URL}${ogImage}`;
-  const alternateLocales = SUPPORTED_LOCALES.filter(
+  const activeLocales = locales ?? [...SUPPORTED_LOCALES];
+  const alternateLocales = activeLocales.filter(
     (l) => l !== currentLocale
   );
 
@@ -44,8 +48,8 @@ export default function SeoHead({
       <meta name="description" content={description} />
       <link rel="canonical" href={canonicalUrl} />
 
-      {/* Hreflang tags for all supported languages */}
-      {SUPPORTED_LOCALES.map((lang) => (
+      {/* Hreflang tags — only for activeLocales (EN-only content passes ["en"]) */}
+      {activeLocales.map((lang) => (
         <link
           key={lang}
           rel="alternate"

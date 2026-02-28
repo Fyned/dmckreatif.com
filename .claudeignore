@@ -1,0 +1,99 @@
+# === CLAUDE CODE TOKEN TASARRUFU ===
+# Bu dosya Claude Code'un gereksiz dosyaları okumasını engeller.
+# Her projenin kök dizinine kopyala.
+
+# Bağımlılıklar (EN BÜYÜK TASARRUF)
+node_modules/
+.pnpm-store/
+bower_components/
+
+# Build çıktıları
+dist/
+build/
+.next/
+.nuxt/
+.output/
+out/
+.vercel/
+.netlify/
+
+# Cache
+.cache/
+.turbo/
+.parcel-cache/
+.vite/
+.swc/
+tsconfig.tsbuildinfo
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Lock dosyaları (binlerce satır, okunması gereksiz)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+
+# Log dosyaları
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Git
+.git/
+
+# Ortam dosyaları (güvenlik)
+.env.local
+.env.production
+.env.*.local
+
+# Büyük medya dosyaları
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.avif
+*.ico
+*.svg
+*.mp4
+*.webm
+*.mp3
+*.wav
+
+# Font dosyaları
+*.woff
+*.woff2
+*.ttf
+*.eot
+*.otf
+
+# Minified dosyalar
+*.min.js
+*.min.css
+*.map
+*.chunk.js
+*.chunk.css
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Supabase local
+supabase/.temp/
+supabase/.branches/
+
+# Storybook
+storybook-static/
+
+# Docker
+.docker/

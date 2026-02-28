@@ -17,8 +17,28 @@
       "description": "Prix transparents pour la création de sites web professionnels. Starter 349€, Growth 749€, Scale 1 497€, Commerce 2 497€. Sans frais cachés, consultation gratuite."
     },
     "about": {
-      "title": "À Propos de DMC Kreatif — Agence de Création Web en Europe",
-      "description": "Agence web fondée par Musa Kerem Demirci. 33+ projets internationaux en France, Belgique et UK. Expertise React, Next.js, sites multilingues."
+      "title": "À Propos de DMC Kreatif — Agence Web Européenne | 100+ Professionnels",
+      "description": "Agence web enregistrée au Royaume-Uni avec 100+ professionnels au service des entreprises en France, Belgique, UK, Pays-Bas et Allemagne. 200+ projets, 6 pays, 4 langues."
+    },
+    "team": {
+      "title": "Notre Équipe — 100+ Professionnels du Web | DMC Kreatif",
+      "description": "Découvrez notre équipe de 100+ professionnels du web répartis en 12 départements. Développeurs frontend, designers UX, spécialistes SEO au service des entreprises européennes."
+    },
+    "process": {
+      "title": "Notre Processus — Comment Nous Créons des Sites Premium | DMC Kreatif",
+      "description": "Notre processus éprouvé en 6 étapes : Découverte, UX Design, UI Design, Développement, Tests et Lancement. 98% de livraison dans les délais, 500+ sprints réalisés."
+    },
+    "whyUs": {
+      "title": "Pourquoi DMC Kreatif — 8 Raisons de Nous Choisir | Agence Web Europe",
+      "description": "Stack React/Next.js moderne, Lighthouse 95+ garanti, multilingue par défaut, tarifs transparents, équipes dédiées. Découvrez pourquoi 200+ entreprises nous ont choisis."
+    },
+    "partners": {
+      "title": "Partenaires Technologiques — Vercel, Supabase, Stripe, Google | DMC Kreatif",
+      "description": "Nous travaillons avec les meilleures plateformes : Vercel, Supabase, Stripe, Google, Cloudflare, Shopify. Certifiés et intégrés pour des résultats optimaux."
+    },
+    "careers": {
+      "title": "Carrières chez DMC Kreatif — Rejoignez Notre Agence Web Européenne",
+      "description": "Rejoignez 100+ professionnels qui construisent l'avenir du web européen. Télétravail, technologies de pointe, clients premium. Postes ouverts en React, Next.js, UX, SEO."
     },
     "blog": {
       "title": "Blog Création Web — Conseils SEO, Guides E-Commerce | DMC Kreatif",
@@ -35,6 +55,382 @@
     "templates": {
       "title": "Modèles de Sites Web — Designs Professionnels dès 39€ | DMC Kreatif",
       "description": "Parcourez notre collection de modèles de sites web prêts à l'emploi. Starter 39€, Business 99€, Premium 179€. Personnalisé et livré en 24h à 5 jours."
+    },
+    "serviceDetail": {
+      "react-development": {
+        "title": "Développement React — Agence Expert | DMC Kreatif",
+        "description": "Développement React sur mesure pour entreprises européennes. Architecture composants, SPAs ultra-rapides, scores Lighthouse 95+. Consultation gratuite."
+      },
+      "nextjs-development": {
+        "title": "Développement Next.js — SSR & SSG Expert | DMC Kreatif",
+        "description": "Développement Next.js avec rendu serveur, génération statique et App Router. Applications web SEO-optimisées pour entreprises européennes."
+      },
+      "typescript-development": {
+        "title": "Développement TypeScript — Apps Web Type-Safe | DMC Kreatif",
+        "description": "Développement TypeScript pour applications web d'entreprise. Typage strict, moins de bugs et bases de code maintenables."
+      },
+      "frontend-development": {
+        "title": "Développement Frontend — Ingénierie UI Moderne | DMC Kreatif",
+        "description": "Développement frontend expert avec React, TypeScript et Tailwind CSS. Interfaces pixel-perfect et accessibles pour entreprises européennes."
+      },
+      "custom-web-apps": {
+        "title": "Applications Web Sur Mesure — Solutions Personnalisées | DMC Kreatif",
+        "description": "Applications web sur mesure selon vos besoins. Tableaux de bord, portails et plateformes SaaS pour entreprises européennes."
+      },
+      "progressive-web-apps": {
+        "title": "Progressive Web Apps — PWA Offline-First | DMC Kreatif",
+        "description": "Progressive web apps fonctionnant hors ligne, chargement instantané. Solutions multi-plateformes pour entreprises européennes."
+      },
+      "api-development": {
+        "title": "Développement API — REST & GraphQL | DMC Kreatif",
+        "description": "Développement API sur mesure avec Node.js, Supabase et Edge Functions. Backends sécurisés et évolutifs pour entreprises européennes."
+      },
+      "website-redesign": {
+        "title": "Refonte de Site Web — Modernisez Votre Présence | DMC Kreatif",
+        "description": "Services de refonte web qui boostent conversions, vitesse et SEO. Transformez votre site obsolète en une vitrine moderne."
+      },
+      "legacy-modernization": {
+        "title": "Modernisation Legacy — Migration Tech Moderne | DMC Kreatif",
+        "description": "Modernisation de sites legacy vers React, Next.js et architecture moderne. Migration sans interruption pour entreprises européennes."
+      },
+      "maintenance-support": {
+        "title": "Maintenance & Support Web — Suivi Continu | DMC Kreatif",
+        "description": "Maintenance proactive, mises à jour sécurité, monitoring performances et support prioritaire pour entreprises européennes."
+      },
+      "headless-cms": {
+        "title": "Développement CMS Headless — Sites Content-First | DMC Kreatif",
+        "description": "Solutions CMS headless avec Payload CMS, Strapi et Sanity. Gestion de contenu flexible pour entreprises européennes."
+      },
+      "performance-optimization": {
+        "title": "Optimisation Performance Web — Accélérez Votre Site | DMC Kreatif",
+        "description": "Optimisation Core Web Vitals, lazy loading, code splitting et stratégies de cache. Scores Lighthouse 95+ garantis."
+      },
+      "accessibility": {
+        "title": "Accessibilité Web — Conformité WCAG 2.1 AA | DMC Kreatif",
+        "description": "Audits d'accessibilité et conformité WCAG 2.1 AA. Rendez votre site utilisable par tous et conforme aux exigences EU."
+      },
+      "gdpr-compliance": {
+        "title": "Conformité RGPD — Protection des Données EU | DMC Kreatif",
+        "description": "Sites web conformes RGPD avec consentement cookies, politiques de confidentialité et protection des données. Conformité EU garantie."
+      },
+      "integrations": {
+        "title": "Intégrations Tierces — Connectez Vos Outils | DMC Kreatif",
+        "description": "Intégrations CRM, paiement, analytics et marketing pour votre site web. Connexions fluides pour entreprises européennes."
+      },
+      "shopify-development": {
+        "title": "Développement Shopify — Boutiques Sur Mesure | DMC Kreatif",
+        "description": "Développement Shopify avec thèmes personnalisés, apps et support multi-devises pour e-commerce européen."
+      },
+      "woocommerce-development": {
+        "title": "Développement WooCommerce — E-Commerce WordPress | DMC Kreatif",
+        "description": "Développement WooCommerce avec thèmes, plugins et intégration paiements EU pour boutiques en ligne européennes."
+      },
+      "custom-ecommerce": {
+        "title": "E-Commerce Sur Mesure — Créé de Zéro | DMC Kreatif",
+        "description": "Plateformes e-commerce sur mesure avec React et Supabase. Contrôle total sur l'architecture de votre boutique."
+      },
+      "b2b-ecommerce": {
+        "title": "E-Commerce B2B — Plateformes Grossiste | DMC Kreatif",
+        "description": "Plateformes e-commerce B2B avec tarification échelonnée, commandes en gros et gestion de comptes pour grossistes européens."
+      },
+      "multi-currency-stores": {
+        "title": "Boutiques Multi-Devises — Vendez en Europe | DMC Kreatif",
+        "description": "Boutiques en ligne multi-devises avec EUR, GBP, CHF, calcul TVA automatique et checkout localisé."
+      },
+      "payment-integration": {
+        "title": "Intégration Paiement — Stripe, iDEAL, Bancontact | DMC Kreatif",
+        "description": "Intégration passerelles de paiement européennes : Stripe, iDEAL, Bancontact, Klarna et prélèvement SEPA."
+      },
+      "ecommerce-seo": {
+        "title": "SEO E-Commerce — Référencez Vos Produits | DMC Kreatif",
+        "description": "SEO e-commerce avec schema produit, optimisation catégories et contenu conversion pour marchés européens."
+      },
+      "ecommerce-analytics": {
+        "title": "Analytics E-Commerce — Suivez Ce Qui Compte | DMC Kreatif",
+        "description": "Analytics e-commerce avec GA4 Enhanced, funnels de conversion et attribution revenus pour boutiques en ligne."
+      },
+      "technical-seo": {
+        "title": "SEO Technique — Corrigez les Freins de Votre Site | DMC Kreatif",
+        "description": "Audits SEO technique couvrant Core Web Vitals, crawlabilité, indexation et données structurées pour sites européens."
+      },
+      "local-seo": {
+        "title": "SEO Local — Dominez Votre Ville | DMC Kreatif",
+        "description": "Services SEO local avec optimisation Google Business Profile, citations locales et contenu géo-ciblé pour villes européennes."
+      },
+      "international-seo": {
+        "title": "SEO International — Positionnez-Vous dans Plusieurs Pays | DMC Kreatif",
+        "description": "SEO international avec hreflang, recherche de mots-clés par marché et stratégies de contenu multilingue."
+      },
+      "content-seo": {
+        "title": "SEO de Contenu — Créez du Contenu qui Se Positionne | DMC Kreatif",
+        "description": "Stratégie SEO de contenu avec recherche mots-clés, clusters thématiques et calendriers éditoriaux pour entreprises européennes."
+      },
+      "link-building": {
+        "title": "Link Building — Obtenez des Backlinks de Qualité | DMC Kreatif",
+        "description": "Link building white-hat avec RP digitales, guest posting et annuaires sectoriels européens. Développez votre autorité."
+      },
+      "seo-consulting": {
+        "title": "Consulting SEO — Stratégie & Accompagnement Expert | DMC Kreatif",
+        "description": "Consulting SEO pour entreprises européennes. Audits, sessions stratégie et formation d'équipe par des spécialistes."
+      },
+      "google-ads": {
+        "title": "Gestion Google Ads — PPC pour Marchés Européens | DMC Kreatif",
+        "description": "Gestion Google Ads avec campagnes search, display et remarketing optimisées pour marchés et langues européens."
+      },
+      "analytics-setup": {
+        "title": "Configuration Analytics — GA4 & Suivi Conversions | DMC Kreatif",
+        "description": "Configuration GA4 avec Consent Mode v2, événements personnalisés, suivi conversions et tableaux de bord conformes RGPD."
+      },
+      "marketing-automation": {
+        "title": "Marketing Automation — Nurturez vos Leads | DMC Kreatif",
+        "description": "Marketing automation avec séquences email, lead scoring et intégration CRM pour entreprises B2B européennes."
+      },
+      "geo-optimization": {
+        "title": "Géo-Optimisation — Ciblez des Marchés Spécifiques | DMC Kreatif",
+        "description": "Optimisation web géo-ciblée pour marchés européens spécifiques. Stratégies de localisation langue, devise et contenu."
+      },
+      "ux-ui-design": {
+        "title": "Design UX/UI — Design Digital Centré Utilisateur | DMC Kreatif",
+        "description": "Design UX/UI avec recherche utilisateur, wireframing et interfaces pixel-perfect. Design orienté conversion pour l'Europe."
+      },
+      "digital-strategy": {
+        "title": "Stratégie Digitale — Feuille de Route Croissance | DMC Kreatif",
+        "description": "Consulting stratégie digitale avec analyse marché, veille concurrentielle et feuilles de route pour entreprises européennes."
+      },
+      "brand-identity": {
+        "title": "Identité de Marque — Logo, Couleurs & Guidelines | DMC Kreatif",
+        "description": "Design identité de marque avec logo, palette couleurs, typographie et guidelines pour entreprises européennes."
+      },
+      "design-systems": {
+        "title": "Design Systems — Bibliothèques UI Évolutives | DMC Kreatif",
+        "description": "Développement de design systems avec composants réutilisables, tokens et documentation. Scalez votre design produit."
+      },
+      "prototyping": {
+        "title": "Prototypage Rapide — Du Concept à la Démo Cliquable | DMC Kreatif",
+        "description": "Prototypes interactifs avec Figma et code. Validez vos idées rapidement avant de lancer le développement complet."
+      },
+      "mobile-first-design": {
+        "title": "Design Mobile-First — Optimisé pour Chaque Écran | DMC Kreatif",
+        "description": "Design responsive mobile-first garantissant des expériences parfaites sur téléphones, tablettes et desktops."
+      },
+      "content-marketing": {
+        "title": "Content Marketing — Contenu Qui Fait Autorité | DMC Kreatif",
+        "description": "Content marketing avec articles, études de cas et thought leadership. Développez votre autorité et attirez du trafic organique."
+      }
+    },
+    "techDetail": {
+      "react": {
+        "title": "Développement React — Agence Expert React | DMC Kreatif",
+        "description": "Applications React premium pour entreprises européennes. Architecture composants, scores Lighthouse 95+, TypeScript natif."
+      },
+      "nextjs": {
+        "title": "Développement Next.js — Framework React Full-Stack | DMC Kreatif",
+        "description": "Développement Next.js expert avec SSR, SSG et ISR. Applications React optimisées SEO pour entreprises européennes."
+      },
+      "typescript": {
+        "title": "Développement TypeScript — Applications Web Type-Safe | DMC Kreatif",
+        "description": "Développement web TypeScript-first pour entreprises européennes. Détection de bugs à la compilation, code fiable."
+      },
+      "vite": {
+        "title": "Développement Vite — Outil de Build Ultra-Rapide | DMC Kreatif",
+        "description": "Développement web ultra-rapide avec Vite. HMR instantané, builds optimisés et DX moderne pour entreprises européennes."
+      },
+      "tailwindcss": {
+        "title": "Développement Tailwind CSS — Styling Utility-First | DMC Kreatif",
+        "description": "Designs Tailwind CSS sur mesure pour entreprises européennes. Pixel-perfect, responsive et maintenable."
+      },
+      "framer-motion": {
+        "title": "Animations Framer Motion — Agence Animation React | DMC Kreatif",
+        "description": "Animations web premium avec Framer Motion. Effets au scroll, transitions de pages et micro-interactions."
+      },
+      "supabase": {
+        "title": "Développement Supabase — Plateforme Backend Open Source | DMC Kreatif",
+        "description": "Applications Supabase avec données temps réel, authentification, stockage et edge functions pour entreprises européennes."
+      },
+      "vercel": {
+        "title": "Déploiement Vercel — Hébergement Edge-First | DMC Kreatif",
+        "description": "Déploiement Vercel avec CDN mondial, fonctions serverless et CI/CD automatique. Temps de chargement inférieurs à une seconde."
+      },
+      "shopify": {
+        "title": "Développement Shopify — Boutiques E-Commerce Sur Mesure | DMC Kreatif",
+        "description": "Développement Shopify avec Hydrogen, thèmes Liquid et multi-devises pour e-commerce européen."
+      },
+      "headless-wordpress": {
+        "title": "WordPress Headless — CMS Découplé | DMC Kreatif",
+        "description": "WordPress headless avec frontends React. Le meilleur des deux mondes : CMS familier, performance moderne."
+      },
+      "postgresql": {
+        "title": "Développement PostgreSQL — Solutions Base de Données | DMC Kreatif",
+        "description": "Applications PostgreSQL avec requêtes avancées, JSONB, recherche plein texte et sécurité au niveau des lignes."
+      },
+      "nodejs": {
+        "title": "Développement Node.js — JavaScript Côté Serveur | DMC Kreatif",
+        "description": "Développement backend Node.js avec Express, Fastify et serverless. APIs scalables pour entreprises européennes."
+      }
+    },
+    "technologies": {
+      "title": "Technologies Utilisées — React, Next.js, TypeScript & Plus | DMC Kreatif",
+      "description": "Découvrez les technologies de pointe qui alimentent notre développement web premium : React, Next.js, TypeScript, Tailwind CSS, Supabase."
+    },
+    "industries": {
+      "title": "Secteurs que nous servons | Sites web par secteur | DMC Kreatif",
+      "description": "Sites web premium pour la construction, l'energie, la comptabilite, la sante, l'education, le e-commerce, les services professionnels et le tourisme en Europe."
+    },
+    "industryDetail": {
+      "construction": {
+        "title": "Sites web pour entreprises de construction | DMC Kreatif",
+        "description": "Sites personnalises pour le BTP, la renovation et les facades en Europe. Projets referencees, SEO optimise, multilingue."
+      },
+      "energy": {
+        "title": "Sites web pour entreprises d'energie et isolation | DMC Kreatif",
+        "description": "Sites professionnels pour consultants en energie, isoleurs et energies renouvelables. React, SEO optimise."
+      },
+      "accounting": {
+        "title": "Sites web pour comptables et services financiers | DMC Kreatif",
+        "description": "Sites modernes pour cabinets comptables et conseillers fiscaux. Portail client, conforme RGPD, multilingue."
+      },
+      "healthcare": {
+        "title": "Sites web pour sante et cabinets medicaux | DMC Kreatif",
+        "description": "Sites conformes RGPD pour medecins, cliniques et dentistes. Accessibles, securises, prise de rendez-vous."
+      },
+      "education": {
+        "title": "Sites web pour education et formation | DMC Kreatif",
+        "description": "Sites pour ecoles, universites et centres de formation. Accessibles WCAG, multilingues, integration LMS."
+      },
+      "ecommerce": {
+        "title": "Developpement e-commerce pour detaillants en ligne | DMC Kreatif",
+        "description": "Solutions e-commerce completes avec multi-devises, integration paiement et gestion de stock."
+      },
+      "professional-services": {
+        "title": "Sites web pour services professionnels | DMC Kreatif",
+        "description": "Sites pour cabinets d'avocats, agences de conseil et architectes. Generation de leads, SEO optimise."
+      },
+      "tourism": {
+        "title": "Sites web pour tourisme et hotellerie | DMC Kreatif",
+        "description": "Sites multilingues pour hotels, agences de voyage et restaurants. Integration reservation, SEO local et international."
+      }
+    },
+    "blogPost": {
+      "how-much-does-a-website-cost-in-europe-2026": {
+        "title": "Combien coute un site web en Europe en 2026 ? — Blog DMC Kreatif",
+        "description": "Analyse transparente des couts de creation de sites web en Europe en 2026. Comparaison des prix pour sites sur mesure, e-commerce, templates et maintenance."
+      },
+      "how-to-choose-a-web-agency-in-europe": {
+        "title": "Comment choisir une agence web en Europe — Blog DMC Kreatif",
+        "description": "Guide pratique pour evaluer et choisir la bonne agence web pour votre entreprise europeenne. Criteres cles, signaux d'alerte et cadre de decision."
+      },
+      "technical-seo-checklist-europe": {
+        "title": "Checklist SEO technique pour sites europeens — Blog DMC Kreatif",
+        "description": "Checklist SEO technique complete pour sites web europeens. Core Web Vitals, crawlabilite, indexation, donnees structurees, hreflang et optimisation multilingue."
+      },
+      "core-web-vitals-lighthouse-guide": {
+        "title": "Core Web Vitals : comment obtenir un score Lighthouse 95+ — Blog DMC Kreatif",
+        "description": "Guide etape par etape pour atteindre un score Lighthouse 95+. Optimisez LCP, FID, CLS et INP pour de meilleures performances et un meilleur SEO."
+      },
+      "website-redesign-guide": {
+        "title": "Guide de refonte de site web : quand et comment refondre — Blog DMC Kreatif",
+        "description": "Sachez quand votre site a besoin d'une refonte et comment l'executer sans perdre vos positions SEO. Planification, strategie de migration et optimisation."
+      },
+      "multilingual-website-guide": {
+        "title": "Comment creer un site multilingue : guide complet — Blog DMC Kreatif",
+        "description": "Tout ce que vous devez savoir pour creer un site multilingue pour les marches europeens. Architecture i18n, hreflang, strategie de contenu et traduction."
+      },
+      "gdpr-compliance-checklist": {
+        "title": "Checklist conformite RGPD pour sites web en 2026 — Blog DMC Kreatif",
+        "description": "Checklist complete de conformite RGPD pour sites web europeens. Consentement aux cookies, politique de confidentialite, accords de traitement des donnees."
+      },
+      "ecommerce-conversion-optimization": {
+        "title": "Comment optimiser le taux de conversion de votre e-commerce — Blog DMC Kreatif",
+        "description": "Strategies eprouvees pour augmenter le taux de conversion de votre boutique en ligne. Optimisation du tunnel d'achat, design produit et tests A/B."
+      },
+      "seo-audit-guide-2026": {
+        "title": "Guide d'audit SEO etape par etape pour 2026 — Blog DMC Kreatif",
+        "description": "Comment realiser un audit SEO complet en 2026. Analyse technique, optimisation on-page, lacunes de contenu, profil de liens et benchmark concurrentiel."
+      },
+      "website-migration-seo": {
+        "title": "Comment migrer votre site sans perdre votre SEO — Blog DMC Kreatif",
+        "description": "Guide complet pour migrer votre site web en preservant vos positions SEO. Mapping des redirections, budget de crawl et suivi post-migration."
+      },
+      "shopify-vs-woocommerce-vs-custom": {
+        "title": "Shopify vs WooCommerce vs E-Commerce sur mesure — Blog DMC Kreatif",
+        "description": "Comparaison detaillee de Shopify, WooCommerce et solutions e-commerce sur mesure pour entreprises europeennes. Fonctionnalites, prix et cas d'usage."
+      },
+      "nextjs-vs-gatsby-vs-remix": {
+        "title": "Next.js vs Gatsby vs Remix : comparaison complete 2026 — Blog DMC Kreatif",
+        "description": "Comparaison approfondie de Next.js, Gatsby et Remix pour le developpement web moderne. Performance, experience developpeur, SEO et production."
+      },
+      "react-vs-wordpress-2026": {
+        "title": "React vs WordPress : lequel choisir en 2026 — Blog DMC Kreatif",
+        "description": "Comparaison honnete entre React et WordPress pour sites d'entreprise en 2026. Cout, performance, securite, maintenance et retour sur investissement."
+      },
+      "supabase-vs-firebase": {
+        "title": "Supabase vs Firebase : comparaison backend 2026 — Blog DMC Kreatif",
+        "description": "Comparaison complete de Supabase et Firebase comme plateformes backend. PostgreSQL vs NoSQL, authentification, temps reel, tarification et dependance fournisseur."
+      },
+      "agency-vs-freelancer-development": {
+        "title": "Agence vs Freelance vs Interne : comparaison developpement — Blog DMC Kreatif",
+        "description": "Avantages et inconvenients d'une agence web, d'un freelance ou d'une equipe interne. Analyse des couts, qualite, fiabilite et gestion de projet."
+      },
+      "headless-vs-traditional-cms": {
+        "title": "CMS Headless vs CMS traditionnel : comparaison complete — Blog DMC Kreatif",
+        "description": "CMS headless vs CMS traditionnel explique. Differences d'architecture, livraison de contenu, experience developpeur et quel choix pour votre entreprise."
+      },
+      "tailwind-vs-bootstrap": {
+        "title": "Tailwind CSS vs Bootstrap vs CSS Modules : comparaison — Blog DMC Kreatif",
+        "description": "Comparaison detaillee de Tailwind CSS, Bootstrap et CSS Modules. Performance, personnalisation, courbe d'apprentissage et lequel choisir pour votre projet."
+      },
+      "vercel-vs-netlify-vs-aws": {
+        "title": "Vercel vs Netlify vs AWS : comparaison des plateformes — Blog DMC Kreatif",
+        "description": "Comparez Vercel, Netlify et AWS pour le deploiement web. Prix, performance, CI/CD, fonctions serverless et quelle plateforme pour les entreprises europeennes."
+      },
+      "shopify-vs-prestashop-europe": {
+        "title": "Shopify vs PrestaShop pour l'e-commerce europeen — Blog DMC Kreatif",
+        "description": "Comparaison Shopify vs PrestaShop pour boutiques en ligne europeennes. Multi-devise, conformite TVA, passerelles de paiement et cout total de possession."
+      },
+      "wordpress-vs-custom-cost": {
+        "title": "WordPress vs developpement sur mesure : analyse des couts — Blog DMC Kreatif",
+        "description": "Comparaison reelle des couts WordPress vs developpement sur mesure sur 3 ans. Licences, hebergement, securite, performance et couts de maintenance caches."
+      },
+      "seo-guide-small-businesses-france": {
+        "title": "Guide SEO pour les petites entreprises en France — Blog DMC Kreatif",
+        "description": "Guide SEO pratique pour les PME francaises. SEO local, Google My Business, recherche de mots-cles francais, netlinking et strategie de contenu."
+      },
+      "why-multilingual-website-european-business": {
+        "title": "Pourquoi chaque entreprise europeenne a besoin d'un site multilingue — Blog DMC Kreatif",
+        "description": "Raisons chiffrees pour lesquelles les entreprises europeennes ont besoin de sites multilingues. Portee, SEO, confiance client et avantage concurrentiel."
+      },
+      "what-is-headless-cms": {
+        "title": "Qu'est-ce qu'un CMS headless ? Guide complet 2026 — Blog DMC Kreatif",
+        "description": "Tout sur le CMS headless en 2026. Comment ca marche, avantages par rapport au CMS traditionnel, meilleures plateformes et bonnes pratiques d'implementation."
+      },
+      "ecommerce-platform-comparison-europe": {
+        "title": "Comparaison des plateformes e-commerce pour PME europeennes — Blog DMC Kreatif",
+        "description": "Comparez les meilleures plateformes e-commerce pour PME europeennes. Shopify, WooCommerce, PrestaShop, Magento et solutions sur mesure evaluees sur 10 criteres."
+      },
+      "state-of-web-development-2026": {
+        "title": "L'etat du developpement web en 2026 — Blog DMC Kreatif",
+        "description": "Tendances cles du developpement web en 2026. Integration IA, edge computing, server components, WebAssembly et evolution du role des developpeurs frontend."
+      },
+      "multilingual-seo-europe": {
+        "title": "Pourquoi les entreprises europeennes ont besoin du SEO multilingue — Blog DMC Kreatif",
+        "description": "Comment le SEO multilingue stimule la croissance organique sur les marches europeens. Implementation hreflang, strategie de mots-cles locaux et optimisation."
+      },
+      "web-design-construction": {
+        "title": "Design web pour entreprises du batiment : bonnes pratiques — Blog DMC Kreatif",
+        "description": "Comment concevoir un site web efficace pour les entreprises du BTP. Portfolio, generation de leads, galeries de projets et UX specifique au secteur."
+      },
+      "ai-web-development-2026": {
+        "title": "L'IA dans le developpement web : ce que cela signifie pour votre entreprise — Blog DMC Kreatif",
+        "description": "Comment l'IA transforme le developpement web en 2026. Generation de code, automatisation du design, moteurs de personnalisation et ce que les dirigeants doivent savoir."
+      },
+      "core-web-vitals-explained": {
+        "title": "Core Web Vitals expliques pour les dirigeants — Blog DMC Kreatif",
+        "description": "Guide non technique des Core Web Vitals. Ce que LCP, INP et CLS signifient pour votre entreprise, pourquoi Google s'y interesse et comment ameliorer vos scores."
+      },
+      "roi-professional-web-design": {
+        "title": "Le vrai ROI d'un investissement en design web professionnel — Blog DMC Kreatif",
+        "description": "Quantifiez le retour sur investissement du design web professionnel. Impact sur le chiffre d'affaires, perception de marque, taux de conversion et valeur a long terme."
+      }
     }
   },
   "nav": {
@@ -46,7 +442,8 @@
     "blog": "BLOG",
     "contact": "CONTACT",
     "startProject": "DÉMARRER",
-    "templates": "MODÈLES"
+    "templates": "MODÈLES",
+    "industries": "SECTEURS"
   },
   "hero": {
     "status": "STATUT_AGENCE: ACCEPTE DES PROJETS",
@@ -55,15 +452,15 @@
     "subtitle": "Développement web premium pour les entreprises européennes. Sur mesure, ultra rapide, multilingue.",
     "ctaPrimary": "DÉMARRER VOTRE PROJET",
     "ctaSecondary": "VOIR NOS RÉALISATIONS",
-    "stat1": "33+",
+    "stat1": "200+",
     "stat1Label": "Projets",
-    "stat2": "4",
-    "stat2Label": "Pays",
-    "stat3": "100%",
-    "stat3Label": "Ponctualité",
-    "stat4": "98+",
+    "stat2": "100+",
+    "stat2Label": "Équipe",
+    "stat3": "6",
+    "stat3Label": "Pays",
+    "stat4": "95+",
     "stat4Label": "Lighthouse",
-    "microCopy": "Conçu par des développeurs professionnels • Plus de 33 projets internationaux livrés",
+    "microCopy": "100+ professionnels • 200+ projets internationaux livrés dans 6 pays européens",
     "bookCall": "ou réservez un appel gratuit de 15 min →"
   },
   "marquee": {
@@ -399,13 +796,13 @@
     "templateCompare1": "Livraison en 2-5 jours",
     "templateCompare2": "Votre logo & couleurs",
     "templateCompare3": "Mises en page pré-construites",
-    "templateComparePrice": "\u00c0 partir de 39\u20ac",
+    "templateComparePrice": "À partir de 39€",
     "premiumCompareTitle": "SUR MESURE",
     "premiumCompareDescription": "Site web entièrement personnalisé conçu à partir de zéro. Révisions illimitées, support prioritaire.",
     "premiumCompare1": "Livraison en 3-28 jours",
     "premiumCompare2": "Design personnalisé de zéro",
     "premiumCompare3": "Révisions & support inclus",
-    "premiumComparePrice": "\u00c0 partir de 349\u20ac",
+    "premiumComparePrice": "À partir de 349€",
     "guarantee": "GARANTIE SATISFACTION",
     "guaranteeDesc": "Révisions gratuites jusqu'à satisfaction complète",
     "payment": "PAIEMENT SÉCURISÉ",
@@ -446,11 +843,11 @@
     "customSectionTitle": "DÉVELOPPEMENT SUR MESURE",
     "customSectionSubtitle": "SYS.CUSTOM",
     "customSectionBadge": "ÉQUIPE DE DÉVELOPPEURS PROFESSIONNELS",
-    "customSectionDesc": "Sites web 100% sur mesure par notre \u00e9quipe de d\u00e9veloppement professionnelle. Tout exactement comme vous le souhaitez.",
+    "customSectionDesc": "Sites web 100% sur mesure par notre équipe de développement professionnelle. Tout exactement comme vous le souhaitez.",
     "templateSectionTitle": "MODÈLES PRÊTS À L'EMPLOI",
     "templateSectionSubtitle": "SYS.MODÈLES",
     "templateSectionBadge": "PRÊT EN 24 HEURES",
-    "templateSectionDesc": "Sites web professionnels pr\u00e9-construits personnalis\u00e9s avec votre marque. Rapide, abordable, magnifique.",
+    "templateSectionDesc": "Sites web professionnels pré-construits personnalisés avec votre marque. Rapide, abordable, magnifique.",
     "starterIdealFor": "Idéal pour : Freelances, startups, marques personnelles",
     "growthIdealFor": "Idéal pour : PME, entreprises en croissance",
     "scaleIdealFor": "Idéal pour : Entreprises internationales, sites multilingues",
@@ -471,7 +868,7 @@
     "carePlanDesc": "Gardez votre site web fonctionnel avec un support et une maintenance continus.",
     "carePlanSectionTitle": "PLANS DE MAINTENANCE",
     "carePlanSectionSubtitle": "SYS.MAINTENANCE",
-    "addOnsTitle": "SERVICES COMPL\u00c9MENTAIRES",
+    "addOnsTitle": "SERVICES COMPLÉMENTAIRES",
     "addOnsSubtitle": "SYS.EXTRAS",
     "addOn": {
       "logoDesign": "DESIGN DE LOGO",
@@ -479,13 +876,13 @@
       "seoAudit": "AUDIT & CORRECTION SEO",
       "seoAuditDesc": "Audit technique complet avec corrections et recommandations",
       "googleAds": "CONFIGURATION GOOGLE ADS",
-      "googleAdsDesc": "Configuration de campagne, recherche de mots-cl\u00e9s et ciblage initial",
-      "socialKit": "KIT R\u00c9SEAUX SOCIAUX",
-      "socialKitDesc": "20 mod\u00e8les personnalis\u00e9s pour Instagram, Facebook et LinkedIn",
-      "videoProduction": "PRODUCTION VID\u00c9O",
-      "videoProductionDesc": "Vid\u00e9os promotionnelles de 15-30 secondes pour les r\u00e9seaux sociaux",
-      "monthlySeo": "R\u00c9F\u00c9RENCEMENT MENSUEL",
-      "monthlySeoDesc": "Optimisation continue, rapport de classement et strat\u00e9gie de contenu"
+      "googleAdsDesc": "Configuration de campagne, recherche de mots-clés et ciblage initial",
+      "socialKit": "KIT RÉSEAUX SOCIAUX",
+      "socialKitDesc": "20 modèles personnalisés pour Instagram, Facebook et LinkedIn",
+      "videoProduction": "PRODUCTION VIDÉO",
+      "videoProductionDesc": "Vidéos promotionnelles de 15-30 secondes pour les réseaux sociaux",
+      "monthlySeo": "RÉFÉRENCEMENT MENSUEL",
+      "monthlySeoDesc": "Optimisation continue, rapport de classement et stratégie de contenu"
     },
     "oneTimePrice": "PAIEMENT UNIQUE",
     "oneTimePriceNote": "Pas de frais mensuels, pas d'abonnement. Vous payez une fois et votre site web vous appartient pour toujours.",
@@ -613,8 +1010,8 @@
     "noResults": "Aucun modèle ne correspond à votre recherche. Essayez un autre mot-clé ou catégorie.",
     "tryDifferent": "Essayez d'ajuster vos filtres ou votre recherche.",
     "loading": "Chargement...",
-    "error": "Impossible de charger les mod\u00e8les.",
-    "retry": "R\u00e9essayer",
+    "error": "Impossible de charger les modèles.",
+    "retry": "Réessayer",
     "popular": "POPULAIRE",
     "preview": "APERÇU",
     "orderNow": "COMMANDER",
@@ -723,11 +1120,11 @@
   "about": {
     "sectionTitle": "À PROPOS",
     "sectionSubtitle": "SYS.ABOUT",
-    "headline": "NOUS SOMMES DMC KREATIF & GMG DESIGN",
-    "description": "Un partenariat d'agence digitale au service des entreprises européennes. DMC Kreatif gère les marchés internationaux, GMG Design couvre le marché domestique. Même équipe, même qualité, double la portée.",
+    "headline": "NOUS SOMMES DMC KREATIF",
+    "description": "Une agence de développement web enregistrée au Royaume-Uni avec plus de 100 professionnels au service des entreprises européennes dans 6 pays. Nous combinons les technologies React et Next.js de pointe avec un design premium pour créer des sites web qui convertissent.",
     "founderName": "Musa Kerem Demirci",
-    "founderRole": "FONDATEUR & DÉVELOPPEUR PRINCIPAL",
-    "founderBio": "Musa Kerem Demirci est développeur full-stack et fondateur de DMC Kreatif, une agence de développement web au service des entreprises d'Europe occidentale. Fort d'une expertise approfondie en React, Next.js, TypeScript et Tailwind CSS, il a personnellement conçu et développé plus de 33 sites web pour des clients en France, Belgique, Royaume-Uni, Pays-Bas et Allemagne. Son approche allie précision technique et sensibilité design — chaque projet vise un score Google Lighthouse de 95+, des temps de chargement inférieurs à 2 secondes et une implémentation SEO multilingue complète. Avant de fonder DMC Kreatif en 2023, Musa a acquis une expérience internationale en travaillant avec des clients dans de nombreux secteurs : construction, énergie, comptabilité et e-commerce. Il parle anglais, français et turc, et collabore étroitement avec des clients néerlandophones et germanophones grâce à une communication localisée. Sa philosophie est simple : chaque pixel compte, chaque milliseconde est importante, et chaque entreprise mérite un site web qui représente véritablement sa marque. Diplômé en ingénierie informatique et fort de plus de 3 ans d'expérience professionnelle en développement web, Kerem allie profondeur technique et pensée créative en matière de design.",
+    "founderRole": "CEO & FONDATEUR",
+    "founderBio": "Musa Kerem Demirci est le CEO et fondateur de DMC Kreatif, une agence de développement web enregistrée au Royaume-Uni comptant plus de 100 professionnels au service des entreprises d'Europe occidentale. Sous sa direction, l'agence est passée d'un studio boutique à une puissance digitale complète avec des départements dédiés à l'ingénierie frontend, au design UX/UI, au SEO, à l'e-commerce, au contenu, au QA et à la réussite client. Fort d'une expertise approfondie en React, Next.js, TypeScript et architecture web moderne, Musa supervise personnellement la direction technique de chaque projet majeur — garantissant des scores Google Lighthouse de 95+, des temps de chargement inférieurs à 2 secondes et une implémentation SEO multilingue sur toutes les livraisons. Avant de fonder DMC Kreatif en 2023, il a acquis une expérience internationale avec des clients entreprises et PME dans les secteurs de la construction, de l'énergie, de la finance, de l'éducation et de l'e-commerce. L'agence a depuis livré plus de 200 projets pour des clients en France, Belgique, Royaume-Uni, Pays-Bas, Allemagne et Suisse, avec un taux de livraison de 98% dans les délais et un score de satisfaction client de 4.9/5. Musa est titulaire d'un diplôme en ingénierie informatique et parle anglais, français et turc. Son modèle d'équipe distribuée — 35 employés principaux plus un réseau de spécialistes certifiés — donne aux clients accès à des talents de classe mondiale à des tarifs européens compétitifs. Sa philosophie est simple : chaque pixel compte, chaque milliseconde est importante, et chaque entreprise européenne mérite un site web qui convertit véritablement.",
     "mission": "NOTRE MISSION",
     "missionText": "Fournir des solutions web premium qui aident les entreprises européennes à grandir. Chaque pixel compte. Chaque milliseconde compte.",
     "value1Title": "QUALITÉ D'ABORD",
@@ -750,17 +1147,17 @@
     "timelineTitle": "NOTRE PARCOURS",
     "timelineSubtitle": "SYS.CHRONOLOGIE",
     "milestone1Title": "Fondation de DMC Kreatif",
-    "milestone1Desc": "Lancement en tant qu'agence web premium ciblant les entreprises européennes. Création de l'identité de marque et installation du premier bureau.",
-    "milestone2Title": "Premiers Projets Français",
-    "milestone2Desc": "Livraison de sites web pour Cakir Facades et Altinbas Moustiquaire en France. Présence solide établie sur le marché français.",
-    "milestone3Title": "Expansion au Royaume-Uni",
-    "milestone3Desc": "Expansion vers le Royaume-Uni avec Adamsons Accountants. Ouverture d'un compte bancaire UK et établissement sur le marché britannique.",
-    "milestone4Title": "Cap des 33+ Projets",
-    "milestone4Desc": "33+ projets internationaux achevés en France, Belgique et UK. Scores Lighthouse de 98+ maintenus sur chaque livraison.",
+    "milestone1Desc": "Lancement en tant qu'agence web premium ciblant les entreprises européennes. Constitution de l'équipe fondatrice d'ingénieurs frontend, designers et spécialistes SEO.",
+    "milestone2Title": "Marché Français Établi",
+    "milestone2Desc": "Livraison des premiers projets majeurs pour Cakir Facades, Altinbas Moustiquaire et Consulting Energy en France. L'équipe a grandi à 25+ professionnels.",
+    "milestone3Title": "Siège UK Enregistré",
+    "milestone3Desc": "Enregistrement de la société au Royaume-Uni. Ouverture du siège à Londres et expansion vers les clients britanniques, dont Adamsons Accountants.",
+    "milestone4Title": "Cap des 100+ Projets",
+    "milestone4Desc": "Dépassement de 100 projets internationaux en France, Belgique et UK. L'équipe s'est élargie à 50+ avec des départements dédiés design, développement et SEO.",
     "milestone5Title": "Expansion Européenne",
-    "milestone5Desc": "Extension des services aux Pays-Bas et à l'Allemagne. Ajout du néerlandais et de l'allemand. Lancement de la plateforme multilingue.",
-    "milestone6Title": "Lancement de la Plateforme de Modèles",
-    "milestone6Desc": "Lancement de la plateforme de modèles de sites web prêts à l'emploi. Solutions évolutives pour les PME européennes à partir de 50€."
+    "milestone5Desc": "Extension des services aux Pays-Bas, à l'Allemagne et à la Suisse. L'équipe a grandi à 100+ professionnels répartis en 12 départements. Lancement de la plateforme multilingue en 4 langues.",
+    "milestone6Title": "200+ Projets & Plateforme de Modèles",
+    "milestone6Desc": "Atteinte de 200+ projets livrés dans 6 pays européens. Lancement des modèles de sites web prêts à l'emploi. Établissement du réseau de partenaires spécialistes dans 4 pays."
   },
   "contact": {
     "introHeading": "Parlons de votre projet",
@@ -803,7 +1200,7 @@
     "serviceTemplatePro": "Modèle — Professionnel (150€)",
     "explore": "Explorer",
     "selectService": "Sélectionnez un service...",
-    "serviceLaunch": "Pack Starter (349\u20ac)",
+    "serviceLaunch": "Pack Starter (349€)",
     "serviceGrowth": "Pack Croissance (997€)",
     "serviceScale": "Pack Expansion (1 997€)",
     "serviceCommerce": "Pack Commerce (2 997€)",
@@ -871,18 +1268,23 @@
     "multilingualContent": "<p>L'Europe est un continent de langues. Au sein de l'Union européenne, on compte <a href=\"https://european-union.europa.eu/principles-countries-history/languages_fr\" target=\"_blank\" rel=\"noopener noreferrer\">24 langues officielles</a> et des centaines de langues régionales. Si votre entreprise dessert des clients dans plusieurs pays — ou même dans des pays multilingues comme la Belgique ou la Suisse — un site monolingue vous fait perdre de l'argent.</p><h2>L'argument commercial pour les sites multilingues</h2><p>Les chiffres parlent d'eux-mêmes :</p><ul><li><strong>72 % des consommateurs</strong> passent la majorité ou la totalité de leur temps sur des sites web dans leur propre langue, selon une étude CSA Research.</li><li><strong>56 % des consommateurs</strong> affirment qu'obtenir des informations dans leur langue est plus important que le prix.</li><li>Les entreprises qui ajoutent une deuxième langue à leur site constatent en moyenne une <strong>augmentation de 15 à 30 % des conversions</strong> sur ce marché.</li><li>En Belgique, un site bilingue (français et néerlandais) n'est pas un luxe — c'est une nécessité commerciale. Il en va de même pour la Suisse avec le français, l'allemand et l'italien.</li></ul><p>Si vous êtes une entreprise française en expansion vers l'Allemagne, une entreprise britannique ciblant des clients belges ou une société néerlandaise desservant la région DACH, votre site web doit parler la langue de vos clients.</p><h2>Avantages SEO des sites multilingues</h2><p>Un site multilingue n'améliore pas seulement l'expérience utilisateur — il élargit considérablement votre visibilité organique :</p><ul><li><strong>Nouveaux marchés de mots-clés :</strong> Chaque langue ouvre un ensemble entièrement nouveau de requêtes. « Web development agency » en anglais, « agence de développement web » en français et « Webentwicklung Agentur » en allemand sont autant d'opportunités SEO distinctes.</li><li><strong>Balises hreflang :</strong> Une implémentation hreflang correcte indique à Google quelle version linguistique montrer à quel utilisateur. Cela évite les problèmes de contenu dupliqué et garantit que la bonne page apparaît dans les résultats du bon pays.</li><li><strong>URL localisées :</strong> L'utilisation de préfixes /en/, /fr/, /nl/, /de/ crée des chemins propres et indexables pour chaque langue. Google traite chaque version linguistique comme une page séparée avec son propre potentiel de classement.</li><li><strong>Comportement de recherche par pays :</strong> Les utilisateurs français cherchent différemment des utilisateurs allemands. Le SEO multilingue implique de rechercher les mots-clés dans chaque langue cible, pas seulement de traduire vos mots-clés anglais.</li></ul><h2>Approches courantes pour construire des sites multilingues</h2><p>Il existe plusieurs façons d'implémenter le support multilingue, chacune avec ses compromis :</p><ul><li><strong>Sous-répertoires (/en/, /fr/, /de/) :</strong> L'approche recommandée pour la plupart des entreprises. Facile à gérer, excellent pour le SEO, et tout le contenu reste sous un seul domaine. C'est ce que nous utilisons chez DMC Kreatif.</li><li><strong>Sous-domaines (en.example.com, fr.example.com) :</strong> Google les traite comme des sites semi-séparés. Plus difficile de partager l'autorité de domaine entre les langues.</li><li><strong>Domaines séparés (example.fr, example.de) :</strong> Confiance locale maximale mais le plus coûteux et complexe à gérer. Réservé aux très grandes entreprises avec des équipes dédiées par marché.</li><li><strong>Outils de traduction automatique :</strong> La traduction automatique a progressé, mais elle n'est toujours pas suffisante pour les sites d'entreprise. Un contenu mal traduit nuit à la confiance et peut pénaliser le SEO. Utilisez toujours des traductions professionnelles ou des rédacteurs natifs.</li></ul><h2>Bonnes pratiques d'implémentation technique</h2><p>Construire correctement un site multilingue requiert une attention aux détails techniques :</p><ul><li><strong>Implémentez les balises hreflang sur chaque page.</strong> Chaque page doit référencer toutes ses variantes linguistiques, y compris elle-même. Des balises hreflang manquantes ou incorrectes confondent Google et peuvent nuire aux classements dans toutes les langues.</li><li><strong>Utilisez un sélecteur de langue qui préserve le contexte.</strong> Quand un utilisateur passe de l'anglais au français, il doit atterrir sur la version française de la même page, pas sur la page d'accueil française.</li><li><strong>Stockez les traductions dans des fichiers structurés.</strong> Utilisez des bibliothèques i18n basées sur JSON (comme react-i18next ou next-intl) pour garder les traductions organisées et maintenables.</li><li><strong>Ne mélangez pas les langues sur une même page.</strong> Chaque page doit être entièrement dans une seule langue. Mélanger les langues confond les moteurs de recherche et les utilisateurs.</li><li><strong>Créez un sitemap approprié.</strong> Votre sitemap XML doit lister toutes les versions linguistiques de chaque page avec les annotations hreflang correctes.</li></ul><h2>Stratégie de contenu pour chaque langue</h2><p>Un site multilingue ne se résume pas à la traduction — c'est de la localisation :</p><ul><li><strong>Adaptez, ne traduisez pas seulement.</strong> La culture d'affaires française diffère de la culture allemande. Votre ton, vos références et vos exemples doivent résonner avec chaque marché.</li><li><strong>Localisez les prix et les moyens de paiement.</strong> Affichez les prix en monnaie locale. Mentionnez les moyens de paiement populaires dans chaque marché (iDEAL aux Pays-Bas, Bancontact en Belgique, Klarna en Allemagne).</li><li><strong>Utilisez des études de cas locales.</strong> Les prospects français veulent voir des succès de clients français. Les prospects allemands veulent des exemples allemands. La preuve localisée construit la confiance.</li><li><strong>Priorisez vos langues principales.</strong> Vous n'avez pas besoin de lancer toutes les langues simultanément. Commencez par vos deux marchés les plus forts, validez l'approche, puis élargissez.</li></ul><h2>Comment DMC Kreatif gère le développement multilingue</h2><p>Nous construisons des sites multilingues comme compétence centrale, pas comme un ajout secondaire. Chaque <a href=\"/fr/portfolio\">projet livré</a> en Belgique, par exemple, inclut le français et le néerlandais dès le premier jour. Notre approche comprend :</p><ul><li>Implémentation hreflang correcte sur toutes les pages</li><li>Structures d'URL localisées avec des chemins propres /en/, /fr/, /nl/, /de/</li><li>Fichiers de traduction structurés pour des mises à jour faciles</li><li>Recherche de mots-clés SEO dans chaque langue cible</li><li>Adaptation culturelle du design et des messages par marché</li></ul><p>Consultez nos <a href=\"/fr/pricing\">forfaits</a> — le support multilingue est inclus dans nos offres Scale et Commerce.</p><h2>Conclusion</h2><p>Un site multilingue est l'un des investissements au meilleur retour qu'une entreprise européenne puisse faire. Il ouvre de nouveaux marchés, améliore le SEO dans plusieurs pays et montre aux clients que vous respectez leur langue et leur culture. L'implémentation technique nécessite une expertise, mais l'impact commercial est clair et mesurable.</p><p>Prêt à toucher vos clients dans leur langue ? <a href=\"/fr/contact\">Contactez DMC Kreatif</a> pour discuter de votre projet multilingue. Nous accompagnons les entreprises en France, Belgique, Pays-Bas, Allemagne et Royaume-Uni — en anglais, français, néerlandais et allemand.</p>"
   },
   "footer": {
-    "tagline": "DÉVELOPPEMENT WEB PREMIUM POUR LES ENTREPRISES EUROPÉENNES",
+    "tagline": "Développement web premium pour les entreprises européennes. Sites sur mesure, e-commerce et marketing digital.",
     "services": "SERVICES",
     "company": "ENTREPRISE",
     "legal": "LÉGAL",
-    "privacy": "POLITIQUE DE CONFIDENTIALITÉ",
-    "terms": "CONDITIONS D'UTILISATION",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
     "legalNotice": "Mentions Légales",
     "cookiePolicy": "Politique de Cookies",
     "refundPolicy": "Politique de Remboursement",
     "manageCookies": "Gérer les Cookies",
-    "copyright": "TOUS DROITS RÉSERVÉS",
-    "builtWith": "CONSTRUIT AVEC REACT + VITE + TAILWIND"
+    "copyright": "Tous droits réservés",
+    "builtWith": "Construit avec React, Tailwind & Passion",
+    "team": "Notre Équipe",
+    "process": "Notre Processus",
+    "whyUs": "Pourquoi DMC Kreatif",
+    "partners": "Partenaires",
+    "careers": "Carrières"
   },
   "auth": {
     "loginTitle": "Bienvenue",
@@ -1058,6 +1460,7 @@
   },
   "cookies": {
     "title": "Paramètres des cookies",
+    "mobileShort": "Nous utilisons des cookies pour améliorer votre expérience.",
     "description": "Nous utilisons des cookies pour améliorer votre expérience. Les cookies nécessaires sont indispensables au fonctionnement du site. Les cookies analytiques et marketing nous aident à comprendre le trafic et à améliorer nos services.",
     "learnMore": "En savoir plus",
     "acceptAll": "Tout accepter",
@@ -1117,7 +1520,7 @@
     "badge": "FAQ",
     "title": "Questions Fréquentes",
     "q1": "Combien de temps faut-il pour créer un site web ?",
-    "a1": "Notre forfait Starter (page unique) est livr\u00e9 en 5 \u00e0 7 jours ouvrables. Le forfait Growth (5-7 pages) prend 10 \u00e0 14 jours. Les forfaits Scale et Commerce n\u00e9cessitent 14 \u00e0 30 jours selon la complexit\u00e9. Nous livrons toujours dans les d\u00e9lais, sinon nous vous remboursons.",
+    "a1": "Notre forfait Starter (page unique) est livré en 5 à 7 jours ouvrables. Le forfait Growth (5-7 pages) prend 10 à 14 jours. Les forfaits Scale et Commerce nécessitent 14 à 30 jours selon la complexité. Nous livrons toujours dans les délais, sinon nous vous remboursons.",
     "q2": "Quelles technologies utilisez-vous ?",
     "a2": "Nous utilisons des technologies modernes et rapides : React 18, Next.js 14, Vite, TypeScript et Tailwind CSS. Pour le e-commerce, nous intégrons Stripe, LemonSqueezy ou Shopify. Chaque site obtient un score de 98+ aux tests de performance Google Lighthouse.",
     "q3": "Proposez-vous des sites multilingues ?",
@@ -1371,6 +1774,102 @@
       "benefit4": "Développement web conforme au DSGVO (RGPD allemand)",
       "benefit5": "Expérience au service d'entreprises en Allemagne, Autriche et Suisse",
       "benefit6": "Qualité premium à des tarifs européens compétitifs"
+    },
+    "lyon": {
+      "name": "Lyon",
+      "title": "Agence Web à Lyon — Sites Internet sur Mesure pour Auvergne-Rhône-Alpes",
+      "description": "DMC Kreatif crée des sites web performants pour les entreprises de Lyon. Développement web, e-commerce et SEO pour la région Auvergne-Rhône-Alpes.",
+      "intro": "Vous recherchez une agence web à Lyon ? DMC Kreatif conçoit des sites modernes et performants pour les entreprises d'Auvergne-Rhône-Alpes. Des startups innovantes de Part-Dieu aux entreprises établies de Confluence, nous livrons des solutions digitales qui stimulent la croissance.",
+      "benefit1": "Connaissance approfondie du tissu économique lyonnais et régional",
+      "benefit2": "Sites bilingues (français & anglais) pour une portée internationale",
+      "benefit3": "SEO optimisé pour les requêtes locales lyonnaises et régionales",
+      "benefit4": "Scores Google Lighthouse 95+ sur chaque projet",
+      "benefit5": "Expérience avec l'écosystème tech et startup lyonnais",
+      "benefit6": "Livraison rapide : sites lancés en 3 à 28 jours"
+    },
+    "marseille": {
+      "name": "Marseille",
+      "title": "Agence Web à Marseille — Sites Professionnels pour Entreprises Méditerranéennes",
+      "description": "DMC Kreatif développe des sites professionnels pour les entreprises de Marseille. Développement web, boutiques en ligne et SEO pour la région PACA. Devis gratuit.",
+      "intro": "Besoin d'une agence web à Marseille ? DMC Kreatif crée des sites web performants pour les entreprises de Provence-Alpes-Côte d'Azur. Des entreprises maritimes du Vieux-Port aux acteurs du tourisme près des Calanques, nous créons des expériences digitales à l'image de la capitale méditerranéenne.",
+      "benefit1": "Compréhension de la culture d'affaires méditerranéenne de Marseille",
+      "benefit2": "Sites multilingues pour le tourisme et le commerce international",
+      "benefit3": "SEO optimisé pour Marseille et les termes de recherche PACA",
+      "benefit4": "Solutions e-commerce pour le secteur retail marseillais",
+      "benefit5": "Expérience avec les entreprises maritimes, touristiques et hôtelières",
+      "benefit6": "Tarifs compétitifs à partir de 497€"
+    },
+    "manchester": {
+      "name": "Manchester",
+      "title": "Agence Web à Manchester — Sites Modernes pour le Nord de l'Angleterre",
+      "description": "DMC Kreatif crée des sites modernes pour les entreprises de Manchester et du Nord-Ouest. Développement web, e-commerce et SEO. Devis gratuit.",
+      "intro": "Vous cherchez une agence de développement web à Manchester ? DMC Kreatif livre des sites modernes et performants pour les entreprises du Nord-Ouest. Des agences créatives du Northern Quarter aux entreprises tech de MediaCityUK, nous construisons des solutions digitales compétitives.",
+      "benefit1": "Compréhension de l'économie numérique en pleine croissance de Manchester",
+      "benefit2": "Sites multilingues pour la ville la plus diversifiée du UK",
+      "benefit3": "SEO adapté pour Manchester et le Nord-Ouest de l'Angleterre",
+      "benefit4": "Temps de chargement inférieur à 2 secondes sur chaque projet",
+      "benefit5": "Expérience avec les industries créatives et tech du Nord",
+      "benefit6": "Expérience UK avec tarification transparente GBP/EUR"
+    },
+    "antwerp": {
+      "name": "Anvers",
+      "title": "Agence Web à Anvers — Sites Bilingues pour Entreprises Flamandes",
+      "description": "DMC Kreatif crée des sites bilingues pour les entreprises d'Anvers et de Flandre. Développement web néerlandais & anglais, boutiques en ligne et SEO.",
+      "intro": "Vous cherchez une agence web à Anvers ? DMC Kreatif se spécialise dans les sites bilingues pour le marché flamand. Des maisons de mode du Quartier des Diamantaires aux entreprises logistiques du port, nous créons des sites qui fonctionnent en néerlandais et en anglais.",
+      "benefit1": "Expertise bilingue : sites en néerlandais et anglais en standard",
+      "benefit2": "Connaissance du paysage commercial d'Anvers et de la Flandre",
+      "benefit3": "Solutions e-commerce pour les industries de la mode et du diamant",
+      "benefit4": "SEO optimisé pour les termes de recherche néerlandais et flamands",
+      "benefit5": "Expérience avec le commerce, la logistique et le retail belges",
+      "benefit6": "Conforme au RGPD dès le premier jour"
+    },
+    "rotterdam": {
+      "name": "Rotterdam",
+      "title": "Agence Web à Rotterdam — Sites Innovants pour Entreprises Néerlandaises",
+      "description": "DMC Kreatif développe des sites innovants pour les entreprises de Rotterdam et de Zuid-Holland. Développement web, boutiques en ligne et SEO.",
+      "intro": "Besoin d'une agence web à Rotterdam ? DMC Kreatif crée des sites innovants et performants pour les entreprises du plus grand port d'Europe. Des entreprises logistiques du Maasvlakte aux studios créatifs de Witte de Withstraat, nous construisons des solutions digitales innovantes.",
+      "benefit1": "Sites en néerlandais et anglais pour le hub international de Rotterdam",
+      "benefit2": "Développement de boutiques en ligne avec intégration iDEAL",
+      "benefit3": "SEO optimisé pour Rotterdam et la visibilité en Zuid-Holland",
+      "benefit4": "Stack technologique moderne : React, Next.js, Tailwind CSS",
+      "benefit5": "Expérience avec les industries logistique, maritime et créative",
+      "benefit6": "Tarifs compétitifs à partir de 497€"
+    },
+    "lille": {
+      "name": "Lille",
+      "title": "Agence Web à Lille — Sites sur Mesure pour les Hauts-de-France",
+      "description": "DMC Kreatif crée des sites sur mesure pour les entreprises de Lille et des Hauts-de-France. Développement web, e-commerce et SEO. Devis gratuit.",
+      "intro": "Vous cherchez une agence web à Lille ? DMC Kreatif crée des sites professionnels et performants pour les entreprises des Hauts-de-France. Des commerces du Vieux-Lille aux entreprises tech d'EuraTechnologies, nous livrons des solutions digitales qui tirent parti de la position stratégique de Lille.",
+      "benefit1": "Expertise stratégique : Lille au carrefour de Paris, Londres et Bruxelles",
+      "benefit2": "Sites bilingues (français & anglais) pour le commerce transfrontalier",
+      "benefit3": "SEO optimisé pour Lille et les requêtes régionales Hauts-de-France",
+      "benefit4": "Scores Google Lighthouse 95+ sur chaque projet",
+      "benefit5": "Expérience avec l'écosystème tech lillois et EuraTechnologies",
+      "benefit6": "Livraison rapide : sites lancés en 3 à 28 jours"
+    },
+    "birmingham": {
+      "name": "Birmingham",
+      "title": "Agence Web à Birmingham — Sites Professionnels pour les West Midlands",
+      "description": "DMC Kreatif crée des sites professionnels pour les entreprises de Birmingham et des West Midlands. Développement web, e-commerce et SEO.",
+      "intro": "Vous cherchez une agence web à Birmingham ? DMC Kreatif crée des sites professionnels et performants pour les entreprises des West Midlands. Des fabricants du Jewellery Quarter aux services professionnels de Colmore Row, nous aidons les entreprises à développer leur présence digitale.",
+      "benefit1": "Compréhension de l'économie diversifiée de Birmingham",
+      "benefit2": "Sites multilingues pour la ville la plus multiculturelle du UK",
+      "benefit3": "SEO adapté pour Birmingham et les West Midlands",
+      "benefit4": "Temps de chargement inférieur à 2 secondes sur chaque projet",
+      "benefit5": "Expérience avec les secteurs industriel, services et retail",
+      "benefit6": "Tarification transparente en GBP et EUR"
+    },
+    "nantes": {
+      "name": "Nantes",
+      "title": "Agence Web à Nantes — Sites Créatifs pour la Loire-Atlantique",
+      "description": "DMC Kreatif développe des sites créatifs pour les entreprises de Nantes et des Pays de la Loire. Développement web, e-commerce et SEO. Devis gratuit.",
+      "intro": "Besoin d'une agence web à Nantes ? DMC Kreatif crée des sites créatifs et performants pour les entreprises des Pays de la Loire. Des industries créatives de l'Île de Nantes aux startups tech du Quartier de la Création, nous créons des expériences digitales innovantes.",
+      "benefit1": "Connaissance de l'économie créative et innovante de Nantes",
+      "benefit2": "Sites bilingues (français & anglais) pour les clients internationaux",
+      "benefit3": "SEO optimisé pour Nantes et les Pays de la Loire",
+      "benefit4": "Scores Google Lighthouse 95+ sur chaque projet",
+      "benefit5": "Expérience avec les entreprises créatives, tech et maritimes",
+      "benefit6": "Tarifs compétitifs à partir de 497€"
     }
   },
   "leadMagnet": {
