@@ -128,7 +128,7 @@ const content = `
 
 <h2>Our Approach to AI-Assisted Development</h2>
 
-<p>At <a href="/en/services">DMC Kreatif</a>, we integrate AI tools throughout our workflow — from code generation and testing to content drafting and image optimization. This allows us to deliver <strong>premium-quality websites at accessible price points</strong>, with our <a href="/en/pricing">Starter package beginning at €349</a>.</p>
+<p>At <a href="/en/services">DMC Kreatif</a>, we integrate AI tools throughout our workflow — from code generation and testing to content drafting and image optimization. This allows us to deliver <strong>premium-quality websites at accessible price points</strong>, with our <a href="/en/pricing">Starter package beginning at €497</a>.</p>
 
 <p>Every line of AI-assisted code is reviewed by our development team. Every piece of content is refined by humans who understand your market. The result is websites that combine the <strong>efficiency of AI with the quality standards of experienced professionals</strong>.</p>
 

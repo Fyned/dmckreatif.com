@@ -37,7 +37,7 @@ export default function PromoBanner({ variant = "full" }: PromoBannerProps) {
           </div>
           <CountdownTimer variant="compact" />
           <div className="flex-shrink-0 bg-neo-lime border-2 border-neo-black px-4 py-2 shadow-hard-sm">
-            <span className="font-space font-bold text-lg text-neo-black">{t("promo.fromPrice", "From €349")}</span>
+            <span className="font-space font-bold text-lg text-neo-black">{t("promo.fromPrice", "From €497")}</span>
           </div>
         </div>
       </motion.div>

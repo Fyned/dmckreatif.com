@@ -96,11 +96,11 @@ export default function CampaignSection() {
 
                 <div className="flex items-center gap-3 mt-2">
                   <span className="font-mono text-lg text-neo-lime/40 line-through">
-                    €497
+                    €697
                   </span>
                   <div className="bg-neo-lime border-2 border-neo-black px-5 py-3 shadow-hard">
                     <span className="font-space font-extrabold text-3xl lg:text-4xl text-neo-black">
-                      €349
+                      €497
                     </span>
                   </div>
                 </div>

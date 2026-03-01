@@ -6,15 +6,15 @@
     },
     "services": {
       "title": "Webseite Erstellen & Onlineshop Entwicklung | DMC Kreatif",
-      "description": "Maßgeschneiderte Webentwicklung, E-Commerce-Lösungen, Suchmaschinenoptimierung und Online-Marketing für deutsche Unternehmen. Ab €349."
+      "description": "Maßgeschneiderte Webentwicklung, E-Commerce-Lösungen, Suchmaschinenoptimierung und Online-Marketing für deutsche Unternehmen. Ab €497."
     },
     "portfolio": {
       "title": "Portfolio — 10+ Webseiten für Europäische Unternehmen | DMC Kreatif",
       "description": "Unsere Projekte: Bau, Energie, Buchhaltung und E-Commerce in Frankreich, Belgien und UK. Messbare Ergebnisse, Lighthouse 95+."
     },
     "pricing": {
-      "title": "Website Preise — Maßgeschneidert ab 349€ | Templates ab 39€ | DMC Kreatif",
-      "description": "Transparente Preise für Webdesign. Starter €349, Growth €749, Scale €1.497, Commerce €2.497. Kostenlose Beratung, keine versteckten Kosten."
+      "title": "Website Preise — Maßgeschneidert ab 497€ | Templates ab 39€ | DMC Kreatif",
+      "description": "Transparente Preise für Webdesign. Starter €497, Growth €997, Scale €1.997, Commerce €2.997. Kostenlose Beratung, keine versteckten Kosten."
     },
     "about": {
       "title": "Über DMC Kreatif — Europäische Webentwicklungsagentur | 100+ Fachleute",
@@ -472,13 +472,13 @@
     "webDev": {
       "title": "WEBENTWICKLUNG",
       "description": "Wir entwerfen und entwickeln maßgeschneiderte Websites, die Besucher in Kunden verwandeln. Jedes Projekt beginnt mit einer eingehenden Analyse Ihrer Marke, Zielgruppe und Geschäftsziele, damit das Ergebnis Ihre Identität widerspiegelt — kein generisches Template. Unser Tech-Stack basiert auf React, Next.js und Vite und bietet serverseitiges Rendering für SEO, blitzschnelle Seitenübergänge und Code-Splitting, das die initiale Ladezeit unter 1,5 Sekunden hält. Jede Website ist vollständig responsive von Mobil bis Ultra-Wide, erzielt 95+ Punkte bei Google Lighthouse in Performance, Barrierefreiheit, Best Practices und SEO und wird mit strukturiertem Daten-Markup ausgeliefert, damit Suchmaschinen Ihre Inhalte vom ersten Tag an verstehen. Wir binden Kontaktformulare, Analytics-Dashboards und CRM-Integrationen ein und stellen Ihnen wöchentlich einen Live-Staging-Link zur Überprüfung bereit. Nach dem Launch erhalten Sie 30 Tage Prioritäts-Support, vollständiges Quellcode-Eigentum und Dokumentation, damit Ihr Team — oder jeder andere Entwickler — die Website eigenständig pflegen kann. Ob Sie eine einzelne Landingpage oder eine mehrsprachige Unternehmenswebsite für Frankreich, Belgien, die Niederlande und Deutschland benötigen — wir liefern pünktlich und im Budget.",
-      "priceRange": "AB €349",
+      "priceRange": "AB €497",
       "idealFor": "KMU, Startups, Freiberufler, Agenturen"
     },
     "ecommerce": {
       "title": "E-COMMERCE",
       "description": "Wir bauen Online-Shops, die für den Verkauf auf europäischen Märkten entwickelt sind. Vom Produktkatalog bis zur Bestellbestätigung — jeder Schritt ist auf Conversion optimiert: schnell ladende Produktseiten, intuitive Filterung, Ein-Klick-Warenkorb und ein optimierter Checkout-Prozess, der Kreditkarten, iDEAL, Bancontact, SEPA und mehr über Stripe unterstützt. Der Bestand synchronisiert sich in Echtzeit, Multi-Währungs-Preise passen sich automatisch an und Steuerregeln erfüllen die EU-MwSt-Vorschriften ab Installation. Das Admin-Panel ermöglicht Ihnen Produktverwaltung, Bestellverfolgung, Rabattcodes und Verkaufsberichte ohne eine Zeile Code zu berühren. Wir integrieren Versandrechner, E-Mails zur Warenkorbwiederherstellung und Bewertungssysteme, die Social Proof aufbauen. Technisch werden Produktseiten vorgerendert für sofortige Google-Indexierung, strukturierte Daten ermöglichen Rich-Suchergebnisse und Bildoptimierung hält das Seitengewicht niedrig. Jeder Shop ist vollständig responsive, unterstützt standardmäßig vier Sprachen und beinhaltet 30 Tage Post-Launch-Support sowie die Schulung Ihres Teams am Admin-Dashboard.",
-      "priceRange": "AB €2.497",
+      "priceRange": "AB €2.997",
       "idealFor": "Einzelhändler, D2C-Marken, Länderübergreifende Verkäufer"
     },
     "seo": {
@@ -737,7 +737,7 @@
     "templateFeature3": "Mobil responsive & SEO-optimiert",
     "templateCta": "VORLAGEN DURCHSUCHEN",
     "customTitle": "INDIVIDUELLE ENTWICKLUNG",
-    "customPrice": "AB €349",
+    "customPrice": "AB €497",
     "customDelivery": "Von unserem Team von Grund auf erstellt",
     "customFeature1": "100% einzigartiges individuelles Design",
     "customFeature2": "Unbegrenzte Revisionen inklusive",
@@ -825,7 +825,7 @@
     "premiumCompare1": "5-30 Tage Lieferung",
     "premiumCompare2": "Individuelles Design von Grund auf",
     "premiumCompare3": "Dedizierter Support & Revisionen",
-    "premiumComparePrice": "Ab €349",
+    "premiumComparePrice": "Ab €497",
     "guarantee": "ZUFRIEDENHEITSGARANTIE",
     "guaranteeDesc": "Kostenlose Revisionen bis Sie 100% zufrieden sind",
     "payment": "SICHERE ZAHLUNG",
@@ -953,7 +953,7 @@
     "perk1": "Kostenlose Beratung",
     "perk2": "Keine versteckten Kosten",
     "perk3": "Geld-zurück-Garantie",
-    "fromPrice": "Ab 349€",
+    "fromPrice": "Ab 497€",
     "saveUpTo": "25% sparen — Einführungspreise",
     "ctaButton": "RABATT SICHERN",
     "popupTitle": "25% RABATT AUF ALLE PAKETE",
@@ -1172,10 +1172,10 @@
     "serviceOther": "Sonstiges",
     "budgetLabel": "BUDGETRAHMEN",
     "budgetPlaceholder": "Wählen Sie Ihr Budget",
-    "budget1": "€349 - €749",
-    "budget2": "€749 - €1.497",
-    "budget3": "€1.497 - €2.497",
-    "budget4": "€2.497+",
+    "budget1": "€497 - €997",
+    "budget2": "€997 - €1.997",
+    "budget3": "€1.997 - €2.997",
+    "budget4": "€2.997+",
     "messageLabel": "PROJEKTDETAILS",
     "messagePlaceholder": "Erzählen Sie uns von Ihrem Projekt...",
     "submit": "NACHRICHT SENDEN",
@@ -1193,10 +1193,10 @@
     "serviceTemplatePro": "Vorlage — Premium (€179)",
     "explore": "Entdecken",
     "selectService": "Wählen Sie einen Service...",
-    "serviceLaunch": "Starter Paket (€349)",
-    "serviceGrowth": "Growth Paket (€749)",
-    "serviceScale": "Scale Paket (€1.497)",
-    "serviceCommerce": "Commerce Paket (€2.497)",
+    "serviceLaunch": "Starter Paket (€497)",
+    "serviceGrowth": "Growth Paket (€997)",
+    "serviceScale": "Scale Paket (€1.997)",
+    "serviceCommerce": "Commerce Paket (€2.997)",
     "selectBudget": "Wählen Sie Ihr Budget...",
     "budgetUnder500": "Unter €500",
     "budget500": "€500 — €1.000",

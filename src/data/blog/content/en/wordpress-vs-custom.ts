@@ -158,7 +158,7 @@ const content = `
   <li><strong>How long will you keep this website?</strong> If more than two years, custom development likely costs less overall.</li>
 </ul>
 
-<p>At <a href="/en/services">DMC Kreatif</a>, we build custom websites using React, Next.js, and Vite that deliver <a href="/en/services/performance-optimization">Lighthouse scores above 95</a>, require minimal maintenance, and provide a superior user experience. Our <a href="/en/pricing">pricing starts at €349</a> for a professional single-page site — competitive with quality WordPress development but with dramatically lower long-term costs.</p>
+<p>At <a href="/en/services">DMC Kreatif</a>, we build custom websites using React, Next.js, and Vite that deliver <a href="/en/services/performance-optimization">Lighthouse scores above 95</a>, require minimal maintenance, and provide a superior user experience. Our <a href="/en/pricing">pricing starts at €497</a> for a professional single-page site — competitive with quality WordPress development but with dramatically lower long-term costs.</p>
 
 <p>Ready to invest in a website that pays for itself? <a href="/en/contact">Contact us</a> for a free cost comparison based on your specific requirements.</p>
 `;

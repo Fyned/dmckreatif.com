@@ -56,10 +56,10 @@ export default function CampaignPopup() {
   }
 
   const tiers = [
-    { original: "€497", price: "€349", name: "Starter" },
-    { original: "€997", price: "€749", name: "Growth" },
-    { original: "€1,997", price: "€1,497", name: "Scale" },
-    { original: "€2,997", price: "€2,497", name: "Commerce" },
+    { original: "€697", price: "€497", name: "Starter" },
+    { original: "€1,397", price: "€997", name: "Growth" },
+    { original: "€2,697", price: "€1,997", name: "Scale" },
+    { original: "€3,997", price: "€2,997", name: "Commerce" },
   ];
 
   return (

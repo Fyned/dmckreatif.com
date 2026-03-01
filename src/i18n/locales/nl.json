@@ -6,15 +6,15 @@
     },
     "services": {
       "title": "Website Laten Maken & Webshop Ontwikkeling | DMC Kreatif",
-      "description": "Op maat gemaakte websites, webshops, zoekmachineoptimalisatie en online marketing voor Nederlandse en Belgische bedrijven. Vanaf €349."
+      "description": "Op maat gemaakte websites, webshops, zoekmachineoptimalisatie en online marketing voor Nederlandse en Belgische bedrijven. Vanaf €497."
     },
     "portfolio": {
       "title": "Portfolio — 10+ Websites voor Europese Bedrijven | DMC Kreatif",
       "description": "Bekijk onze projecten: bouw, energie, boekhouding en e-commerce in Frankrijk, België en UK. Meetbare resultaten, Lighthouse scores 95+."
     },
     "pricing": {
-      "title": "Website Prijzen — Op maat vanaf €349 | Templates vanaf €39 | DMC Kreatif",
-      "description": "Starter €349, Growth €749, Scale €1.497, Commerce €2.497"
+      "title": "Website Prijzen — Op maat vanaf €497 | Templates vanaf €39 | DMC Kreatif",
+      "description": "Starter €497, Growth €997, Scale €1.997, Commerce €2.997"
     },
     "about": {
       "title": "Over DMC Kreatif — Europees Webontwikkelingsbureau | 100+ Professionals",
@@ -473,7 +473,7 @@
     "templateFeature2": "Uw merkkleuren & logo",
     "templateFeature3": "Mobiel responsive & SEO-klaar",
     "templateCta": "TEMPLATES BEKIJKEN",
-    "customPrice": "VANAF €349",
+    "customPrice": "VANAF €497",
     "customTitle": "MAATWERK ONTWIKKELING",
     "customDelivery": "Vanaf nul gebouwd door ons team",
     "customFeature1": "100% uniek maatwerk design",
@@ -491,13 +491,13 @@
     "webDev": {
       "title": "WEBONTWIKKELING",
       "description": "Wij ontwerpen en bouwen websites op maat die bezoekers omzetten in klanten. Elk project begint met een grondige analyse van uw merk, doelgroep en bedrijfsdoelen, zodat het eindresultaat uw identiteit weerspiegelt — geen standaard template. Onze technische stack draait om React, Next.js en Vite, wat zorgt voor server-side rendering voor SEO, razendsnelle paginaovergangen en code-splitting die de initiële laadtijd onder 1,5 seconde houdt. Elke website is volledig responsief van mobiel tot ultra-breed, scoort 95+ op Google Lighthouse voor Prestaties, Toegankelijkheid, Best Practices en SEO, en wordt geleverd met gestructureerde data-markup zodat zoekmachines uw content vanaf dag één begrijpen. Wij koppelen contactformulieren, analytics-dashboards en CRM-integraties aan en bieden u wekelijks een live preview-link ter beoordeling. Na lancering ontvangt u 30 dagen prioritaire ondersteuning, volledig eigendom van de broncode en documentatie waarmee uw team — of elke andere ontwikkelaar — de site zelfstandig kan onderhouden. Of u nu een enkele landingspagina nodig heeft of een meertalige bedrijfswebsite voor Frankrijk, België, Nederland en Duitsland, wij leveren op tijd en binnen budget.",
-      "priceRange": "VANAF €349",
+      "priceRange": "VANAF €497",
       "idealFor": "MKB, Startups, Professionals, Bureaus"
     },
     "ecommerce": {
       "title": "E-COMMERCE",
       "description": "Wij bouwen webshops die ontworpen zijn om te verkopen op Europese markten. Van productcatalogus tot bestelbevestiging — elke stap is geoptimaliseerd voor conversie: snelladende productpagina's, intuïtieve filtering, één-klik toevoegen aan winkelwagen en een gestroomlijnd afrekenproces dat creditcards, iDEAL, Bancontact, SEPA en meer ondersteunt via Stripe. Voorraad synchroniseert realtime, multi-valuta prijzen passen automatisch aan en belastingregels voldoen direct aan de EU-btw-wetgeving. Het beheerpaneel laat u producten beheren, bestellingen volgen, kortingscodes toepassen en verkooprapporten genereren zonder code aan te raken. Wij integreren verzendcalculators, e-mails voor achtergelaten winkelwagens en reviewsystemen die sociaal bewijs opbouwen. Technisch gezien worden productpagina's vooraf gerenderd voor directe Google-indexering, gestructureerde data zorgen voor rijke zoekresultaten en beeldoptimalisatie houdt het paginagewicht laag. Elke webshop is volledig responsief, ondersteunt standaard vier talen en bevat 30 dagen ondersteuning na lancering plus training van uw team op het admin-dashboard.",
-      "priceRange": "VANAF €2.497",
+      "priceRange": "VANAF €2.997",
       "idealFor": "Retailers, D2C-merken, Multi-land verkopers"
     },
     "seo": {
@@ -848,7 +848,7 @@
     "premiumCompare1": "Levering in 3-28 dagen",
     "premiumCompare2": "Op maat ontworpen design",
     "premiumCompare3": "Revisies & support inbegrepen",
-    "premiumComparePrice": "Vanaf €349",
+    "premiumComparePrice": "Vanaf €497",
     "guarantee": "TEVREDENHEIDSGARANTIE",
     "guaranteeDesc": "Gratis revisies tot u 100% tevreden bent",
     "payment": "VEILIGE BETALING",
@@ -960,7 +960,7 @@
     "perk1": "Gratis adviesgesprek",
     "perk2": "Geen verborgen kosten",
     "perk3": "Niet-goed-geld-terug garantie",
-    "fromPrice": "Vanaf €349",
+    "fromPrice": "Vanaf €497",
     "saveUpTo": "Bespaar 25% — introductieprijzen",
     "ctaButton": "CLAIM UW KORTING",
     "popupTitle": "25% KORTING OP ALLE PAKKETTEN",
@@ -1200,7 +1200,7 @@
     "serviceTemplatePro": "Sjabloon — Professioneel (€150)",
     "explore": "Ontdekken",
     "selectService": "Selecteer een dienst...",
-    "serviceLaunch": "Starter Pakket (€349)",
+    "serviceLaunch": "Starter Pakket (€497)",
     "serviceGrowth": "Groei Pakket (€997)",
     "serviceScale": "Schaal Pakket (€1.997)",
     "serviceCommerce": "Commerce Pakket (€2.997)",

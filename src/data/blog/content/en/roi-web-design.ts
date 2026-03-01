@@ -162,7 +162,7 @@ const content = `
 
 <h2>Get a Website That Pays for Itself</h2>
 
-<p>At <a href="/en/services">DMC Kreatif</a>, we build websites designed to generate measurable business results. Our <a href="/en/pricing">packages start at €349</a> for a professional single-page site, with our most popular Growth package at €997 including 5–7 pages, SEO optimization, and performance engineering.</p>
+<p>At <a href="/en/services">DMC Kreatif</a>, we build websites designed to generate measurable business results. Our <a href="/en/pricing">packages start at €497</a> for a professional single-page site, with our most popular Growth package at €997 including 5–7 pages, SEO optimization, and performance engineering.</p>
 
 <p>Every site we build achieves <a href="/en/services/performance-optimization">Lighthouse scores above 95</a>, is optimized for conversion, and includes the technical SEO foundation your business needs to grow organically. View our <a href="/en/portfolio">portfolio</a> to see results we have delivered for European businesses across construction, energy, accounting, and e-commerce.</p>
 
