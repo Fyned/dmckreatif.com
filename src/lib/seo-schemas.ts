@@ -54,27 +54,6 @@ export function buildOrganizationSchema() {
 }
 
 /**
- * WebSite schema for the homepage.
- * Includes publisher reference.
- */
-export function buildWebSiteSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "DMC Kreatif",
-    alternateName: "DMC Kreatif Web Agency",
-    url: BASE_URL,
-    inLanguage: ["en", "fr", "nl", "de"],
-    publisher: {
-      "@type": "Organization",
-      name: "DMC Kreatif",
-      url: BASE_URL,
-      logo: `${BASE_URL}/logo.svg`,
-    },
-  };
-}
-
-/**
  * ProfessionalService schema (LocalBusiness subtype) with aggregateRating
  * and reviews embedded. Used on the contact page and optionally homepage.
  *
@@ -196,25 +175,31 @@ export function buildLocalBusinessSchema() {
  * BreadcrumbList schema.
  * Now includes the current page (last item) without a URL, per Google guidelines.
  */
+interface BreadcrumbListItem {
+  "@type": "ListItem";
+  position: number;
+  name: string;
+  item?: string;
+}
+
 export function buildBreadcrumbSchema(
   locale: string,
   items: BreadcrumbItem[],
   currentPageName?: string
 ) {
-  const listItems = items.map((item, index) => ({
-    "@type": "ListItem" as const,
+  const listItems: BreadcrumbListItem[] = items.map((item, index) => ({
+    "@type": "ListItem",
     position: index + 1,
     name: item.name,
     item: `${BASE_URL}/${locale}${item.path}`,
   }));
 
-  // Add the current page as the last item (no URL per Google spec)
   if (currentPageName) {
     listItems.push({
-      "@type": "ListItem" as const,
+      "@type": "ListItem",
       position: listItems.length + 1,
       name: currentPageName,
-    } as typeof listItems[number]);
+    });
   }
 
   return {
@@ -484,6 +469,47 @@ export function buildWebPageSchema(params: {
 }
 
 /**
+ * AboutPage schema with founder Person entity.
+ */
+export function buildAboutPageSchema(locale: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "About DMC Kreatif",
+    description:
+      "Learn about DMC Kreatif, a UK-registered web development agency founded by Musa Kerem Demirci, serving European businesses.",
+    url: `${BASE_URL}/${locale}/about`,
+    inLanguage: locale,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "DMC Kreatif",
+      url: BASE_URL,
+    },
+    mainEntity: {
+      "@type": "Person",
+      name: "Musa Kerem Demirci",
+      jobTitle: "CEO & Founder",
+      url: "https://www.linkedin.com/in/musakeremdemirci",
+      sameAs: ["https://www.linkedin.com/in/musakeremdemirci"],
+      worksFor: {
+        "@type": "Organization",
+        name: "DMC Kreatif",
+        url: BASE_URL,
+      },
+      knowsAbout: [
+        "Web Development",
+        "React",
+        "Next.js",
+        "TypeScript",
+        "SEO Optimization",
+        "E-Commerce Development",
+      ],
+      knowsLanguage: ["en", "fr", "nl", "de"],
+    },
+  };
+}
+
+/**
  * ContactPage schema for the contact page.
  */
 export function buildContactPageSchema(locale: string) {
@@ -543,39 +569,6 @@ export function buildPortfolioPageSchema(
         url: project.url,
         description: project.description,
       })),
-    },
-  };
-}
-
-/**
- * CreativeWork schema for individual case studies / portfolio items.
- */
-export function buildCaseStudySchema(
-  project: {
-    name: string;
-    url: string;
-    year: number;
-    description?: string;
-    image?: string;
-  },
-  locale: string
-) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    name: project.name,
-    description: project.description,
-    url: `${BASE_URL}/${locale}/case-studies`,
-    image: project.image,
-    dateCreated: `${project.year}-01-01`,
-    creator: {
-      "@type": "Organization",
-      name: "DMC Kreatif",
-      url: BASE_URL,
-    },
-    about: {
-      "@type": "WebSite",
-      url: project.url,
     },
   };
 }
@@ -656,12 +649,28 @@ export function buildCitySchema(params: {
       "@type": "PostalAddress",
       addressLocality: params.cityName,
     },
-    knowsAbout: [
-      "Web Development",
-      "E-Commerce Development",
-      "SEO Optimization",
-      "Digital Marketing",
-    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Web Development Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Web Development", description: "Custom websites built with React and Next.js" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "E-Commerce Development", description: "Full e-commerce solutions with payment integration" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "SEO Optimization", description: "Technical SEO audit, keyword research, and monthly reports" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Digital Marketing", description: "Google Ads, social media, and marketing automation" },
+        },
+      ],
+    },
     knowsLanguage: ["en", "fr", "nl", "de"],
     sameAs: [
       "https://www.linkedin.com/company/dmckreatif",

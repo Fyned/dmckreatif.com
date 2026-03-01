@@ -70,115 +70,75 @@
     <!-- Theme color -->
     <meta name="theme-color" content="#FFFDF5" />
 
-    <!-- Static JSON-LD for crawlers that don't execute JS -->
+    <!-- Static JSON-LD — @graph pattern, single block for crawlers -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "DMC Kreatif",
-      "alternateName": "GMG Design",
-      "url": "https://dmckreatif.com",
-      "logo": "https://dmckreatif.com/logo.svg",
-      "email": "hello@dmckreatif.com",
-      "foundingDate": "2023-01-01",
-      "founder": {
-        "@type": "Person",
-        "name": "Musa Kerem Demirci",
-        "jobTitle": "Founder & Lead Developer"
-      },
-      "areaServed": [
-        { "@type": "Country", "name": "France" },
-        { "@type": "Country", "name": "Belgium" },
-        { "@type": "Country", "name": "United Kingdom" },
-        { "@type": "Country", "name": "Netherlands" },
-        { "@type": "Country", "name": "Germany" },
-        { "@type": "Country", "name": "Switzerland" }
-      ],
-      "knowsAbout": ["Web Development", "E-Commerce Development", "SEO Optimization", "Digital Marketing"],
-      "knowsLanguage": ["en", "fr", "nl", "de"],
-      "sameAs": ["https://www.linkedin.com/company/dmckreatif"]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "DMC Kreatif",
-      "url": "https://dmckreatif.com",
-      "inLanguage": ["en", "fr", "nl", "de"],
-      "publisher": {
-        "@type": "Organization",
-        "name": "DMC Kreatif",
-        "url": "https://dmckreatif.com"
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "@id": "https://dmckreatif.com/#organization",
-      "name": "DMC Kreatif",
-      "alternateName": "DMC Kreatif Web Agency",
-      "url": "https://dmckreatif.com",
-      "logo": "https://dmckreatif.com/logo.svg",
-      "image": "https://dmckreatif.com/og-image.png",
-      "email": "hello@dmckreatif.com",
-      "priceRange": "€€",
-      "description": "Premium web development agency serving European businesses. Custom websites, e-commerce, SEO and digital marketing.",
-      "foundingDate": "2023-01-01",
-      "founder": {
-        "@type": "Person",
-        "name": "Musa Kerem Demirci",
-        "jobTitle": "Founder & Lead Developer",
-        "url": "https://www.linkedin.com/in/musakeremdemirci"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "FR",
-        "addressLocality": "Paris",
-        "addressRegion": "Ile-de-France"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 48.8566,
-        "longitude": 2.3522
-      },
-      "areaServed": [
-        { "@type": "Country", "name": "France" },
-        { "@type": "Country", "name": "Belgium" },
-        { "@type": "Country", "name": "United Kingdom" },
-        { "@type": "Country", "name": "Netherlands" },
-        { "@type": "Country", "name": "Germany" },
-        { "@type": "Country", "name": "Switzerland" }
-      ],
-      "knowsLanguage": ["en", "fr", "nl", "de"],
-      "paymentAccepted": "Bank Transfer, Credit Card",
-      "sameAs": ["https://www.linkedin.com/company/dmckreatif"],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 4.9,
-        "bestRating": 5,
-        "worstRating": 1,
-        "ratingCount": 6,
-        "reviewCount": 6
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Musa Kerem Demirci",
-      "jobTitle": "Founder & Lead Developer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "DMC Kreatif",
-        "url": "https://dmckreatif.com"
-      },
-      "knowsAbout": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Web Development", "E-Commerce", "SEO"],
-      "knowsLanguage": ["en", "fr", "nl", "de"],
-      "sameAs": ["https://www.linkedin.com/in/musakeremdemirci"]
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://dmckreatif.com/#organization",
+          "name": "DMC Kreatif",
+          "alternateName": "DMC Kreatif Web Agency",
+          "url": "https://dmckreatif.com",
+          "logo": "https://dmckreatif.com/logo.svg",
+          "image": "https://dmckreatif.com/og-image.png",
+          "email": "hello@dmckreatif.com",
+          "priceRange": "€€",
+          "description": "Premium web development agency serving European businesses across France, Belgium, UK, Netherlands, and Germany. Custom websites, e-commerce, SEO, and digital marketing.",
+          "foundingDate": "2023-01-01",
+          "founder": { "@id": "https://dmckreatif.com/#founder" },
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "GB",
+            "addressLocality": "London",
+            "addressRegion": "England"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 51.5074,
+            "longitude": -0.1278
+          },
+          "areaServed": [
+            { "@type": "Country", "name": "France" },
+            { "@type": "Country", "name": "Belgium" },
+            { "@type": "Country", "name": "United Kingdom" },
+            { "@type": "Country", "name": "Netherlands" },
+            { "@type": "Country", "name": "Germany" },
+            { "@type": "Country", "name": "Switzerland" }
+          ],
+          "knowsLanguage": ["en", "fr", "nl", "de"],
+          "paymentAccepted": "Bank Transfer, Credit Card",
+          "sameAs": ["https://www.linkedin.com/company/dmckreatif"],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 4.9,
+            "bestRating": 5,
+            "worstRating": 1,
+            "ratingCount": 6,
+            "reviewCount": 6
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://dmckreatif.com/#website",
+          "name": "DMC Kreatif",
+          "url": "https://dmckreatif.com",
+          "inLanguage": ["en", "fr", "nl", "de"],
+          "publisher": { "@id": "https://dmckreatif.com/#organization" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://dmckreatif.com/#founder",
+          "name": "Musa Kerem Demirci",
+          "jobTitle": "CEO & Founder",
+          "url": "https://www.linkedin.com/in/musakeremdemirci",
+          "worksFor": { "@id": "https://dmckreatif.com/#organization" },
+          "knowsAbout": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Web Development", "E-Commerce", "SEO"],
+          "knowsLanguage": ["en", "fr", "nl", "de"],
+          "sameAs": ["https://www.linkedin.com/in/musakeremdemirci"]
+        }
+      ]
     }
     </script>
   </head>

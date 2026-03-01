@@ -50,15 +50,25 @@ export default function ProjectCard({ project, index, onClick }: ProjectCardProp
       {/* Screenshot preview */}
       {project.imageDesktop && (
         <div className="relative overflow-hidden border-b-2 border-neo-black">
-          <img
-            src={project.imageDesktop}
-            alt={project.name}
-            loading="lazy"
-            width={1200}
-            height={675}
-            decoding="async"
-            className="w-full h-auto aspect-[16/9] object-cover object-top group-hover:scale-105 transition-transform duration-500"
-          />
+          <picture>
+            {project.imageMobile && (
+              <source
+                media="(max-width: 640px)"
+                srcSet={project.imageMobile}
+                width={640}
+                height={1138}
+              />
+            )}
+            <img
+              src={project.imageDesktop}
+              alt={`${project.name} — web project by DMC Kreatif`}
+              loading="lazy"
+              width={1200}
+              height={675}
+              decoding="async"
+              className="w-full h-auto aspect-[16/9] object-cover object-top group-hover:scale-105 transition-transform duration-500"
+            />
+          </picture>
         </div>
       )}
 
