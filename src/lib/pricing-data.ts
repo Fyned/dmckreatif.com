@@ -14,8 +14,8 @@ export const pricingTiers: PricingTier[] = [
   {
     id: "launch",
     nameKey: "launch",
-    price: 349,
-    originalPrice: 465,
+    price: 497,
+    originalPrice: 663,
     color: "neo-lime",
     featuresKey: "launchFeatures",
     deliveryKey: "launchDelivery",
@@ -24,8 +24,8 @@ export const pricingTiers: PricingTier[] = [
   {
     id: "growth",
     nameKey: "growth",
-    price: 749,
-    originalPrice: 999,
+    price: 997,
+    originalPrice: 1329,
     color: "neo-yellow",
     featuresKey: "growthFeatures",
     deliveryKey: "growthDelivery",
@@ -34,8 +34,8 @@ export const pricingTiers: PricingTier[] = [
   {
     id: "scale",
     nameKey: "scale",
-    price: 1497,
-    originalPrice: 1996,
+    price: 1997,
+    originalPrice: 2663,
     color: "neo-blue",
     featuresKey: "scaleFeatures",
     deliveryKey: "scaleDelivery",
@@ -44,8 +44,8 @@ export const pricingTiers: PricingTier[] = [
   {
     id: "commerce",
     nameKey: "commerce",
-    price: 2497,
-    originalPrice: 3329,
+    price: 2997,
+    originalPrice: 3996,
     color: "neo-purple",
     featuresKey: "commerceFeatures",
     deliveryKey: "commerceDelivery",

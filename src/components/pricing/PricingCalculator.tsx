@@ -26,7 +26,7 @@ const pageOptions = [
   { pages: 1, basePrice: 297 },
   { pages: 5, basePrice: 497 },
   { pages: 10, basePrice: 997 },
-  { pages: 15, basePrice: 1497 },
+  { pages: 15, basePrice: 1997 },
   { pages: 20, basePrice: 1997 },
 ];
 

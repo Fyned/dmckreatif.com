@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head><title>Logo Export</title></head>
+<body style="margin:0;background:#000;display:flex;align-items:center;justify-content:center;height:100vh;">
+<canvas id="c" width="560" height="160"></canvas>
+<script>
+const c = document.getElementById('c');
+const ctx = c.getContext('2d');
+
+// DMC KREATIF box
+ctx.fillStyle = '#CDFF50';
+ctx.fillRect(0, 0, 560, 80);
+ctx.strokeStyle = '#121212';
+ctx.lineWidth = 6;
+ctx.strokeRect(0, 0, 560, 80);
+
+ctx.fillStyle = '#121212';
+ctx.font = '700 40px "Space Grotesk", Arial, sans-serif';
+ctx.textAlign = 'center';
+ctx.letterSpacing = '4px';
+ctx.fillText('DMC KREATIF', 280, 55);
+
+// GMG DESIGN box
+ctx.fillStyle = '#FFFFFF';
+ctx.fillRect(0, 74, 560, 80);
+ctx.strokeStyle = '#121212';
+ctx.lineWidth = 6;
+ctx.strokeRect(0, 74, 560, 80);
+
+ctx.fillStyle = '#121212';
+ctx.fillText('GMG DESIGN', 280, 130);
+
+// Auto-download as PNG
+const link = document.createElement('a');
+link.download = 'dmc-kreatif-logo.png';
+link.href = c.toDataURL('image/png');
+link.click();
+
+document.body.innerHTML = '<h1 style="color:#CDFF50;font-family:sans-serif;text-align:center;margin-top:40vh;">Logo PNG downloaded! ✅</h1>';
+</script>
+</body>
+</html>

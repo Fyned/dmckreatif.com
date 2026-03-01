@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "TeamCreate",
+      "SendMessage",
+      "TeamDelete",
+      "Skill(webapp-testing)",
+      "ToolSearch",
+      "ListMcpResourcesTool",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_click"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "fal-mcp"
+  ]
+}

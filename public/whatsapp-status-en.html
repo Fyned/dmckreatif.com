@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, initial-scale=1">
+<title>DMC Kreatif — WhatsApp Status EN</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1920px;
+    background-color: #FFFDF5;
+    background-image: radial-gradient(#121212 1px, transparent 1px);
+    background-size: 32px 32px;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #121212;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 56px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── Logo Block ── */
+  .logo-block { text-align: center; margin-bottom: 48px; }
+
+  .logo-top {
+    display: inline-block;
+    background: #CDFF50;
+    border: 4px solid #121212;
+    box-shadow: 6px 6px 0px 0px #121212;
+    padding: 16px 40px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 52px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  .logo-bottom {
+    display: inline-block;
+    background: #FFFFFF;
+    border: 4px solid #121212;
+    border-top: none;
+    box-shadow: 6px 6px 0px 0px #121212;
+    padding: 10px 40px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+  }
+
+  /* ── Headline ── */
+  .headline {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 58px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+  }
+
+  .headline-accent {
+    display: inline;
+    background: #CDFF50;
+    padding: 2px 12px;
+    border: 3px solid #121212;
+    box-shadow: 4px 4px 0px 0px #121212;
+  }
+
+  /* ── Subtext ── */
+  .subtext {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px;
+    text-align: center;
+    color: #121212;
+    opacity: 0.7;
+    margin-bottom: 52px;
+    letter-spacing: 1px;
+  }
+
+  /* ── Service Cards ── */
+  .services { width: 100%; display: flex; flex-direction: column; gap: 18px; margin-bottom: 52px; }
+
+  .service-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 28px;
+    border: 4px solid #121212;
+    box-shadow: 6px 6px 0px 0px #121212;
+    transition: none;
+  }
+
+  .service-icon {
+    width: 56px;
+    height: 56px;
+    border: 3px solid #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    flex-shrink: 0;
+    background: #FFFFFF;
+    box-shadow: 3px 3px 0px 0px #121212;
+  }
+
+  .service-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .service-desc {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    opacity: 0.7;
+    margin-top: 2px;
+  }
+
+  .s-lime   { background: #CDFF50; }
+  .s-yellow { background: #FBFF48; }
+  .s-blue   { background: #3B82F6; color: #FFFFFF; }
+  .s-blue .service-desc { color: #FFFFFF; opacity: 0.85; }
+  .s-pink   { background: #FF70A6; }
+
+  /* ── CTA ── */
+  .cta-block { text-align: center; margin-bottom: 40px; }
+
+  .cta-button {
+    display: inline-block;
+    background: #CDFF50;
+    border: 4px solid #121212;
+    box-shadow: 6px 6px 0px 0px #121212;
+    padding: 20px 48px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #121212;
+    text-decoration: none;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    text-align: center;
+  }
+
+  .footer-url {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #121212;
+  }
+
+  .footer-tagline {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: #121212;
+    opacity: 0.5;
+    margin-top: 8px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* ── Decorative Elements ── */
+  .deco {
+    position: absolute;
+    border: 3px solid #121212;
+    z-index: 0;
+  }
+  .deco-1 { width: 80px; height: 80px; background: #CDFF50; top: 40px; right: 40px; box-shadow: 4px 4px 0 #121212; }
+  .deco-2 { width: 48px; height: 48px; background: #FBFF48; bottom: 80px; left: 40px; box-shadow: 3px 3px 0 #121212; }
+  .deco-3 { width: 36px; height: 36px; background: #FF70A6; top: 140px; left: 50px; box-shadow: 3px 3px 0 #121212; }
+  .deco-4 { width: 60px; height: 24px; background: #3B82F6; bottom: 200px; right: 60px; box-shadow: 3px 3px 0 #121212; }
+  .deco-5 { width: 24px; height: 60px; background: #CDFF50; top: 300px; right: 80px; box-shadow: 3px 3px 0 #121212; }
+  .deco-6 { width: 44px; height: 44px; background: #FBFF48; bottom: 320px; left: 60px; box-shadow: 3px 3px 0 #121212; transform: rotate(12deg); }
+
+  /* ── Status indicator ── */
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 3px solid #121212;
+    background: #FFFFFF;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 0 #121212;
+    margin-bottom: 32px;
+  }
+
+  .status-dot {
+    width: 10px;
+    height: 10px;
+    background: #33FF57;
+    border: 2px solid #121212;
+    border-radius: 0;
+  }
+
+  .status-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+
+<!-- Decorative shapes -->
+<div class="deco deco-1"></div>
+<div class="deco deco-2"></div>
+<div class="deco deco-3"></div>
+<div class="deco deco-4"></div>
+<div class="deco deco-5"></div>
+<div class="deco deco-6"></div>
+
+<div class="container">
+
+  <!-- Status badge -->
+  <div class="status-badge">
+    <div class="status-dot"></div>
+    <span class="status-text">Available for Projects</span>
+  </div>
+
+  <!-- Logo -->
+  <div class="logo-block">
+    <div class="logo-top">DMC KREATIF</div><br>
+    <div class="logo-bottom">GMG DESIGN</div>
+  </div>
+
+  <!-- Headline -->
+  <h1 class="headline">
+    YOUR VISION,<br>
+    <span class="headline-accent">OUR CODE</span>
+  </h1>
+
+  <p class="subtext">Premium Digital Solutions for Europe</p>
+
+  <!-- Services -->
+  <div class="services">
+    <div class="service-card s-lime">
+      <div class="service-icon">&lt;/&gt;</div>
+      <div>
+        <div class="service-name">Web Development</div>
+        <div class="service-desc">Modern, fast, responsive</div>
+      </div>
+    </div>
+    <div class="service-card s-yellow">
+      <div class="service-icon">&#128722;</div>
+      <div>
+        <div class="service-name">E-Commerce</div>
+        <div class="service-desc">Sell globally, grow fast</div>
+      </div>
+    </div>
+    <div class="service-card s-blue">
+      <div class="service-icon">&#8593;</div>
+      <div>
+        <div class="service-name">SEO Optimization</div>
+        <div class="service-desc">Rank #1 on Google</div>
+      </div>
+    </div>
+    <div class="service-card s-pink">
+      <div class="service-icon">&#128227;</div>
+      <div>
+        <div class="service-name">Digital Marketing</div>
+        <div class="service-desc">Reach your audience</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-block">
+    <span class="cta-button">GET A FREE QUOTE &rarr;</span>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-url">dmckreatif.com</div>
+    <div class="footer-tagline">Handcrafted by professional developers</div>
+  </div>
+
+</div>
+</body>
+</html>

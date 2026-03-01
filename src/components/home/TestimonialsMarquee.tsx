@@ -39,12 +39,12 @@ export default function TestimonialsMarquee() {
   const { t } = useTranslation();
 
   const reviewDates = [
-    "2023-09-20",
-    "2024-01-15",
-    "2024-04-08",
-    "2024-06-22",
-    "2024-10-05",
-    "2025-02-12",
+    "2024-03-15",
+    "2024-06-10",
+    "2024-09-22",
+    "2025-01-08",
+    "2025-05-18",
+    "2025-09-30",
   ];
 
   const reviewSchemaData = testimonials.map((item, i) => ({

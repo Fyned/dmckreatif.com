@@ -1,0 +1,326 @@
+const fs = require("fs");
+const path = require("path").join(__dirname, "..", "src", "i18n", "locales", "en.json");
+const data = JSON.parse(fs.readFileSync(path, "utf8"));
+
+// SEO meta for industries listing page
+data.seo.industries = {
+  title: "Industries We Serve | Web Development by Sector | DMC Kreatif",
+  description: "Premium web development for Construction, Energy, Accounting, Healthcare, Education, E-Commerce, Professional Services, and Tourism across Europe."
+};
+
+// SEO meta for each industry detail page
+data.seo.industryDetail = {
+  construction: { title: "Web Development for Construction Companies | DMC Kreatif", description: "Custom websites for construction, renovation & facade companies across Europe. Portfolio projects, SEO optimized, multilingual. Proven results with CAKIR Facades & Archi Construction." },
+  energy: { title: "Web Development for Energy & Insulation Companies | DMC Kreatif", description: "Professional websites for energy consultants, insulation firms & renewable energy companies. Built with React, SEO optimized. References: Consulting Energy & ISO Home Energy." },
+  accounting: { title: "Web Development for Accountants & Financial Services | DMC Kreatif", description: "Modern websites for accounting firms, tax advisors & financial services. Client portal, GDPR compliant, multilingual. Reference: Adamsons Accountants UK." },
+  healthcare: { title: "Web Development for Healthcare & Medical Practices | DMC Kreatif", description: "GDPR-compliant websites for doctors, clinics, dentists & healthcare providers. Accessible, secure, appointment booking integration." },
+  education: { title: "Web Development for Education & Training Institutions | DMC Kreatif", description: "Websites for schools, universities, online courses & training centers. WCAG accessible, multilingual, LMS integration ready." },
+  ecommerce: { title: "E-Commerce Development for Online Retailers | DMC Kreatif", description: "Full e-commerce solutions with multi-currency, payment integration & inventory management. Shopify, custom builds, cross-border commerce. Reference: FilenesSports." },
+  "professional-services": { title: "Web Development for Professional Service Firms | DMC Kreatif", description: "Websites for law firms, consulting agencies, architects & professional services. Lead generation, SEO optimized, premium design." },
+  tourism: { title: "Web Development for Tourism & Hospitality | DMC Kreatif", description: "Multilingual websites for hotels, travel agencies, restaurants & tourism businesses. Booking integration, multilingual, SEO for local & international search." }
+};
+
+// Industries listing page keys
+data.industries = {
+  heroTitle: "INDUSTRIES WE SERVE",
+  heroDesc: "We build high-performance websites tailored to the unique needs of each industry. From construction companies to healthcare providers, our solutions drive real business results across Europe.",
+  projectCount: "project(s)",
+  filter: {
+    all: "ALL",
+    building: "BUILDING",
+    services: "SERVICES",
+    commerce: "COMMERCE",
+    "public": "PUBLIC"
+  }
+};
+
+// Industry detail content
+data.industryDetail = {
+  getQuote: "GET A QUOTE",
+  overviewTitle: "OVERVIEW",
+  overviewSubtitle: "SYS.DETAIL",
+  challengesTitle: "INDUSTRY CHALLENGES",
+  challengesSubtitle: "SYS.PAIN",
+  solutionsTitle: "OUR SOLUTIONS",
+  solutionsSubtitle: "SYS.FIX",
+  featuresTitle: "WHAT WE DELIVER",
+  featuresSubtitle: "SYS.FEATURES",
+  projectsTitle: "OUR WORK",
+  projectsSubtitle: "SYS.PORTFOLIO",
+  visitProject: "VIEW PROJECT",
+  faqTitle: "FREQUENTLY ASKED",
+  faqSubtitle: "SYS.FAQ",
+  relatedTitle: "RELATED INDUSTRIES",
+  relatedSubtitle: "SYS.MORE",
+  relatedServicesTitle: "RECOMMENDED SERVICES",
+  relatedServicesSubtitle: "SYS.SERVICES",
+
+  construction: {
+    title: "Construction & Renovation",
+    desc: "Custom websites for construction, renovation, and facade companies. Showcase your projects, generate local leads, and build trust with potential clients across Europe.",
+    longDesc: "The construction industry is built on trust, reputation, and visual proof of quality work. Your website needs to reflect the same level of craftsmanship you bring to every project.\n\nWe have extensive experience building websites for construction companies across Europe. From CAKIR Facades in France to Archi Construction & Veranda in Belgium, we understand the unique challenges this industry faces — from showcasing large project portfolios to generating qualified local leads.\n\nOur construction websites feature high-quality project galleries, before/after comparisons, service area maps, and lead capture forms optimized for conversion. Every site is mobile-first (because your prospects search on-site), fast-loading, and SEO-optimized for local search terms like 'facade renovation Paris' or 'veranda builder Brussels'.\n\nWe also implement structured data markup so your projects can appear as rich results in Google, and we set up Google Business Profile integration to maximize your local visibility.",
+    ch1: "Most construction company websites look outdated and fail to showcase quality work effectively.",
+    ch2: "Local SEO is crucial but often neglected — potential clients search 'builder near me' and find competitors first.",
+    ch3: "Project portfolios are hard to organize and slow to load with large image galleries.",
+    ch4: "Lead generation forms get low conversion rates because they ask for too much information upfront.",
+    sol1: "Premium, modern design that reflects the quality of your craftsmanship — first impressions matter in construction.",
+    sol2: "Local SEO strategy with Google Business Profile integration, city-specific landing pages, and structured data markup.",
+    sol3: "Optimized image galleries with lazy loading, WebP format, and smart categorization by project type.",
+    sol4: "Multi-step lead forms with smart defaults that qualify leads without overwhelming visitors.",
+    f1: "Project portfolio with filterable gallery and before/after comparisons",
+    f2: "Local SEO optimization for multiple service areas and cities",
+    f3: "Mobile-first responsive design for on-site browsing",
+    f4: "Lead capture forms with smart qualification steps",
+    f5: "Google Business Profile integration and review management",
+    f6: "Multilingual support for cross-border construction companies",
+    projCakir: "CAKIR Facades",
+    projCakirDesc: "Complete website redesign for a facade renovation company in France. Bilingual (FR/EN), project portfolio with before/after gallery, SEO-optimized for local search terms.",
+    projArchi: "Archi Construction & Veranda",
+    projArchiDesc: "Modern website for a Belgian construction and veranda company. Multilingual (FR/NL), interactive project showcase, lead generation forms, and Google Maps integration."
+  },
+
+  energy: {
+    title: "Energy & Insulation",
+    desc: "Professional websites for energy consultants, insulation companies, and renewable energy firms. Educate clients, showcase certifications, and generate qualified leads.",
+    longDesc: "The energy sector is rapidly evolving with stricter regulations, growing demand for insulation, and the transition to renewable sources. Your website needs to communicate expertise, build trust through certifications, and educate potential clients about complex services.\n\nWe have built websites for Consulting Energy and ISO Home Energy in France — both operating in competitive markets where trust and local presence are everything.\n\nOur energy sector websites focus on clear service explanations, certification badges, energy savings calculators, and strong call-to-action elements. We understand that energy customers need education before they buy, so we structure content to guide them from problem awareness to solution.\n\nSEO is critical in this space — terms like 'energy audit', 'home insulation', and 'RGE certified installer' drive high-intent traffic. We optimize every page for these terms while maintaining content quality.",
+    ch1: "Energy services are complex — customers need education before they can make a decision.",
+    ch2: "Trust signals like certifications (RGE, QUALIBAT) must be prominently displayed.",
+    ch3: "Government incentive programs change frequently, requiring regular content updates.",
+    ch4: "Competition is fierce in local markets — ranking for 'insulation [city]' is extremely competitive.",
+    sol1: "Educational content architecture that guides visitors from problem awareness to solution — with clear service explanations.",
+    sol2: "Prominent certification badges, trust signals, and partner logos integrated throughout the site.",
+    sol3: "CMS-ready content sections that make it easy to update incentive information and regulatory changes.",
+    sol4: "Aggressive local SEO strategy with city-specific pages, Google Ads integration, and conversion-optimized landing pages.",
+    f1: "Educational content sections explaining complex energy services",
+    f2: "Certification and trust badge integration (RGE, QUALIBAT, etc.)",
+    f3: "Energy savings calculator or estimation tools",
+    f4: "Local SEO optimization for multiple service areas",
+    f5: "Google Ads landing pages optimized for conversion",
+    f6: "Before/after project gallery with energy performance data",
+    projConsulting: "Consulting Energy",
+    projConsultingDesc: "Website for an energy consulting firm in France. Clean design, service explanations, certification display, and lead generation optimized for energy audit inquiries.",
+    projIso: "ISO Home Energy",
+    projIsoDesc: "Complete web presence for a home insulation company in France. TypeScript + Tailwind, service area coverage, project portfolio, and SEO-optimized for insulation search terms."
+  },
+
+  accounting: {
+    title: "Accounting & Finance",
+    desc: "Modern, trust-building websites for accountants, tax advisors, and financial service firms. Communicate expertise, attract new clients, and streamline client onboarding.",
+    longDesc: "Accounting firms need websites that communicate professionalism, expertise, and trustworthiness. Your online presence is often the first point of contact with potential clients, and in a field where trust is paramount, a polished website makes all the difference.\n\nWe built the website for Adamsons Accountants in the UK — a firm that needed to modernize its digital presence while maintaining its traditional values. The result was a clean, professional site that generates consistent leads.\n\nOur accounting websites feature clear service descriptions, team profiles that build personal connections, client testimonial sections, and streamlined contact forms. We also implement GDPR-compliant features essential for firms handling sensitive financial data.\n\nSEO for accountants focuses on local search terms ('accountant London', 'tax advisor near me') and service-specific pages that capture long-tail traffic. We combine this with content marketing strategies around tax deadlines, regulatory changes, and financial tips.",
+    ch1: "Many accounting firm websites look generic and fail to differentiate from competitors.",
+    ch2: "Client trust is critical — the website must communicate expertise and reliability from the first visit.",
+    ch3: "GDPR compliance is essential for firms handling sensitive financial data.",
+    ch4: "Seasonal traffic spikes around tax deadlines require scalable infrastructure and timely content.",
+    sol1: "Premium, distinctive design that reflects the professionalism and expertise of your firm — no templates.",
+    sol2: "Strategic placement of credentials, testimonials, team profiles, and industry associations to build trust.",
+    sol3: "GDPR-compliant forms, secure document portals, and privacy-first architecture throughout.",
+    sol4: "Content calendar aligned with tax deadlines and financial events to capture seasonal search traffic.",
+    f1: "Professional team profiles with credentials and specialization areas",
+    f2: "Service pages optimized for local accounting search terms",
+    f3: "GDPR-compliant contact forms and secure document upload",
+    f4: "Client testimonial and review integration",
+    f5: "Blog/resources section for tax tips and financial guides",
+    f6: "Appointment booking integration for initial consultations",
+    projAdamsons: "Adamsons Accountants",
+    projAdamsonsDesc: "Complete website for a UK accounting firm. Clean, professional design with service pages, team profiles, testimonials, and lead generation forms. Optimized for UK accounting search terms."
+  },
+
+  healthcare: {
+    title: "Healthcare & Medical",
+    desc: "GDPR-compliant, accessible websites for medical practices, clinics, dentists, and healthcare providers. Patient-focused design with appointment booking integration.",
+    longDesc: "Healthcare websites carry a unique responsibility — they must be accessible, trustworthy, and compliant with strict data protection regulations. Patients looking for medical services need clear information, easy navigation, and confidence in the provider before they book.\n\nWe build healthcare websites that prioritize accessibility (WCAG 2.1 AA compliance), security (GDPR-compliant data handling), and user experience (intuitive navigation for all age groups).\n\nKey features include online appointment booking, service/treatment descriptions written for patients (not medical jargon), doctor profiles with qualifications, location maps with directions, and multilingual support for diverse patient populations.\n\nSEO for healthcare focuses on local search ('dentist Amsterdam', 'GP near me') and condition-specific content that attracts patients actively seeking treatment. We ensure all health-related content follows E-E-A-T principles (Experience, Expertise, Authoritativeness, Trustworthiness) for better search visibility.",
+    ch1: "Healthcare websites must meet strict accessibility standards (WCAG 2.1 AA) for all patients.",
+    ch2: "Patient data protection under GDPR requires robust security measures and compliant forms.",
+    ch3: "Medical content must be accurate, trustworthy, and written for patients — not medical professionals.",
+    ch4: "Multi-location practices need coordinated online presence across different cities and services.",
+    sol1: "WCAG 2.1 AA compliant design with proper contrast ratios, keyboard navigation, and screen reader support.",
+    sol2: "GDPR-first architecture with encrypted forms, secure data handling, and clear privacy notices.",
+    sol3: "Patient-friendly content written with E-E-A-T principles, reviewed for accuracy and clarity.",
+    sol4: "Multi-location architecture with per-city pages, Google Business Profile integration, and unified branding.",
+    f1: "WCAG 2.1 AA accessibility compliance for all patients",
+    f2: "Online appointment booking with calendar integration",
+    f3: "Doctor/practitioner profiles with qualifications and specialties",
+    f4: "GDPR-compliant patient contact forms and data handling",
+    f5: "Treatment/service descriptions in patient-friendly language",
+    f6: "Multi-location support with city-specific landing pages"
+  },
+
+  education: {
+    title: "Education & Training",
+    desc: "Accessible, multilingual websites for schools, universities, online courses, and training institutions. Designed for students, parents, and educators alike.",
+    longDesc: "Educational institutions need websites that serve multiple audiences — students, parents, faculty, and administrators — each with different needs and expectations. The website must be accessible, informative, and easy to navigate for users of all ages and abilities.\n\nWe build education websites with a focus on information architecture that serves these diverse audiences without overwhelming any of them. Clear program descriptions, faculty profiles, event calendars, and application portals are structured intuitively.\n\nAccessibility is non-negotiable in education — we ensure WCAG 2.1 AA compliance so that students with disabilities can access all content. Multilingual support is essential for international institutions serving students from across Europe.\n\nSEO for education focuses on program-specific keywords ('MBA Brussels', 'online coding bootcamp'), scholarship information, and event pages that attract prospective students.",
+    ch1: "Multiple audiences (students, parents, faculty) with different needs must be served by one website.",
+    ch2: "Accessibility is legally required and morally essential for educational institutions.",
+    ch3: "Course catalogs and program information are complex to organize and frequently updated.",
+    ch4: "International institutions need multilingual support across multiple European languages.",
+    sol1: "Audience-segmented navigation and content architecture that guides each user type to relevant information.",
+    sol2: "WCAG 2.1 AA compliant design ensuring all students, regardless of ability, can access content.",
+    sol3: "Structured course catalog with smart filtering, search, and CMS integration for easy updates.",
+    sol4: "Full i18n architecture with EN, FR, NL, DE support — seamless language switching and locale-specific content.",
+    f1: "Audience-segmented navigation (students, parents, faculty)",
+    f2: "WCAG 2.1 AA accessibility compliance",
+    f3: "Course catalog with filtering and search functionality",
+    f4: "Event calendar with registration integration",
+    f5: "Multilingual support (EN, FR, NL, DE)",
+    f6: "Application portal with document upload"
+  },
+
+  ecommerce: {
+    title: "E-Commerce & Retail",
+    desc: "Full e-commerce solutions with multi-currency payments, inventory management, and cross-border logistics. Shopify, custom builds, and marketplace integrations.",
+    longDesc: "E-commerce is more than just a product catalog with a checkout — it is a complete digital sales engine that must handle multi-currency payments, cross-border shipping, inventory management, and customer retention.\n\nWe built the FilenesSports e-commerce platform, handling sports equipment sales with complex product variations, inventory tracking, and multi-country shipping. This experience informs every e-commerce project we take on.\n\nOur e-commerce solutions range from Shopify customizations for quick launches to fully custom React + Supabase builds for businesses that need complete control. We integrate with major payment providers (Stripe, Mollie, iDEAL), implement multi-currency pricing for European markets, and set up analytics to track conversion funnels.\n\nSEO for e-commerce requires product schema markup, category page optimization, and content strategies that drive organic traffic. We implement all of these from day one.",
+    ch1: "Cross-border e-commerce in Europe requires multi-currency, multi-language, and multi-tax support.",
+    ch2: "Product pages must convert — poor UX directly impacts revenue and cart abandonment rates.",
+    ch3: "Inventory management across multiple channels (website, marketplace, physical) needs real-time sync.",
+    ch4: "Payment integration must handle EU regulations, PSD2/SCA, and multiple payment methods per country.",
+    sol1: "Multi-currency architecture with automatic pricing, VAT calculation, and locale-specific payment methods.",
+    sol2: "Conversion-optimized product pages with A/B tested layouts, trust signals, and urgency elements.",
+    sol3: "Real-time inventory sync across channels with webhook-based integrations and stock alerts.",
+    sol4: "PSD2/SCA-compliant payment integration with Stripe, Mollie, iDEAL, Bancontact, and more.",
+    f1: "Multi-currency pricing with automatic VAT calculation",
+    f2: "Conversion-optimized product pages and checkout flow",
+    f3: "Inventory management with real-time stock sync",
+    f4: "Payment integration (Stripe, Mollie, iDEAL, Bancontact)",
+    f5: "Product schema markup for Google Shopping rich results",
+    f6: "Customer account portal with order tracking",
+    projFilenes: "FilenesSports",
+    projFilenesDesc: "E-commerce platform for sports equipment. React + Supabase, product catalog with variations, multi-country shipping, inventory management, and secure checkout."
+  },
+
+  professionalServices: {
+    title: "Professional Services",
+    desc: "Lead-generating websites for law firms, consulting agencies, architects, and professional service providers. Build authority, attract high-value clients, and streamline intake.",
+    longDesc: "Professional service firms — law offices, consulting agencies, architects, engineering firms — compete primarily on reputation and expertise. Your website must communicate authority, showcase thought leadership, and convert visitors into qualified leads.\n\nWe build professional service websites that focus on credibility: detailed team profiles with credentials, case study sections, publication/media mentions, and industry-specific content that demonstrates deep expertise.\n\nThe lead generation strategy for professional services is different from consumer businesses. We implement multi-step intake forms that qualify prospects, consultation booking systems, and content marketing funnels that nurture relationships over time.\n\nSEO for professional services targets high-intent keywords ('corporate lawyer Brussels', 'management consultant London') while building topical authority through blog content and resource pages.",
+    ch1: "Professional services compete on reputation — the website must communicate authority and expertise immediately.",
+    ch2: "Lead qualification is critical — you need high-value prospects, not high volume of unqualified inquiries.",
+    ch3: "Content marketing requires consistent, high-quality thought leadership that demonstrates expertise.",
+    ch4: "Multi-partner firms need individual profiles that build personal connections while maintaining brand consistency.",
+    sol1: "Authority-first design with case studies, publications, credentials, and media mentions prominently featured.",
+    sol2: "Multi-step intake forms with qualification criteria that filter prospects and prioritize high-value leads.",
+    sol3: "Content strategy with blog, resource library, and newsletter integration for consistent thought leadership.",
+    sol4: "Individual team profiles with areas of expertise, publications, and direct contact — within cohesive brand framework.",
+    f1: "Authority-building design with credentials and case studies",
+    f2: "Multi-step lead qualification forms for high-value prospects",
+    f3: "Team profiles with individual expertise areas and publications",
+    f4: "Blog and resource library for thought leadership content",
+    f5: "Consultation booking system with calendar integration",
+    f6: "SEO optimized for high-intent professional service keywords"
+  },
+
+  tourism: {
+    title: "Tourism & Hospitality",
+    desc: "Multilingual, visually stunning websites for hotels, travel agencies, restaurants, and tourism businesses. Booking integration, seasonal content, and international SEO.",
+    longDesc: "Tourism and hospitality businesses live and die by their online presence. Travelers research extensively before booking, and your website is often the deciding factor between you and a competitor.\n\nWe build tourism websites that captivate with visual storytelling, convert with smart booking integration, and attract with multilingual SEO. Every element is designed to inspire confidence and drive reservations.\n\nMultilingual support is essential for tourism — a hotel in Brussels needs to reach travelers searching in French, Dutch, English, and German. We implement full i18n architecture with locale-specific content, not just translations, but culturally adapted messaging.\n\nSeasonal content management is built in from the start — tourism businesses need to update offers, highlight seasonal activities, and promote events without developer intervention. Our CMS integration makes this seamless.",
+    ch1: "Tourism businesses need visually stunning websites that inspire travel — stock photos will not cut it.",
+    ch2: "Booking integration must be seamless — any friction in the reservation process means lost revenue.",
+    ch3: "Multilingual content must be culturally adapted, not just translated, for each target market.",
+    ch4: "Seasonal demand fluctuations require frequent content updates and promotional campaigns.",
+    sol1: "Visual-first design with immersive galleries, video integration, and storytelling layouts that inspire travel.",
+    sol2: "Seamless booking widget integration (Booking.com, own system, calendar sync) with minimal friction.",
+    sol3: "Full i18n with cultural adaptation — locale-specific messaging, currency, and seasonal relevance.",
+    sol4: "CMS-powered content sections for easy seasonal updates, event promotion, and offer management.",
+    f1: "Visual-first design with immersive photo and video galleries",
+    f2: "Booking system integration (own or third-party)",
+    f3: "Full multilingual support (EN, FR, NL, DE)",
+    f4: "Seasonal content management and promotional sections",
+    f5: "Local SEO and Google Maps integration for tourism businesses",
+    f6: "Event calendar and activity showcase"
+  },
+
+  faq: {
+    construction1Q: "How long does it take to build a construction company website?",
+    construction1A: "A typical construction website takes 2-3 weeks from kickoff to launch. This includes design, development, content migration, and SEO setup. We work with you to photograph or gather existing project imagery for the portfolio.",
+    construction2Q: "Can you help with local SEO for construction companies?",
+    construction2A: "Absolutely. Local SEO is one of our core strengths for construction clients. We set up Google Business Profile, create city-specific landing pages, implement local schema markup, and build a content strategy targeting local search terms.",
+    construction3Q: "Do you offer ongoing maintenance for construction websites?",
+    construction3A: "Yes, our Care Plan (97 EUR/month) includes hosting, SSL, monthly updates, security monitoring, and priority support. We also help add new projects to your portfolio as you complete them.",
+    construction4Q: "Can you build multilingual construction websites?",
+    construction4A: "Yes. Several of our construction clients operate across borders — CAKIR Facades serves both French and English-speaking clients, and Archi Construction targets French and Dutch speakers in Belgium. We build full multilingual sites with proper hreflang tags.",
+    construction5Q: "What if I already have a website that needs redesigning?",
+    construction5A: "We handle complete redesigns. We will audit your existing site for SEO equity, migrate valuable content, set up proper redirects, and launch a modern site that outperforms the old one. No traffic or rankings are lost in the process.",
+
+    energy1Q: "What makes a good energy company website?",
+    energy1A: "A good energy company website clearly explains complex services, prominently displays certifications (RGE, QUALIBAT), includes project case studies with energy performance data, and has strong lead capture forms. Mobile optimization is critical since many users search on-site.",
+    energy2Q: "Can you create landing pages for energy government incentive programs?",
+    energy2A: "Yes. We create dedicated landing pages for incentive programs like MaPrimeRenov, CEE certificates, and local subsidies. These pages are SEO-optimized to capture high-intent search traffic from homeowners researching energy improvements.",
+    energy3Q: "How do you handle SEO for energy companies?",
+    energy3A: "We focus on local SEO (city + service combinations), technical SEO (fast loading, structured data), and content marketing (energy guides, regulatory updates). Our energy clients consistently rank on the first page for their target keywords.",
+    energy4Q: "Do you integrate energy calculators or estimation tools?",
+    energy4A: "Yes. We can build custom energy savings calculators, insulation cost estimators, or ROI calculators that help visitors understand the value of your services. These tools also serve as lead magnets.",
+    energy5Q: "Can you set up Google Ads for energy companies?",
+    energy5A: "Yes, we offer Google Ads setup and management. For energy companies, we focus on high-intent keywords like 'insulation company [city]' and 'energy audit near me', with conversion-optimized landing pages.",
+
+    accounting1Q: "What features do accounting firm websites need?",
+    accounting1A: "Key features include clear service descriptions, team profiles with credentials, GDPR-compliant contact forms, client testimonials, a blog for tax tips and financial guides, and appointment booking. For UK firms, Companies House registration details should be visible.",
+    accounting2Q: "How do you handle GDPR compliance for financial service websites?",
+    accounting2A: "We implement GDPR-compliant forms, secure data handling, cookie consent management, privacy policy pages, and data processing agreements. All data is encrypted in transit and at rest. We follow the ICO guidelines for UK firms.",
+    accounting3Q: "Can you help accountants rank on Google?",
+    accounting3A: "Yes. We optimize for local search terms ('accountant [city]', 'tax advisor near me'), create service-specific pages that target long-tail keywords, and implement a content strategy around tax deadlines and financial guides that drives organic traffic.",
+    accounting4Q: "Do you offer client portal integration?",
+    accounting4A: "We can integrate secure client portals for document sharing, message exchange, and invoice viewing. This is built with end-to-end encryption and proper authentication to protect sensitive financial information.",
+    accounting5Q: "How quickly can an accounting website be built?",
+    accounting5A: "A standard accounting firm website takes 2-3 weeks. This includes professional design, service pages, team profiles, testimonials, contact forms, and SEO setup. We work within your schedule to minimize disruption.",
+
+    healthcare1Q: "What accessibility standards do healthcare websites need to meet?",
+    healthcare1A: "Healthcare websites should meet WCAG 2.1 AA at minimum. This includes proper color contrast ratios, keyboard navigation, screen reader compatibility, alt text for images, and clear heading hierarchy. We test with multiple assistive technologies.",
+    healthcare2Q: "How do you handle patient data on healthcare websites?",
+    healthcare2A: "All patient contact forms use encrypted connections (TLS 1.3), data is stored securely, and we implement proper consent mechanisms. We follow GDPR and local healthcare data regulations. No patient data is stored in analytics tools.",
+    healthcare3Q: "Can you integrate appointment booking for medical practices?",
+    healthcare3A: "Yes. We integrate with popular medical scheduling systems or build custom booking solutions with calendar sync, SMS reminders, and automatic confirmation emails. Online booking reduces phone calls and improves patient experience.",
+    healthcare4Q: "Do you build websites for multi-location medical practices?",
+    healthcare4A: "Yes. Multi-location practices get individual location pages with specific doctor profiles, services, hours, and contact details. Each location is optimized for local SEO while maintaining consistent branding across all locations.",
+    healthcare5Q: "How do you ensure medical content is trustworthy?",
+    healthcare5A: "We follow Google's E-E-A-T guidelines for health content. All medical content is reviewed for accuracy, includes author attribution to qualified practitioners, cites reputable sources, and is written in patient-friendly language.",
+
+    education1Q: "Can you build websites for international schools?",
+    education1A: "Yes. International schools need multilingual websites (we support EN, FR, NL, DE and more), admission portals, program descriptions, event calendars, and parent communication sections. We build all of these with proper i18n architecture.",
+    education2Q: "How do you handle course catalog pages?",
+    education2A: "We create structured course catalogs with filtering by program, level, language, and duration. Each course gets its own optimized page with descriptions, prerequisites, schedule, and enrollment links. CMS integration makes updates easy.",
+    education3Q: "Do you integrate LMS (Learning Management System) platforms?",
+    education3A: "We can integrate with popular LMS platforms like Moodle, Canvas, or custom solutions. The integration typically includes single sign-on, course preview pages on the main site, and enrollment workflows that connect to the LMS.",
+    education4Q: "What about student and parent portals?",
+    education4A: "We build secure portals for students (grades, schedule, resources) and parents (progress reports, communication, payments). Authentication, role-based access, and data privacy are built in from the start.",
+    education5Q: "How do you optimize education websites for SEO?",
+    education5A: "We target program-specific keywords ('MBA Brussels', 'online coding course'), create scholarship and financial aid pages, optimize event pages for local search, and implement Course schema markup for rich search results.",
+
+    ecommerce1Q: "Which e-commerce platform do you recommend?",
+    ecommerce1A: "It depends on your needs. Shopify is great for quick launches and standard retail. For businesses needing full control, we build custom solutions with React + Supabase. For B2B or complex catalogs, WooCommerce or custom headless builds work best.",
+    ecommerce2Q: "How do you handle multi-currency pricing for European e-commerce?",
+    ecommerce2A: "We implement automatic currency detection based on user location, with manual override. Prices are stored in the base currency and converted in real-time. VAT calculations follow EU rules with proper invoicing per country.",
+    ecommerce3Q: "What payment methods do you integrate?",
+    ecommerce3A: "We integrate Stripe (cards, Apple Pay, Google Pay), Mollie (iDEAL, Bancontact, SOFORT), and other region-specific methods. All integrations are PSD2/SCA compliant for European transactions.",
+    ecommerce4Q: "Can you migrate my existing e-commerce store?",
+    ecommerce4A: "Yes. We handle full migrations including products, customer data, order history, and SEO equity. We set up proper 301 redirects to preserve rankings and coordinate the cutover to minimize downtime.",
+    ecommerce5Q: "How do you optimize e-commerce sites for SEO?",
+    ecommerce5A: "We implement product schema markup for Google Shopping, optimize category pages for broad keywords, create buying guides and comparison content, and set up conversion tracking. Product pages get unique descriptions, not manufacturer copy.",
+
+    professionalServices1Q: "How do you help professional service firms generate leads?",
+    professionalServices1A: "We combine SEO-optimized service pages, thought leadership content, multi-step intake forms, and conversion tracking. The website is designed as a lead generation engine — every page has a clear path to contact.",
+    professionalServices2Q: "Can you build websites for law firms with multiple practice areas?",
+    professionalServices2A: "Yes. Multi-practice law firms get dedicated pages for each practice area, individual attorney profiles, case study sections, and a blog organized by legal topic. The architecture supports both broad firm branding and individual expertise.",
+    professionalServices3Q: "How do you handle professional services SEO?",
+    professionalServices3A: "We target high-intent keywords ('corporate lawyer Brussels', 'management consultant London'), create practice area content hubs, build attorney/consultant profiles that rank individually, and implement schema markup for professional services.",
+    professionalServices4Q: "Do you integrate CRM or intake management systems?",
+    professionalServices4A: "We integrate with popular CRMs (HubSpot, Salesforce) and can build custom intake workflows. Form submissions are routed to the right team member based on practice area, urgency, and qualification criteria.",
+    professionalServices5Q: "How quickly can a professional services website be launched?",
+    professionalServices5A: "A standard professional services website takes 2-4 weeks depending on the number of practice areas, team members, and content volume. We provide a content template to streamline the information gathering process.",
+
+    tourism1Q: "Can you integrate booking systems for hotels and restaurants?",
+    tourism1A: "Yes. We integrate with Booking.com, Airbnb, OpenTable, or build custom booking solutions. The integration provides real-time availability, secure payment processing, and automatic confirmation emails.",
+    tourism2Q: "How important is multilingual support for tourism websites?",
+    tourism2A: "Critical. Tourism websites in Europe must reach travelers in multiple languages. We implement full i18n with cultural adaptation — not just translated text, but locale-specific imagery, pricing (EUR/GBP), and seasonal messaging.",
+    tourism3Q: "How do you optimize tourism websites for seasonal traffic?",
+    tourism3A: "We create seasonal landing pages, event calendars, and promotional sections that are easy to update via CMS. Content strategy targets seasonal keywords ('Christmas markets Brussels', 'summer in Provence') months in advance.",
+    tourism4Q: "Can you help with Google Maps and local discovery?",
+    tourism4A: "Yes. We integrate Google Maps, set up and optimize Google Business Profile, implement LocalBusiness schema markup, and create location-specific content. For restaurants and hotels, we also integrate review aggregation from TripAdvisor and Google.",
+    tourism5Q: "What about website performance for international visitors?",
+    tourism5A: "We deploy on global CDNs (Vercel Edge Network) for fast loading worldwide. Images are optimized with WebP/AVIF, lazy-loaded, and served at the right resolution. We target under 2 second load times regardless of visitor location."
+  }
+};
+
+// Add nav.industries key
+if (!data.nav) data.nav = {};
+data.nav.industries = "INDUSTRIES";
+
+fs.writeFileSync(path, JSON.stringify(data, null, 2) + "\n", "utf8");
+console.log("en.json updated with industry content.");

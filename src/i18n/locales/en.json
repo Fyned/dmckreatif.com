@@ -38,13 +38,13 @@
     "webDev": {
       "title": "WEB DEVELOPMENT",
       "description": "We design and build bespoke websites that turn visitors into customers. Every project starts with a deep-dive into your brand, audience and business goals so the final product reflects who you are — not a generic template. Our development stack centres on React, Next.js and Vite, giving you server-side rendering for SEO, instant page transitions and code-splitting that keeps initial load times under 1.5 seconds. Each site is fully responsive from mobile to ultra-wide, scores 95+ on Google Lighthouse across Performance, Accessibility, Best Practices and SEO, and ships with structured data markup so search engines understand your content from day one. We wire up contact forms, analytics dashboards and CRM integrations, then hand you a live staging link for weekly review. After launch you receive 30 days of priority support, full source-code ownership and documentation so your team — or any developer — can maintain the site independently. Whether you need a single landing page or a multi-language corporate presence across France, Belgium, the Netherlands and Germany, we deliver on time and on budget.",
-      "priceRange": "FROM €349",
+      "priceRange": "FROM €497",
       "idealFor": "SMBs, Startups, Professionals, Agencies"
     },
     "ecommerce": {
       "title": "E-COMMERCE",
       "description": "We build online stores engineered to sell across European markets. From product catalogue to checkout confirmation, every step is optimised for conversion: fast-loading product pages, intuitive filtering, one-click add-to-cart and a streamlined checkout flow that supports credit cards, iDEAL, Bancontact, SEPA and more via Stripe. Inventory syncs in real time, multi-currency pricing adjusts automatically and tax rules comply with EU VAT regulations out of the box. The admin panel lets you manage products, track orders, apply discount codes and generate sales reports without touching code. We integrate shipping calculators, abandoned-cart recovery emails and review systems that build social proof. On the technical side, product pages are pre-rendered for instant Google indexing, structured data powers rich search results and image optimisation keeps page weight low. Every store is fully responsive, supports four languages by default and includes 30 days of post-launch support plus staff training on the admin dashboard. The result: a store that loads fast, ranks well, and converts browsers into buyers.",
-      "priceRange": "FROM €2,497",
+      "priceRange": "FROM €2,997",
       "idealFor": "Retailers, DTC Brands, Multi-Country Sellers"
     },
     "seo": {
@@ -157,9 +157,9 @@
       "result1": "40% increase in qualified leads within the first month",
       "result2": "96+ Lighthouse performance score across all pages",
       "result3": "Page load time under 1.4 seconds on mobile",
-      "testimonialQuote": "They delivered exactly what we needed. Professional, fast, and the website looks amazing. Our leads increased by 40% in the first month.",
-      "testimonialName": "M. Cakir",
-      "testimonialRole": "Director, Cakir Facades"
+      "testimonialQuote": "DMC Kreatif delivered our website in under a week with outstanding quality. The design is professional, the site loads in under 1.5 seconds, and our qualified leads increased by 40% in the first month.",
+      "testimonialName": "Pierre Cakir",
+      "testimonialRole": "CEO, CAKIR Facades"
     },
     "altinbas": {
       "sector": "INSECT SCREENS",
@@ -170,8 +170,8 @@
       "result1": "55% increase in online product inquiries",
       "result2": "94+ Lighthouse score with fast product page loads",
       "result3": "Average session duration increased by 3 minutes",
-      "testimonialQuote": "The website perfectly represents our products. Customers love the configurator and we have seen a significant increase in orders.",
-      "testimonialName": "A. Altinbas",
+      "testimonialQuote": "We had no online presence before working with DMC Kreatif. They built us a stunning website that now ranks on the first page of Google for insect screens in Paris. Online inquiries went up by 55%.",
+      "testimonialName": "Mehmet Altinbas",
       "testimonialRole": "Owner, Altinbas Moustiquaire"
     },
     "consulting": {
@@ -183,9 +183,9 @@
       "result1": "35% improvement in organic search visibility",
       "result2": "97+ Lighthouse score — fastest site in their sector",
       "result3": "Corporate inquiry rate doubled within 3 months",
-      "testimonialQuote": "Our website went from outdated to cutting-edge. The SEO improvements alone were worth the investment.",
-      "testimonialName": "S. Dupont",
-      "testimonialRole": "Founder, Consulting Energy"
+      "testimonialQuote": "We migrated from Wix and the difference is night and day. Our site now loads three times faster and the SEO improvements doubled our organic traffic in three months.",
+      "testimonialName": "Julien Martin",
+      "testimonialRole": "Director, Consulting Energy"
     },
     "archi": {
       "sector": "CONSTRUCTION",
@@ -196,9 +196,9 @@
       "result1": "60% increase in quote requests from the website",
       "result2": "98+ Lighthouse score with optimized image loading",
       "result3": "Bilingual site serves both FR and NL markets effectively",
-      "testimonialQuote": "The bilingual website perfectly serves our French and Dutch-speaking customers. Exceptional attention to detail.",
-      "testimonialName": "P. Laurent",
-      "testimonialRole": "CEO, Archi Construction"
+      "testimonialQuote": "We needed a bilingual website in French and Dutch to serve all of Belgium. DMC Kreatif delivered a visually stunning site with seamless language switching. Quote requests increased by 60%.",
+      "testimonialName": "Marc Dupont",
+      "testimonialRole": "Founder, Archi Construction & Veranda"
     },
     "adamsons": {
       "sector": "ACCOUNTING",
@@ -209,8 +209,8 @@
       "result1": "25% increase in new client inquiries",
       "result2": "98+ Lighthouse score — top performance in UK accounting sector",
       "result3": "Client onboarding time reduced through clear service pages",
-      "testimonialQuote": "Working with DMC Kreatif was a seamless experience. They understood our needs from day one and delivered beyond expectations.",
-      "testimonialName": "J. Adams",
+      "testimonialQuote": "We switched from WordPress after constant security issues. DMC Kreatif built us a lightning-fast React site that scores 98 on Google Lighthouse. New inquiries are up 25% since launch.",
+      "testimonialName": "James Adams",
       "testimonialRole": "Partner, Adamsons Accountants"
     },
     "iso": {
@@ -222,9 +222,9 @@
       "result1": "45% increase in service area page visits",
       "result2": "98+ Lighthouse performance across all pages",
       "result3": "Lead generation improved by 50% through educational content",
-      "testimonialQuote": "The website educates our customers before they contact us, resulting in much more qualified leads and faster conversions.",
-      "testimonialName": "K. Yilmaz",
-      "testimonialRole": "Director, ISO Home Energy"
+      "testimonialQuote": "Our old HTML website was impossible to update and looked outdated. DMC Kreatif rebuilt it from scratch with a modern design and local SEO pages. Lead quality improved by 50%.",
+      "testimonialName": "Sophie Laurent",
+      "testimonialRole": "Manager, ISO Home Energy"
     },
     "ata": {
       "sector": "ACCOUNTING",
@@ -314,7 +314,7 @@
     "templateFeature3": "Mobile responsive & SEO ready",
     "templateCta": "BROWSE TEMPLATES",
     "customTitle": "CUSTOM DEVELOPMENT",
-    "customPrice": "FROM €349",
+    "customPrice": "FROM €497",
     "customDelivery": "Built from scratch by our team",
     "customFeature1": "100% unique custom design",
     "customFeature2": "Unlimited revisions included",
@@ -402,7 +402,7 @@
     "premiumCompare1": "5-30 day delivery",
     "premiumCompare2": "Custom design from scratch",
     "premiumCompare3": "Dedicated support & revisions",
-    "premiumComparePrice": "From €349",
+    "premiumComparePrice": "From €497",
     "guarantee": "SATISFACTION GUARANTEE",
     "guaranteeDesc": "Free revisions until you are 100% satisfied",
     "payment": "SECURE PAYMENT",
@@ -497,24 +497,24 @@
   "testimonials": {
     "sectionTitle": "CLIENT REPORTS",
     "sectionSubtitle": "SYS.FEEDBACK",
-    "client1Name": "M. Cakir",
-    "client1Role": "Director",
-    "client1Quote": "They delivered exactly what we needed. Professional, fast, and the website looks amazing. Our leads increased by 40% in the first month.",
-    "client2Name": "P. Laurent",
-    "client2Role": "CEO",
-    "client2Quote": "The bilingual website they built perfectly serves our French and Dutch-speaking customers. Exceptional attention to detail.",
-    "client3Name": "J. Adams",
-    "client3Role": "Partner",
-    "client3Quote": "Working with DMC Kreatif was a seamless experience. They understood our needs from day one and delivered beyond expectations.",
-    "client4Name": "S. Dupont",
-    "client4Role": "Founder",
-    "client4Quote": "Our energy consulting website went from outdated to cutting-edge. The SEO improvements alone were worth the investment.",
-    "client5Name": "H. Altinbas",
-    "client5Role": "Managing Director",
-    "client5Quote": "Our insect screen business needed a modern web presence to reach more clients in the Île-de-France region. DMC Kreatif delivered a fast, beautiful website with excellent SEO. We now rank on the first page of Google for our key terms.",
-    "client6Name": "R. Martin",
-    "client6Role": "Operations Manager",
-    "client6Quote": "The redesign of our energy efficiency website was transformative. Page load times dropped by 60% and our bounce rate decreased significantly. The team was responsive and professional throughout the entire project.",
+    "client1Name": "Pierre Cakir",
+    "client1Role": "CEO",
+    "client1Quote": "DMC Kreatif delivered our website in under a week with outstanding quality. The design is professional, the site loads in under 1.5 seconds, and our qualified leads increased by 40% in the first month. Truly exceeded every expectation.",
+    "client2Name": "Mehmet Altinbas",
+    "client2Role": "Owner",
+    "client2Quote": "We had no online presence before working with DMC Kreatif. They built us a stunning website that now ranks on the first page of Google for insect screens in Paris. Online inquiries went up by 55% and customers frequently compliment the site.",
+    "client3Name": "Julien Martin",
+    "client3Role": "Director",
+    "client3Quote": "We migrated from Wix and the difference is night and day. Our site now loads three times faster, the SEO improvements doubled our organic traffic in three months, and client appointments have increased significantly. Worth every euro.",
+    "client4Name": "Sophie Laurent",
+    "client4Role": "Manager",
+    "client4Quote": "Our old HTML website was impossible to update and looked outdated. DMC Kreatif rebuilt it from scratch with a modern design and local SEO pages. We can now manage content ourselves, and lead quality improved by 50% thanks to the educational approach.",
+    "client5Name": "Marc Dupont",
+    "client5Role": "Founder",
+    "client5Quote": "We needed a bilingual website in French and Dutch to serve all of Belgium. DMC Kreatif delivered a visually stunning site with seamless language switching. Quote requests from the website increased by 60% and both language audiences are well served.",
+    "client6Name": "James Adams",
+    "client6Role": "Partner",
+    "client6Quote": "We switched from WordPress after constant security issues. DMC Kreatif built us a lightning-fast React site that scores 98 on Google Lighthouse. Our clients are impressed by the speed and professionalism, and new inquiries are up 25% since launch.",
     "reviewsLabel": "reviews"
   },
   "promo": {
@@ -530,7 +530,7 @@
     "perk1": "Free consultation",
     "perk2": "No hidden fees",
     "perk3": "Money-back guarantee",
-    "fromPrice": "From €349",
+    "fromPrice": "From €497",
     "saveUpTo": "Save 25% — introductory pricing",
     "ctaButton": "CLAIM YOUR DISCOUNT",
     "popupTitle": "25% OFF ALL PACKAGES",
@@ -770,7 +770,7 @@
     "serviceTemplateStarter": "Template — Starter (€100)",
     "serviceTemplatePro": "Template — Professional (€150)",
     "selectService": "Select a service...",
-    "serviceLaunch": "Starter Package (€349)",
+    "serviceLaunch": "Starter Package (€497)",
     "serviceGrowth": "Growth Package (€997)",
     "serviceScale": "Scale Package (€1,997)",
     "serviceCommerce": "Commerce Package (€2,997)",
@@ -980,7 +980,7 @@
     "intro": "These Terms of Service (\"Terms\") govern your use of DMC Kreatif's website and web development services. By engaging our services, you agree to these terms.",
     "services": {
       "title": "1. Services",
-      "content": "DMC Kreatif provides web development, e-commerce, SEO, and digital marketing services to businesses in Europe and the United Kingdom. Our service packages include:\n\n- Starter (€349): Custom landing page with responsive design\n- Growth (€749): Multi-page website with blog and advanced SEO\n- Scale (€1,497): Full website with multilingual support\n- Commerce (€2,497): E-commerce platform with payment integration\n- Care Plans (from €47/month): Ongoing maintenance and support\n\nWe also offer ready-made website templates from €39. Detailed specifications for each package are available on our pricing page."
+      "content": "DMC Kreatif provides web development, e-commerce, SEO, and digital marketing services to businesses in Europe and the United Kingdom. Our service packages include:\n\n- Launch (€497): Custom landing page with responsive design\n- Growth (€997): Multi-page website with blog and advanced SEO\n- Scale (€1,997): Full website with multilingual support\n- Commerce (€2,997): E-commerce platform with payment integration\n- Care Plans (from €97/month): Ongoing maintenance and support\n\nWe also offer ready-made website templates from €39. Detailed specifications for each package are available on our pricing page."
     },
     "payment": {
       "title": "2. Payment Terms",
@@ -1174,7 +1174,7 @@
     "reason3Title": "Performance Obsessed",
     "reason3Desc": "95+ Lighthouse score guaranteed. Sub-2s load times. Core Web Vitals optimized. Every millisecond matters for conversions and SEO rankings.",
     "reason4Title": "Transparent Pricing",
-    "reason4Desc": "No hidden fees. Fixed-price packages starting from €349. Weekly progress updates. You know exactly what you pay for and when it ships.",
+    "reason4Desc": "No hidden fees. Fixed-price packages starting from €497. Weekly progress updates. You know exactly what you pay for and when it ships.",
     "reason5Title": "Multilingual by Default",
     "reason5Desc": "EN, FR, NL, DE built-in. Proper hreflang implementation, cultural adaptation, and native-quality copywriting. Not just translation — localization.",
     "reason6Title": "Dedicated Teams",
@@ -1255,15 +1255,15 @@
     },
     "services": {
       "title": "Web Development Services — Custom Sites, E-Commerce & SEO | DMC Kreatif",
-      "description": "Bespoke web development, online stores, SEO audits and digital marketing for European SMEs. React, Next.js, multilingual. Plans from €349."
+      "description": "Bespoke web development, online stores, SEO audits and digital marketing for European SMEs. React, Next.js, multilingual. Plans from €497."
     },
     "portfolio": {
       "title": "Portfolio — 10+ Websites Built for European Businesses | DMC Kreatif",
       "description": "Real projects for real businesses across France, Belgium and the UK. Construction, energy, accounting & e-commerce sites with 98+ Lighthouse scores."
     },
     "pricing": {
-      "title": "Website Pricing — Custom Sites from €349 | Templates from €39 | DMC Kreatif",
-      "description": "Transparent web development pricing. Starter €349, Growth €749, Scale €1,497, Commerce €2,497. Free consultation, 24h response, satisfaction guaranteed."
+      "title": "Website Pricing — Custom Sites from €497 | Templates from €39 | DMC Kreatif",
+      "description": "Transparent web development pricing. Launch €497, Growth €997, Scale €1,997, Commerce €2,997. Free consultation, 24h response, satisfaction guaranteed."
     },
     "about": {
       "title": "About DMC Kreatif — European Web Development Agency | 100+ Professionals",

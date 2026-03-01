@@ -261,7 +261,7 @@ export function buildAllServicesSchema(locale: string) {
       name: "E-Commerce Development",
       description:
         "Full e-commerce solutions with payment integration, inventory management, multi-currency support, and secure checkout.",
-      price: "2497",
+      price: "2997",
       url: `${BASE_URL}/${locale}/services#e-commerce`,
     },
     {
@@ -709,6 +709,34 @@ export function buildIndustrySchema(params: {
       "@type": "Audience",
       audienceType: params.name,
     },
+  };
+}
+
+export function buildCaseStudySchema(params: {
+  name: string;
+  description: string;
+  clientUrl: string;
+  datePublished: string;
+  locale: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: `Case Study: ${params.name}`,
+    description: params.description,
+    url: `${BASE_URL}/${params.locale}/case-studies`,
+    datePublished: params.datePublished,
+    creator: {
+      "@type": "Organization",
+      name: "DMC Kreatif",
+      url: BASE_URL,
+    },
+    about: {
+      "@type": "WebSite",
+      name: params.name,
+      url: params.clientUrl,
+    },
+    inLanguage: params.locale,
   };
 }
 

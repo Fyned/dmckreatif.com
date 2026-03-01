@@ -166,13 +166,13 @@ export default function PricingPage() {
           {
             name: "Scale Package",
             description: "Full multilingual website with video and ads setup",
-            price: 1497,
+            price: 1997,
             deliveryDays: "14-21",
           },
           {
             name: "Commerce Package",
             description: "Complete e-commerce with payment, inventory, multilingual",
-            price: 2497,
+            price: 2997,
             deliveryDays: "21-30",
           },
         ])}
