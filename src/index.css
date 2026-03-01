@@ -20,7 +20,9 @@
   --color-neo-red: #FF2A2A;
 
   /* ── Fonts ── */
-  --font-space: "Space Grotesk", sans-serif;
+  --font-display: "Syne", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-space: "Syne", "DM Sans", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
   /* ── Font Sizes — defined in @layer utilities (clamp breaks @theme parser) ── */
@@ -65,13 +67,15 @@
 /* ── Base Layer ── */
 @layer base {
   body {
-    @apply bg-neo-bg text-neo-black font-space;
+    @apply bg-neo-bg text-neo-black;
+    font-family: var(--font-body);
     background-image: radial-gradient(#121212 1px, transparent 1px);
     background-size: 40px 40px;
     font-synthesis: none;
     text-rendering: optimizeSpeed;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.01em;
   }
 
   ::selection {
@@ -83,7 +87,9 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-space font-bold uppercase;
+    font-family: var(--font-display);
+    @apply font-bold uppercase;
+    letter-spacing: -0.03em;
   }
 
   a {
@@ -150,6 +156,10 @@
 
   .text-h3 {
     font-size: clamp(1.25rem, 1.5vw + 0.5rem, 1.75rem);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
   }
 
   .text-stroke {

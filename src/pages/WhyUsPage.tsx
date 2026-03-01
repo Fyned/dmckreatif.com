@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import SeoHead from "@/components/seo/SeoHead";
+import AboutCrossLinks from "@/components/ui/AboutCrossLinks";
 import { motion } from "framer-motion";
 import { ArrowRight, Globe, Code2, Gauge, CreditCard, Languages, Users, Headphones, ShieldCheck, CheckCircle2, XCircle, MinusCircle } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -195,6 +196,7 @@ export default function WhyUsPage() {
           </motion.div>
         </div>
       </section>
+      <AboutCrossLinks currentPath="why-us" />
     </>
   );
 }

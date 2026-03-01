@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import AboutCrossLinks from "@/components/ui/AboutCrossLinks";
 import { ArrowRight, Search, PenTool, Palette, Code2, TestTube2, Rocket, RefreshCw, Eye, GitBranch, BadgeDollarSign } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import NeoButton from "@/components/ui/NeoButton";
@@ -163,6 +164,7 @@ export default function ProcessPage() {
           </motion.div>
         </div>
       </section>
+      <AboutCrossLinks currentPath="process" />
     </>
   );
 }

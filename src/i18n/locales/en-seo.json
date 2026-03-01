@@ -1,0 +1,372 @@
+{
+  "seo": {
+    "serviceDetail": {
+      "react-development": {
+        "title": "React Development — Expert React Agency | DMC Kreatif",
+        "description": "Custom React development for European businesses. Component-driven architecture, blazing-fast SPAs, and 95+ Lighthouse scores. Free consultation."
+      },
+      "nextjs-development": {
+        "title": "Next.js Development — SSR & SSG Experts | DMC Kreatif",
+        "description": "Next.js development with server-side rendering, static generation, and App Router. SEO-optimized web apps for European businesses."
+      },
+      "typescript-development": {
+        "title": "TypeScript Development — Type-Safe Web Apps | DMC Kreatif",
+        "description": "TypeScript development for enterprise-grade web applications. Strict typing, fewer bugs, and maintainable codebases for European businesses."
+      },
+      "frontend-development": {
+        "title": "Frontend Development — Modern UI Engineering | DMC Kreatif",
+        "description": "Expert frontend development with React, TypeScript, and Tailwind CSS. Pixel-perfect, accessible interfaces for European businesses."
+      },
+      "custom-web-apps": {
+        "title": "Custom Web Applications — Tailored Solutions | DMC Kreatif",
+        "description": "Bespoke web applications built to your exact requirements. Dashboards, portals, and SaaS platforms for European businesses."
+      },
+      "progressive-web-apps": {
+        "title": "Progressive Web Apps — Offline-First PWAs | DMC Kreatif",
+        "description": "Progressive web apps that work offline, load instantly, and feel native. Cross-platform solutions for European businesses."
+      },
+      "api-development": {
+        "title": "API Development — RESTful & GraphQL APIs | DMC Kreatif",
+        "description": "Custom API development with Node.js, Supabase, and Edge Functions. Secure, scalable backends for European businesses."
+      },
+      "website-redesign": {
+        "title": "Website Redesign — Modernise Your Online Presence | DMC Kreatif",
+        "description": "Website redesign services that boost conversions, speed, and SEO. Transform your outdated site into a modern powerhouse."
+      },
+      "legacy-modernization": {
+        "title": "Legacy Modernisation — Migrate to Modern Tech | DMC Kreatif",
+        "description": "Modernise legacy websites to React, Next.js, and modern architecture. Zero-downtime migration for European businesses."
+      },
+      "maintenance-support": {
+        "title": "Website Maintenance & Support — Ongoing Care | DMC Kreatif",
+        "description": "Proactive website maintenance, security updates, performance monitoring, and priority support for European businesses."
+      },
+      "headless-cms": {
+        "title": "Headless CMS Development — Content-First Websites | DMC Kreatif",
+        "description": "Headless CMS solutions with Payload CMS, Strapi, and Sanity. Flexible content management for European businesses."
+      },
+      "performance-optimization": {
+        "title": "Web Performance Optimisation — Speed Up Your Site | DMC Kreatif",
+        "description": "Core Web Vitals optimisation, lazy loading, code splitting, and caching strategies. Get 95+ Lighthouse scores guaranteed."
+      },
+      "accessibility": {
+        "title": "Web Accessibility — WCAG 2.1 AA Compliance | DMC Kreatif",
+        "description": "Accessibility audits and WCAG 2.1 AA compliance. Make your website usable for everyone and meet EU accessibility requirements."
+      },
+      "gdpr-compliance": {
+        "title": "GDPR Compliance for Websites — EU Data Protection | DMC Kreatif",
+        "description": "GDPR-compliant websites with cookie consent, privacy policies, and data protection. Meet EU regulations with confidence."
+      },
+      "integrations": {
+        "title": "Third-Party Integrations — Connect Your Tools | DMC Kreatif",
+        "description": "CRM, payment, analytics, and marketing tool integrations for your website. Seamless connections for European businesses."
+      },
+      "shopify-development": {
+        "title": "Shopify Development — Custom Shopify Stores | DMC Kreatif",
+        "description": "Custom Shopify development with bespoke themes, apps, and multi-currency support for European e-commerce businesses."
+      },
+      "woocommerce-development": {
+        "title": "WooCommerce Development — WordPress E-Commerce | DMC Kreatif",
+        "description": "WooCommerce development with custom themes, plugins, and EU payment integration for European online stores."
+      },
+      "custom-ecommerce": {
+        "title": "Custom E-Commerce Solutions — Built From Scratch | DMC Kreatif",
+        "description": "Bespoke e-commerce platforms built with React and Supabase. Full control over your online store's architecture."
+      },
+      "b2b-ecommerce": {
+        "title": "B2B E-Commerce — Wholesale & Trade Platforms | DMC Kreatif",
+        "description": "B2B e-commerce platforms with tiered pricing, bulk orders, and account management for European wholesale businesses."
+      },
+      "multi-currency-stores": {
+        "title": "Multi-Currency E-Commerce — Sell Across Europe | DMC Kreatif",
+        "description": "Multi-currency online stores with EUR, GBP, CHF support, automatic tax calculation, and localised checkout flows."
+      },
+      "payment-integration": {
+        "title": "Payment Integration — Stripe, iDEAL, Bancontact | DMC Kreatif",
+        "description": "European payment gateway integration including Stripe, iDEAL, Bancontact, Klarna, and SEPA Direct Debit."
+      },
+      "ecommerce-seo": {
+        "title": "E-Commerce SEO — Rank Your Products Higher | DMC Kreatif",
+        "description": "E-commerce SEO with product schema markup, category optimisation, and conversion-focused content for European markets."
+      },
+      "ecommerce-analytics": {
+        "title": "E-Commerce Analytics — Track What Matters | DMC Kreatif",
+        "description": "E-commerce analytics with GA4 enhanced e-commerce, conversion funnels, and revenue attribution for online stores."
+      },
+      "technical-seo": {
+        "title": "Technical SEO — Fix What Holds Your Site Back | DMC Kreatif",
+        "description": "Technical SEO audits covering Core Web Vitals, crawlability, indexation, and structured data for European websites."
+      },
+      "local-seo": {
+        "title": "Local SEO — Dominate Your City's Search Results | DMC Kreatif",
+        "description": "Local SEO services with Google Business Profile optimisation, local citations, and geo-targeted content for European cities."
+      },
+      "international-seo": {
+        "title": "International SEO — Rank in Multiple Countries | DMC Kreatif",
+        "description": "International SEO with hreflang implementation, market-specific keyword research, and multilingual content strategies."
+      },
+      "content-seo": {
+        "title": "Content SEO — Create Content That Ranks | DMC Kreatif",
+        "description": "Content SEO strategy with keyword research, topic clustering, and editorial calendars for European businesses."
+      },
+      "link-building": {
+        "title": "Link Building — Earn Quality Backlinks | DMC Kreatif",
+        "description": "White-hat link building with digital PR, guest posting, and European industry directories. Build domain authority."
+      },
+      "seo-consulting": {
+        "title": "SEO Consulting — Expert Strategy & Guidance | DMC Kreatif",
+        "description": "SEO consulting for European businesses. Audits, strategy sessions, and team training from experienced specialists."
+      },
+      "google-ads": {
+        "title": "Google Ads Management — PPC for European Markets | DMC Kreatif",
+        "description": "Google Ads management with search, display, and remarketing campaigns optimised for European markets and languages."
+      },
+      "analytics-setup": {
+        "title": "Analytics Setup — GA4 & Conversion Tracking | DMC Kreatif",
+        "description": "Google Analytics 4 setup with Consent Mode v2, custom events, conversion tracking, and GDPR-compliant dashboards."
+      },
+      "marketing-automation": {
+        "title": "Marketing Automation — Nurture Leads at Scale | DMC Kreatif",
+        "description": "Marketing automation with email sequences, lead scoring, and CRM integration for European B2B businesses."
+      },
+      "geo-optimization": {
+        "title": "Geo Optimisation — Target Specific Markets | DMC Kreatif",
+        "description": "Geo-targeted web optimisation for specific European markets. Language, currency, and content localisation strategies."
+      },
+      "ux-ui-design": {
+        "title": "UX/UI Design — User-Centred Digital Design | DMC Kreatif",
+        "description": "UX/UI design with user research, wireframing, and pixel-perfect interfaces. Conversion-focused design for Europe."
+      },
+      "digital-strategy": {
+        "title": "Digital Strategy — Roadmap for Online Growth | DMC Kreatif",
+        "description": "Digital strategy consulting with market analysis, competitor research, and actionable roadmaps for European businesses."
+      },
+      "brand-identity": {
+        "title": "Brand Identity Design — Logos, Colours & Guidelines | DMC Kreatif",
+        "description": "Brand identity design with logo, colour palette, typography, and brand guidelines for European businesses."
+      },
+      "design-systems": {
+        "title": "Design Systems — Scalable UI Component Libraries | DMC Kreatif",
+        "description": "Design system development with reusable components, tokens, and documentation. Scale your product design consistently."
+      },
+      "prototyping": {
+        "title": "Rapid Prototyping — From Concept to Clickable Demo | DMC Kreatif",
+        "description": "Interactive prototypes with Figma and code. Validate ideas fast before committing to full development."
+      },
+      "mobile-first-design": {
+        "title": "Mobile-First Design — Optimised for Every Screen | DMC Kreatif",
+        "description": "Mobile-first responsive design ensuring perfect experiences on phones, tablets, and desktops. 60%+ of traffic is mobile."
+      },
+      "content-marketing": {
+        "title": "Content Marketing — Authority-Building Content | DMC Kreatif",
+        "description": "Content marketing with blog posts, case studies, and thought leadership. Build authority and attract organic traffic."
+      }
+    },
+    "techDetail": {
+      "react": {
+        "title": "React Development Agency — Expert React Developers | DMC Kreatif",
+        "description": "We build premium React applications for European businesses. Component-driven architecture, 95+ Lighthouse scores, TypeScript-first."
+      },
+      "nextjs": {
+        "title": "Next.js Development — Full-Stack React Framework Agency | DMC Kreatif",
+        "description": "Expert Next.js development with SSR, SSG, and ISR. SEO-optimised React applications for European businesses."
+      },
+      "typescript": {
+        "title": "TypeScript Development — Type-Safe Web Applications | DMC Kreatif",
+        "description": "TypeScript-first web development for European businesses. Catch bugs at compile time, ship reliable code."
+      },
+      "vite": {
+        "title": "Vite Development — Lightning-Fast Build Tool | DMC Kreatif",
+        "description": "Blazing-fast web development with Vite. Instant HMR, optimised builds, and modern DX for European businesses."
+      },
+      "tailwindcss": {
+        "title": "Tailwind CSS Development — Utility-First Styling | DMC Kreatif",
+        "description": "Custom Tailwind CSS designs for European businesses. Pixel-perfect, responsive, and maintainable styling."
+      },
+      "framer-motion": {
+        "title": "Framer Motion Animations — React Animation Agency | DMC Kreatif",
+        "description": "Premium web animations with Framer Motion. Scroll-triggered effects, page transitions, and micro-interactions."
+      },
+      "supabase": {
+        "title": "Supabase Development — Open Source Backend Platform | DMC Kreatif",
+        "description": "Supabase-powered applications with real-time data, auth, storage, and edge functions for European businesses."
+      },
+      "vercel": {
+        "title": "Vercel Deployment — Edge-First Hosting Platform | DMC Kreatif",
+        "description": "Vercel deployment with global CDN, serverless functions, and automatic CI/CD. Sub-second load times guaranteed."
+      },
+      "shopify": {
+        "title": "Shopify Development — Custom E-Commerce Stores | DMC Kreatif",
+        "description": "Custom Shopify development with Hydrogen, Liquid themes, and multi-currency for European e-commerce."
+      },
+      "headless-wordpress": {
+        "title": "Headless WordPress — Decoupled CMS Development | DMC Kreatif",
+        "description": "Headless WordPress with React frontends. Best of both worlds: familiar CMS, modern performance."
+      },
+      "postgresql": {
+        "title": "PostgreSQL Development — Enterprise Database Solutions | DMC Kreatif",
+        "description": "PostgreSQL-powered applications with advanced queries, JSONB, full-text search, and row-level security."
+      },
+      "nodejs": {
+        "title": "Node.js Development — Server-Side JavaScript Agency | DMC Kreatif",
+        "description": "Node.js backend development with Express, Fastify, and serverless. Scalable APIs for European businesses."
+      }
+    },
+    "industryDetail": {
+      "construction": {
+        "title": "Web Development for Construction Companies | DMC Kreatif",
+        "description": "Custom websites for construction, renovation & facade companies across Europe. Portfolio projects, SEO optimized, multilingual. Proven results with CAKIR Facades & Archi Construction."
+      },
+      "energy": {
+        "title": "Web Development for Energy & Insulation Companies | DMC Kreatif",
+        "description": "Professional websites for energy consultants, insulation firms & renewable energy companies. Built with React, SEO optimized. References: Consulting Energy & ISO Home Energy."
+      },
+      "accounting": {
+        "title": "Web Development for Accountants & Financial Services | DMC Kreatif",
+        "description": "Modern websites for accounting firms, tax advisors & financial services. Client portal, GDPR compliant, multilingual. Reference: Adamsons Accountants UK."
+      },
+      "healthcare": {
+        "title": "Web Development for Healthcare & Medical Practices | DMC Kreatif",
+        "description": "GDPR-compliant websites for doctors, clinics, dentists & healthcare providers. Accessible, secure, appointment booking integration."
+      },
+      "education": {
+        "title": "Web Development for Education & Training Institutions | DMC Kreatif",
+        "description": "Websites for schools, universities, online courses & training centers. WCAG accessible, multilingual, LMS integration ready."
+      },
+      "ecommerce": {
+        "title": "E-Commerce Development for Online Retailers | DMC Kreatif",
+        "description": "Full e-commerce solutions with multi-currency, payment integration & inventory management. Shopify, custom builds, cross-border commerce. Reference: FilenesSports."
+      },
+      "professional-services": {
+        "title": "Web Development for Professional Service Firms | DMC Kreatif",
+        "description": "Websites for law firms, consulting agencies, architects & professional services. Lead generation, SEO optimized, premium design."
+      },
+      "tourism": {
+        "title": "Web Development for Tourism & Hospitality | DMC Kreatif",
+        "description": "Multilingual websites for hotels, travel agencies, restaurants & tourism businesses. Booking integration, multilingual, SEO for local & international search."
+      }
+    },
+    "blogPost": {
+      "how-much-does-a-website-cost-in-europe-2026": {
+        "title": "How Much Does a Website Cost in Europe? (2026 Prices Revealed)",
+        "description": "Exact website pricing for European businesses in 2026. Templates from €39, custom sites €497–€2,997, enterprise €10K+. Compare freelancer vs agency rates with real quotes."
+      },
+      "how-to-choose-a-web-agency-in-europe": {
+        "title": "How to Choose a Web Agency in Europe — DMC Kreatif Blog",
+        "description": "A practical guide to evaluating and selecting the right web development agency for your European business. Key criteria, red flags and decision framework."
+      },
+      "technical-seo-checklist-europe": {
+        "title": "Technical SEO Checklist for European Websites — DMC Kreatif Blog",
+        "description": "Complete technical SEO checklist for European websites. Core Web Vitals, crawlability, indexation, structured data, hreflang and multilingual optimization."
+      },
+      "core-web-vitals-lighthouse-guide": {
+        "title": "Core Web Vitals: How to Get a 95+ Lighthouse Score — DMC Kreatif Blog",
+        "description": "Step-by-step guide to achieving a 95+ Lighthouse score. Optimize LCP, FID, CLS and INP for better performance, SEO rankings and user experience."
+      },
+      "website-redesign-guide": {
+        "title": "Website Redesign Guide: When and How to Redesign — DMC Kreatif Blog",
+        "description": "Know when your website needs a redesign and how to execute it without losing SEO rankings. Planning, migration strategy and post-launch optimization."
+      },
+      "multilingual-website-guide": {
+        "title": "How to Build a Multilingual Website: Complete Guide — DMC Kreatif Blog",
+        "description": "Everything you need to know about building a multilingual website for European markets. i18n architecture, hreflang, content strategy and translation workflow."
+      },
+      "gdpr-compliance-checklist": {
+        "title": "GDPR Compliance Checklist for Websites in 2026 — DMC Kreatif Blog",
+        "description": "Comprehensive GDPR compliance checklist for European websites. Cookie consent, privacy policies, data processing agreements and technical implementation."
+      },
+      "ecommerce-conversion-optimization": {
+        "title": "How to Optimize Your E-Commerce Conversion Rate — DMC Kreatif Blog",
+        "description": "Proven strategies to increase your e-commerce conversion rate. Checkout optimization, product page design, trust signals and A/B testing for European online stores."
+      },
+      "seo-audit-guide-2026": {
+        "title": "SEO Audit Step-by-Step Guide for 2026 — DMC Kreatif Blog",
+        "description": "How to conduct a complete SEO audit in 2026. Technical analysis, on-page optimization, content gaps, backlink profile and competitive benchmarking."
+      },
+      "website-migration-seo": {
+        "title": "How to Migrate Your Website Without Losing SEO — DMC Kreatif Blog",
+        "description": "Complete guide to website migration that preserves your SEO rankings. Redirect mapping, crawl budget, content migration and post-migration monitoring."
+      },
+      "shopify-vs-woocommerce-vs-custom": {
+        "title": "Shopify vs WooCommerce vs Custom E-Commerce — DMC Kreatif Blog",
+        "description": "Detailed comparison of Shopify, WooCommerce and custom e-commerce solutions for European businesses. Features, pricing, scalability and best use cases."
+      },
+      "nextjs-vs-gatsby-vs-remix": {
+        "title": "Next.js vs Gatsby vs Remix: Full Comparison for 2026 — DMC Kreatif Blog",
+        "description": "In-depth comparison of Next.js, Gatsby and Remix for modern web development. Performance, developer experience, SEO capabilities and production readiness."
+      },
+      "react-vs-wordpress-2026": {
+        "title": "React vs WordPress: When to Choose What in 2026 — DMC Kreatif Blog",
+        "description": "Honest comparison of React-based development vs WordPress for business websites in 2026. Cost, performance, security, maintenance and long-term ROI."
+      },
+      "supabase-vs-firebase": {
+        "title": "Supabase vs Firebase: Backend Comparison for 2026 — DMC Kreatif Blog",
+        "description": "Complete comparison of Supabase and Firebase as backend platforms. PostgreSQL vs NoSQL, authentication, real-time features, pricing and vendor lock-in."
+      },
+      "agency-vs-freelancer-development": {
+        "title": "Agency vs Freelancer vs In-House: Development Comparison — DMC Kreatif Blog",
+        "description": "Pros and cons of hiring a web agency, freelancer or building an in-house team. Cost analysis, quality, reliability and project management comparison."
+      },
+      "headless-vs-traditional-cms": {
+        "title": "Headless CMS vs Traditional CMS: Complete Comparison — DMC Kreatif Blog",
+        "description": "Headless CMS vs traditional CMS explained. Architecture differences, content delivery, developer experience, use cases and which approach suits your business."
+      },
+      "tailwind-vs-bootstrap": {
+        "title": "Tailwind CSS vs Bootstrap vs CSS Modules: Styling Comparison — DMC Kreatif Blog",
+        "description": "Comprehensive comparison of Tailwind CSS, Bootstrap and CSS Modules. Performance, customization, learning curve and which to choose for your next project."
+      },
+      "vercel-vs-netlify-vs-aws": {
+        "title": "Vercel vs Netlify vs AWS: Deployment Platform Comparison — DMC Kreatif Blog",
+        "description": "Compare Vercel, Netlify and AWS for web deployment. Pricing, performance, CI/CD, serverless functions and which platform is best for European businesses."
+      },
+      "shopify-vs-prestashop-europe": {
+        "title": "Shopify vs PrestaShop for European E-Commerce — DMC Kreatif Blog",
+        "description": "Shopify vs PrestaShop comparison for European online stores. Multi-currency, VAT compliance, payment gateways, localization and total cost of ownership."
+      },
+      "wordpress-vs-custom-cost": {
+        "title": "WordPress vs Custom Development: Total Cost Analysis — DMC Kreatif Blog",
+        "description": "True cost comparison of WordPress vs custom web development over 3 years. Licensing, hosting, security, performance optimization and hidden maintenance costs."
+      },
+      "seo-guide-small-businesses-france": {
+        "title": "SEO Guide for Small Businesses in France — DMC Kreatif Blog",
+        "description": "Actionable SEO guide for French small businesses. Local SEO, Google My Business, French keyword research, link building and content strategy for the French market."
+      },
+      "why-multilingual-website-european-business": {
+        "title": "Why Every European Business Needs a Multilingual Website — DMC Kreatif Blog",
+        "description": "Data-backed reasons why European businesses need multilingual websites. Market reach, SEO benefits, customer trust and competitive advantage across borders."
+      },
+      "what-is-headless-cms": {
+        "title": "What is Headless CMS? A Complete Guide for 2026 — DMC Kreatif Blog",
+        "description": "Everything you need to know about headless CMS in 2026. How it works, benefits over traditional CMS, top platforms and implementation best practices."
+      },
+      "ecommerce-platform-comparison-europe": {
+        "title": "E-Commerce Platform Comparison for European SMBs — DMC Kreatif Blog",
+        "description": "Compare the top e-commerce platforms for European small businesses. Shopify, WooCommerce, PrestaShop, Magento and custom solutions evaluated on 10 key criteria."
+      },
+      "state-of-web-development-2026": {
+        "title": "The State of Web Development in 2026 — DMC Kreatif Blog",
+        "description": "Key trends shaping web development in 2026. AI integration, edge computing, server components, WebAssembly and the evolving role of frontend developers."
+      },
+      "multilingual-seo-europe": {
+        "title": "Why European Businesses Need Multilingual SEO — DMC Kreatif Blog",
+        "description": "How multilingual SEO drives organic growth across European markets. Hreflang implementation, localized keyword strategy and cross-border content optimization."
+      },
+      "web-design-construction": {
+        "title": "Web Design for Construction Companies: Best Practices — DMC Kreatif Blog",
+        "description": "How to design an effective website for construction and building companies. Portfolio showcase, lead generation, project galleries and industry-specific UX patterns."
+      },
+      "ai-web-development-2026": {
+        "title": "AI in Web Development: What It Means for Your Business — DMC Kreatif Blog",
+        "description": "How AI is transforming web development in 2026. Code generation, design automation, personalization engines and what business owners need to know."
+      },
+      "core-web-vitals-explained": {
+        "title": "Core Web Vitals Explained for Business Owners — DMC Kreatif Blog",
+        "description": "A non-technical guide to Core Web Vitals. What LCP, INP and CLS mean for your business, why Google cares about them and how to improve your scores."
+      },
+      "roi-professional-web-design": {
+        "title": "The True ROI of Investing in Professional Web Design — DMC Kreatif Blog",
+        "description": "Quantify the return on investment of professional web design. Revenue impact, brand perception, conversion rates and long-term business value analysis."
+      }
+    }
+  }
+}

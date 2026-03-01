@@ -16,6 +16,8 @@ interface SeoHeadProps {
   modifiedTime?: string;
   /** Override which locales get hreflang tags. Defaults to all 4. Pass ["en"] for EN-only content. */
   locales?: string[];
+  /** Force canonical to a specific locale (e.g. "en" for EN-only blog posts). Defaults to current URL locale. */
+  canonicalLocale?: string;
 }
 
 export default function SeoHead({
@@ -29,10 +31,11 @@ export default function SeoHead({
   publishedTime,
   modifiedTime,
   locales,
+  canonicalLocale,
 }: SeoHeadProps) {
   const { locale } = useParams();
   const currentLocale = locale ?? "en";
-  const canonicalUrl = `${BASE_URL}/${currentLocale}${path}`;
+  const canonicalUrl = `${BASE_URL}/${canonicalLocale ?? currentLocale}${path}`;
   const fullOgImage = ogImage.startsWith("http")
     ? ogImage
     : `${BASE_URL}${ogImage}`;

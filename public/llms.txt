@@ -9,21 +9,21 @@
 - Performance: 95+ Google Lighthouse scores on every project
 - Languages supported: English, French, Dutch, German
 - Delivery record: 100% on-time
-- Starting price: EUR 349 (Launch package)
+- Starting price: EUR 497 (Launch package)
 - Care Plan: EUR 97/month (hosting, updates, support)
 
 ## Services
-- [Custom Web Development](https://dmckreatif.com/en/services): Responsive websites with React/Next.js, SEO-optimized, 95+ Lighthouse scores. From EUR 349.
-- [E-Commerce Development](https://dmckreatif.com/en/services): Full online stores with Stripe/LemonSqueezy payment integration, inventory management, multi-currency support. From EUR 2,497.
+- [Custom Web Development](https://dmckreatif.com/en/services): Responsive websites with React/Next.js, SEO-optimized, 95+ Lighthouse scores. From EUR 497.
+- [E-Commerce Development](https://dmckreatif.com/en/services): Full online stores with Stripe/LemonSqueezy payment integration, inventory management, multi-currency support. From EUR 2,997.
 - [SEO Optimization](https://dmckreatif.com/en/services): Technical audits, keyword research, Google Analytics/Search Console setup, Schema.org structured data. From EUR 297.
 - [Website Maintenance](https://dmckreatif.com/en/services): Hosting, SSL, monthly security updates, performance reports, priority support, 99.9% uptime guarantee. EUR 97/month.
 - [Website Templates](https://dmckreatif.com/en/templates): Ready-made professional templates for restaurants, construction, beauty salons. From EUR 39.
 
 ## Pricing Packages
-- Launch: EUR 349 — Single-page responsive site, SEO basics, contact form. Delivery 3-5 business days.
-- Growth: EUR 749 — 5-7 pages, blog, advanced SEO, analytics. Delivery 7-10 business days.
-- Scale: EUR 1,497 — Full site, multilingual support, video integration. Delivery 14-18 business days.
-- Commerce: EUR 2,497 — E-commerce platform, payment integration, inventory, multilingual. Delivery 21-28 business days.
+- Launch: EUR 497 — Single-page responsive site, SEO basics, contact form. Delivery 3-5 business days.
+- Growth: EUR 997 — 5-7 pages, blog, advanced SEO, analytics. Delivery 7-10 business days.
+- Scale: EUR 1,997 — Full site, multilingual support, video integration. Delivery 14-18 business days.
+- Commerce: EUR 2,997 — E-commerce platform, payment integration, inventory, multilingual. Delivery 21-28 business days.
 - Care Plan: EUR 97/month — Hosting, updates, support, monthly performance reports.
 
 ## Markets Served
@@ -54,7 +54,7 @@ DMC Kreatif uses React 18, Next.js 14, Vite, TypeScript, and Tailwind CSS for fr
 Yes. DMC Kreatif builds multilingual websites as standard for European clients. Supported languages include English, French, Dutch, and German. Each language version receives proper SEO optimization with hreflang tags, localized URLs, and native-quality translations. The agency uses i18next for translation management, ensuring consistent content across all language versions.
 
 ### How much does a website cost?
-DMC Kreatif offers four main packages: Launch (EUR 349) for single-page sites, Growth (EUR 749) for multi-page sites with blog and SEO, Scale (EUR 1,497) for full multilingual sites, and Commerce (EUR 2,497) for complete e-commerce platforms. An optional Care Plan at EUR 97/month provides ongoing hosting, updates, and support. All prices are competitive for the European market while maintaining premium quality standards.
+DMC Kreatif offers four main packages: Launch (EUR 497) for single-page sites, Growth (EUR 997) for multi-page sites with blog and SEO, Scale (EUR 1,997) for full multilingual sites, and Commerce (EUR 2,997) for complete e-commerce platforms. An optional Care Plan at EUR 97/month provides ongoing hosting, updates, and support. All prices are competitive for the European market while maintaining premium quality standards.
 
 ## Unique Differentiators
 - Every project achieves 95+ Lighthouse scores across Performance, Accessibility, Best Practices, and SEO

@@ -195,7 +195,7 @@ export default function BlogPostPage() {
 
   return (
     <>
-      <SeoHead title={seoTitle} description={seoDesc} path={`/blog/${article.slug}`} locales={["en"]} />
+      <SeoHead title={seoTitle} description={seoDesc} path={`/blog/${article.slug}`} locales={["en"]} canonicalLocale="en" />
       <JsonLd
         data={buildBlogPostingSchema({
           title: article.title,

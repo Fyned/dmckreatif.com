@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import SeoHead from "@/components/seo/SeoHead";
 import { motion } from "framer-motion";
+import AboutCrossLinks from "@/components/ui/AboutCrossLinks";
 import { Globe, Code2, TrendingUp, Briefcase, ArrowRight, Lightbulb, Eye, Star, Users, Mail } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import NeoButton from "@/components/ui/NeoButton";
@@ -151,6 +152,7 @@ export default function CareersPage() {
           </motion.div>
         </div>
       </section>
+      <AboutCrossLinks currentPath="careers" />
     </>
   );
 }

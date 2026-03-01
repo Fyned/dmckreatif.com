@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
+import AboutCrossLinks from "@/components/ui/AboutCrossLinks";
 import SeoHead from "@/components/seo/SeoHead";
 import { motion } from "framer-motion";
 import {
@@ -195,6 +196,7 @@ export default function TeamPage() {
           </motion.div>
         </div>
       </section>
+      <AboutCrossLinks currentPath="team" />
     </>
   );
 }

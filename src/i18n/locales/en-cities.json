@@ -1,0 +1,185 @@
+{
+  "cityPages": {
+    "whyChoose": "Why Choose DMC Kreatif",
+    "benefits": "BENEFITS",
+    "servicesTitle": "Our Services",
+    "servicesIn": "WHAT WE OFFER",
+    "viewWork": "View Our Work",
+    "ctaTitle": "Ready to Start Your Project?",
+    "ctaDesc": "Get a free consultation and quote within 24 hours.",
+    "ctaButton": "Contact Us Today",
+    "serviceWeb": {
+      "title": "Web Development",
+      "desc": "Custom websites built with React & Next.js. Blazing fast, SEO optimized, and fully responsive."
+    },
+    "serviceEcom": {
+      "title": "E-Commerce Solutions",
+      "desc": "Full-featured online stores with secure payments, inventory management, and multi-currency support."
+    },
+    "serviceSeo": {
+      "title": "SEO & Analytics",
+      "desc": "Technical SEO audits, keyword optimization, and Google Analytics setup to boost your visibility."
+    },
+    "serviceMarketing": {
+      "title": "Digital Marketing",
+      "desc": "Google Ads, social media management, and content strategy to grow your business online."
+    },
+    "paris": {
+      "name": "Paris",
+      "title": "Web Agency in Paris — Custom Websites for French Businesses",
+      "description": "DMC Kreatif is your web development partner in Paris. Custom websites, e-commerce, and SEO for businesses in the Paris region. Free consultation.",
+      "intro": "Looking for a professional web agency in Paris? DMC Kreatif builds high-performance websites for businesses across the Ile-de-France region. From startups in Le Marais to enterprises in La Defense, we deliver custom web solutions that drive results.",
+      "benefit1": "Local expertise in the Paris and Ile-de-France business landscape",
+      "benefit2": "Bilingual websites (French & English) to reach international clients",
+      "benefit3": "SEO optimized for Paris-specific search queries",
+      "benefit4": "95+ Google Lighthouse scores on every project",
+      "benefit5": "Face-to-face meetings available in Paris",
+      "benefit6": "Fast delivery: websites launched in 3-28 days",
+      "cta": "Get a Free Quote for Your Paris Project"
+    },
+    "london": {
+      "name": "London",
+      "title": "Web Agency in London — Premium Websites for UK Businesses",
+      "description": "DMC Kreatif builds high-performance websites for London businesses. Custom web development, e-commerce, and SEO. Free consultation within 24 hours.",
+      "intro": "Need a web development agency in London? DMC Kreatif creates stunning, fast websites for businesses across Greater London. From tech startups in Shoreditch to professional services in the City, we build websites that convert visitors into customers.",
+      "benefit1": "Deep understanding of the competitive UK digital market",
+      "benefit2": "Multi-language websites to serve London's diverse clientele",
+      "benefit3": "SEO tailored for London and UK-wide search visibility",
+      "benefit4": "Sub-2-second load times on every project",
+      "benefit5": "UK business experience with local references available",
+      "benefit6": "Transparent pricing in GBP and EUR"
+    },
+    "brussels": {
+      "name": "Brussels",
+      "title": "Web Agency in Brussels — Bilingual Websites for Belgian Businesses",
+      "description": "DMC Kreatif creates bilingual websites for businesses in Brussels. French & Dutch web development, e-commerce, and SEO. Free quote within 24 hours.",
+      "intro": "Searching for a web agency in Brussels? DMC Kreatif specializes in bilingual websites for the Belgian market. We serve businesses across Brussels, Wallonia, and Flanders with websites that work in both French and Dutch.",
+      "benefit1": "Bilingual expertise: French and Dutch websites as standard",
+      "benefit2": "Knowledge of the Belgian business culture and regulations",
+      "benefit3": "EU institution and B2B website experience",
+      "benefit4": "Optimized for Belgian search engines and local SEO",
+      "benefit5": "Portfolio includes Belgian construction and service companies",
+      "benefit6": "GDPR-compliant from day one"
+    },
+    "amsterdam": {
+      "name": "Amsterdam",
+      "title": "Web Agency in Amsterdam — Modern Websites for Dutch Businesses",
+      "description": "DMC Kreatif builds modern websites for businesses in Amsterdam and the Netherlands. Custom web development, webshops, and SEO. Free consultation.",
+      "intro": "Looking for a web agency in Amsterdam? DMC Kreatif delivers modern, high-performance websites for Dutch businesses. From creative agencies on the Herengracht to tech companies in Amsterdam-Zuid, we build digital experiences that stand out.",
+      "benefit1": "Dutch and English websites for the international Amsterdam market",
+      "benefit2": "Webshop development with iDEAL and Dutch payment integration",
+      "benefit3": "SEO optimized for Dutch search terms and local visibility",
+      "benefit4": "Modern tech stack: React, Next.js, Tailwind CSS",
+      "benefit5": "Experience with Dutch startups and SME businesses",
+      "benefit6": "Competitive pricing starting from €497"
+    },
+    "berlin": {
+      "name": "Berlin",
+      "title": "Web Agency in Berlin — Professional Websites for German Businesses",
+      "description": "DMC Kreatif develops professional websites for businesses in Berlin and Germany. Custom web development, online shops, and SEO. Free consultation.",
+      "intro": "Need a web agency in Berlin? DMC Kreatif builds professional, high-performance websites for German businesses. From innovative startups in Kreuzberg to established companies in Mitte, we create digital solutions that deliver measurable results.",
+      "benefit1": "German and English websites for the DACH market",
+      "benefit2": "Online shop development with German payment methods",
+      "benefit3": "SEO optimized for German search terms and local rankings",
+      "benefit4": "DSGVO-compliant (German GDPR) web development",
+      "benefit5": "Experience serving businesses across Germany, Austria, and Switzerland",
+      "benefit6": "Premium quality at competitive European rates"
+    },
+    "lyon": {
+      "name": "Lyon",
+      "title": "Web Agency in Lyon — Custom Websites for Businesses in Auvergne-Rhône-Alpes",
+      "description": "DMC Kreatif builds high-performance websites for businesses in Lyon. Custom web development, e-commerce, and SEO for the Auvergne-Rhône-Alpes region.",
+      "intro": "Searching for a professional web agency in Lyon? DMC Kreatif creates modern, high-performance websites for businesses across the Auvergne-Rhône-Alpes region. From innovative startups in Part-Dieu to established companies in Confluence, we deliver digital solutions that drive growth in France's second-largest economic hub.",
+      "benefit1": "Deep knowledge of the Lyon and Auvergne-Rhône-Alpes business ecosystem",
+      "benefit2": "Bilingual websites (French & English) for international reach",
+      "benefit3": "SEO optimized for Lyon-specific and regional search queries",
+      "benefit4": "95+ Google Lighthouse scores on every project",
+      "benefit5": "Experience with Lyon's thriving tech and startup scene",
+      "benefit6": "Fast delivery: websites launched in 3-28 days"
+    },
+    "marseille": {
+      "name": "Marseille",
+      "title": "Web Agency in Marseille — Professional Websites for Mediterranean Businesses",
+      "description": "DMC Kreatif develops professional websites for businesses in Marseille. Custom web development, online stores, and SEO for the PACA region. Free consultation.",
+      "intro": "Need a web agency in Marseille? DMC Kreatif builds stunning, fast websites for businesses across the Provence-Alpes-Côte d'Azur region. From maritime companies in Vieux-Port to tourism businesses in the Calanques area, we create digital experiences that capture the energy of France's Mediterranean capital.",
+      "benefit1": "Understanding of Marseille's unique Mediterranean business culture",
+      "benefit2": "Multilingual websites for tourism and international trade",
+      "benefit3": "SEO optimized for Marseille and PACA regional search terms",
+      "benefit4": "E-commerce solutions for Marseille's vibrant retail sector",
+      "benefit5": "Experience serving maritime, tourism, and hospitality businesses",
+      "benefit6": "Competitive pricing starting from €497"
+    },
+    "manchester": {
+      "name": "Manchester",
+      "title": "Web Agency in Manchester — Modern Websites for Northern England Businesses",
+      "description": "DMC Kreatif creates modern websites for businesses in Manchester and the North West. Custom web development, e-commerce, and SEO. Free consultation.",
+      "intro": "Looking for a web development agency in Manchester? DMC Kreatif delivers modern, high-performance websites for businesses across the North West. From creative agencies in the Northern Quarter to tech companies in MediaCityUK, we build digital solutions that help Manchester businesses compete globally.",
+      "benefit1": "Understanding of Manchester's fast-growing digital economy",
+      "benefit2": "Multi-language websites to serve the UK's most diverse city",
+      "benefit3": "SEO tailored for Manchester and North West England visibility",
+      "benefit4": "Sub-2-second load times on every project",
+      "benefit5": "Experience with Northern England's creative and tech industries",
+      "benefit6": "UK business experience with transparent GBP/EUR pricing"
+    },
+    "antwerp": {
+      "name": "Antwerp",
+      "title": "Web Agency in Antwerp — Bilingual Websites for Flemish Businesses",
+      "description": "DMC Kreatif builds bilingual websites for businesses in Antwerp and Flanders. Dutch & English web development, webshops, and SEO. Free quote.",
+      "intro": "Looking for a web agency in Antwerp? DMC Kreatif specializes in bilingual websites for the Flemish market. We serve businesses across Antwerp, from fashion houses in the Diamond District to logistics companies in the port area, with websites that work seamlessly in Dutch and English.",
+      "benefit1": "Bilingual expertise: Dutch and English websites as standard",
+      "benefit2": "Knowledge of the Antwerp and Flanders business landscape",
+      "benefit3": "E-commerce solutions for Antwerp's fashion and diamond industries",
+      "benefit4": "SEO optimized for Dutch and Flemish search terms",
+      "benefit5": "Experience with Belgian commerce, logistics, and retail sectors",
+      "benefit6": "GDPR-compliant from day one"
+    },
+    "rotterdam": {
+      "name": "Rotterdam",
+      "title": "Web Agency in Rotterdam — Innovative Websites for Dutch Businesses",
+      "description": "DMC Kreatif develops innovative websites for businesses in Rotterdam and Zuid-Holland. Custom web development, webshops, and SEO. Free consultation.",
+      "intro": "Need a web agency in Rotterdam? DMC Kreatif creates innovative, high-performance websites for businesses in Europe's largest port city. From logistics firms on the Maasvlakte to creative studios in Witte de Withstraat, we build digital solutions that match Rotterdam's forward-thinking spirit.",
+      "benefit1": "Dutch and English websites for Rotterdam's international business hub",
+      "benefit2": "Webshop development with iDEAL and Dutch payment integration",
+      "benefit3": "SEO optimized for Rotterdam and Zuid-Holland search visibility",
+      "benefit4": "Modern tech stack: React, Next.js, Tailwind CSS",
+      "benefit5": "Experience with logistics, maritime, and creative industries",
+      "benefit6": "Competitive pricing starting from €497"
+    },
+    "lille": {
+      "name": "Lille",
+      "title": "Web Agency in Lille — Custom Websites for Hauts-de-France Businesses",
+      "description": "DMC Kreatif creates custom websites for businesses in Lille and the Hauts-de-France region. Web development, e-commerce, and SEO. Free consultation.",
+      "intro": "Searching for a web agency in Lille? DMC Kreatif builds professional, high-performance websites for businesses across the Hauts-de-France region. From retail businesses in Vieux-Lille to tech companies in EuraTechnologies, we deliver digital solutions that leverage Lille's strategic position between Paris, London, and Brussels.",
+      "benefit1": "Strategic location expertise: Lille sits at the crossroads of Paris, London, and Brussels",
+      "benefit2": "Bilingual websites (French & English) for cross-border commerce",
+      "benefit3": "SEO optimized for Lille and Hauts-de-France regional queries",
+      "benefit4": "95+ Google Lighthouse scores on every project",
+      "benefit5": "Experience with Lille's growing tech ecosystem and EuraTechnologies",
+      "benefit6": "Fast delivery: websites launched in 3-28 days"
+    },
+    "birmingham": {
+      "name": "Birmingham",
+      "title": "Web Agency in Birmingham — Professional Websites for West Midlands Businesses",
+      "description": "DMC Kreatif builds professional websites for businesses in Birmingham and the West Midlands. Custom web development, e-commerce, and SEO. Free consultation.",
+      "intro": "Looking for a web agency in Birmingham? DMC Kreatif creates professional, high-performance websites for businesses across the West Midlands. From manufacturers in the Jewellery Quarter to professional services in Colmore Row, we build websites that help Birmingham businesses grow their digital presence.",
+      "benefit1": "Understanding of Birmingham's diverse manufacturing and service economy",
+      "benefit2": "Multi-language websites for the UK's most multicultural city",
+      "benefit3": "SEO tailored for Birmingham and West Midlands search visibility",
+      "benefit4": "Sub-2-second load times on every project",
+      "benefit5": "Experience with manufacturing, professional services, and retail sectors",
+      "benefit6": "Transparent pricing in GBP and EUR"
+    },
+    "nantes": {
+      "name": "Nantes",
+      "title": "Web Agency in Nantes — Creative Websites for Loire-Atlantique Businesses",
+      "description": "DMC Kreatif develops creative websites for businesses in Nantes and the Pays de la Loire region. Web development, e-commerce, and SEO. Free consultation.",
+      "intro": "Need a web agency in Nantes? DMC Kreatif builds creative, high-performance websites for businesses across the Pays de la Loire region. From creative industries on the Île de Nantes to tech startups in the Quartier de la Création, we create digital experiences that reflect Nantes' reputation as one of France's most innovative cities.",
+      "benefit1": "Knowledge of Nantes' creative and innovation-driven economy",
+      "benefit2": "Bilingual websites (French & English) for international clients",
+      "benefit3": "SEO optimized for Nantes and Pays de la Loire search queries",
+      "benefit4": "95+ Google Lighthouse scores on every project",
+      "benefit5": "Experience with creative, tech, and maritime industry businesses",
+      "benefit6": "Competitive pricing starting from €497"
+    }
+  }
+}

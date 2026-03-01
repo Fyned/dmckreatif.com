@@ -28,6 +28,7 @@ import {
   scaleIn,
   viewportConfig,
 } from "@/lib/animations";
+import { getServicesByCategory } from "@/data/services";
 
 interface ServiceCard {
   id: string;
@@ -365,6 +366,48 @@ export default function ServicesPage() {
                       {t("pricing.getStarted", "GET STARTED")}{" "}
                       <ArrowRight size={14} />
                     </NeoButton>
+
+                    {/* Sub-service links for internal linking */}
+                    {(() => {
+                      const categoryMap: Record<string, string> = {
+                        webDev: "web-development",
+                        ecommerce: "ecommerce",
+                        seo: "seo",
+                        maintenance: "seo",
+                      };
+                      const cat = categoryMap[service.id];
+                      if (!cat) return null;
+                      const subs = getServicesByCategory(cat).filter(
+                        (s) => s.slug !== cat && s.slug !== "marketing"
+                      );
+                      if (subs.length === 0) return null;
+                      return (
+                        <div className="mt-5 pt-4 border-t border-neo-black/10">
+                          <span className="font-mono text-[10px] font-bold text-neo-black/40 uppercase tracking-wider block mb-2">
+                            {t("services.specializedIn", "Specialized services")}
+                          </span>
+                          <div className="flex flex-wrap gap-1.5">
+                            {subs.slice(0, 6).map((sub) => (
+                              <Link
+                                key={sub.slug}
+                                to={`/${currentLocale}/services/${sub.slug}`}
+                                className="font-mono text-[10px] bg-neo-bg border border-neo-black/15 px-2 py-1 hover:border-neo-black/40 hover:bg-neo-yellow/20 transition-colors"
+                              >
+                                {t(sub.titleKey)}
+                              </Link>
+                            ))}
+                            {subs.length > 6 && (
+                              <Link
+                                to={`/${currentLocale}/services/${subs[0].slug}`}
+                                className="font-mono text-[10px] text-neo-black/50 px-1 py-1 hover:text-neo-black transition-colors"
+                              >
+                                +{subs.length - 6} more
+                              </Link>
+                            )}
+                          </div>
+                        </div>
+                      );
+                    })()}
                   </div>
                 </motion.div>
               );
@@ -596,6 +639,22 @@ export default function ServicesPage() {
                 className="inline-flex items-center gap-2 border-2 border-neo-black bg-neo-white shadow-hard px-6 py-3 font-space font-bold text-sm uppercase tracking-wider hover:bg-neo-blue transition-colors"
               >
                 {t("services.readBlog", "Read Our Blog")} <ArrowRight size={14} />
+              </Link>
+            </motion.div>
+            <motion.div variants={fadeInUp}>
+              <Link
+                to={`/${currentLocale}/technologies`}
+                className="inline-flex items-center gap-2 border-2 border-neo-black bg-neo-white shadow-hard px-6 py-3 font-space font-bold text-sm uppercase tracking-wider hover:bg-neo-pink transition-colors"
+              >
+                {t("services.ourTech", "Our Technology Stack")} <ArrowRight size={14} />
+              </Link>
+            </motion.div>
+            <motion.div variants={fadeInUp}>
+              <Link
+                to={`/${currentLocale}/industries`}
+                className="inline-flex items-center gap-2 border-2 border-neo-black bg-neo-white shadow-hard px-6 py-3 font-space font-bold text-sm uppercase tracking-wider hover:bg-neo-yellow transition-colors"
+              >
+                {t("services.industries", "Industries We Serve")} <ArrowRight size={14} />
               </Link>
             </motion.div>
           </motion.div>

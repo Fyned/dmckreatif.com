@@ -1,0 +1,148 @@
+# DMC Kreatif — Full Service Catalog & Technical Reference
+> For the concise version, see /llms.txt
+
+## Organization
+- Name: DMC Kreatif
+- Type: Premium European Web Development Agency
+- Founded: 2023
+- Founder: Musa Kerem Demirci (Full-Stack Developer)
+- Email: hello@dmckreatif.com
+- Website: https://dmckreatif.com
+- LinkedIn: https://www.linkedin.com/company/dmckreatif
+- Languages: English (primary), French, Dutch, German
+- Markets: France, Belgium, United Kingdom, Netherlands, Germany, Switzerland
+
+## Complete Service Catalog (44 Services)
+
+### Web Development (16 services)
+1. **Custom Web Development** — Full-service website development with React 18, Next.js 14, and TypeScript
+2. **React Development** — Component-based SPAs and web apps with React 18, hooks, and modern patterns
+3. **Next.js Development** — Server-side rendered and statically generated sites with App Router
+4. **TypeScript Development** — Type-safe full-stack development with strict TypeScript
+5. **Frontend Development** — Responsive, accessible UI with Tailwind CSS and Framer Motion
+6. **Custom Web Applications** — Bespoke web applications for business-specific workflows
+7. **Progressive Web Apps (PWA)** — Offline-capable, installable web apps with service workers
+8. **API Development** — RESTful and GraphQL API design, implementation, and documentation
+9. **Website Redesign** — Modernizing outdated sites while preserving SEO equity and content
+10. **Legacy System Modernization** — Migrating from legacy stacks to modern React/Next.js
+11. **Website Maintenance** — Ongoing updates, security patches, performance monitoring
+12. **Headless CMS Development** — Content management with Payload CMS, Strapi, or Sanity
+13. **Performance Optimization** — Core Web Vitals optimization, bundle splitting, lazy loading
+14. **Accessibility (WCAG)** — WCAG 2.1 AA compliance audits and remediation
+15. **GDPR Compliance** — Cookie consent, privacy policies, data processing for EU regulations
+16. **Third-Party Integrations** — CRM, payment, analytics, and marketing tool integrations
+
+### E-Commerce (9 services)
+17. **E-Commerce Development** — Full online store solutions with secure payment processing
+18. **Shopify Development** — Custom Shopify themes, Liquid templates, and app integrations
+19. **WooCommerce Development** — WordPress-based stores with WooCommerce customization
+20. **Custom E-Commerce** — Bespoke e-commerce platforms built from scratch with React
+21. **B2B E-Commerce** — Wholesale portals with tiered pricing and bulk order management
+22. **Multi-Currency Support** — Automatic currency detection, conversion, and localized pricing
+23. **Payment Integration** — Stripe, LemonSqueezy, iDEAL, Bancontact, SEPA integration
+24. **E-Commerce SEO** — Product schema, category optimization, and conversion rate improvement
+25. **E-Commerce Analytics** — Revenue tracking, funnel analysis, and customer behavior insights
+
+### SEO & Marketing (12 services)
+26. **SEO Optimization** — Comprehensive search engine optimization for European markets
+27. **Digital Marketing** — Multi-channel marketing strategy and campaign management
+28. **Technical SEO** — Crawlability, indexability, Core Web Vitals, and structured data
+29. **Local SEO** — Google Business Profile optimization, local citations, and map visibility
+30. **International SEO** — Hreflang implementation, multi-market keyword strategy
+31. **Content SEO** — Keyword research, content strategy, and topical authority building
+32. **Link Building** — White-hat backlink acquisition through outreach and content marketing
+33. **SEO Consulting** — Strategic SEO advisory for long-term organic growth
+34. **Google Ads Management** — Search, Display, and Shopping campaign setup and optimization
+35. **Analytics Setup** — Google Analytics 4, Search Console, and custom dashboard configuration
+36. **Marketing Automation** — Email sequences, lead nurturing, and CRM integration
+37. **Generative Engine Optimization (GEO)** — Optimizing for AI search (Google AI Overviews, ChatGPT, Perplexity)
+
+### Design (7 services)
+38. **UX/UI Design** — User-centered design with Figma prototyping and usability testing
+39. **Digital Strategy** — Online presence strategy, competitor analysis, and growth planning
+40. **Brand Identity** — Logo design, visual identity systems, and brand guidelines
+41. **Design Systems** — Reusable component libraries with Storybook documentation
+42. **Prototyping** — Interactive prototypes for stakeholder validation before development
+43. **Mobile-First Design** — Responsive design optimized for mobile devices first
+44. **Content Marketing** — Blog strategy, article writing, and thought leadership content
+
+## Technology Stack (12 Technologies)
+
+### Frontend
+- **React 18** — Component library for building interactive UIs
+- **Next.js 14** — Full-stack React framework with App Router, SSR, and SSG
+- **TypeScript** — Strict type-safe JavaScript superset
+- **Vite 5** — Lightning-fast build tool and dev server
+- **Tailwind CSS v4** — Utility-first CSS framework with JIT compilation
+- **Framer Motion 11** — Production-ready animation library for React
+
+### Backend & Infrastructure
+- **Supabase** — Open-source Firebase alternative (PostgreSQL, Auth, Storage, Edge Functions)
+- **Vercel** — Deployment platform optimized for Next.js and React
+- **Shopify** — E-commerce platform for online stores
+- **Headless WordPress** — WordPress as a headless CMS via REST/GraphQL API
+- **PostgreSQL** — Advanced open-source relational database
+- **Node.js** — JavaScript runtime for server-side applications
+
+## Industries Served (8 Sectors)
+1. **Construction & Building** — CAKIR Facades, Archi Construction references
+2. **Energy & Sustainability** — Consulting Energy, ISO Home Energy references
+3. **Accounting & Finance** — Adamsons Accountants reference
+4. **Healthcare & Medical** — Medical practice websites
+5. **Education & Training** — Educational institution platforms
+6. **E-Commerce & Retail** — FilenesSports reference
+7. **Professional Services** — Law firms, consultancies, agencies
+8. **Tourism & Hospitality** — Hotels, restaurants, travel agencies
+
+## Pricing (Updated March 2026)
+| Package | Price | Pages | Features | Delivery |
+|---------|-------|-------|----------|----------|
+| Launch | EUR 497 | 1 page | Responsive, SEO basics, contact form | 3-5 days |
+| Growth | EUR 997 | 5-7 pages | Blog, advanced SEO, analytics | 7-10 days |
+| Scale | EUR 1,997 | Full site | Multilingual (EN/FR/NL/DE), video | 14-18 days |
+| Commerce | EUR 2,997 | E-commerce | Payment, inventory, multilingual | 21-28 days |
+| Care Plan | EUR 97/mo | — | Hosting, updates, support, reports | Ongoing |
+
+### Add-On Services
+| Service | Price |
+|---------|-------|
+| Logo Design | EUR 197 |
+| SEO Audit & Fix | EUR 297 |
+| Google Ads Setup | EUR 397 |
+| Social Media Kit (20 templates) | EUR 197 |
+| Video Production (15-30s) | EUR 197-497 |
+| Monthly SEO Management | EUR 247/mo |
+
+## Performance Guarantees
+- Lighthouse Performance: 95+
+- Lighthouse Accessibility: 95+
+- Lighthouse Best Practices: 95+
+- Lighthouse SEO: 100
+- First Contentful Paint: < 1.2s
+- Largest Contentful Paint: < 2.0s
+- Cumulative Layout Shift: < 0.05
+- Total Blocking Time: < 150ms
+
+## Complete Portfolio
+| Project | Country | Industry | URL | Tech |
+|---------|---------|----------|-----|------|
+| CAKIR Facades | France | Construction | cakirfacades.fr | React+Vite+Tailwind |
+| Altinbas Moustiquaire | France | Manufacturing | altinbasmoustiquaire.fr | React+Vite+Tailwind |
+| Consulting Energy | France | Energy | consulting-energy.fr | React+Vite+TS |
+| ISO Home Energy | France | Energy | ih-energy.fr | React+Vite+TS+Tailwind |
+| Archi Construction | Belgium | Construction | archi.constructionveranda.com | React+Vite+TS+Tailwind |
+| Adamsons Accountants | UK | Accounting | adamsons.uk.com | React+Vite+Tailwind |
+| FilenesSports | International | E-Commerce | filenessports.com | React+Vite+TS+Supabase |
+
+## Sitemap
+- Homepage: https://dmckreatif.com/en
+- Services: https://dmckreatif.com/en/services (+ 40 sub-service pages)
+- Technologies: https://dmckreatif.com/en/technologies (+ 12 detail pages)
+- Industries: https://dmckreatif.com/en/industries (+ 8 detail pages)
+- Blog: https://dmckreatif.com/en/blog (+ 30 articles)
+- Portfolio: https://dmckreatif.com/en/portfolio
+- Pricing: https://dmckreatif.com/en/pricing
+- About: https://dmckreatif.com/en/about (+ team, process, why-us, partners, careers)
+- Contact: https://dmckreatif.com/en/contact
+- Templates: https://dmckreatif.com/en/templates
+- All pages available in: /en, /fr, /nl, /de (412+ total URLs)

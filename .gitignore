@@ -27,4 +27,6 @@ yarn-error.log*
 
 # TypeScript
 *.tsbuildinfo
-node_modules
+
+# Build analysis
+stats.html

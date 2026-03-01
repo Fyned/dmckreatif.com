@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import SeoHead from "@/components/seo/SeoHead";
 import { motion } from "framer-motion";
+import AboutCrossLinks from "@/components/ui/AboutCrossLinks";
 import { ArrowRight, Shield, GitBranch } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import NeoButton from "@/components/ui/NeoButton";
@@ -145,6 +146,7 @@ export default function PartnersPage() {
           </motion.div>
         </div>
       </section>
+      <AboutCrossLinks currentPath="partners" />
     </>
   );
 }

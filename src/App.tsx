@@ -13,7 +13,9 @@ const PortfolioPage = lazy(() => import("@/pages/PortfolioPage"));
 const PricingPage = lazy(() => import("@/pages/PricingPage"));
 const AboutPage = lazy(() => import("@/pages/AboutPage"));
 const BlogPage = lazy(() => import("@/pages/BlogPage"));
-const BlogPostPage = lazy(() => import("@/pages/BlogPostPage"));
+const BlogPostPage = lazy(() =>
+  import("@/i18n").then((m) => m.loadEnNamespace("seo")).then(() => import("@/pages/BlogPostPage"))
+);
 const ContactPage = lazy(() => import("@/pages/ContactPage"));
 const LoginPage = lazy(() => import("@/pages/LoginPage"));
 const RegisterPage = lazy(() => import("@/pages/RegisterPage"));
@@ -45,17 +47,25 @@ const TemplateViewerPage = lazy(() => import("@/pages/TemplateViewerPage"));
 const EditorPage = lazy(() => import("@/pages/EditorPage"));
 const PublishedSitePage = lazy(() => import("@/pages/PublishedSitePage"));
 const CaseStudiesPage = lazy(() => import("@/pages/CaseStudiesPage"));
-const ServiceDetailPage = lazy(() => import("@/pages/ServiceDetailPage"));
+const ServiceDetailPage = lazy(() =>
+  import("@/i18n").then((m) => m.loadEnNamespace("services", "seo")).then(() => import("@/pages/ServiceDetailPage"))
+);
 const TechnologiesPage = lazy(() => import("@/pages/TechnologiesPage"));
-const TechnologyDetailPage = lazy(() => import("@/pages/TechnologyDetailPage"));
+const TechnologyDetailPage = lazy(() =>
+  import("@/i18n").then((m) => m.loadEnNamespace("tech", "seo")).then(() => import("@/pages/TechnologyDetailPage"))
+);
 const IndustriesPage = lazy(() => import("@/pages/IndustriesPage"));
-const IndustryDetailPage = lazy(() => import("@/pages/IndustryDetailPage"));
+const IndustryDetailPage = lazy(() =>
+  import("@/i18n").then((m) => m.loadEnNamespace("industries", "seo")).then(() => import("@/pages/IndustryDetailPage"))
+);
 const PrivacyPage = lazy(() => import("@/pages/PrivacyPage"));
 const TermsPage = lazy(() => import("@/pages/TermsPage"));
 const LegalNoticePage = lazy(() => import("@/pages/LegalNoticePage"));
 const CookiePolicyPage = lazy(() => import("@/pages/CookiePolicyPage"));
 const RefundPolicyPage = lazy(() => import("@/pages/RefundPolicyPage"));
-const CityServicePage = lazy(() => import("@/pages/CityServicePage"));
+const CityServicePage = lazy(() =>
+  import("@/i18n").then((m) => m.loadEnNamespace("cities")).then(() => import("@/pages/CityServicePage"))
+);
 const TeamPage = lazy(() => import("@/pages/TeamPage"));
 const ProcessPage = lazy(() => import("@/pages/ProcessPage"));
 const WhyUsPage = lazy(() => import("@/pages/WhyUsPage"));
