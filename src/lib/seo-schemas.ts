@@ -6,18 +6,6 @@ interface BreadcrumbItem {
 }
 
 /**
- * Organization @id reference — full definition lives in index.html @graph.
- * Using @id reference here links pages to the canonical entity without duplicating data.
- */
-export function buildOrganizationSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": `${BASE_URL}/#organization`,
-  };
-}
-
-/**
  * ProfessionalService schema (LocalBusiness subtype) with aggregateRating
  * and reviews embedded. Used on the contact page and optionally homepage.
  *
@@ -293,8 +281,14 @@ export function buildBlogPostingSchema(params: {
     image: params.image ?? `${BASE_URL}/og-image.png`,
     author: {
       "@type": "Person",
+      "@id": `${BASE_URL}/#founder`,
       name: "Musa Kerem Demirci",
-      url: "https://www.linkedin.com/in/musakeremdemirci",
+      url: "https://dmckreatif.com",
+      jobTitle: "Founder & Lead Developer",
+      description: "Full-stack developer specialising in React, Next.js, and modern web technologies for European businesses.",
+      knowsAbout: ["Web Development", "React", "Next.js", "SEO", "E-Commerce", "Digital Marketing", "Tailwind CSS"],
+      sameAs: ["https://www.linkedin.com/in/musakeremdemirci", "https://dmckreatif.com"],
+      worksFor: { "@id": `${BASE_URL}/#organization` },
     },
     publisher: {
       "@type": "Organization",
@@ -592,11 +586,13 @@ export function buildCitySchema(params: {
   lat: string;
   lng: string;
   locale: string;
+  serviceType?: string;
 }) {
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "DMC Kreatif",
+    ...(params.serviceType && { serviceType: params.serviceType }),
     url: BASE_URL,
     email: "hello@dmckreatif.com",
     priceRange: "\u20AC\u20AC",
