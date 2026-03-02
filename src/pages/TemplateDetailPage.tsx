@@ -140,10 +140,14 @@ export default function TemplateDetailPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "Product",
+          "@id": `https://dmckreatif.com/${currentLocale}/templates/${slug}`,
           name: template.name,
           description: template.description ?? "Premium website template",
           image: template.thumbnail_url ?? undefined,
+          url: `https://dmckreatif.com/${currentLocale}/templates/${slug}`,
+          sku: `tmpl-${slug}`,
           brand: { "@type": "Brand", name: "DMC Kreatif" },
+          seller: { "@type": "Organization", name: "DMC Kreatif", url: "https://dmckreatif.com" },
           offers: {
             "@type": "AggregateOffer",
             lowPrice: "97",
