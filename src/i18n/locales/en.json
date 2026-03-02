@@ -511,7 +511,19 @@
     "pkgScaleCompleteFeatures": "10+ pages multilingual website // Logo + social media kit (40 templates) // Growth SEO 12 months // 25 target keywords // Link building + competitor analysis // Google Ads setup + optimization // Care Pro 12 months // Quarterly strategy calls // 90 days dedicated support",
     "pkgCommerceComplete": "COMMERCE COMPLETE",
     "pkgCommerceCompleteTag": "FULL SERVICE",
-    "pkgCommerceCompleteFeatures": "Full e-commerce website + payments // Logo + complete social media kit // Authority SEO 12 months // 30+ target keywords // National / EU-wide SEO campaign // Google Ads setup + ongoing management // Care Enterprise 12 months // Dedicated account manager // Weekly strategy reports // Unlimited priority support"
+    "pkgCommerceCompleteFeatures": "Full e-commerce website + payments // Logo + complete social media kit // Authority SEO 12 months // 30+ target keywords // National / EU-wide SEO campaign // Google Ads setup + ongoing management // Care Enterprise 12 months // Dedicated account manager // Weekly strategy reports // Unlimited priority support",
+    "pkgStarterCompleteFor": "Freelancers, local restaurants, clinics, solo professionals launching their first professional web presence.",
+    "pkgStarterCompleteDelivery": "Website: 5-7 days · SEO: starts week 1 · Full delivery: 30 days",
+    "pkgStarterCompleteDetail": "You get a custom landing page built from scratch — responsive, fast (95+ Lighthouse), and ready for Google. Logo delivered as SVG+PNG in 3 formats. Local SEO runs for 3 months targeting your city: we set up Google Business Profile, fix technical issues, and track 5 keywords. Care Basic keeps your site online with SSL + monthly updates.",
+    "pkgBusinessCompleteFor": "Growing SMEs, service businesses, agencies, and local brands ready to scale beyond their city.",
+    "pkgBusinessCompleteDelivery": "Website: 10-14 days · SEO: starts week 2 · Google Ads: live in 5 days",
+    "pkgBusinessCompleteDetail": "A full 5-7 page website with blog, contact forms, and analytics. Logo + 20 branded social media templates (Instagram, Facebook, LinkedIn). Growth SEO runs 6 months: 15 keywords, link building (5 backlinks/mo), and monthly competitor analysis. Google Ads campaign setup with initial keyword research and targeting. Care Pro runs 6 months: weekly updates, priority support, monthly performance report.",
+    "pkgScaleCompleteFor": "International brands, multilingual businesses, and companies targeting multiple European markets.",
+    "pkgScaleCompleteDelivery": "Website: 14-21 days · SEO: starts week 2 · Google Ads: live in 5 days",
+    "pkgScaleCompleteDetail": "10+ page multilingual website (up to 4 languages) with CMS, blog, and advanced SEO structure. Logo + full social media kit (40 templates). Growth SEO 12 months: 25 keywords, link building, quarterly strategy calls included. Google Ads setup targeting multiple markets. Care Pro runs 12 months: weekly updates, monthly reports, A/B testing, and 90 days of dedicated support after launch.",
+    "pkgCommerceCompleteFor": "Online stores, product brands, and retailers selling to European customers.",
+    "pkgCommerceCompleteDelivery": "Website: 21-30 days · SEO: starts week 3 · Google Ads: live in 5 days",
+    "pkgCommerceCompleteDetail": "Full e-commerce store with product catalog, shopping cart, Stripe/LemonSqueezy payment integration, and multilingual checkout. Logo + full social media kit. Authority SEO 12 months: 30+ keywords, national/EU campaign, PR and media outreach, weekly reports, dedicated SEO manager. Google Ads e-commerce campaigns. Care Enterprise 12 months: daily monitoring, 24/7 support, conversion optimization, dedicated account manager."
   },
   "testimonials": {
     "sectionTitle": "CLIENT REPORTS",

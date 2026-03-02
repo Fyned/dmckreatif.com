@@ -1,8 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
-import { motion } from "framer-motion";
-import { ArrowRight, Package, CheckCircle2 } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Package, CheckCircle2, ChevronDown, Clock, Users } from "lucide-react";
 import { bundles } from "@/lib/pricing-data";
+import { useState } from "react";
 import NeoButton from "@/components/ui/NeoButton";
 import { fadeInUp, staggerContainer, scaleIn, viewportConfig } from "@/lib/animations";
 
@@ -25,6 +26,7 @@ export default function PricingPreview() {
   const { t } = useTranslation();
   const { locale } = useParams();
   const currentLocale = locale ?? "en";
+  const [expandedId, setExpandedId] = useState<string | null>(null);
 
   return (
     <section className="py-section-sm lg:py-section bg-neo-black text-neo-bg relative overflow-hidden">
@@ -153,6 +155,73 @@ export default function PricingPreview() {
                       <li className="font-mono text-[10px] text-neo-bg/30">+{features.length - 4} more included</li>
                     )}
                   </ul>
+
+                  {/* More details toggle */}
+                  <button
+                    type="button"
+                    onClick={() => setExpandedId(expandedId === bundle.id ? null : bundle.id)}
+                    className="w-full flex items-center justify-center gap-1.5 font-mono text-[11px] text-neo-bg/40 hover:text-neo-lime transition-colors py-2 border-t border-neo-bg/10 mt-2 mb-3"
+                  >
+                    {expandedId === bundle.id ? "Hide details" : "More details"}
+                    <ChevronDown
+                      size={12}
+                      className={`transition-transform duration-300 ${expandedId === bundle.id ? "rotate-180" : ""}`}
+                    />
+                  </button>
+
+                  {/* Expanded detail panel */}
+                  <AnimatePresence initial={false}>
+                    {expandedId === bundle.id && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: [0.25, 0.4, 0, 1] }}
+                        className="overflow-hidden"
+                      >
+                        <div className="bg-neo-bg/5 border border-neo-bg/10 p-4 mb-3 space-y-3">
+                          {/* Who it's for */}
+                          <div className="flex items-start gap-2">
+                            <Users size={12} className="text-neo-lime mt-0.5 flex-shrink-0" />
+                            <div>
+                              <p className="font-mono text-[9px] text-neo-bg/40 uppercase tracking-wider mb-1">Best for</p>
+                              <p className="font-mono text-[11px] text-neo-bg/70 leading-relaxed">
+                                {t(`pricing.${bundle.nameKey.replace("pkg", "pkg")}For`, "")}
+                              </p>
+                            </div>
+                          </div>
+                          {/* Delivery */}
+                          <div className="flex items-start gap-2">
+                            <Clock size={12} className="text-neo-lime mt-0.5 flex-shrink-0" />
+                            <div>
+                              <p className="font-mono text-[9px] text-neo-bg/40 uppercase tracking-wider mb-1">Timeline</p>
+                              <p className="font-mono text-[11px] text-neo-bg/70 leading-relaxed">
+                                {t(`pricing.${bundle.nameKey}Delivery`, "")}
+                              </p>
+                            </div>
+                          </div>
+                          {/* Detail text */}
+                          <div className="border-t border-neo-bg/10 pt-3">
+                            <p className="font-mono text-[11px] text-neo-bg/60 leading-relaxed">
+                              {t(`pricing.${bundle.nameKey}Detail`, "")}
+                            </p>
+                          </div>
+                          {/* All features */}
+                          <div className="border-t border-neo-bg/10 pt-3">
+                            <p className="font-mono text-[9px] text-neo-bg/40 uppercase tracking-wider mb-2">All included</p>
+                            <ul className="space-y-1">
+                              {features.map((f: string) => (
+                                <li key={f} className="flex items-start gap-1.5 font-mono text-[11px] text-neo-bg/60">
+                                  <CheckCircle2 size={11} className="text-neo-lime flex-shrink-0 mt-0.5" />
+                                  {f}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
 
                   <NeoButton
                     href={`/${currentLocale}/contact`}

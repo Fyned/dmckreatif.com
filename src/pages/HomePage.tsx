@@ -33,12 +33,12 @@ export default function HomePage() {
       <Suspense fallback={<div className="min-h-[400px]" />}>
         <ClientLogoBar />
         <ServicesGrid />
+        <PricingPreview />
         <PortfolioShowcase />
         <AgencyStats />
         <CampaignSection />
         <ChoosePathSection />
         <ProcessSection />
-        <PricingPreview />
         <TestimonialsMarquee />
         <TrustSection />
         <FaqSection />
