@@ -83,7 +83,7 @@ export function buildProfessionalServiceSchema(reviews?: Array<{
     ],
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: 4.9,
+      ratingValue: 5.0,
       bestRating: 5,
       worstRating: 1,
       ratingCount: 6,
@@ -240,6 +240,7 @@ export function buildAllServicesSchema(locale: string) {
     "@type": "Service",
     provider: {
       "@type": "Organization",
+      "@id": `${BASE_URL}/#organization`,
       name: "DMC Kreatif",
       url: BASE_URL,
     },
@@ -286,7 +287,7 @@ export function buildBlogPostingSchema(params: {
       "@type": "Person",
       "@id": `${BASE_URL}/#founder`,
       name: "Musa Kerem Demirci",
-      url: "https://dmckreatif.com",
+      url: `${BASE_URL}/${params.locale}/about/musa-kerem-demirci`,
       jobTitle: "Founder & Lead Developer",
       description: "Full-stack developer specialising in React, Next.js, and modern web technologies for European businesses.",
       knowsAbout: ["Web Development", "React", "Next.js", "SEO", "E-Commerce", "Digital Marketing", "Tailwind CSS"],
@@ -721,13 +722,14 @@ export function buildCaseStudySchema(params: {
   clientUrl: string;
   datePublished: string;
   locale: string;
+  slug: string;
 }) {
   return {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
     name: `Case Study: ${params.name}`,
     description: params.description,
-    url: `${BASE_URL}/${params.locale}/case-studies`,
+    url: `${BASE_URL}/${params.locale}/case-studies/${params.slug}`,
     datePublished: params.datePublished,
     creator: {
       "@type": "Organization",

@@ -1,6 +1,18 @@
 {
   "seo": {
     "serviceDetail": {
+      "web-development": {
+        "title": "Web Development Services — Custom Websites for Europe | DMC Kreatif",
+        "description": "Custom web development with React, Next.js, and TypeScript. Mobile-first, SEO-optimised websites scoring 95+ on Lighthouse. Serving France, Belgium, UK and beyond."
+      },
+      "seo": {
+        "title": "SEO Services — Technical & On-Page Optimisation | DMC Kreatif",
+        "description": "Technical SEO audits, keyword research, Schema.org structured data, and monthly performance reports. Proven results for European businesses."
+      },
+      "digital-marketing": {
+        "title": "Digital Marketing — Google Ads, Analytics & Growth | DMC Kreatif",
+        "description": "Full-funnel digital marketing for European businesses. Google Ads setup, Analytics 4 integration, conversion optimisation, and social media strategy."
+      },
       "react-development": {
         "title": "React Development — Expert React Agency | DMC Kreatif",
         "description": "Custom React development for European businesses. Component-driven architecture, blazing-fast SPAs, and 95+ Lighthouse scores. Free consultation."

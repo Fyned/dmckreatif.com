@@ -94,6 +94,7 @@ export default function CaseStudyDetailPage() {
           clientUrl: cs.url,
           datePublished: `${cs.year}-01-01`,
           locale: currentLocale,
+          slug: cs.slug,
         })}
       />
 
