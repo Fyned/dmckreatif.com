@@ -26,7 +26,7 @@ import NeoButton from "@/components/ui/NeoButton";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import JsonLd from "@/components/seo/JsonLd";
-import { buildOrganizationSchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
+import { buildBreadcrumbSchema } from "@/lib/seo-schemas";
 import { useAnalytics } from "@/lib/useAnalytics";
 import { fadeInUp, staggerContainer, scaleIn, viewportConfig } from "@/lib/animations";
 
@@ -64,7 +64,7 @@ export default function TeamPage() {
         path="/team"
       />
       <Breadcrumbs items={[{ label: t("nav.team", "TEAM") }]} />
-      <JsonLd data={buildOrganizationSchema()} /><JsonLd data={buildBreadcrumbSchema(currentLocale, [{ name: "Home", path: "" }], t("nav.team", "Team"))} />
+      <JsonLd data={buildBreadcrumbSchema(currentLocale, [{ name: "Home", path: "" }], t("nav.team", "Team"))} />
 
       {/* Hero */}
       <section className="py-20 lg:py-28">

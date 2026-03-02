@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { MapPin, Globe, ArrowRight, CheckCircle2 } from "lucide-react";
@@ -27,10 +27,10 @@ export default function CityServicePage() {
   const cityName = t(city.nameKey);
 
   const services = [
-    { key: "cityPages.serviceWeb", icon: "\u{1F4BB}" },
-    { key: "cityPages.serviceEcom", icon: "\u{1F6D2}" },
-    { key: "cityPages.serviceSeo", icon: "\u{1F50D}" },
-    { key: "cityPages.serviceMarketing", icon: "\u{1F4E3}" },
+    { key: "cityPages.serviceWeb", icon: "\u{1F4BB}", slug: "web-design" },
+    { key: "cityPages.serviceEcom", icon: "\u{1F6D2}", slug: "ecommerce" },
+    { key: "cityPages.serviceSeo", icon: "\u{1F50D}", slug: "seo" },
+    { key: "cityPages.serviceMarketing", icon: "\u{1F4E3}", slug: "digital-marketing" },
   ];
 
   return (
@@ -141,16 +141,22 @@ export default function CityServicePage() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={viewportConfig}
-                className="border-2 border-neo-black bg-neo-white shadow-hard p-8 flex items-start gap-4"
+                className="border-2 border-neo-black bg-neo-white shadow-hard p-8 flex items-start gap-4 group"
               >
                 <span className="text-2xl flex-shrink-0">{service.icon}</span>
-                <div>
+                <div className="flex-1">
                   <h3 className="font-space font-bold text-lg text-neo-black mb-2">
                     {t(`${service.key}.title`)}
                   </h3>
-                  <p className="font-mono text-xs text-neo-black/70 leading-relaxed">
+                  <p className="font-mono text-xs text-neo-black/70 leading-relaxed mb-4">
                     {t(`${service.key}.desc`)}
                   </p>
+                  <Link
+                    to={`/${locale ?? "en"}/web-agency-${city.slug}/${service.slug}`}
+                    className="font-mono text-xs font-bold text-neo-lime border-b-2 border-neo-black/10 hover:border-neo-lime transition-colors inline-flex items-center gap-1"
+                  >
+                    Learn more <ArrowRight size={12} />
+                  </Link>
                 </div>
               </motion.div>
             ))}

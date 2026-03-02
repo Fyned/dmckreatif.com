@@ -17,7 +17,7 @@ import NeoButton from "@/components/ui/NeoButton";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import JsonLd from "@/components/seo/JsonLd";
-import { buildOrganizationSchema, buildBreadcrumbSchema, buildAboutPageSchema } from "@/lib/seo-schemas";
+import { buildBreadcrumbSchema, buildAboutPageSchema } from "@/lib/seo-schemas";
 import { useAnalytics } from "@/lib/useAnalytics";
 import {
   fadeInUp,
@@ -158,7 +158,6 @@ export default function AboutPage() {
 
       <Breadcrumbs items={[{ label: t("nav.about", "ABOUT") }]} />
 
-      <JsonLd data={buildOrganizationSchema()} />
       <JsonLd data={buildAboutPageSchema(currentLocale)} />
       <JsonLd
         data={buildBreadcrumbSchema(currentLocale, [{ name: "Home", path: "" }], t("nav.about", "About"))}

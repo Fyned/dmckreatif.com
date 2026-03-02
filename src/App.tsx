@@ -67,6 +67,9 @@ const RefundPolicyPage = lazy(() => import("@/pages/RefundPolicyPage"));
 const CityServicePage = lazy(() =>
   import("@/i18n").then((m) => m.loadEnNamespace("cities")).then(() => import("@/pages/CityServicePage"))
 );
+const CityServiceDetailPage = lazy(() =>
+  import("@/i18n").then((m) => m.loadEnNamespace("cities")).then(() => import("@/pages/CityServiceDetailPage"))
+);
 const CountryPage = lazy(() =>
   import("@/i18n").then((m) => m.loadEnNamespace("cities")).then(() => import("@/pages/CountryPage"))
 );
@@ -140,6 +143,7 @@ export default function App() {
             <Route path="web-agency-netherlands" element={<CountryPage countrySlug="netherlands" />} />
             <Route path="web-agency-germany" element={<CountryPage countrySlug="germany" />} />
             <Route path="web-agency-:city" element={<CityServicePage />} />
+            <Route path="web-agency-:city/:serviceSlug" element={<CityServiceDetailPage />} />
             <Route path="templates" element={<TemplatesPage />} />
             <Route path="templates/:slug" element={<TemplateDetailPage />} />
             <Route path="templates/order" element={<TemplateOrderPage />} />
