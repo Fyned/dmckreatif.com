@@ -7,6 +7,7 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import NeoBadge from "@/components/ui/NeoBadge";
 import NeoButton from "@/components/ui/NeoButton";
 import { buildBreadcrumbSchema, buildCaseStudySchema } from "@/lib/seo-schemas";
+import BeforeAfterSlider from "@/components/portfolio/BeforeAfterSlider";
 import { getCaseStudyBySlug, caseStudies } from "@/data/case-studies";
 import type { CaseStudyMetric } from "@/data/case-studies";
 import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";

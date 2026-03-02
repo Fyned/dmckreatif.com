@@ -41,6 +41,9 @@ export const caseStudies: CaseStudy[] = [
       name: "M. Cakir",
       role: "Director, CAKIR Facades",
     },
+    images: {
+      after: "https://image.thum.io/get/width/1200/https://cakirfacades.fr",
+    },
   },
   {
     id: "altinbas-moustiquaire",
@@ -81,6 +84,9 @@ export const caseStudies: CaseStudy[] = [
         "Before DMC Kreatif, we had no website. Now customers find us on Google and send quote requests every day. The product catalog looks professional and our sales have grown beyond expectations.",
       name: "A. Altinbas",
       role: "Owner, Altinbas Moustiquaire",
+    },
+    images: {
+      after: "https://image.thum.io/get/width/1200/https://altinbasmoustiquaire.fr",
     },
   },
   {
@@ -123,6 +129,9 @@ export const caseStudies: CaseStudy[] = [
       name: "S. Dupont",
       role: "Founder, Consulting Energy",
     },
+    images: {
+      after: "https://image.thum.io/get/width/1200/https://consulting-energy.fr",
+    },
   },
   {
     id: "iso-home-energy",
@@ -163,6 +172,9 @@ export const caseStudies: CaseStudy[] = [
         "The website educates our customers before they contact us, resulting in much more qualified leads and faster conversions. The before/after galleries are our best sales tool now.",
       name: "K. Yilmaz",
       role: "Director, ISO Home Energy",
+    },
+    images: {
+      after: "https://image.thum.io/get/width/1200/https://ih-energy.fr",
     },
   },
   {
@@ -205,6 +217,9 @@ export const caseStudies: CaseStudy[] = [
       name: "P. Laurent",
       role: "CEO, Archi Construction & Veranda",
     },
+    images: {
+      after: "https://image.thum.io/get/width/1200/https://archi.constructionveranda.com",
+    },
   },
   {
     id: "adamsons-accountants",
@@ -245,6 +260,9 @@ export const caseStudies: CaseStudy[] = [
         "Working with DMC Kreatif was a seamless experience. They understood our needs from day one and delivered beyond expectations. The site is fast, secure, and our clients consistently compliment the professional design.",
       name: "J. Adams",
       role: "Partner, Adamsons Accountants",
+    },
+    images: {
+      after: "https://image.thum.io/get/width/1200/https://adamsons.uk.com",
     },
   },
 ];

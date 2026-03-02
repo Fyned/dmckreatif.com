@@ -10,6 +10,12 @@ export interface CaseStudyTestimonial {
   role: string;
 }
 
+export interface CaseStudyImages {
+  hero?: string;
+  before?: string;
+  after?: string;
+}
+
 export interface CaseStudy {
   id: string;
   slug: string;
@@ -31,4 +37,5 @@ export interface CaseStudy {
   testimonial: CaseStudyTestimonial;
   timeline: string;
   servicesUsed: string[];
+  images?: CaseStudyImages;
 }

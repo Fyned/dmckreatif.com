@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { Star, ExternalLink } from "lucide-react";
 import { testimonials } from "@/lib/testimonials-data";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { fadeInUp, viewportConfig } from "@/lib/animations";
@@ -125,7 +125,20 @@ export default function TestimonialsMarquee() {
                     {t(`testimonials.${item.nameKey}`)}
                   </p>
                   <p className="font-mono text-xs text-neo-black/70 uppercase">
-                    {t(`testimonials.${item.roleKey}`)} @ {item.company}
+                    {t(`testimonials.${item.roleKey}`)} @{" "}
+                    {item.companyUrl ? (
+                      <a
+                        href={item.companyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-neo-lime transition-colors inline-flex items-center gap-1"
+                      >
+                        {item.company}
+                        <ExternalLink size={10} />
+                      </a>
+                    ) : (
+                      item.company
+                    )}
                   </p>
                 </div>
                 <span className="text-lg">{item.flag}</span>
