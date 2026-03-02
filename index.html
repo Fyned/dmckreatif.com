@@ -18,17 +18,19 @@
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
 
-    <!-- Fonts: Syne (display) + DM Sans (body) + JetBrains Mono (code) -->
+    <!-- Fonts: Syne (display) + DM Sans (body) — critical path -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400&display=swap"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap"
       rel="stylesheet"
+    />
+    <!-- JetBrains Mono — non-critical, loaded after page paint -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
 
     <!-- Default meta (overridden by react-helmet-async per page) -->
@@ -40,16 +42,16 @@
     <meta property="og:title" content="DMC Kreatif — Premium European Web Agency" />
     <meta property="og:description" content="Premium web development agency serving France, Belgium, UK, Netherlands, and Germany. Custom websites, e-commerce, SEO, and digital marketing." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://dmckreatif.com" />
+    <meta property="og:url" content="https://dmckreatif.com/en" />
     <meta property="og:image" content="https://dmckreatif.com/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="DMC Kreatif — Premium European Web Agency" />
     <meta property="og:site_name" content="DMC Kreatif" />
-    <meta property="og:locale" content="en" />
-    <meta property="og:locale:alternate" content="fr" />
-    <meta property="og:locale:alternate" content="nl" />
-    <meta property="og:locale:alternate" content="de" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:locale:alternate" content="nl_NL" />
+    <meta property="og:locale:alternate" content="de_DE" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />

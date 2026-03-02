@@ -7,7 +7,7 @@ import { trackEvent } from "@/lib/analytics";
 import CountdownTimer from "@/components/ui/CountdownTimer";
 
 const STORAGE_KEY = "dmc_campaign_popup_shown";
-const SHOW_DELAY_MS = 1500;
+const SHOW_DELAY_MS = 5000;
 
 export default function CampaignPopup() {
   const { t } = useTranslation();

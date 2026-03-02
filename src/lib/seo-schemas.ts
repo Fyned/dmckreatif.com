@@ -32,7 +32,7 @@ export function buildProfessionalServiceSchema(reviews?: Array<{
     email: "hello@dmckreatif.com",
     priceRange: "€€",
     description:
-      "UK-registered web development agency with 100+ professionals serving European businesses. Custom websites, e-commerce, SEO and digital marketing across 6 countries.",
+      "UK-registered web development agency serving European businesses across France, Belgium, Netherlands, Germany and the UK. Custom websites, e-commerce, SEO and digital marketing.",
     foundingDate: "2023-01-01",
     founder: {
       "@type": "Person",
@@ -169,12 +169,15 @@ export function buildServiceSchema(params: {
   description: string;
   price: string;
   locale: string;
+  slug?: string;
 }) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    ...(params.slug && { url: `${BASE_URL}/${params.locale}/services/${params.slug}` }),
     provider: {
       "@type": "Organization",
+      "@id": `${BASE_URL}/#organization`,
       name: "DMC Kreatif",
       url: BASE_URL,
     },

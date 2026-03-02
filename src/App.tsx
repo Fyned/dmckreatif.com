@@ -8,7 +8,9 @@ import CookieBanner from "@/components/gdpr/CookieBanner";
 
 /* ── Lazy-loaded Pages ── */
 const HomePage = lazy(() => import("@/pages/HomePage"));
-const ServicesPage = lazy(() => import("@/pages/ServicesPage"));
+const ServicesPage = lazy(() =>
+  import("@/i18n").then((m) => m.loadEnNamespace("services", "seo")).then(() => import("@/pages/ServicesPage"))
+);
 const PortfolioPage = lazy(() => import("@/pages/PortfolioPage"));
 const PricingPage = lazy(() => import("@/pages/PricingPage"));
 const AboutPage = lazy(() => import("@/pages/AboutPage"));

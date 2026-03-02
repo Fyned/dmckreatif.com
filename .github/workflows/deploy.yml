@@ -9,7 +9,7 @@ jobs:
   deploy:
     name: Build & FTP Deploy
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
 
     steps:
       - name: Checkout repository
@@ -25,7 +25,7 @@ jobs:
         run: npm ci
 
       - name: Build production
-        run: npm run build
+        run: npm run build:prerender
         env:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}

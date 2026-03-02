@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useParams, Link } from "react-router-dom";
 import SeoHead from "@/components/seo/SeoHead";
 import JsonLd from "@/components/seo/JsonLd";
-import { buildBlogPostingSchema } from "@/lib/seo-schemas";
+import { buildBlogPostingSchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
 import { motion } from "framer-motion";
 import { ArrowLeft, Clock, ArrowRight, Code2, Tag, BookOpen } from "lucide-react";
 import NeoBadge from "@/components/ui/NeoBadge";
@@ -201,9 +201,17 @@ export default function BlogPostPage() {
           title: article.title,
           description: article.excerpt,
           datePublished: article.date,
+          dateModified: article.updatedDate ?? article.date,
           slug: article.slug,
           locale: currentLocale,
         })}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema(
+          currentLocale,
+          [{ name: "Blog", path: "/blog" }],
+          article.title
+        )}
       />
 
       {/* Reading progress bar */}

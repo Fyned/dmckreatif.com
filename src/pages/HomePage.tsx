@@ -17,10 +17,7 @@ const TrustSection = lazy(() => import("@/components/home/TrustSection"));
 const FaqSection = lazy(() => import("@/components/home/FaqSection"));
 const CTASection = lazy(() => import("@/components/home/CTASection"));
 import JsonLd from "@/components/seo/JsonLd";
-import {
-  buildFAQPageSchema,
-  buildHowToSchema,
-} from "@/lib/seo-schemas";
+import { buildFAQPageSchema } from "@/lib/seo-schemas";
 import { useAnalytics } from "@/lib/useAnalytics";
 
 export default function HomePage() {
@@ -38,13 +35,6 @@ export default function HomePage() {
     { question: t("faq.q8", "Can I see examples of your work?"), answer: t("faq.a8", "Absolutely! Visit our Portfolio page to see live projects across France, Belgium, and the UK. We've built websites for construction companies, energy consultants, accountants, and e-commerce stores.") },
   ];
 
-  const processSteps = [
-    { name: t("process.step1Title", "Discovery Call"), text: t("process.step1Desc", "Free 30-minute consultation. We discuss your goals, target audience, competitors, and technical requirements.") },
-    { name: t("process.step2Title", "Proposal & Design"), text: t("process.step2Desc", "We deliver a tailored proposal with wireframes, design mockups, and a clear timeline. You approve before we start.") },
-    { name: t("process.step3Title", "Development"), text: t("process.step3Desc", "We build your site with modern tech (React, Vite, Tailwind). You get weekly updates and a staging preview.") },
-    { name: t("process.step4Title", "Launch & Support"), text: t("process.step4Desc", "After your approval, we deploy the site live. Ongoing support available through our Care Plan (€97/mo).") },
-  ];
-
   return (
     <>
       <SeoHead
@@ -52,17 +42,9 @@ export default function HomePage() {
         description={t("seo.home.description", "Premium web development for European businesses. React, Next.js, Vite. France, Belgium, UK, Netherlands, Germany.")}
       />
       <JsonLd data={buildFAQPageSchema(homeFaqs)} />
-      <JsonLd
-        data={buildHowToSchema({
-          name: "How to Get a Website Built by DMC Kreatif",
-          description: "Our 4-step process from initial consultation to website launch and ongoing support.",
-          totalTime: "P14D",
-          steps: processSteps,
-        })}
-      />
       <HeroSection />
       <MarqueeStrip />
-      <Suspense fallback={null}>
+      <Suspense fallback={<div className="min-h-[400px]" />}>
         <ClientLogoBar />
         <ServicesGrid />
         <PortfolioShowcase />

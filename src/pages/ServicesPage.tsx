@@ -247,6 +247,7 @@ export default function ServicesPage() {
           <SectionHeader
             title={t("services.sectionTitle", "WHAT WE BUILD")}
             subtitle={t("services.sectionSubtitle", "SYS.SERVICES")}
+            headingLevel={1}
           />
 
           <motion.div

@@ -20,7 +20,7 @@ const SITE_ORIGIN = "https://dmckreatif.com";
 const PORT = 4173;
 const CONCURRENCY = 4;
 const PAGE_TIMEOUT = 30000;
-const MAX_URLS = 100;
+const MAX_URLS = 650;
 
 // MIME types for the static server
 const MIME = {

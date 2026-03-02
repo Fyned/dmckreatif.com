@@ -11,7 +11,7 @@ import NeoButton from "@/components/ui/NeoButton";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { supabase } from "@/lib/supabase";
 import JsonLd from "@/components/seo/JsonLd";
-import { buildLocalBusinessSchema, buildContactPageSchema, buildBreadcrumbSchema, buildProfessionalServiceSchema } from "@/lib/seo-schemas";
+import { buildContactPageSchema, buildBreadcrumbSchema, buildProfessionalServiceSchema } from "@/lib/seo-schemas";
 import { fadeInUp, viewportConfig } from "@/lib/animations";
 import { BOOKING_URL } from "@/lib/constants";
 import { useAnalytics } from "@/lib/useAnalytics";
@@ -152,7 +152,6 @@ export default function ContactPage() {
         path="/contact"
       />
 
-      <JsonLd data={buildLocalBusinessSchema()} />
       <JsonLd data={buildContactPageSchema(locale ?? "en")} />
       <JsonLd data={buildProfessionalServiceSchema([
         { author: "Pierre Cakir", rating: 5, body: "DMC Kreatif delivered our website in under a week with outstanding quality. The design is professional, the site loads in under 1.5 seconds, and our qualified leads increased by 40% in the first month. Truly exceeded every expectation.", company: "CAKIR FACADES", datePublished: "2024-03-15" },

@@ -136,6 +136,7 @@ export default function ServiceDetailPage() {
           description: t(service.descKey),
           price: service.priceFrom,
           locale: currentLocale,
+          slug: service.slug,
         })}
       />
 
