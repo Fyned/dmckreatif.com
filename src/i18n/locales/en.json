@@ -18,15 +18,15 @@
     "subtitle": "Premium web development for European businesses. Custom-built, blazing fast, multilingual.",
     "ctaPrimary": "START YOUR PROJECT",
     "ctaSecondary": "VIEW OUR WORK",
-    "stat1": "200+",
+    "stat1": "12+",
     "stat1Label": "Projects",
-    "stat2": "100+",
-    "stat2Label": "Team",
-    "stat3": "6",
+    "stat2": "4.9",
+    "stat2Label": "Rating",
+    "stat3": "5",
     "stat3Label": "Countries",
-    "stat4": "95+",
+    "stat4": "97+",
     "stat4Label": "Lighthouse",
-    "microCopy": "100+ professionals • 200+ international projects delivered across 6 European countries",
+    "microCopy": "Boutique agency • 12+ international projects • 5 European markets",
     "bookCall": "or book a free 15-min call →"
   },
   "marquee": {
@@ -691,10 +691,10 @@
     "sectionTitle": "ABOUT US",
     "sectionSubtitle": "SYS.ABOUT",
     "headline": "WE ARE DMC KREATIF",
-    "description": "A UK-registered web development agency with 100+ professionals serving European businesses across 6 countries. We combine cutting-edge React and Next.js technology with premium design to deliver websites that convert.",
+    "description": "A UK-registered web development agency with premium specialists serving European businesses across 5 countries. We combine cutting-edge React and Next.js technology with premium design to deliver websites that convert.",
     "founderName": "Musa Kerem Demirci",
     "founderRole": "CEO & FOUNDER",
-    "founderBio": "Musa Kerem Demirci is the CEO and founder of DMC Kreatif, a UK-registered web development agency with over 100 professionals serving businesses across Western Europe. Under his leadership, the agency has grown from a boutique studio into a full-service digital powerhouse with dedicated departments for frontend engineering, UX/UI design, SEO, e-commerce, content, QA, and client success. With deep expertise in React, Next.js, TypeScript, and modern web architecture, Musa personally oversees the technical direction of every major project — ensuring 95+ Google Lighthouse scores, sub-2-second load times, and multilingual SEO implementation across all deliveries. Before founding DMC Kreatif in 2023, he gained international experience working with enterprise and SMB clients across construction, energy, finance, education, and e-commerce sectors. The agency has since delivered 200+ projects for clients in France, Belgium, the United Kingdom, the Netherlands, Germany, and Switzerland, with a 98% on-time delivery rate and 4.9/5 client satisfaction score. Musa holds a Computer Engineering degree and speaks English, French, and Turkish. His distributed team model — 35 core employees plus a vetted specialist network — gives clients access to world-class talent at competitive European rates. His philosophy is simple: every pixel matters, every millisecond counts, and every European business deserves a website that truly converts.",
+    "founderBio": "Musa Kerem Demirci is the founder of DMC Kreatif, a UK-registered boutique web development agency serving European businesses. With deep expertise in React, Next.js, TypeScript, and modern web architecture, he personally oversees every project — ensuring 95+ Google Lighthouse scores, sub-2-second load times, and multilingual SEO implementation. Before founding DMC Kreatif in 2023, he gained international experience with clients across construction, energy, finance, and e-commerce sectors. The agency has delivered projects for clients in France, Belgium, the United Kingdom, the Netherlands, and Germany, with a 4.9/5 client satisfaction score. Musa holds a Computer Engineering degree and speaks English, French, and Turkish. His philosophy: every pixel matters, every millisecond counts, and every European business deserves a website that truly converts.",
     "mission": "OUR MISSION",
     "missionText": "To deliver premium web solutions that help European businesses grow. Every pixel matters. Every millisecond counts.",
     "value1Title": "QUALITY FIRST",
@@ -719,15 +719,15 @@
     "milestone1Title": "DMC Kreatif Founded",
     "milestone1Desc": "Launched as a premium web agency targeting European businesses. Assembled the founding team of frontend engineers, designers, and SEO specialists.",
     "milestone2Title": "French Market Established",
-    "milestone2Desc": "Delivered first major projects for Cakir Facades, Altinbas Moustiquaire, and Consulting Energy in France. Team grew to 25+ professionals.",
+    "milestone2Desc": "Delivered first major projects for Cakir Facades, Altinbas Moustiquaire, and Consulting Energy in France. Team grew to the founding team.",
     "milestone3Title": "UK Headquarters Registered",
     "milestone3Desc": "Registered the company in the United Kingdom. Opened London headquarters and expanded to serve UK clients including Adamsons Accountants.",
-    "milestone4Title": "100+ Projects Milestone",
-    "milestone4Desc": "Surpassed 100 completed international projects across France, Belgium, and UK. Team expanded to 50+ with dedicated departments for design, development, and SEO.",
+    "milestone4Title": "Multiple Markets Established",
+    "milestone4Desc": "Successfully delivered projects across France, Belgium, and the United Kingdom. Built a solid reputation for premium design and performance-first development.",
     "milestone5Title": "European Expansion",
-    "milestone5Desc": "Extended services to Netherlands, Germany, and Switzerland. Team grew to 100+ professionals across 12 departments. Launched multilingual platform with 4 languages.",
-    "milestone6Title": "200+ Projects & Template Platform",
-    "milestone6Desc": "Reached 200+ completed projects serving 6 European countries. Launched ready-made website templates. Established specialist partner network across 4 countries."
+    "milestone5Desc": "Extended services to Netherlands and Germany. Launched multilingual platform with 4 languages (EN/FR/NL/DE) for full European market coverage.",
+    "milestone6Title": "Template Platform Launch",
+    "milestone6Desc": "Launched ready-made website templates for quick delivery. Established specialist partner network for scalable project delivery across Europe."
   },
   "contact": {
     "introHeading": "Start a Conversation About Your Project",
@@ -1164,7 +1164,7 @@
     "breadcrumb": "WHY US",
     "heroTag": "SYS.WHY_US",
     "heroTitle": "WHY DMC KREATIF",
-    "heroDesc": "100+ professionals, 200+ projects, 6 countries. We build premium websites that outperform the competition.",
+    "heroDesc": "12+ projects, 5 European markets, 4 languages. We build premium websites that outperform the competition.",
     "reasonsTitle": "8 REASONS TO CHOOSE US",
     "reasonsTag": "SYS.DIFFERENTIATORS",
     "reason1Title": "European DNA",
@@ -1266,12 +1266,12 @@
       "description": "Transparent web development pricing. Launch €497, Growth €997, Scale €1,997, Commerce €2,997. Free consultation, 24h response, satisfaction guaranteed."
     },
     "about": {
-      "title": "About DMC Kreatif — European Web Development Agency | 100+ Professionals",
-      "description": "UK-registered web development agency with 100+ professionals serving businesses across France, Belgium, UK, Netherlands and Germany. 200+ projects, 6 countries, 4 languages."
+      "title": "About DMC Kreatif — Boutique European Web Development Agency",
+      "description": "UK-registered web development agency with premium specialists serving businesses across France, Belgium, UK, Netherlands and Germany. 30+ projects, 5 countries, 4 languages."
     },
     "team": {
-      "title": "Our Team — 100+ Web Development Professionals | DMC Kreatif",
-      "description": "Meet our team of 100+ web development professionals across 12 departments. Frontend engineers, UX designers, SEO specialists and more serving European businesses."
+      "title": "Our Team — DMC Kreatif Web Development Agency",
+      "description": "Meet the DMC Kreatif team: frontend engineers, UX designers, and SEO specialists Frontend engineers, UX designers, SEO specialists and more serving European businesses."
     },
     "process": {
       "title": "Our Process — How We Build Premium Websites | DMC Kreatif",
@@ -1287,7 +1287,7 @@
     },
     "careers": {
       "title": "Careers at DMC Kreatif — Join Our European Web Agency Team",
-      "description": "Join 100+ professionals building the future of European web. Remote-first, cutting-edge stack, premium clients. Open positions in React, Next.js, UX, SEO."
+      "description": "Join premium specialists building the future of European web. Remote-first, cutting-edge stack, premium clients. Open positions in React, Next.js, UX, SEO."
     },
     "blog": {
       "title": "Web Development Blog — SEO Tips, E-Commerce Guides | DMC Kreatif",

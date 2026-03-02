@@ -53,7 +53,7 @@ export function buildProfessionalServiceSchema(reviews?: Array<{
     },
     numberOfEmployees: {
       "@type": "QuantitativeValue",
-      minValue: 100,
+      minValue: 1,
     },
     address: {
       "@type": "PostalAddress",
