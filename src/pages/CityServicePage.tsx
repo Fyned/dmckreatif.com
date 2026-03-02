@@ -24,7 +24,7 @@ export default function CityServicePage() {
     );
   }
 
-  const cityName = city.slug.charAt(0).toUpperCase() + city.slug.slice(1);
+  const cityName = t(city.nameKey);
 
   const services = [
     { key: "cityPages.serviceWeb", icon: "\u{1F4BB}" },
