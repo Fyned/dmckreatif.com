@@ -50,7 +50,7 @@ export default function HeroSection() {
             variants={fadeInUp}
             className="flex flex-col sm:flex-row gap-4 mb-4"
           >
-            <NeoButton href="/contact" size="lg" color="neo-lime">
+            <NeoButton href="/pricing" size="lg" color="neo-lime">
               {t("hero.ctaPrimary")} <ArrowRight size={18} />
             </NeoButton>
             <NeoButton href="/portfolio" variant="outline" size="lg">

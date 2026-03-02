@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
+import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Zap, Star } from "lucide-react";
-import { pricingTiers } from "@/lib/pricing-data";
-import { templateTiers } from "@/lib/template-data";
+import { ArrowRight, Package, CheckCircle2 } from "lucide-react";
+import { bundles } from "@/lib/pricing-data";
 import NeoButton from "@/components/ui/NeoButton";
-import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
+import { fadeInUp, staggerContainer, scaleIn, viewportConfig } from "@/lib/animations";
 
 const bgMap: Record<string, string> = {
   "neo-lime": "bg-neo-lime",
@@ -13,15 +13,18 @@ const bgMap: Record<string, string> = {
   "neo-purple": "bg-neo-purple",
 };
 
-const originalPrices: Record<string, string> = {
-  launch: "€497",
-  growth: "€997",
-  scale: "€1,997",
-  commerce: "€2,997",
+const typeColors: Record<string, string> = {
+  website: "bg-neo-lime",
+  seo: "bg-neo-blue",
+  care: "bg-neo-yellow",
+  branding: "bg-neo-pink",
+  marketing: "bg-neo-purple",
 };
 
 export default function PricingPreview() {
   const { t } = useTranslation();
+  const { locale } = useParams();
+  const currentLocale = locale ?? "en";
 
   return (
     <section className="py-section-sm lg:py-section bg-neo-black text-neo-bg relative overflow-hidden">
@@ -38,131 +41,126 @@ export default function PricingPreview() {
       </div>
 
       <div className="relative max-w-container mx-auto px-6 lg:px-10">
-        {/* Section Header */}
+        {/* Header */}
         <motion.div
-          variants={fadeInUp}
+          variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
           className="mb-12 text-center"
         >
-          <span className="inline-block font-mono text-xs font-bold tracking-[0.2em] text-neo-lime mb-3 border-2 border-neo-lime/30 px-3 py-1">
-            {t("pricing.sectionSubtitle", "SYS.INVESTMENT")}
-          </span>
-          <h2 className="font-space font-extrabold text-h2 lg:text-[3.5rem] text-neo-bg tracking-tight">
-            {t("pricing.sectionTitle", "YOUR INVESTMENT")}
-          </h2>
+          <motion.div variants={fadeInUp}>
+            <span className="inline-flex items-center gap-2 font-mono text-xs font-bold tracking-[0.2em] text-neo-lime mb-3 border-2 border-neo-lime/30 px-3 py-1">
+              <Package size={12} />
+              {t("pricing.bundlesSubtitle", "SYS.PACKAGES")}
+            </span>
+          </motion.div>
+          <motion.h2
+            variants={fadeInUp}
+            className="font-space font-extrabold text-h2 lg:text-[3.5rem] text-neo-bg tracking-tight"
+          >
+            {t("pricing.bundlesTitle", "COMPLETE PACKAGES")}
+          </motion.h2>
           <div className="w-16 h-1 bg-neo-lime mt-4 mx-auto" />
-
-          {/* Discount banner */}
-          <div className="mt-6 inline-flex items-center gap-2 bg-neo-lime/10 border-2 border-neo-lime px-4 py-2">
-            <Zap size={16} className="text-neo-lime" strokeWidth={3} />
-            <span className="font-space font-bold text-sm text-neo-lime uppercase tracking-wider">
-              {t("promo.bannerShort", "25% OFF — LIMITED TIME")}
-            </span>
-          </div>
+          <motion.p
+            variants={fadeInUp}
+            className="font-mono text-sm text-neo-bg/60 max-w-2xl mx-auto mt-5"
+          >
+            {t("pricing.bundlesDesc", "Everything your business needs — website, branding, SEO, advertising, and ongoing care. One package, one price.")}
+          </motion.p>
         </motion.div>
 
-        {/* Template Quick Strip */}
-        <motion.div
-          variants={fadeInUp}
-          initial="hidden"
-          animate="visible"
-          className="mb-8 border-2 border-neo-lime/30 bg-neo-lime/5 p-4 flex flex-col sm:flex-row items-center justify-between gap-4"
-        >
-          <div className="flex items-center gap-4">
-            <span className="font-space font-bold text-sm uppercase text-neo-lime">
-              {t("pricing.templatesFrom", "TEMPLATES FROM")}
-            </span>
-            <div className="flex gap-2">
-              {templateTiers.map((tier) => (
-                <span
-                  key={tier.id}
-                  className={`${bgMap[tier.color] ?? "bg-neo-lime"} border-2 border-neo-black px-3 py-1 font-mono text-xs font-bold text-neo-black`}
-                >
-                  €{tier.price}
-                </span>
-              ))}
-            </div>
-          </div>
-          <NeoButton href="/templates" variant="outline" size="sm">
-            {t("pricing.browseTemplates", "BROWSE")} <ArrowRight size={14} />
-          </NeoButton>
-        </motion.div>
-
-        {/* Pricing Cards */}
+        {/* Package Cards */}
         <motion.div
           variants={staggerContainer}
           initial="hidden"
-          animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          whileInView="visible"
+          viewport={viewportConfig}
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6"
         >
-          {pricingTiers.map((tier) => {
-            const features = t(`pricing.${tier.featuresKey}`).split(" // ");
-            const original = originalPrices[tier.id];
+          {bundles.map((bundle) => {
+            const featuresString = t(`pricing.${bundle.featuresKey}`, "");
+            const features = featuresString.split("//").map((f: string) => f.trim()).filter(Boolean);
+            const bg = bgMap[bundle.color] ?? "bg-neo-lime";
+
             return (
               <motion.div
-                key={tier.id}
-                variants={fadeInUp}
-                className={`border-2 ${
-                  tier.popular ? "border-neo-lime" : "border-neo-bg/20"
-                } bg-neo-bg/5 relative ${
-                  tier.popular ? "lg:-translate-y-3 shadow-[0_0_30px_rgba(205,255,80,0.15)]" : ""
-                }`}
+                key={bundle.id}
+                variants={scaleIn}
+                className={`relative bg-neo-bg/5 border-2 ${
+                  bundle.popular ? "border-neo-lime shadow-[0_0_30px_rgba(205,255,80,0.15)]" : "border-neo-bg/20"
+                } flex flex-col transition-all duration-300 hover:border-neo-lime/50`}
               >
-                {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <div className="bg-neo-lime border-2 border-neo-black px-4 py-1 shadow-hard-sm flex items-center gap-1.5">
-                      <Star size={12} className="text-neo-black" strokeWidth={3} />
+                {bundle.popular && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
+                    <div className={`${bg} border-2 border-neo-black px-4 py-1 shadow-hard-sm`}>
                       <span className="font-space font-bold text-xs text-neo-black uppercase tracking-wider">
-                        {t("pricing.popular")}
+                        {t(`pricing.${bundle.tagKey}`, "MOST POPULAR")}
                       </span>
                     </div>
                   </div>
                 )}
 
-                <div className={`h-2 ${bgMap[tier.color] ?? "bg-neo-lime"}`} />
+                <div className={`h-1.5 ${bg}`} />
 
-                <div className="p-6">
-                  <h3 className="font-space font-bold text-lg mb-1 text-neo-bg">
-                    {t(`pricing.${tier.nameKey}`)}
+                <div className="p-5 flex flex-col flex-1">
+                  {/* Name */}
+                  <h3 className="font-space font-bold text-sm text-neo-bg tracking-wider mb-3">
+                    {t(`pricing.${bundle.nameKey}`, bundle.id)}
                   </h3>
-                  <p className="font-mono text-xs text-neo-bg/50 uppercase tracking-wider mb-4">
-                    {t("pricing.startingAt")}
-                  </p>
 
-                  {/* Price with strikethrough */}
-                  <div className="mb-1">
-                    {original && (
-                      <span className="font-mono text-sm text-neo-bg/30 line-through mr-2">
-                        {original}
-                      </span>
-                    )}
-                    <span className="font-space font-extrabold text-4xl text-neo-lime">
-                      €{tier.price.toLocaleString()}
-                    </span>
-                  </div>
-
-                  <p className="font-mono text-xs text-neo-bg/50 uppercase tracking-wider mb-6">
-                    {t("pricing.delivery")}: {t(`pricing.${tier.deliveryKey}`)}
-                  </p>
-
-                  <div className="border-t border-neo-bg/10 pt-4 mb-6">
-                    {features.slice(0, 5).map((feature) => (
-                      <div key={feature} className="flex items-start gap-2 py-1.5">
-                        <span className="w-1.5 h-1.5 bg-neo-lime mt-1.5 flex-shrink-0" />
-                        <span className="font-mono text-sm text-neo-bg/70">{feature}</span>
+                  {/* Included services breakdown */}
+                  <div className="space-y-1.5 mb-4">
+                    {bundle.includes.map((item) => (
+                      <div key={item.label} className="flex items-center gap-2 font-mono text-[11px]">
+                        <span className={`w-2 h-2 flex-shrink-0 ${typeColors[item.type] ?? "bg-neo-lime"} border border-neo-bg/20`} />
+                        <span className="text-neo-bg/60 flex-1">{item.label}</span>
+                        <span className="text-neo-bg/30 text-[10px]">€{item.value.toLocaleString()}</span>
                       </div>
                     ))}
-                    {features.length > 5 && (
-                      <p className="font-mono text-xs text-neo-bg/40 mt-1">
-                        +{features.length - 5} more...
+                  </div>
+
+                  {/* Price */}
+                  <div className="border-t border-neo-bg/10 pt-3 mb-4">
+                    <div className="flex justify-between font-mono text-[10px] text-neo-bg/30 mb-1">
+                      <span>Regular</span>
+                      <span className="line-through">€{bundle.regularPrice.toLocaleString()}</span>
+                    </div>
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-space font-extrabold text-2xl text-neo-lime">
+                        €{bundle.bundlePrice.toLocaleString()}
+                      </span>
+                      <span className={`${bg} border border-neo-black font-space font-bold text-[10px] text-neo-black px-2 py-1`}>
+                        SAVE {bundle.savingsPercent}%
+                      </span>
+                    </div>
+                    {bundle.monthlyEquiv && (
+                      <p className="font-mono text-[10px] text-neo-bg/40 mt-1">
+                        ≈ €{bundle.monthlyEquiv}/mo over {bundle.seoMonths} months
                       </p>
                     )}
                   </div>
 
-                  <NeoButton href="/contact" size="sm" color={tier.color} className="w-full">
-                    {t("pricing.getStarted")} <ArrowRight size={14} />
+                  {/* Top features */}
+                  <ul className="space-y-1.5 mb-5 flex-1">
+                    {features.slice(0, 4).map((f: string) => (
+                      <li key={f} className="flex items-start gap-2 font-mono text-[11px] text-neo-bg/60">
+                        <CheckCircle2 size={12} className="text-neo-lime flex-shrink-0 mt-0.5" />
+                        {f}
+                      </li>
+                    ))}
+                    {features.length > 4 && (
+                      <li className="font-mono text-[10px] text-neo-bg/30">+{features.length - 4} more included</li>
+                    )}
+                  </ul>
+
+                  <NeoButton
+                    href={`/${currentLocale}/contact`}
+                    size="sm"
+                    color={bundle.color}
+                    className="w-full mt-auto"
+                  >
+                    {t("pricing.getBundle", "GET THIS PACKAGE")} <ArrowRight size={13} />
                   </NeoButton>
                 </div>
               </motion.div>
@@ -170,15 +168,23 @@ export default function PricingPreview() {
           })}
         </motion.div>
 
+        {/* Footer note + CTA */}
         <motion.div
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           viewport={viewportConfig}
-          className="mt-12 text-center"
+          className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4"
         >
-          <NeoButton href="/pricing" variant="outline" size="md">
-            {t("pricing.viewAll")} <ArrowRight size={14} />
+          <p className="font-mono text-xs text-neo-bg/30">
+            {t("pricing.bundlePaymentNote", "50% upfront, 50% on delivery. Installment plans available.")}
+            {" · "}
+            <span className="text-neo-bg/50">
+              {t("pricing.freeConsultNote", "Need help choosing? Book a free call.")}
+            </span>
+          </p>
+          <NeoButton href={`/${currentLocale}/pricing`} variant="outline" size="sm">
+            See all options <ArrowRight size={14} />
           </NeoButton>
         </motion.div>
       </div>
