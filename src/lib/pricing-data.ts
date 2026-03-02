@@ -130,6 +130,46 @@ export const seoPlans: SeoPlan[] = [
   },
 ];
 
+export interface SocialPlan {
+  id: string;
+  nameKey: string;
+  price: number;
+  period: string;
+  color: string;
+  featuresKey: string;
+  popular: boolean;
+}
+
+export const socialPlans: SocialPlan[] = [
+  {
+    id: "starter",
+    nameKey: "socialStarter",
+    price: 197,
+    period: "month",
+    color: "neo-lime",
+    featuresKey: "socialStarterFeatures",
+    popular: false,
+  },
+  {
+    id: "active",
+    nameKey: "socialActive",
+    price: 397,
+    period: "month",
+    color: "neo-yellow",
+    featuresKey: "socialActiveFeatures",
+    popular: true,
+  },
+  {
+    id: "dominant",
+    nameKey: "socialDominant",
+    price: 697,
+    period: "month",
+    color: "neo-blue",
+    featuresKey: "socialDominantFeatures",
+    popular: false,
+  },
+];
+
 export interface AddOn {
   nameKey: string;
   price: string;
@@ -144,7 +184,7 @@ export const addOns: AddOn[] = [
 ];
 
 export interface BundleItem {
-  type: "website" | "seo" | "care" | "branding" | "marketing";
+  type: "website" | "seo" | "care" | "branding" | "marketing" | "social";
   label: string;
   value: number;
 }
@@ -192,15 +232,16 @@ export const bundles: Bundle[] = [
     tagKey: "pkgBusinessCompleteTag",
     color: "neo-yellow",
     includes: [
-      { type: "website",   label: "Business Website",          value: 997  },
-      { type: "branding",  label: "Logo + Social Media Kit",   value: 448  },
-      { type: "seo",       label: "Growth SEO \u00d7 6 months",  value: 2094 },
-      { type: "marketing", label: "Google Ads Setup",           value: 449  },
-      { type: "care",      label: "Care Pro \u00d7 6 months",    value: 582  },
+      { type: "website",   label: "Business Website",              value: 997  },
+      { type: "branding",  label: "Logo + Social Media Kit",       value: 448  },
+      { type: "seo",       label: "Growth SEO \u00d7 6 months",    value: 2094 },
+      { type: "marketing", label: "Google Ads Setup",              value: 449  },
+      { type: "social",    label: "Social Starter \u00d7 3 months", value: 591  },
+      { type: "care",      label: "Care Pro \u00d7 6 months",      value: 582  },
     ],
-    regularPrice: 4570,
+    regularPrice: 5161,
     bundlePrice: 2997,
-    savingsPercent: 34,
+    savingsPercent: 42,
     monthlyEquiv: 500,
     seoMonths: 6,
     featuresKey: "pkgBusinessCompleteFeatures",
@@ -212,15 +253,16 @@ export const bundles: Bundle[] = [
     tagKey: "pkgScaleCompleteTag",
     color: "neo-blue",
     includes: [
-      { type: "website",   label: "Scale Website",                  value: 1997 },
-      { type: "branding",  label: "Logo + Social Media Kit",        value: 448  },
+      { type: "website",   label: "Scale Website",                   value: 1997 },
+      { type: "branding",  label: "Logo + Social Media Kit",         value: 448  },
       { type: "seo",       label: "Growth SEO \u00d7 12 months",     value: 4188 },
       { type: "marketing", label: "Google Ads Setup",                value: 449  },
+      { type: "social",    label: "Social Active \u00d7 3 months",   value: 1191 },
       { type: "care",      label: "Care Pro \u00d7 12 months",       value: 1164 },
     ],
-    regularPrice: 8246,
+    regularPrice: 9437,
     bundlePrice: 5997,
-    savingsPercent: 27,
+    savingsPercent: 36,
     monthlyEquiv: 500,
     seoMonths: 12,
     featuresKey: "pkgScaleCompleteFeatures",
@@ -232,15 +274,16 @@ export const bundles: Bundle[] = [
     tagKey: "pkgCommerceCompleteTag",
     color: "neo-purple",
     includes: [
-      { type: "website",   label: "Commerce Website",               value: 2997 },
-      { type: "branding",  label: "Logo + Social Media Kit",        value: 448  },
-      { type: "seo",       label: "Authority SEO \u00d7 12 months", value: 7188 },
-      { type: "marketing", label: "Google Ads Setup",               value: 449  },
+      { type: "website",   label: "Commerce Website",                value: 2997 },
+      { type: "branding",  label: "Logo + Social Media Kit",         value: 448  },
+      { type: "seo",       label: "Authority SEO \u00d7 12 months",  value: 7188 },
+      { type: "marketing", label: "Google Ads Setup",                value: 449  },
+      { type: "social",    label: "Social Active \u00d7 6 months",   value: 2382 },
       { type: "care",      label: "Care Enterprise \u00d7 12 months", value: 2364 },
     ],
-    regularPrice: 13446,
+    regularPrice: 15828,
     bundlePrice: 9997,
-    savingsPercent: 26,
+    savingsPercent: 37,
     monthlyEquiv: 833,
     seoMonths: 12,
     featuresKey: "pkgCommerceCompleteFeatures",

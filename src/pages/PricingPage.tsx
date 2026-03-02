@@ -29,6 +29,12 @@ import {
   Link2,
   MapPin,
   FileBarChart,
+  Hash,
+  Camera,
+  MessageCircle,
+  BarChart2,
+  PenLine,
+  Video,
 } from "lucide-react";
 import { useState } from "react";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -38,7 +44,7 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import PromoBanner from "@/components/ui/PromoBanner";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildOfferSchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
-import { pricingTiers, addOns, carePlanTiers, seoPlans, bundles } from "@/lib/pricing-data";
+import { pricingTiers, addOns, carePlanTiers, seoPlans, socialPlans, bundles } from "@/lib/pricing-data";
 import { templateTiers } from "@/lib/template-data";
 import {
   fadeInUp,
@@ -218,6 +224,7 @@ export default function PricingPage() {
                 website: "bg-neo-lime",
                 seo: "bg-neo-blue",
                 care: "bg-neo-yellow",
+                social: "bg-neo-pink",
                 branding: "bg-neo-pink",
                 marketing: "bg-neo-purple",
               };
@@ -1155,6 +1162,169 @@ export default function PricingPage() {
                     </h4>
                     <p className="font-mono text-xs text-neo-black/70 leading-relaxed">
                       {t(`pricing.seo.whatWeDo${item.key}Desc`, "")}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ═══ ZONE G: SOCIAL MEDIA MANAGEMENT ═══ */}
+      <section className="py-20 lg:py-28 section-alt">
+        <div className="max-w-container mx-auto px-6 lg:px-10">
+          <SectionHeader
+            title={t("pricing.socialTitle", "SOCIAL MEDIA MANAGEMENT")}
+            subtitle={t("pricing.socialSubtitle", "SYS.SOCIAL")}
+          />
+
+          <motion.p
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+            className="font-mono text-sm text-neo-black/70 max-w-2xl mb-12 -mt-6"
+          >
+            {t(
+              "pricing.socialDescription",
+              "Grow your brand on social media with consistent, high-quality content. We handle strategy, creation, and engagement — so you can focus on running your business."
+            )}
+          </motion.p>
+
+          {/* Social Plan Cards */}
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
+          >
+            {socialPlans.map((plan) => {
+              const bgAccent = bgAccentMap[plan.color] ?? "bg-neo-lime";
+              const featuresString = t(`pricing.social.${plan.id}Features`, "");
+              const features = featuresString
+                .split("//")
+                .map((f: string) => f.trim())
+                .filter(Boolean);
+
+              return (
+                <motion.div
+                  key={plan.id}
+                  variants={scaleIn}
+                  className={`relative bg-neo-white border-2 border-neo-black shadow-hard transition-all duration-300 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-hard-sm ${
+                    plan.popular ? "ring-4 ring-neo-lime" : ""
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                      <NeoBadge color="neo-lime">
+                        {t("pricing.popular", "MOST POPULAR")}
+                      </NeoBadge>
+                    </div>
+                  )}
+
+                  <div className={`h-2 ${bgAccent}`} />
+
+                  <div className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div
+                        className={`w-10 h-10 ${bgAccent} border-2 border-neo-black flex items-center justify-center shadow-hard-sm`}
+                      >
+                        <Share2 size={18} strokeWidth={2.5} />
+                      </div>
+                      <h3 className="font-space font-bold text-base tracking-wider">
+                        {t(`pricing.social.${plan.id}`, plan.nameKey)}
+                      </h3>
+                    </div>
+
+                    <div className="mb-2">
+                      <span className="font-space font-bold text-3xl lg:text-4xl text-neo-black">
+                        {"€"}{t(`pricing.social.${plan.id}Price`, String(plan.price))}
+                      </span>
+                      <span className="font-mono text-sm text-neo-black/60">
+                        {t(`pricing.social.${plan.id}Period`, "")}
+                      </span>
+                    </div>
+
+                    <div className="mb-4" />
+
+                    <div className="w-full h-0.5 bg-neo-black/10 mb-4" />
+
+                    <ul className="space-y-2 mb-6">
+                      {features.map((feature: string) => (
+                        <li
+                          key={feature}
+                          className="flex items-start gap-2 font-mono text-xs text-neo-black/80"
+                        >
+                          <span
+                            className={`w-4 h-4 ${bgAccent} border border-neo-black flex items-center justify-center flex-shrink-0 mt-0.5`}
+                          >
+                            <span className="text-[8px] font-bold">+</span>
+                          </span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <NeoButton
+                      href="/contact"
+                      size="sm"
+                      color={plan.color}
+                      className="w-full"
+                    >
+                      {t("pricing.getStarted", "GET STARTED")}{" "}
+                      <ArrowRight size={14} />
+                    </NeoButton>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+
+          {/* What We Do Grid */}
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+            className="mb-4"
+          >
+            <h3 className="font-space font-bold text-xl lg:text-2xl uppercase tracking-wider mb-8">
+              {t("pricing.social.whatWeDoTitle", "WHAT WE DO FOR YOUR SOCIALS")}
+            </h3>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+          >
+            {[
+              { key: "1", icon: Camera },
+              { key: "2", icon: PenLine },
+              { key: "3", icon: MessageCircle },
+              { key: "4", icon: Hash },
+              { key: "5", icon: BarChart2 },
+              { key: "6", icon: Video },
+            ].map((item) => (
+              <motion.div
+                key={item.key}
+                variants={fadeInUp}
+                className="bg-neo-white border-2 border-neo-black shadow-hard p-5"
+              >
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-neo-lime border-2 border-neo-black flex items-center justify-center flex-shrink-0 shadow-hard-sm">
+                    <item.icon size={18} strokeWidth={2.5} />
+                  </div>
+                  <div>
+                    <h4 className="font-space font-bold text-sm uppercase tracking-wider mb-1">
+                      {t(`pricing.social.whatWeDo${item.key}Title`, "")}
+                    </h4>
+                    <p className="font-mono text-xs text-neo-black/70 leading-relaxed">
+                      {t(`pricing.social.whatWeDo${item.key}Desc`, "")}
                     </p>
                   </div>
                 </div>
