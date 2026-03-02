@@ -6,50 +6,14 @@ interface BreadcrumbItem {
 }
 
 /**
- * Organization schema for the homepage.
- * Includes logo, sameAs, and proper knowsAbout instead of invalid serviceType.
+ * Organization @id reference — full definition lives in index.html @graph.
+ * Using @id reference here links pages to the canonical entity without duplicating data.
  */
 export function buildOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "DMC Kreatif",
-    alternateName: "GMG Design",
-    url: BASE_URL,
-    logo: `${BASE_URL}/logo.svg`,
-    email: "hello@dmckreatif.com",
-    founder: {
-      "@type": "Person",
-      name: "Musa Kerem Demirci",
-      jobTitle: "CEO & Founder",
-      url: "https://www.linkedin.com/in/musakeremdemirci",
-    },
-    foundingDate: "2023-01-01",
-    numberOfEmployees: {
-      "@type": "QuantitativeValue",
-      minValue: 100,
-    },
-    areaServed: [
-      { "@type": "Country", name: "France" },
-      { "@type": "Country", name: "Belgium" },
-      { "@type": "Country", name: "United Kingdom" },
-      { "@type": "Country", name: "Netherlands" },
-      { "@type": "Country", name: "Germany" },
-      { "@type": "Country", name: "Switzerland" },
-    ],
-    knowsAbout: [
-      "Web Development",
-      "E-Commerce Development",
-      "SEO Optimization",
-      "Digital Marketing",
-      "React",
-      "Next.js",
-      "TypeScript",
-    ],
-    knowsLanguage: ["en", "fr", "nl", "de"],
-    sameAs: [
-      "https://www.linkedin.com/company/dmckreatif",
-    ],
+    "@id": `${BASE_URL}/#organization`,
   };
 }
 
