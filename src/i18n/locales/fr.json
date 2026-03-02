@@ -44,6 +44,48 @@
       "title": "Blog Création Web — Conseils SEO, Guides E-Commerce | DMC Kreatif",
       "description": "Guides pratiques sur la création de sites web, le référencement naturel, l'e-commerce et le marketing digital pour entreprises françaises."
     },
+    "blogPost": {
+      "agence-web-paris": {
+        "title": "Agence Web Paris — Création de Site Internet Professionnel | DMC Kreatif",
+        "description": "Trouvez la meilleure agence web à Paris. Critères de sélection, tarifs moyens, technologies React/Next.js et processus de création. Devis gratuit en 24h."
+      },
+      "creation-site-web-france": {
+        "title": "Création de Site Web Professionnel en France — Guide 2026 | DMC Kreatif",
+        "description": "Guide complet pour créer un site web professionnel en France. Budget, délais, technologies, hébergement, SEO et RGPD. Tout ce qu'il faut savoir en 2026."
+      },
+      "prix-site-web-france-2026": {
+        "title": "Prix d'un Site Web en France 2026 — Tarifs et Comparatifs | DMC Kreatif",
+        "description": "Combien coûte un site web en France en 2026 ? Freelance, agence, template : comparatif détaillé des tarifs selon le type de projet. Transparence garantie."
+      },
+      "agence-web-belgique": {
+        "title": "Agence Web Belgique — Sites Internet pour PME Belges | DMC Kreatif",
+        "description": "Création de sites web professionnels pour entreprises belges. Multilingue FR/NL/EN, RGPD, e-commerce. Tarifs transparents, devis gratuit."
+      },
+      "agence-web-bruxelles": {
+        "title": "Agence Web Bruxelles — Création de Sites Internet | DMC Kreatif",
+        "description": "Développement web professionnel à Bruxelles. React, Next.js, e-commerce multilingue. Livraison en 2–3 semaines, Lighthouse 95+. Devis gratuit."
+      },
+      "developpeur-react-paris": {
+        "title": "Développeur React Paris — Expert Frontend pour Votre Projet | DMC Kreatif",
+        "description": "Trouvez un développeur React expérimenté à Paris. Tarifs, compétences, freelance vs agence et questions clés à poser avant de recruter."
+      },
+      "seo-france-2026": {
+        "title": "SEO France 2026 — Référencement Naturel pour PME Françaises | DMC Kreatif",
+        "description": "Guide complet du SEO en France 2026. Core Web Vitals, contenu, netlinking, IA et stratégies locales pour améliorer votre classement sur Google.fr."
+      },
+      "site-web-pme-europe": {
+        "title": "Site Web pour PME Européennes — Guide Complet 2026 | DMC Kreatif",
+        "description": "Comment créer un site web efficace pour votre PME en Europe. Fonctionnalités, multilinguisme, RGPD, performance et ROI. Guide pratique 2026."
+      },
+      "agence-web-amsterdam": {
+        "title": "Agence Web Amsterdam — Sites Internet pour Entreprises Néerlandaises | DMC Kreatif",
+        "description": "Création de sites web pour entreprises néerlandaises et belges. Multilingue NL/EN/FR, e-commerce, iDEAL. Expertise Pays-Bas et Belgique."
+      },
+      "web-agency-london-2026": {
+        "title": "Web Agency London — Premium Web Development for UK Businesses | DMC Kreatif",
+        "description": "Find the right web agency in London. React, Next.js, pricing guide, red flags to avoid and how DMC Kreatif serves UK businesses remotely."
+      }
+    },
     "contact": {
       "title": "Contactez DMC Kreatif — Devis Gratuit pour Votre Site Web",
       "description": "Demandez un devis gratuit pour votre projet web. Réponse sous 24h. Nous accompagnons les entreprises en France, Belgique, Pays-Bas et Allemagne."

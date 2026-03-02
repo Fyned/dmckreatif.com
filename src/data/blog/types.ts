@@ -10,6 +10,7 @@ export interface BlogArticle {
   updatedDate?: string;
   readTime: string;
   accentColor: string;
+  lang?: "en" | "fr" | "nl" | "de";
   relatedSlugs?: string[];
   relatedServiceSlugs?: string[];
   relatedTechSlugs?: string[];

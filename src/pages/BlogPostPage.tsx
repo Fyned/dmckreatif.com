@@ -24,6 +24,11 @@ const contentModules = import.meta.glob<{ default: string }>(
   { eager: false }
 );
 
+const contentModulesFr = import.meta.glob<{ default: string }>(
+  "/src/data/blog/content/fr/*.ts",
+  { eager: false }
+);
+
 function parseToc(html: string): TocItem[] {
   const items: TocItem[] = [];
   const regex = /<h([23])[^>]*>(.*?)<\/h[23]>/gi;
@@ -100,6 +105,7 @@ export default function BlogPostPage() {
       "ai-web-development-2026": "ai-web-development",
       "core-web-vitals-explained": "core-web-vitals-explained",
       "roi-professional-web-design": "roi-web-design",
+      "web-agency-london-2026": "web-agency-london",
     };
 
     const shortName = shortNames[slug];
@@ -108,6 +114,21 @@ export default function BlogPostPage() {
     }
 
     const tryLoad = async () => {
+      // FR locale: try FR content first
+      if (locale === "fr") {
+        const frKey = `/src/data/blog/content/fr/${slug}.ts`;
+        if (contentModulesFr[frKey]) {
+          try {
+            const mod = await contentModulesFr[frKey]();
+            setContent(mod.default);
+            setLoading(false);
+            return;
+          } catch {
+            // fall through to EN
+          }
+        }
+      }
+
       for (const key of patterns) {
         if (contentModules[key]) {
           try {
@@ -193,9 +214,13 @@ export default function BlogPostPage() {
   const seoTitle = t(`seo.blogPost.${article.slug}.title`, `${article.title} — DMC Kreatif`);
   const seoDesc = t(`seo.blogPost.${article.slug}.description`, article.excerpt);
 
+  const isFrArticle = article.lang === "fr";
+  const canonicalLang = isFrArticle ? "fr" : "en";
+  const canonicalLocales = isFrArticle ? ["fr"] : ["en"];
+
   return (
     <>
-      <SeoHead title={seoTitle} description={seoDesc} path={`/blog/${article.slug}`} locales={["en"]} canonicalLocale="en" />
+      <SeoHead title={seoTitle} description={seoDesc} path={`/blog/${article.slug}`} locales={canonicalLocales} canonicalLocale={canonicalLang} />
       <JsonLd
         data={buildBlogPostingSchema({
           title: article.title,

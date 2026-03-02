@@ -1818,6 +1818,69 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog/roi-professional-web-design"/>
     <lastmod>2026-02-28</lastmod>
   </url>
+
+  <!-- ==================== BLOG (FR) ==================== -->
+  <url>
+    <loc>https://dmckreatif.com/fr/blog/agence-web-paris</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/agence-web-paris"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/fr/blog/agence-web-paris"/>
+    <lastmod>2026-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/blog/creation-site-web-france</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/creation-site-web-france"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/fr/blog/creation-site-web-france"/>
+    <lastmod>2026-03-09</lastmod>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/blog/prix-site-web-france-2026</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/prix-site-web-france-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/fr/blog/prix-site-web-france-2026"/>
+    <lastmod>2026-03-08</lastmod>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/blog/agence-web-belgique</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/agence-web-belgique"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/fr/blog/agence-web-belgique"/>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/blog/agence-web-bruxelles</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/agence-web-bruxelles"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/fr/blog/agence-web-bruxelles"/>
+    <lastmod>2026-03-06</lastmod>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/blog/developpeur-react-paris</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/developpeur-react-paris"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/fr/blog/developpeur-react-paris"/>
+    <lastmod>2026-03-05</lastmod>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/blog/seo-france-2026</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/seo-france-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/fr/blog/seo-france-2026"/>
+    <lastmod>2026-03-04</lastmod>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/blog/site-web-pme-europe</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/site-web-pme-europe"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/fr/blog/site-web-pme-europe"/>
+    <lastmod>2026-03-03</lastmod>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/blog/agence-web-amsterdam</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/blog/agence-web-amsterdam"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/fr/blog/agence-web-amsterdam"/>
+    <lastmod>2026-03-02</lastmod>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/en/blog/web-agency-london-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/blog/web-agency-london-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/blog/web-agency-london-2026"/>
+    <lastmod>2026-03-01</lastmod>
+  </url>
+
   <url>
     <loc>https://dmckreatif.com/en/about/team</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/about/team"/>
