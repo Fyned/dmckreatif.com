@@ -3,7 +3,6 @@ import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Zap } from "lucide-react";
-import CountdownTimer from "@/components/ui/CountdownTimer";
 
 const DISMISS_KEY = "top_promo_dismissed";
 
@@ -42,11 +41,6 @@ export default function TopPromoBanner() {
               <span className="font-space font-bold text-xs sm:text-sm text-neo-lime uppercase tracking-wider whitespace-nowrap">
                 {t("promo.bannerShort", "25% OFF — LIMITED TIME")}
               </span>
-            </div>
-
-            {/* Inline countdown */}
-            <div className="hidden md:block">
-              <CountdownTimer variant="inline" />
             </div>
 
             {/* CTA Button */}

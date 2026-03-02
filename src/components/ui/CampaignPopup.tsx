@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Zap, ArrowRight, Check } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
-import CountdownTimer from "@/components/ui/CountdownTimer";
+
 
 const STORAGE_KEY = "dmc_campaign_popup_shown";
 const SHOW_DELAY_MS = 5000;
@@ -122,14 +122,9 @@ export default function CampaignPopup() {
               <p className="font-mono text-sm text-neo-white/60 text-center mb-5 max-w-sm mx-auto leading-relaxed">
                 {t(
                   "promo.popupDescription",
-                  "Premium websites at introductory prices. Don't miss out — offer expires soon."
+                  "Premium websites at introductory launch prices for new European clients."
                 )}
               </p>
-
-              {/* Countdown */}
-              <div className="flex justify-center mb-6">
-                <CountdownTimer variant="compact" />
-              </div>
 
               {/* Value props */}
               <div className="flex flex-col gap-2 mb-5">

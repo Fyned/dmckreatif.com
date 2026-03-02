@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Zap, Check } from "lucide-react";
 import NeoButton from "@/components/ui/NeoButton";
 import NeoBadge from "@/components/ui/NeoBadge";
-import CountdownTimer from "@/components/ui/CountdownTimer";
+
 import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
 
 export default function CampaignSection() {
@@ -83,16 +83,14 @@ export default function CampaignSection() {
                 </NeoButton>
               </motion.div>
 
-              {/* Right: Countdown + Price */}
+              {/* Right: Price */}
               <motion.div
                 variants={fadeInUp}
                 className="flex flex-col items-center gap-4 flex-shrink-0"
               >
                 <p className="font-mono text-xs text-neo-lime/60 uppercase tracking-widest">
-                  {t("promo.offerEndsIn", "OFFER ENDS IN")}
+                  {t("promo.launchPricing", "LAUNCH PRICING")}
                 </p>
-
-                <CountdownTimer variant="large" />
 
                 <div className="flex items-center gap-3 mt-2">
                   <span className="font-mono text-lg text-neo-lime/40 line-through">

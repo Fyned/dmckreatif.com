@@ -26,7 +26,7 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import JsonLd from "@/components/seo/JsonLd";
 import {
   buildIndustrySchema,
-  buildFAQPageSchema,
+  buildBreadcrumbSchema,
 } from "@/lib/seo-schemas";
 import {
   fadeInUp,
@@ -116,14 +116,7 @@ export default function IndustryDetailPage() {
           locale: currentLocale,
         })}
       />
-      <JsonLd
-        data={buildFAQPageSchema(
-          industry.faqKeys.map((key) => ({
-            question: t(`industryDetail.faq.${key}Q`),
-            answer: t(`industryDetail.faq.${key}A`),
-          }))
-        )}
-      />
+      <JsonLd data={buildBreadcrumbSchema(currentLocale, [{ name: "Home", path: "" }, { name: t("nav.industries", "Industries"), path: "/industries" }], t(industry.titleKey))} />
 
       {/* Hero */}
       <section className="py-20 lg:py-28">

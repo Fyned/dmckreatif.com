@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Zap, Check } from "lucide-react";
 import NeoBadge from "./NeoBadge";
-import CountdownTimer from "./CountdownTimer";
+
 import { fadeInUp, viewportConfig } from "@/lib/animations";
 
 interface PromoBannerProps {
@@ -35,7 +35,6 @@ export default function PromoBanner({ variant = "full" }: PromoBannerProps) {
               </p>
             </div>
           </div>
-          <CountdownTimer variant="compact" />
           <div className="flex-shrink-0 bg-neo-lime border-2 border-neo-black px-4 py-2 shadow-hard-sm">
             <span className="font-space font-bold text-lg text-neo-black">{t("promo.fromPrice", "From €497")}</span>
           </div>
@@ -75,9 +74,8 @@ export default function PromoBanner({ variant = "full" }: PromoBannerProps) {
           </p>
         </div>
 
-        {/* Right: Countdown + Perks */}
+        {/* Right: Perks */}
         <div className="flex flex-col items-center gap-4 flex-shrink-0">
-          <CountdownTimer variant="compact" />
           <div className="flex flex-col items-start gap-2">
             {[
               t("promo.perk1", "Free consultation"),

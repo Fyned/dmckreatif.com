@@ -30,7 +30,6 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import JsonLd from "@/components/seo/JsonLd";
 import {
   buildTechnologySchema,
-  buildFAQPageSchema,
 } from "@/lib/seo-schemas";
 import {
   fadeInUp,
@@ -124,14 +123,6 @@ export default function TechnologyDetailPage() {
           url: tech.officialUrl,
           locale: currentLocale,
         })}
-      />
-      <JsonLd
-        data={buildFAQPageSchema(
-          tech.faqKeys.map((key) => ({
-            question: t(`techDetail.faq.${key}Q`),
-            answer: t(`techDetail.faq.${key}A`),
-          }))
-        )}
       />
 
       {/* Hero */}

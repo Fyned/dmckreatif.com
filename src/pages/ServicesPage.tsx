@@ -21,7 +21,7 @@ import NeoBadge from "@/components/ui/NeoBadge";
 import { useAnalytics } from "@/lib/useAnalytics";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import JsonLd from "@/components/seo/JsonLd";
-import { buildAllServicesSchema, buildFAQPageSchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
+import { buildAllServicesSchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
 import {
   fadeInUp,
   staggerContainer,
@@ -229,14 +229,6 @@ export default function ServicesPage() {
       {buildAllServicesSchema(currentLocale).map((schema, i) => (
         <JsonLd key={i} data={schema} />
       ))}
-      <JsonLd
-        data={buildFAQPageSchema(
-          faqItems.map((faq) => ({
-            question: t(faq.questionKey),
-            answer: t(faq.answerKey),
-          }))
-        )}
-      />
       <JsonLd
         data={buildBreadcrumbSchema(currentLocale, [{ name: "Home", path: "" }], t("nav.services", "Services"))}
       />

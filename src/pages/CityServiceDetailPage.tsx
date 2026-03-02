@@ -17,7 +17,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import NeoButton from "@/components/ui/NeoButton";
 import JsonLd from "@/components/seo/JsonLd";
 import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
-import { buildCitySchema } from "@/lib/seo-schemas";
+import { buildCitySchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
 import { getCityBySlug } from "@/data/cities";
 
 interface ServiceConfig {
@@ -181,6 +181,7 @@ export default function CityServiceDetailPage() {
         path={path}
       />
       <JsonLd data={buildCitySchema({ cityName, lat: city.lat, lng: city.lng, locale: currentLocale, serviceType: service.label })} />
+      <JsonLd data={buildBreadcrumbSchema(currentLocale, [{ name: "Home", path: "" }, { name: "Services", path: "/services" }, { name: cityName, path: `/web-agency-${city.slug}` }], service.label)} />
 
       <Breadcrumbs
         items={[

@@ -82,13 +82,13 @@ export default function CookieBanner() {
           <div className="flex gap-2 shrink-0">
             <button
               onClick={rejectAll}
-              className="bg-neo-white border-2 border-neo-black px-3 py-1.5 font-space font-bold text-[10px] uppercase tracking-wider text-neo-black shadow-hard-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all duration-150"
+              className="bg-neo-white border-2 border-neo-black px-3 py-2.5 min-h-[44px] font-space font-bold text-[10px] uppercase tracking-wider text-neo-black shadow-hard-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all duration-150"
             >
               {t("cookies.rejectAll", "Reject")}
             </button>
             <button
               onClick={acceptAll}
-              className="bg-neo-lime border-2 border-neo-black px-3 py-1.5 font-space font-bold text-[10px] uppercase tracking-wider text-neo-black shadow-hard-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all duration-150"
+              className="bg-neo-lime border-2 border-neo-black px-3 py-2.5 min-h-[44px] font-space font-bold text-[10px] uppercase tracking-wider text-neo-black shadow-hard-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all duration-150"
             >
               {t("cookies.acceptAll", "Accept")}
             </button>
@@ -173,14 +173,14 @@ export default function CookieBanner() {
             <div className="flex flex-wrap items-center gap-3">
               <button
                 onClick={acceptAll}
-                className="bg-neo-lime border-2 border-neo-black shadow-hard px-5 py-2.5 font-space font-bold text-xs uppercase tracking-wider text-neo-black hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-hard-sm active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all duration-150"
+                className="bg-neo-lime border-2 border-neo-black shadow-hard px-5 py-2.5 min-h-[44px] font-space font-bold text-xs uppercase tracking-wider text-neo-black hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-hard-sm active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all duration-150"
               >
                 {t("cookies.acceptAll", "Accept All")}
               </button>
 
               <button
                 onClick={rejectAll}
-                className="bg-neo-white border-2 border-neo-black shadow-hard px-5 py-2.5 font-space font-bold text-xs uppercase tracking-wider text-neo-black hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-hard-sm active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all duration-150"
+                className="bg-neo-white border-2 border-neo-black shadow-hard px-5 py-2.5 min-h-[44px] font-space font-bold text-xs uppercase tracking-wider text-neo-black hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-hard-sm active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all duration-150"
               >
                 {t("cookies.rejectAll", "Reject All")}
               </button>
@@ -188,14 +188,14 @@ export default function CookieBanner() {
               {showDetails ? (
                 <button
                   onClick={handleSave}
-                  className="bg-neo-blue border-2 border-neo-black shadow-hard px-5 py-2.5 font-space font-bold text-xs uppercase tracking-wider text-neo-white hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-hard-sm active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all duration-150"
+                  className="bg-neo-blue border-2 border-neo-black shadow-hard px-5 py-2.5 min-h-[44px] font-space font-bold text-xs uppercase tracking-wider text-neo-white hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-hard-sm active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all duration-150"
                 >
                   {t("cookies.savePreferences", "Save Preferences")}
                 </button>
               ) : (
                 <button
                   onClick={() => setShowDetails(true)}
-                  className="font-mono text-xs font-bold uppercase tracking-wider text-neo-black underline underline-offset-4 decoration-neo-black/30 decoration-2 hover:decoration-neo-lime transition-colors px-2 py-2.5"
+                  className="font-mono text-xs font-bold uppercase tracking-wider text-neo-black underline underline-offset-4 decoration-neo-black/30 decoration-2 hover:decoration-neo-lime transition-colors px-2 py-2.5 min-h-[44px] inline-flex items-center"
                 >
                   {t("cookies.manage", "Manage Cookies")}
                 </button>
