@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import ProgressBar from "./ProgressBar";
@@ -14,6 +15,10 @@ import CampaignPopup from "@/components/ui/CampaignPopup";
 export default function AppLayout() {
   const { t } = useTranslation();
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [location.pathname]);
 
   return (
     <div className="min-h-screen flex flex-col bg-neo-bg">
