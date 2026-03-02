@@ -431,6 +431,12 @@
         "title": "Le vrai ROI d'un investissement en design web professionnel — Blog DMC Kreatif",
         "description": "Quantifiez le retour sur investissement du design web professionnel. Impact sur le chiffre d'affaires, perception de marque, taux de conversion et valeur a long terme."
       }
+    },
+    "countryPage": {
+      "france": {
+        "title": "Agence Web France — Sites Premium pour Entreprises Françaises | DMC Kreatif",
+        "description": "DMC Kreatif crée des sites web haute performance pour les entreprises françaises. React, SEO, RGPD conforme. 4 projets livrés en France, à partir de 497€."
+      }
     }
   },
   "nav": {

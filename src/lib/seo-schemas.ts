@@ -678,6 +678,46 @@ export function buildCitySchema(params: {
   };
 }
 
+export function buildCountrySchema(params: {
+  countryName: string;
+  locale: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "DMC Kreatif",
+    url: BASE_URL,
+    email: "hello@dmckreatif.com",
+    priceRange: "\u20AC\u20AC",
+    areaServed: {
+      "@type": "Country",
+      name: params.countryName,
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `Web Development Services in ${params.countryName}`,
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Web Development", description: "Custom websites built with React and Next.js" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "E-Commerce Development", description: "Full e-commerce solutions with payment integration" },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "SEO Optimization", description: "Technical SEO audit, keyword research, and monthly reports" },
+        },
+      ],
+    },
+    knowsLanguage: ["en", "fr", "nl", "de"],
+    sameAs: [
+      "https://www.linkedin.com/company/dmckreatif",
+    ],
+  };
+}
+
 /**
  * Industry-specific service schema for industry/vertical pages.
  */

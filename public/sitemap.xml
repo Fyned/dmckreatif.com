@@ -5267,4 +5267,75 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Country Landing Pages -->
+  <!-- France -->
+  <url>
+    <loc>https://dmckreatif.com/en/web-agency-france</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/web-agency-france"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/web-agency-france"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/web-agency-france"/>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/fr/web-agency-france</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/web-agency-france"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr/web-agency-france"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/web-agency-france"/>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- United Kingdom -->
+  <url>
+    <loc>https://dmckreatif.com/en/web-agency-united-kingdom</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/web-agency-united-kingdom"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/web-agency-united-kingdom"/>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Netherlands -->
+  <url>
+    <loc>https://dmckreatif.com/en/web-agency-netherlands</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/web-agency-netherlands"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/web-agency-netherlands"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/web-agency-netherlands"/>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/nl/web-agency-netherlands</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/web-agency-netherlands"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl/web-agency-netherlands"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/web-agency-netherlands"/>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Germany -->
+  <url>
+    <loc>https://dmckreatif.com/en/web-agency-germany</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/web-agency-germany"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/web-agency-germany"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/web-agency-germany"/>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dmckreatif.com/de/web-agency-germany</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/web-agency-germany"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://dmckreatif.com/de/web-agency-germany"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/web-agency-germany"/>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

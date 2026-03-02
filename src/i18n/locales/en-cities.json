@@ -421,5 +421,73 @@
       "benefit5": "Experience with industrial, logistics, and service economy businesses",
       "benefit6": "Competitive pricing starting from €497"
     }
+  },
+  "countryPages": {
+    "citiesTitle": "Cities We Serve",
+    "citiesSubtitle": "LOCAL PRESENCE",
+    "statsProjects": "Projects Delivered",
+    "statsCities": "Cities Covered",
+    "statsLighthouse": "Avg Lighthouse",
+    "statsResponse": "Response Time",
+    "viewWork": "View Our Work",
+    "whyChoose": "Why Choose DMC Kreatif",
+    "benefits": "BENEFITS",
+    "caseStudiesTitle": "Our Work in {{country}}",
+    "caseStudiesSubtitle": "PORTFOLIO",
+    "viewAllCaseStudies": "View All Projects",
+    "ctaTitle": "Ready to Start Your Project?",
+    "ctaDesc": "Get a free consultation and quote within 24 hours.",
+    "france": {
+      "name": "France",
+      "title": "Web Agency France — Premium Digital Solutions",
+      "description": "DMC Kreatif builds high-performance websites for French businesses. React, SEO, multilingual — delivered in 3-5 days from €497.",
+      "intro": "We've delivered 4 successful web projects for French businesses in renovation, energy, and manufacturing sectors. Our deep understanding of the French market, bilingual expertise, and premium-quality code sets us apart from local agencies.",
+      "benefit1": "Bilingual French-English content with native-level quality",
+      "benefit2": "4 completed projects across Paris, Lyon, and Marseille",
+      "benefit3": "RGPD-compliant by design — cookies, data protection built-in",
+      "benefit4": "French business directory registration & Google Business Profile setup",
+      "benefit5": "Local SEO targeting French search terms & regions",
+      "benefit6": "Same-day response to all client communications",
+      "cta": "Get a Free Quote for Your French Business"
+    },
+    "united-kingdom": {
+      "name": "United Kingdom",
+      "title": "Web Agency UK — Premium Digital Solutions",
+      "description": "DMC Kreatif builds high-performance websites for UK businesses. React, SEO, fast delivery — from £497.",
+      "intro": "Serving UK businesses from London to Edinburgh, we deliver professional websites that rank on Google and convert visitors into clients. With Wise Business for seamless GBP invoicing and proven UK-based project experience.",
+      "benefit1": "Proven UK track record with Adamsons Accountants — 97 Lighthouse score",
+      "benefit2": "GBP invoicing via Wise Business for smooth, fee-free payments",
+      "benefit3": "GDPR & UK GDPR compliant by design",
+      "benefit4": "ICO-compliant privacy policy and cookie implementation",
+      "benefit5": "UK local SEO targeting region-specific search terms",
+      "benefit6": "Professional British English copywriting — no AI filler",
+      "cta": "Get a Free Quote for Your UK Business"
+    },
+    "netherlands": {
+      "name": "Netherlands",
+      "title": "Web Agency Netherlands — Premium Digital Solutions",
+      "description": "DMC Kreatif builds high-performance websites for Dutch businesses. React, multilingual (NL/EN/DE), SEO — from €497.",
+      "intro": "Expanding into the Dutch market with multilingual web development expertise. We build bilingual NL/EN websites that serve both domestic Dutch clients and international B2B audiences — critical for the Netherlands export-oriented economy.",
+      "benefit1": "Native Dutch & English bilingual websites as standard",
+      "benefit2": "AVG/GDPR compliant by default — no legal complications",
+      "benefit3": "Dutch payment method support (iDEAL integration available)",
+      "benefit4": "Optimized for the competitive Netherlands B2B digital market",
+      "benefit5": "Local SEO for .nl domains and Dutch-language search intent",
+      "benefit6": "Same-day response from our European timezone team",
+      "cta": "Request a Free Quote for Your Dutch Business"
+    },
+    "germany": {
+      "name": "Germany",
+      "title": "Web Agency Germany — Premium Digital Solutions",
+      "description": "DMC Kreatif builds high-performance websites for German businesses. React, multilingual (DE/EN), DSGVO-compliant — from €497.",
+      "intro": "Entering the German market with DSGVO-first web development. We build fast, compliant, and conversion-optimized websites for German Mittelstand and enterprise clients who demand engineering excellence and regulatory compliance.",
+      "benefit1": "DSGVO-compliant implementation from day one",
+      "benefit2": "Impressum, Datenschutz, Cookie-Banner — fully integrated",
+      "benefit3": "Technical excellence — 95+ Lighthouse Score guaranteed",
+      "benefit4": "Local SEO for German search terms and regional targeting",
+      "benefit5": "German-English bilingual websites as standard",
+      "benefit6": "Professional communication in English or German",
+      "cta": "Request a Free Quote for Your German Business"
+    }
   }
 }

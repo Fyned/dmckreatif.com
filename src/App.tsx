@@ -67,6 +67,9 @@ const RefundPolicyPage = lazy(() => import("@/pages/RefundPolicyPage"));
 const CityServicePage = lazy(() =>
   import("@/i18n").then((m) => m.loadEnNamespace("cities")).then(() => import("@/pages/CityServicePage"))
 );
+const CountryPage = lazy(() =>
+  import("@/i18n").then((m) => m.loadEnNamespace("cities")).then(() => import("@/pages/CountryPage"))
+);
 const TeamPage = lazy(() => import("@/pages/TeamPage"));
 const ProcessPage = lazy(() => import("@/pages/ProcessPage"));
 const WhyUsPage = lazy(() => import("@/pages/WhyUsPage"));
@@ -132,6 +135,10 @@ export default function App() {
             <Route path="contact" element={<ContactPage />} />
             <Route path="case-studies" element={<CaseStudiesPage />} />
             <Route path="case-studies/:slug" element={<CaseStudyDetailPage />} />
+            <Route path="web-agency-france" element={<CountryPage countrySlug="france" />} />
+            <Route path="web-agency-united-kingdom" element={<CountryPage countrySlug="united-kingdom" />} />
+            <Route path="web-agency-netherlands" element={<CountryPage countrySlug="netherlands" />} />
+            <Route path="web-agency-germany" element={<CountryPage countrySlug="germany" />} />
             <Route path="web-agency-:city" element={<CityServicePage />} />
             <Route path="templates" element={<TemplatesPage />} />
             <Route path="templates/:slug" element={<TemplateDetailPage />} />
