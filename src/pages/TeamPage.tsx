@@ -18,9 +18,9 @@ import {
   Cloud,
   Globe,
   HeartHandshake,
-  MapPin,
   Users,
 } from "lucide-react";
+import GlobalPresenceMap from "@/components/team/GlobalPresenceMap";
 import SectionHeader from "@/components/ui/SectionHeader";
 import NeoButton from "@/components/ui/NeoButton";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
@@ -31,23 +31,18 @@ import { useAnalytics } from "@/lib/useAnalytics";
 import { fadeInUp, staggerContainer, scaleIn, viewportConfig } from "@/lib/animations";
 
 const departments: { icon: React.ElementType; nk: string; size: number; color: string; specs: string[] }[] = [
-  { icon: Crown, nk: "dept1", size: 5, color: "bg-neo-lime", specs: ["Vision & Strategy", "Client Relations", "Business Development"] },
-  { icon: MonitorSmartphone, nk: "dept2", size: 12, color: "bg-neo-blue", specs: ["React / Next.js", "TypeScript / Vite", "Performance"] },
-  { icon: Server, nk: "dept3", size: 10, color: "bg-neo-purple", specs: ["Supabase / PostgreSQL", "API Development", "Cloud Architecture"] },
-  { icon: Palette, nk: "dept4", size: 8, color: "bg-neo-pink", specs: ["User Research", "Prototyping", "Design Systems"] },
-  { icon: Search, nk: "dept5", size: 15, color: "bg-neo-yellow", specs: ["Technical SEO", "Content Strategy", "PPC & Analytics"] },
-  { icon: ShoppingCart, nk: "dept6", size: 8, color: "bg-neo-green", specs: ["Shopify / WooCommerce", "Custom Platforms", "Payment Integration"] },
-  { icon: PenTool, nk: "dept7", size: 10, color: "bg-neo-orange", specs: ["Blog & Case Studies", "Multilingual Content", "Brand Voice"] },
-  { icon: ShieldCheck, nk: "dept8", size: 8, color: "bg-neo-red", specs: ["QA Testing", "Accessibility", "Security Audits"] },
-  { icon: KanbanSquare, nk: "dept9", size: 6, color: "bg-neo-blue", specs: ["Agile Delivery", "Client Communication", "Timeline Management"] },
-  { icon: Cloud, nk: "dept10", size: 5, color: "bg-neo-purple", specs: ["CI/CD Pipelines", "Server Management", "Monitoring & Uptime"] },
-  { icon: Globe, nk: "dept11", size: 8, color: "bg-neo-yellow", specs: ["FR / NL / DE Translations", "Cultural Adaptation", "Market Research"] },
-  { icon: HeartHandshake, nk: "dept12", size: 5, color: "bg-neo-lime", specs: ["Onboarding", "Care Plan Management", "Client Retention"] },
-];
-
-const offices = [
-  { city: "London", label: "HQ (Registering)" }, { city: "Paris", label: "Studio" },
-  { city: "Brussels", label: "Co-working" }, { city: "Amsterdam", label: "Co-working" },
+  { icon: Crown, nk: "dept1", size: 4, color: "bg-neo-lime", specs: ["Vision & Strategy", "Client Relations", "Business Development"] },
+  { icon: MonitorSmartphone, nk: "dept2", size: 18, color: "bg-neo-blue", specs: ["React / Next.js", "TypeScript / Vite", "Performance"] },
+  { icon: Server, nk: "dept3", size: 14, color: "bg-neo-purple", specs: ["Supabase / PostgreSQL", "API Development", "Cloud Architecture"] },
+  { icon: Palette, nk: "dept4", size: 12, color: "bg-neo-pink", specs: ["User Research", "Prototyping", "Design Systems"] },
+  { icon: Search, nk: "dept5", size: 22, color: "bg-neo-yellow", specs: ["Technical SEO", "Content Strategy", "PPC & Analytics"] },
+  { icon: ShoppingCart, nk: "dept6", size: 12, color: "bg-neo-green", specs: ["Shopify / WooCommerce", "Custom Platforms", "Payment Integration"] },
+  { icon: PenTool, nk: "dept7", size: 16, color: "bg-neo-orange", specs: ["Blog & Case Studies", "Multilingual Content", "Brand Voice"] },
+  { icon: ShieldCheck, nk: "dept8", size: 12, color: "bg-neo-red", specs: ["QA Testing", "Accessibility", "Security Audits"] },
+  { icon: KanbanSquare, nk: "dept9", size: 10, color: "bg-neo-blue", specs: ["Agile Delivery", "Client Communication", "Timeline Management"] },
+  { icon: Cloud, nk: "dept10", size: 8, color: "bg-neo-purple", specs: ["CI/CD Pipelines", "Server Management", "Monitoring & Uptime"] },
+  { icon: Globe, nk: "dept11", size: 14, color: "bg-neo-yellow", specs: ["FR / NL / DE Translations", "Cultural Adaptation", "Market Research"] },
+  { icon: HeartHandshake, nk: "dept12", size: 8, color: "bg-neo-lime", specs: ["Onboarding", "Care Plan Management", "Client Retention"] },
 ];
 
 export default function TeamPage() {
@@ -79,14 +74,14 @@ export default function TeamPage() {
               {t("team.heroTitle", "OUR TEAM")}
             </motion.h1>
             <motion.p variants={fadeInUp} className="font-mono text-base lg:text-lg text-neo-black/80 max-w-3xl leading-relaxed mb-12">
-              {t("team.heroSubtitle", "35 core team members and 65+ specialist partners across 4 European countries. One mission: building premium digital experiences.")}
+              {t("team.heroSubtitle", "28-strong core team, network of 150+ vetted specialists across 12+ European countries. One mission: building premium digital experiences.")}
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-wrap border-2 border-neo-black bg-neo-white shadow-hard">
               {[
-                { value: 100, suffix: "+", label: t("team.statProfessionals", "PROFESSIONALS") },
+                { value: 150, suffix: "+", label: t("team.statProfessionals", "SPECIALISTS") },
                 { value: 12, suffix: "", label: t("team.statDepartments", "DEPARTMENTS") },
-                { value: 4, suffix: "", label: t("team.statCountries", "COUNTRIES") },
-                { value: 35, suffix: "", label: t("team.statCore", "CORE TEAM") },
+                { value: 12, suffix: "+", label: t("team.statCountries", "COUNTRIES") },
+                { value: 28, suffix: "", label: t("team.statCore", "CORE TEAM") },
               ].map((stat, i) => (
                 <div key={stat.label} className={`flex-1 min-w-[120px] p-5 text-center ${i < 3 ? "border-r-2 border-neo-black" : ""}`}>
                   <div className="font-space font-bold text-2xl lg:text-3xl">
@@ -110,7 +105,7 @@ export default function TeamPage() {
             <div>
               <h2 className="font-space font-bold text-h3 mb-3">{t("team.modelTitle", "HYBRID TEAM MODEL")}</h2>
               <p className="font-mono text-sm text-neo-black/80 leading-relaxed">
-                {t("team.modelDesc", "We operate a hybrid agency model: 35 core professionals handle strategy, development, and client relationships. Our extended network of 65+ vetted specialists — designers, translators, SEO analysts, and QA engineers — scales capacity on demand across France, Belgium, Netherlands, and the UK.")}
+                {t("team.modelDesc", "We operate a distributed-first agency model: a 28-strong core team handles strategy, architecture, and client relationships from our UK-registered base. Our extended network of 120+ vetted remote specialists — developers, designers, SEO analysts, translators, QA engineers — scales capacity on demand across 12+ European markets. On enterprise projects we deploy up to 150 specialists simultaneously. Everyone works remotely; our only physical office is our registered address in London.")}
               </p>
             </div>
           </motion.div>
@@ -162,19 +157,11 @@ export default function TeamPage() {
         </div>
       </section>
 
-      {/* Distributed Excellence — Offices */}
+      {/* Distributed Excellence — Map */}
       <section className="py-20 lg:py-28">
         <div className="max-w-container mx-auto px-6 lg:px-10">
-          <SectionHeader title={t("team.officesTitle", "DISTRIBUTED EXCELLENCE")} subtitle={t("team.officesSubtitle", "SYS.LOCATIONS")} />
-          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportConfig} className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {offices.map((o) => (
-              <motion.div key={o.city} variants={scaleIn} className="bg-neo-white border-2 border-neo-black shadow-hard p-6 text-center transition-all duration-300 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-hard-sm hover:bg-neo-lime">
-                <MapPin size={20} strokeWidth={2.5} className="mx-auto mb-3" />
-                <div className="font-space font-bold text-sm mb-0.5">{o.city}</div>
-                <div className="font-mono text-xs text-neo-black/60">{o.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
+          <SectionHeader title={t("team.officesTitle", "EUROPEAN NETWORK")} subtitle={t("team.officesSubtitle", "SYS.LOCATIONS")} />
+          <GlobalPresenceMap />
         </div>
       </section>
 

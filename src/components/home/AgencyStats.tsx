@@ -5,7 +5,7 @@ import { fadeInUp, staggerContainer, viewportConfig } from "@/lib/animations";
 
 const stats = [
   { key: "projects", value: 33, suffix: "+", prefix: "", color: "bg-neo-lime" },
-  { key: "countries", value: 4, suffix: "", prefix: "", color: "bg-neo-yellow" },
+  { key: "countries", value: 12, suffix: "+", prefix: "", color: "bg-neo-yellow" },
   { key: "lighthouse", value: 98, suffix: "+", prefix: "", color: "bg-neo-blue" },
   { key: "satisfaction", value: 100, suffix: "%", prefix: "", color: "bg-neo-pink" },
   { key: "loadTime", value: 1.2, suffix: "s", prefix: "<", color: "bg-neo-green" },

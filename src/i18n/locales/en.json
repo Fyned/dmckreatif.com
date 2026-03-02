@@ -26,7 +26,7 @@
     "stat3Label": "Countries",
     "stat4": "97+",
     "stat4Label": "Lighthouse",
-    "microCopy": "Boutique agency • 33+ international projects • 4 European markets",
+    "microCopy": "150+ specialist network • 33+ international projects • 12+ European markets",
     "bookCall": "or book a free 15-min call →"
   },
   "marquee": {
@@ -297,7 +297,7 @@
     "loadTime": "AVG. LOAD TIME",
     "uptime": "WEBSITE UPTIME",
     "projectsValue": "33+",
-    "countriesValue": "6",
+    "countriesValue": "12+",
     "lighthouseValue": "98+",
     "satisfactionValue": "100%",
     "loadTimeValue": "<1.2s",
@@ -691,10 +691,10 @@
     "sectionTitle": "ABOUT US",
     "sectionSubtitle": "SYS.ABOUT",
     "headline": "WE ARE DMC KREATIF",
-    "description": "A UK-registered web development agency with premium specialists serving European businesses across 5 countries. We combine cutting-edge React and Next.js technology with premium design to deliver websites that convert.",
+    "description": "A UK-registered web development agency with a 28-strong core team and 150+ specialist network serving European businesses across 12+ countries. We combine cutting-edge React and Next.js technology with premium design to deliver websites that convert.",
     "founderName": "Musa Kerem Demirci",
     "founderRole": "CEO & FOUNDER",
-    "founderBio": "Musa Kerem Demirci is the founder of DMC Kreatif, a UK-registered boutique web development agency serving European businesses. With deep expertise in React, Next.js, TypeScript, and modern web architecture, he personally oversees every project — ensuring 95+ Google Lighthouse scores, sub-2-second load times, and multilingual SEO implementation. Before founding DMC Kreatif in 2023, he gained international experience with clients across construction, energy, finance, and e-commerce sectors. The agency has delivered projects for clients in France, Belgium, the United Kingdom, the Netherlands, and Germany, with a 4.9/5 client satisfaction score. Musa holds a Computer Engineering degree and speaks English, French, and Turkish. His philosophy: every pixel matters, every millisecond counts, and every European business deserves a website that truly converts.",
+    "founderBio": "Musa Kerem Demirci is the founder of DMC Kreatif, a UK-registered web development agency with a 28-strong core team and a network of 150+ vetted specialists across Europe. With deep expertise in React, Next.js, TypeScript, and modern web architecture, he leads strategy and technical architecture across all projects — ensuring 95+ Google Lighthouse scores, sub-2-second load times, and multilingual SEO implementation. The agency operates fully distributed: one registered office in London, co-working access in Paris, Brussels, Amsterdam, Berlin, Zurich, Barcelona, and Copenhagen. Clients span 12+ European countries across construction, energy, finance, and e-commerce sectors, with a 5.0/5 client satisfaction score. Musa holds a Computer Engineering degree and speaks English, French, and Turkish. His philosophy: every pixel matters, every millisecond counts, and every European business deserves a website that truly converts.",
     "mission": "OUR MISSION",
     "missionText": "To deliver premium web solutions that help European businesses grow. Every pixel matters. Every millisecond counts.",
     "value1Title": "QUALITY FIRST",
@@ -1056,7 +1056,7 @@
     "languagesValue": "4 Languages",
     "paymentLabel": "Payment",
     "paymentValue": "Secure Payment",
-    "countriesServed": "Serving businesses in 6+ European countries",
+    "countriesServed": "Serving businesses in 12+ European countries",
     "builtWith": "Built with modern technology"
   },
   "process": {
@@ -1158,13 +1158,13 @@
   },
   "clientLogos": {
     "trustedBy": "TRUSTED BY BUSINESSES ACROSS EUROPE",
-    "projectsDelivered": "33+ projects delivered in 4 countries"
+    "projectsDelivered": "33+ projects delivered across 12+ countries"
   },
   "whyUs": {
     "breadcrumb": "WHY US",
     "heroTag": "SYS.WHY_US",
     "heroTitle": "WHY DMC KREATIF",
-    "heroDesc": "33+ projects, 4 European markets, 4 languages. We build premium websites that outperform the competition.",
+    "heroDesc": "33+ projects, 12+ European markets, 4 languages. We build premium websites that outperform the competition.",
     "reasonsTitle": "8 REASONS TO CHOOSE US",
     "reasonsTag": "SYS.DIFFERENTIATORS",
     "reason1Title": "European DNA",
@@ -1267,7 +1267,7 @@
     },
     "about": {
       "title": "About DMC Kreatif — Boutique European Web Development Agency",
-      "description": "UK-registered web development agency with premium specialists serving businesses across France, Belgium, UK, Netherlands and Germany. 30+ projects, 5 countries, 4 languages."
+      "description": "UK-registered web development agency. 28-strong core team, 150+ specialist network across 12+ European countries. React, Next.js, Lighthouse 95+, multilingual."
     },
     "team": {
       "title": "Our Team — DMC Kreatif Web Development Agency",
