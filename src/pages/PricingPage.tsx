@@ -23,7 +23,6 @@ import {
   Search,
   Megaphone,
   Share2,
-  Video,
   Globe,
   FileSearch,
   Target,
@@ -75,7 +74,6 @@ const addOnIcons: Record<string, React.ElementType> = {
   seoAudit: Search,
   googleAds: Megaphone,
   socialKit: Share2,
-  videoProduction: Video,
 };
 
 interface FaqItemProps {
@@ -184,7 +182,7 @@ export default function PricingPage() {
 
       <Breadcrumbs items={[{ label: t("nav.pricing", "PRICING") }]} />
 
-      {/* ═══ CAMPAIGN BUNDLES — HERO ═══ */}
+      {/* ═══ COMPLETE PACKAGES — HERO ═══ */}
       <section className="py-20 lg:py-28 bg-neo-black border-b-4 border-neo-lime">
         <div className="max-w-container mx-auto px-6 lg:px-10">
           <motion.div
@@ -220,6 +218,8 @@ export default function PricingPage() {
                 website: "bg-neo-lime",
                 seo: "bg-neo-blue",
                 care: "bg-neo-yellow",
+                branding: "bg-neo-pink",
+                marketing: "bg-neo-purple",
               };
 
               return (

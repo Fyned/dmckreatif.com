@@ -45,45 +45,125 @@
       "description": "Guides pratiques sur la création de sites web, le référencement naturel, l'e-commerce et le marketing digital pour entreprises françaises."
     },
     "blogPost": {
-      "agence-web-paris": {
-        "title": "Agence Web Paris — Création de Site Internet Professionnel | DMC Kreatif",
-        "description": "Trouvez la meilleure agence web à Paris. Critères de sélection, tarifs moyens, technologies React/Next.js et processus de création. Devis gratuit en 24h."
+      "how-much-does-a-website-cost-in-europe-2026": {
+        "title": "Combien coute un site web en Europe ? (Prix 2026 reveles)",
+        "description": "Prix reels de creation de sites web en Europe 2026. Templates des 39€, sites sur mesure 497€–2 997€. Comparez freelance vs agence avec des devis concrets."
       },
-      "creation-site-web-france": {
-        "title": "Création de Site Web Professionnel en France — Guide 2026 | DMC Kreatif",
-        "description": "Guide complet pour créer un site web professionnel en France. Budget, délais, technologies, hébergement, SEO et RGPD. Tout ce qu'il faut savoir en 2026."
+      "how-to-choose-a-web-agency-in-europe": {
+        "title": "Comment choisir une agence web en Europe — Blog DMC Kreatif",
+        "description": "Guide pratique pour evaluer et choisir la bonne agence web pour votre entreprise europeenne. Criteres cles, signaux d'alerte et cadre de decision."
       },
-      "prix-site-web-france-2026": {
-        "title": "Prix d'un Site Web en France 2026 — Tarifs et Comparatifs | DMC Kreatif",
-        "description": "Combien coûte un site web en France en 2026 ? Freelance, agence, template : comparatif détaillé des tarifs selon le type de projet. Transparence garantie."
+      "technical-seo-checklist-europe": {
+        "title": "Checklist SEO technique pour sites europeens — Blog DMC Kreatif",
+        "description": "Checklist SEO technique complete pour sites web europeens. Core Web Vitals, crawlabilite, indexation, donnees structurees, hreflang et optimisation multilingue."
       },
-      "agence-web-belgique": {
-        "title": "Agence Web Belgique — Sites Internet pour PME Belges | DMC Kreatif",
-        "description": "Création de sites web professionnels pour entreprises belges. Multilingue FR/NL/EN, RGPD, e-commerce. Tarifs transparents, devis gratuit."
+      "core-web-vitals-lighthouse-guide": {
+        "title": "Core Web Vitals : comment obtenir un score Lighthouse 95+ — Blog DMC Kreatif",
+        "description": "Guide etape par etape pour atteindre un score Lighthouse 95+. Optimisez LCP, FID, CLS et INP pour de meilleures performances et un meilleur SEO."
       },
-      "agence-web-bruxelles": {
-        "title": "Agence Web Bruxelles — Création de Sites Internet | DMC Kreatif",
-        "description": "Développement web professionnel à Bruxelles. React, Next.js, e-commerce multilingue. Livraison en 2–3 semaines, Lighthouse 95+. Devis gratuit."
+      "website-redesign-guide": {
+        "title": "Guide de refonte de site web : quand et comment refondre — Blog DMC Kreatif",
+        "description": "Sachez quand votre site a besoin d'une refonte et comment l'executer sans perdre vos positions SEO. Planification, strategie de migration et optimisation."
       },
-      "developpeur-react-paris": {
-        "title": "Développeur React Paris — Expert Frontend pour Votre Projet | DMC Kreatif",
-        "description": "Trouvez un développeur React expérimenté à Paris. Tarifs, compétences, freelance vs agence et questions clés à poser avant de recruter."
+      "multilingual-website-guide": {
+        "title": "Comment creer un site multilingue : guide complet — Blog DMC Kreatif",
+        "description": "Tout ce que vous devez savoir pour creer un site multilingue pour les marches europeens. Architecture i18n, hreflang, strategie de contenu et traduction."
       },
-      "seo-france-2026": {
-        "title": "SEO France 2026 — Référencement Naturel pour PME Françaises | DMC Kreatif",
-        "description": "Guide complet du SEO en France 2026. Core Web Vitals, contenu, netlinking, IA et stratégies locales pour améliorer votre classement sur Google.fr."
+      "gdpr-compliance-checklist": {
+        "title": "Checklist conformite RGPD pour sites web en 2026 — Blog DMC Kreatif",
+        "description": "Checklist complete de conformite RGPD pour sites web europeens. Consentement aux cookies, politique de confidentialite, accords de traitement des donnees."
       },
-      "site-web-pme-europe": {
-        "title": "Site Web pour PME Européennes — Guide Complet 2026 | DMC Kreatif",
-        "description": "Comment créer un site web efficace pour votre PME en Europe. Fonctionnalités, multilinguisme, RGPD, performance et ROI. Guide pratique 2026."
+      "ecommerce-conversion-optimization": {
+        "title": "Comment optimiser le taux de conversion de votre e-commerce — Blog DMC Kreatif",
+        "description": "Strategies eprouvees pour augmenter le taux de conversion de votre boutique en ligne. Optimisation du tunnel d'achat, design produit et tests A/B."
       },
-      "agence-web-amsterdam": {
-        "title": "Agence Web Amsterdam — Sites Internet pour Entreprises Néerlandaises | DMC Kreatif",
-        "description": "Création de sites web pour entreprises néerlandaises et belges. Multilingue NL/EN/FR, e-commerce, iDEAL. Expertise Pays-Bas et Belgique."
+      "seo-audit-guide-2026": {
+        "title": "Guide d'audit SEO etape par etape pour 2026 — Blog DMC Kreatif",
+        "description": "Comment realiser un audit SEO complet en 2026. Analyse technique, optimisation on-page, lacunes de contenu, profil de liens et benchmark concurrentiel."
       },
-      "web-agency-london-2026": {
-        "title": "Web Agency London — Premium Web Development for UK Businesses | DMC Kreatif",
-        "description": "Find the right web agency in London. React, Next.js, pricing guide, red flags to avoid and how DMC Kreatif serves UK businesses remotely."
+      "website-migration-seo": {
+        "title": "Comment migrer votre site sans perdre votre SEO — Blog DMC Kreatif",
+        "description": "Guide complet pour migrer votre site web en preservant vos positions SEO. Mapping des redirections, budget de crawl et suivi post-migration."
+      },
+      "shopify-vs-woocommerce-vs-custom": {
+        "title": "Shopify vs WooCommerce vs E-Commerce sur mesure — Blog DMC Kreatif",
+        "description": "Comparaison detaillee de Shopify, WooCommerce et solutions e-commerce sur mesure pour entreprises europeennes. Fonctionnalites, prix et cas d'usage."
+      },
+      "nextjs-vs-gatsby-vs-remix": {
+        "title": "Next.js vs Gatsby vs Remix : comparaison complete 2026 — Blog DMC Kreatif",
+        "description": "Comparaison approfondie de Next.js, Gatsby et Remix pour le developpement web moderne. Performance, experience developpeur, SEO et production."
+      },
+      "react-vs-wordpress-2026": {
+        "title": "React vs WordPress : lequel choisir en 2026 — Blog DMC Kreatif",
+        "description": "Comparaison honnete entre React et WordPress pour sites d'entreprise en 2026. Cout, performance, securite, maintenance et retour sur investissement."
+      },
+      "supabase-vs-firebase": {
+        "title": "Supabase vs Firebase : comparaison backend 2026 — Blog DMC Kreatif",
+        "description": "Comparaison complete de Supabase et Firebase comme plateformes backend. PostgreSQL vs NoSQL, authentification, temps reel, tarification et dependance fournisseur."
+      },
+      "agency-vs-freelancer-development": {
+        "title": "Agence vs Freelance vs Interne : comparaison developpement — Blog DMC Kreatif",
+        "description": "Avantages et inconvenients d'une agence web, d'un freelance ou d'une equipe interne. Analyse des couts, qualite, fiabilite et gestion de projet."
+      },
+      "headless-vs-traditional-cms": {
+        "title": "CMS Headless vs CMS traditionnel : comparaison complete — Blog DMC Kreatif",
+        "description": "CMS headless vs CMS traditionnel explique. Differences d'architecture, livraison de contenu, experience developpeur et quel choix pour votre entreprise."
+      },
+      "tailwind-vs-bootstrap": {
+        "title": "Tailwind CSS vs Bootstrap vs CSS Modules : comparaison — Blog DMC Kreatif",
+        "description": "Comparaison detaillee de Tailwind CSS, Bootstrap et CSS Modules. Performance, personnalisation, courbe d'apprentissage et lequel choisir pour votre projet."
+      },
+      "vercel-vs-netlify-vs-aws": {
+        "title": "Vercel vs Netlify vs AWS : comparaison des plateformes — Blog DMC Kreatif",
+        "description": "Comparez Vercel, Netlify et AWS pour le deploiement web. Prix, performance, CI/CD, fonctions serverless et quelle plateforme pour les entreprises europeennes."
+      },
+      "shopify-vs-prestashop-europe": {
+        "title": "Shopify vs PrestaShop pour l'e-commerce europeen — Blog DMC Kreatif",
+        "description": "Comparaison Shopify vs PrestaShop pour boutiques en ligne europeennes. Multi-devise, conformite TVA, passerelles de paiement et cout total de possession."
+      },
+      "wordpress-vs-custom-cost": {
+        "title": "WordPress vs developpement sur mesure : analyse des couts — Blog DMC Kreatif",
+        "description": "Comparaison reelle des couts WordPress vs developpement sur mesure sur 3 ans. Licences, hebergement, securite, performance et couts de maintenance caches."
+      },
+      "seo-guide-small-businesses-france": {
+        "title": "Guide SEO pour les petites entreprises en France — Blog DMC Kreatif",
+        "description": "Guide SEO pratique pour les PME francaises. SEO local, Google My Business, recherche de mots-cles francais, netlinking et strategie de contenu."
+      },
+      "why-multilingual-website-european-business": {
+        "title": "Pourquoi chaque entreprise europeenne a besoin d'un site multilingue — Blog DMC Kreatif",
+        "description": "Raisons chiffrees pour lesquelles les entreprises europeennes ont besoin de sites multilingues. Portee, SEO, confiance client et avantage concurrentiel."
+      },
+      "what-is-headless-cms": {
+        "title": "Qu'est-ce qu'un CMS headless ? Guide complet 2026 — Blog DMC Kreatif",
+        "description": "Tout sur le CMS headless en 2026. Comment ca marche, avantages par rapport au CMS traditionnel, meilleures plateformes et bonnes pratiques d'implementation."
+      },
+      "ecommerce-platform-comparison-europe": {
+        "title": "Comparaison des plateformes e-commerce pour PME europeennes — Blog DMC Kreatif",
+        "description": "Comparez les meilleures plateformes e-commerce pour PME europeennes. Shopify, WooCommerce, PrestaShop, Magento et solutions sur mesure evaluees sur 10 criteres."
+      },
+      "state-of-web-development-2026": {
+        "title": "L'etat du developpement web en 2026 — Blog DMC Kreatif",
+        "description": "Tendances cles du developpement web en 2026. Integration IA, edge computing, server components, WebAssembly et evolution du role des developpeurs frontend."
+      },
+      "multilingual-seo-europe": {
+        "title": "Pourquoi les entreprises europeennes ont besoin du SEO multilingue — Blog DMC Kreatif",
+        "description": "Comment le SEO multilingue stimule la croissance organique sur les marches europeens. Implementation hreflang, strategie de mots-cles locaux et optimisation."
+      },
+      "web-design-construction": {
+        "title": "Design web pour entreprises du batiment : bonnes pratiques — Blog DMC Kreatif",
+        "description": "Comment concevoir un site web efficace pour les entreprises du BTP. Portfolio, generation de leads, galeries de projets et UX specifique au secteur."
+      },
+      "ai-web-development-2026": {
+        "title": "L'IA dans le developpement web : ce que cela signifie pour votre entreprise — Blog DMC Kreatif",
+        "description": "Comment l'IA transforme le developpement web en 2026. Generation de code, automatisation du design, moteurs de personnalisation et ce que les dirigeants doivent savoir."
+      },
+      "core-web-vitals-explained": {
+        "title": "Core Web Vitals expliques pour les dirigeants — Blog DMC Kreatif",
+        "description": "Guide non technique des Core Web Vitals. Ce que LCP, INP et CLS signifient pour votre entreprise, pourquoi Google s'y interesse et comment ameliorer vos scores."
+      },
+      "roi-professional-web-design": {
+        "title": "Le vrai ROI d'un investissement en design web professionnel — Blog DMC Kreatif",
+        "description": "Quantifiez le retour sur investissement du design web professionnel. Impact sur le chiffre d'affaires, perception de marque, taux de conversion et valeur a long terme."
       }
     },
     "contact": {
@@ -350,128 +430,6 @@
       "tourism": {
         "title": "Sites web pour tourisme et hotellerie | DMC Kreatif",
         "description": "Sites multilingues pour hotels, agences de voyage et restaurants. Integration reservation, SEO local et international."
-      }
-    },
-    "blogPost": {
-      "how-much-does-a-website-cost-in-europe-2026": {
-        "title": "Combien coute un site web en Europe ? (Prix 2026 reveles)",
-        "description": "Prix reels de creation de sites web en Europe 2026. Templates des 39€, sites sur mesure 497€–2 997€. Comparez freelance vs agence avec des devis concrets."
-      },
-      "how-to-choose-a-web-agency-in-europe": {
-        "title": "Comment choisir une agence web en Europe — Blog DMC Kreatif",
-        "description": "Guide pratique pour evaluer et choisir la bonne agence web pour votre entreprise europeenne. Criteres cles, signaux d'alerte et cadre de decision."
-      },
-      "technical-seo-checklist-europe": {
-        "title": "Checklist SEO technique pour sites europeens — Blog DMC Kreatif",
-        "description": "Checklist SEO technique complete pour sites web europeens. Core Web Vitals, crawlabilite, indexation, donnees structurees, hreflang et optimisation multilingue."
-      },
-      "core-web-vitals-lighthouse-guide": {
-        "title": "Core Web Vitals : comment obtenir un score Lighthouse 95+ — Blog DMC Kreatif",
-        "description": "Guide etape par etape pour atteindre un score Lighthouse 95+. Optimisez LCP, FID, CLS et INP pour de meilleures performances et un meilleur SEO."
-      },
-      "website-redesign-guide": {
-        "title": "Guide de refonte de site web : quand et comment refondre — Blog DMC Kreatif",
-        "description": "Sachez quand votre site a besoin d'une refonte et comment l'executer sans perdre vos positions SEO. Planification, strategie de migration et optimisation."
-      },
-      "multilingual-website-guide": {
-        "title": "Comment creer un site multilingue : guide complet — Blog DMC Kreatif",
-        "description": "Tout ce que vous devez savoir pour creer un site multilingue pour les marches europeens. Architecture i18n, hreflang, strategie de contenu et traduction."
-      },
-      "gdpr-compliance-checklist": {
-        "title": "Checklist conformite RGPD pour sites web en 2026 — Blog DMC Kreatif",
-        "description": "Checklist complete de conformite RGPD pour sites web europeens. Consentement aux cookies, politique de confidentialite, accords de traitement des donnees."
-      },
-      "ecommerce-conversion-optimization": {
-        "title": "Comment optimiser le taux de conversion de votre e-commerce — Blog DMC Kreatif",
-        "description": "Strategies eprouvees pour augmenter le taux de conversion de votre boutique en ligne. Optimisation du tunnel d'achat, design produit et tests A/B."
-      },
-      "seo-audit-guide-2026": {
-        "title": "Guide d'audit SEO etape par etape pour 2026 — Blog DMC Kreatif",
-        "description": "Comment realiser un audit SEO complet en 2026. Analyse technique, optimisation on-page, lacunes de contenu, profil de liens et benchmark concurrentiel."
-      },
-      "website-migration-seo": {
-        "title": "Comment migrer votre site sans perdre votre SEO — Blog DMC Kreatif",
-        "description": "Guide complet pour migrer votre site web en preservant vos positions SEO. Mapping des redirections, budget de crawl et suivi post-migration."
-      },
-      "shopify-vs-woocommerce-vs-custom": {
-        "title": "Shopify vs WooCommerce vs E-Commerce sur mesure — Blog DMC Kreatif",
-        "description": "Comparaison detaillee de Shopify, WooCommerce et solutions e-commerce sur mesure pour entreprises europeennes. Fonctionnalites, prix et cas d'usage."
-      },
-      "nextjs-vs-gatsby-vs-remix": {
-        "title": "Next.js vs Gatsby vs Remix : comparaison complete 2026 — Blog DMC Kreatif",
-        "description": "Comparaison approfondie de Next.js, Gatsby et Remix pour le developpement web moderne. Performance, experience developpeur, SEO et production."
-      },
-      "react-vs-wordpress-2026": {
-        "title": "React vs WordPress : lequel choisir en 2026 — Blog DMC Kreatif",
-        "description": "Comparaison honnete entre React et WordPress pour sites d'entreprise en 2026. Cout, performance, securite, maintenance et retour sur investissement."
-      },
-      "supabase-vs-firebase": {
-        "title": "Supabase vs Firebase : comparaison backend 2026 — Blog DMC Kreatif",
-        "description": "Comparaison complete de Supabase et Firebase comme plateformes backend. PostgreSQL vs NoSQL, authentification, temps reel, tarification et dependance fournisseur."
-      },
-      "agency-vs-freelancer-development": {
-        "title": "Agence vs Freelance vs Interne : comparaison developpement — Blog DMC Kreatif",
-        "description": "Avantages et inconvenients d'une agence web, d'un freelance ou d'une equipe interne. Analyse des couts, qualite, fiabilite et gestion de projet."
-      },
-      "headless-vs-traditional-cms": {
-        "title": "CMS Headless vs CMS traditionnel : comparaison complete — Blog DMC Kreatif",
-        "description": "CMS headless vs CMS traditionnel explique. Differences d'architecture, livraison de contenu, experience developpeur et quel choix pour votre entreprise."
-      },
-      "tailwind-vs-bootstrap": {
-        "title": "Tailwind CSS vs Bootstrap vs CSS Modules : comparaison — Blog DMC Kreatif",
-        "description": "Comparaison detaillee de Tailwind CSS, Bootstrap et CSS Modules. Performance, personnalisation, courbe d'apprentissage et lequel choisir pour votre projet."
-      },
-      "vercel-vs-netlify-vs-aws": {
-        "title": "Vercel vs Netlify vs AWS : comparaison des plateformes — Blog DMC Kreatif",
-        "description": "Comparez Vercel, Netlify et AWS pour le deploiement web. Prix, performance, CI/CD, fonctions serverless et quelle plateforme pour les entreprises europeennes."
-      },
-      "shopify-vs-prestashop-europe": {
-        "title": "Shopify vs PrestaShop pour l'e-commerce europeen — Blog DMC Kreatif",
-        "description": "Comparaison Shopify vs PrestaShop pour boutiques en ligne europeennes. Multi-devise, conformite TVA, passerelles de paiement et cout total de possession."
-      },
-      "wordpress-vs-custom-cost": {
-        "title": "WordPress vs developpement sur mesure : analyse des couts — Blog DMC Kreatif",
-        "description": "Comparaison reelle des couts WordPress vs developpement sur mesure sur 3 ans. Licences, hebergement, securite, performance et couts de maintenance caches."
-      },
-      "seo-guide-small-businesses-france": {
-        "title": "Guide SEO pour les petites entreprises en France — Blog DMC Kreatif",
-        "description": "Guide SEO pratique pour les PME francaises. SEO local, Google My Business, recherche de mots-cles francais, netlinking et strategie de contenu."
-      },
-      "why-multilingual-website-european-business": {
-        "title": "Pourquoi chaque entreprise europeenne a besoin d'un site multilingue — Blog DMC Kreatif",
-        "description": "Raisons chiffrees pour lesquelles les entreprises europeennes ont besoin de sites multilingues. Portee, SEO, confiance client et avantage concurrentiel."
-      },
-      "what-is-headless-cms": {
-        "title": "Qu'est-ce qu'un CMS headless ? Guide complet 2026 — Blog DMC Kreatif",
-        "description": "Tout sur le CMS headless en 2026. Comment ca marche, avantages par rapport au CMS traditionnel, meilleures plateformes et bonnes pratiques d'implementation."
-      },
-      "ecommerce-platform-comparison-europe": {
-        "title": "Comparaison des plateformes e-commerce pour PME europeennes — Blog DMC Kreatif",
-        "description": "Comparez les meilleures plateformes e-commerce pour PME europeennes. Shopify, WooCommerce, PrestaShop, Magento et solutions sur mesure evaluees sur 10 criteres."
-      },
-      "state-of-web-development-2026": {
-        "title": "L'etat du developpement web en 2026 — Blog DMC Kreatif",
-        "description": "Tendances cles du developpement web en 2026. Integration IA, edge computing, server components, WebAssembly et evolution du role des developpeurs frontend."
-      },
-      "multilingual-seo-europe": {
-        "title": "Pourquoi les entreprises europeennes ont besoin du SEO multilingue — Blog DMC Kreatif",
-        "description": "Comment le SEO multilingue stimule la croissance organique sur les marches europeens. Implementation hreflang, strategie de mots-cles locaux et optimisation."
-      },
-      "web-design-construction": {
-        "title": "Design web pour entreprises du batiment : bonnes pratiques — Blog DMC Kreatif",
-        "description": "Comment concevoir un site web efficace pour les entreprises du BTP. Portfolio, generation de leads, galeries de projets et UX specifique au secteur."
-      },
-      "ai-web-development-2026": {
-        "title": "L'IA dans le developpement web : ce que cela signifie pour votre entreprise — Blog DMC Kreatif",
-        "description": "Comment l'IA transforme le developpement web en 2026. Generation de code, automatisation du design, moteurs de personnalisation et ce que les dirigeants doivent savoir."
-      },
-      "core-web-vitals-explained": {
-        "title": "Core Web Vitals expliques pour les dirigeants — Blog DMC Kreatif",
-        "description": "Guide non technique des Core Web Vitals. Ce que LCP, INP et CLS signifient pour votre entreprise, pourquoi Google s'y interesse et comment ameliorer vos scores."
-      },
-      "roi-professional-web-design": {
-        "title": "Le vrai ROI d'un investissement en design web professionnel — Blog DMC Kreatif",
-        "description": "Quantifiez le retour sur investissement du design web professionnel. Impact sur le chiffre d'affaires, perception de marque, taux de conversion et valeur a long terme."
       }
     },
     "countryPage": {
@@ -938,8 +896,6 @@
       "googleAdsDesc": "Configuration de campagne, recherche de mots-clés et ciblage initial",
       "socialKit": "KIT RÉSEAUX SOCIAUX",
       "socialKitDesc": "20 modèles personnalisés pour Instagram, Facebook et LinkedIn",
-      "videoProduction": "PRODUCTION VIDÉO",
-      "videoProductionDesc": "Vidéos promotionnelles de 15-30 secondes pour les réseaux sociaux",
       "monthlySeo": "RÉFÉRENCEMENT MENSUEL",
       "monthlySeoDesc": "Optimisation continue, rapport de classement et stratégie de contenu"
     },
