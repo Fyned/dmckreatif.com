@@ -169,11 +169,23 @@ async function renderPage(browser, route) {
       timeout: PAGE_TIMEOUT,
     });
 
-    // Wait a bit for React hydration + helmet to inject meta tags
+    // Wait for React hydration + Helmet to inject per-page meta tags
+    // Check that title is no longer the generic shell title
     await page.waitForFunction(
-      () => document.querySelector("h1") !== null || document.title !== "",
-      { timeout: 5000 }
+      () => {
+        const title = document.title;
+        const canonical = document.querySelector('link[rel="canonical"]');
+        return (
+          title !== "" &&
+          title !== "DMC Kreatif" &&
+          document.querySelector("h1") !== null &&
+          canonical !== null
+        );
+      },
+      { timeout: 8000 }
     ).catch(() => {});
+    // Extra buffer for i18n namespace lazy-loads
+    await new Promise((r) => setTimeout(r, 500));
 
     let html = await page.content();
 

@@ -1,4 +1,5 @@
 Options -Indexes
+DirectoryIndex index.html
 
 # Security headers
 Header always set X-Content-Type-Options "nosniff"
