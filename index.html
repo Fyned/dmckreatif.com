@@ -14,16 +14,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
 
-    <!-- Self-hosted fonts — preload critical display font (LCP) -->
+    <!-- Self-hosted fonts — no Google Fonts dependency -->
     <link rel="preload" href="/fonts/syne-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <!-- JetBrains Mono — non-critical, deferred -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
 
     <!-- Default meta (overridden by react-helmet-async per page) -->
     <title>DMC Kreatif — Premium European Web Agency</title>
