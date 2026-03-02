@@ -173,6 +173,70 @@ export default function CaseStudyDetailPage() {
         </div>
       </section>
 
+      {/* Live Website Preview */}
+      {cs.images?.after && (
+        <section className="py-12 border-b-2 border-neo-black bg-neo-white">
+          <div className="max-w-container mx-auto px-6 lg:px-10">
+            <motion.div
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportConfig}
+            >
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <div className={`w-3 h-3 ${accentBg}`} />
+                  <span className="font-mono text-xs font-bold uppercase tracking-wider text-neo-black/60">
+                    Live Website
+                  </span>
+                </div>
+                <a
+                  href={cs.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-mono text-[10px] font-bold text-neo-black/50 hover:text-neo-black transition-colors"
+                >
+                  {cs.url.replace("https://", "")}
+                  <ExternalLink size={10} />
+                </a>
+              </div>
+
+              {cs.images.before ? (
+                <BeforeAfterSlider
+                  beforeImage={cs.images.before}
+                  afterImage={cs.images.after}
+                  projectName={cs.name}
+                />
+              ) : (
+                <div className="border-2 border-neo-black shadow-hard overflow-hidden">
+                  <div className="flex items-center gap-2 px-4 py-2.5 border-b-2 border-neo-black bg-neo-bg">
+                    <div className="flex gap-1.5">
+                      <div className="w-3 h-3 rounded-full border-2 border-neo-black/30 bg-neo-red/30" />
+                      <div className="w-3 h-3 rounded-full border-2 border-neo-black/30 bg-neo-yellow/30" />
+                      <div className="w-3 h-3 rounded-full border-2 border-neo-black/30 bg-neo-lime/30" />
+                    </div>
+                    <div className="flex-1 mx-4 px-3 py-1 border-2 border-neo-black/20 bg-neo-white font-mono text-[10px] text-neo-black/50 truncate">
+                      {cs.url}
+                    </div>
+                  </div>
+                  <div className="aspect-[16/9] overflow-hidden">
+                    <img
+                      src={cs.images.after}
+                      alt={`${cs.name} — Live Website Screenshot`}
+                      width={1200}
+                      height={675}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                </div>
+              )}
+            </motion.div>
+          </div>
+        </section>
+      )}
+
       {/* Challenge */}
       <section className="py-16 lg:py-20">
         <div className="max-w-container mx-auto px-6 lg:px-10">

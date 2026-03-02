@@ -1,5 +1,6 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { AnimatePresence, motion } from "framer-motion";
 import Header from "./Header";
 import Footer from "./Footer";
 import ProgressBar from "./ProgressBar";
@@ -10,9 +11,11 @@ import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import ExitIntentPopup from "@/components/ui/ExitIntentPopup";
 import CampaignPopup from "@/components/ui/CampaignPopup";
 import SocialProofNotification from "@/components/ui/SocialProofNotification";
+import MagneticCursor from "@/components/ui/MagneticCursor";
 
 export default function AppLayout() {
   const { t } = useTranslation();
+  const location = useLocation();
 
   return (
     <div className="min-h-screen flex flex-col bg-neo-bg">
@@ -28,7 +31,17 @@ export default function AppLayout() {
       <Header />
       <CampaignBanner />
       <main id="main-content" className="flex-1" role="main">
-        <Outlet />
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={location.pathname}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2, ease: [0.25, 0.4, 0, 1] }}
+          >
+            <Outlet />
+          </motion.div>
+        </AnimatePresence>
       </main>
       <Footer />
       <WhatsAppButton />
@@ -36,6 +49,7 @@ export default function AppLayout() {
       <CampaignPopup />
       <ExitIntentPopup />
       <SocialProofNotification />
+      <MagneticCursor />
     </div>
   );
 }

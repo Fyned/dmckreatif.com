@@ -95,10 +95,13 @@ export default function ContactPage() {
   useAnalytics("Contact");
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>("idle");
 
+  const [currentStep, setCurrentStep] = useState<1 | 2 | 3>(1);
+
   const {
     register,
     handleSubmit,
     reset,
+    trigger,
     formState: { errors },
   } = useForm<ContactFormData>();
 
@@ -226,155 +229,25 @@ export default function ContactPage() {
                   onSubmit={handleSubmit(onSubmit)}
                   className="relative border-2 border-neo-black bg-neo-white shadow-hard p-8 lg:p-10 space-y-6"
                 >
-                  {/* Name & Email row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="font-space font-bold text-sm text-neo-black uppercase tracking-wider block mb-2">
-                        {t("contact.name", "Name")} *
-                      </label>
-                      <input
-                        type="text"
-                        {...register("name", {
-                          required: t(
-                            "contact.nameRequired",
-                            "Name is required"
-                          ),
-                        })}
-                        className="w-full font-mono text-sm px-4 py-3 border-2 border-neo-black bg-neo-bg focus:outline-none focus:border-neo-lime focus:shadow-hard-sm transition-all placeholder:text-neo-black/30"
-                        placeholder={t("contact.namePlaceholder", "John Doe")}
-                      />
-                      {errors.name && (
-                        <span className="font-mono text-xs text-neo-red mt-1 block">
-                          {errors.name.message}
-                        </span>
-                      )}
-                    </div>
-
-                    <div>
-                      <label className="font-space font-bold text-sm text-neo-black uppercase tracking-wider block mb-2">
-                        {t("contact.email", "Email")} *
-                      </label>
-                      <input
-                        type="email"
-                        {...register("email", {
-                          required: t(
-                            "contact.emailRequired",
-                            "Email is required"
-                          ),
-                          pattern: {
-                            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                            message: t(
-                              "contact.emailInvalid",
-                              "Please enter a valid email"
-                            ),
-                          },
-                        })}
-                        className="w-full font-mono text-sm px-4 py-3 border-2 border-neo-black bg-neo-bg focus:outline-none focus:border-neo-lime focus:shadow-hard-sm transition-all placeholder:text-neo-black/30"
-                        placeholder={t(
-                          "contact.emailPlaceholder",
-                          "john@company.com"
-                        )}
-                      />
-                      {errors.email && (
-                        <span className="font-mono text-xs text-neo-red mt-1 block">
-                          {errors.email.message}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Company & Phone row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="font-space font-bold text-sm text-neo-black uppercase tracking-wider block mb-2">
-                        {t("contact.company", "Company")}
-                      </label>
-                      <input
-                        type="text"
-                        {...register("company")}
-                        className="w-full font-mono text-sm px-4 py-3 border-2 border-neo-black bg-neo-bg focus:outline-none focus:border-neo-lime focus:shadow-hard-sm transition-all placeholder:text-neo-black/30"
-                        placeholder={t(
-                          "contact.companyPlaceholder",
-                          "Acme Corp"
-                        )}
-                      />
-                    </div>
-
-                    <div>
-                      <label className="font-space font-bold text-sm text-neo-black uppercase tracking-wider block mb-2">
-                        {t("contact.phone", "Phone")}
-                      </label>
-                      <input
-                        type="tel"
-                        {...register("phone")}
-                        className="w-full font-mono text-sm px-4 py-3 border-2 border-neo-black bg-neo-bg focus:outline-none focus:border-neo-lime focus:shadow-hard-sm transition-all placeholder:text-neo-black/30"
-                        placeholder={t(
-                          "contact.phonePlaceholder",
-                          "+33 6 12 34 56 78"
-                        )}
-                      />
-                      {errors.phone && (
-                        <span className="font-mono text-xs text-neo-red mt-1 block">
-                          {t("contact.phoneInvalid", "Please enter a valid EU phone number")}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Service & Budget row */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="font-space font-bold text-sm text-neo-black uppercase tracking-wider block mb-2">
-                        {t("contact.service", "Service")}
-                      </label>
-                      <select
-                        {...register("service")}
-                        className="w-full font-mono text-sm px-4 py-3 border-2 border-neo-black bg-neo-bg focus:outline-none focus:border-neo-lime focus:shadow-hard-sm transition-all appearance-none cursor-pointer"
+                  {/* Step indicator */}
+                  <div className="flex items-center gap-0 mb-8 border-2 border-neo-black">
+                    {([1, 2, 3] as const).map((step) => (
+                      <div
+                        key={step}
+                        className={`flex-1 py-3 text-center font-space font-bold text-xs uppercase tracking-wider border-r-2 last:border-r-0 border-neo-black transition-colors ${
+                          currentStep === step
+                            ? "bg-neo-lime text-neo-black"
+                            : currentStep > step
+                            ? "bg-neo-black text-neo-white"
+                            : "bg-neo-bg text-neo-black/40"
+                        }`}
                       >
-                        {serviceOptions.map((opt) => (
-                          <option key={opt.value} value={opt.value}>
-                            {t(opt.labelKey, opt.labelKey)}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="font-space font-bold text-sm text-neo-black uppercase tracking-wider block mb-2">
-                        {t("contact.budget", "Budget")}
-                      </label>
-                      <select
-                        {...register("budget")}
-                        className="w-full font-mono text-sm px-4 py-3 border-2 border-neo-black bg-neo-bg focus:outline-none focus:border-neo-lime focus:shadow-hard-sm transition-all appearance-none cursor-pointer"
-                      >
-                        {budgetOptions.map((opt) => (
-                          <option key={opt.value} value={opt.value}>
-                            {t(opt.labelKey, opt.labelKey)}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
+                        {step === 1 ? t("contact.step1", "You") : step === 2 ? t("contact.step2", "Project") : t("contact.step3", "Message")}
+                      </div>
+                    ))}
                   </div>
 
-                  {/* Timeline */}
-                  <div>
-                    <label className="font-space font-bold text-sm text-neo-black uppercase tracking-wider block mb-2">
-                      <Clock size={14} className="inline mr-1.5 -mt-0.5" />
-                      {t("contact.timeline", "Timeline")}
-                    </label>
-                    <select
-                      {...register("timeline")}
-                      className="w-full font-mono text-sm px-4 py-3 border-2 border-neo-black bg-neo-bg focus:outline-none focus:border-neo-lime focus:shadow-hard-sm transition-all appearance-none cursor-pointer"
-                    >
-                      {timelineOptions.map((opt) => (
-                        <option key={opt.value} value={opt.value}>
-                          {t(opt.labelKey, opt.labelKey)}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  {/* Honeypot - hidden from users */}
+                  {/* Honeypot - hidden from users, always present */}
                   <div className="absolute -left-[9999px]" aria-hidden="true">
                     <input
                       type="text"
@@ -384,85 +257,288 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  {/* Message */}
-                  <div>
-                    <label className="font-space font-bold text-sm text-neo-black uppercase tracking-wider block mb-2">
-                      {t("contact.message", "Message")} *
-                    </label>
-                    <textarea
-                      {...register("message", {
-                        required: t(
-                          "contact.messageRequired",
-                          "Message is required"
-                        ),
-                        minLength: {
-                          value: 10,
-                          message: t(
-                            "contact.messageMinLength",
-                            "Message must be at least 10 characters"
-                          ),
-                        },
-                      })}
-                      rows={5}
-                      className="w-full font-mono text-sm px-4 py-3 border-2 border-neo-black bg-neo-bg focus:outline-none focus:border-neo-lime focus:shadow-hard-sm transition-all resize-vertical placeholder:text-neo-black/30"
-                      placeholder={t(
-                        "contact.messagePlaceholder",
-                        "Tell us about your project..."
+                  {/* Step 1: You */}
+                  {currentStep === 1 && (
+                    <>
+                      {/* Name & Email row */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                          <label className="font-space font-bold text-sm text-neo-black uppercase tracking-wider block mb-2">
+                            {t("contact.name", "Name")} *
+                          </label>
+                          <input
+                            type="text"
+                            {...register("name", {
+                              required: t(
+                                "contact.nameRequired",
+                                "Name is required"
+                              ),
+                            })}
+                            className="w-full font-mono text-sm px-4 py-3 border-2 border-neo-black bg-neo-bg focus:outline-none focus:border-neo-lime focus:shadow-hard-sm transition-all placeholder:text-neo-black/30"
+                            placeholder={t("contact.namePlaceholder", "John Doe")}
+                          />
+                          {errors.name && (
+                            <span className="font-mono text-xs text-neo-red mt-1 block">
+                              {errors.name.message}
+                            </span>
+                          )}
+                        </div>
+
+                        <div>
+                          <label className="font-space font-bold text-sm text-neo-black uppercase tracking-wider block mb-2">
+                            {t("contact.email", "Email")} *
+                          </label>
+                          <input
+                            type="email"
+                            {...register("email", {
+                              required: t(
+                                "contact.emailRequired",
+                                "Email is required"
+                              ),
+                              pattern: {
+                                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                                message: t(
+                                  "contact.emailInvalid",
+                                  "Please enter a valid email"
+                                ),
+                              },
+                            })}
+                            className="w-full font-mono text-sm px-4 py-3 border-2 border-neo-black bg-neo-bg focus:outline-none focus:border-neo-lime focus:shadow-hard-sm transition-all placeholder:text-neo-black/30"
+                            placeholder={t(
+                              "contact.emailPlaceholder",
+                              "john@company.com"
+                            )}
+                          />
+                          {errors.email && (
+                            <span className="font-mono text-xs text-neo-red mt-1 block">
+                              {errors.email.message}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Company & Phone row */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                          <label className="font-space font-bold text-sm text-neo-black uppercase tracking-wider block mb-2">
+                            {t("contact.company", "Company")}
+                          </label>
+                          <input
+                            type="text"
+                            {...register("company")}
+                            className="w-full font-mono text-sm px-4 py-3 border-2 border-neo-black bg-neo-bg focus:outline-none focus:border-neo-lime focus:shadow-hard-sm transition-all placeholder:text-neo-black/30"
+                            placeholder={t(
+                              "contact.companyPlaceholder",
+                              "Acme Corp"
+                            )}
+                          />
+                        </div>
+
+                        <div>
+                          <label className="font-space font-bold text-sm text-neo-black uppercase tracking-wider block mb-2">
+                            {t("contact.phone", "Phone")}
+                          </label>
+                          <input
+                            type="tel"
+                            {...register("phone")}
+                            className="w-full font-mono text-sm px-4 py-3 border-2 border-neo-black bg-neo-bg focus:outline-none focus:border-neo-lime focus:shadow-hard-sm transition-all placeholder:text-neo-black/30"
+                            placeholder={t(
+                              "contact.phonePlaceholder",
+                              "+33 6 12 34 56 78"
+                            )}
+                          />
+                          {errors.phone && (
+                            <span className="font-mono text-xs text-neo-red mt-1 block">
+                              {t("contact.phoneInvalid", "Please enter a valid EU phone number")}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="flex justify-end pt-2">
+                        <button
+                          type="button"
+                          onClick={async () => {
+                            const valid = await trigger(["name", "email"]);
+                            if (valid) setCurrentStep(2);
+                          }}
+                          className="inline-flex items-center gap-2 font-space font-bold text-sm uppercase tracking-wider bg-neo-lime border-2 border-neo-black px-6 py-3 hover:shadow-hard-sm transition-all"
+                        >
+                          {t("contact.next", "Next")} <ArrowRight size={16} />
+                        </button>
+                      </div>
+                    </>
+                  )}
+
+                  {/* Step 2: Project */}
+                  {currentStep === 2 && (
+                    <>
+                      {/* Service & Budget row */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                          <label className="font-space font-bold text-sm text-neo-black uppercase tracking-wider block mb-2">
+                            {t("contact.service", "Service")}
+                          </label>
+                          <select
+                            {...register("service")}
+                            className="w-full font-mono text-sm px-4 py-3 border-2 border-neo-black bg-neo-bg focus:outline-none focus:border-neo-lime focus:shadow-hard-sm transition-all appearance-none cursor-pointer"
+                          >
+                            {serviceOptions.map((opt) => (
+                              <option key={opt.value} value={opt.value}>
+                                {t(opt.labelKey, opt.labelKey)}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+
+                        <div>
+                          <label className="font-space font-bold text-sm text-neo-black uppercase tracking-wider block mb-2">
+                            {t("contact.budget", "Budget")}
+                          </label>
+                          <select
+                            {...register("budget")}
+                            className="w-full font-mono text-sm px-4 py-3 border-2 border-neo-black bg-neo-bg focus:outline-none focus:border-neo-lime focus:shadow-hard-sm transition-all appearance-none cursor-pointer"
+                          >
+                            {budgetOptions.map((opt) => (
+                              <option key={opt.value} value={opt.value}>
+                                {t(opt.labelKey, opt.labelKey)}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+                      </div>
+
+                      {/* Timeline */}
+                      <div>
+                        <label className="font-space font-bold text-sm text-neo-black uppercase tracking-wider block mb-2">
+                          <Clock size={14} className="inline mr-1.5 -mt-0.5" />
+                          {t("contact.timeline", "Timeline")}
+                        </label>
+                        <select
+                          {...register("timeline")}
+                          className="w-full font-mono text-sm px-4 py-3 border-2 border-neo-black bg-neo-bg focus:outline-none focus:border-neo-lime focus:shadow-hard-sm transition-all appearance-none cursor-pointer"
+                        >
+                          {timelineOptions.map((opt) => (
+                            <option key={opt.value} value={opt.value}>
+                              {t(opt.labelKey, opt.labelKey)}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+
+                      <div className="flex justify-between pt-2">
+                        <button
+                          type="button"
+                          onClick={() => setCurrentStep(1)}
+                          className="inline-flex items-center gap-2 font-space font-bold text-sm uppercase tracking-wider border-2 border-neo-black px-6 py-3 hover:bg-neo-bg transition-all"
+                        >
+                          ← {t("contact.back", "Back")}
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setCurrentStep(3)}
+                          className="inline-flex items-center gap-2 font-space font-bold text-sm uppercase tracking-wider bg-neo-lime border-2 border-neo-black px-6 py-3 hover:shadow-hard-sm transition-all"
+                        >
+                          {t("contact.next", "Next")} <ArrowRight size={16} />
+                        </button>
+                      </div>
+                    </>
+                  )}
+
+                  {/* Step 3: Message */}
+                  {currentStep === 3 && (
+                    <>
+                      <div className="flex justify-start mb-4">
+                        <button
+                          type="button"
+                          onClick={() => setCurrentStep(2)}
+                          className="inline-flex items-center gap-2 font-space font-bold text-sm uppercase tracking-wider border-2 border-neo-black px-4 py-2 hover:bg-neo-bg transition-all"
+                        >
+                          ← {t("contact.back", "Back")}
+                        </button>
+                      </div>
+
+                      {/* Message */}
+                      <div>
+                        <label className="font-space font-bold text-sm text-neo-black uppercase tracking-wider block mb-2">
+                          {t("contact.message", "Message")} *
+                        </label>
+                        <textarea
+                          {...register("message", {
+                            required: t(
+                              "contact.messageRequired",
+                              "Message is required"
+                            ),
+                            minLength: {
+                              value: 10,
+                              message: t(
+                                "contact.messageMinLength",
+                                "Message must be at least 10 characters"
+                              ),
+                            },
+                          })}
+                          rows={5}
+                          className="w-full font-mono text-sm px-4 py-3 border-2 border-neo-black bg-neo-bg focus:outline-none focus:border-neo-lime focus:shadow-hard-sm transition-all resize-vertical placeholder:text-neo-black/30"
+                          placeholder={t(
+                            "contact.messagePlaceholder",
+                            "Tell us about your project..."
+                          )}
+                        />
+                        {errors.message && (
+                          <span className="font-mono text-xs text-neo-red mt-1 block">
+                            {errors.message.message}
+                          </span>
+                        )}
+                      </div>
+
+                      {/* Rate limited state */}
+                      {submitStatus === "rate-limited" && (
+                        <div role="alert" aria-live="assertive" className="flex items-center gap-3 p-4 border-2 border-neo-yellow bg-neo-yellow/10">
+                          <Clock size={20} className="text-neo-black flex-shrink-0" />
+                          <p className="font-mono text-sm text-neo-black">
+                            {t(
+                              "contact.rateLimited",
+                              "Please wait a few minutes before sending another message."
+                            )}
+                          </p>
+                        </div>
                       )}
-                    />
-                    {errors.message && (
-                      <span className="font-mono text-xs text-neo-red mt-1 block">
-                        {errors.message.message}
-                      </span>
-                    )}
-                  </div>
 
-                  {/* Rate limited state */}
-                  {submitStatus === "rate-limited" && (
-                    <div role="alert" aria-live="assertive" className="flex items-center gap-3 p-4 border-2 border-neo-yellow bg-neo-yellow/10">
-                      <Clock size={20} className="text-neo-black flex-shrink-0" />
-                      <p className="font-mono text-sm text-neo-black">
-                        {t(
-                          "contact.rateLimited",
-                          "Please wait a few minutes before sending another message."
+                      {/* Error state */}
+                      {submitStatus === "error" && (
+                        <div role="alert" aria-live="assertive" className="flex items-center gap-3 p-4 border-2 border-neo-red bg-neo-red/10">
+                          <AlertTriangle size={20} className="text-neo-red flex-shrink-0" />
+                          <p className="font-mono text-sm text-neo-red">
+                            {t(
+                              "contact.errorMessage",
+                              "Something went wrong. Please try again."
+                            )}
+                          </p>
+                        </div>
+                      )}
+
+                      {/* Submit */}
+                      <NeoButton
+                        type="submit"
+                        color="neo-lime"
+                        size="lg"
+                        disabled={submitStatus === "loading" || submitStatus === "rate-limited"}
+                        className="w-full"
+                      >
+                        {submitStatus === "loading" ? (
+                          <span className="flex items-center gap-2">
+                            <span className="w-4 h-4 border-2 border-neo-black border-t-transparent animate-spin" />
+                            {t("contact.sending", "Sending...")}
+                          </span>
+                        ) : (
+                          <span className="flex items-center gap-2">
+                            <Send size={16} />
+                            {t("contact.submit", "Send Message")}
+                          </span>
                         )}
-                      </p>
-                    </div>
+                      </NeoButton>
+                    </>
                   )}
-
-                  {/* Error state */}
-                  {submitStatus === "error" && (
-                    <div role="alert" aria-live="assertive" className="flex items-center gap-3 p-4 border-2 border-neo-red bg-neo-red/10">
-                      <AlertTriangle size={20} className="text-neo-red flex-shrink-0" />
-                      <p className="font-mono text-sm text-neo-red">
-                        {t(
-                          "contact.errorMessage",
-                          "Something went wrong. Please try again."
-                        )}
-                      </p>
-                    </div>
-                  )}
-
-                  {/* Submit */}
-                  <NeoButton
-                    type="submit"
-                    color="neo-lime"
-                    size="lg"
-                    disabled={submitStatus === "loading" || submitStatus === "rate-limited"}
-                    className="w-full"
-                  >
-                    {submitStatus === "loading" ? (
-                      <span className="flex items-center gap-2">
-                        <span className="w-4 h-4 border-2 border-neo-black border-t-transparent animate-spin" />
-                        {t("contact.sending", "Sending...")}
-                      </span>
-                    ) : (
-                      <span className="flex items-center gap-2">
-                        <Send size={16} />
-                        {t("contact.submit", "Send Message")}
-                      </span>
-                    )}
-                  </NeoButton>
                 </form>
               )}
             </motion.div>
@@ -661,6 +737,42 @@ export default function ContactPage() {
             </motion.aside>
           </div>
         </div>
+
+        {/* Inline Booking Embed */}
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportConfig}
+          className="mt-16 border-2 border-neo-black bg-neo-white shadow-hard overflow-hidden"
+        >
+          <div className="flex items-center justify-between px-6 py-4 border-b-2 border-neo-black bg-neo-bg">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 border-2 border-neo-black bg-neo-lime flex items-center justify-center">
+                <Calendar size={18} className="text-neo-black" />
+              </div>
+              <div>
+                <h3 className="font-space font-bold text-sm text-neo-black uppercase tracking-wider">
+                  {t("contact.scheduleCall", "Schedule a Free Discovery Call")}
+                </h3>
+                <p className="font-mono text-xs text-neo-black/60">
+                  {t("contact.scheduleCallDesc", "15 minutes · Video call · No commitment")}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="w-full" style={{ minHeight: "600px" }}>
+            <iframe
+              src={`${BOOKING_URL}?embed=true`}
+              width="100%"
+              height="600"
+              frameBorder="0"
+              title="Book a discovery call with DMC Kreatif"
+              loading="lazy"
+              style={{ display: "block" }}
+            />
+          </div>
+        </motion.div>
       </section>
     </>
   );
