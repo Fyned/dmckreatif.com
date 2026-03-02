@@ -2,8 +2,6 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { supabase } from "@/lib/supabase";
-
 type Status = "idle" | "loading" | "success" | "error";
 
 export default function NewsletterSignup() {
@@ -18,6 +16,7 @@ export default function NewsletterSignup() {
 
     setStatus("loading");
     try {
+      const { supabase } = await import("@/lib/supabase");
       const { error } = await supabase
         .from("newsletter_subscribers")
         .insert({ email: email.trim().toLowerCase(), locale: locale ?? "en" });

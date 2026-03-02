@@ -8,8 +8,17 @@ import {
   type ReactNode,
 } from "react";
 import type { User, Session, AuthChangeEvent } from "@supabase/supabase-js";
-import { supabase } from "@/lib/supabase";
+import type { supabase as SupabaseInstance } from "@/lib/supabase";
 import type { Profile, UserRole } from "@/types/database";
+
+let _client: typeof SupabaseInstance | null = null;
+async function getClient(): Promise<typeof SupabaseInstance> {
+  if (!_client) {
+    const mod = await import("@/lib/supabase");
+    _client = mod.supabase;
+  }
+  return _client;
+}
 
 interface AuthState {
   user: User | null;
@@ -69,6 +78,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const fetchProfile = useCallback(
     async (userId: string, retries = 2): Promise<Profile | null> => {
+      const supabase = await getClient();
       for (let i = 0; i <= retries; i++) {
         const { data, error } = await supabase
           .from("profiles")
@@ -102,13 +112,52 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     mountedRef.current = true;
+    let unsubscribe: (() => void) | null = null;
 
-    // Initial session check
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    getClient().then((supabase) => {
       if (!mountedRef.current) return;
-      if (session?.user) {
-        fetchProfile(session.user.id).then((profile) => {
+
+      // Initial session check
+      supabase.auth.getSession().then(({ data: { session } }) => {
+        if (!mountedRef.current) return;
+        if (session?.user) {
+          fetchProfile(session.user.id).then((profile) => {
+            if (!mountedRef.current) return;
+            setState({
+              user: session.user,
+              session,
+              profile,
+              role: profile?.role ?? null,
+              loading: false,
+            });
+          });
+        } else {
+          setState((prev) => ({ ...prev, loading: false }));
+        }
+      });
+
+      // Auth state listener
+      const {
+        data: { subscription },
+      } = supabase.auth.onAuthStateChange(
+        async (event: AuthChangeEvent, session) => {
           if (!mountedRef.current) return;
+
+          if (event === "SIGNED_OUT" || !session?.user) {
+            setState({
+              user: null,
+              session: null,
+              profile: null,
+              role: null,
+              loading: false,
+            });
+            return;
+          }
+
+          // SIGNED_IN, TOKEN_REFRESHED, USER_UPDATED
+          const profile = await fetchProfile(session.user.id);
+          if (!mountedRef.current) return;
+
           setState({
             user: session.user,
             session,
@@ -116,51 +165,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             role: profile?.role ?? null,
             loading: false,
           });
-        });
-      } else {
-        setState((prev) => ({ ...prev, loading: false }));
-      }
+        },
+      );
+
+      unsubscribe = () => subscription.unsubscribe();
     });
-
-    // Auth state listener
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange(
-      async (event: AuthChangeEvent, session) => {
-        if (!mountedRef.current) return;
-
-        if (event === "SIGNED_OUT" || !session?.user) {
-          setState({
-            user: null,
-            session: null,
-            profile: null,
-            role: null,
-            loading: false,
-          });
-          return;
-        }
-
-        // SIGNED_IN, TOKEN_REFRESHED, USER_UPDATED
-        const profile = await fetchProfile(session.user.id);
-        if (!mountedRef.current) return;
-
-        setState({
-          user: session.user,
-          session,
-          profile,
-          role: profile?.role ?? null,
-          loading: false,
-        });
-      },
-    );
 
     return () => {
       mountedRef.current = false;
-      subscription.unsubscribe();
+      unsubscribe?.();
     };
   }, [fetchProfile]);
 
   const signIn = async (email: string, password: string) => {
+    const supabase = await getClient();
     const { error } = await supabase.auth.signInWithPassword({
       email: email.trim().toLowerCase(),
       password,
@@ -174,6 +192,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     name: string,
     company?: string,
   ) => {
+    const supabase = await getClient();
     const { data, error } = await supabase.auth.signUp({
       email: email.trim().toLowerCase(),
       password,
@@ -186,7 +205,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       return { error: friendlyAuthError(error.message), needsConfirmation: false };
     }
 
-    // If user exists but identities is empty → email confirmation required
     const needsConfirmation =
       !!data.user && (!data.session || (data.user.identities?.length ?? 0) === 0);
 
@@ -194,10 +212,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const signOut = async () => {
+    const supabase = await getClient();
     await supabase.auth.signOut();
   };
 
   const resetPassword = async (email: string) => {
+    const supabase = await getClient();
     const { error } = await supabase.auth.resetPasswordForEmail(
       email.trim().toLowerCase(),
       { redirectTo: `${window.location.origin}/en/reset-password` },
@@ -206,6 +226,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const updatePassword = async (newPassword: string) => {
+    const supabase = await getClient();
     const { error } = await supabase.auth.updateUser({ password: newPassword });
     return { error: error ? friendlyAuthError(error.message) : null };
   };

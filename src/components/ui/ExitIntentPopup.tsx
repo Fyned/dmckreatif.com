@@ -4,8 +4,6 @@ import { useParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, Gift } from "lucide-react";
 import { trackEvent, trackNewsletterSignup } from "@/lib/analytics";
-import { supabase } from "@/lib/supabase";
-
 const SESSION_KEY = "dmc_exit_intent_shown";
 
 export default function ExitIntentPopup() {
@@ -59,6 +57,7 @@ export default function ExitIntentPopup() {
 
     setLoading(true);
 
+    const { supabase } = await import("@/lib/supabase");
     const { error } = await supabase
       .from("lead_magnet_downloads")
       .insert({ email: email.trim(), resource: "exit_intent_audit" });

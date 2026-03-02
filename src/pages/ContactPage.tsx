@@ -11,7 +11,7 @@ import NeoButton from "@/components/ui/NeoButton";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { supabase } from "@/lib/supabase";
 import JsonLd from "@/components/seo/JsonLd";
-import { buildLocalBusinessSchema, buildContactPageSchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
+import { buildLocalBusinessSchema, buildContactPageSchema, buildBreadcrumbSchema, buildProfessionalServiceSchema } from "@/lib/seo-schemas";
 import { fadeInUp, viewportConfig } from "@/lib/animations";
 import { BOOKING_URL } from "@/lib/constants";
 import { useAnalytics } from "@/lib/useAnalytics";
@@ -154,6 +154,14 @@ export default function ContactPage() {
 
       <JsonLd data={buildLocalBusinessSchema()} />
       <JsonLd data={buildContactPageSchema(locale ?? "en")} />
+      <JsonLd data={buildProfessionalServiceSchema([
+        { author: "Pierre Cakir", rating: 5, body: "DMC Kreatif delivered our website in under a week with outstanding quality. The design is professional, the site loads in under 1.5 seconds, and our qualified leads increased by 40% in the first month. Truly exceeded every expectation.", company: "CAKIR FACADES", datePublished: "2024-03-15" },
+        { author: "Mehmet Altinbas", rating: 5, body: "We had no online presence before working with DMC Kreatif. They built us a stunning website that now ranks on the first page of Google for insect screens in Paris. Online inquiries went up by 55% and customers frequently compliment the site.", company: "ALTINBAS MOUSTIQUAIRE", datePublished: "2024-05-20" },
+        { author: "Julien Martin", rating: 5, body: "We migrated from Wix and the difference is night and day. Our site now loads three times faster, the SEO improvements doubled our organic traffic in three months, and client appointments have increased significantly. Worth every euro.", company: "CONSULTING ENERGY", datePublished: "2024-07-10" },
+        { author: "Sophie Laurent", rating: 5, body: "Our old HTML website was impossible to update and looked outdated. DMC Kreatif rebuilt it from scratch with a modern design and local SEO pages. We can now manage content ourselves, and lead quality improved by 50% thanks to the educational approach.", company: "ISO HOME ENERGY", datePublished: "2024-09-05" },
+        { author: "Marc Dupont", rating: 5, body: "We needed a bilingual website in French and Dutch to serve all of Belgium. DMC Kreatif delivered a visually stunning site with seamless language switching. Quote requests from the website increased by 60% and both language audiences are well served.", company: "ARCHI CONSTRUCTION & VERANDA", datePublished: "2024-11-12" },
+        { author: "James Adams", rating: 5, body: "We switched from WordPress after constant security issues. DMC Kreatif built us a lightning-fast React site that scores 98 on Google Lighthouse. Our clients are impressed by the speed and professionalism, and new inquiries are up 25% since launch.", company: "ADAMSONS ACCOUNTANTS", datePublished: "2025-01-08" },
+      ])} />
       <JsonLd
         data={buildBreadcrumbSchema(locale ?? "en", [{ name: "Home", path: "" }], t("nav.contact", "Contact"))}
       />

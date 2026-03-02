@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { supabase } from "@/lib/supabase";
 import type { Campaign } from "@/types/database";
 
 const SESSION_KEY = "campaign_banner_dismissed";
@@ -20,6 +19,7 @@ export default function CampaignBanner() {
 
     async function fetchActiveBanner() {
       const now = new Date().toISOString();
+      const { supabase } = await import("@/lib/supabase");
       const { data } = await supabase
         .from("campaigns")
         .select("*")

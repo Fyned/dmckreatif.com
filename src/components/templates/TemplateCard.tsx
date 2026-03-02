@@ -34,7 +34,7 @@ export default function TemplateCard({ template }: TemplateCardProps) {
         <Link to={previewPath} className="block overflow-hidden border-b-2 border-neo-black">
           <img
             src={template.thumbnail_url}
-            alt={template.name}
+            alt={`${template.name} — ${template.category?.name ?? "Website"} Template | DMC Kreatif`}
             loading="lazy"
             className="w-full aspect-[16/9] object-cover object-top group-hover:scale-105 transition-transform duration-500"
           />
