@@ -47,6 +47,7 @@ const TemplateViewerPage = lazy(() => import("@/pages/TemplateViewerPage"));
 const EditorPage = lazy(() => import("@/pages/EditorPage"));
 const PublishedSitePage = lazy(() => import("@/pages/PublishedSitePage"));
 const CaseStudiesPage = lazy(() => import("@/pages/CaseStudiesPage"));
+const CaseStudyDetailPage = lazy(() => import("@/pages/CaseStudyDetailPage"));
 const ServiceDetailPage = lazy(() =>
   import("@/i18n").then((m) => m.loadEnNamespace("services", "seo")).then(() => import("@/pages/ServiceDetailPage"))
 );
@@ -130,6 +131,7 @@ export default function App() {
             <Route path="blog/:slug" element={<BlogPostPage />} />
             <Route path="contact" element={<ContactPage />} />
             <Route path="case-studies" element={<CaseStudiesPage />} />
+            <Route path="case-studies/:slug" element={<CaseStudyDetailPage />} />
             <Route path="web-agency-:city" element={<CityServicePage />} />
             <Route path="templates" element={<TemplatesPage />} />
             <Route path="templates/:slug" element={<TemplateDetailPage />} />

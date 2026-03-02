@@ -370,6 +370,61 @@
     <priority>0.8</priority>
   </url>
 
+
+  <url>
+    <loc>https://dmckreatif.com/en/case-studies/cakir-facades</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/case-studies/cakir-facades"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/case-studies/cakir-facades"/>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dmckreatif.com/en/case-studies/altinbas-moustiquaire</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/case-studies/altinbas-moustiquaire"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/case-studies/altinbas-moustiquaire"/>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dmckreatif.com/en/case-studies/consulting-energy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/case-studies/consulting-energy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/case-studies/consulting-energy"/>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dmckreatif.com/en/case-studies/iso-home-energy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/case-studies/iso-home-energy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/case-studies/iso-home-energy"/>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dmckreatif.com/en/case-studies/archi-construction</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/case-studies/archi-construction"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/case-studies/archi-construction"/>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://dmckreatif.com/en/case-studies/adamsons-accountants</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dmckreatif.com/en/case-studies/adamsons-accountants"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en/case-studies/adamsons-accountants"/>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- ==================== PRICING ==================== -->
   <url>
     <loc>https://dmckreatif.com/en/pricing</loc>

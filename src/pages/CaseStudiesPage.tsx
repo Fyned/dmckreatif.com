@@ -176,11 +176,17 @@ export default function CaseStudiesPage() {
                 <span className="font-mono text-[10px] text-neo-black/60">
                   {cs.timeline}
                 </span>
+                <Link
+                  to={`/${currentLocale}/case-studies/${cs.slug}`}
+                  className="inline-flex items-center gap-2 font-mono text-xs font-bold bg-neo-lime border-2 border-neo-black px-3 py-1.5 hover:shadow-hard-sm transition-all ml-2"
+                >
+                  Read Case Study <ArrowRight size={12} />
+                </Link>
                 <a
                   href={cs.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-mono text-xs font-bold text-neo-black hover:text-neo-lime transition-colors ml-2"
+                  className="inline-flex items-center gap-2 font-mono text-xs font-bold text-neo-black hover:text-neo-lime transition-colors"
                 >
                   Visit Site <ExternalLink size={12} />
                 </a>
