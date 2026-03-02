@@ -747,6 +747,67 @@ export function buildCaseStudySchema(params: {
  * SoftwareApplication schema for templates.
  * Added required screenshot and rating properties.
  */
+export function buildPersonProfileSchema(locale: string) {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        "@id": `${BASE_URL}/${locale}/about/musa-kerem-demirci#profilepage`,
+        name: "Musa Kerem Demirci — Founder & Lead Developer | DMC Kreatif",
+        description:
+          "Full-stack developer and founder of DMC Kreatif. 33+ websites delivered for businesses across France, Belgium, UK, Netherlands and Germany.",
+        url: `${BASE_URL}/${locale}/about/musa-kerem-demirci`,
+        inLanguage: locale,
+        isPartOf: { "@type": "WebSite", name: "DMC Kreatif", url: BASE_URL },
+        mainEntity: { "@id": `${BASE_URL}#founder` },
+      },
+      {
+        "@type": "Person",
+        "@id": `${BASE_URL}#founder`,
+        name: "Musa Kerem Demirci",
+        url: `${BASE_URL}/${locale}/about/musa-kerem-demirci`,
+        jobTitle: "Founder & Lead Developer",
+        description:
+          "Full-stack web developer specialising in React, Next.js and TypeScript for European businesses. Founder of DMC Kreatif.",
+        image: `${BASE_URL}/musa-kerem-demirci.jpg`,
+        sameAs: [
+          "https://www.linkedin.com/in/musakeremdemirci",
+          `${BASE_URL}/${locale}/about/musa-kerem-demirci`,
+        ],
+        worksFor: {
+          "@type": "Organization",
+          "@id": `${BASE_URL}#organization`,
+          name: "DMC Kreatif",
+          url: BASE_URL,
+        },
+        knowsAbout: [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Supabase",
+          "SEO Optimization",
+          "E-Commerce Development",
+          "Web Performance",
+          "Multilingual Websites",
+          "Framer Motion",
+        ],
+        knowsLanguage: ["en", "fr", "nl", "de"],
+        nationality: { "@type": "Country", name: "Turkey" },
+        hasOccupation: {
+          "@type": "Occupation",
+          name: "Full-Stack Web Developer",
+          occupationLocation: { "@type": "Country", name: "Europe" },
+          skills: "React, Next.js, TypeScript, Tailwind CSS, Supabase, SEO",
+        },
+        alumniOf: [],
+        award: "33+ international web projects delivered",
+      },
+    ],
+  };
+}
+
 export function buildSoftwareApplicationSchema(params: {
   name: string;
   description: string;

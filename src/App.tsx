@@ -76,6 +76,7 @@ const CountryPage = lazy(() =>
   import("@/i18n").then((m) => m.loadEnNamespace("cities")).then(() => import("@/pages/CountryPage"))
 );
 const TeamPage = lazy(() => import("@/pages/TeamPage"));
+const AuthorPage = lazy(() => import("@/pages/AuthorPage"));
 const ProcessPage = lazy(() => import("@/pages/ProcessPage"));
 const WhyUsPage = lazy(() => import("@/pages/WhyUsPage"));
 const PartnersPage = lazy(() => import("@/pages/PartnersPage"));
@@ -131,6 +132,7 @@ export default function App() {
             <Route path="pricing" element={<PricingPage />} />
             <Route path="about" element={<AboutPage />} />
             <Route path="about/team" element={<TeamPage />} />
+            <Route path="about/musa-kerem-demirci" element={<AuthorPage />} />
             <Route path="about/process" element={<ProcessPage />} />
             <Route path="about/why-us" element={<WhyUsPage />} />
             <Route path="about/partners" element={<PartnersPage />} />
