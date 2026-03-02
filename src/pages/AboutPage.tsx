@@ -200,9 +200,9 @@ export default function AboutPage() {
               className="flex flex-wrap border-2 border-neo-black bg-neo-white shadow-hard"
             >
               {[
-                { value: 200, suffix: "+", label: "PROJECTS" },
-                { value: 100, suffix: "+", label: "TEAM" },
-                { value: 6, suffix: "", label: "COUNTRIES" },
+                { value: 33, suffix: "+", label: "PROJECTS" },
+                { value: 4, suffix: "", label: "COUNTRIES" },
+                { value: 7, suffix: "", label: "YEARS EXP" },
                 { value: 95, suffix: "+", label: "LIGHTHOUSE" },
               ].map((stat, i) => (
                 <div

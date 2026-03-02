@@ -16,6 +16,7 @@ export default function ExitIntentPopup() {
 
   const showPopup = useCallback(() => {
     if (sessionStorage.getItem(SESSION_KEY)) return;
+    if (sessionStorage.getItem("dmc_campaign_popup_shown")) return;
     setIsVisible(true);
     sessionStorage.setItem(SESSION_KEY, "1");
     trackEvent("exit_intent_shown", "engagement", "popup");

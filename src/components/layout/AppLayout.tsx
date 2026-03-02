@@ -10,7 +10,6 @@ import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import ExitIntentPopup from "@/components/ui/ExitIntentPopup";
 import CampaignPopup from "@/components/ui/CampaignPopup";
-import SocialProofNotification from "@/components/ui/SocialProofNotification";
 import MagneticCursor from "@/components/ui/MagneticCursor";
 
 export default function AppLayout() {
@@ -48,7 +47,6 @@ export default function AppLayout() {
       <StickyMobileCTA />
       <CampaignPopup />
       <ExitIntentPopup />
-      <SocialProofNotification />
       <MagneticCursor />
     </div>
   );
