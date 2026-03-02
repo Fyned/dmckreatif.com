@@ -770,7 +770,6 @@ export function buildPersonProfileSchema(locale: string) {
         jobTitle: "Founder & Lead Developer",
         description:
           "Full-stack web developer specialising in React, Next.js and TypeScript for European businesses. Founder of DMC Kreatif.",
-        image: `${BASE_URL}/musa-kerem-demirci.jpg`,
         sameAs: [
           "https://www.linkedin.com/in/musakeremdemirci",
           `${BASE_URL}/${locale}/about/musa-kerem-demirci`,
