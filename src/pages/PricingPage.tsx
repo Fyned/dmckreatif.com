@@ -39,7 +39,7 @@ import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import PromoBanner from "@/components/ui/PromoBanner";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildOfferSchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
-import { pricingTiers, addOns, carePlanTiers, seoPlans } from "@/lib/pricing-data";
+import { pricingTiers, addOns, carePlanTiers, seoPlans, bundles } from "@/lib/pricing-data";
 import { templateTiers } from "@/lib/template-data";
 import {
   fadeInUp,
@@ -183,6 +183,142 @@ export default function PricingPage() {
       />
 
       <Breadcrumbs items={[{ label: t("nav.pricing", "PRICING") }]} />
+
+      {/* ═══ CAMPAIGN BUNDLES — HERO ═══ */}
+      <section className="py-20 lg:py-28 bg-neo-black border-b-4 border-neo-lime">
+        <div className="max-w-container mx-auto px-6 lg:px-10">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+          >
+            <motion.div variants={fadeInUp} className="mb-2">
+              <span className="inline-block font-mono text-[11px] font-bold text-neo-lime border border-neo-lime px-3 py-1 uppercase tracking-widest">
+                {t("pricing.bundlesSubtitle", "SYS.BUNDLES")}
+              </span>
+            </motion.div>
+            <motion.h2 variants={fadeInUp} className="font-space font-bold text-h2 text-neo-white mb-4">
+              {t("pricing.bundlesTitle", "CAMPAIGN BUNDLES")}
+            </motion.h2>
+            <motion.p variants={fadeInUp} className="font-mono text-base text-neo-white/60 max-w-2xl mb-12">
+              {t("pricing.bundlesDesc", "Maximum value, minimum effort. Website + SEO + Support — bundled and discounted up to 34%.")}
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6"
+          >
+            {bundles.map((bundle) => {
+              const featuresString = t(`pricing.${bundle.featuresKey}`, "");
+              const features = featuresString.split("//").map((f: string) => f.trim()).filter(Boolean);
+              const typeColors: Record<string, string> = {
+                website: "bg-neo-lime",
+                seo: "bg-neo-blue",
+                care: "bg-neo-yellow",
+              };
+
+              return (
+                <motion.div
+                  key={bundle.id}
+                  variants={scaleIn}
+                  className={`relative bg-neo-white border-2 border-neo-black shadow-hard transition-all duration-300 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-hard-sm flex flex-col ${
+                    bundle.popular ? "ring-4 ring-neo-lime" : ""
+                  }`}
+                >
+                  {bundle.popular && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                      <NeoBadge color="neo-lime">
+                        {t(`pricing.${bundle.tagKey}`, "MOST POPULAR")}
+                      </NeoBadge>
+                    </div>
+                  )}
+
+                  <div className={`h-2 bg-${bundle.color}`} />
+
+                  <div className="p-6 flex flex-col flex-1">
+                    <div className="flex items-start justify-between gap-2 mb-4">
+                      <h3 className="font-space font-bold text-base tracking-wider leading-tight">
+                        {t(`pricing.${bundle.nameKey}`, bundle.id)}
+                      </h3>
+                      {!bundle.popular && (
+                        <span className="font-mono text-[9px] text-neo-black/50 uppercase border border-neo-black/20 px-2 py-0.5 whitespace-nowrap">
+                          {t(`pricing.${bundle.tagKey}`, "")}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Included items with value breakdown */}
+                    <div className="mb-4 space-y-1.5">
+                      <p className="font-mono text-[10px] text-neo-black/40 uppercase tracking-wider mb-2">
+                        {t("pricing.bundleIncludesTitle", "WHAT'S INCLUDED")}
+                      </p>
+                      {bundle.includes.map((item) => (
+                        <div key={item.label} className="flex items-center gap-2 font-mono text-xs">
+                          <span className={`w-2.5 h-2.5 flex-shrink-0 ${typeColors[item.type]} border border-neo-black`} />
+                          <span className="text-neo-black/70 flex-1">{item.label}</span>
+                          <span className="font-bold text-neo-black/50 text-[10px]">€{item.value.toLocaleString()}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Price block */}
+                    <div className="border-t-2 border-dashed border-neo-black/20 pt-3 mb-3">
+                      <div className="flex justify-between font-mono text-[10px] text-neo-black/40 mb-1">
+                        <span>{t("pricing.bundleRegularPrice", "Regular price")}</span>
+                        <span className="line-through">€{bundle.regularPrice.toLocaleString()}</span>
+                      </div>
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="font-space font-bold text-2xl lg:text-3xl text-neo-black">
+                          €{bundle.bundlePrice.toLocaleString()}
+                        </span>
+                        <span className="bg-neo-lime border-2 border-neo-black font-space font-bold text-[10px] px-2 py-1 whitespace-nowrap">
+                          {t("pricing.bundleSave", "SAVE")} {bundle.savingsPercent}%
+                        </span>
+                      </div>
+                      {bundle.monthlyEquiv && (
+                        <p className="font-mono text-[10px] text-neo-black/50 mt-1">
+                          ≈ €{bundle.monthlyEquiv}/mo over {bundle.seoMonths} months
+                        </p>
+                      )}
+                    </div>
+
+                    <div className="w-full h-px bg-neo-black/10 mb-4" />
+
+                    {/* Features */}
+                    <ul className="space-y-1.5 mb-6 flex-1">
+                      {features.slice(0, 5).map((feature: string) => (
+                        <li key={feature} className="flex items-start gap-2 font-mono text-xs text-neo-black/70">
+                          <span className="text-neo-lime font-bold mt-0.5 flex-shrink-0">+</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <NeoButton href="/contact" size="sm" color={bundle.color} className="w-full mt-auto">
+                      {t("pricing.getBundle", "GET THIS BUNDLE")} <ArrowRight size={14} />
+                    </NeoButton>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+
+          <motion.p
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+            className="font-mono text-xs text-neo-white/30 text-center mt-8"
+          >
+            {t("pricing.bundlePaymentNote", "Split payment available for bundles over €2,000 — 50% upfront, 50% on website delivery.")}
+          </motion.p>
+        </div>
+      </section>
 
       {/* ═══ ZONE A: CUSTOM DEVELOPMENT (PRIMARY) ═══ */}
       <section className="py-20 lg:py-28">
@@ -895,12 +1031,12 @@ export default function PricingPage() {
           >
             {seoPlans.map((plan) => {
               const bgAccent = bgAccentMap[plan.color] ?? "bg-neo-lime";
-              const featuresString = t(`pricing.seo.${plan.id === "seo-monthly" ? "monthly" : plan.id === "seo-6month" ? "6month" : "yearly"}Features`, "");
+              const featuresString = t(`pricing.seo.${plan.id}Features`, "");
               const features = featuresString
                 .split("//")
                 .map((f: string) => f.trim())
                 .filter(Boolean);
-              const priceKey = plan.id === "seo-monthly" ? "monthly" : plan.id === "seo-6month" ? "6month" : "yearly";
+              const priceKey = plan.id;
 
               return (
                 <motion.div
@@ -941,15 +1077,7 @@ export default function PricingPage() {
                       </span>
                     </div>
 
-                    {/* Save badge for 6month and yearly */}
-                    {plan.id !== "seo-monthly" && (
-                      <div className="mb-4">
-                        <span className="inline-block bg-neo-green/20 text-neo-black font-mono text-[10px] font-bold px-2 py-0.5 border border-neo-green">
-                          {t(`pricing.seo.${priceKey}Save`, "")}
-                        </span>
-                      </div>
-                    )}
-                    {plan.id === "seo-monthly" && <div className="mb-4" />}
+                    <div className="mb-4" />
 
                     <div className="w-full h-0.5 bg-neo-black/10 mb-4" />
 

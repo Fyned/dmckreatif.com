@@ -99,32 +99,33 @@ export interface SeoPlan {
   popular: boolean;
 }
 
+// Monthly retainer plans — tiered by service scope, not commitment length
 export const seoPlans: SeoPlan[] = [
   {
-    id: "seo-monthly",
-    nameKey: "seoMonthly",
-    price: 300,
+    id: "local",
+    nameKey: "seoLocal",
+    price: 199,
     period: "month",
     color: "neo-lime",
-    featuresKey: "seoMonthlyFeatures",
+    featuresKey: "seoLocalFeatures",
     popular: false,
   },
   {
-    id: "seo-6month",
-    nameKey: "seo6Month",
-    price: 1500,
-    period: "6months",
+    id: "growth",
+    nameKey: "seoGrowth",
+    price: 349,
+    period: "month",
     color: "neo-yellow",
-    featuresKey: "seo6MonthFeatures",
+    featuresKey: "seoGrowthFeatures",
     popular: true,
   },
   {
-    id: "seo-yearly",
-    nameKey: "seoYearly",
-    price: 2500,
-    period: "year",
+    id: "authority",
+    nameKey: "seoAuthority",
+    price: 599,
+    period: "month",
     color: "neo-blue",
-    featuresKey: "seoYearlyFeatures",
+    featuresKey: "seoAuthorityFeatures",
     popular: false,
   },
 ];
@@ -141,4 +142,100 @@ export const addOns: AddOn[] = [
   { nameKey: "googleAds", price: "\u20AC449", descKey: "googleAdsDesc" },
   { nameKey: "socialKit", price: "\u20AC249", descKey: "socialKitDesc" },
   { nameKey: "videoProduction", price: "\u20AC249-499", descKey: "videoProductionDesc" },
+];
+
+export interface BundleItem {
+  type: "website" | "seo" | "care";
+  label: string;
+  value: number;
+}
+
+export interface Bundle {
+  id: string;
+  nameKey: string;
+  tagKey: string;
+  color: string;
+  includes: BundleItem[];
+  regularPrice: number;
+  bundlePrice: number;
+  savingsPercent: number;
+  monthlyEquiv: number | null;
+  seoMonths: number;
+  featuresKey: string;
+  popular: boolean;
+}
+
+// Website + SEO (+ optional Care) campaign bundles
+// Monthly equiv = bundlePrice / seoMonths — total cost amortized over SEO period
+export const bundles: Bundle[] = [
+  {
+    id: "kickstart",
+    nameKey: "bundleKickstart",
+    tagKey: "bundleKickstartTag",
+    color: "neo-lime",
+    includes: [
+      { type: "website", label: "Starter Website", value: 497 },
+      { type: "seo", label: "Local SEO \u00d7 3 months", value: 597 },
+    ],
+    regularPrice: 1094,
+    bundlePrice: 847,
+    savingsPercent: 23,
+    monthlyEquiv: null,
+    seoMonths: 3,
+    featuresKey: "bundleKickstartFeatures",
+    popular: false,
+  },
+  {
+    id: "business-boost",
+    nameKey: "bundleBusinessBoost",
+    tagKey: "bundleBusinessBoostTag",
+    color: "neo-yellow",
+    includes: [
+      { type: "website", label: "Business Website", value: 997 },
+      { type: "seo", label: "Growth SEO \u00d7 6 months", value: 2094 },
+    ],
+    regularPrice: 3091,
+    bundlePrice: 2197,
+    savingsPercent: 29,
+    monthlyEquiv: 366,
+    seoMonths: 6,
+    featuresKey: "bundleBusinessBoostFeatures",
+    popular: true,
+  },
+  {
+    id: "scale-pro",
+    nameKey: "bundleScalePro",
+    tagKey: "bundleScaleProTag",
+    color: "neo-blue",
+    includes: [
+      { type: "website", label: "Scale Website", value: 1997 },
+      { type: "seo", label: "Growth SEO \u00d7 12 months", value: 4188 },
+      { type: "care", label: "Care Pro \u00d7 12 months", value: 1164 },
+    ],
+    regularPrice: 7349,
+    bundlePrice: 4997,
+    savingsPercent: 32,
+    monthlyEquiv: 416,
+    seoMonths: 12,
+    featuresKey: "bundleScaleProFeatures",
+    popular: false,
+  },
+  {
+    id: "commerce-full",
+    nameKey: "bundleCommerceFull",
+    tagKey: "bundleCommerceFullTag",
+    color: "neo-purple",
+    includes: [
+      { type: "website", label: "E-Commerce Website", value: 2997 },
+      { type: "seo", label: "Authority SEO \u00d7 12 months", value: 7188 },
+      { type: "care", label: "Care Pro \u00d7 12 months", value: 1164 },
+    ],
+    regularPrice: 11349,
+    bundlePrice: 7497,
+    savingsPercent: 34,
+    monthlyEquiv: 625,
+    seoMonths: 12,
+    featuresKey: "bundleCommerceFullFeatures",
+    popular: false,
+  },
 ];
