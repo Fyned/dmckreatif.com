@@ -254,9 +254,8 @@ export default function BlogPostPage() {
   const seoTitle = t(`seo.blogPost.${article.slug}.title`, `${article.title} — DMC Kreatif`);
   const seoDesc = t(`seo.blogPost.${article.slug}.description`, article.excerpt);
 
-  const isFrArticle = article.lang === "fr";
-  const canonicalLang = isFrArticle ? "fr" : "en";
-  const canonicalLocales = isFrArticle ? ["fr"] : ["en"];
+  const canonicalLang = article.lang ?? "en";
+  const canonicalLocales = [canonicalLang];
 
   return (
     <>

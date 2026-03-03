@@ -40,7 +40,7 @@ export default function CityServicePage() {
         description={t(city.descriptionKey)}
         path={`/web-agency-${city.slug}`}
       />
-      <JsonLd data={buildCitySchema({ cityName, lat: city.lat, lng: city.lng, locale: locale ?? "en" })} />
+      <JsonLd data={buildCitySchema({ cityName, lat: city.lat, lng: city.lng, locale: locale ?? "en", serviceType: "Web Design Agency" })} />
       <JsonLd data={buildBreadcrumbSchema(locale ?? "en", [{ name: "Home", path: "" }, { name: "Services", path: "/services" }], cityName)} />
 
       <Breadcrumbs
