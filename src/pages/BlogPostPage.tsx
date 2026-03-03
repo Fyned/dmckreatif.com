@@ -29,6 +29,16 @@ const contentModulesFr = import.meta.glob<{ default: string }>(
   { eager: false }
 );
 
+const contentModulesNl = import.meta.glob<{ default: string }>(
+  "/src/data/blog/content/nl/*.ts",
+  { eager: false }
+);
+
+const contentModulesDe = import.meta.glob<{ default: string }>(
+  "/src/data/blog/content/de/*.ts",
+  { eager: false }
+);
+
 function parseToc(html: string): TocItem[] {
   const items: TocItem[] = [];
   const regex = /<h([23])[^>]*>(.*?)<\/h[23]>/gi;
@@ -120,6 +130,36 @@ export default function BlogPostPage() {
         if (contentModulesFr[frKey]) {
           try {
             const mod = await contentModulesFr[frKey]();
+            setContent(mod.default);
+            setLoading(false);
+            return;
+          } catch {
+            // fall through to EN
+          }
+        }
+      }
+
+      // NL locale: try NL content first
+      if (locale === "nl") {
+        const nlKey = `/src/data/blog/content/nl/${slug}.ts`;
+        if (contentModulesNl[nlKey]) {
+          try {
+            const mod = await contentModulesNl[nlKey]();
+            setContent(mod.default);
+            setLoading(false);
+            return;
+          } catch {
+            // fall through to EN
+          }
+        }
+      }
+
+      // DE locale: try DE content first
+      if (locale === "de") {
+        const deKey = `/src/data/blog/content/de/${slug}.ts`;
+        if (contentModulesDe[deKey]) {
+          try {
+            const mod = await contentModulesDe[deKey]();
             setContent(mod.default);
             setLoading(false);
             return;
