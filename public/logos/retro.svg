@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/retro-logo-favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Koşar Tekstil</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Retro Koşar Tekstil — Textile Manufacturer",
+      "url": "https://retrokosartekstil.com",
+      "creator": {
+        "@type": "Organization",
+        "name": "DMC Kreatif",
+        "url": "https://dmckreatif.com"
+      }
+    }
+    </script>
+    <script type="module" crossorigin src="/assets/index-CYAlWRBh.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-uoWpvaL4.js">
+    <link rel="modulepreload" crossorigin href="/assets/framer-vendor-DwxDGz3u.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-DBasf049.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

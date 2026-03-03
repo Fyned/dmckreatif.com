@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/logo/cakir-favicon-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Cakir Facades</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Cakir Facades — Artisan Façadier à Châteaubriant",
+      "url": "https://cakirfacades.fr",
+      "creator": {
+        "@type": "Organization",
+        "name": "DMC Kreatif",
+        "url": "https://dmckreatif.com"
+      }
+    }
+    </script>
+    <script type="module" crossorigin src="/assets/index-ALKOn134.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-BpKmVfyb.js">
+    <link rel="modulepreload" crossorigin href="/assets/motion-DCX5l2qF.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-HNj15FRj.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
