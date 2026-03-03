@@ -12,7 +12,7 @@
     "industries": "INDUSTRIES"
   },
   "hero": {
-    "status": "AGENCY_STATUS: ACCEPTING PROJECTS",
+    "status": "AGENCY_STATUS: 2 SLOTS OPEN — Q2 2026",
     "titleLine1": "PREMIUM WEBSITES",
     "titleAccent": "FOR EUROPE",
     "subtitle": "Complete digital packages for European businesses — website, branding, SEO, and advertising. All-in-one, fully managed, transparent pricing.",
@@ -20,13 +20,13 @@
     "ctaSecondary": "VIEW OUR WORK",
     "stat1": "33+",
     "stat1Label": "Projects",
-    "stat2": "4.9",
-    "stat2Label": "Rating",
+    "stat2": "5★",
+    "stat2Label": "6 Clients",
     "stat3": "4",
     "stat3Label": "Countries",
     "stat4": "97+",
     "stat4Label": "Lighthouse",
-    "microCopy": "All-in-one packages from €1,097 · Split payment available · 33+ international projects",
+    "microCopy": "All-in-one packages from €1,097 · Split payment available · 5★ from 6 verified clients",
     "bookCall": "or book a free 15-min call →"
   },
   "marquee": {

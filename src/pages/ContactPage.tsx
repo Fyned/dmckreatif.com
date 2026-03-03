@@ -4,7 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import SeoHead from "@/components/seo/SeoHead";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
-import { Send, CheckCircle2, AlertTriangle, Mail, Globe, ArrowRight, Clock, MapPin, Star, ExternalLink, Calendar } from "lucide-react";
+import { Send, CheckCircle2, AlertTriangle, Mail, Globe, ArrowRight, Clock, MapPin, Star, ExternalLink, Calendar, FileSearch } from "lucide-react";
 import { z } from "zod";
 import SectionHeader from "@/components/ui/SectionHeader";
 import NeoButton from "@/components/ui/NeoButton";
@@ -191,6 +191,32 @@ export default function ContactPage() {
             <p className="font-mono text-sm lg:text-base text-neo-black/70 leading-relaxed">
               {t("contact.introText", "Whether you need a new website, want to redesign an existing one, or are exploring e-commerce options, we are here to help.")}
             </p>
+          </motion.div>
+
+          {/* Free audit banner */}
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+            className="mb-10 border-2 border-neo-black bg-neo-lime shadow-hard p-5 flex flex-col sm:flex-row items-center justify-between gap-4"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 border-2 border-neo-black bg-neo-white flex items-center justify-center flex-shrink-0">
+                <FileSearch size={20} className="text-neo-black" />
+              </div>
+              <div>
+                <h3 className="font-space font-bold text-sm text-neo-black uppercase tracking-wider">
+                  {t("contact.freeAuditTitle", "Free Website Audit — €0")}
+                </h3>
+                <p className="font-mono text-xs text-neo-black/70 mt-0.5">
+                  {t("contact.freeAuditDesc", "Share your current URL in the message — we'll analyse speed, SEO and conversion gaps before any commitment.")}
+                </p>
+              </div>
+            </div>
+            <span className="font-mono text-[10px] text-neo-black font-bold border-2 border-neo-black px-3 py-1.5 whitespace-nowrap bg-neo-white">
+              {t("contact.freeAuditBadge", "INCLUDED WITH EVERY ENQUIRY")}
+            </span>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">

@@ -63,9 +63,9 @@ export default function PromoBanner({ variant = "full" }: PromoBannerProps) {
             </NeoBadge>
           </div>
 
-          <h3 className="font-space font-extrabold text-xl lg:text-2xl text-neo-lime mb-2">
+          <p className="font-space font-extrabold text-xl lg:text-2xl text-neo-lime mb-2">
             {t("promo.title", "25% OFF ALL PACKAGES")}
-          </h3>
+          </p>
           <p className="font-mono text-sm text-neo-lime/80 leading-relaxed max-w-xl">
             {t(
               "promo.description",

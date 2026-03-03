@@ -1360,6 +1360,43 @@ export default function PricingPage() {
         </div>
       </section>
 
+      {/* ═══ 14-DAY GUARANTEE STRIP ═══ */}
+      <section className="py-14 bg-neo-lime border-y-4 border-neo-black">
+        <div className="max-w-container mx-auto px-6 lg:px-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-5">
+              <div className="w-14 h-14 border-4 border-neo-black bg-neo-white flex items-center justify-center flex-shrink-0 shadow-hard">
+                <Shield size={28} className="text-neo-black" />
+              </div>
+              <div>
+                <h2 className="font-space font-bold text-xl lg:text-2xl text-neo-black uppercase tracking-tight">
+                  {t("pricing.guaranteeTitle", "14-Day Revision Guarantee")}
+                </h2>
+                <p className="font-mono text-sm text-neo-black/70 mt-1 max-w-md">
+                  {t("pricing.guaranteeDesc", "Not satisfied? We revise until you are — unlimited rounds, zero extra cost, within 14 days of delivery.")}
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-6 flex-shrink-0">
+              <div className="text-center">
+                <div className="font-space font-bold text-3xl text-neo-black">14</div>
+                <div className="font-mono text-[10px] text-neo-black/70 uppercase tracking-wider">Days</div>
+              </div>
+              <div className="w-px h-10 bg-neo-black/30" />
+              <div className="text-center">
+                <div className="font-space font-bold text-3xl text-neo-black">∞</div>
+                <div className="font-mono text-[10px] text-neo-black/70 uppercase tracking-wider">Revisions</div>
+              </div>
+              <div className="w-px h-10 bg-neo-black/30" />
+              <div className="text-center">
+                <div className="font-space font-bold text-3xl text-neo-black">€0</div>
+                <div className="font-mono text-[10px] text-neo-black/70 uppercase tracking-wider">Extra Cost</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Bottom CTA */}
       <section className="py-20 lg:py-28 section-alt">
         <div className="max-w-container mx-auto px-6 lg:px-10 text-center">
