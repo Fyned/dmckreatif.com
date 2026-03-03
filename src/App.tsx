@@ -5,6 +5,7 @@ import AppLayout from "@/components/layout/AppLayout";
 import AuthGuard from "@/components/guards/AuthGuard";
 import AdminGuard from "@/components/guards/AdminGuard";
 import CookieBanner from "@/components/gdpr/CookieBanner";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
 /* ── Lazy-loaded Pages ── */
 const HomePage = lazy(() => import("@/pages/HomePage"));
@@ -110,6 +111,7 @@ export default function App() {
   return (
     <Suspense fallback={<LoadingFallback />}>
       <CookieBanner />
+      <WhatsAppButton />
       <Routes>
         {/* Published site viewer — outside locale routing */}
         <Route path="/site/:subdomain" element={<PublishedSitePage />} />

@@ -42,7 +42,7 @@ export const caseStudies: CaseStudy[] = [
       role: "Director, CAKIR Facades",
     },
     images: {
-      after: "https://image.thum.io/get/width/1200/https://cakirfacades.fr",
+      after: "/portfolio/cakir-desktop.webp",
     },
   },
   {
@@ -86,7 +86,7 @@ export const caseStudies: CaseStudy[] = [
       role: "Owner, Altinbas Moustiquaire",
     },
     images: {
-      after: "https://image.thum.io/get/width/1200/https://altinbasmoustiquaire.fr",
+      after: "/portfolio/altinbas-desktop.webp",
     },
   },
   {
@@ -130,7 +130,7 @@ export const caseStudies: CaseStudy[] = [
       role: "Founder, Consulting Energy",
     },
     images: {
-      after: "https://image.thum.io/get/width/1200/https://consulting-energy.fr",
+      after: "/portfolio/consulting-desktop.webp",
     },
   },
   {
@@ -174,7 +174,7 @@ export const caseStudies: CaseStudy[] = [
       role: "Director, ISO Home Energy",
     },
     images: {
-      after: "https://image.thum.io/get/width/1200/https://ih-energy.fr",
+      after: "/portfolio/iso-desktop.webp",
     },
   },
   {
@@ -218,7 +218,7 @@ export const caseStudies: CaseStudy[] = [
       role: "CEO, Archi Construction & Veranda",
     },
     images: {
-      after: "https://image.thum.io/get/width/1200/https://archi.constructionveranda.com",
+      after: "/portfolio/archi-desktop.webp",
     },
   },
   {
@@ -262,7 +262,7 @@ export const caseStudies: CaseStudy[] = [
       role: "Partner, Adamsons Accountants",
     },
     images: {
-      after: "https://image.thum.io/get/width/1200/https://adamsons.uk.com",
+      after: "/portfolio/adamsons-desktop.webp",
     },
   },
 ];

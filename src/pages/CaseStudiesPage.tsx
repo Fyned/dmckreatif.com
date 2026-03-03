@@ -145,6 +145,18 @@ export default function CaseStudiesPage() {
                 </div>
               </motion.div>
 
+              {/* Project screenshot */}
+              {cs.images?.after && (
+                <motion.div variants={fadeInUp} className="mb-8 border-2 border-neo-black shadow-hard overflow-hidden">
+                  <img
+                    src={cs.images.after}
+                    alt={`${cs.name} website screenshot`}
+                    className="w-full h-64 lg:h-80 object-cover object-top"
+                    loading="lazy"
+                  />
+                </motion.div>
+              )}
+
               {/* Metrics bar */}
               <motion.div variants={fadeInUp} className="flex flex-wrap gap-4 mb-8">
                 {cs.metrics.map((metric) => {
