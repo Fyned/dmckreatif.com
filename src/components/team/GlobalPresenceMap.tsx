@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import CountryFlag from "@/components/ui/CountryFlag";
 
 interface Location {
   city: string;
@@ -11,31 +12,31 @@ interface Location {
 }
 
 const locations: Location[] = [
-  { city: "London",     country: "United Kingdom", flag: "🇬🇧", type: "hq",        x: 28.6, y: 55.4 },
-  { city: "Paris",      country: "France",          flag: "🇫🇷", type: "coworking", x: 35.1, y: 62.4 },
-  { city: "Brussels",   country: "Belgium",         flag: "🇧🇪", type: "coworking", x: 41.1, y: 57.3 },
-  { city: "Amsterdam",  country: "Netherlands",     flag: "🇳🇱", type: "coworking", x: 42.6, y: 53.0 },
-  { city: "Berlin",     country: "Germany",         flag: "🇩🇪", type: "coworking", x: 66.9, y: 52.7 },
-  { city: "Zurich",     country: "Switzerland",     flag: "🇨🇭", type: "coworking", x: 52.9, y: 66.5 },
-  { city: "Barcelona",  country: "Spain",           flag: "🇪🇸", type: "coworking", x: 34.9, y: 82.7 },
-  { city: "Copenhagen", country: "Denmark",         flag: "🇩🇰", type: "coworking", x: 64.6, y: 44.1 },
-  { city: "Stockholm",  country: "Sweden",          flag: "🇸🇪", type: "coworking", x: 80.3, y: 34.3 },
-  { city: "Vienna",     country: "Austria",         flag: "🇦🇹", type: "coworking", x: 75.4, y: 64.9 },
+  { city: "London",     country: "United Kingdom", flag: "gb", type: "hq",        x: 28.6, y: 55.4 },
+  { city: "Paris",      country: "France",          flag: "fr", type: "coworking", x: 35.1, y: 62.4 },
+  { city: "Brussels",   country: "Belgium",         flag: "be", type: "coworking", x: 41.1, y: 57.3 },
+  { city: "Amsterdam",  country: "Netherlands",     flag: "nl", type: "coworking", x: 42.6, y: 53.0 },
+  { city: "Berlin",     country: "Germany",         flag: "de", type: "coworking", x: 66.9, y: 52.7 },
+  { city: "Zurich",     country: "Switzerland",     flag: "ch", type: "coworking", x: 52.9, y: 66.5 },
+  { city: "Barcelona",  country: "Spain",           flag: "es", type: "coworking", x: 34.9, y: 82.7 },
+  { city: "Copenhagen", country: "Denmark",         flag: "dk", type: "coworking", x: 64.6, y: 44.1 },
+  { city: "Stockholm",  country: "Sweden",          flag: "se", type: "coworking", x: 80.3, y: 34.3 },
+  { city: "Vienna",     country: "Austria",         flag: "at", type: "coworking", x: 75.4, y: 64.9 },
 ];
 
 const countries = [
-  { flag: "🇬🇧", name: "United Kingdom", status: "Registered HQ" },
-  { flag: "🇫🇷", name: "France",         status: "Primary Market" },
-  { flag: "🇧🇪", name: "Belgium",        status: "Active Market" },
-  { flag: "🇳🇱", name: "Netherlands",   status: "Active Market" },
-  { flag: "🇩🇪", name: "Germany",        status: "Active Market" },
-  { flag: "🇨🇭", name: "Switzerland",   status: "Active Market" },
-  { flag: "🇸🇪", name: "Sweden",         status: "Served" },
-  { flag: "🇩🇰", name: "Denmark",        status: "Served" },
-  { flag: "🇳🇴", name: "Norway",         status: "Served" },
-  { flag: "🇪🇸", name: "Spain",          status: "Served" },
-  { flag: "🇦🇹", name: "Austria",        status: "Served" },
-  { flag: "🇱🇺", name: "Luxembourg",     status: "Served" },
+  { flag: "gb", name: "United Kingdom", status: "Registered HQ" },
+  { flag: "fr", name: "France",         status: "Primary Market" },
+  { flag: "be", name: "Belgium",        status: "Active Market" },
+  { flag: "nl", name: "Netherlands",   status: "Active Market" },
+  { flag: "de", name: "Germany",        status: "Active Market" },
+  { flag: "ch", name: "Switzerland",   status: "Active Market" },
+  { flag: "se", name: "Sweden",         status: "Served" },
+  { flag: "dk", name: "Denmark",        status: "Served" },
+  { flag: "no", name: "Norway",         status: "Served" },
+  { flag: "es", name: "Spain",          status: "Served" },
+  { flag: "at", name: "Austria",        status: "Served" },
+  { flag: "lu", name: "Luxembourg",     status: "Served" },
 ];
 
 export default function GlobalPresenceMap() {
@@ -99,7 +100,7 @@ export default function GlobalPresenceMap() {
                       animate={{ opacity: 1, y: 0 }}
                       className="absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap font-mono text-[9px] font-bold bg-neo-black text-neo-bg px-2 py-0.5 z-10"
                     >
-                      {loc.flag} {loc.city}
+                      <CountryFlag code={loc.flag} size="sm" /> {loc.city}
                     </motion.div>
                   )}
                 </div>
@@ -131,7 +132,7 @@ export default function GlobalPresenceMap() {
             viewport={{ once: true }}
             className={`border-2 border-neo-black p-3 flex items-center gap-3 ${c.status === "Registered HQ" ? "bg-neo-lime shadow-hard" : "bg-neo-white"}`}
           >
-            <span className="text-xl leading-none">{c.flag}</span>
+            <CountryFlag code={c.flag} size="lg" />
             <div className="min-w-0">
               <div className="font-space font-bold text-xs truncate">{c.name}</div>
               <div className="font-mono text-[10px] text-neo-black/60 uppercase tracking-wide">{c.status}</div>

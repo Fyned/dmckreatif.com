@@ -5,6 +5,7 @@ import { X, ExternalLink, ArrowLeft, ArrowRight, CheckCircle2, Globe } from "luc
 import type { Project } from "@/lib/portfolio-data";
 import NeoButton from "@/components/ui/NeoButton";
 import NeoBadge from "@/components/ui/NeoBadge";
+import CountryFlag from "@/components/ui/CountryFlag";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import BeforeAfterSlider from "@/components/portfolio/BeforeAfterSlider";
 import TechStackIcons from "@/components/portfolio/TechStackIcons";
@@ -153,7 +154,7 @@ export default function CaseStudyModal({
             <div className="p-6 lg:p-10 space-y-8">
               <div>
                 <div className="flex items-center gap-3 mb-2">
-                  <span className="text-2xl">{project.flag}</span>
+                  <CountryFlag code={project.flag} size="xl" />
                   <NeoBadge color={project.accentColor}>{t(project.sectorKey)}</NeoBadge>
                   <span className="font-mono text-xs text-neo-black/60">{project.year}</span>
                 </div>

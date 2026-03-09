@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Star, ExternalLink } from "lucide-react";
 import { testimonials } from "@/lib/testimonials-data";
 import SectionHeader from "@/components/ui/SectionHeader";
+import CountryFlag from "@/components/ui/CountryFlag";
 import { fadeInUp, viewportConfig } from "@/lib/animations";
 import JsonLd from "@/components/seo/JsonLd";
 import { buildProfessionalServiceSchema } from "@/lib/seo-schemas";
@@ -141,7 +142,7 @@ export default function TestimonialsMarquee() {
                     )}
                   </p>
                 </div>
-                <span className="text-lg">{item.flag}</span>
+                <CountryFlag code={item.flag} size="md" />
               </div>
             </div>
           ))}

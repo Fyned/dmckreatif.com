@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import CountryFlag from "@/components/ui/CountryFlag";
 
 interface ProofItem {
   city: string;
@@ -9,16 +10,16 @@ interface ProofItem {
 }
 
 const proofItems: ProofItem[] = [
-  { city: "Paris", flag: "🇫🇷", action: "started a web project" },
-  { city: "London", flag: "🇬🇧", action: "ordered an e-commerce site" },
-  { city: "Brussels", flag: "🇧🇪", action: "booked a free consultation" },
-  { city: "Amsterdam", flag: "🇳🇱", action: "launched their new website" },
-  { city: "Berlin", flag: "🇩🇪", action: "upgraded to Growth plan" },
-  { city: "Lyon", flag: "🇫🇷", action: "requested an SEO audit" },
-  { city: "Manchester", flag: "🇬🇧", action: "started a web project" },
-  { city: "Antwerp", flag: "🇧🇪", action: "ordered a template" },
-  { city: "Rotterdam", flag: "🇳🇱", action: "booked a free consultation" },
-  { city: "Munich", flag: "🇩🇪", action: "launched their new website" },
+  { city: "Paris", flag: "fr", action: "started a web project" },
+  { city: "London", flag: "gb", action: "ordered an e-commerce site" },
+  { city: "Brussels", flag: "be", action: "booked a free consultation" },
+  { city: "Amsterdam", flag: "nl", action: "launched their new website" },
+  { city: "Berlin", flag: "de", action: "upgraded to Growth plan" },
+  { city: "Lyon", flag: "fr", action: "requested an SEO audit" },
+  { city: "Manchester", flag: "gb", action: "started a web project" },
+  { city: "Antwerp", flag: "be", action: "ordered a template" },
+  { city: "Rotterdam", flag: "nl", action: "booked a free consultation" },
+  { city: "Munich", flag: "de", action: "launched their new website" },
 ];
 
 export default function SocialProofNotification() {
@@ -75,7 +76,7 @@ export default function SocialProofNotification() {
           transition={{ type: "spring", stiffness: 300, damping: 25 }}
           className="fixed bottom-24 left-4 z-40 flex items-center gap-3 bg-neo-white border-2 border-neo-black shadow-hard px-4 py-3 max-w-xs"
         >
-          <span className="text-2xl flex-shrink-0">{current.flag}</span>
+          <CountryFlag code={current.flag} size="xl" className="flex-shrink-0" />
           <div className="flex-1 min-w-0">
             <p className="font-mono text-xs text-neo-black">
               <span className="font-bold">Someone from {current.city}</span>{" "}

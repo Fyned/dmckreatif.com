@@ -17,6 +17,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import NeoButton from "@/components/ui/NeoButton";
 import SectionHeader from "@/components/ui/SectionHeader";
+import CountryFlag from "@/components/ui/CountryFlag";
 import { buildPersonProfileSchema } from "@/lib/seo-schemas";
 import { useAnalytics } from "@/lib/useAnalytics";
 import { fadeInUp, staggerContainer, scaleIn, viewportConfig } from "@/lib/animations";
@@ -41,13 +42,13 @@ const timeline = [
   },
   {
     year: "2023",
-    icon: "🇫🇷",
+    icon: "fr",
     title: "First French Client",
     desc: "CAKIR Facades — custom React website for a Paris-based façade renovation company.",
   },
   {
     year: "2024",
-    icon: "🇬🇧",
+    icon: "gb",
     title: "UK Expansion",
     desc: "Adamsons Accountants — built a professional online presence for a UK accounting firm.",
   },
@@ -72,13 +73,13 @@ const timeline = [
 ];
 
 const deliveredProjects = [
-  { name: "CAKIR Facades", country: "🇫🇷" },
-  { name: "Altinbas Moustiquaire", country: "🇫🇷" },
-  { name: "Consulting Energy", country: "🇫🇷" },
-  { name: "ISO Home Energy", country: "🇫🇷" },
-  { name: "Archi Construction Véranda", country: "🇧🇪" },
-  { name: "Adamsons Accountants", country: "🇬🇧" },
-  { name: "FilenesSports", country: "🌍" },
+  { name: "CAKIR Facades", country: "fr" },
+  { name: "Altinbas Moustiquaire", country: "fr" },
+  { name: "Consulting Energy", country: "fr" },
+  { name: "ISO Home Energy", country: "fr" },
+  { name: "Archi Construction Véranda", country: "be" },
+  { name: "Adamsons Accountants", country: "gb" },
+  { name: "FilenesSports", country: "globe" },
 ];
 
 export default function AuthorPage() {
@@ -284,7 +285,11 @@ export default function AuthorPage() {
                   className="flex gap-6 p-6 border border-neo-border bg-neo-card rounded-xl hover:border-neo-lime/30 transition-colors"
                 >
                   <div className="flex-shrink-0 flex flex-col items-center gap-2">
-                    <span className="text-3xl">{item.icon}</span>
+                    {/^[a-z]{2}$/.test(item.icon) ? (
+                      <CountryFlag code={item.icon} size="xl" />
+                    ) : (
+                      <span className="text-3xl">{item.icon}</span>
+                    )}
                     <span className="text-xs font-mono text-neo-lime font-bold">{item.year}</span>
                   </div>
                   <div>
@@ -319,7 +324,7 @@ export default function AuthorPage() {
                   variants={scaleIn}
                   className="flex items-center gap-4 p-5 border border-neo-border bg-neo-card rounded-xl hover:border-neo-lime/30 transition-colors group"
                 >
-                  <span className="text-2xl">{project.country}</span>
+                  <CountryFlag code={project.country} size="xl" />
                   <span className="font-medium text-neo-white group-hover:text-neo-lime transition-colors">
                     {project.name}
                   </span>

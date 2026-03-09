@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import type { Project } from "@/lib/portfolio-data";
 import NeoBadge from "@/components/ui/NeoBadge";
 import TechStackIcons from "@/components/portfolio/TechStackIcons";
+import CountryFlag from "@/components/ui/CountryFlag";
 
 const accentBorderMap: Record<string, string> = {
   "neo-lime": "hover:border-neo-lime",
@@ -78,7 +79,7 @@ export default function ProjectCard({ project, index, onClick }: ProjectCardProp
         </span>
 
         <div className="flex items-center gap-2 mb-2">
-          <span className="text-xl">{project.flag}</span>
+          <CountryFlag code={project.flag} size="lg" />
           <span className="font-mono text-xs font-bold text-neo-black/80 uppercase tracking-wider">
             {t(project.countryNameKey)}
           </span>
