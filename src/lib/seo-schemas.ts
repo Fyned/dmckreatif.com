@@ -1,5 +1,9 @@
 const BASE_URL = "https://dmckreatif.com";
 
+export const PHONE_PRIMARY = "+44 7352 954651";
+export const PHONE_SECONDARY = "+44 7346 850996";
+export const PHONE_WHATSAPP = "447352954651";
+
 interface BreadcrumbItem {
   name: string;
   path: string;
@@ -30,6 +34,7 @@ export function buildProfessionalServiceSchema(reviews?: Array<{
     logo: `${BASE_URL}/logo.svg`,
     image: `${BASE_URL}/og-image.png`,
     email: "hello@dmckreatif.com",
+    telephone: PHONE_PRIMARY,
     priceRange: "€€",
     description:
       "UK-registered web development agency serving European businesses across France, Belgium, Netherlands, Germany and the UK. Custom websites, e-commerce, SEO and digital marketing.",
@@ -484,6 +489,7 @@ export function buildContactPageSchema(locale: string) {
       "@type": "Organization",
       name: "DMC Kreatif",
       email: "hello@dmckreatif.com",
+      telephone: PHONE_PRIMARY,
       url: BASE_URL,
     },
   };
@@ -545,6 +551,7 @@ export function buildCitySchema(params: {
     ...(params.serviceType && { serviceType: params.serviceType }),
     url: BASE_URL,
     email: "hello@dmckreatif.com",
+    telephone: PHONE_PRIMARY,
     priceRange: "\u20AC\u20AC",
     areaServed: {
       "@type": "City",
@@ -598,6 +605,7 @@ export function buildCountrySchema(params: {
     name: "DMC Kreatif",
     url: BASE_URL,
     email: "hello@dmckreatif.com",
+    telephone: PHONE_PRIMARY,
     priceRange: "\u20AC\u20AC",
     areaServed: {
       "@type": "Country",

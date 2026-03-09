@@ -1,8 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
+import { Phone } from "lucide-react";
 import DualLogo from "./DualLogo";
 import NewsletterSignup from "@/components/ui/NewsletterSignup";
 import { useCookieConsent } from "@/contexts/CookieConsentContext";
+import { PHONE_PRIMARY } from "@/lib/seo-schemas";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -157,6 +159,13 @@ export default function Footer() {
               className="inline-block font-mono text-xs text-neo-bg/60 hover:text-neo-lime transition-colors mt-4"
             >
               hello@dmckreatif.com
+            </a>
+            <a
+              href={`tel:${PHONE_PRIMARY.replace(/\s/g, "")}`}
+              className="flex items-center gap-2 font-mono text-xs text-neo-bg/60 hover:text-neo-lime transition-colors mt-2"
+            >
+              <Phone size={12} />
+              {PHONE_PRIMARY}
             </a>
           </div>
         </div>

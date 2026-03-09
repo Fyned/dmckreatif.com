@@ -2,8 +2,9 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import { PHONE_WHATSAPP } from "@/lib/seo-schemas";
 
-const WHATSAPP_NUMBER = "905511060846";
+const WHATSAPP_NUMBER = PHONE_WHATSAPP;
 
 export default function WhatsAppButton() {
   const { t } = useTranslation();
