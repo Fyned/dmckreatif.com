@@ -22,18 +22,18 @@ function TrustBadge({ icon, label, value, color }: BadgeProps) {
   return (
     <motion.div
       variants={fadeInUp}
-      className="bg-neo-white border-2 border-neo-black shadow-hard p-4 flex items-center gap-3"
+      className="bg-neo-white border-2 border-neo-black shadow-hard p-3 sm:p-4 flex items-center gap-2 sm:gap-3"
     >
       <div
-        className={`flex-shrink-0 w-10 h-10 border-2 border-neo-black flex items-center justify-center font-mono text-lg ${colorMap[color] ?? colorMap.lime}`}
+        className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 border-2 border-neo-black flex items-center justify-center font-mono text-base sm:text-lg ${colorMap[color] ?? colorMap.lime}`}
       >
         {icon}
       </div>
       <div className="min-w-0">
-        <p className="font-space font-bold text-sm uppercase tracking-tight text-neo-black leading-tight">
+        <p className="font-space font-bold text-[11px] sm:text-sm uppercase tracking-tight text-neo-black leading-tight">
           {value}
         </p>
-        <p className="font-mono text-[10px] uppercase tracking-wider text-neo-black/50 leading-tight">
+        <p className="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-neo-black/50 leading-tight">
           {label}
         </p>
       </div>
@@ -41,13 +41,13 @@ function TrustBadge({ icon, label, value, color }: BadgeProps) {
   );
 }
 
-const FLAG_MAP: Record<string, string> = {
-  FR: "\u{1F1EB}\u{1F1F7}",
-  BE: "\u{1F1E7}\u{1F1EA}",
-  UK: "\u{1F1EC}\u{1F1E7}",
-  NL: "\u{1F1F3}\u{1F1F1}",
-  DE: "\u{1F1E9}\u{1F1EA}",
-  CH: "\u{1F1E8}\u{1F1ED}",
+const FLAG_MAP: Record<string, { iso: string; label: string }> = {
+  FR: { iso: "fr", label: "France" },
+  BE: { iso: "be", label: "Belgium" },
+  UK: { iso: "gb", label: "United Kingdom" },
+  NL: { iso: "nl", label: "Netherlands" },
+  DE: { iso: "de", label: "Germany" },
+  CH: { iso: "ch", label: "Switzerland" },
 };
 
 const TECH_STACK = [
@@ -136,11 +136,17 @@ export default function TrustSection() {
             {t("trust.countriesServed", "Serving businesses in 6+ European countries")}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            {Object.entries(FLAG_MAP).map(([code, flag]) => (
+            {Object.entries(FLAG_MAP).map(([code, { iso, label }]) => (
               <div key={code} className="flex items-center gap-1.5">
-                <span className="text-2xl" role="img" aria-label={code}>
-                  {flag}
-                </span>
+                <img
+                  src={`https://flagcdn.com/w40/${iso}.png`}
+                  srcSet={`https://flagcdn.com/w80/${iso}.png 2x`}
+                  width={24}
+                  height={18}
+                  alt={label}
+                  className="border border-neo-black/10"
+                  loading="lazy"
+                />
                 <span className="font-space font-bold text-xs uppercase tracking-wider text-neo-black">
                   {code}
                 </span>
