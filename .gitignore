@@ -36,3 +36,10 @@ screenshots/
 notebooklm/
 /content/
 *.xlsx
+
+# Playwright MCP logs
+.playwright-mcp/
+
+# Temp screenshots
+*.png
+!public/**/*.png
