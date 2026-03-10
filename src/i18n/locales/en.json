@@ -285,6 +285,16 @@
       "result1": "Unified platform serving international students across 25 countries",
       "result2": "Programme search system covering 478+ accredited courses",
       "result3": "45% improvement in prospective student engagement and applications"
+    },
+    "kase": {
+      "sector": "CARPENTRY & CLOSURES",
+      "country": "FRANCE",
+      "description": "Professional website for an expert carpentry and closure systems company in the Vosges region. Showcasing custom joinery, doors, windows, and shutters.",
+      "challenge": "KASE Fermetures needed a modern web presence to establish credibility in the Vosges carpentry market and generate local leads for their closure and joinery services.",
+      "solution": "We built a fast, SEO-optimized React website with project galleries, service breakdowns, and local SEO targeting the Vosges region to drive qualified inquiries.",
+      "result1": "50% increase in local inquiry volume from the Vosges region",
+      "result2": "96+ Lighthouse performance score across all pages",
+      "result3": "First page Google rankings for carpentry services in Vosges"
     }
   },
   "stats": {

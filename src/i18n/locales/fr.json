@@ -725,6 +725,16 @@
       "result1": "Plateforme unifiée servant des étudiants internationaux dans 25 pays",
       "result2": "Système de recherche couvrant 478+ formations accréditées",
       "result3": "45% d'amélioration de l'engagement des futurs étudiants et des candidatures"
+    },
+    "kase": {
+      "sector": "MENUISERIE & FERMETURES",
+      "country": "FRANCE",
+      "description": "Site professionnel pour un expert en menuiserie et systèmes de fermetures dans les Vosges. Présentation de la menuiserie sur mesure, portes, fenêtres et volets.",
+      "challenge": "KASE Fermetures avait besoin d'une présence web moderne pour asseoir sa crédibilité sur le marché de la menuiserie dans les Vosges et générer des prospects locaux.",
+      "solution": "Nous avons construit un site React rapide et optimisé SEO avec des galeries de projets, des descriptions de services et un référencement local ciblant la région des Vosges.",
+      "result1": "50% d'augmentation des demandes locales depuis la région des Vosges",
+      "result2": "Score Lighthouse 96+ sur toutes les pages",
+      "result3": "Première page Google pour les services de menuiserie dans les Vosges"
     }
   },
   "stats": {

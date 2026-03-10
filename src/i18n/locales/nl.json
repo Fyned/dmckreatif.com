@@ -757,6 +757,16 @@
       "result1": "Verenigd platform dat internationale studenten in 25 landen bedient",
       "result2": "Programmazoeksysteem met 478+ geaccrediteerde opleidingen",
       "result3": "45% verbetering in betrokkenheid en aanmeldingen van toekomstige studenten"
+    },
+    "kase": {
+      "sector": "SCHRIJNWERK & SLUITINGEN",
+      "country": "FRANKRIJK",
+      "description": "Professionele website voor een expert in schrijnwerk en sluitsystemen in de Vogezen. Presentatie van maatwerk schrijnwerk, deuren, ramen en luiken.",
+      "challenge": "KASE Fermetures had een moderne webpresentie nodig om geloofwaardigheid op te bouwen in de schrijnwerkmarkt van de Vogezen en lokale leads te genereren.",
+      "solution": "Wij bouwden een snelle, SEO-geoptimaliseerde React-website met projectgalerijen, servicebeschrijvingen en lokale SEO gericht op de regio Vogezen.",
+      "result1": "50% toename in lokale aanvragen uit de regio Vogezen",
+      "result2": "96+ Lighthouse-prestatiescore op alle pagina's",
+      "result3": "Eerste pagina Google-rankings voor schrijnwerkdiensten in de Vogezen"
     }
   },
   "stats": {

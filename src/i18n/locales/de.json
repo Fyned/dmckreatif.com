@@ -738,6 +738,16 @@
       "result1": "Einheitliche Plattform für internationale Studierende in 25 Ländern",
       "result2": "Programmsuchsystem mit 478+ akkreditierten Studiengängen",
       "result3": "45% Verbesserung bei Engagement und Bewerbungen potenzieller Studierender"
+    },
+    "kase": {
+      "sector": "TISCHLEREI & VERSCHLÜSSE",
+      "country": "FRANKREICH",
+      "description": "Professionelle Website für einen Experten für Tischlerei und Verschlusssysteme in den Vogesen. Präsentation von Maßtischlerei, Türen, Fenstern und Rollläden.",
+      "challenge": "KASE Fermetures benötigte eine moderne Webpräsenz, um Glaubwürdigkeit auf dem Tischlereimarkt der Vogesen aufzubauen und lokale Anfragen zu generieren.",
+      "solution": "Wir haben eine schnelle, SEO-optimierte React-Website mit Projektgalerien, Servicebeschreibungen und lokalem SEO für die Region Vogesen erstellt.",
+      "result1": "50% Steigerung der lokalen Anfragen aus der Region Vogesen",
+      "result2": "96+ Lighthouse-Leistungswert auf allen Seiten",
+      "result3": "Erste Seite bei Google für Tischlereidienstleistungen in den Vogesen"
     }
   },
   "stats": {

@@ -330,6 +330,28 @@ export const projects: Project[] = [
     metrics: { lighthouse: 96, loadTime: "<1.4s", improvement: "+45%" },
     featured: true,
   },
+  {
+    id: "kase-fermetures",
+    num: "13",
+    name: "KASE FERMETURES",
+    sectorKey: "projects.kase.sector",
+    country: "FR",
+    countryNameKey: "projects.kase.country",
+    flag: "fr",
+    url: "https://kasefermetures.fr",
+    imageDesktop: "/portfolio/kase-desktop.webp",
+    imageMobile: "/portfolio/kase-mobile.webp",
+    tech: ["React", "Vite", "TypeScript", "Tailwind"],
+    accentColor: "neo-orange",
+    descriptionKey: "projects.kase.description",
+    category: "web",
+    year: "2025",
+    challengeKey: "projects.kase.challenge",
+    solutionKey: "projects.kase.solution",
+    resultsKeys: ["projects.kase.result1", "projects.kase.result2", "projects.kase.result3"],
+    metrics: { lighthouse: 96, loadTime: "<1.4s", improvement: "+50%" },
+    featured: false,
+  },
 ];
 
 export const featuredProjects = projects.filter((p) => p.featured);
