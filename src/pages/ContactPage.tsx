@@ -4,7 +4,8 @@ import { useParams, Link } from "react-router-dom";
 import SeoHead from "@/components/seo/SeoHead";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
-import { Send, CheckCircle2, AlertTriangle, Mail, Globe, ArrowRight, Clock, MapPin, Star, ExternalLink, Calendar, FileSearch } from "lucide-react";
+import { Send, CheckCircle2, AlertTriangle, Mail, Globe, ArrowRight, Clock, MapPin, Star, ExternalLink, Calendar, FileSearch, Building2 } from "lucide-react";
+import CountryFlag from "@/components/ui/CountryFlag";
 import { z } from "zod";
 import SectionHeader from "@/components/ui/SectionHeader";
 import NeoButton from "@/components/ui/NeoButton";
@@ -81,12 +82,12 @@ const timelineOptions = [
 ];
 
 const countries = [
-  { flag: "\u{1F1EB}\u{1F1F7}", name: "France" },
-  { flag: "\u{1F1E7}\u{1F1EA}", name: "Belgium" },
-  { flag: "\u{1F1EC}\u{1F1E7}", name: "United Kingdom" },
-  { flag: "\u{1F1F3}\u{1F1F1}", name: "Netherlands" },
-  { flag: "\u{1F1E9}\u{1F1EA}", name: "Germany" },
-  { flag: "\u{1F1E8}\u{1F1ED}", name: "Switzerland" },
+  { code: "fr", name: "France" },
+  { code: "be", name: "Belgium" },
+  { code: "gb", name: "United Kingdom" },
+  { code: "nl", name: "Netherlands" },
+  { code: "de", name: "Germany" },
+  { code: "ch", name: "Switzerland" },
 ];
 
 export default function ContactPage() {
@@ -634,7 +635,7 @@ export default function ContactPage() {
                       key={country.name}
                       className="flex items-center gap-3 font-mono text-sm text-neo-black"
                     >
-                      <span className="text-lg">{country.flag}</span>
+                      <CountryFlag code={country.code} size="md" />
                       <span>{country.name}</span>
                     </div>
                   ))}
@@ -690,6 +691,24 @@ export default function ContactPage() {
                 </div>
               </div>
 
+              {/* Office Address */}
+              <div className="border-2 border-neo-black bg-neo-white shadow-hard p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 border-2 border-neo-black bg-neo-green flex items-center justify-center">
+                    <Building2 size={18} className="text-neo-black" />
+                  </div>
+                  <span className="font-space font-bold text-sm text-neo-black">
+                    {t("contact.officeAddress", "Office Address")}
+                  </span>
+                </div>
+                <address className="font-mono text-xs text-neo-black/70 not-italic leading-relaxed">
+                  Unit 6 Hill View Studios<br />
+                  160 Eltham Hill<br />
+                  London SE9 5EA<br />
+                  United Kingdom
+                </address>
+              </div>
+
               {/* Google Maps */}
               <div className="border-2 border-neo-black bg-neo-white shadow-hard overflow-hidden">
                 <div className="flex items-center gap-2 px-6 py-3 border-b-2 border-neo-black bg-neo-bg">
@@ -700,14 +719,14 @@ export default function ContactPage() {
                 </div>
                 <div className="aspect-[4/3]">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.94722687619!2d2.2646349!3d48.8588897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2s!4v1"
+                    src="https://www.google.com/maps?q=160+Eltham+Hill,+London+SE9+5EA,+UK&output=embed"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
                     allowFullScreen={false}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="DMC Kreatif Location - Europe"
+                    title="DMC Kreatif Office - 160 Eltham Hill, London SE9 5EA"
                   />
                 </div>
               </div>

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
-import { Phone } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import DualLogo from "./DualLogo";
 import NewsletterSignup from "@/components/ui/NewsletterSignup";
 import { useCookieConsent } from "@/contexts/CookieConsentContext";
@@ -154,9 +154,18 @@ export default function Footer() {
           {/* Newsletter + Contact */}
           <div>
             <NewsletterSignup />
+            <div className="flex items-start gap-2 mt-4">
+              <MapPin size={12} className="text-neo-bg/60 mt-0.5 flex-shrink-0" />
+              <address className="font-mono text-xs text-neo-bg/60 not-italic leading-relaxed">
+                Unit 6 Hill View Studios<br />
+                160 Eltham Hill<br />
+                London SE9 5EA<br />
+                United Kingdom
+              </address>
+            </div>
             <a
               href="mailto:hello@dmckreatif.com"
-              className="inline-block font-mono text-xs text-neo-bg/60 hover:text-neo-lime transition-colors mt-4"
+              className="inline-block font-mono text-xs text-neo-bg/60 hover:text-neo-lime transition-colors mt-3"
             >
               hello@dmckreatif.com
             </a>

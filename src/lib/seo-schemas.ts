@@ -50,14 +50,16 @@ export function buildProfessionalServiceSchema(reviews?: Array<{
     },
     address: {
       "@type": "PostalAddress",
-      addressCountry: "GB",
+      streetAddress: "Unit 6 Hill View Studios, 160 Eltham Hill",
       addressLocality: "London",
+      postalCode: "SE9 5EA",
       addressRegion: "England",
+      addressCountry: "GB",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 51.5074,
-      longitude: -0.1278,
+      latitude: 51.4513,
+      longitude: 0.0515,
     },
     openingHoursSpecification: [
       {
