@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import CountryFlag from "@/components/ui/CountryFlag";
 
 interface ProjectFiltersProps {
   activeCategory: string;
@@ -15,11 +16,11 @@ const categories = [
 ];
 
 const countries = [
-  { key: "all", labelKey: "portfolio.filterAll", flag: "" },
-  { key: "FR", labelKey: "portfolio.filterFR", flag: "\ud83c\uddeb\ud83c\uddf7" },
-  { key: "BE", labelKey: "portfolio.filterBE", flag: "\ud83c\udde7\ud83c\uddea" },
-  { key: "UK", labelKey: "portfolio.filterUK", flag: "\ud83c\uddec\ud83c\udde7" },
-  { key: "INT", labelKey: "portfolio.filterINT", flag: "\ud83c\udf0d" },
+  { key: "all", labelKey: "portfolio.filterAll", flagCode: "" },
+  { key: "FR", labelKey: "portfolio.filterFR", flagCode: "fr" },
+  { key: "BE", labelKey: "portfolio.filterBE", flagCode: "be" },
+  { key: "UK", labelKey: "portfolio.filterUK", flagCode: "gb" },
+  { key: "INT", labelKey: "portfolio.filterINT", flagCode: "globe" },
 ];
 
 export default function ProjectFilters({
@@ -55,17 +56,17 @@ export default function ProjectFilters({
         <span className="font-mono text-xs font-bold text-neo-black/60 uppercase tracking-wider self-center mr-2">
           {t("portfolio.filterByCountry")}:
         </span>
-        {countries.map(({ key, labelKey, flag }) => (
+        {countries.map(({ key, labelKey, flagCode }) => (
           <button
             key={key}
             onClick={() => onCountryChange(key)}
-            className={`font-mono text-xs font-bold uppercase tracking-wider px-4 py-2 border-2 border-neo-black transition-all duration-150 ${
+            className={`inline-flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-wider px-4 py-2 border-2 border-neo-black transition-all duration-150 ${
               activeCountry === key
                 ? "bg-neo-lime shadow-hard-sm"
                 : "bg-neo-white hover:bg-neo-yellow"
             }`}
           >
-            {flag && <span className="mr-1">{flag}</span>}
+            {flagCode && <CountryFlag code={flagCode} size="sm" />}
             {t(labelKey)}
           </button>
         ))}

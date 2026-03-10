@@ -104,7 +104,7 @@ export default function HeroSection() {
       </div>
 
       {/* Decorative elements */}
-      <div className="absolute top-10 right-10 w-20 h-20 border-4 border-neo-lime shadow-hard hidden lg:block" />
+      <div className="absolute top-10 right-10 w-20 h-20 bg-neo-lime/10 border-4 border-neo-lime shadow-hard hidden lg:block" />
       <div className="absolute bottom-20 right-20 w-12 h-12 bg-neo-yellow border-2 border-neo-black shadow-hard-sm hidden lg:block" />
       <div className="absolute bottom-40 right-40 w-8 h-8 bg-neo-pink border-2 border-neo-black hidden lg:block" />
     </section>

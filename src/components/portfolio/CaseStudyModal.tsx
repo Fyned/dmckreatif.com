@@ -9,6 +9,7 @@ import CountryFlag from "@/components/ui/CountryFlag";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import BeforeAfterSlider from "@/components/portfolio/BeforeAfterSlider";
 import TechStackIcons from "@/components/portfolio/TechStackIcons";
+import { lockScroll, unlockScroll } from "@/lib/scroll-lock";
 
 const accentGradientMap: Record<string, string> = {
   "neo-lime": "from-neo-lime/20 to-neo-lime/5",
@@ -49,12 +50,11 @@ export default function CaseStudyModal({
   );
 
   useEffect(() => {
-    if (project) {
-      document.body.style.overflow = "hidden";
-      window.addEventListener("keydown", handleKeyDown);
-    }
+    if (!project) return;
+    lockScroll();
+    window.addEventListener("keydown", handleKeyDown);
     return () => {
-      document.body.style.overflow = "";
+      unlockScroll();
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [project, handleKeyDown]);

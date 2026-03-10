@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Zap, ArrowRight, Check } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
+import { lockScroll, unlockScroll } from "@/lib/scroll-lock";
 
 
 const STORAGE_KEY = "dmc_campaign_popup_shown";
@@ -35,13 +36,12 @@ export default function CampaignPopup() {
   }, []);
 
   useEffect(() => {
-    if (isVisible) {
-      window.addEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "hidden";
-    }
+    if (!isVisible) return;
+    lockScroll();
+    window.addEventListener("keydown", handleKeyDown);
     return () => {
+      unlockScroll();
       window.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "";
     };
   }, [isVisible, handleKeyDown]);
 

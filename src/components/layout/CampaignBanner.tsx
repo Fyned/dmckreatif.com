@@ -18,23 +18,26 @@ export default function CampaignBanner() {
     }
 
     async function fetchActiveBanner() {
-      const now = new Date().toISOString();
-      const { supabase } = await import("@/lib/supabase");
-      const { data } = await supabase
-        .from("campaigns")
-        .select("*")
-        .eq("active", true)
-        .eq("placement", "banner")
-        .or(`start_date.is.null,start_date.lte.${now}`)
-        .or(`end_date.is.null,end_date.gte.${now}`)
-        .limit(1)
-        .single();
+      try {
+        const now = new Date().toISOString();
+        const { supabase } = await import("@/lib/supabase");
+        const { data, error } = await supabase
+          .from("campaigns")
+          .select("*")
+          .eq("active", true)
+          .eq("placement", "banner")
+          .or(`start_date.is.null,start_date.lte.${now}`)
+          .or(`end_date.is.null,end_date.gte.${now}`)
+          .limit(1)
+          .single();
 
-      if (data) {
+        if (error || !data) return;
+
         const c = data as unknown as Campaign;
-        // If this campaign was dismissed, don't show it
         if (sessionStorage.getItem(SESSION_KEY) === c.id) return;
         setCampaign(c);
+      } catch {
+        // Campaigns table may not exist yet — silently skip
       }
     }
 
