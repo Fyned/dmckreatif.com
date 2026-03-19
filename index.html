@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html lang="x-default" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,7 +21,6 @@
     <!-- Default meta (overridden by react-helmet-async per page) -->
     <title>DMC Kreatif — Premium European Web Agency</title>
     <meta name="description" content="Premium web development agency serving France, Belgium, UK, Netherlands, and Germany. Custom websites, e-commerce, SEO, and digital marketing." />
-    <link rel="canonical" href="https://dmckreatif.com/en" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="DMC Kreatif — Premium European Web Agency" />
@@ -45,10 +44,6 @@
     <meta name="twitter:image" content="https://dmckreatif.com/og-image.png" />
 
     <!-- Hreflang — static fallback (react-helmet-async overrides per page) -->
-    <link rel="alternate" hreflang="en" href="https://dmckreatif.com/en" />
-    <link rel="alternate" hreflang="fr" href="https://dmckreatif.com/fr" />
-    <link rel="alternate" hreflang="nl" href="https://dmckreatif.com/nl" />
-    <link rel="alternate" hreflang="de" href="https://dmckreatif.com/de" />
     <link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en" />
 
     <!-- RSS Feed -->
@@ -68,7 +63,12 @@
           "name": "DMC Kreatif",
           "alternateName": "DMC Kreatif Web Agency",
           "url": "https://dmckreatif.com",
-          "logo": "https://dmckreatif.com/logo.svg",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://dmckreatif.com/logo.svg",
+            "width": 200,
+            "height": 60
+          },
           "image": "https://dmckreatif.com/og-image.png",
           "email": "hello@dmckreatif.com",
           "priceRange": "€€",
@@ -77,14 +77,16 @@
           "founder": { "@id": "https://dmckreatif.com/#founder" },
           "address": {
             "@type": "PostalAddress",
-            "addressCountry": "GB",
+            "streetAddress": "Unit 6 Hill View Studios, 160 Eltham Hill",
             "addressLocality": "London",
-            "addressRegion": "England"
+            "postalCode": "SE9 5EA",
+            "addressRegion": "England",
+            "addressCountry": "GB"
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 51.5074,
-            "longitude": -0.1278
+            "latitude": 51.4513,
+            "longitude": 0.0515
           },
           "areaServed": [
             { "@type": "Country", "name": "France" },

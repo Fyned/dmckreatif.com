@@ -31,7 +31,12 @@ export function buildProfessionalServiceSchema(reviews?: Array<{
     name: "DMC Kreatif",
     alternateName: "DMC Kreatif Web Agency",
     url: BASE_URL,
-    logo: `${BASE_URL}/logo.svg`,
+    logo: {
+      "@type": "ImageObject",
+      url: `${BASE_URL}/logo.svg`,
+      width: 200,
+      height: 60,
+    },
     image: `${BASE_URL}/og-image.png`,
     email: "hello@dmckreatif.com",
     telephone: PHONE_PRIMARY,
@@ -88,6 +93,13 @@ export function buildProfessionalServiceSchema(reviews?: Array<{
     sameAs: [
       "https://www.linkedin.com/company/dmckreatif",
     ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "hello@dmckreatif.com",
+      contactType: "customer service",
+      availableLanguage: ["English", "French", "Dutch", "German"],
+      areaServed: ["FR", "BE", "GB", "NL", "DE"],
+    },
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: 5.0,
@@ -138,7 +150,10 @@ export function buildBreadcrumbSchema(
   items: BreadcrumbItem[],
   currentPageName?: string
 ) {
-  const listItems: BreadcrumbListItem[] = items.map((item, index) => ({
+  const baseItems = items.length === 0 && currentPageName
+    ? [{ name: "Home", path: "" }]
+    : items;
+  const listItems: BreadcrumbListItem[] = baseItems.map((item, index) => ({
     "@type": "ListItem",
     position: index + 1,
     name: item.name,
@@ -181,6 +196,7 @@ export function buildServiceSchema(params: {
       url: BASE_URL,
     },
     name: params.name,
+    serviceType: params.name,
     description: params.description,
     offers: {
       "@type": "Offer",
@@ -281,7 +297,12 @@ export function buildBlogPostingSchema(params: {
     description: params.description,
     datePublished: params.datePublished,
     dateModified: params.dateModified ?? params.datePublished,
-    image: params.image ?? `${BASE_URL}/og-image.png`,
+    image: {
+      "@type": "ImageObject",
+      url: params.image ?? `${BASE_URL}/og-image.png`,
+      width: 1200,
+      height: 630,
+    },
     author: {
       "@type": "Person",
       "@id": `${BASE_URL}/#founder`,
@@ -327,7 +348,12 @@ export function buildOfferSchema(
       "@type": "Organization",
       name: "DMC Kreatif",
       url: BASE_URL,
-      logo: `${BASE_URL}/logo.svg`,
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/logo.svg`,
+        width: 200,
+        height: 60,
+      },
     },
     name: "Web Development Services",
     description:
@@ -529,7 +555,6 @@ export function buildPortfolioPageSchema(
         position: index + 1,
         name: project.name,
         url: project.url,
-        description: project.description,
       })),
     },
   };
@@ -758,7 +783,6 @@ export function buildPersonProfileSchema(locale: string) {
           occupationLocation: { "@type": "Country", name: "Europe" },
           skills: "React, Next.js, TypeScript, Tailwind CSS, Supabase, SEO",
         },
-        alumniOf: [],
         award: "33+ international web projects delivered",
       },
     ],

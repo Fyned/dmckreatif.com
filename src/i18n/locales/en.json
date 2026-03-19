@@ -1321,35 +1321,35 @@
   },
   "seo": {
     "home": {
-      "title": "DMC Kreatif — Premium Web Agency for European Businesses | Custom Websites",
+      "title": "DMC Kreatif — Premium Web Agency for Europe",
       "description": "High-performance websites, e-commerce & SEO for businesses in France, UK, Belgium, Netherlands & Germany. React + Next.js, 98+ Lighthouse scores, multilingual."
     },
     "services": {
-      "title": "Web Development Services — Custom Sites, E-Commerce & SEO | DMC Kreatif",
+      "title": "Web Development Services — Europe | DMC Kreatif",
       "description": "Bespoke web development, online stores, SEO audits and digital marketing for European SMEs. React, Next.js, multilingual. Plans from €497."
     },
     "portfolio": {
-      "title": "Portfolio — 33+ Projects Built for European Businesses | DMC Kreatif",
+      "title": "Portfolio — 33+ European Projects | DMC Kreatif",
       "description": "Real projects for real businesses across France, Belgium and the UK. Construction, energy, accounting & e-commerce sites with 98+ Lighthouse scores."
     },
     "pricing": {
-      "title": "Website Pricing — Custom Sites from €497 | Templates from €39 | DMC Kreatif",
+      "title": "Website Pricing — From €497 | DMC Kreatif",
       "description": "Transparent web development pricing. Launch €497, Growth €997, Scale €1,997, Commerce €2,997. Free consultation, 24h response, satisfaction guaranteed."
     },
     "about": {
       "title": "About DMC Kreatif — Boutique European Web Development Agency",
-      "description": "UK-registered web development agency. 28-strong core team, 150+ specialist network across 12+ European countries. React, Next.js, Lighthouse 95+, multilingual."
+      "description": "UK-registered boutique web development agency with a vetted specialist network across Europe. React, Next.js, Lighthouse 95+, multilingual. 33+ projects delivered."
     },
     "team": {
       "title": "Our Team — DMC Kreatif Web Development Agency",
-      "description": "Meet the DMC Kreatif team: frontend engineers, UX designers, and SEO specialists Frontend engineers, UX designers, SEO specialists and more serving European businesses."
+      "description": "Meet the DMC Kreatif team: frontend engineers, UX designers, SEO specialists, and content writers serving European businesses across France, Belgium, UK and beyond."
     },
     "process": {
       "title": "Our Process — How We Build Premium Websites | DMC Kreatif",
       "description": "Our proven 6-step web development process: Discovery, UX Design, UI Design, Development, Testing and Launch. 98% on-time delivery, 500+ sprints completed."
     },
     "whyUs": {
-      "title": "Why Choose DMC Kreatif — 8 Reasons We Stand Out | Web Agency Europe",
+      "title": "Why Choose DMC Kreatif — 8 Key Reasons | Europe",
       "description": "Modern React/Next.js stack, 95+ Lighthouse guaranteed, multilingual by default, transparent pricing, dedicated teams. See why 200+ businesses chose us."
     },
     "partners": {
@@ -1361,7 +1361,7 @@
       "description": "Join premium specialists building the future of European web. Remote-first, cutting-edge stack, premium clients. Open positions in React, Next.js, UX, SEO."
     },
     "blog": {
-      "title": "Web Development Blog — SEO Tips, E-Commerce Guides | DMC Kreatif",
+      "title": "Web Development Blog — Europe | DMC Kreatif",
       "description": "Expert guides on web development, SEO strategy, e-commerce setup and digital marketing for European businesses. Actionable tips to grow online."
     },
     "contact": {
@@ -1369,7 +1369,7 @@
       "description": "Start your web project with a free consultation. Response within 24 hours. Serving businesses in France, Belgium, UK, Netherlands and Germany."
     },
     "caseStudies": {
-      "title": "Case Studies — Measurable Results for European Businesses | DMC Kreatif",
+      "title": "Case Studies — European Business Results | DMC Kreatif",
       "description": "See how we helped businesses in France, Belgium and the UK achieve 98+ Lighthouse scores, faster load times and higher search rankings."
     },
     "author": {
@@ -1381,7 +1381,7 @@
       "description": "Professional website templates for restaurants, construction, beauty and more. Starter €39, Business €99, Premium €179. Customized and delivered in 24h to 5 days."
     },
     "technologies": {
-      "title": "Technologies We Use — React, Next.js, TypeScript & More | DMC Kreatif",
+      "title": "Technologies — React, Next.js, TypeScript | DMC Kreatif",
       "description": "Discover the cutting-edge technologies powering our premium web development: React, Next.js, TypeScript, Tailwind CSS, Supabase."
     },
     "industries": {

@@ -51,7 +51,7 @@ RewriteRule ^ /index.html [L]
 
 # Cache: HTML - always fresh
 <FilesMatch "\.(html)$">
-  Header set Cache-Control "no-cache, no-store, must-revalidate"
+  Header set Cache-Control "no-cache, must-revalidate"
 </FilesMatch>
 
 # Cache: images - 1 month

@@ -1,8 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
-import JsonLd from "@/components/seo/JsonLd";
-import { buildBreadcrumbSchema } from "@/lib/seo-schemas";
 
 interface BreadcrumbItem {
   label: string;
@@ -23,16 +21,8 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
     ...items,
   ];
 
-  const schemaItems = fullItems
-    .filter((item) => item.href)
-    .map((item) => ({
-      name: item.label,
-      path: item.href?.replace(`/${currentLocale}`, "") ?? "/",
-    }));
-
   return (
     <>
-      <JsonLd data={buildBreadcrumbSchema(currentLocale, schemaItems)} />
       <nav
         aria-label="Breadcrumb"
         className="py-4 px-6 lg:px-10 max-w-container mx-auto"

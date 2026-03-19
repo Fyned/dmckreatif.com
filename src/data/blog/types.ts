@@ -11,6 +11,7 @@ export interface BlogArticle {
   readTime: string;
   accentColor: string;
   lang?: "en" | "fr" | "nl" | "de";
+  author?: string;
   relatedSlugs?: string[];
   relatedServiceSlugs?: string[];
   relatedTechSlugs?: string[];

@@ -1,0 +1,94 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DMC Kreatif SEO Haftalik//TR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:DMC Kreatif — Haftalık SEO Rutin
+X-WR-TIMEZONE:Europe/Istanbul
+X-WR-CALDESC:Her hafta tekrar eden SEO kontrolleri
+
+BEGIN:VEVENT
+DTSTART:20260323T090000Z
+DTEND:20260323T093000Z
+RRULE:FREQ=WEEKLY;BYDAY=MO;COUNT=52
+SUMMARY:📊 Haftalık SEO: GSC Kontrol (30 dk)
+DESCRIPTION:Her Pazartesi 09:00 — 30 dakika\n\n1. Google Search Console → Coverage tab\n   → Yeni hatalar var mı?\n   → Indexlenmiş sayfa sayısı arttı mı?\n\n2. GSC → Performance tab\n   → Bu haftaki tıklama + impression\n   → Yeni sıralamaya giren keywords?\n   → En çok düşen sayfalar?\n\n3. Sitemap durumu kontrol\n\nURL: search.google.com/search-console
+LOCATION:Google Search Console
+BEGIN:VALARM
+TRIGGER:DURATION:PT0S
+ACTION:DISPLAY
+DESCRIPTION:Haftalık SEO: GSC Kontrol Zamanı
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260324T100000Z
+DTEND:20260324T110000Z
+RRULE:FREQ=WEEKLY;BYDAY=TU;COUNT=52
+SUMMARY:✍️ LinkedIn: Case Study / Proje Postu
+DESCRIPTION:Her Salı 10:00 — Hazırla ve paylaş\n\nPost fikirleri:\n- Müşteri case study (önce, sonra)\n- Proje lansmanı\n- Teslim edilen iş showcase\n- Müşteri testimoniali\n\nFormat:\n- Hook cümlesi (dikkat çekici)\n- 3-4 bullet point sonuç\n- Ekran görüntüsü veya video\n- CTA: "DM for a free consultation"\n\nHashtag: #webdevelopment #agenceWeb #digitalagency #France #Belgium #UK
+LOCATION:LinkedIn
+BEGIN:VALARM
+TRIGGER:DURATION:PT0S
+ACTION:DISPLAY
+DESCRIPTION:LinkedIn: Case Study Postu Zamanı
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260326T100000Z
+DTEND:20260326T110000Z
+RRULE:FREQ=WEEKLY;BYDAY=TH;COUNT=52
+SUMMARY:💡 LinkedIn: Web Dev İpucu Postu
+DESCRIPTION:Her Perşembe 10:00 — Hazırla ve paylaş\n\nPost fikirleri:\n- Teknik SEO ipucu\n- React/Next.js özelliği\n- Avrupa e-ticaret trendi\n- "Wix vs Custom Code" karşılaştırma\n- Lighthouse skorlama ipucu\n\nFormat:\n- Soru ile başla\n- 5-7 maddelik liste\n- Kendi tecrübenden örnek\n- CTA bağlantısı\n\nHedef: Ayda 8 post, yılda 100+ post
+LOCATION:LinkedIn
+BEGIN:VALARM
+TRIGGER:DURATION:PT0S
+ACTION:DISPLAY
+DESCRIPTION:LinkedIn: Web Dev İpucu Postu
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260327T140000Z
+DTEND:20260327T160000Z
+RRULE:FREQ=WEEKLY;BYDAY=FR;COUNT=52
+SUMMARY:📝 Blog: Yeni Makale Taslağı (veya düzenleme)
+DESCRIPTION:Her Cuma 14:00 — 2 saat\n\nHedef: Haftada 1 makale (minimum)\nKonu önceliği:\n1. FR makaleler (Fransa pazarı)\n2. EN makaleler (geniş kitle)\n3. NL makaleler (Hollanda)\n4. DE makaleler (Almanya)\n\nYapı:\n- Min 1.500 kelime\n- H2 + H3 başlık hiyerarşisi\n- 1 özet tablo veya info-box\n- İç bağlantı (min 3 başka sayfaya)\n- Schema: BlogPosting + author byline\n\nDosya: src/data/blog/content/{lang}/{slug}.ts
+LOCATION:src/data/blog/content/
+BEGIN:VALARM
+TRIGGER:DURATION:PT0S
+ACTION:DISPLAY
+DESCRIPTION:Blog Yazısı Yazma/Düzenleme Zamanı
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260401T090000Z
+DTEND:20260401T110000Z
+RRULE:FREQ=MONTHLY;BYDAY=1MO;COUNT=12
+SUMMARY:📋 AYLIK SEO KONTROL (2 saat)
+DESCRIPTION:Her ayın ilk Pazartesi — 2 saat\n\n=== ÖLÇÜM ===\n1. GSC → Indexlenen sayfa sayısı\n2. GSC → En çok impression alan 20 keyword\n3. Anahtar kelime sıralamalar (Semrush/Ubersuggest)\n4. Domain Authority kontrolü\n5. Lighthouse: 3 sayfa çalıştır (home + servis + blog)\n\n=== BACKLINK ===\n6. GSC → Links tab → Yeni backlink?\n7. Yitirilen backlink var mı?\n\n=== İÇERİK ===\n8. En az trafik alan 3 makaleyi güncelle\n9. Sitemap güncel mi? (Yeni sayfalar eklendi mi?)\n10. Sitemap Search Console'a submit et\n\n=== TEKNIK ===\n11. Coverage hataları sıfıra indi mi?\n12. Core Web Vitals raporu\n\n=== HARICI ===\n13. Clutch review sayısı arttı mı?\n14. Google Business Profile mesajları var mı?
+LOCATION:Google Search Console + Semrush
+BEGIN:VALARM
+TRIGGER:DURATION:PT0S
+ACTION:DISPLAY
+DESCRIPTION:AYLIK SEO KONTROL — 2 saat ayır!
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260401T090000Z
+DTEND:20260401T130000Z
+RRULE:FREQ=MONTHLY;BYDAY=3MO;COUNT=4
+SUMMARY:🔍 3 AYLIK DERİN SEO ANALİZİ (4 saat)
+DESCRIPTION:Her çeyreğin 3. Pazartesi — 4 saat\n\n=== Q1/Q2/Q3/Q4 DEĞERLENDİRME ===\n1. Trafik hedefine ulaşıldı mı?\n2. Ranking hedefine ulaşıldı mı?\n3. Blog makale sayısı hedefi?\n4. Backlink domain sayısı?\n5. Clutch/Google review sayısı?\n\n=== STRATEJİ GÜNCELLE ===\n6. Şehir sayfaları performansı → genişlet mi, sil mi?\n7. Hangi dil pazarı en iyi performans veriyor?\n8. Hangi blog konuları trafik getiriyor?\n9. Rakip analizi: yeni rakip çıktı mı?\n10. ACTION-PLAN.md güncelle\n11. SEO-STRATEGY.md güncelle\n\n=== RAPOR ===\nGüncel skor, hedeflere göre ilerleme, sonraki çeyrek planı
+LOCATION:Google Search Console + Semrush + ACTION-PLAN.md
+BEGIN:VALARM
+TRIGGER:DURATION:PT0S
+ACTION:DISPLAY
+DESCRIPTION:3 AYLIK DERİN SEO ANALİZİ — 4 saat ayır!
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR

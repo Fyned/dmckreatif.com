@@ -29,7 +29,7 @@ export default function CampaignBanner() {
           .or(`start_date.is.null,start_date.lte.${now}`)
           .or(`end_date.is.null,end_date.gte.${now}`)
           .limit(1)
-          .single();
+          .maybeSingle();
 
         if (error || !data) return;
 

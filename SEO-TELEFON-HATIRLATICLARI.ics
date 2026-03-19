@@ -1,0 +1,297 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DMC Kreatif SEO Plan//TR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:DMC Kreatif SEO Takvimi
+X-WR-TIMEZONE:Europe/Istanbul
+X-WR-CALDESC:1 Yillik SEO Eylem Plani - dmckreatif.com
+
+BEGIN:VEVENT
+DTSTART:20260323T090000Z
+DTEND:20260323T100000Z
+SUMMARY:🔴 SEO KRİTİK: index.html düzelt
+DESCRIPTION:1. index.html:24 statik canonical sil\n2. lang="en" → lang="x-default"\n3. Statik hreflang'ı x-default'a indir\n4. logo → ImageObject\n5. .htaccess no-store → no-cache
+LOCATION:dmckreatif-vite proje
+ALARM:TRIGGER:-P1D
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Yarın: SEO Kritik Düzeltmeler - index.html
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260330T090000Z
+DTEND:20260330T110000Z
+SUMMARY:🔴 SEO: Schema düzeltmeleri
+DESCRIPTION:1. seo-schemas.ts:284 image → ImageObject (42+ blog Article rich result)\n2. Çift BreadcrumbList düzelt\n3. BreadcrumbList null guard\n4. WebSite SearchAction ekle\n5. contactPoint + serviceType ekle
+LOCATION:dmckreatif-vite proje
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Yarın: SEO Schema Düzeltmeleri
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260406T090000Z
+DTEND:20260406T100000Z
+SUMMARY:🟡 SEO: Hreflang + Başlık Düzeltmeleri
+DESCRIPTION:1. H1 Framer Motion'dan çıkar (LCP fix)\n2. 10 sayfa title'ını 60 karaktere indir\n3. "28-strong team" çelişkisini çöz\n4. en.json team description duplikat düzelt
+LOCATION:dmckreatif-vite proje
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Bugün: SEO Hreflang + Title Düzeltmeleri
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260413T090000Z
+DTEND:20260413T110000Z
+SUMMARY:🟡 SEO: Sitemap güncellemesi
+DESCRIPTION:1. Technologies + Industries ekle\n2. EN blog lastmod tarihleri düzelt\n3. Legal sayfaları sil (20 URL)\n4. UK şehirler NL/DE hreflang kaldır\n5. FR case studylere hreflang="fr" ekle\n6. Blog yazılarına author byline ekle
+LOCATION:sitemap.xml + articles.ts
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Bugün: Sitemap Güncellemesi
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260420T090000Z
+DTEND:20260420T110000Z
+SUMMARY:🟡 SEO: E-E-A-T İyileştirmeleri
+DESCRIPTION:1. Kurucu fotoğrafı ekle (EN KRİTİK - güven sinyali)\n2. Müşteri headshot'ları iste (WhatsApp)\n3. Companies House numarasını footer'a ekle\n4. Digital Marketing servis açıklamasını genişlet\n5. Clutch.co profil aç
+LOCATION:AboutPage.tsx + LegalNoticePage.tsx
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Bugün: E-E-A-T Güven Sinyalleri
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260427T090000Z
+DTEND:20260427T110000Z
+SUMMARY:📝 SEO: Nisan Blog Sprint Başlangıcı
+DESCRIPTION:Hedef: Haftada 2 makale\n1. "How Much Does a Website Cost in France 2026" (EN)\n2. "React vs WordPress: European Business Guide" (EN)\n3. "GDPR Compliant Website Checklist" (EN)\n4. "Agence web Belgique" (FR)
+LOCATION:src/data/blog/content/
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Bugün: Blog İçerik Sprinti Başlıyor
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260504T090000Z
+DTEND:20260504T110000Z
+SUMMARY:⚡ SEO: Core Web Vitals Düzeltmeleri
+DESCRIPTION:1. fetchpriority="high" LCP imagelara\n2. BeforeAfterSlider.tsx loading="lazy" + alt ekle\n3. Font 9 weight → 3-4 weight (azalt)\n4. Supabase promo 406 hatasını düzelt\n5. Lighthouse testi çalıştır
+LOCATION:HeroSection.tsx + seo-schemas.ts
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Bugün: Core Web Vitals Sprint
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260511T090000Z
+DTEND:20260511T110000Z
+SUMMARY:🔍 SEO: Prerender Kararı
+DESCRIPTION:Seçenek A: vite-plugin-prerender (Windows uyumlu)\nSeçenek B: Next.js App Router migrasyonu\nAraştır ve karar ver - BU KRİTİK\nSadece Puppeteer varken çalışıyor = indexability riski
+LOCATION:vite.config.ts
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Bugün: Prerender Karar Günü
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260601T090000Z
+DTEND:20260601T120000Z
+SUMMARY:📋 SEO: Aylık Kontrol — Haziran
+DESCRIPTION:Aylık rutin:\n1. GSC Coverage kontrolü\n2. GSC Performance → yeni keywords?\n3. Lighthouse: homepage + 1 servis + 1 blog\n4. Sitemap submit\n5. Backlink kontrolü\n6. Clutch profil tamamla\nHedef bu ay: 8 yeni dizin kaydı
+LOCATION:Google Search Console
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Aylık SEO Kontrol Günü
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260601T140000Z
+DTEND:20260601T160000Z
+SUMMARY:📬 SEO: Müşteri Review İsteği
+DESCRIPTION:6 müşteriye WhatsApp mesajı gönder:\n"Clutch.co'da review bırakır mısın? 2 dakika sürüyor, çok yardımcı olur"\nPierre Cakir, Mehmet Altinbas, Julien Martin, Sophie Laurent, Marc Dupont, James Adams
+LOCATION:WhatsApp
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Müşterilere Clutch Review İste
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260608T090000Z
+DTEND:20260608T110000Z
+SUMMARY:📁 SEO: Dizin Kayıtları Günü
+DESCRIPTION:Ücretsiz dizinlere kayıt ol:\n1. Clutch.co (öncelik)\n2. Google Business Profile (UK)\n3. DesignRush\n4. Sortlist.com (FR/BE/NL)\n5. GoodFirms\n6. AgencySpotter\n7. Manifest.co\n8. Expertise.com
+LOCATION:Tarayıcı
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Bugün: 8 Dizin Kaydı Günü
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260615T090000Z
+DTEND:20260615T110000Z
+SUMMARY:🇳🇱 SEO: LinkedIn İçerik Takvimine Başla
+DESCRIPTION:Haftalık LinkedIn planı:\n- Salı: Case study showcase\n- Perşembe: Web dev ipucu\n\nBu hafta: CAKIR Facades case study post\nGelecek hafta: "33 proje, 4 ülke" milestone
+LOCATION:LinkedIn
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:LinkedIn İçerik Rutini Başlıyor
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260701T090000Z
+DTEND:20260701T120000Z
+SUMMARY:📋 SEO: Aylık Kontrol — Temmuz
+DESCRIPTION:Aylık rutin + Link Building:\n1. GSC kontrolü\n2. Backlink raporu\n3. Müşteri sitelerine footer backlink ekle\n4. 2 adet misafir makale iletişimi (FR web dev blogları)\n5. Awwwards submit\n6. Şehir sayfası trafik kontrolü
+LOCATION:Google Search Console
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Temmuz: SEO + Link Building Günü
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260801T090000Z
+DTEND:20260801T110000Z
+SUMMARY:📋 SEO: Aylık Kontrol + NL Push — Ağustos
+DESCRIPTION:1. GSC kontrolü\n2. 4 adet NL blog makalesi ekle\n3. Amsterdam/Rotterdam şehir sayfaları genişlet\n4. NL dizinlere kayıt (Thuiswinkel.org, Kvk.nl)\n5. Toplam blog: hedef 82 makale
+LOCATION:src/data/blog/content/nl/
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Ağustos: Hollanda Pazarı Atağı
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260901T090000Z
+DTEND:20260901T120000Z
+SUMMARY:📋 SEO: Aylık Kontrol + Q3 Başlangıcı
+DESCRIPTION:Q2 Değerlendirme:\n- Trafik hedefi 3.000/ay — ulaştık mı?\n- Clutch review sayısı?\n- Domain Authority?\n\nQ3 Başlangıç:\n1. GEO optimization — llms.txt güncelle\n2. FAQ schema servis sayfalarına ekle\n3. AI Overview hedef sorguları belirle
+LOCATION:Google Search Console + Semrush
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Q2 Değerlendirme + Q3 Başlangıcı
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20260915T090000Z
+DTEND:20260915T110000Z
+SUMMARY:🤖 SEO: GEO Optimization Günü
+DESCRIPTION:AI Overviews için optimizasyon:\n1. llms.txt güncelle (yeni istatistikler)\n2. Blog makalelerine "What is...", "How to..." H2'ler ekle\n3. Her makalede özet tablosu veya info-box\n4. Müşteri sonuçlarını spesifik sayılarla güncelle\n5. FAQ schema servis sayfalarına ekle
+LOCATION:public/llms.txt + en.json
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:GEO Optimization: AI Arama Görünürlüğü
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20261001T090000Z
+DTEND:20261001T120000Z
+SUMMARY:📋 SEO: Aylık Kontrol + DE Push — Ekim
+DESCRIPTION:1. GSC kontrolü\n2. 4 adet DE blog makalesi ekle\n3. Berlin/Hamburg/München şehir sayfaları genişlet\n4. DSGVO compliance sayfası ekle\n5. Toplam blog: hedef 93 makale\nAlmanya için hedef keywords:\n- webdesign agentur\n- website erstellen lassen
+LOCATION:src/data/blog/content/de/
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Ekim: Almanya Pazarı Atağı
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20261101T090000Z
+DTEND:20261101T120000Z
+SUMMARY:⚡ SEO: Performans Optimizasyonu — Kasım
+DESCRIPTION:Lighthouse 92+ hedefi:\n1. LCP < 2.0s — tüm sayfalar\n2. INP < 200ms — React render optimizasyonu\n3. CLS < 0.05 — sağ beyaz kutu düzelt\n4. Bundle analizi: npm run build -- --report\n5. Gereksiz paketleri temizle\n6. Supabase: sadece auth sayfalarında yükle
+LOCATION:vite.config.ts + App.tsx
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Kasım: Lighthouse 92+ Hedefi
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20261201T090000Z
+DTEND:20261201T120000Z
+SUMMARY:📋 SEO: Q3 Değerlendirme + Yılsonu
+DESCRIPTION:Q3 Değerlendirme:\n- Trafik hedefi 4.500/ay — ulaştık mı?\n- 98 makale var mı?\n- 50 backlink domain var mı?\n\nYılsonu makaleler:\n1. "Web Development Trends 2027 for European Businesses"\n2. "State of Web Design in France, Belgium, UK 2026"\n3. "Agency Year in Review"\n4. Clutch badge siteye ekle
+LOCATION:Google Search Console + Semrush
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Q3 Değerlendirme + Yılsonu İçerik
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20270101T090000Z
+DTEND:20270101T110000Z
+SUMMARY:🔍 SEO: Şehir Sayfaları Karar Günü
+DESCRIPTION:GSC'den şehir URL'lerini kontrol et:\n- Impression + Click alan şehirler → genişlet\n- Trafik gelmeyen şehirler → sil\n\nEğer iyi çalışıyorsa: 10 → 20 şehre genişlet\nEğer çalışmıyorsa: 34 → 8 şehre indir\n\nBu karar yıl içindeki en önemli SEO kararı\nAyrıca: scripts/generate-sitemap.ts yaz (otomatik sitemap)
+LOCATION:Google Search Console → Pages
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Yeni Yıl: Şehir Sayfaları Karar Günü
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20270201T090000Z
+DTEND:20270201T120000Z
+SUMMARY:📋 SEO: Yıllık Değerlendirme
+DESCRIPTION:1 Yıl Sonucu:\n- Trafik: 800 → 6.000/ay?\n- Ranking: 150+ keyword ilk 10?\n- Domain Authority: 18 → 35?\n- Blog: 51 → 110 makale?\n- Backlinks: 70+ domain?\n- Clutch reviews: 6+?\n\nEğer hedefler tutmadıysa:\n→ Prerender/Next.js migrasyon kararı\n→ Şehir sayfası stratejisi revize\n→ Blog içerik kalitesi artır\n\nYeni yıl planını yaz!
+LOCATION:Google Search Console + Semrush + Clutch
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:1 YILLIK SEO DEĞERLENDİRMESİ
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20270301T090000Z
+DTEND:20270301T110000Z
+SUMMARY:🎯 SEO: Yıl 2 Planlaması
+DESCRIPTION:Yıl 2 Hedefleri:\n1. İsviçre pazarı aç (FR + DE)\n2. Google Ads entegrasyon\n3. Template satışları büyüt\n4. İkinci kurucu/çalışan?\n5. UK telefon numarası aktif?\nSEO skor hedefi: 88 → 93\nTrafik hedefi: 6.000 → 12.000/ay
+LOCATION:SEO-STRATEGY.md
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Yıl 2 SEO Stratejisi Planlaması
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR

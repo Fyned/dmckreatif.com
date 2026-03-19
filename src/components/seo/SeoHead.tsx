@@ -35,7 +35,8 @@ export default function SeoHead({
 }: SeoHeadProps) {
   const { locale } = useParams();
   const currentLocale = locale ?? "en";
-  const canonicalUrl = `${BASE_URL}/${canonicalLocale ?? currentLocale}${path}`;
+  const normPath = path.endsWith("/") && path.length > 1 ? path.slice(0, -1) : path;
+  const canonicalUrl = `${BASE_URL}/${canonicalLocale ?? currentLocale}${normPath}`;
   const fullOgImage = ogImage.startsWith("http")
     ? ogImage
     : `${BASE_URL}${ogImage}`;
@@ -57,13 +58,13 @@ export default function SeoHead({
           key={lang}
           rel="alternate"
           hrefLang={lang}
-          href={`${BASE_URL}/${lang}${path}`}
+          href={`${BASE_URL}/${lang}${normPath}`}
         />
       ))}
       <link
         rel="alternate"
         hrefLang="x-default"
-        href={`${BASE_URL}/en${path}`}
+        href={`${BASE_URL}/en${normPath}`}
       />
 
       {/* Open Graph */}

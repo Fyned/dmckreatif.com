@@ -226,7 +226,8 @@ export default function CaseStudyDetailPage() {
                       alt={`${cs.name} — Live Website Screenshot`}
                       width={1200}
                       height={675}
-                      loading="lazy"
+                      fetchPriority="high"
+                      loading="eager"
                       decoding="async"
                       className="w-full h-full object-cover object-top"
                     />

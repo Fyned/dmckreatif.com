@@ -367,6 +367,13 @@ export default function BlogPostPage() {
 
                 <div className="flex items-center justify-between flex-wrap gap-4">
                   <div className="flex items-center gap-4 font-mono text-xs text-neo-black/60">
+                    <Link
+                      to={`/${currentLocale}/about/musa-kerem-demirci`}
+                      className="font-bold text-neo-black hover:text-neo-lime transition-colors"
+                    >
+                      {article.author ?? "Musa Kerem Demirci"}
+                    </Link>
+                    <span>*</span>
                     <time dateTime={article.date}>{formattedDate}</time>
                     <span>*</span>
                     <span className="flex items-center gap-1">
@@ -460,9 +467,12 @@ export default function BlogPostPage() {
                   <Code2 size={24} strokeWidth={2.5} />
                 </div>
                 <div>
-                  <span className="font-space font-bold text-sm block">
-                    {t("blog.authorName", "Musa Kerem Demirci")}
-                  </span>
+                  <Link
+                    to={`/${currentLocale}/about/musa-kerem-demirci`}
+                    className="font-space font-bold text-sm block hover:text-neo-lime transition-colors"
+                  >
+                    {article.author ?? t("blog.authorName", "Musa Kerem Demirci")}
+                  </Link>
                   <span className="font-mono text-xs text-neo-black/60 block mb-2">
                     {t("blog.authorRole", "Founder & Lead Developer")}
                   </span>
