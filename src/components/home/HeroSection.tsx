@@ -11,32 +11,28 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex items-center py-20 lg:py-32 overflow-hidden">
       <div className="max-w-container mx-auto px-6 lg:px-10 w-full">
+        {/* H1 rendered outside motion tree for instant LCP paint */}
+        <div className="mb-8">
+          <div className="inline-flex items-center gap-2 border-2 border-neo-black bg-neo-white px-4 py-2 shadow-hard-sm mb-8">
+            <span className="w-2 h-2 bg-neo-green border border-neo-black animate-pulse" />
+            <span className="font-mono text-xs tracking-wider">
+              {t("hero.status")}
+            </span>
+          </div>
+          <h1 className="font-space font-bold text-hero leading-[0.95] tracking-tight">
+            {t("hero.titleLine1")}
+            <br />
+            <span className="inline-block bg-neo-lime px-5 py-2 border-4 border-neo-black shadow-hard-lg mt-2 leading-tight">
+              {t("hero.titleAccent")}
+            </span>
+          </h1>
+        </div>
+
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
         >
-          {/* Status badge */}
-          <motion.div variants={fadeInUp} className="mb-8">
-            <div className="inline-flex items-center gap-2 border-2 border-neo-black bg-neo-white px-4 py-2 shadow-hard-sm">
-              <span className="w-2 h-2 bg-neo-green border border-neo-black animate-pulse" />
-              <span className="font-mono text-xs tracking-wider">
-                {t("hero.status")}
-              </span>
-            </div>
-          </motion.div>
-
-          {/* Main heading — rendered directly for LCP (no opacity:0 delay) */}
-          <div className="mb-8">
-            <h1 className="font-space font-bold text-hero leading-[0.95] tracking-tight">
-              {t("hero.titleLine1")}
-              <br />
-              <span className="inline-block bg-neo-lime px-5 py-2 border-4 border-neo-black shadow-hard-lg mt-2 leading-tight">
-                {t("hero.titleAccent")}
-              </span>
-            </h1>
-          </div>
-
           {/* Subtitle */}
           <motion.p
             variants={fadeInUp}

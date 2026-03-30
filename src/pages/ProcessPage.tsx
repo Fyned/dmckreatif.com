@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import AboutCrossLinks from "@/components/ui/AboutCrossLinks";
 import { ArrowRight, Search, PenTool, Palette, Code2, TestTube2, Rocket, RefreshCw, Eye, GitBranch, BadgeDollarSign } from "lucide-react";
@@ -6,6 +7,9 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import NeoButton from "@/components/ui/NeoButton";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import SeoHead from "@/components/seo/SeoHead";
+import JsonLd from "@/components/seo/JsonLd";
+import { buildWebPageSchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
 import { useAnalytics } from "@/lib/useAnalytics";
 import { fadeInUp, staggerContainer, scaleIn, viewportConfig } from "@/lib/animations";
 
@@ -39,10 +43,18 @@ const principles = [
 
 export default function ProcessPage() {
   const { t } = useTranslation();
+  const { locale } = useParams();
+  const lang = locale ?? "en";
   useAnalytics("Process");
+
+  const seoTitle = t("seo.process.title", "Our Process — How We Build Premium Websites | DMC Kreatif");
+  const seoDesc = t("seo.process.description", "Our proven 6-step web development process: Discovery, UX Design, UI Design, Development, Testing and Launch. 98% on-time delivery, 500+ sprints completed.");
 
   return (
     <>
+      <SeoHead title={seoTitle} description={seoDesc} path="/process" />
+      <JsonLd data={buildWebPageSchema({ name: seoTitle, description: seoDesc, url: `https://dmckreatif.com/${lang}/process`, locale: lang })} />
+      <JsonLd data={buildBreadcrumbSchema([{ name: "Home", url: `https://dmckreatif.com/${lang}` }, { name: "Process", url: `https://dmckreatif.com/${lang}/process` }])} />
       <Breadcrumbs items={[{ label: t("nav.process", "PROCESS") }]} />
 
       {/* Hero */}
