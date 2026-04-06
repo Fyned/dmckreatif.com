@@ -1,265 +1,199 @@
-# DMC Kreatif — Full SEO Audit Report
-**Date:** 2026-03-19 | **Site:** dmckreatif.com | **Tech:** React + Vite SPA + Hostinger
-**Audited by:** 4 parallel specialist agents (Technical, Content/E-E-A-T, Schema, Sitemap) + visual + GEO
+# SEO Full Audit Report — dmckreatif.com
+
+## Date: 2026-04-06
+## Overall SEO Health Score: 68/100
+## Business Type: Digital Agency (European B2B)
 
 ---
 
-## SEO Health Score: 70 / 100
+### Executive Summary
+
+- **SPA rendering is the #1 blocker** — all body content requires JavaScript execution; Googlebot relies on second-wave rendering which delays indexing by days
+- **Trailing slash redirect chain** — every URL in the sitemap returns 301 (3 hops from root), diluting PageRank and wasting crawl budget
+- **4 major pages missing H1** — Portfolio, Pricing, Contact, Blog have no H1 heading element
+- **239 location pages exceed quality gate** — HARD STOP threshold (50+) breached; content uniqueness unverified
+- **Duplicate ProfessionalService schema** — two JSON-LD blocks with same `@id` create entity conflicts
+
+---
+
+### Score Breakdown
 
 | Category | Weight | Score | Weighted |
 |----------|--------|-------|----------|
-| Technical SEO | 25% | 71/100 | 17.75 |
-| Content Quality (E-E-A-T) | 25% | 74/100 | 18.50 |
-| On-Page SEO | 20% | 65/100 | 13.00 |
-| Schema / Structured Data | 10% | 74/100 | 7.40 |
-| Performance (CWV) | 10% | 62/100 | 6.20 |
-| Images | 5% | 60/100 | 3.00 |
-| AI Search Readiness (GEO) | 5% | 85/100 | 4.25 |
-| **TOTAL** | 100% | | **70.1 / 100** |
+| Technical SEO | 25% | 71 | 17.75 |
+| Content Quality | 25% | 64 | 16.00 |
+| On-Page SEO | 20% | 64 | 12.80 |
+| Schema / Structured Data | 10% | 71 | 7.10 |
+| Performance (CWV) | 10% | 72 | 7.20 |
+| Images | 5% | 72 | 3.60 |
+| AI Search Readiness | 5% | 72 | 3.60 |
+| **Total** | **100%** | | **68.05** |
 
 ---
 
-## Business Type
-**Digital Agency** — B2B services, 4-language (EN/FR/NL/DE), European market (FR, BE, UK, NL, DE).
+## 1. Technical SEO — 71/100
+
+### Passed
+- robots.txt well-structured with AI crawler allowlist and sitemap reference
+- HSTS with preload + includeSubDomains correctly configured
+- Viewport meta tag correct, touch targets meet 44px minimum
+- Self-hosted fonts (Syne, DM Sans, JetBrains Mono) with preload
+- Static JSON-LD @graph in index.html visible to first-wave crawlers
+
+### Critical Issues
+| ID | Issue | Impact |
+|----|-------|--------|
+| T-C1 | 3-hop redirect chain: `dmckreatif.com` -> 301 -> `/en` -> 301 -> `/en/` -> 200 | PageRank dilution, crawl budget waste |
+| T-C2 | SPA content JS-dependent: `<div id="root">` empty except cookie banner | Second-wave indexing delay |
+
+### High Issues
+| ID | Issue |
+|----|-------|
+| T-H1 | Blog hreflang orphans — posts only self-reference, no cross-locale alternates |
+| T-H2 | All 661 sitemap URLs return 301 (canonical/server trailing-slash mismatch) |
+| T-H3 | CSP `frame-ancestors 'none'` contradicts `X-Frame-Options: SAMEORIGIN` |
+| T-H4 | HTML Cache-Control `no-cache, must-revalidate` on every visit |
+
+### Medium Issues
+- Sitemap lastmod bulk-stamped (97% share two dates)
+- CDN BYPASS on all responses (Hostinger hcdn not caching)
+- www subdomain 2-hop redirect chain
+- No changefreq/priority in sitemap
 
 ---
 
-## Top 5 Critical Issues
+## 2. Content Quality — 64/100
 
-1. **SPA prerendering unreliable** — Puppeteer dependency fails on Windows/CI → Googlebot sees empty `<div id="root">` on many pages
-2. **Duplicate BreadcrumbList schema** — `Breadcrumbs.tsx` auto-injects AND pages inject explicitly → Google receives conflicting signals on every inner page
-3. **"28-strong team" vs "solo agency" contradiction** — `about.description` says "28-strong core team, 150+ specialist network" while timeline describes solo launch — quality rater trust failure
-4. **136 thin city-service pages** — 34 cities × 4 services, each ~130-200 words (minimum 500 needed) — doorway page risk
-5. **Static canonical in `index.html:24` points to `/en`** — when prerender fails, ALL pages share the homepage canonical
+### E-E-A-T Assessment
+| Signal | Score | Key Gap |
+|--------|-------|---------|
+| Experience | 52 | Founder bio 2 sentences; no photo; 33+ vs 12 shown |
+| Expertise | 72 | Strong tech blog; specific stack naming |
+| Authoritativeness | 50 | Only 1 sameAs (LinkedIn); no Clutch/Trustpilot |
+| Trustworthiness | 68 | Legal pages exist; GDPR consent; no visible address |
 
----
+### Content Depth Failures
+| Page | Est. Words | Minimum | Status |
+|------|-----------|---------|--------|
+| Services | ~450 | 800 | FAIL |
+| Portfolio | ~250 | 500 | FAIL |
+| Contact | ~200 | 300 | FAIL |
+| Blog Index | ~200 | 300 | FAIL |
 
-## Top 5 Quick Wins (< 30 min each)
-
-1. `index.html:24` — Delete static canonical tag (1 line)
-2. `index.html:2` — Change `lang="en"` to `lang="x-default"` (1 char)
-3. `index.html:47-52` — Change static hreflang to x-default only (5 lines)
-4. `seo-schemas.ts:284` — Wrap `image` string in `ImageObject` (unblocks Article rich results on 42+ blog posts)
-5. `seo-schemas.ts:34` + `index.html:71` + `seo-schemas.ts:330` — Wrap `logo` in `ImageObject` (3 locations)
-
----
-
-## Technical SEO: 71/100
-
-### Security & Headers: 88/100 ✓
-- HTTPS + HSTS (max-age=31536000; includeSubDomains; preload) ✓
-- X-Frame-Options SAMEORIGIN ✓, X-Content-Type-Options nosniff ✓
-- Referrer-Policy strict-origin-when-cross-origin ✓, Permissions-Policy ✓
-- ⚠️ CSP: `unsafe-inline` for both `script-src` AND `style-src` — negates XSS protection (Lighthouse Best Practices penalty)
-- ⚠️ Geo coordinates: `index.html` (London center 51.5074) vs `seo-schemas.ts` (SE9 5EA 51.4513) — conflicting entity signal
-
-### Crawlability: 90/100 ✓
-- robots.txt: all AI crawlers allowed (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) ✓
-- www → non-www 301 ✓, root → /en ✓, Turkish locale → /en ✓
-- Auth/admin paths blocked in robots.txt ✓
-- Gzip compression ✓, hashed assets immutable cache ✓
-- ⚠️ `Cache-Control: no-cache, no-store, must-revalidate` on HTML — prevents any caching
-
-### JavaScript Rendering: 50/100 ⚠️
-- **CRITICAL:** `vite.config.ts` prerenderPlugin skips if Puppeteer not installed — fails on Windows locally, unreliable in CI
-- Pure SPA shell serves empty `<div id="root">` when prerender skips → indexability failure for 490+ URLs
-- `noscript` fallback in `index.html` exists (EN-only) ✓ — partial mitigation
-
-### Indexability / Canonicals: 55/100 ⚠️
-- **CRITICAL:** `index.html:24` — `<link rel="canonical" href="https://dmckreatif.com/en" />` — static fallback makes ALL pages appear as canonical duplicate of homepage when prerender fails
-- Helmet per-page canonical works when JS renders ✓
-- noindex on auth/dashboard/admin pages ✓
-
-### Hreflang / i18n: 75/100
-- `SeoHead.tsx` correctly generates per-page 4-language hreflang ✓
-- ⚠️ `index.html:47-52`: static hreflang only points to homepage — bad fallback for all inner pages
-- ⚠️ `index.html:2`: `html lang="en"` hardcoded — /fr, /nl, /de pages briefly show wrong lang attribute
-- ⚠️ UK-only cities (Edinburgh, Glasgow, Bristol) have NL/DE/FR hreflang — illogical targeting
-- ⚠️ FR case studies lack `hreflang="fr"` (cakir-facades, altinbas are French projects)
-
-### URL Structure: 72/100
-- `/:locale/path` consistent ✓
-- ⚠️ Trailing slash inconsistency in `SeoHead.tsx` — path prop normalisation missing
-- ⚠️ Blog pagination: "Load More" button (state-based) — no crawlable `/blog/page/2` URLs
-
-### Core Web Vitals (Code): 62/100
-- **HIGH:** H1 inside Framer Motion `staggerContainer initial="hidden"` — LCP delay (confirmed P0 in CLAUDE.md)
-- No `fetchpriority="high"` anywhere in codebase
-- Supabase promo query failing (406) — JS error on every load
-- Fonts self-hosted ✓, 2 of 6 preloaded (remaining 4 not preloaded)
-- Code splitting via lazy imports ✓
-
-### Image Optimization: 60/100
-- WebP format for portfolio ✓, lazy loading on case study images ✓
-- ⚠️ `BeforeAfterSlider.tsx:78,93` — missing `loading="lazy"` and descriptive `alt`
-- ⚠️ No `fetchpriority="high"` on LCP images (case study detail pages)
-
-### Blog Pagination: 40/100
-- "Load More" state → no crawlable page 2+ → ~40 articles have no index crawl path
-- All slugs are in sitemap (partial fix) ✓
+### Critical
+- AggregateRating schema says 5.0 but UI shows 4.9
+- FR/NL/DE pages render EN content body (only meta differs) — duplicate content risk
 
 ---
 
-## Content Quality (E-E-A-T): 74/100
+## 3. On-Page SEO — 64/100
 
-### Experience: 58/100
-**Strengths:** Real named client projects with verifiable URLs, specific case study metrics (40% leads ↑, 55% inquiries ↑, 60% quote requests ↑), specific founder timeline with named first client.
+### Missing H1 (Critical)
+- PortfolioPage — SectionHeader defaults to H2
+- PricingPage — first heading is `<motion.h2>`
+- ContactPage — SectionHeader defaults to H2
+- BlogPage — SectionHeader defaults to H2
 
-**CRITICAL:** "28-strong core team, 150+ specialist network across 12+ European countries" (`about.description` + `seo.about.description`) contradicts "solo boutique agency" timeline. This is a trust-destroying inconsistency visible in the same website.
+### Title Length Issues
+| Status | Pages |
+|--------|-------|
+| CRITICAL (<25 chars) | Blog (18), Contact (21), WhyUs (22) |
+| HIGH (<40 chars) | Services (39), Pricing (38), Team (37) |
+| GOOD (50-60) | Home, Portfolio, Process, About, Careers |
 
-**CRITICAL:** Founder photo is `Code2` Lucide icon placeholder — most impactful single trust gap for a services business.
+### Description Length Issues
+| Status | Pages |
+|--------|-------|
+| CRITICAL (<80 chars) | WhyUs (63), Contact (79) |
+| HIGH (<100 chars) | Portfolio (92), Blog (92), Pricing (95) |
+| GOOD (150-160) | Process (153) only |
 
-### Expertise: 78/100
-**Strengths:** Technical blog posts demonstrate genuine depth — INP correctly updated from FID, UK post-Brexit GDPR/IR35 knowledge, EU VAT reverse charge, specific market data.
-
-**Gap:** Zero author bylines on 51 blog posts — Sept 2025 QRG requires identifying who has the experience.
-
-**Gap:** Digital Marketing service description: 12 words (stub) — `en.json:61`.
-
-### Authoritativeness: 60/100
-**Strengths:** 6 named testimonials with full names + roles (Pierre Cakir/CEO, James Adams/Partner, etc.), verifiable portfolio URLs.
-
-**CRITICAL GAP:** No third-party review platforms — Clutch.co, Google Reviews, DesignRush all missing. MEMORY.md confirms these are unfinished. This is the #1 external authority signal absent.
-
-**Gap:** About page links to `/about/team`, `/about/partners`, `/about/careers` — confirm routes exist in App.tsx.
-
-### Trustworthiness: 72/100
-**Strengths:** 5 legal pages (Privacy, Terms, Legal Notice, Cookie Policy, Refund Policy) ✓, 14-Day Revision Guarantee, transparent pricing.
-
-**Issue:** Primary contact is +90 Turkish mobile — inconsistent for UK-registered agency.
-
-**Issue:** UK Companies House registration number not displayed (UK legal requirement for registered companies).
-
-**Issue:** Testimonial headshots missing.
-
-### Thin Content
-
-| Risk | Pages | Current Words | Min Needed |
-|------|-------|--------------|------------|
-| 🔴 CRITICAL | 136 city-service pages | ~130-200 | 500 |
-| 🟡 MED | `agency-vs-freelancer.ts` | ~900-1100 | 1500 |
-| 🟡 MED | `core-web-vitals-explained.ts` | ~1100-1300 | 1500 |
-| 🟡 MED | `web-agency-london.ts` | ~1400 | 1500 |
-| 🟡 MED | Digital Marketing service desc | 12 | 200 |
+### Other
+- H2 skipped on ServicesPage, WhyUsPage, CareersPage
+- BlogPostPage has 2 H1 elements (error state + article)
+- PricingPage: only 1 internal link (needs 3+)
+- CareersPage: zero internal links (dead-end)
+- ~24 hardcoded English strings in ServicesPage features
 
 ---
 
-## Schema / Structured Data: 74/100
+## 4. Schema / Structured Data — 71/100
 
-### Inventory: 22 schema types implemented ✓
-ProfessionalService, WebSite, Person, Service, BreadcrumbList, BlogPosting, OfferCatalog, SoftwareApplication, WebPage, AboutPage, ContactPage, CollectionPage, ItemList, CreativeWork, ProfilePage — comprehensive.
+### Critical
+- Duplicate ProfessionalService with same `@id: #organization` (index.html + TestimonialsMarquee)
+- index.html ProfessionalService missing `telephone`
 
-FAQPage correctly removed ✓ (deprecated for SERP accordion Aug 2023)
-No deprecated types (HowTo, SpecialAnnouncement) ✓
+### High
+- Person entity missing `image`
+- WebSite missing SearchAction potentialAction
+- ServiceDetailPage missing BreadcrumbList
+- `offers.price` is string not number
 
-### Critical Errors
-
-| # | Error | Location | Impact |
-|---|-------|----------|--------|
-| 1 | Duplicate BreadcrumbList | `Breadcrumbs.tsx` + per-page | Google sees 2 conflicting breadcrumbs |
-| 2 | BreadcrumbList null path | `seo-schemas.ts:136-161` | Warning in Rich Results Test |
-| 3 | `logo` bare string (not ImageObject) | `index.html:71`, `seo-schemas.ts:34,330` | Fails Organization rich result |
-| 4 | `image` bare string in BlogPosting | `seo-schemas.ts:284` | Blocks Article rich results (42+ posts) |
-| 5 | Geo coordinates inconsistency | `index.html:86` vs `seo-schemas.ts:61` | Conflicting entity signal |
-| 6 | **WebSite SearchAction MISSING** | `index.html` WebSite block | Ineligible for Sitelinks Searchbox |
-
-### Medium Errors
-- `sameAs` only has LinkedIn — add more when Clutch/DesignRush profiles created
-- `contactPoint` missing from Organization schema
-- `serviceType` missing from Service schema
-- `wordCount` missing from BlogPosting
-- `alumniOf: []` empty array on Person — remove it
-- `ListItem` has invalid `description` property (`seo-schemas.ts:531`)
+### Missing Schema
+| Page | Needed |
+|------|--------|
+| IndustriesPage | CollectionPage + BreadcrumbList |
+| TechnologiesPage | CollectionPage + BreadcrumbList |
+| CareersPage | WebPage + JobPosting |
+| PartnersPage | WebPage + BreadcrumbList |
 
 ---
 
-## Sitemap: 661 URLs
+## 5. Performance (CWV) — 72/100
 
-### URL Distribution
-| Category | URLs |
-|----------|------|
-| Core pages (4 locale) | 36 |
-| Service category + detail | 60+ |
-| About sub-pages | 24 |
-| Blog posts (EN 30, FR 9, NL 6, DE 6) | 51 |
-| City + city-service pages | ~400 |
-| Template detail (EN only) | 20 |
-| Case studies (EN only) | 6 |
-| Legal pages | 20 |
-| **MISSING: Technologies** | 0 |
-| **MISSING: Industries** | 0 |
+### Estimated Metrics
+| Metric | Estimate | Threshold | Status |
+|--------|----------|-----------|--------|
+| LCP | ~2.8-3.5s | <=2.5s | Needs Improvement |
+| INP | ~120-180ms | <=200ms | Good |
+| CLS | ~0.02-0.06 | <=0.1 | Good |
 
-### Sitemap Issues
-- EN blog `lastmod` all set to `2026-02-28` — should use `articles.ts` per-article `date`
-- Legal pages should be removed from sitemap (noindex pages) — saves 20 URLs
-- Technologies and Industries routes exist in App.tsx → not in sitemap (HIGH priority add)
-- FR project case studies lack `hreflang="fr"` in sitemap entries
-- UK-only city hreflang includes NL/DE/FR — illogical
-
-### On-Page Titles (10/15 exceed 60 chars)
-
-| Page | Current | Fix |
-|------|---------|-----|
-| pricing | 75 chars | "Website Pricing — From €497 \| DMC Kreatif" |
-| homepage | 74 chars | "DMC Kreatif — Premium Web Agency for Europe" |
-| services | 72 chars | "Web Development Services — Europe \| DMC Kreatif" |
-| caseStudies | 72 chars | "Case Studies — European Business Results \| DMC Kreatif" |
-| portfolio | 69 chars | "Portfolio — 33+ European Projects \| DMC Kreatif" |
-| blog | 65 chars | "Web Development Blog — Europe \| DMC Kreatif" |
-
-**Also:** `seo.team.description` has duplicate phrase ("Frontend engineers, UX designers, SEO specialists" repeated).
+### Key Findings
+- H1 correctly outside Framer Motion tree (LCP not animation-blocked)
+- Fonts preloaded but missing `fetchpriority="high"` on hero font
+- Initial JS ~144KB gzip (at 150KB boundary)
+- No prerender active (prerenderPlugin exists but Puppeteer not installed)
+- GTM/Clarity consent-gated (correct)
 
 ---
 
-## AI Search Readiness (GEO): 85/100
+## 6. Images — 72/100
 
-| Signal | Status |
-|--------|--------|
-| `llms.txt` | ✓ EXISTS — comprehensive (facts, pricing, portfolio, FAQ, founder) |
-| AI crawlers in robots.txt | ✓ All major crawlers allowed |
-| Content citability | ✓ Technical posts have specific, structured, factual claims |
-| Entity clarity | ✓ "DMC Kreatif = boutique web agency, 2023, European focus" |
-| Brand mention signals | ⚠️ Only LinkedIn, no Clutch/DesignRush |
-| `dateModified` on blog posts | ❌ Missing — freshness signal absent |
-| FAQ structured data | ❌ Missing on service pages (AI Overview signal) |
+### Oversized (>200KB)
+- mkn-desktop.webp (288KB), cakir-desktop.webp (284KB), altinbas-desktop.webp (272KB)
 
----
+### Mobile >100KB
+- altinbas-mobile (196KB), iso-mobile (168KB), retro-mobile (164KB), cakir-mobile (164KB)
 
-## Visual Assessment
+### Missing Dimensions (CLS risk)
+- TemplateCard.tsx, CaseStudiesPage.tsx, ClientLogoBar.tsx
 
-### Desktop (1440px)
-- Design: Cream background + lime accent + Syne font — on-brand ✓
-- Navigation: Full menu with language switcher visible ✓
-- ⚠️ Two-brand logo ("DMC KREATIF / GMG DESIGN") — confusing brand signal, GMG Design separate brand
-- ⚠️ CTA buttons below fold at 1440px (user must scroll to see primary actions)
-- ⚠️ White box artifact visible right side of screen (possible CLS)
-
-### Mobile (390px)
-- Responsive, text readable ✓
-- H1 visible above fold ✓
-- CTA buttons visible (stacked) ✓
-- WhatsApp button accessible ✓
-
-### HTTP Layer
-| Check | Status |
-|-------|--------|
-| HTTPS | ✓ |
-| HSTS preload | ✓ |
-| HTML caching | ❌ no-cache, no-store |
-| Serving CDN | ✓ Hostinger hcdn |
+### Positive
+- 100% WebP format, 100% alt text coverage
+- ProjectCard uses `<picture>` + srcSet
+- CaseStudyDetailPage uses fetchPriority="high" correctly
 
 ---
 
-## Confirmed Strengths
-- HTTPS + full security headers suite ✓
-- Self-hosted fonts (no Google Fonts) ✓
-- noscript fallback with rich content ✓
-- 5 legal pages (GDPR compliance visible) ✓
-- llms.txt comprehensive ✓
-- robots.txt AI-crawler-friendly ✓
-- Code splitting via lazy imports ✓
-- WebP images + lazy loading on key pages ✓
-- 22 schema types — most comprehensive in class ✓
-- 4-language site with hreflang ✓
-- RSS feed ✓
-- 51 blog posts across 4 languages ✓
+## 7. Sitemap — 54/100
+
+### Statistics
+- Total URLs: 661
+- Location pages: 239 (EXCEEDS 50-page hard stop)
+- All 661 loc URLs return 301
+- Lastmod: 97% bulk-stamped with 2 dates
+
+---
+
+## Comparison with Previous Report (2026-03-19: 74/100)
+
+| Fixed Since Last | New Issues Found |
+|-----------------|-----------------|
+| ProcessPage schema added | 4 pages missing H1 |
+| H1 LCP delay fixed | 239 location pages quality gate |
+| Blog lastmod dates updated | Duplicate schema @id conflict |
+| Scroll lock bug fixed | Title/description length failures |
+| Supabase 406 error handled | E-E-A-T depth gaps |
+| Emoji flags replaced | SPA prerender still missing |
+
+Score decreased 74 -> 68 due to expanded audit scope (E-E-A-T, quality gates, schema validation).

@@ -1,331 +1,230 @@
 # SEO Action Plan — dmckreatif.com
-**Audit Date:** 2026-03-19 | **Current Score:** 70/100 | **Target (4 weeks):** 83/100
+**Audit Date:** 2026-04-06 | **Current Score:** 68/100 | **Target (4 weeks):** 82/100
 
 ---
 
-## CRITICAL — Fix Immediately (indexability at risk)
+## CRITICAL — Fix Immediately
 
-### C1. Remove static canonical from index.html
-**File:** `index.html:24`
-**Fix:** Delete this line entirely:
-```html
-<!-- DELETE THIS LINE -->
-<link rel="canonical" href="https://dmckreatif.com/en" />
+### C1. SPA Content JS-Dependent (Indexability Blocker)
+**Issue:** `<div id="root">` is empty except cookie banner — all body content requires JS execution
+**Fix:** Install `vite-plugin-prerender` or switch to SSR/SSG framework
+**Files:** `vite.config.ts`, `package.json`
+**Impact:** Googlebot second-wave rendering delays indexing by days; some pages may never be indexed
+
+---
+
+### C2. 3-Hop Redirect Chain from Root
+**Issue:** `dmckreatif.com` → 301 → `/en` → 301 → `/en/` → 200
+**Fix:** Configure `.htaccess` to serve root directly to `/en/` in one hop
+**File:** `public/.htaccess`
+**Impact:** PageRank dilution, crawl budget waste on every visit
+
+---
+
+### C3. All 661 Sitemap URLs Return 301
+**Issue:** Server trailing-slash mismatch — every `<loc>` in sitemap triggers redirect
+**Fix:** Align sitemap URLs with server canonical (add or remove trailing slashes consistently)
+**Files:** `public/sitemap.xml`, `public/.htaccess`
+**Impact:** Googlebot wastes crawl budget following 661 redirects per sitemap crawl
+
+---
+
+### C4. 4 Pages Missing H1
+**Issue:** PortfolioPage, PricingPage, ContactPage, BlogPage have no H1 element
+**Fix:** Change `SectionHeader` to accept `headingLevel` prop or add explicit `<h1>` to each page
+**Files:**
+- `src/pages/PortfolioPage.tsx` — SectionHeader defaults to H2
+- `src/pages/PricingPage.tsx` — first heading is `<motion.h2>`
+- `src/pages/ContactPage.tsx` — SectionHeader defaults to H2
+- `src/pages/BlogPage.tsx` — SectionHeader defaults to H2
+**Impact:** Missing H1 = no primary heading signal for Google on 4 major pages
+
+---
+
+### C5. Duplicate ProfessionalService Schema
+**Issue:** Two JSON-LD blocks with same `@id: #organization` (index.html + TestimonialsMarquee)
+**Fix:** Remove duplicate from TestimonialsMarquee, keep only index.html `@graph` version
+**Files:** `index.html`, `src/components/home/TestimonialsMarquee.tsx`
+**Impact:** Entity conflict confuses Knowledge Graph
+
+---
+
+### C6. AggregateRating Mismatch
+**Issue:** Schema says `ratingValue: 5.0` but UI shows `4.9`
+**Fix:** Align schema to match visible UI value (4.9)
+**Files:** `index.html` or `src/lib/seo-schemas.ts`
+**Impact:** Schema/UI mismatch = manual action risk
+
+---
+
+### C7. Title Lengths Critical (<25 chars)
+**Issue:** Blog (18), Contact (21), WhyUs (22) — far too short for SERP
+**Fix:** Expand to 50-60 character range
+**File:** `src/i18n/locales/en.json`
 ```
-**Why:** When prerendering fails, ALL pages share this canonical → Google treats entire site as duplicate of homepage.
-
----
-
-### C2. Fix static hreflang fallback
-**File:** `index.html:47-52`
-**Fix:** Replace the 4 locale links with x-default only:
-```html
-<!-- REPLACE WITH: -->
-<link rel="alternate" hreflang="x-default" href="https://dmckreatif.com/en" />
+Blog: "Web Development Blog — Tips & Insights | DMC Kreatif" (54)
+Contact: "Contact DMC Kreatif — Get a Free Quote | Europe" (49)
+WhyUs: "Why Choose DMC Kreatif — 8 Reasons for European Businesses" (59)
 ```
-**Why:** Current static hreflang tells Google every inner page's alternate is the homepage.
-
----
-
-### C3. Fix html lang attribute
-**File:** `index.html:2`
-**Fix:**
-```html
-<!-- FROM: -->
-<html lang="en" prefix="og: https://ogp.me/ns#">
-<!-- TO: -->
-<html lang="x-default" prefix="og: https://ogp.me/ns#">
-```
-**Why:** /fr, /nl, /de pages briefly show `lang="en"` before Helmet fires.
-
----
-
-### C4. Fix HTML Cache-Control
-**File:** `public/.htaccess:53-55`
-**Fix:**
-```apache
-<!-- FROM: -->
-<FilesMatch "\.(html)$">
-  Header set Cache-Control "no-cache, no-store, must-revalidate"
-</FilesMatch>
-<!-- TO: -->
-<FilesMatch "\.(html)$">
-  Header set Cache-Control "no-cache, must-revalidate"
-</FilesMatch>
-```
-**Why:** `no-store` blocks all caching layers. `no-cache` with `must-revalidate` allows 304 conditional GETs.
-
----
-
-### C5. Fix duplicate BreadcrumbList schema
-**File:** `src/components/ui/Breadcrumbs.tsx` + all page files that call `buildBreadcrumbSchema()` directly
-**Fix Option A (Recommended):** Remove the `JsonLd` output from `Breadcrumbs.tsx` and keep only per-page explicit calls with proper `currentPageName`.
-**Fix Option B:** Remove all explicit `buildBreadcrumbSchema()` calls from page files, rely only on `Breadcrumbs.tsx` component.
-**Why:** Google receives 2 conflicting BreadcrumbList blocks on every inner page.
 
 ---
 
 ## HIGH — Fix This Week
 
-### H1. Fix BlogPosting image → ImageObject
-**File:** `src/lib/seo-schemas.ts:284`
-```typescript
-// FROM:
-image: params.image ?? `${BASE_URL}/og-image.png`,
-// TO:
-image: {
-  "@type": "ImageObject",
-  url: params.image ?? `${BASE_URL}/og-image.png`,
-  width: 1200,
-  height: 630,
-},
-```
-**Impact:** Unblocks Article rich results on ALL 42+ blog posts.
+### H1. Blog Hreflang Orphans
+**Issue:** Blog posts only self-reference, no cross-locale alternates
+**Fix:** Add `hreflang="x-default"` pointing to EN version for all blog posts
+**File:** `src/components/seo/SeoHead.tsx` or `src/pages/BlogPostPage.tsx`
 
----
+### H2. CSP vs X-Frame-Options Contradiction
+**Issue:** `frame-ancestors 'none'` contradicts `X-Frame-Options: SAMEORIGIN`
+**Fix:** Align both — use `frame-ancestors 'self'` or remove X-Frame-Options
+**File:** `public/.htaccess`
 
-### H2. Fix logo → ImageObject (3 locations)
-**Files:** `index.html:71`, `src/lib/seo-schemas.ts:34`, `src/lib/seo-schemas.ts:330`
-```typescript
-// FROM:
-logo: `${BASE_URL}/logo.svg`,
-// TO:
-logo: {
-  "@type": "ImageObject",
-  url: `${BASE_URL}/logo.svg`,
-  width: 200,
-  height: 60,
-},
-```
-And in `index.html`:
-```json
-"logo": {
-  "@type": "ImageObject",
-  "url": "https://dmckreatif.com/logo.svg",
-  "width": 200,
-  "height": 60
-}
-```
+### H3. HTML Cache-Control no-cache on Every Visit
+**Issue:** `no-cache, must-revalidate` prevents any caching layer
+**Fix:** Add `s-maxage=3600` for CDN or adjust to `no-cache` only (allow 304s)
+**File:** `public/.htaccess`
 
----
-
-### H3. Add WebSite SearchAction (Sitelinks Searchbox)
-**File:** `index.html` — WebSite block (lines 153-160)
-```json
-{
-  "@type": "WebSite",
-  "@id": "https://dmckreatif.com/#website",
-  "name": "DMC Kreatif",
-  "url": "https://dmckreatif.com",
-  "inLanguage": ["en", "fr", "nl", "de"],
-  "publisher": { "@id": "https://dmckreatif.com/#organization" },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://dmckreatif.com/en/blog?q={search_term_string}"
-    },
-    "query-input": "required name=search_term_string"
-  }
-}
-```
-**Note:** Only add if blog supports `?q=` search filtering.
-
----
-
-### H4. Fix BreadcrumbList null path guard
-**File:** `src/lib/seo-schemas.ts:136-161`
-Add guard for empty items array:
-```typescript
-// At start of buildBreadcrumbSchema function:
-const baseItems = items.length === 0 && currentPageName
-  ? [{ name: "Home", path: "" }]
-  : items;
-// Then use baseItems instead of items
-```
-
----
-
-### H5. Remove H1 from Framer Motion hidden container (LCP fix)
-**File:** `src/components/home/HeroSection.tsx`
-Remove `initial="hidden"` from the outer `motion.div` wrapping the H1, or render H1 outside any Framer Motion container entirely.
-**Why:** H1 text is likely LCP element. `opacity:0` at start delays LCP measurement.
-
----
-
-### H6. Fix title lengths (10 pages over 60 chars)
+### H4. Title Lengths High (<40 chars)
+**Issue:** Services (39), Pricing (38), Team (37) — below optimal
+**Fix:** Expand to 50-60 character range
 **File:** `src/i18n/locales/en.json`
-```json
-"seo": {
-  "home": { "title": "DMC Kreatif — Premium Web Agency for Europe" },
-  "services": { "title": "Web Development Services — Europe | DMC Kreatif" },
-  "portfolio": { "title": "Portfolio — 33+ European Projects | DMC Kreatif" },
-  "pricing": { "title": "Website Pricing — From €497 | DMC Kreatif" },
-  "blog": { "title": "Web Development Blog — Europe | DMC Kreatif" },
-  "caseStudies": { "title": "Case Studies — European Business Results | DMC Kreatif" },
-  "technologies": { "title": "Technologies — React, Next.js, TypeScript | DMC Kreatif" },
-  "whyUs": { "title": "Why Choose DMC Kreatif — 8 Key Reasons | Europe" }
-}
-```
 
----
+### H5. Description Lengths Critical (<80 chars)
+**Issue:** WhyUs (63), Contact (79) — too short for rich snippets
+**Fix:** Expand to 150-160 character range
+**File:** `src/i18n/locales/en.json`
 
-### H7. Add Technologies and Industries to sitemap
-**File:** `public/sitemap.xml`
-Add all `/:locale/technologies`, `/:locale/technologies/:slug`, `/:locale/industries`, `/:locale/industries/:slug` URLs for all 4 locales.
+### H6. Description Lengths High (<100 chars)
+**Issue:** Portfolio (92), Blog (92), Pricing (95)
+**Fix:** Expand to 150-160 character range
+**File:** `src/i18n/locales/en.json`
 
----
+### H7. Person Entity Missing Image
+**Issue:** Founder Person schema has no `image` property
+**Fix:** Add founder photo URL to Person schema
+**File:** `src/lib/seo-schemas.ts`
 
-### H8. Fix EN blog lastmod dates
-**File:** `public/sitemap.xml`
-Each EN blog post's `<lastmod>` should match its `date` field in `src/data/blog/articles.ts`. Currently all set to `2026-02-28`.
+### H8. WebSite Missing SearchAction
+**Issue:** No `potentialAction` on WebSite schema
+**Fix:** Add SearchAction if blog supports `?q=` search
+**File:** `index.html`
 
----
+### H9. ServiceDetailPage Missing BreadcrumbList
+**Fix:** Add `buildBreadcrumbSchema()` call to ServiceDetailPage
+**File:** `src/pages/ServiceDetailPage.tsx`
 
-### H9. Fix geo coordinates in index.html
-**File:** `index.html:84-88`
-```json
-"geo": {
-  "@type": "GeoCoordinates",
-  "latitude": 51.4513,
-  "longitude": 0.0515
-},
-"address": {
-  "@type": "PostalAddress",
-  "streetAddress": "Unit 6 Hill View Studios, 160 Eltham Hill",
-  "addressLocality": "London",
-  "postalCode": "SE9 5EA",
-  "addressRegion": "England",
-  "addressCountry": "GB"
-}
-```
+### H10. offers.price is String Not Number
+**Fix:** Convert price values to numbers in schema output
+**File:** `src/lib/seo-schemas.ts`
 
----
+### H11. ProfessionalService Missing telephone
+**Fix:** Add telephone to index.html Organization schema
+**File:** `index.html`
 
-### H10. Fix path normalisation in SeoHead
-**File:** `src/components/seo/SeoHead.tsx` (near line 55-67)
-```typescript
-// Add before building hreflang URLs:
-const normPath = path.endsWith("/") && path.length > 1 ? path.slice(0, -1) : path;
-// Use normPath instead of path in URL construction
-```
+### H12. 239 Location Pages Exceed Quality Gate
+**Issue:** HARD STOP threshold (50+) breached; content uniqueness unverified
+**Fix:** Either reduce to 8-10 core cities OR ensure 60%+ unique content per page
+**Files:** `src/data/cities/`, `public/sitemap.xml`
 
 ---
 
 ## MEDIUM — Fix This Month
 
-### M1. Resolve "28-strong team" contradiction
-**File:** `src/i18n/locales/en.json` — `about.description`, `seo.about.description`
-Change to accurately describe as "boutique agency with vetted specialist network" — not "28-strong core team." This is a trust-destroying inconsistency.
+### M1. FR/NL/DE Pages Render EN Content Body
+**Issue:** Only meta differs — body content is English everywhere → duplicate content risk
+**Fix:** Add translated body content or noindex non-EN pages until translated
+**Files:** `src/i18n/locales/{fr,nl,de}.json`
 
-### M2. Add author bylines to all blog posts
-**File:** `src/data/blog/articles.ts`
-Add `author: "Musa Kerem Demirci"` field to every article. Render in `BlogPostPage.tsx` with link to `/en/about/musa-kerem-demirci`.
-**Why:** Sept 2025 QRG requires identifying who has the experience.
+### M2. Content Depth Failures (4 Pages)
+**Issue:** Services (~450w), Portfolio (~250w), Contact (~200w), Blog Index (~200w) below minimums
+**Fix:** Add meaningful content to reach minimums (800, 500, 300, 300)
+**Files:** Respective page components + `en.json`
 
-### M3. Add contactPoint to Organization schema
-**File:** `index.html` + `src/lib/seo-schemas.ts`
-```json
-"contactPoint": {
-  "@type": "ContactPoint",
-  "email": "hello@dmckreatif.com",
-  "contactType": "customer service",
-  "availableLanguage": ["English", "French", "Dutch", "German"],
-  "areaServed": ["FR", "BE", "GB", "NL", "DE"]
-}
-```
+### M3. E-E-A-T Gaps
+**Issue:** Founder bio 2 sentences, no photo; only 1 sameAs (LinkedIn); no visible address
+**Fix:** Expand bio, add photo, add Clutch/Trustpilot/DesignRush links
+**Files:** `src/lib/seo-schemas.ts`, `index.html`, about page
 
-### M4. Fix team page description duplicate
-**File:** `src/i18n/locales/en.json` — `seo.team.description`
-Remove repeated "Frontend engineers, UX designers, SEO specialists" phrase.
+### M4. H2 Skipped on 3 Pages
+**Issue:** ServicesPage, WhyUsPage, CareersPage skip H2 level
+**Fix:** Ensure heading hierarchy H1 → H2 → H3 (no skips)
 
-### M5. Remove legal pages from sitemap
-**File:** `public/sitemap.xml`
-Remove: privacy, terms, legal, cookie-policy, refund-policy URLs (all 4 locales = 20 URLs). These pages shouldn't be indexed.
+### M5. BlogPostPage Has 2 H1 Elements
+**Issue:** Error state + article both have H1
+**Fix:** Change error state heading to H2 or `<p>`
 
-### M6. Fix UK-city hreflang targeting
-**File:** `public/sitemap.xml`
-UK-only cities (Edinburgh, Glasgow, Bristol, Birmingham, Leeds, Manchester) — remove NL/DE hreflang entries. Only EN + x-default makes sense for these.
+### M6. PricingPage Only 1 Internal Link
+**Issue:** Needs 3+ internal links for proper crawl distribution
+**Fix:** Add links to Services, Portfolio, Contact
 
-### M7. Add FR project hreflang to case studies
-**File:** `public/sitemap.xml`
-Add `hreflang="fr"` to: cakir-facades, altinbas-moustiquaire, consulting-energy, iso-home-energy, archi-construction case study pages.
+### M7. CareersPage Zero Internal Links
+**Issue:** Dead-end page — no outgoing links
+**Fix:** Add cross-links to About, Team, Contact
 
-### M8. Fix Supabase promo banner 406 error
-**File:** Supabase — campaigns table RLS or query
-The promo campaign query fails with 406 on every page load. Add proper error handling or fix the Supabase query. Current state: console error on every visit.
+### M8. ~24 Hardcoded English Strings in ServicesPage
+**Fix:** Move to i18n keys
+**File:** `src/pages/ServicesPage.tsx`
 
-### M9. Add fetchpriority="high" on LCP images
-**File:** `src/pages/CaseStudyDetailPage.tsx:224`
-```tsx
-<img fetchpriority="high" loading="eager" ... />
-// Remove loading="lazy" from the first/hero image
-```
+### M9. Missing Schema on 4 Pages
+| Page | Needed Schema |
+|------|--------------|
+| IndustriesPage | CollectionPage + BreadcrumbList |
+| TechnologiesPage | CollectionPage + BreadcrumbList |
+| CareersPage | WebPage + JobPosting |
+| PartnersPage | WebPage + BreadcrumbList |
 
-### M10. Add serviceType to Service schema
-**File:** `src/lib/seo-schemas.ts` — `buildServiceSchema()` return
-```typescript
-serviceType: params.name,
-```
+### M10. Sitemap Lastmod Bulk-Stamped
+**Issue:** 97% of URLs share two dates
+**Fix:** Auto-generate sitemap at build time from data layer
+**File:** New `scripts/generate-sitemap.ts`
 
-### M11. Expand Digital Marketing service description
-**File:** `src/i18n/locales/en.json:61`
-Expand from 12 words to 200+ words with methodology, tools, and specific outcomes (matches depth of Web Development and SEO descriptions).
+### M11. CDN BYPASS on All Responses
+**Issue:** Hostinger hcdn not caching any responses
+**Fix:** Configure proper cache headers for static assets
 
-### M12. Preload remaining font files
-**File:** `index.html:18-19`
-Add preload for all 6 self-hosted font files. Also reduce from 9 weights to 3-4 max (per CLAUDE.md P1 action).
+### M12. www Subdomain 2-Hop Redirect
+**Fix:** Configure single-hop www → non-www redirect
+**File:** `public/.htaccess`
 
-### M13. Remove invalid ListItem description
-**File:** `src/lib/seo-schemas.ts:531`
-```typescript
-// Remove this line:
-description: project.description,
-// `description` is not valid on ListItem
-```
+### M13. Oversized Portfolio Images (>200KB)
+**Issue:** mkn-desktop.webp (288KB), cakir-desktop.webp (284KB), altinbas-desktop.webp (272KB)
+**Fix:** Re-compress to <200KB target; mobile variants to <100KB
+**Files:** `public/portfolio/` images
 
-### M14. Remove empty alumniOf
-**File:** `src/lib/seo-schemas.ts:762`
-```typescript
-// Remove this line:
-alumniOf: [],
-```
+### M14. Missing Image Dimensions (CLS Risk)
+**Issue:** TemplateCard.tsx, CaseStudiesPage.tsx, ClientLogoBar.tsx missing width/height
+**Fix:** Add explicit width/height attributes
 
-### M15. Add dateModified to blog articles
-**File:** `src/data/blog/articles.ts`
-Add `lastModified` field to articles reviewed/updated after initial publication. Use in `buildBlogPostingSchema()`.
+### M15. Add fetchpriority="high" on Hero Font
+**File:** `index.html` font preload tags
 
 ---
 
 ## LOW — Backlog
 
-### L1. Implement URL-based blog pagination
-**File:** `src/pages/BlogPage.tsx`
-Replace "Load More" state with numbered pagination and distinct URLs (`/blog/page/2`). Minimum: confirm all article slugs remain in sitemap.
-
-### L2. Improve prerendering reliability
+### L1. Implement Prerendering
 **File:** `vite.config.ts`
-Replace Puppeteer-dependent prerender with `vite-plugin-prerender` (static, no browser dependency, works on Windows). Or migrate to Next.js App Router (SSG).
+Install `vite-plugin-prerender` with static routes for all major pages. This is the long-term fix for C1.
 
-### L3. Auto-generate sitemap from data layer
+### L2. Auto-Generate Sitemap from Data Layer
 **File:** New `scripts/generate-sitemap.ts`
-Read from `allArticles`, `allServices`, `allCities`, `allIndustries`, `allTechnologies` and output `dist/sitemap.xml` at build time. Similar pattern to existing `scripts/generate-rss.ts`.
+Read from all data modules, output `dist/sitemap.xml` at build time. Fixes M10 permanently.
 
-### L4. Add blog search with ?q= parameter
+### L3. Add Blog Search with ?q= Parameter
 **File:** `src/pages/BlogPage.tsx`
-Enable SearchAction Sitelinks Searchbox (H3 above) by making blog filterable via URL parameter.
+Enables SearchAction Sitelinks Searchbox (H8).
 
-### L5. Expand city pages from 130-200 → 500+ words
-**File:** `src/i18n/locales/en-cities.json` (all 34 cities)
-Priority cities first: Paris, London, Berlin, Amsterdam, Brussels.
-Each city needs: local business landscape (100-150 words), specific market approach (100 words), local statistics or market data (50-100 words), expanded benefits with full sentences.
+### L4. Expand City Pages to 500+ Words
+**Files:** `src/data/cities/`, `en.json`
+Priority: Paris, London, Berlin, Amsterdam, Brussels.
 
-### L6. Consider reducing city count to 8-10 core cities
-If L5 content expansion is too slow, reducing from 34 cities to 8-10 primary markets (Paris, Lyon, London, Brussels, Amsterdam, Berlin, Hamburg, Zurich) eliminates 136 thin pages risk while preserving SEO value for top markets.
+### L5. Add sameAs URLs When Available
+When Clutch, DesignRush, Sortlist profiles are created, add to sameAs array.
 
-### L7. Add sameAs URLs when available
-**File:** `src/lib/seo-schemas.ts:88-90` + `index.html:99`
-When Clutch, DesignRush, or Sortlist profiles are created, add to `sameAs` array.
+### L6. Author Bylines on Blog Posts
+Add `author` field to articles.ts, render in BlogPostPage with link to founder page.
 
 ---
 
@@ -333,13 +232,12 @@ When Clutch, DesignRush, or Sortlist profiles are created, add to `sameAs` array
 
 | Action | Impact | Effort |
 |--------|--------|--------|
-| Add founder real photo | E-E-A-T: +8 pts | Low (upload photo) |
-| Register on Clutch.co | Authority: +10 pts | Medium (profile setup) |
+| Add founder real photo | E-E-A-T: +8 pts | Low |
+| Register on Clutch.co | Authority: +10 pts | Medium |
 | Register on Google Business Profile (UK) | Trust/GEO: +5 pts | Low |
 | Register on DesignRush/Sortlist | Authority: +5 pts | Low |
-| Add UK Companies House number to footer/legal page | Trust: +4 pts | Low |
-| Replace Turkish +90 phone with UK/EU number | Trust: +3 pts | Medium |
-| Add testimonial headshot photos | Trust: +3 pts | Medium (get from clients) |
+| Add UK company details to footer | Trust: +4 pts | Low |
+| Get client testimonial photos | Trust: +3 pts | Medium |
 | Expand LinkedIn to 500+ followers | Authority: +3 pts | Ongoing |
 
 ---
@@ -348,11 +246,24 @@ When Clutch, DesignRush, or Sortlist profiles are created, add to `sameAs` array
 
 | Phase | Actions | Expected Score |
 |-------|---------|----------------|
-| Current | — | 70/100 |
-| After Critical (C1-C5) | ~1 day | 73/100 |
-| After High (H1-H10) | ~1 week | 78/100 |
-| After Medium (M1-M15) | ~3 weeks | 81/100 |
-| After Low + External | ~6 weeks | 86/100 |
+| Current | — | 68/100 |
+| After Critical (C1-C7) | ~2 days | 74/100 |
+| After High (H1-H12) | ~1 week | 79/100 |
+| After Medium (M1-M15) | ~3 weeks | 82/100 |
+| After Low + External | ~6 weeks | 88/100 |
+
+---
+
+## Comparison with Previous Plan (2026-03-19)
+
+| Completed Since Last | New Items |
+|---------------------|-----------|
+| ProcessPage schema (was missing) | 4 pages missing H1 (C4) |
+| H1 LCP delay fixed (H5 done) | 239 location pages quality gate (H12) |
+| Blog lastmod dates updated (H8 done) | Duplicate schema conflict (C5) |
+| Scroll lock bug fixed | Title/description length failures (C7, H4-H6) |
+| Supabase 406 error handled | E-E-A-T depth gaps (M3) |
+| Emoji flags replaced | AggregateRating mismatch (C6) |
 
 ---
 
@@ -360,14 +271,18 @@ When Clutch, DesignRush, or Sortlist profiles are created, add to `sameAs` array
 
 | File | Actions | Priority |
 |------|---------|----------|
-| `index.html` | C1, C2, C3, H2, H3, H9 | Critical |
-| `public/.htaccess` | C4 | Critical |
-| `src/components/ui/Breadcrumbs.tsx` | C5 | Critical |
-| `src/lib/seo-schemas.ts` | H1, H2, H4, M3, M10, M13, M14 | Critical-High |
-| `src/components/home/HeroSection.tsx` | H5 | High |
-| `src/i18n/locales/en.json` | H6, M1, M4, M11 | High-Medium |
-| `public/sitemap.xml` | H7, H8, M5, M6, M7 | High-Medium |
-| `src/components/seo/SeoHead.tsx` | H10 | High |
-| `src/pages/CaseStudyDetailPage.tsx` | M9 | Medium |
-| `src/data/blog/articles.ts` | M2, M15 | Medium |
-| `src/pages/BlogPostPage.tsx` | M2 (render author) | Medium |
+| `vite.config.ts` | C1 (prerender) | Critical |
+| `public/.htaccess` | C2, C3, H2, H3, M12 | Critical |
+| `public/sitemap.xml` | C3, H12, M10 | Critical |
+| `src/pages/PortfolioPage.tsx` | C4 | Critical |
+| `src/pages/PricingPage.tsx` | C4, M6 | Critical |
+| `src/pages/ContactPage.tsx` | C4 | Critical |
+| `src/pages/BlogPage.tsx` | C4 | Critical |
+| `index.html` | C5, C6, H8, H11 | Critical |
+| `src/components/home/TestimonialsMarquee.tsx` | C5 | Critical |
+| `src/i18n/locales/en.json` | C7, H4, H5, H6, M2 | Critical-High |
+| `src/lib/seo-schemas.ts` | H7, H10, M9 | High |
+| `src/pages/ServiceDetailPage.tsx` | H9 | High |
+| `src/components/seo/SeoHead.tsx` | H1 | High |
+| `src/pages/ServicesPage.tsx` | M8 | Medium |
+| `public/portfolio/` | M13 | Medium |

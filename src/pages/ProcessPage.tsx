@@ -52,9 +52,9 @@ export default function ProcessPage() {
 
   return (
     <>
-      <SeoHead title={seoTitle} description={seoDesc} path="/process" />
-      <JsonLd data={buildWebPageSchema({ name: seoTitle, description: seoDesc, url: `https://dmckreatif.com/${lang}/process`, locale: lang })} />
-      <JsonLd data={buildBreadcrumbSchema([{ name: "Home", url: `https://dmckreatif.com/${lang}` }, { name: "Process", url: `https://dmckreatif.com/${lang}/process` }])} />
+      <SeoHead title={seoTitle} description={seoDesc} path="/about/process" />
+      <JsonLd data={buildWebPageSchema({ name: seoTitle, description: seoDesc, url: `https://dmckreatif.com/${lang}/about/process`, locale: lang })} />
+      <JsonLd data={buildBreadcrumbSchema(lang, [{ name: "About", path: "/about" }], "Process")} />
       <Breadcrumbs items={[{ label: t("nav.process", "PROCESS") }]} />
 
       {/* Hero */}
