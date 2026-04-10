@@ -1,230 +1,241 @@
 # SEO Action Plan — dmckreatif.com
-**Audit Date:** 2026-04-06 | **Current Score:** 68/100 | **Target (4 weeks):** 82/100
+**Audit Date:** 2026-04-10 | **Current Score:** 54/100 | **Target (4 weeks):** 75/100
 
 ---
 
-## CRITICAL — Fix Immediately
+## CRITICAL — Fix Immediately (Score Impact: +15-20 pts)
 
-### C1. SPA Content JS-Dependent (Indexability Blocker)
-**Issue:** `<div id="root">` is empty except cookie banner — all body content requires JS execution
-**Fix:** Install `vite-plugin-prerender` or switch to SSR/SSG framework
-**Files:** `vite.config.ts`, `package.json`
-**Impact:** Googlebot second-wave rendering delays indexing by days; some pages may never be indexed
+### C1. Fix Fabricated Numbers Across All Locales
+**Issue:** EN says 33 projects/4 countries/28 team. FR/NL/DE say 200+ projects/12+ countries/100-150+ team. This is the #1 trust destroyer — Google QRG classifies this as "deceptive practices."
+**Fix:** Align ALL locales to real figures: ~8 projects, 1 founder + freelance network, 3-4 countries
+**Files:**
+- `src/i18n/locales/en.json` — hero stats, about section
+- `src/i18n/locales/fr.json` — hero, services, milestone timeline
+- `src/i18n/locales/nl.json` — hero stats
+- `src/i18n/locales/de.json` — hero stats
+- `src/pages/TeamPage.tsx` — "28-strong core team" claim
+- `src/pages/WhyUsPage.tsx` — "200+ projects, 6 countries"
+**Impact:** E-E-A-T trust score 20 → 60 (+40 pts in category, +10 overall)
 
 ---
 
-### C2. 3-Hop Redirect Chain from Root
-**Issue:** `dmckreatif.com` → 301 → `/en` → 301 → `/en/` → 200
-**Fix:** Configure `.htaccess` to serve root directly to `/en/` in one hop
+### C2. Slash Location Pages (Quality Gate HARD STOP)
+**Issue:** 241 location pages (171 city slugs) = 4.8x the 50-page threshold. Doorway page pattern.
+**Fix Option A (Recommended):** Reduce to 10-15 top cities with 60%+ unique content per page
+**Fix Option B:** Remove all location pages until unique content exists, redirect to services page
+**Files:** `src/data/cities/`, `public/sitemap.xml`, `src/App.tsx` routes
+**Impact:** Removes doorway page penalty risk, improves crawl budget
+
+---
+
+### C3. Fix 3-Hop Redirect Chain from Root
+**Issue:** `dmckreatif.com` → `/en` → `/en/` = 3 hops. www is now 3 hops too (worsened).
+**Fix:** Single redirect: root → `/en/` directly. www → `/en/` directly.
 **File:** `public/.htaccess`
-**Impact:** PageRank dilution, crawl budget waste on every visit
+```apache
+RewriteRule ^$ /en/ [R=301,L]
+```
+**Impact:** Crawl budget, PageRank preservation
 
 ---
 
-### C3. All 661 Sitemap URLs Return 301
-**Issue:** Server trailing-slash mismatch — every `<loc>` in sitemap triggers redirect
-**Fix:** Align sitemap URLs with server canonical (add or remove trailing slashes consistently)
-**Files:** `public/sitemap.xml`, `public/.htaccess`
-**Impact:** Googlebot wastes crawl budget following 661 redirects per sitemap crawl
+### C4. Fix Trailing Slash Mismatch (641 URLs → 301)
+**Issue:** All sitemap `<loc>` URLs lack trailing slash but server adds it → every URL 301s
+**Fix:** Add trailing slash to ALL `<loc>` values in sitemap.xml, AND update canonical/hreflang URLs
+**Files:** `public/sitemap.xml`, `src/components/seo/SeoHead.tsx`
+**Impact:** Eliminates 641 unnecessary redirects per crawl cycle
 
 ---
 
-### C4. 4 Pages Missing H1
-**Issue:** PortfolioPage, PricingPage, ContactPage, BlogPage have no H1 element
-**Fix:** Change `SectionHeader` to accept `headingLevel` prop or add explicit `<h1>` to each page
+### C5. Add H1 to 4 Major Pages
+**Issue:** PortfolioPage, PricingPage, ContactPage, BlogPage all missing H1
+**Fix:** Add `<h1>` or pass `headingLevel="h1"` to SectionHeader on each page
 **Files:**
 - `src/pages/PortfolioPage.tsx` — SectionHeader defaults to H2
-- `src/pages/PricingPage.tsx` — first heading is `<motion.h2>`
+- `src/pages/PricingPage.tsx` — jumps straight to H3
 - `src/pages/ContactPage.tsx` — SectionHeader defaults to H2
 - `src/pages/BlogPage.tsx` — SectionHeader defaults to H2
-**Impact:** Missing H1 = no primary heading signal for Google on 4 major pages
+**Impact:** Primary heading signal restored on 4 key pages
 
 ---
 
-### C5. Duplicate ProfessionalService Schema
-**Issue:** Two JSON-LD blocks with same `@id: #organization` (index.html + TestimonialsMarquee)
-**Fix:** Remove duplicate from TestimonialsMarquee, keep only index.html `@graph` version
-**Files:** `index.html`, `src/components/home/TestimonialsMarquee.tsx`
-**Impact:** Entity conflict confuses Knowledge Graph
+### C6. Fix BlogPostPage Duplicate H1
+**Issue:** Loading state H1 (line 213) AND content H1 (line 364) both render
+**Fix:** Change loading state heading to `<h2>` or `<p>`
+**File:** `src/pages/BlogPostPage.tsx`
 
 ---
 
-### C6. AggregateRating Mismatch
-**Issue:** Schema says `ratingValue: 5.0` but UI shows `4.9`
-**Fix:** Align schema to match visible UI value (4.9)
-**Files:** `index.html` or `src/lib/seo-schemas.ts`
-**Impact:** Schema/UI mismatch = manual action risk
+### C7. Fix Price Contradictions
+**Issue:** EN: "from EUR 497" vs FR: "à partir de 349 EUR". Multiple price conflicts.
+**Fix:** Align all locale pricing to the same EUR values
+**Files:** `src/i18n/locales/en.json`, `src/i18n/locales/fr.json`
 
 ---
 
-### C7. Title Lengths Critical (<25 chars)
-**Issue:** Blog (18), Contact (21), WhyUs (22) — far too short for SERP
-**Fix:** Expand to 50-60 character range
-**File:** `src/i18n/locales/en.json`
-```
-Blog: "Web Development Blog — Tips & Insights | DMC Kreatif" (54)
-Contact: "Contact DMC Kreatif — Get a Free Quote | Europe" (49)
-WhyUs: "Why Choose DMC Kreatif — 8 Reasons for European Businesses" (59)
-```
+## HIGH — Fix This Week (Score Impact: +8-12 pts)
 
----
+### H1. Remove Duplicate ProfessionalService Schema
+**Issue:** index.html @graph AND TestimonialsMarquee.tsx both emit ProfessionalService with same `@id`
+**Fix:** Remove ProfessionalService from index.html @graph, keep only TS builder version (which has telephone)
+**Files:** `index.html` (remove lines 61-130), `src/components/home/TestimonialsMarquee.tsx` (keep)
 
-## HIGH — Fix This Week
+### H2. Add Internal Links to 6 Dead-End Pages
+**Issue:** PricingPage, ContactPage, BlogPage, CareersPage, ServicesPage, WhyUsPage — all 0 internal links
+**Fix:** Add minimum 3 relevant cross-links to each page
+**Files:** 6 page components
 
-### H1. Blog Hreflang Orphans
-**Issue:** Blog posts only self-reference, no cross-locale alternates
-**Fix:** Add `hreflang="x-default"` pointing to EN version for all blog posts
-**File:** `src/components/seo/SeoHead.tsx` or `src/pages/BlogPostPage.tsx`
-
-### H2. CSP vs X-Frame-Options Contradiction
-**Issue:** `frame-ancestors 'none'` contradicts `X-Frame-Options: SAMEORIGIN`
-**Fix:** Align both — use `frame-ancestors 'self'` or remove X-Frame-Options
+### H3. Fix Cache-Control Headers
+**Issue:** `no-cache, must-revalidate` on HTML prevents any caching. CDN always BYPASS.
+**Fix:** Use `public, max-age=300, s-maxage=3600` for CDN caching
 **File:** `public/.htaccess`
 
-### H3. HTML Cache-Control no-cache on Every Visit
-**Issue:** `no-cache, must-revalidate` prevents any caching layer
-**Fix:** Add `s-maxage=3600` for CDN or adjust to `no-cache` only (allow 304s)
+### H4. Remove X-Frame-Options Header
+**Issue:** Contradicts CSP `frame-ancestors 'none'`
+**Fix:** Remove X-Frame-Options, CSP is sufficient
 **File:** `public/.htaccess`
 
-### H4. Title Lengths High (<40 chars)
-**Issue:** Services (39), Pricing (38), Team (37) — below optimal
-**Fix:** Expand to 50-60 character range
-**File:** `src/i18n/locales/en.json`
+### H5. Remove Retry-After Header on 200 Responses
+**Issue:** `Retry-After: 60` on 200 status is wrong signal, may throttle crawlers
+**Fix:** Remove from .htaccess
+**File:** `public/.htaccess`
 
-### H5. Description Lengths Critical (<80 chars)
-**Issue:** WhyUs (63), Contact (79) — too short for rich snippets
-**Fix:** Expand to 150-160 character range
-**File:** `src/i18n/locales/en.json`
+### H6. Fix Person @id Inconsistency
+**Issue:** index.html uses `/#founder`, buildPersonProfileSchema uses `#founder` (no slash)
+**Fix:** Standardize to `${BASE_URL}/#founder` everywhere
+**Files:** `index.html`, `src/lib/seo-schemas.ts`
 
-### H6. Description Lengths High (<100 chars)
-**Issue:** Portfolio (92), Blog (92), Pricing (95)
-**Fix:** Expand to 150-160 character range
-**File:** `src/i18n/locales/en.json`
+### H7. Add Person Image to Schema
+**Issue:** Founder Person entity has no `image` property
+**Fix:** Add founder photo URL (requires actual photo upload first)
+**File:** `index.html` Person entity, `src/lib/seo-schemas.ts`
 
-### H7. Person Entity Missing Image
-**Issue:** Founder Person schema has no `image` property
-**Fix:** Add founder photo URL to Person schema
-**File:** `src/lib/seo-schemas.ts`
+### H8. Fix AggregateRating Mismatch
+**Issue:** Schema says 5.0, UI shows 4.9
+**Fix:** Align schema ratingValue to 4.9
+**Files:** `index.html`, `src/lib/seo-schemas.ts`
 
-### H8. WebSite Missing SearchAction
-**Issue:** No `potentialAction` on WebSite schema
-**Fix:** Add SearchAction if blog supports `?q=` search
-**File:** `index.html`
+### H9. Move GrapesJS to devDependencies
+**Issue:** 1.1MB chunk in production bundle, only used in EditorPage
+**Fix:** Move to devDependencies or lazy-load only on EditorPage route
+**File:** `package.json`
 
-### H9. ServiceDetailPage Missing BreadcrumbList
-**Fix:** Add `buildBreadcrumbSchema()` call to ServiceDetailPage
+### H10. Optimize Oversized SVG Logos
+**Issue:** ata.svg (308KB), mkn.svg (117KB) — unoptimized embedded bitmaps
+**Fix:** Run SVGO or convert to WebP
+**Files:** `public/portfolio/` SVG files
+
+### H11. Optimize Portfolio Images
+**Issue:** mkn-desktop.webp (286KB), cakir-desktop.webp (283KB), altinbas-desktop.webp (271KB)
+**Fix:** Re-compress to quality 75-80, max-width 800px, target <120KB each
+**Files:** `public/portfolio/` WebP files
+
+### H12. Add BreadcrumbList to ServiceDetailPage
+**Fix:** Add `buildBreadcrumbSchema()` call
 **File:** `src/pages/ServiceDetailPage.tsx`
 
-### H10. offers.price is String Not Number
-**Fix:** Convert price values to numbers in schema output
-**File:** `src/lib/seo-schemas.ts`
-
-### H11. ProfessionalService Missing telephone
-**Fix:** Add telephone to index.html Organization schema
-**File:** `index.html`
-
-### H12. 239 Location Pages Exceed Quality Gate
-**Issue:** HARD STOP threshold (50+) breached; content uniqueness unverified
-**Fix:** Either reduce to 8-10 core cities OR ensure 60%+ unique content per page
-**Files:** `src/data/cities/`, `public/sitemap.xml`
-
 ---
 
-## MEDIUM — Fix This Month
+## MEDIUM — Fix This Month (Score Impact: +5-8 pts)
 
-### M1. FR/NL/DE Pages Render EN Content Body
-**Issue:** Only meta differs — body content is English everywhere → duplicate content risk
+### M1. Translate FR/NL/DE Content Bodies
+**Issue:** 60-70% of non-EN page content is English fallback → duplicate content risk
 **Fix:** Add translated body content or noindex non-EN pages until translated
 **Files:** `src/i18n/locales/{fr,nl,de}.json`
 
-### M2. Content Depth Failures (4 Pages)
-**Issue:** Services (~450w), Portfolio (~250w), Contact (~200w), Blog Index (~200w) below minimums
-**Fix:** Add meaningful content to reach minimums (800, 500, 300, 300)
-**Files:** Respective page components + `en.json`
+### M2. Expand Thin Content Pages
+| Page | Current | Target |
+|------|---------|--------|
+| About | ~350w | 500w |
+| Portfolio | ~200w | 300w |
+| Blog Index | ~100w | 200w |
+| Contact | ~250w | 300w |
+| AuthorPage | ~450w | 500w |
 
-### M3. E-E-A-T Gaps
-**Issue:** Founder bio 2 sentences, no photo; only 1 sameAs (LinkedIn); no visible address
-**Fix:** Expand bio, add photo, add Clutch/Trustpilot/DesignRush links
-**Files:** `src/lib/seo-schemas.ts`, `index.html`, about page
-
-### M4. H2 Skipped on 3 Pages
-**Issue:** ServicesPage, WhyUsPage, CareersPage skip H2 level
-**Fix:** Ensure heading hierarchy H1 → H2 → H3 (no skips)
-
-### M5. BlogPostPage Has 2 H1 Elements
-**Issue:** Error state + article both have H1
-**Fix:** Change error state heading to H2 or `<p>`
-
-### M6. PricingPage Only 1 Internal Link
-**Issue:** Needs 3+ internal links for proper crawl distribution
-**Fix:** Add links to Services, Portfolio, Contact
-
-### M7. CareersPage Zero Internal Links
-**Issue:** Dead-end page — no outgoing links
-**Fix:** Add cross-links to About, Team, Contact
-
-### M8. ~24 Hardcoded English Strings in ServicesPage
-**Fix:** Move to i18n keys
-**File:** `src/pages/ServicesPage.tsx`
-
-### M9. Missing Schema on 4 Pages
-| Page | Needed Schema |
-|------|--------------|
-| IndustriesPage | CollectionPage + BreadcrumbList |
-| TechnologiesPage | CollectionPage + BreadcrumbList |
-| CareersPage | WebPage + JobPosting |
-| PartnersPage | WebPage + BreadcrumbList |
-
-### M10. Sitemap Lastmod Bulk-Stamped
-**Issue:** 97% of URLs share two dates
-**Fix:** Auto-generate sitemap at build time from data layer
+### M3. Fix Lastmod Dates in Sitemap
+**Issue:** 97% of URLs share 2 bulk-stamped dates
+**Fix:** Auto-generate sitemap at build time from data layer with real dates
 **File:** New `scripts/generate-sitemap.ts`
 
-### M11. CDN BYPASS on All Responses
-**Issue:** Hostinger hcdn not caching any responses
-**Fix:** Configure proper cache headers for static assets
+### M4. Fix Blog Hreflang Cross-Linking
+**Issue:** Each locale's blog posts only self-reference, no cross-locale alternates
+**Fix:** Link EN↔FR↔NL↔DE equivalents bidirectionally
+**Files:** `public/sitemap.xml`, `src/components/seo/SeoHead.tsx`
 
-### M12. www Subdomain 2-Hop Redirect
-**Fix:** Configure single-hop www → non-www redirect
-**File:** `public/.htaccess`
+### M5. Wrap Hardcoded Strings in ServicesPage
+**Issue:** ~40 hardcoded English strings not using `t()` i18n calls
+**Fix:** Move to `en.json` keys, wrap with `t()`
+**File:** `src/pages/ServicesPage.tsx`
 
-### M13. Oversized Portfolio Images (>200KB)
-**Issue:** mkn-desktop.webp (288KB), cakir-desktop.webp (284KB), altinbas-desktop.webp (272KB)
-**Fix:** Re-compress to <200KB target; mobile variants to <100KB
-**Files:** `public/portfolio/` images
+### M6. Add FAQ Schema to FaqAccordion Sections
+**Fix:** Add FAQPage JSON-LD when FAQ content is present
+**File:** `src/lib/seo-schemas.ts`
 
-### M14. Missing Image Dimensions (CLS Risk)
-**Issue:** TemplateCard.tsx, CaseStudiesPage.tsx, ClientLogoBar.tsx missing width/height
-**Fix:** Add explicit width/height attributes
+### M7. Fix offers.price Type
+**Issue:** String instead of number in `buildServiceSchema`
+**Fix:** Convert price params to number type
+**File:** `src/lib/seo-schemas.ts`
 
-### M15. Add fetchpriority="high" on Hero Font
-**File:** `index.html` font preload tags
+### M8. Add `@id` to City/Country Schemas
+**Issue:** ProfessionalService entities without @id cause disambiguation issues
+**Fix:** Add unique `@id` per city/country schema
+**File:** `src/lib/seo-schemas.ts`
+
+### M9. Add fetchPriority="high" on Homepage Hero
+**Fix:** Add `fetchPriority="high"` and `<link rel="preload">` for LCP image
+**File:** `src/components/home/HeroSection.tsx`, `index.html`
+
+### M10. Trim Long Meta Descriptions
+**Issue:** about (163ch), team (164ch), author (170ch) exceed 160ch
+**Fix:** Trim by 5-10 characters each
+**File:** `src/i18n/locales/en.json`
+
+### M11. Trim Partners Title Tag
+**Issue:** 68 characters, may truncate in SERPs
+**Fix:** Reduce to under 60ch
+**File:** `src/i18n/locales/en.json`
+
+### M12. Remove Skill Percentage Bars
+**Issue:** React 98%, TypeScript 95% vanity metrics signal junior portfolio, undermines premium positioning
+**Fix:** Replace with project-based expertise demonstration
+**File:** `src/pages/AuthorPage.tsx`
+
+### M13. Fix og:locale from en_US to en_GB
+**Fix:** Site targets UK market, should use `en_GB`
+**File:** `src/components/seo/SeoHead.tsx`
+
+### M14. Add Missing Pages to Sitemap
+- 12 technology detail pages
+- 8 industry detail pages
+- Template detail pages
+**File:** `public/sitemap.xml`
+
+### M15. Oversized Locale Chunks
+**Issue:** fr.js 157KB, de.js 133KB, nl.js 127KB — if only SEO meta, these are too large
+**Fix:** Audit locale file contents, remove unnecessary translations
+**Files:** `src/i18n/locales/{fr,nl,de}.json`
 
 ---
 
 ## LOW — Backlog
 
-### L1. Implement Prerendering
-**File:** `vite.config.ts`
-Install `vite-plugin-prerender` with static routes for all major pages. This is the long-term fix for C1.
+### L1. Implement Prerendering (vite-plugin-prerender)
+Long-term fix for SPA JS-dependency. Static HTML for all major routes.
 
-### L2. Auto-Generate Sitemap from Data Layer
-**File:** New `scripts/generate-sitemap.ts`
-Read from all data modules, output `dist/sitemap.xml` at build time. Fixes M10 permanently.
+### L2. Add Cloudflare CDN (Free Tier)
+Fixes Hostinger hcdn BYPASS issue. TTFB improvement ~200ms.
 
-### L3. Add Blog Search with ?q= Parameter
-**File:** `src/pages/BlogPage.tsx`
-Enables SearchAction Sitelinks Searchbox (H8).
+### L3. Auto-Generate Sitemap from Data Layer
+`scripts/generate-sitemap.ts` — reads all data modules, outputs sitemap at build time.
 
-### L4. Expand City Pages to 500+ Words
-**Files:** `src/data/cities/`, `en.json`
-Priority: Paris, London, Berlin, Amsterdam, Brussels.
+### L4. Add Blog Search with ?q= Parameter
+Enables SearchAction Sitelinks Searchbox.
 
-### L5. Add sameAs URLs When Available
-When Clutch, DesignRush, Sortlist profiles are created, add to sameAs array.
+### L5. Add Author Schema Per Blog Post
+dateModified signals, author attribution for AI citation readiness.
 
-### L6. Author Bylines on Blog Posts
-Add `author` field to articles.ts, render in BlogPostPage with link to founder page.
+### L6. Add twitter:site Handle
+Missing from SeoHead component.
 
 ---
 
@@ -232,13 +243,13 @@ Add `author` field to articles.ts, render in BlogPostPage with link to founder p
 
 | Action | Impact | Effort |
 |--------|--------|--------|
-| Add founder real photo | E-E-A-T: +8 pts | Low |
+| **Upload founder real photo** | E-E-A-T: +10 pts | Low |
 | Register on Clutch.co | Authority: +10 pts | Medium |
 | Register on Google Business Profile (UK) | Trust/GEO: +5 pts | Low |
+| Add UK Companies House number | Trust: +5 pts | Low |
 | Register on DesignRush/Sortlist | Authority: +5 pts | Low |
-| Add UK company details to footer | Trust: +4 pts | Low |
 | Get client testimonial photos | Trust: +3 pts | Medium |
-| Expand LinkedIn to 500+ followers | Authority: +3 pts | Ongoing |
+| Add GitHub profile to sameAs | Authority: +2 pts | Low |
 
 ---
 
@@ -246,43 +257,41 @@ Add `author` field to articles.ts, render in BlogPostPage with link to founder p
 
 | Phase | Actions | Expected Score |
 |-------|---------|----------------|
-| Current | — | 68/100 |
-| After Critical (C1-C7) | ~2 days | 74/100 |
-| After High (H1-H12) | ~1 week | 79/100 |
-| After Medium (M1-M15) | ~3 weeks | 82/100 |
-| After Low + External | ~6 weeks | 88/100 |
+| Current | — | 54/100 |
+| After Critical (C1-C7) | ~2-3 days | 69/100 |
+| After High (H1-H12) | ~1 week | 75/100 |
+| After Medium (M1-M15) | ~3 weeks | 80/100 |
+| After Low + External | ~6 weeks | 87/100 |
 
 ---
 
-## Comparison with Previous Plan (2026-03-19)
+## Comparison with Previous Audit (2026-04-06)
 
-| Completed Since Last | New Items |
-|---------------------|-----------|
-| ProcessPage schema (was missing) | 4 pages missing H1 (C4) |
-| H1 LCP delay fixed (H5 done) | 239 location pages quality gate (H12) |
-| Blog lastmod dates updated (H8 done) | Duplicate schema conflict (C5) |
-| Scroll lock bug fixed | Title/description length failures (C7, H4-H6) |
-| Supabase 406 error handled | E-E-A-T depth gaps (M3) |
-| Emoji flags replaced | AggregateRating mismatch (C6) |
+### Fixed Since Last Audit
+- Title lengths: Blog (18→43ch), Contact (21→60ch), WhyUs (22→47ch)
+- Description lengths: WhyUs (63→155ch), Contact (79→145ch)
+- H2 skips: ServicesPage, WhyUsPage, CareersPage — resolved
+- ProcessPage schema: BreadcrumbList + WebPage added
+- Empty alumniOf array: removed
 
----
+### Worsened
+- www redirect chain: 2 hops → 3 hops
+- Overall score: 68 → 54 (expanded scope revealed deeper issues)
 
-## Files Changed Summary
+### Unchanged (Still Broken)
+- 4 pages missing H1
+- All sitemap URLs → 301
+- 3-hop root redirect chain
+- Duplicate ProfessionalService schema
+- 6 pages with zero internal links
+- CDN BYPASS on all responses
+- Portfolio images oversized
 
-| File | Actions | Priority |
-|------|---------|----------|
-| `vite.config.ts` | C1 (prerender) | Critical |
-| `public/.htaccess` | C2, C3, H2, H3, M12 | Critical |
-| `public/sitemap.xml` | C3, H12, M10 | Critical |
-| `src/pages/PortfolioPage.tsx` | C4 | Critical |
-| `src/pages/PricingPage.tsx` | C4, M6 | Critical |
-| `src/pages/ContactPage.tsx` | C4 | Critical |
-| `src/pages/BlogPage.tsx` | C4 | Critical |
-| `index.html` | C5, C6, H8, H11 | Critical |
-| `src/components/home/TestimonialsMarquee.tsx` | C5 | Critical |
-| `src/i18n/locales/en.json` | C7, H4, H5, H6, M2 | Critical-High |
-| `src/lib/seo-schemas.ts` | H7, H10, M9 | High |
-| `src/pages/ServiceDetailPage.tsx` | H9 | High |
-| `src/components/seo/SeoHead.tsx` | H1 | High |
-| `src/pages/ServicesPage.tsx` | M8 | Medium |
-| `public/portfolio/` | M13 | Medium |
+### NEW Issues Found
+- Fabricated numbers across locales (C1) — most critical finding
+- 241 location pages quality gate breach (C2)
+- Price contradictions EN vs FR (C7)
+- GrapesJS 1.1MB in production (H9)
+- SVG logos 308KB+ unoptimized (H10)
+- Skill percentage vanity metrics (M12)
+- AI Search Readiness score: 25/100 (new category)
