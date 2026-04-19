@@ -1379,6 +1379,32 @@ export default function PricingPage() {
         </div>
       </section>
 
+      {/* Cross Links */}
+      <section className="py-12 lg:py-16">
+        <div className="max-w-container mx-auto px-6 lg:px-10">
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              to={`/${currentLocale}/services`}
+              className="inline-flex items-center gap-2 font-mono text-sm font-bold border-2 border-neo-black px-5 py-2.5 shadow-hard hover:bg-neo-lime transition-colors"
+            >
+              {t("pricing.ctaServices", "Explore Our Services")} <ArrowRight size={14} />
+            </Link>
+            <Link
+              to={`/${currentLocale}/portfolio`}
+              className="inline-flex items-center gap-2 font-mono text-sm font-bold border-2 border-neo-black px-5 py-2.5 shadow-hard hover:bg-neo-yellow transition-colors"
+            >
+              {t("pricing.ctaPortfolio", "See Our Work")} <ArrowRight size={14} />
+            </Link>
+            <Link
+              to={`/${currentLocale}/contact`}
+              className="inline-flex items-center gap-2 font-mono text-sm font-bold border-2 border-neo-black px-5 py-2.5 shadow-hard hover:bg-neo-blue transition-colors"
+            >
+              {t("pricing.ctaContact", "Get a Custom Quote")} <ArrowRight size={14} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Bottom CTA */}
       <section className="py-20 lg:py-28 section-alt">
         <div className="max-w-container mx-auto px-6 lg:px-10 text-center">

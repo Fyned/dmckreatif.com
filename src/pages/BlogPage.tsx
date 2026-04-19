@@ -243,13 +243,35 @@ export default function BlogPage() {
             </div>
           )}
 
+          {/* Cross Links */}
+          <div className="flex flex-wrap justify-center gap-4 mt-16 mb-8">
+            <Link
+              to={`/${currentLocale}/services`}
+              className="inline-flex items-center gap-2 font-mono text-sm font-bold border-2 border-neo-black px-5 py-2.5 shadow-hard hover:bg-neo-lime transition-colors"
+            >
+              {t("nav.services", "Services")} <ArrowRight size={14} />
+            </Link>
+            <Link
+              to={`/${currentLocale}/portfolio`}
+              className="inline-flex items-center gap-2 font-mono text-sm font-bold border-2 border-neo-black px-5 py-2.5 shadow-hard hover:bg-neo-yellow transition-colors"
+            >
+              {t("nav.portfolio", "Portfolio")} <ArrowRight size={14} />
+            </Link>
+            <Link
+              to={`/${currentLocale}/contact`}
+              className="inline-flex items-center gap-2 font-mono text-sm font-bold border-2 border-neo-black px-5 py-2.5 shadow-hard hover:bg-neo-blue transition-colors"
+            >
+              {t("nav.contact", "Contact")} <ArrowRight size={14} />
+            </Link>
+          </div>
+
           {/* Bottom CTA */}
           <motion.div
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={viewportConfig}
-            className="text-center mt-16"
+            className="text-center mt-8"
           >
             <NeoButton href={`/${currentLocale}/contact`} size="lg" color="neo-lime">
               {t("cta.button", "START YOUR PROJECT")} <ArrowRight size={18} />

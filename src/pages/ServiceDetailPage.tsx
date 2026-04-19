@@ -58,7 +58,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import NeoButton from "@/components/ui/NeoButton";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import JsonLd from "@/components/seo/JsonLd";
-import { buildServiceSchema } from "@/lib/seo-schemas";
+import { buildServiceSchema, buildBreadcrumbSchema } from "@/lib/seo-schemas";
 import {
   fadeInUp,
   staggerContainer,
@@ -138,6 +138,9 @@ export default function ServiceDetailPage() {
           locale: currentLocale,
           slug: service.slug,
         })}
+      />
+      <JsonLd
+        data={buildBreadcrumbSchema(currentLocale, [{ name: t("nav.services", "Services"), path: "/services" }], t(service.titleKey))}
       />
 
       {/* Hero */}

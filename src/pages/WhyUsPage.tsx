@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import SeoHead from "@/components/seo/SeoHead";
 import AboutCrossLinks from "@/components/ui/AboutCrossLinks";
 import { motion } from "framer-motion";
@@ -174,6 +174,32 @@ export default function WhyUsPage() {
               </tbody>
             </table>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Cross Links */}
+      <section className="py-12 lg:py-16">
+        <div className="max-w-container mx-auto px-6 lg:px-10">
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              to={`/${loc}/services`}
+              className="inline-flex items-center gap-2 font-mono text-sm font-bold border-2 border-neo-black px-5 py-2.5 shadow-hard hover:bg-neo-lime transition-colors"
+            >
+              {t("nav.services", "Services")} <ArrowRight size={14} />
+            </Link>
+            <Link
+              to={`/${loc}/portfolio`}
+              className="inline-flex items-center gap-2 font-mono text-sm font-bold border-2 border-neo-black px-5 py-2.5 shadow-hard hover:bg-neo-yellow transition-colors"
+            >
+              {t("nav.portfolio", "Portfolio")} <ArrowRight size={14} />
+            </Link>
+            <Link
+              to={`/${loc}/pricing`}
+              className="inline-flex items-center gap-2 font-mono text-sm font-bold border-2 border-neo-black px-5 py-2.5 shadow-hard hover:bg-neo-blue transition-colors"
+            >
+              {t("nav.pricing", "Pricing")} <ArrowRight size={14} />
+            </Link>
+          </div>
         </div>
       </section>
 

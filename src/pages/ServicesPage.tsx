@@ -650,6 +650,14 @@ export default function ServicesPage() {
                 {t("services.industries", "Industries We Serve")} <ArrowRight size={14} />
               </Link>
             </motion.div>
+            <motion.div variants={fadeInUp}>
+              <Link
+                to={`/${currentLocale}/contact`}
+                className="inline-flex items-center gap-2 border-2 border-neo-black bg-neo-white shadow-hard px-6 py-3 font-space font-bold text-sm uppercase tracking-wider hover:bg-neo-lime transition-colors"
+              >
+                {t("nav.contact", "Contact Us")} <ArrowRight size={14} />
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </section>

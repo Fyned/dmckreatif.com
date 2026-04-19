@@ -743,11 +743,11 @@ export function buildPersonProfileSchema(locale: string) {
         url: `${BASE_URL}/${locale}/about/musa-kerem-demirci`,
         inLanguage: locale,
         isPartOf: { "@type": "WebSite", name: "DMC Kreatif", url: BASE_URL },
-        mainEntity: { "@id": `${BASE_URL}#founder` },
+        mainEntity: { "@id": `${BASE_URL}/#founder` },
       },
       {
         "@type": "Person",
-        "@id": `${BASE_URL}#founder`,
+        "@id": `${BASE_URL}/#founder`,
         name: "Musa Kerem Demirci",
         url: `${BASE_URL}/${locale}/about/musa-kerem-demirci`,
         jobTitle: "Founder & Lead Developer",

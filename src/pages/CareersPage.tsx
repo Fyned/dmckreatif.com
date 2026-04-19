@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { useParams, Link } from "react-router-dom";
 import SeoHead from "@/components/seo/SeoHead";
 import { motion } from "framer-motion";
 import AboutCrossLinks from "@/components/ui/AboutCrossLinks";
@@ -39,7 +40,9 @@ const typeBadge: Record<string, string> = { "Full-time": "bg-neo-lime", Contract
 
 export default function CareersPage() {
   const { t } = useTranslation();
+  const { locale } = useParams();
   useAnalytics("Careers");
+  const currentLocale = locale ?? "en";
 
   return (
     <>
@@ -150,6 +153,31 @@ export default function CareersPage() {
               </NeoButton>
             </motion.div>
           </motion.div>
+        </div>
+      </section>
+      {/* Cross Links */}
+      <section className="py-12 lg:py-16 section-alt">
+        <div className="max-w-container mx-auto px-6 lg:px-10">
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              to={`/${currentLocale}/about`}
+              className="inline-flex items-center gap-2 font-mono text-sm font-bold border-2 border-neo-black px-5 py-2.5 shadow-hard hover:bg-neo-lime transition-colors"
+            >
+              {t("nav.about", "About Us")} <ArrowRight size={14} />
+            </Link>
+            <Link
+              to={`/${currentLocale}/services`}
+              className="inline-flex items-center gap-2 font-mono text-sm font-bold border-2 border-neo-black px-5 py-2.5 shadow-hard hover:bg-neo-yellow transition-colors"
+            >
+              {t("nav.services", "Services")} <ArrowRight size={14} />
+            </Link>
+            <Link
+              to={`/${currentLocale}/contact`}
+              className="inline-flex items-center gap-2 font-mono text-sm font-bold border-2 border-neo-black px-5 py-2.5 shadow-hard hover:bg-neo-blue transition-colors"
+            >
+              {t("nav.contact", "Contact")} <ArrowRight size={14} />
+            </Link>
+          </div>
         </div>
       </section>
       <AboutCrossLinks currentPath="careers" />

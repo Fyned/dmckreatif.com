@@ -765,6 +765,13 @@ export default function ContactPage() {
                   <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
+                  to={`/${locale ?? "en"}/pricing`}
+                  className="flex items-center justify-between py-2 border-b border-neo-black/10 font-mono text-xs text-neo-black hover:text-neo-lime transition-colors group"
+                >
+                  {t("nav.pricing", "PRICING")}
+                  <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
                   to={`/${locale ?? "en"}/about`}
                   className="flex items-center justify-between py-2 font-mono text-xs text-neo-black hover:text-neo-lime transition-colors group"
                 >
