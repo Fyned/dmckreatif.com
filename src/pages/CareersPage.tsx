@@ -63,7 +63,7 @@ export default function CareersPage() {
               {t("careers.heroTitle", "JOIN OUR TEAM")}
             </motion.h1>
             <motion.p variants={fadeInUp} className="font-mono text-base lg:text-lg text-neo-black/80 max-w-3xl leading-relaxed">
-              {t("careers.heroDesc", "Build the future of European web with 100+ professionals. Remote-first, premium clients, cutting-edge technology.")}
+              {t("careers.heroDesc", "Build the future of European web with our specialist network. Remote-first, premium clients, cutting-edge technology.")}
             </motion.p>
           </motion.div>
         </div>

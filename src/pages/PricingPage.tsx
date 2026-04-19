@@ -149,37 +149,19 @@ export default function PricingPage() {
     <>
       <SeoHead
         title={t("seo.pricing.title", "Web Development Pricing | DMC Kreatif")}
-        description={t("seo.pricing.description", "Transparent web development pricing. Starter \u20AC349, Growth \u20AC749, Scale \u20AC1,497, Commerce \u20AC2,497.")}
+        description={t("seo.pricing.description", "Transparent web development pricing. Launch \u20AC497, Growth \u20AC997, Scale \u20AC1,997, Commerce \u20AC2,997.")}
         path="/pricing"
       />
 
       <JsonLd
-        data={buildOfferSchema([
-          {
-            name: "Starter Package",
-            description: "Custom landing page with responsive design and SEO",
-            price: 349,
-            deliveryDays: "5-7",
-          },
-          {
-            name: "Growth Package",
-            description: "5-7 page website with blog, advanced SEO, and analytics",
-            price: 749,
-            deliveryDays: "10-14",
-          },
-          {
-            name: "Scale Package",
-            description: "Full multilingual website with video and ads setup",
-            price: 1997,
-            deliveryDays: "14-21",
-          },
-          {
-            name: "Commerce Package",
-            description: "Complete e-commerce with payment, inventory, multilingual",
-            price: 2997,
-            deliveryDays: "21-30",
-          },
-        ])}
+        data={buildOfferSchema(
+          pricingTiers.map((tier) => ({
+            name: `${t(`pricing.${tier.nameKey}`, tier.nameKey)} Package`,
+            description: "Professional web development package",
+            price: tier.price,
+            deliveryDays: t(`pricing.${tier.deliveryKey}`, "7-14"),
+          }))
+        )}
       />
 
       <JsonLd
@@ -202,9 +184,9 @@ export default function PricingPage() {
                 {t("pricing.bundlesSubtitle", "SYS.BUNDLES")}
               </span>
             </motion.div>
-            <motion.h2 variants={fadeInUp} className="font-space font-bold text-h2 text-neo-white mb-4">
+            <motion.h1 variants={fadeInUp} className="font-space font-bold text-h2 text-neo-white mb-4">
               {t("pricing.bundlesTitle", "CAMPAIGN BUNDLES")}
-            </motion.h2>
+            </motion.h1>
             <motion.p variants={fadeInUp} className="font-mono text-base text-neo-white/60 max-w-2xl mb-12">
               {t("pricing.bundlesDesc", "Maximum value, minimum effort. Website + SEO + Support — bundled and discounted up to 34%.")}
             </motion.p>
@@ -802,7 +784,7 @@ export default function PricingPage() {
                 </p>
                 <ul className="space-y-2 mb-6">
                   {[
-                    t("pricing.premiumComparePrice", "From \u20AC349"),
+                    t("pricing.premiumComparePrice", "From \u20AC497"),
                     t("pricing.premiumCompare1", "5-30 day delivery"),
                     t("pricing.premiumCompare2", "Custom design from scratch"),
                     t("pricing.premiumCompare3", "Dedicated support & revisions"),

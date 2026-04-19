@@ -25,11 +25,10 @@ const reasons = [
 ];
 
 const stats = [
-  { value: 200, suffix: "+", lk: "statProjects" },
-  { value: 100, suffix: "+", lk: "statTeam" },
-  { value: 6, suffix: "", lk: "statCountries" },
+  { value: 10, suffix: "+", lk: "statProjects" },
+  { value: 4, suffix: "", lk: "statCountries" },
   { value: 95, suffix: "+", lk: "statLighthouse" },
-  { value: 4.9, suffix: "/5", lk: "statSatisfaction" },
+  { value: 5.0, suffix: "/5", lk: "statSatisfaction" },
   { value: 98, suffix: "%", lk: "statOnTime" },
 ];
 
@@ -83,7 +82,7 @@ export default function WhyUsPage() {
               {t("whyUs.heroTitle", "WHY DMC KREATIF")}
             </motion.h1>
             <motion.p variants={fadeInUp} className="font-mono text-base lg:text-lg text-neo-black/80 max-w-3xl leading-relaxed">
-              {t("whyUs.heroDesc", "100+ professionals, 200+ projects, 6 countries. We build premium websites that outperform the competition.")}
+              {t("whyUs.heroDesc", "10+ projects delivered across 4 European countries. We build premium websites that outperform the competition.")}
             </motion.p>
           </motion.div>
         </div>

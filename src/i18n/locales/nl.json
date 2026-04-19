@@ -17,12 +17,12 @@
       "description": "Starter €497, Growth €997, Scale €1.997, Commerce €2.997"
     },
     "about": {
-      "title": "Over DMC Kreatif — Europees Webontwikkelingsbureau | 100+ Professionals",
-      "description": "In het VK geregistreerd webontwikkelingsbureau met 100+ professionals voor bedrijven in Frankrijk, België, VK, Nederland en Duitsland. 200+ projecten, 6 landen, 4 talen."
+      "title": "Over DMC Kreatif — Europees Boutique Webbureau",
+      "description": "Boutique webbureau met een geselecteerd netwerk van specialisten voor bedrijven in Frankrijk, België, VK en Nederland. 10+ projecten, 4 landen, 4 talen."
     },
     "team": {
-      "title": "Ons Team — 100+ Webontwikkeling Professionals | DMC Kreatif",
-      "description": "Maak kennis met ons team van 100+ webontwikkelingsprofessionals verdeeld over 12 afdelingen. Frontend engineers, UX designers, SEO-specialisten voor Europese bedrijven."
+      "title": "Ons Team — Specialistennetwerk | DMC Kreatif",
+      "description": "Maak kennis met ons netwerk van geselecteerde webontwikkelingsspecialisten. Frontend engineers, UX designers, SEO-specialisten voor Europese bedrijven."
     },
     "process": {
       "title": "Ons Proces — Hoe Wij Premium Websites Bouwen | DMC Kreatif",
@@ -30,7 +30,7 @@
     },
     "whyUs": {
       "title": "Waarom DMC Kreatif — 8 Redenen Waarom Wij Uitblinken | Webbureau Europa",
-      "description": "Moderne React/Next.js stack, 95+ Lighthouse gegarandeerd, standaard meertalig, transparante prijzen, toegewijde teams. Ontdek waarom 200+ bedrijven voor ons kozen."
+      "description": "Moderne React/Next.js stack, 95+ Lighthouse gegarandeerd, standaard meertalig, transparante prijzen, toegewijde teams. Ontdek waarom Europese bedrijven voor ons kiezen."
     },
     "partners": {
       "title": "Technologiepartners — Vercel, Supabase, Stripe, Google | DMC Kreatif",
@@ -38,7 +38,7 @@
     },
     "careers": {
       "title": "Carrières bij DMC Kreatif — Word Deel van Ons Europees Webbureau",
-      "description": "Sluit je aan bij 100+ professionals die de toekomst van het Europese web bouwen. Remote-first, cutting-edge stack, premium klanten. Vacatures in React, Next.js, UX, SEO."
+      "description": "Sluit je aan bij ons netwerk van specialisten die de toekomst van het Europese web bouwen. Remote-first, cutting-edge stack, premium klanten. Vacatures in React, Next.js, UX, SEO."
     },
     "blog": {
       "title": "Webdesign Blog — SEO Tips, Webshop Gidsen | DMC Kreatif",
@@ -482,15 +482,15 @@
     "subtitle": "Premium webontwikkeling voor Europese bedrijven. Op maat gemaakt, razendsnel, meertalig.",
     "ctaPrimary": "START UW PROJECT",
     "ctaSecondary": "BEKIJK ONS WERK",
-    "stat1": "200+",
+    "stat1": "10+",
     "stat1Label": "Projecten",
-    "stat2": "100+",
-    "stat2Label": "Team",
-    "stat3": "6",
-    "stat3Label": "Landen",
-    "stat4": "95+",
-    "stat4Label": "Lighthouse",
-    "microCopy": "100+ professionals • 200+ internationale projecten opgeleverd in 6 Europese landen",
+    "stat2": "4",
+    "stat2Label": "Landen",
+    "stat3": "95+",
+    "stat3Label": "Lighthouse",
+    "stat4": "5★",
+    "stat4Label": "Tevredenheid",
+    "microCopy": "All-in-one pakketten vanaf €1.097 · Gespreide betaling mogelijk · 5★ van geverifieerde klanten",
     "bookCall": "of boek een gratis gesprek van 15 min →"
   },
   "choosePath": {
@@ -778,8 +778,8 @@
     "satisfaction": "KLANTTEVREDENHEID",
     "loadTime": "GEM. LAADTIJD",
     "uptime": "WEBSITE UPTIME",
-    "projectsValue": "200+",
-    "countriesValue": "6",
+    "projectsValue": "10+",
+    "countriesValue": "4",
     "lighthouseValue": "98+",
     "satisfactionValue": "100%",
     "loadTimeValue": "<1.2s",
@@ -1159,10 +1159,10 @@
     "sectionTitle": "OVER ONS",
     "sectionSubtitle": "SYS.OVER",
     "headline": "WIJ ZIJN DMC KREATIF",
-    "description": "Een in het VK geregistreerd webontwikkelingsbureau met meer dan 100 professionals die Europese bedrijven bedienen in 6 landen. Wij combineren geavanceerde React en Next.js technologie met premium design om websites te leveren die converteren.",
+    "description": "Een boutique webbureau met een geselecteerd netwerk van specialisten die Europese bedrijven bedienen in 4 landen. Wij combineren geavanceerde React en Next.js technologie met premium design om websites te leveren die converteren.",
     "founderName": "Musa Kerem Demirci",
     "founderRole": "CEO & OPRICHTER",
-    "founderBio": "Musa Kerem Demirci is de CEO en oprichter van DMC Kreatif, een in het VK geregistreerd webontwikkelingsbureau met meer dan 100 professionals die bedrijven in West-Europa bedienen. Onder zijn leiding is het bureau gegroeid van een boutique studio tot een volledige digitale krachtcentrale met toegewijde afdelingen voor frontend engineering, UX/UI design, SEO, e-commerce, content, QA en klantsucces. Met diepgaande expertise in React, Next.js, TypeScript en moderne webarchitectuur houdt Musa persoonlijk toezicht op de technische richting van elk groot project — met 95+ Google Lighthouse-scores, laadtijden onder 2 seconden en meertalige SEO-implementatie bij alle leveringen. Voordat hij DMC Kreatif in 2023 oprichtte, deed hij internationale ervaring op met enterprise en MKB-klanten in de sectoren bouw, energie, financiën, onderwijs en e-commerce. Het bureau heeft sindsdien 200+ projecten opgeleverd voor klanten in Frankrijk, België, het Verenigd Koninkrijk, Nederland, Duitsland en Zwitserland, met een leveringspercentage van 98% op tijd en een klanttevredenheidsscore van 4.9/5. Musa heeft een diploma in Computer Engineering en spreekt Engels, Frans en Turks. Zijn gedistribueerde teammodel — 35 kernmedewerkers plus een gecertificeerd specialistennetwerk — geeft klanten toegang tot talent van wereldklasse tegen concurrerende Europese tarieven. Zijn filosofie is eenvoudig: elke pixel telt, elke milliseconde doet ertoe, en elk Europees bedrijf verdient een website die echt converteert.",
+    "founderBio": "Musa Kerem Demirci is de CEO en oprichter van DMC Kreatif, een boutique webbureau met een geselecteerd netwerk van specialisten die bedrijven in West-Europa bedienen. Met diepgaande expertise in React, Next.js, TypeScript en moderne webarchitectuur houdt Musa persoonlijk toezicht op de technische richting van elk project — met 95+ Google Lighthouse-scores, laadtijden onder 2 seconden en meertalige SEO-implementatie bij alle leveringen. Voordat hij DMC Kreatif in 2023 oprichtte, deed hij internationale ervaring op met klanten in de sectoren bouw, energie, financiën en e-commerce. Het bureau heeft 10+ projecten opgeleverd voor klanten in Frankrijk, België, het Verenigd Koninkrijk en Nederland, met een klanttevredenheidsscore van 5.0/5. Musa heeft een diploma in Computer Engineering en spreekt Engels, Frans en Turks. Zijn filosofie is eenvoudig: elke pixel telt, elke milliseconde doet ertoe, en elk Europees bedrijf verdient een website die echt converteert.",
     "mission": "ONZE MISSIE",
     "missionText": "Premium weboplossingen leveren die Europese bedrijven helpen groeien. Elke pixel telt. Elke milliseconde doet ertoe.",
     "value1Title": "KWALITEIT EERST",
@@ -1187,15 +1187,15 @@
     "milestone1Title": "DMC Kreatif Opgericht",
     "milestone1Desc": "Gelanceerd als premium webbureau gericht op Europese bedrijven. Oprichtingsteam van frontend engineers, designers en SEO-specialisten samengesteld.",
     "milestone2Title": "Franse Markt Gevestigd",
-    "milestone2Desc": "Eerste grote projecten opgeleverd voor Cakir Facades, Altinbas Moustiquaire en Consulting Energy in Frankrijk. Team gegroeid naar 25+ professionals.",
+    "milestone2Desc": "Eerste grote projecten opgeleverd voor Cakir Facades, Altinbas Moustiquaire en Consulting Energy in Frankrijk.",
     "milestone3Title": "VK Hoofdkantoor Geregistreerd",
     "milestone3Desc": "Bedrijf geregistreerd in het Verenigd Koninkrijk. Londense hoofdkantoor geopend en uitgebreid naar Britse klanten waaronder Adamsons Accountants.",
-    "milestone4Title": "100+ Projecten Mijlpaal",
-    "milestone4Desc": "100 voltooide internationale projecten overtroffen in Frankrijk, België en het VK. Team uitgebreid naar 50+ met dedicated afdelingen voor design, ontwikkeling en SEO.",
-    "milestone5Title": "Europese Uitbreiding",
-    "milestone5Desc": "Diensten uitgebreid naar Nederland, Duitsland en Zwitserland. Team gegroeid naar 100+ professionals in 12 afdelingen. Meertalig platform gelanceerd met 4 talen.",
-    "milestone6Title": "200+ Projecten & Sjablonenplatform",
-    "milestone6Desc": "200+ voltooide projecten bereikt in 6 Europese landen. Kant-en-klare website sjablonen gelanceerd. Specialistisch partnernetwerk opgezet in 4 landen."
+    "milestone4Title": "Internationale Uitbreiding",
+    "milestone4Desc": "Diensten uitgebreid naar België en het VK. Geselecteerd netwerk van specialisten opgebouwd.",
+    "milestone5Title": "Meertalig Platform",
+    "milestone5Desc": "Meertalig platform gelanceerd met 4 talen (EN, FR, NL, DE). Uitbreiding naar de Nederlandse en Duitse markt.",
+    "milestone6Title": "Sjablonenplatform",
+    "milestone6Desc": "Kant-en-klare website sjablonen gelanceerd. 10+ projecten opgeleverd in 4 Europese landen. Specialistisch partnernetwerk opgezet."
   },
   "contact": {
     "introHeading": "Laten we praten over uw project",
@@ -2051,6 +2051,6 @@
   },
   "clientLogos": {
     "trustedBy": "VERTROUWD DOOR BEDRIJVEN IN HEEL EUROPA",
-    "projectsDelivered": "33+ projecten geleverd in 4 landen"
+    "projectsDelivered": "10+ projecten geleverd in 4 landen"
   }
 }

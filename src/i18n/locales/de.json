@@ -17,12 +17,12 @@
       "description": "Transparente Preise für Webdesign. Starter €497, Growth €997, Scale €1.997, Commerce €2.997. Kostenlose Beratung, keine versteckten Kosten."
     },
     "about": {
-      "title": "Über DMC Kreatif — Europäische Webentwicklungsagentur | 100+ Fachleute",
-      "description": "Im Vereinigten Königreich registrierte Webentwicklungsagentur mit 100+ Fachleuten für Unternehmen in Frankreich, Belgien, UK, Niederlande und Deutschland. 200+ Projekte, 6 Länder, 4 Sprachen."
+      "title": "Über DMC Kreatif — Europäische Boutique-Webagentur",
+      "description": "Boutique-Webagentur mit einem ausgewählten Netzwerk von Spezialisten für Unternehmen in Frankreich, Belgien, UK und den Niederlanden. 10+ Projekte, 4 Länder, 4 Sprachen."
     },
     "team": {
-      "title": "Unser Team — 100+ Webentwicklungs-Fachleute | DMC Kreatif",
-      "description": "Lernen Sie unser Team von 100+ Webentwicklungsfachleuten in 12 Abteilungen kennen. Frontend-Ingenieure, UX-Designer, SEO-Spezialisten für europäische Unternehmen."
+      "title": "Unser Team — Spezialistennetzwerk | DMC Kreatif",
+      "description": "Lernen Sie unser Netzwerk ausgewählter Webentwicklungsspezialisten kennen. Frontend-Ingenieure, UX-Designer, SEO-Spezialisten für europäische Unternehmen."
     },
     "process": {
       "title": "Unser Prozess — Wie Wir Premium-Websites Erstellen | DMC Kreatif",
@@ -30,7 +30,7 @@
     },
     "whyUs": {
       "title": "Warum DMC Kreatif — 8 Gründe Die Für Uns Sprechen | Webagentur Europa",
-      "description": "Moderner React/Next.js Stack, 95+ Lighthouse garantiert, standardmäßig mehrsprachig, transparente Preise, dedizierte Teams. Erfahren Sie warum 200+ Unternehmen uns gewählt haben."
+      "description": "Moderner React/Next.js Stack, 95+ Lighthouse garantiert, standardmäßig mehrsprachig, transparente Preise, dedizierte Teams. Erfahren Sie warum europäische Unternehmen uns vertrauen."
     },
     "partners": {
       "title": "Technologiepartner — Vercel, Supabase, Stripe, Google | DMC Kreatif",
@@ -38,7 +38,7 @@
     },
     "careers": {
       "title": "Karriere bei DMC Kreatif — Werden Sie Teil Unserer Europäischen Webagentur",
-      "description": "Werden Sie Teil von 100+ Fachleuten, die die Zukunft des europäischen Webs gestalten. Remote-first, modernste Technologien, Premium-Kunden. Offene Stellen in React, Next.js, UX, SEO."
+      "description": "Werden Sie Teil unseres Netzwerks von Spezialisten, die die Zukunft des europäischen Webs gestalten. Remote-first, modernste Technologien, Premium-Kunden. Offene Stellen in React, Next.js, UX, SEO."
     },
     "blog": {
       "title": "Webdesign Blog — SEO Tipps, E-Commerce Ratgeber | DMC Kreatif",
@@ -482,15 +482,15 @@
     "subtitle": "Premium-Webentwicklung für europäische Unternehmen. Maßgeschneidert, blitzschnell, mehrsprachig.",
     "ctaPrimary": "STARTEN SIE IHR PROJEKT",
     "ctaSecondary": "UNSERE ARBEITEN ANSEHEN",
-    "stat1": "200+",
+    "stat1": "10+",
     "stat1Label": "Projekte",
-    "stat2": "100+",
-    "stat2Label": "Team",
-    "stat3": "6",
-    "stat3Label": "Länder",
-    "stat4": "95+",
-    "stat4Label": "Lighthouse",
-    "microCopy": "100+ Fachleute • 200+ internationale Projekte in 6 europäischen Ländern geliefert",
+    "stat2": "4",
+    "stat2Label": "Länder",
+    "stat3": "95+",
+    "stat3Label": "Lighthouse",
+    "stat4": "5★",
+    "stat4Label": "Zufriedenheit",
+    "microCopy": "All-in-one Pakete ab €1.097 · Ratenzahlung verfügbar · 5★ von verifizierten Kunden",
     "bookCall": "oder buchen Sie ein kostenloses 15-Min-Gespräch →"
   },
   "marquee": {
@@ -759,8 +759,8 @@
     "satisfaction": "KUNDENZUFRIEDENHEIT",
     "loadTime": "DURCHSCHN. LADEZEIT",
     "uptime": "WEBSITE-VERFÜGBARKEIT",
-    "projectsValue": "200+",
-    "countriesValue": "6",
+    "projectsValue": "10+",
+    "countriesValue": "4",
     "lighthouseValue": "98+",
     "satisfactionValue": "100%",
     "loadTimeValue": "<1.2s",
@@ -1152,10 +1152,10 @@
     "sectionTitle": "ÜBER UNS",
     "sectionSubtitle": "SYS.ÜBER",
     "headline": "WIR SIND DMC KREATIF",
-    "description": "Eine im Vereinigten Königreich registrierte Webentwicklungsagentur mit über 100 Fachleuten, die europäische Unternehmen in 6 Ländern betreut. Wir kombinieren modernste React- und Next.js-Technologie mit Premium-Design, um Websites zu liefern, die konvertieren.",
+    "description": "Eine Boutique-Webagentur mit einem ausgewählten Netzwerk von Spezialisten, die europäische Unternehmen in 4 Ländern betreut. Wir kombinieren modernste React- und Next.js-Technologie mit Premium-Design, um Websites zu liefern, die konvertieren.",
     "founderName": "Musa Kerem Demirci",
     "founderRole": "CEO & GRÜNDER",
-    "founderBio": "Musa Kerem Demirci ist CEO und Gründer von DMC Kreatif, einer im Vereinigten Königreich registrierten Webentwicklungsagentur mit über 100 Fachleuten für Unternehmen in Westeuropa. Unter seiner Führung ist die Agentur von einem Boutique-Studio zu einem Full-Service-Digitalunternehmen mit dedizierten Abteilungen für Frontend-Engineering, UX/UI-Design, SEO, E-Commerce, Content, QA und Kundenerfolg gewachsen. Mit fundierter Expertise in React, Next.js, TypeScript und moderner Webarchitektur überwacht Musa persönlich die technische Ausrichtung jedes größeren Projekts — mit 95+ Google Lighthouse-Scores, Ladezeiten unter 2 Sekunden und mehrsprachiger SEO-Implementierung bei allen Auslieferungen. Vor der Gründung von DMC Kreatif 2023 sammelte er internationale Erfahrung mit Enterprise- und KMU-Kunden in den Bereichen Bau, Energie, Finanzen, Bildung und E-Commerce. Die Agentur hat seitdem 200+ Projekte für Kunden in Frankreich, Belgien, dem Vereinigten Königreich, den Niederlanden, Deutschland und der Schweiz geliefert, mit einer pünktlichen Lieferquote von 98% und einem Kundenzufriedenheitswert von 4.9/5. Musa hat einen Abschluss in Informatik-Ingenieurwesen und spricht Englisch, Französisch und Türkisch. Sein verteiltes Teammodell — 35 Kernmitarbeiter plus ein geprüftes Spezialistennetzwerk — gibt Kunden Zugang zu Weltklasse-Talenten zu wettbewerbsfähigen europäischen Preisen. Seine Philosophie ist einfach: Jedes Pixel zählt, jede Millisekunde ist wichtig, und jedes europäische Unternehmen verdient eine Website, die wirklich konvertiert.",
+    "founderBio": "Musa Kerem Demirci ist CEO und Gründer von DMC Kreatif, einer Boutique-Webagentur mit einem ausgewählten Netzwerk von Spezialisten für Unternehmen in Westeuropa. Mit fundierter Expertise in React, Next.js, TypeScript und moderner Webarchitektur überwacht Musa persönlich die technische Ausrichtung jedes Projekts — mit 95+ Google Lighthouse-Scores, Ladezeiten unter 2 Sekunden und mehrsprachiger SEO-Implementierung bei allen Auslieferungen. Vor der Gründung von DMC Kreatif 2023 sammelte er internationale Erfahrung mit Kunden in den Bereichen Bau, Energie, Finanzen und E-Commerce. Die Agentur hat 10+ Projekte für Kunden in Frankreich, Belgien, dem Vereinigten Königreich und den Niederlanden geliefert, mit einem Kundenzufriedenheitswert von 5.0/5. Musa hat einen Abschluss in Informatik-Ingenieurwesen und spricht Englisch, Französisch und Türkisch. Seine Philosophie ist einfach: Jedes Pixel zählt, jede Millisekunde ist wichtig, und jedes europäische Unternehmen verdient eine Website, die wirklich konvertiert.",
     "mission": "UNSERE MISSION",
     "missionText": "Premium-Weblösungen liefern, die europäischen Unternehmen beim Wachstum helfen. Jeder Pixel zählt. Jede Millisekunde zählt.",
     "value1Title": "QUALITÄT ZUERST",
@@ -1180,15 +1180,15 @@
     "milestone1Title": "DMC Kreatif Gegründet",
     "milestone1Desc": "Gestartet als Premium-Webagentur für europäische Unternehmen. Gründungsteam aus Frontend-Ingenieuren, Designern und SEO-Spezialisten zusammengestellt.",
     "milestone2Title": "Französischer Markt Etabliert",
-    "milestone2Desc": "Erste große Projekte für Cakir Facades, Altinbas Moustiquaire und Consulting Energy in Frankreich geliefert. Team wuchs auf 25+ Fachleute.",
+    "milestone2Desc": "Erste große Projekte für Cakir Facades, Altinbas Moustiquaire und Consulting Energy in Frankreich geliefert.",
     "milestone3Title": "UK-Hauptsitz Registriert",
     "milestone3Desc": "Unternehmen im Vereinigten Königreich registriert. Londoner Hauptsitz eröffnet und auf britische Kunden expandiert, darunter Adamsons Accountants.",
-    "milestone4Title": "100+ Projekte Meilenstein",
-    "milestone4Desc": "100 abgeschlossene internationale Projekte in Frankreich, Belgien und UK übertroffen. Team auf 50+ erweitert mit dedizierten Abteilungen für Design, Entwicklung und SEO.",
-    "milestone5Title": "Europäische Expansion",
-    "milestone5Desc": "Dienstleistungen auf Niederlande, Deutschland und Schweiz ausgeweitet. Team wuchs auf 100+ Fachleute in 12 Abteilungen. Mehrsprachige Plattform mit 4 Sprachen gestartet.",
-    "milestone6Title": "200+ Projekte & Vorlagen-Plattform",
-    "milestone6Desc": "200+ abgeschlossene Projekte in 6 europäischen Ländern erreicht. Fertige Website-Vorlagen gestartet. Spezialisiertes Partnernetzwerk in 4 Ländern aufgebaut."
+    "milestone4Title": "Internationale Expansion",
+    "milestone4Desc": "Dienstleistungen auf Belgien und das UK ausgeweitet. Ausgewähltes Netzwerk von Spezialisten aufgebaut.",
+    "milestone5Title": "Mehrsprachige Plattform",
+    "milestone5Desc": "Mehrsprachige Plattform mit 4 Sprachen (EN, FR, NL, DE) gestartet. Expansion auf den niederländischen und deutschen Markt.",
+    "milestone6Title": "Vorlagen-Plattform",
+    "milestone6Desc": "Fertige Website-Vorlagen gestartet. 10+ Projekte in 4 europäischen Ländern geliefert. Spezialisiertes Partnernetzwerk aufgebaut."
   },
   "contact": {
     "introHeading": "Starten Sie ein Gespräch über Ihr Projekt",
@@ -2044,6 +2044,6 @@
   },
   "clientLogos": {
     "trustedBy": "VERTRAUT VON UNTERNEHMEN IN GANZ EUROPA",
-    "projectsDelivered": "33+ Projekte geliefert in 4 Ländern"
+    "projectsDelivered": "10+ Projekte geliefert in 4 Ländern"
   }
 }

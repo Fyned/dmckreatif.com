@@ -25,7 +25,7 @@ export default function ClientLogoBar() {
           {t("clientLogos.trustedBy", "TRUSTED BY BUSINESSES ACROSS EUROPE")}
         </span>
         <p className="font-mono text-xs text-neo-black/50">
-          {t("clientLogos.projectsDelivered", "33+ projects delivered across Europe")}
+          {t("clientLogos.projectsDelivered", "10+ projects delivered across 4 countries")}
         </p>
       </div>
 

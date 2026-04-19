@@ -102,7 +102,7 @@ export function buildProfessionalServiceSchema(reviews?: Array<{
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: 5.0,
+      ratingValue: 4.9,
       bestRating: 5,
       worstRating: 1,
       ratingCount: 6,
@@ -376,7 +376,7 @@ export function buildOfferSchema(
           "@type": "Offer",
           name: offer.name,
           description: offer.description,
-          price: offer.price,
+          price: String(offer.price),
           priceCurrency: "EUR",
           availability: "https://schema.org/InStock",
           deliveryLeadTime: {
@@ -739,7 +739,7 @@ export function buildPersonProfileSchema(locale: string) {
         "@id": `${BASE_URL}/${locale}/about/musa-kerem-demirci#profilepage`,
         name: "Musa Kerem Demirci — Founder & Lead Developer | DMC Kreatif",
         description:
-          "Full-stack developer and founder of DMC Kreatif. 33+ websites delivered for businesses across France, Belgium, UK, Netherlands and Germany.",
+          "Full-stack developer and founder of DMC Kreatif. 10+ websites delivered for businesses across France, Belgium, UK and Netherlands.",
         url: `${BASE_URL}/${locale}/about/musa-kerem-demirci`,
         inLanguage: locale,
         isPartOf: { "@type": "WebSite", name: "DMC Kreatif", url: BASE_URL },
@@ -783,7 +783,7 @@ export function buildPersonProfileSchema(locale: string) {
           occupationLocation: { "@type": "Country", name: "Europe" },
           skills: "React, Next.js, TypeScript, Tailwind CSS, Supabase, SEO",
         },
-        award: "33+ international web projects delivered",
+        award: "10+ international web projects delivered",
       },
     ],
   };

@@ -31,18 +31,18 @@ import { useAnalytics } from "@/lib/useAnalytics";
 import { fadeInUp, staggerContainer, scaleIn, viewportConfig } from "@/lib/animations";
 
 const departments: { icon: React.ElementType; nk: string; size: number; color: string; specs: string[] }[] = [
-  { icon: Crown, nk: "dept1", size: 4, color: "bg-neo-lime", specs: ["Vision & Strategy", "Client Relations", "Business Development"] },
-  { icon: MonitorSmartphone, nk: "dept2", size: 18, color: "bg-neo-blue", specs: ["React / Next.js", "TypeScript / Vite", "Performance"] },
-  { icon: Server, nk: "dept3", size: 14, color: "bg-neo-purple", specs: ["Supabase / PostgreSQL", "API Development", "Cloud Architecture"] },
-  { icon: Palette, nk: "dept4", size: 12, color: "bg-neo-pink", specs: ["User Research", "Prototyping", "Design Systems"] },
-  { icon: Search, nk: "dept5", size: 22, color: "bg-neo-yellow", specs: ["Technical SEO", "Content Strategy", "PPC & Analytics"] },
-  { icon: ShoppingCart, nk: "dept6", size: 12, color: "bg-neo-green", specs: ["Shopify / WooCommerce", "Custom Platforms", "Payment Integration"] },
-  { icon: PenTool, nk: "dept7", size: 16, color: "bg-neo-orange", specs: ["Blog & Case Studies", "Multilingual Content", "Brand Voice"] },
-  { icon: ShieldCheck, nk: "dept8", size: 12, color: "bg-neo-red", specs: ["QA Testing", "Accessibility", "Security Audits"] },
-  { icon: KanbanSquare, nk: "dept9", size: 10, color: "bg-neo-blue", specs: ["Agile Delivery", "Client Communication", "Timeline Management"] },
-  { icon: Cloud, nk: "dept10", size: 8, color: "bg-neo-purple", specs: ["CI/CD Pipelines", "Server Management", "Monitoring & Uptime"] },
-  { icon: Globe, nk: "dept11", size: 14, color: "bg-neo-yellow", specs: ["FR / NL / DE Translations", "Cultural Adaptation", "Market Research"] },
-  { icon: HeartHandshake, nk: "dept12", size: 8, color: "bg-neo-lime", specs: ["Onboarding", "Care Plan Management", "Client Retention"] },
+  { icon: Crown, nk: "dept1", size: 1, color: "bg-neo-lime", specs: ["Vision & Strategy", "Client Relations", "Business Development"] },
+  { icon: MonitorSmartphone, nk: "dept2", size: 3, color: "bg-neo-blue", specs: ["React / Next.js", "TypeScript / Vite", "Performance"] },
+  { icon: Server, nk: "dept3", size: 2, color: "bg-neo-purple", specs: ["Supabase / PostgreSQL", "API Development", "Cloud Architecture"] },
+  { icon: Palette, nk: "dept4", size: 2, color: "bg-neo-pink", specs: ["User Research", "Prototyping", "Design Systems"] },
+  { icon: Search, nk: "dept5", size: 2, color: "bg-neo-yellow", specs: ["Technical SEO", "Content Strategy", "PPC & Analytics"] },
+  { icon: ShoppingCart, nk: "dept6", size: 1, color: "bg-neo-green", specs: ["Shopify / WooCommerce", "Custom Platforms", "Payment Integration"] },
+  { icon: PenTool, nk: "dept7", size: 2, color: "bg-neo-orange", specs: ["Blog & Case Studies", "Multilingual Content", "Brand Voice"] },
+  { icon: ShieldCheck, nk: "dept8", size: 1, color: "bg-neo-red", specs: ["QA Testing", "Accessibility", "Security Audits"] },
+  { icon: KanbanSquare, nk: "dept9", size: 1, color: "bg-neo-blue", specs: ["Agile Delivery", "Client Communication", "Timeline Management"] },
+  { icon: Cloud, nk: "dept10", size: 1, color: "bg-neo-purple", specs: ["CI/CD Pipelines", "Server Management", "Monitoring & Uptime"] },
+  { icon: Globe, nk: "dept11", size: 2, color: "bg-neo-yellow", specs: ["FR / NL / DE Translations", "Cultural Adaptation", "Market Research"] },
+  { icon: HeartHandshake, nk: "dept12", size: 1, color: "bg-neo-lime", specs: ["Onboarding", "Care Plan Management", "Client Retention"] },
 ];
 
 export default function TeamPage() {
@@ -55,7 +55,7 @@ export default function TeamPage() {
     <>
       <SeoHead
         title={t("seo.team.title", "Our Team & Departments — DMC Kreatif")}
-        description={t("seo.team.description", "100+ professionals across 12 departments. 35 core team members and 65+ specialist partners serving European businesses.")}
+        description={t("seo.team.description", "Boutique agency with a curated network of specialists across multiple departments, serving European businesses in 4 countries.")}
         path="/team"
       />
       <Breadcrumbs items={[{ label: t("nav.team", "TEAM") }]} />
@@ -74,14 +74,14 @@ export default function TeamPage() {
               {t("team.heroTitle", "OUR TEAM")}
             </motion.h1>
             <motion.p variants={fadeInUp} className="font-mono text-base lg:text-lg text-neo-black/80 max-w-3xl leading-relaxed mb-12">
-              {t("team.heroSubtitle", "28-strong core team, network of 150+ vetted specialists across 12+ European countries. One mission: building premium digital experiences.")}
+              {t("team.heroSubtitle", "Boutique agency with a curated network of vetted specialists across 4 European countries. One mission: building premium digital experiences.")}
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-wrap border-2 border-neo-black bg-neo-white shadow-hard">
               {[
-                { value: 150, suffix: "+", label: t("team.statProfessionals", "SPECIALISTS") },
-                { value: 12, suffix: "", label: t("team.statDepartments", "DEPARTMENTS") },
-                { value: 12, suffix: "+", label: t("team.statCountries", "COUNTRIES") },
-                { value: 28, suffix: "", label: t("team.statCore", "CORE TEAM") },
+                { value: 20, suffix: "+", label: t("team.statProfessionals", "SPECIALISTS") },
+                { value: 8, suffix: "", label: t("team.statDepartments", "DEPARTMENTS") },
+                { value: 4, suffix: "", label: t("team.statCountries", "COUNTRIES") },
+                { value: 1, suffix: "", label: t("team.statFounder", "FOUNDER") },
               ].map((stat, i) => (
                 <div key={stat.label} className={`flex-1 min-w-[120px] p-5 text-center ${i < 3 ? "border-r-2 border-neo-black" : ""}`}>
                   <div className="font-space font-bold text-2xl lg:text-3xl">
@@ -105,7 +105,7 @@ export default function TeamPage() {
             <div>
               <h2 className="font-space font-bold text-h3 mb-3">{t("team.modelTitle", "HYBRID TEAM MODEL")}</h2>
               <p className="font-mono text-sm text-neo-black/80 leading-relaxed">
-                {t("team.modelDesc", "We operate a distributed-first agency model: a 28-strong core team handles strategy, architecture, and client relationships from our UK-registered base. Our extended network of 120+ vetted remote specialists — developers, designers, SEO analysts, translators, QA engineers — scales capacity on demand across 12+ European markets. On enterprise projects we deploy up to 150 specialists simultaneously. Everyone works remotely; our only physical office is our registered address in London.")}
+                {t("team.modelDesc", "We operate a distributed-first boutique agency model: a founding team handles strategy, architecture, and client relationships. Our curated network of 20+ vetted remote specialists — developers, designers, SEO analysts, translators, QA engineers — scales capacity on demand across 4 European markets. Everyone works remotely, delivering premium results at competitive rates.")}
               </p>
             </div>
           </motion.div>
@@ -150,7 +150,7 @@ export default function TeamPage() {
               <h3 className="font-space font-bold text-xl mb-1">{t("team.founderName", "Musa Kerem Demirci")}</h3>
               <span className="inline-block font-mono text-xs font-bold tracking-wider text-neo-black/60 uppercase mb-3">{t("team.founderRole", "CEO & LEAD DEVELOPER")}</span>
               <p className="font-mono text-sm text-neo-black/80 leading-relaxed">
-                {t("team.founderBio", "Full-stack developer and agency founder with deep expertise in React, Next.js, and Supabase. Leads strategy, client relationships, and technical architecture across all European markets. Built 33+ production websites for businesses in France, Belgium, the UK, and the Netherlands.")}
+                {t("team.founderBio", "Full-stack developer and agency founder with deep expertise in React, Next.js, and Supabase. Leads strategy, client relationships, and technical architecture across all European markets. Built 10+ production websites for businesses in France, Belgium, the UK, and the Netherlands.")}
               </p>
             </div>
           </motion.div>

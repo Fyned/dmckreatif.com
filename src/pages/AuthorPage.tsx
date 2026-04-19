@@ -61,8 +61,8 @@ const timeline = [
   {
     year: "2025",
     icon: "🏆",
-    title: "33+ Projects Delivered",
-    desc: "Milestone: 33+ international websites delivered, all with 95+ Lighthouse scores.",
+    title: "10+ Projects Delivered",
+    desc: "Milestone: 10+ international websites delivered, all with 95+ Lighthouse scores.",
   },
   {
     year: "2026",
@@ -165,7 +165,7 @@ export default function AuthorPage() {
                   </div>
                   <div className="flex items-center gap-2 px-4 py-2 border border-neo-border rounded text-sm text-neo-muted">
                     <Briefcase size={14} className="text-neo-lime" />
-                    33+ Projects Delivered
+                    10+ Projects Delivered
                   </div>
                 </motion.div>
 
@@ -196,7 +196,7 @@ export default function AuthorPage() {
                   {/* Stats grid */}
                   <div className="grid grid-cols-2 gap-4">
                     {[
-                      { value: "33+", label: "Projects Delivered" },
+                      { value: "10+", label: "Projects Delivered" },
                       { value: "4", label: "Countries Served" },
                       { value: "4", label: "Languages" },
                       { value: "95+", label: "Avg Lighthouse" },

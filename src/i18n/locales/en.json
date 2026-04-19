@@ -18,7 +18,7 @@
     "subtitle": "Complete digital packages for European businesses — website, branding, SEO, and advertising. All-in-one, fully managed, transparent pricing.",
     "ctaPrimary": "VIEW COMPLETE PACKAGES",
     "ctaSecondary": "VIEW OUR WORK",
-    "stat1": "33+",
+    "stat1": "10+",
     "stat1Label": "Projects",
     "stat2": "5★",
     "stat2Label": "6 Clients",
@@ -306,8 +306,8 @@
     "satisfaction": "CLIENT SATISFACTION",
     "loadTime": "AVG. LOAD TIME",
     "uptime": "WEBSITE UPTIME",
-    "projectsValue": "33+",
-    "countriesValue": "12+",
+    "projectsValue": "10+",
+    "countriesValue": "4",
     "lighthouseValue": "98+",
     "satisfactionValue": "100%",
     "loadTimeValue": "<1.2s",
@@ -762,10 +762,10 @@
     "sectionTitle": "ABOUT US",
     "sectionSubtitle": "SYS.ABOUT",
     "headline": "WE ARE DMC KREATIF",
-    "description": "A UK-registered web development agency with a 28-strong core team and 150+ specialist network serving European businesses across 12+ countries. We combine cutting-edge React and Next.js technology with premium design to deliver websites that convert.",
+    "description": "A boutique web agency with a curated network of specialists serving European businesses across 4 countries. We combine cutting-edge React and Next.js technology with premium design to deliver websites that convert.",
     "founderName": "Musa Kerem Demirci",
     "founderRole": "CEO & FOUNDER",
-    "founderBio": "Musa Kerem Demirci is the founder of DMC Kreatif, a UK-registered web development agency with a 28-strong core team and a network of 150+ vetted specialists across Europe. With deep expertise in React, Next.js, TypeScript, and modern web architecture, he leads strategy and technical architecture across all projects — ensuring 95+ Google Lighthouse scores, sub-2-second load times, and multilingual SEO implementation. The agency operates fully distributed: one registered office in London, co-working access in Paris, Brussels, Amsterdam, Berlin, Zurich, Barcelona, and Copenhagen. Clients span 12+ European countries across construction, energy, finance, and e-commerce sectors, with a 5.0/5 client satisfaction score. Musa holds a Computer Engineering degree and speaks English, French, and Turkish. His philosophy: every pixel matters, every millisecond counts, and every European business deserves a website that truly converts.",
+    "founderBio": "Musa Kerem Demirci is the founder of DMC Kreatif, a boutique web agency with a curated network of vetted specialists across Europe. With deep expertise in React, Next.js, TypeScript, and modern web architecture, he leads strategy and technical architecture across all projects — ensuring 95+ Google Lighthouse scores, sub-2-second load times, and multilingual SEO implementation. The agency operates fully distributed. Clients span 4 European countries across construction, energy, finance, and e-commerce sectors, with a 5.0/5 client satisfaction score. Musa holds a Computer Engineering degree and speaks English, French, and Turkish. His philosophy: every pixel matters, every millisecond counts, and every European business deserves a website that truly converts.",
     "mission": "OUR MISSION",
     "missionText": "To deliver premium web solutions that help European businesses grow. Every pixel matters. Every millisecond counts.",
     "value1Title": "QUALITY FIRST",
@@ -886,11 +886,11 @@
     "linkServicesDesc": "We build premium websites for European businesses. React, Vite, Next.js — starting from €497.",
     "viewServices": "VIEW SERVICES",
     "linkPortfolio": "See Our Work",
-    "linkPortfolioDesc": "Explore 33+ projects built for businesses across France, Belgium, UK, Netherlands and Germany.",
+    "linkPortfolioDesc": "Explore 10+ projects built for businesses across France, Belgium, UK and Netherlands.",
     "viewPortfolio": "VIEW PORTFOLIO",
     "authorName": "Musa Kerem Demirci",
     "authorRole": "Founder & Lead Developer",
-    "authorBio": "Full-stack developer serving European businesses with premium web solutions. React, Next.js, and TypeScript specialist with 33+ international projects delivered.",
+    "authorBio": "Full-stack developer serving European businesses with premium web solutions. React, Next.js, and TypeScript specialist with 10+ international projects delivered.",
     "category": "Category",
     "allPosts": "All Posts",
     "minuteRead": "min read",
@@ -1127,7 +1127,7 @@
     "languagesValue": "4 Languages",
     "paymentLabel": "Payment",
     "paymentValue": "Secure Payment",
-    "countriesServed": "Serving businesses in 12+ European countries",
+    "countriesServed": "Serving businesses in 4 European countries",
     "builtWith": "Built with modern technology"
   },
   "process": {
@@ -1229,13 +1229,13 @@
   },
   "clientLogos": {
     "trustedBy": "TRUSTED BY BUSINESSES ACROSS EUROPE",
-    "projectsDelivered": "33+ projects delivered across 12+ countries"
+    "projectsDelivered": "10+ projects delivered across 4 countries"
   },
   "whyUs": {
     "breadcrumb": "WHY US",
     "heroTag": "SYS.WHY_US",
     "heroTitle": "WHY DMC KREATIF",
-    "heroDesc": "33+ projects, 12+ European markets, 4 languages. We build premium websites that outperform the competition.",
+    "heroDesc": "10+ projects delivered across 4 European countries. We build premium websites that outperform the competition.",
     "reasonsTitle": "8 REASONS TO CHOOSE US",
     "reasonsTag": "SYS.DIFFERENTIATORS",
     "reason1Title": "European DNA",
@@ -1329,7 +1329,7 @@
       "description": "Bespoke web development, online stores, SEO audits and digital marketing for European SMEs. React, Next.js, multilingual. Plans from €497."
     },
     "portfolio": {
-      "title": "Portfolio — 33+ European Projects | DMC Kreatif",
+      "title": "Portfolio — 10+ European Projects | DMC Kreatif",
       "description": "Real projects for real businesses across France, Belgium and the UK. Construction, energy, accounting & e-commerce sites with 98+ Lighthouse scores."
     },
     "pricing": {
@@ -1338,7 +1338,7 @@
     },
     "about": {
       "title": "About DMC Kreatif — Boutique European Web Development Agency",
-      "description": "UK-registered boutique web development agency with a vetted specialist network across Europe. React, Next.js, Lighthouse 95+, multilingual. 33+ projects delivered."
+      "description": "Boutique web development agency with a vetted specialist network across Europe. React, Next.js, Lighthouse 95+, multilingual. 10+ projects delivered across 4 countries."
     },
     "team": {
       "title": "Our Team — DMC Kreatif Web Development Agency",
@@ -1350,7 +1350,7 @@
     },
     "whyUs": {
       "title": "Why Choose DMC Kreatif — 8 Key Reasons | Europe",
-      "description": "Modern React/Next.js stack, 95+ Lighthouse guaranteed, multilingual by default, transparent pricing, dedicated teams. See why 200+ businesses chose us."
+      "description": "Modern React/Next.js stack, 95+ Lighthouse guaranteed, multilingual by default, transparent pricing, dedicated teams. See why European businesses choose us."
     },
     "partners": {
       "title": "Technology Partners — Vercel, Supabase, Stripe, Google | DMC Kreatif",
@@ -1374,7 +1374,7 @@
     },
     "author": {
       "title": "Musa Kerem Demirci — Founder & Lead Developer | DMC Kreatif",
-      "description": "Full-stack web developer specialising in React, Next.js and TypeScript. Founder of DMC Kreatif, a boutique web agency serving European businesses. 33+ projects delivered."
+      "description": "Full-stack web developer specialising in React, Next.js and TypeScript. Founder of DMC Kreatif, a boutique web agency serving European businesses. 10+ projects delivered."
     },
     "templates": {
       "title": "Website Templates — Ready-Made Designs from €39 | DMC Kreatif",

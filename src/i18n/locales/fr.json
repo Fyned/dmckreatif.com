@@ -6,23 +6,23 @@
     },
     "services": {
       "title": "Création de Sites Web & E-Commerce | Agence Web DMC Kreatif",
-      "description": "Développement web sur mesure, boutiques en ligne, audit SEO et marketing digital pour PME françaises et belges. Technologies modernes, à partir de 349€."
+      "description": "Développement web sur mesure, boutiques en ligne, audit SEO et marketing digital pour PME françaises et belges. Technologies modernes, à partir de 497€."
     },
     "portfolio": {
       "title": "Réalisations Web — 10+ Sites Créés en France & Belgique | DMC Kreatif",
       "description": "Découvrez nos projets : bâtiment, énergie, comptabilité, e-commerce en France et Belgique. Résultats concrets, performances Lighthouse 98+."
     },
     "pricing": {
-      "title": "Tarifs Sites Web — Sites sur mesure dès 349€ | Templates dès 39€ | DMC Kreatif",
-      "description": "Prix transparents pour la création de sites web professionnels. Starter 349€, Growth 749€, Scale 1 497€, Commerce 2 497€. Sans frais cachés, consultation gratuite."
+      "title": "Tarifs Sites Web — Sites sur mesure dès 497€ | Templates dès 39€ | DMC Kreatif",
+      "description": "Prix transparents pour la création de sites web professionnels. Starter 497€, Growth 997€, Scale 1 997€, Commerce 2 997€. Sans frais cachés, consultation gratuite."
     },
     "about": {
-      "title": "À Propos de DMC Kreatif — Agence Web Européenne | 150+ Spécialistes",
-      "description": "Agence web enregistrée au Royaume-Uni. Équipe principale de 28, réseau de 150+ spécialistes dans 12+ pays européens. React/Next.js, Lighthouse 95+, 4 langues."
+      "title": "À Propos de DMC Kreatif — Agence Web Européenne Boutique",
+      "description": "Agence web boutique avec un réseau de spécialistes sélectionnés dans 4 pays européens. React/Next.js, Lighthouse 95+, 4 langues."
     },
     "team": {
-      "title": "Notre Équipe — 150+ Spécialistes Web | DMC Kreatif",
-      "description": "28 membres permanents et un réseau de 150+ spécialistes répartis en 12 départements, au service des entreprises dans 12+ pays européens."
+      "title": "Notre Équipe — Réseau de Spécialistes Web | DMC Kreatif",
+      "description": "Agence boutique avec un réseau sélectionné de spécialistes répartis en plusieurs départements, au service des entreprises dans 4 pays européens."
     },
     "process": {
       "title": "Notre Processus — Comment Nous Créons des Sites Premium | DMC Kreatif",
@@ -30,7 +30,7 @@
     },
     "whyUs": {
       "title": "Pourquoi DMC Kreatif — 8 Raisons de Nous Choisir | Agence Web Europe",
-      "description": "Stack React/Next.js moderne, Lighthouse 95+ garanti, multilingue par défaut, tarifs transparents, équipes dédiées. Découvrez pourquoi 200+ entreprises nous ont choisis."
+      "description": "Stack React/Next.js moderne, Lighthouse 95+ garanti, multilingue par défaut, tarifs transparents, équipes dédiées. Découvrez pourquoi les entreprises européennes nous font confiance."
     },
     "partners": {
       "title": "Partenaires Technologiques — Vercel, Supabase, Stripe, Google | DMC Kreatif",
@@ -38,7 +38,7 @@
     },
     "careers": {
       "title": "Carrières chez DMC Kreatif — Rejoignez Notre Agence Web Européenne",
-      "description": "Rejoignez 100+ professionnels qui construisent l'avenir du web européen. Télétravail, technologies de pointe, clients premium. Postes ouverts en React, Next.js, UX, SEO."
+      "description": "Rejoignez notre réseau de spécialistes qui construisent l'avenir du web européen. Télétravail, technologies de pointe, clients premium. Postes ouverts en React, Next.js, UX, SEO."
     },
     "blog": {
       "title": "Blog Création Web — Conseils SEO, Guides E-Commerce | DMC Kreatif",
@@ -458,15 +458,15 @@
     "subtitle": "Développement web premium pour les entreprises européennes. Sur mesure, ultra rapide, multilingue.",
     "ctaPrimary": "DÉMARRER VOTRE PROJET",
     "ctaSecondary": "VOIR NOS RÉALISATIONS",
-    "stat1": "200+",
+    "stat1": "10+",
     "stat1Label": "Projets",
-    "stat2": "150+",
-    "stat2Label": "Équipe",
-    "stat3": "12+",
-    "stat3Label": "Pays",
-    "stat4": "95+",
-    "stat4Label": "Lighthouse",
-    "microCopy": "150+ spécialistes • 33+ projets internationaux livrés dans 12+ pays européens",
+    "stat2": "4",
+    "stat2Label": "Pays",
+    "stat3": "95+",
+    "stat3Label": "Lighthouse",
+    "stat4": "5★",
+    "stat4Label": "Satisfaction",
+    "microCopy": "Forfaits tout-en-un dès 1 097€ · Paiement échelonné disponible · 5★ de clients vérifiés",
     "bookCall": "ou réservez un appel gratuit de 15 min →"
   },
   "marquee": {
@@ -478,7 +478,7 @@
     "webDev": {
       "title": "DÉVELOPPEMENT WEB",
       "description": "Nous concevons et développons des sites web sur mesure qui transforment vos visiteurs en clients. Chaque projet commence par une analyse approfondie de votre marque, de votre audience et de vos objectifs commerciaux afin que le résultat reflète votre identité — et non un template générique. Notre stack technique repose sur React, Next.js et Vite, offrant un rendu côté serveur pour le référencement, des transitions instantanées entre les pages et un découpage du code qui maintient le temps de chargement initial sous 1,5 seconde. Chaque site est entièrement responsive du mobile à l'ultra-wide, obtient un score de 95+ sur Google Lighthouse en Performance, Accessibilité, Bonnes Pratiques et SEO, et intègre le balisage de données structurées pour que les moteurs de recherche comprennent votre contenu dès le lancement. Nous configurons formulaires de contact, tableaux de bord analytiques et intégrations CRM, puis vous fournissons un lien de prévisualisation pour un suivi hebdomadaire. Après la mise en ligne, vous bénéficiez de 30 jours de support prioritaire, de la propriété complète du code source et d'une documentation permettant à votre équipe de maintenir le site en toute autonomie. Que vous ayez besoin d'une landing page ou d'un site multilingue couvrant la France, la Belgique, les Pays-Bas et l'Allemagne, nous livrons dans les délais et le budget convenus.",
-      "priceRange": "À PARTIR DE 349€",
+      "priceRange": "À PARTIR DE 497€",
       "idealFor": "PME, Startups, Professions libérales, Agences"
     },
     "ecommerce": {
@@ -746,8 +746,8 @@
     "satisfaction": "SATISFACTION CLIENT",
     "loadTime": "TEMPS DE CHARGEMENT MOY.",
     "uptime": "DISPONIBILITÉ SITES",
-    "projectsValue": "200+",
-    "countriesValue": "6",
+    "projectsValue": "10+",
+    "countriesValue": "4",
     "lighthouseValue": "98+",
     "satisfactionValue": "100%",
     "loadTimeValue": "<1.2s",
@@ -763,7 +763,7 @@
     "templateFeature2": "Vos couleurs et logo",
     "templateFeature3": "Responsive mobile & SEO inclus",
     "templateCta": "PARCOURIR LES MODÈLES",
-    "customPrice": "À PARTIR DE 349€",
+    "customPrice": "À PARTIR DE 497€",
     "customTitle": "DÉVELOPPEMENT SUR MESURE",
     "customDelivery": "Conçu à partir de zéro par notre équipe",
     "customFeature1": "Design 100% unique et personnalisé",
@@ -829,7 +829,7 @@
     "premiumCompare1": "Livraison en 3-28 jours",
     "premiumCompare2": "Design personnalisé de zéro",
     "premiumCompare3": "Révisions & support inclus",
-    "premiumComparePrice": "À partir de 349€",
+    "premiumComparePrice": "À partir de 497€",
     "guarantee": "GARANTIE SATISFACTION",
     "guaranteeDesc": "Révisions gratuites jusqu'à satisfaction complète",
     "payment": "PAIEMENT SÉCURISÉ",
@@ -985,7 +985,7 @@
     "perk1": "Consultation gratuite",
     "perk2": "Pas de frais cachés",
     "perk3": "Garantie satisfait ou remboursé",
-    "fromPrice": "Dès 349€",
+    "fromPrice": "Dès 497€",
     "saveUpTo": "Économisez 25% — tarifs de lancement",
     "ctaButton": "PROFITER DE L'OFFRE",
     "popupTitle": "-25% SUR TOUS LES FORFAITS",
@@ -1146,10 +1146,10 @@
     "sectionTitle": "À PROPOS",
     "sectionSubtitle": "SYS.ABOUT",
     "headline": "NOUS SOMMES DMC KREATIF",
-    "description": "Une agence de développement web enregistrée au Royaume-Uni avec 28 membres permanents et un réseau de 150+ spécialistes au service des entreprises dans 12+ pays européens. Nous combinons les technologies React et Next.js de pointe avec un design premium pour créer des sites web qui convertissent.",
+    "description": "Une agence web boutique avec un réseau sélectionné de spécialistes au service des entreprises dans 4 pays européens. Nous combinons les technologies React et Next.js de pointe avec un design premium pour créer des sites web qui convertissent.",
     "founderName": "Musa Kerem Demirci",
     "founderRole": "CEO & FONDATEUR",
-    "founderBio": "Musa Kerem Demirci est le fondateur de DMC Kreatif, une agence de développement web enregistrée au Royaume-Uni avec une équipe principale de 28 personnes et un réseau de 150+ spécialistes certifiés à travers l'Europe. Fort d'une expertise approfondie en React, Next.js, TypeScript et architecture web moderne, il pilote la stratégie et la direction technique de chaque projet — garantissant des scores Google Lighthouse de 95+, des temps de chargement inférieurs à 2 secondes et une implémentation SEO multilingue sur toutes les livraisons. L'agence opère en mode entièrement distribué : un seul bureau enregistré à Londres, complété par des espaces de coworking à Paris, Bruxelles, Amsterdam, Berlin, Zurich, Barcelone et Copenhague. Avant de fonder DMC Kreatif en 2023, Musa a acquis une expérience internationale avec des clients dans les secteurs de la construction, de l'énergie, de la finance et de l'e-commerce. L'agence accompagne des clients dans 12+ pays européens avec un score de satisfaction client de 5.0/5. Musa est titulaire d'un diplôme en ingénierie informatique et parle anglais, français et turc. Sa philosophie : chaque pixel compte, chaque milliseconde est importante, et chaque entreprise européenne mérite un site web qui convertit véritablement.",
+    "founderBio": "Musa Kerem Demirci est le fondateur de DMC Kreatif, une agence web boutique avec un réseau sélectionné de spécialistes à travers l'Europe. Fort d'une expertise approfondie en React, Next.js, TypeScript et architecture web moderne, il pilote la stratégie et la direction technique de chaque projet — garantissant des scores Google Lighthouse de 95+, des temps de chargement inférieurs à 2 secondes et une implémentation SEO multilingue sur toutes les livraisons. L'agence opère en mode entièrement distribué. Avant de fonder DMC Kreatif en 2023, Musa a acquis une expérience internationale avec des clients dans les secteurs de la construction, de l'énergie, de la finance et de l'e-commerce. L'agence accompagne des clients dans 4 pays européens avec un score de satisfaction client de 5.0/5. Musa est titulaire d'un diplôme en ingénierie informatique et parle anglais, français et turc. Sa philosophie : chaque pixel compte, chaque milliseconde est importante, et chaque entreprise européenne mérite un site web qui convertit véritablement.",
     "mission": "NOTRE MISSION",
     "missionText": "Fournir des solutions web premium qui aident les entreprises européennes à grandir. Chaque pixel compte. Chaque milliseconde compte.",
     "value1Title": "QUALITÉ D'ABORD",
@@ -1174,15 +1174,15 @@
     "milestone1Title": "Fondation de DMC Kreatif",
     "milestone1Desc": "Lancement en tant qu'agence web premium ciblant les entreprises européennes. Constitution de l'équipe fondatrice d'ingénieurs frontend, designers et spécialistes SEO.",
     "milestone2Title": "Marché Français Établi",
-    "milestone2Desc": "Livraison des premiers projets majeurs pour Cakir Facades, Altinbas Moustiquaire et Consulting Energy en France. L'équipe a grandi à 25+ professionnels.",
+    "milestone2Desc": "Livraison des premiers projets majeurs pour Cakir Facades, Altinbas Moustiquaire et Consulting Energy en France.",
     "milestone3Title": "Siège UK Enregistré",
     "milestone3Desc": "Enregistrement de la société au Royaume-Uni. Ouverture du siège à Londres et expansion vers les clients britanniques, dont Adamsons Accountants.",
-    "milestone4Title": "Cap des 100+ Projets",
-    "milestone4Desc": "Dépassement de 100 projets internationaux en France, Belgique et UK. L'équipe s'est élargie à 50+ avec des départements dédiés design, développement et SEO.",
-    "milestone5Title": "Expansion Européenne",
-    "milestone5Desc": "Extension des services aux Pays-Bas, à l'Allemagne et à la Suisse. L'équipe a grandi à 100+ professionnels répartis en 12 départements. Lancement de la plateforme multilingue en 4 langues.",
-    "milestone6Title": "200+ Projets & Plateforme de Modèles",
-    "milestone6Desc": "Atteinte de 200+ projets livrés dans 6 pays européens. Lancement des modèles de sites web prêts à l'emploi. Établissement du réseau de partenaires spécialistes dans 4 pays."
+    "milestone4Title": "Expansion Internationale",
+    "milestone4Desc": "Extension des services vers la Belgique et le UK. Constitution d'un réseau de spécialistes sélectionnés.",
+    "milestone5Title": "Plateforme Multilingue",
+    "milestone5Desc": "Lancement de la plateforme multilingue en 4 langues (EN, FR, NL, DE). Expansion vers les marchés néerlandais et allemand.",
+    "milestone6Title": "Plateforme de Modèles",
+    "milestone6Desc": "Lancement des modèles de sites web prêts à l'emploi. 10+ projets livrés dans 4 pays européens. Réseau de partenaires spécialistes établi."
   },
   "contact": {
     "introHeading": "Parlons de votre projet",
@@ -1225,7 +1225,7 @@
     "serviceTemplatePro": "Modèle — Professionnel (150€)",
     "explore": "Explorer",
     "selectService": "Sélectionnez un service...",
-    "serviceLaunch": "Pack Starter (349€)",
+    "serviceLaunch": "Pack Starter (497€)",
     "serviceGrowth": "Pack Croissance (997€)",
     "serviceScale": "Pack Expansion (1 997€)",
     "serviceCommerce": "Pack Commerce (2 997€)",
@@ -1281,7 +1281,7 @@
     "publishedOn": "Publié le",
     "websiteCostTitle": "Combien coûte un site web en Europe en 2026 ?",
     "websiteCostExcerpt": "Une analyse transparente des prix du développement web en Europe. Des tarifs freelance aux forfaits agence, découvrez ce qui détermine les coûts et comment budgétiser votre prochain projet.",
-    "websiteCostContent": "<p>Si vous êtes chef d'entreprise en France, en Allemagne, en Belgique, aux Pays-Bas ou au Royaume-Uni, l'une de vos premières questions est probablement : <strong>combien coûte réellement un site web professionnel ?</strong> La réponse dépend de l'envergure du projet, de la technologie utilisée et de qui le réalise. Ce guide vous offre une analyse transparente pour prendre une décision éclairée.</p><h2>Le marché du développement web européen en 2026</h2><p>Le marché européen du développement web a considérablement mûri. Selon <a href=\"https://www.statista.com/outlook/tmo/internet-usage/europe\" target=\"_blank\" rel=\"noopener noreferrer\">Statista</a>, plus de 90 % des entreprises européennes considèrent désormais un site web comme indispensable. Pourtant, les prix restent opaques. Les freelances sur des plateformes comme Malt ou Upwork facturent entre 30 € et 150 € de l'heure, tandis que les agences proposent généralement des forfaits. Comprendre ces différences est la première étape pour bien budgétiser.</p><p>Le coût moyen d'un site web professionnel en Europe occidentale varie de <strong>500 € pour un site one-page simple à plus de 15 000 € pour une plateforme e-commerce complexe</strong>. La plupart des PME se situent entre les deux, dépensant généralement entre 1 000 € et 3 000 € pour un site multi-pages bien conçu.</p><h2>Qu'est-ce qui détermine le prix d'un site web ?</h2><p>Plusieurs facteurs influencent le prix final de votre site :</p><ul><li><strong>Nombre de pages :</strong> Une landing page coûte bien moins qu'un site de 10 pages avec blog, portfolio et système de contact.</li><li><strong>Design sur mesure vs. templates :</strong> Le sur-mesure demande plus de temps mais offre une identité de marque unique. Les sites basés sur des templates sont plus rapides et moins chers mais moins distinctifs.</li><li><strong>Fonctionnalités :</strong> Formulaires de contact, systèmes de réservation, support multilingue, e-commerce et intégrations avec CRM ou systèmes de paiement ajoutent au budget.</li><li><strong>Stack technologique :</strong> Les frameworks modernes comme React et Next.js offrent de meilleures performances et un meilleur SEO mais nécessitent des développeurs spécialisés. WordPress est moins cher au départ mais souvent plus lent et plus difficile à maintenir à grande échelle.</li><li><strong>Exigences multilingues :</strong> Servir des clients dans plusieurs marchés européens signifie traduire le contenu, implémenter les balises hreflang et souvent créer des structures d'URL distinctes pour chaque langue.</li></ul><h2>Fourchettes de prix par type de projet</h2><p>Voici une ventilation réaliste des prix du développement web en Europe en 2026 :</p><ul><li><strong>Landing page (1 page) :</strong> 300 € — 800 €. Idéal pour les startups validant une idée ou les entreprises ayant besoin d'une présence en ligne rapide.</li><li><strong>Site vitrine (5-7 pages) :</strong> 800 € — 2 500 €. Le choix optimal pour la plupart des PME. Inclut page à propos, services, portfolio, formulaire de contact et SEO de base.</li><li><strong>Site corporate (10+ pages, multilingue) :</strong> 2 000 € — 5 000 €. Présence complète avec plusieurs langues, blog, pages d'équipe et SEO avancé.</li><li><strong>Boutique en ligne :</strong> 2 500 € — 15 000 €+. Dépend du nombre de produits, des intégrations de paiement et des exigences multi-devises.</li></ul><p>Chez <a href=\"/fr/pricing\">DMC Kreatif</a>, notre forfait Starter commence à 349 € pour un site une page sur mesure, tandis que notre forfait Growth à 997 € propose un site multi-pages complet avec blog et SEO avancé. Nous nous positionnons de manière compétitive sur le marché européen tout en maintenant des standards de qualité premium.</p><h2>Freelance vs. Agence : que choisir ?</h2><p>Le choix entre un freelance et une agence dépend de l'envergure de votre projet et de votre tolérance au risque :</p><ul><li><strong>Les freelances</strong> sont généralement 30 à 50 % moins chers. Ils conviennent pour des projets simples avec des exigences claires. Le risque : si votre freelance disparaît ou est débordé, votre projet stagne.</li><li><strong>Les agences</strong> offrent des processus structurés, plusieurs intervenants et une responsabilité collective. Vous payez plus mais obtenez gestion de projet, contrôle qualité et support continu.</li><li><strong>Les agences boutiques</strong> (comme DMC Kreatif) combinent le meilleur des deux : tarifs compétitifs avec qualité d'agence et attention personnalisée. Vous travaillez directement avec des développeurs seniors.</li></ul><h2>Coûts cachés à surveiller</h2><p>Le prix affiché ne dit pas tout. Attention à ces coûts cachés fréquents :</p><ul><li><strong>Hébergement :</strong> 5 € — 50 €/mois selon le trafic et les besoins de performance.</li><li><strong>Nom de domaine :</strong> 10 € — 30 €/an pour les domaines standards.</li><li><strong>Certificat SSL :</strong> Souvent inclus avec l'hébergement, mais certains fournisseurs facturent un supplément.</li><li><strong>Maintenance continue :</strong> Mises à jour de sécurité, modifications de contenu et suivi de performance. Prévoyez 50 € — 200 €/mois ou optez pour un <a href=\"/fr/pricing\">plan de maintenance</a>.</li><li><strong>Création de contenu :</strong> Photographie professionnelle, rédaction et traductions peuvent ajouter 500 € — 2 000 €.</li></ul><h2>Comment obtenir le meilleur rapport qualité-prix</h2><p>Pour maximiser votre investissement dans un nouveau site web :</p><ul><li><strong>Définissez vos objectifs d'abord.</strong> Sachez ce que vous attendez du site avant de contacter des développeurs.</li><li><strong>Préparez votre contenu.</strong> Avoir textes, images et charte graphique prêts fait gagner du temps et de l'argent.</li><li><strong>Investissez dans une technologie de qualité.</strong> Un site React ou Next.js coûte plus au départ mais performe mieux, se positionne mieux et coûte moins à maintenir sur le long terme.</li><li><strong>Choisissez sur la base du portfolio, pas du prix seul.</strong> Regardez les projets réellement livrés, surtout pour des entreprises similaires à la vôtre.</li><li><strong>Renseignez-vous sur le support après lancement.</strong> Le devis le moins cher ne vaut rien si vous ne pouvez pas obtenir d'aide après la mise en ligne.</li></ul><h2>Conclusion</h2><p>Un site web professionnel en Europe en 2026 coûte entre 300 € et 15 000 € selon la complexité. Pour la plupart des PME, le budget optimal se situe entre 500 € et 3 000 €. Concentrez-vous sur un développeur ou une agence qui comprend votre marché, utilise des technologies modernes et propose des tarifs transparents avec support après lancement.</p><p>Prêt à obtenir un devis ? <a href=\"/fr/contact\">Contactez DMC Kreatif</a> pour une consultation gratuite. Nous répondons sous 24 heures avec une proposition adaptée à votre projet.</p>",
+    "websiteCostContent": "<p>Si vous êtes chef d'entreprise en France, en Allemagne, en Belgique, aux Pays-Bas ou au Royaume-Uni, l'une de vos premières questions est probablement : <strong>combien coûte réellement un site web professionnel ?</strong> La réponse dépend de l'envergure du projet, de la technologie utilisée et de qui le réalise. Ce guide vous offre une analyse transparente pour prendre une décision éclairée.</p><h2>Le marché du développement web européen en 2026</h2><p>Le marché européen du développement web a considérablement mûri. Selon <a href=\"https://www.statista.com/outlook/tmo/internet-usage/europe\" target=\"_blank\" rel=\"noopener noreferrer\">Statista</a>, plus de 90 % des entreprises européennes considèrent désormais un site web comme indispensable. Pourtant, les prix restent opaques. Les freelances sur des plateformes comme Malt ou Upwork facturent entre 30 € et 150 € de l'heure, tandis que les agences proposent généralement des forfaits. Comprendre ces différences est la première étape pour bien budgétiser.</p><p>Le coût moyen d'un site web professionnel en Europe occidentale varie de <strong>500 € pour un site one-page simple à plus de 15 000 € pour une plateforme e-commerce complexe</strong>. La plupart des PME se situent entre les deux, dépensant généralement entre 1 000 € et 3 000 € pour un site multi-pages bien conçu.</p><h2>Qu'est-ce qui détermine le prix d'un site web ?</h2><p>Plusieurs facteurs influencent le prix final de votre site :</p><ul><li><strong>Nombre de pages :</strong> Une landing page coûte bien moins qu'un site de 10 pages avec blog, portfolio et système de contact.</li><li><strong>Design sur mesure vs. templates :</strong> Le sur-mesure demande plus de temps mais offre une identité de marque unique. Les sites basés sur des templates sont plus rapides et moins chers mais moins distinctifs.</li><li><strong>Fonctionnalités :</strong> Formulaires de contact, systèmes de réservation, support multilingue, e-commerce et intégrations avec CRM ou systèmes de paiement ajoutent au budget.</li><li><strong>Stack technologique :</strong> Les frameworks modernes comme React et Next.js offrent de meilleures performances et un meilleur SEO mais nécessitent des développeurs spécialisés. WordPress est moins cher au départ mais souvent plus lent et plus difficile à maintenir à grande échelle.</li><li><strong>Exigences multilingues :</strong> Servir des clients dans plusieurs marchés européens signifie traduire le contenu, implémenter les balises hreflang et souvent créer des structures d'URL distinctes pour chaque langue.</li></ul><h2>Fourchettes de prix par type de projet</h2><p>Voici une ventilation réaliste des prix du développement web en Europe en 2026 :</p><ul><li><strong>Landing page (1 page) :</strong> 300 € — 800 €. Idéal pour les startups validant une idée ou les entreprises ayant besoin d'une présence en ligne rapide.</li><li><strong>Site vitrine (5-7 pages) :</strong> 800 € — 2 500 €. Le choix optimal pour la plupart des PME. Inclut page à propos, services, portfolio, formulaire de contact et SEO de base.</li><li><strong>Site corporate (10+ pages, multilingue) :</strong> 2 000 € — 5 000 €. Présence complète avec plusieurs langues, blog, pages d'équipe et SEO avancé.</li><li><strong>Boutique en ligne :</strong> 2 500 € — 15 000 €+. Dépend du nombre de produits, des intégrations de paiement et des exigences multi-devises.</li></ul><p>Chez <a href=\"/fr/pricing\">DMC Kreatif</a>, notre forfait Starter commence à 497 € pour un site une page sur mesure, tandis que notre forfait Growth à 997 € propose un site multi-pages complet avec blog et SEO avancé. Nous nous positionnons de manière compétitive sur le marché européen tout en maintenant des standards de qualité premium.</p><h2>Freelance vs. Agence : que choisir ?</h2><p>Le choix entre un freelance et une agence dépend de l'envergure de votre projet et de votre tolérance au risque :</p><ul><li><strong>Les freelances</strong> sont généralement 30 à 50 % moins chers. Ils conviennent pour des projets simples avec des exigences claires. Le risque : si votre freelance disparaît ou est débordé, votre projet stagne.</li><li><strong>Les agences</strong> offrent des processus structurés, plusieurs intervenants et une responsabilité collective. Vous payez plus mais obtenez gestion de projet, contrôle qualité et support continu.</li><li><strong>Les agences boutiques</strong> (comme DMC Kreatif) combinent le meilleur des deux : tarifs compétitifs avec qualité d'agence et attention personnalisée. Vous travaillez directement avec des développeurs seniors.</li></ul><h2>Coûts cachés à surveiller</h2><p>Le prix affiché ne dit pas tout. Attention à ces coûts cachés fréquents :</p><ul><li><strong>Hébergement :</strong> 5 € — 50 €/mois selon le trafic et les besoins de performance.</li><li><strong>Nom de domaine :</strong> 10 € — 30 €/an pour les domaines standards.</li><li><strong>Certificat SSL :</strong> Souvent inclus avec l'hébergement, mais certains fournisseurs facturent un supplément.</li><li><strong>Maintenance continue :</strong> Mises à jour de sécurité, modifications de contenu et suivi de performance. Prévoyez 50 € — 200 €/mois ou optez pour un <a href=\"/fr/pricing\">plan de maintenance</a>.</li><li><strong>Création de contenu :</strong> Photographie professionnelle, rédaction et traductions peuvent ajouter 500 € — 2 000 €.</li></ul><h2>Comment obtenir le meilleur rapport qualité-prix</h2><p>Pour maximiser votre investissement dans un nouveau site web :</p><ul><li><strong>Définissez vos objectifs d'abord.</strong> Sachez ce que vous attendez du site avant de contacter des développeurs.</li><li><strong>Préparez votre contenu.</strong> Avoir textes, images et charte graphique prêts fait gagner du temps et de l'argent.</li><li><strong>Investissez dans une technologie de qualité.</strong> Un site React ou Next.js coûte plus au départ mais performe mieux, se positionne mieux et coûte moins à maintenir sur le long terme.</li><li><strong>Choisissez sur la base du portfolio, pas du prix seul.</strong> Regardez les projets réellement livrés, surtout pour des entreprises similaires à la vôtre.</li><li><strong>Renseignez-vous sur le support après lancement.</strong> Le devis le moins cher ne vaut rien si vous ne pouvez pas obtenir d'aide après la mise en ligne.</li></ul><h2>Conclusion</h2><p>Un site web professionnel en Europe en 2026 coûte entre 300 € et 15 000 € selon la complexité. Pour la plupart des PME, le budget optimal se situe entre 500 € et 3 000 €. Concentrez-vous sur un développeur ou une agence qui comprend votre marché, utilise des technologies modernes et propose des tarifs transparents avec support après lancement.</p><p>Prêt à obtenir un devis ? <a href=\"/fr/contact\">Contactez DMC Kreatif</a> pour une consultation gratuite. Nous répondons sous 24 heures avec une proposition adaptée à votre projet.</p>",
     "reactVsWpTitle": "React vs. WordPress pour les PME européennes : quel choix faire en 2026 ?",
     "reactVsWpExcerpt": "Comparaison pratique entre les frameworks React et WordPress pour les petites et moyennes entreprises en Europe. Performance, SEO, maintenance et coût total de possession.",
     "reactVsWpContent": "<p>Lorsqu'un chef d'entreprise européen planifie un nouveau site web, la question technologique arrive vite : <strong>faut-il opter pour WordPress ou un framework JavaScript moderne comme React ?</strong> Les deux ont leur place, mais le bon choix dépend de vos objectifs, de votre budget et de votre vision à long terme. Ce guide vous aide à trancher.</p><h2>WordPress en 2026 : toujours dominant, mais vieillissant</h2><p>WordPress propulse environ <a href=\"https://w3techs.com/technologies/details/cm-wordpress\" target=\"_blank\" rel=\"noopener noreferrer\">43 % de tous les sites web</a> dans le monde. Il est mature, dispose d'un vaste écosystème de plugins et presque tout développeur peut travailler avec. Pour les blogs simples et les sites vitrines basiques, il fonctionne encore.</p><p>Cependant, WordPress fait face à des défis croissants :</p><ul><li><strong>Performance :</strong> Les sites WordPress reposent sur le rendu PHP et les requêtes MySQL. Des temps de chargement de 3 à 5 secondes sont courants sans optimisation agressive. Google pénalise désormais les sites lents dans ses classements.</li><li><strong>Sécurité :</strong> WordPress est le CMS le plus ciblé par les attaques. Les plugins nécessitent des mises à jour constantes, et un seul plugin obsolète peut compromettre l'ensemble du site.</li><li><strong>Charge de maintenance :</strong> Mises à jour de thèmes, conflits de plugins, compatibilité PHP et ballonnement de base de données créent un travail continu. Beaucoup de dirigeants finissent par dépenser 100 à 300 €/mois en maintenance WordPress.</li><li><strong>Expérience mobile :</strong> De nombreux thèmes WordPress sont responsive en théorie mais se montrent lents sur mobile en raison du poids des pages et des ressources bloquant le rendu.</li></ul><h2>React et les frameworks modernes : le nouveau standard</h2><p>React (par Meta), combiné avec des frameworks comme <strong>Next.js</strong> et <strong>Vite</strong>, représente l'état de l'art actuel en développement web. Des entreprises comme Stripe, Vercel, Linear et Shopify construisent leurs interfaces avec React.</p><p>Ce qui distingue React pour les sites d'entreprise :</p><ul><li><strong>Vitesse :</strong> Les sites React se chargent en moins de 2 secondes grâce au code splitting, au lazy loading et au rendu côté serveur. Seul le code nécessaire à la page en cours est chargé.</li><li><strong>Performance SEO :</strong> Avec Next.js ou le rendu côté serveur, les sites React sont indexés par Google aussi bien que tout site WordPress — souvent mieux, grâce à des scores Core Web Vitals supérieurs.</li><li><strong>Sécurité :</strong> Pas de plugins à pirater, pas de base de données à injecter. Les sites React peuvent être déployés en fichiers statiques sur un CDN, les rendant virtuellement inviolables.</li><li><strong>Évolutivité :</strong> Que vous ayez 100 ou 100 000 visiteurs mensuels, un site React performe de manière identique car il est pré-construit et servi depuis des serveurs edge dans le monde entier.</li></ul><h2>Comparaison directe</h2><p>Voici comment WordPress et React se comparent pour les PME européennes :</p><ul><li><strong>Coût initial :</strong> WordPress 500-2 000 € vs. React 800-3 000 €. WordPress est moins cher au départ.</li><li><strong>Maintenance mensuelle :</strong> WordPress 100-300 €/mois vs. React 20-100 €/mois. React est moins cher à maintenir.</li><li><strong>Coût total sur 3 ans :</strong> WordPress 4 100-12 800 € vs. React 1 520-6 600 €. React l'emporte sur le coût total de possession.</li><li><strong>Score Google Lighthouse :</strong> WordPress 40-75 (typique) vs. React 90-100 (typique). React surpasse largement WordPress.</li><li><strong>Temps de chargement :</strong> WordPress 3-5 secondes vs. React 0,5-1,5 seconde. React est 3 à 5x plus rapide.</li><li><strong>Incidents de sécurité :</strong> WordPress est ciblé dans plus de 90 % des attaques CMS. Les sites React statiques ont une surface d'attaque quasi nulle.</li></ul><h2>Quand WordPress reste pertinent</h2><p>WordPress reste un choix valable dans des scénarios spécifiques :</p><ul><li>Vous devez publier du contenu quotidiennement et votre équipe maîtrise déjà l'éditeur WordPress.</li><li>Vous dépendez de plugins WordPress spécifiques sans équivalent React (bien que ce soit de plus en plus rare).</li><li>Votre budget est inférieur à 500 € et vous avez besoin d'un site en ligne cette semaine.</li><li>Vous prévoyez de gérer le site entièrement vous-même sans aucune intervention de développeur.</li></ul><h2>Quand React est le meilleur choix</h2><p>Pour la plupart des PME européennes en 2026, le développement React est l'investissement le plus judicieux :</p><ul><li>Vous voulez que votre site se charge rapidement et se positionne bien sur Google dès le premier jour.</li><li>Vous servez des clients dans plusieurs pays européens et avez besoin du multilingue.</li><li>Vous attachez de l'importance à la qualité du design et souhaitez une expérience de marque unique.</li><li>Vous voulez des coûts récurrents faibles et un minimum de soucis de sécurité.</li><li>Vous investissez dans votre site comme un actif commercial à long terme.</li></ul><p>Chez <a href=\"/fr/services\">DMC Kreatif</a>, nous développons exclusivement avec React, Next.js et Vite. Chaque site que nous livrons obtient un score de 95+ sur Google Lighthouse et se charge en moins de 2 secondes. Consultez notre <a href=\"/fr/portfolio\">portfolio</a> pour voir des résultats concrets.</p><h2>L'approche hybride : CMS headless</h2><p>Si vous appréciez l'expérience d'édition de WordPress mais souhaitez les performances de React, il existe un compromis : le <strong>CMS headless</strong>. Des outils comme Payload CMS, Strapi ou même WordPress en mode headless permettent à votre équipe de modifier le contenu via une interface familière tandis que le frontend est construit avec React. Cela vous offre le meilleur des deux mondes, bien qu'à un coût de développement initial légèrement plus élevé.</p><h2>Conclusion</h2><p>Pour les PME européennes planifiant un nouveau site web en 2026, le développement React offre de meilleures performances, un SEO plus solide, des coûts à long terme plus bas et une sécurité supérieure par rapport à WordPress. L'investissement initial est plus élevé, mais le coût total de possession sur 3 ans est généralement inférieur.</p><p>Vous ne savez pas quelle approche convient à votre entreprise ? <a href=\"/fr/contact\">Réservez une consultation gratuite</a> avec DMC Kreatif. Nous évaluerons vos besoins et recommanderons la solution la plus rentable.</p>",
@@ -1926,13 +1926,13 @@
   },
   "clientLogos": {
     "trustedBy": "APPROUVÉ PAR DES ENTREPRISES À TRAVERS L'EUROPE",
-    "projectsDelivered": "33+ projets livrés dans 4 pays"
+    "projectsDelivered": "10+ projets livrés dans 4 pays"
   },
   "whyUs": {
     "breadcrumb": "POURQUOI NOUS",
     "heroTag": "SYS.POURQUOI_NOUS",
     "heroTitle": "POURQUOI DMC KREATIF",
-    "heroDesc": "100+ professionnels, 200+ projets, 6 pays. Nous créons des sites web premium qui surpassent la concurrence.",
+    "heroDesc": "10+ projets livrés dans 4 pays européens. Nous créons des sites web premium qui surpassent la concurrence.",
     "reasonsTitle": "8 RAISONS DE NOUS CHOISIR",
     "reasonsTag": "SYS.DIFFÉRENCIATEURS",
     "reason1Title": "ADN Européen",
@@ -1942,7 +1942,7 @@
     "reason3Title": "Obsédés par la Performance",
     "reason3Desc": "Score Lighthouse 95+ garanti. Temps de chargement inférieur à 2 secondes. Core Web Vitals optimisés. Chaque milliseconde compte pour vos conversions et votre référencement.",
     "reason4Title": "Tarifs Transparents",
-    "reason4Desc": "Pas de frais cachés. Forfaits à prix fixe à partir de 349€. Mises à jour hebdomadaires sur l'avancement. Vous savez exactement ce que vous payez et quand c'est livré.",
+    "reason4Desc": "Pas de frais cachés. Forfaits à prix fixe à partir de 497€. Mises à jour hebdomadaires sur l'avancement. Vous savez exactement ce que vous payez et quand c'est livré.",
     "reason5Title": "Multilingue par Défaut",
     "reason5Desc": "EN, FR, NL, DE intégrés. Implémentation hreflang correcte, adaptation culturelle et rédaction de qualité native. Pas une simple traduction — une véritable localisation.",
     "reason6Title": "Équipes Dédiées",
