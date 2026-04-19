@@ -3,7 +3,7 @@ DirectoryIndex index.html
 
 # Security headers
 Header always set X-Content-Type-Options "nosniff"
-Header always set X-Frame-Options "SAMEORIGIN"
+# X-Frame-Options removed — CSP frame-ancestors 'none' is sufficient
 Header always set Referrer-Policy "strict-origin-when-cross-origin"
 Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
@@ -36,8 +36,8 @@ RewriteRule ^tr/(.+)$ /en/$1 [R=301,L]
 RewriteRule ^blog/(.+)$ /en/blog/$1 [R=301,L]
 RewriteRule ^blog/?$ /en/blog [R=301,L]
 
-# Redirect root to /en
-RewriteRule ^$ /en [R=301,L]
+# Redirect root to /en/ (single hop — avoid chain via /en → /en/)
+RewriteRule ^$ /en/ [R=301,L]
 
 # React SPA fallback
 RewriteCond %{REQUEST_FILENAME} !-f

@@ -142,6 +142,7 @@ export default function Header() {
 
         {/* Mobile menu button */}
         <button
+          type="button"
           onClick={() => setMenuOpen(!menuOpen)}
           className="xl:hidden border-2 border-neo-black p-3 hover:bg-neo-lime transition-colors focus-visible:outline-2 focus-visible:outline-neo-lime focus-visible:outline-offset-2"
           aria-label={menuOpen ? "Close menu" : "Open menu"}

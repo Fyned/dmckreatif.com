@@ -76,6 +76,7 @@ export default function PortfolioPage() {
           <SectionHeader
             title={t("portfolio.title", "Our Work")}
             subtitle={t("portfolio.tag", "PORTFOLIO")}
+            headingLevel={1}
           />
 
           {/* SEO intro paragraph */}

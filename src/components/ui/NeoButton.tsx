@@ -10,6 +10,7 @@ interface NeoButtonProps {
   type?: "button" | "submit";
   disabled?: boolean;
   external?: boolean;
+  ariaLabel?: string;
   className?: string;
 }
 
@@ -32,6 +33,7 @@ export default function NeoButton({
   type = "button",
   disabled = false,
   external = false,
+  ariaLabel,
   className = "",
 }: NeoButtonProps) {
   const { locale } = useParams();
@@ -58,6 +60,7 @@ export default function NeoButton({
         target="_blank"
         rel="noopener noreferrer"
         className={baseClasses}
+        aria-label={ariaLabel}
       >
         {children}
       </a>
@@ -76,7 +79,7 @@ export default function NeoButton({
         ? href
         : `/${locale ?? "en"}${href}`;
     return (
-      <Link to={to} className={baseClasses}>
+      <Link to={to} className={baseClasses} aria-label={ariaLabel}>
         {children}
       </Link>
     );
@@ -88,6 +91,7 @@ export default function NeoButton({
       onClick={onClick}
       disabled={disabled}
       className={baseClasses}
+      aria-label={ariaLabel}
     >
       {children}
     </button>

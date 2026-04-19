@@ -5,8 +5,6 @@ import { testimonials } from "@/lib/testimonials-data";
 import SectionHeader from "@/components/ui/SectionHeader";
 import CountryFlag from "@/components/ui/CountryFlag";
 import { fadeInUp, viewportConfig } from "@/lib/animations";
-import JsonLd from "@/components/seo/JsonLd";
-import { buildProfessionalServiceSchema } from "@/lib/seo-schemas";
 
 const borderColorMap: Record<string, string> = {
   "neo-lime": "border-neo-lime",
@@ -39,28 +37,8 @@ function StarRating({ rating }: { rating: number }) {
 export default function TestimonialsMarquee() {
   const { t } = useTranslation();
 
-  const reviewDates = [
-    "2024-03-15",
-    "2024-06-10",
-    "2024-09-22",
-    "2025-01-08",
-    "2025-05-18",
-    "2025-09-30",
-  ];
-
-  const reviewSchemaData = testimonials.map((item, i) => ({
-    author: t(`testimonials.${item.nameKey}`),
-    rating: item.rating,
-    body: t(`testimonials.${item.quoteKey}`),
-    company: item.company,
-    datePublished: reviewDates[i] ?? "2024-01-15",
-  }));
-
   return (
     <section className="py-section-sm lg:py-section section-alt">
-      {/* ProfessionalService with embedded AggregateRating + Reviews */}
-      <JsonLd data={buildProfessionalServiceSchema(reviewSchemaData)} />
-
       <div className="max-w-container mx-auto px-6 lg:px-10">
         <SectionHeader
           title={t("testimonials.sectionTitle")}

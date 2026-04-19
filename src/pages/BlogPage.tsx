@@ -65,6 +65,7 @@ export default function BlogPage() {
           <SectionHeader
             title={t("blog.title", "Blog")}
             subtitle={t("blog.subtitle", "INSIGHTS & ARTICLES")}
+            headingLevel={1}
           />
 
           {/* Intro */}
