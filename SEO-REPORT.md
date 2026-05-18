@@ -1,23 +1,23 @@
 # SEO Report — dmckreatif.com
-## Date: 2026-05-04
-## Overall Score: 79/100 (↓ from 81 on 2026-04-27)
+## Date: 2026-05-18
+## Overall Score: 77/100 (↓ from 79 on 2026-05-04)
 
 ---
 
 ### Executive Summary
 
-- **Score declined 2 points** — blog content gap worsened to 50 days, 2 new noindex gaps discovered, no prior open items resolved
-- **Week 6 unresolved:** Legal pages still indexed without `noindex` — this is the highest-value 5-minute fix remaining in the codebase
-- **50-day content gap:** Last blog post published 2026-03-15; freshness signals degrading; 11 December 2025 articles now 4.5–5 months old, approaching the 6-month review threshold
-- **New findings:** `TemplateOrderPage` and `TemplateOrderConfirmPage` have no `noindex` tag (though `robots.txt` partially mitigates); portfolio item #09 links to agency's own domain (self-referential); portfolio item #07 uses HTTP
-- **Monthly deep audit (May 1–7):** Full link audit, keyword gap analysis, schema deep-check, and accessibility findings included below
+- **Score declined 2 points** — 11 December 2025 articles crossed the 6-month freshness threshold; content gap now 64 days; all critical issues from the previous 2 reports remain unresolved
+- **7-week streak:** Legal pages still lack `noindex` — flagged since 2026-03-31, a 5-minute fix that has gone unresolved for 7 consecutive weekly reports
+- **Content freshness breach:** 11 articles dated 2025-12-01 to 2025-12-15 are now 6+ months old (today: 2026-05-18). Articles with "2026" in titles published in late 2025 are now visibly stale to searchers
+- **BeforeAfterSlider and IndustriesPage/TechnologiesPage schema gaps** — also unresolved since the prior cycle
+- **Portfolio data defects** persist: `ata-accountancy` uses HTTP, `gmg-design` self-references the agency domain
 
 ---
 
 ### 🔴 Critical Issues (fix immediately)
 
-#### 1. Legal Pages Missing `noindex` — **Week 6 unresolved**
-5 publicly-crawlable pages with no ranking value are being indexed, wasting crawl budget and risking thin-content signals. This was first flagged 2026-03-31 and has gone unresolved for 5 consecutive reports.
+#### 1. Legal Pages Missing `noindex` — **WEEK 7 UNRESOLVED**
+5 publicly-crawlable pages with no ranking value are fully indexed, wasting crawl budget and generating thin-content signals. First flagged 2026-03-31 — now 7 consecutive reports unresolved.
 
 | File | Route |
 |------|-------|
@@ -27,143 +27,149 @@
 | `src/pages/CookiePolicyPage.tsx` | `/:locale/cookie-policy` |
 | `src/pages/RefundPolicyPage.tsx` | `/:locale/refund-policy` |
 
-**Fix:** Add `noIndex={true}` to the `<SeoHead>` in each of the 5 files. 5-minute fix.
+Confirmed still unfixed: all 5 `SeoHead` blocks use title + description props only, no `noIndex={true}`.
+
+**Fix:** Add `noIndex={true}` to the `<SeoHead>` in each of the 5 files. One prop per file, ~5 minutes total.
 
 ---
 
-#### 2. Blog Content Gap — 50 Days Without New Article
-Last article published: **2026-03-15**. Google interprets extended publishing silence as reduced site activity, lowering crawl frequency and freshness scores for the entire domain.
+#### 2. Blog Content Gap — 64 Days Without New Article + 6-Month Freshness Breach
+Last article published: **2026-03-15**. Gap now at **64 days** (was 50 days last report).
 
-Additionally, **11 articles published in December 2025** are now 4.5–5 months old and will cross the 6-month "needs review" threshold within weeks. The highest-priority refresh candidate is the article with slug `state-of-web-development-2026` (dated 2026-12-15) — "2026 trends" content published in late 2025 appears stale to users and crawlers alike.
+More critically, as of today (2026-05-18), **11 articles dated 2025-12-01 through 2025-12-15 are now 6+ months old** and have crossed the "needs review" threshold. Articles with "2026" in their titles (e.g., `state-of-web-development-2026`, published 2025-12-15) are actively misleading — users and crawlers see "2026" in the headline but the content has not been refreshed in 6 months.
 
-**Fix:** Publish 1 new article immediately; schedule monthly refreshes for December 2025 articles.
+**Oldest articles (now urgent):**
+
+| Slug | Date | Age | Issue |
+|------|------|-----|-------|
+| `roi-professional-web-design` | 2025-12-01 | 5.6 mo | Refresh content |
+| `core-web-vitals-explained` | 2025-12-03 | 5.5 mo | Refresh content |
+| `ai-web-development-2026` | 2025-12-06 | 5.4 mo | "2026" title, stale |
+| `state-of-web-development-2026` | 2025-12-15 | 5.1 mo | "2026" title, stale — **highest priority** |
+| `multilingual-seo-europe` | 2025-12-12 | 5.2 mo | Refresh |
+| `web-design-construction` | 2025-12-09 | 5.3 mo | Refresh |
+
+**Fix:** Publish 1 new article immediately to break the 64-day gap. Update `dateModified` + add a "Last updated" note to the 6 stale articles listed above.
 
 ---
 
 #### 3. No Pre-rendering (SPA Indexability) — **P0 from CLAUDE.md, ongoing**
-The site is a client-side SPA. Googlebot must execute JavaScript to read any content. This remains the largest indexability risk for organic ranking across all 446 sitemap URLs.
+The entire site is a client-side SPA. Googlebot must execute JavaScript to read content. This affects all 446 sitemap URLs and is the single largest indexability risk across the site. No progress this cycle.
 
-**Fix:** Implement `vite-plugin-prerender` (documented in `CLAUDE.md:P0`). Priority routes: homepage × 4 locales, all 44 service detail pages, industries index, technologies index, blog index, contact, pricing.
+**Fix:** Implement `vite-plugin-prerender` as documented in `CLAUDE.md:P0`. Priority routes: 4 locale homepages, 44 service detail pages, industries/technologies indexes, blog index, contact, pricing.
 
 ---
 
-#### 4. TemplateOrderPage Missing `noindex` — **New**
-`src/pages/TemplateOrderPage.tsx` sets a title and description via `<Helmet>` but has no `noindex` tag. `robots.txt` disallows `/*/template-order` as a prefix, which covers the order page path — but `<meta name="robots" content="noindex, nofollow">` is defense-in-depth best practice for transactional pages.
+#### 4. TemplateOrderPage + TemplateOrderConfirmPage Missing `noindex` — **Week 2 unresolved**
+Both pages use `<Helmet>` directly with no `noindex` meta tag. `robots.txt` partially covers the order path but does not guarantee block of `confirm/:orderId` URLs. Defense-in-depth requires the HTML `<meta name="robots" content="noindex, nofollow" />` tag.
 
-`src/pages/TemplateOrderConfirmPage.tsx` has the same gap. Confirm page paths (`/*/templates/order/confirm/:orderId`) may not match the `template-order` disallow prefix depending on the URL structure.
-
-**Fix:** Add `<meta name="robots" content="noindex, nofollow" />` inside the `<Helmet>` block in both files.
+**Fix:** Add the meta robots tag inside the `<Helmet>` block in `src/pages/TemplateOrderPage.tsx` and `src/pages/TemplateOrderConfirmPage.tsx`.
 
 ---
 
 ### 🟡 Warnings (fix this week)
 
-#### 5. IndustriesPage & TechnologiesPage Missing JSON-LD — **Week 5 unresolved**
+#### 5. IndustriesPage & TechnologiesPage Missing JSON-LD — **Week 6 unresolved**
 
 | Page | File | Missing Schema |
 |------|------|----------------|
 | `/:locale/industries` | `src/pages/IndustriesPage.tsx` | `CollectionPage` + `ItemList` |
 | `/:locale/technologies` | `src/pages/TechnologiesPage.tsx` | `CollectionPage` + `ItemList` |
 
-**Fix:** Add `<JsonLd>` component with `buildWebPageSchema()` + inline `ItemList` (same pattern as `BlogPage.tsx:57`).
+**Fix:** Add `<JsonLd>` component with `buildWebPageSchema()` + inline `ItemList` (same pattern as `BlogPage.tsx`).
 
 ---
 
-#### 6. BeforeAfterSlider Missing `loading="lazy"` — **Week 5 unresolved**
-`src/components/portfolio/BeforeAfterSlider.tsx` lines 78 and 93: both `<img>` elements have `decoding="async"` but no `loading="lazy"`. Portfolio section renders far below the fold.
+#### 6. BeforeAfterSlider Missing `loading="lazy"` — **Week 6 unresolved**
+`src/components/portfolio/BeforeAfterSlider.tsx` lines 78 and 93: both `<img>` elements have `width`, `height`, and `decoding="async"` but no `loading="lazy"`. Portfolio section renders far below the fold.
 
-**Fix:** Add `loading="lazy"` to both `<img>` elements.
+**Fix:** Add `loading="lazy"` to both `<img>` elements in BeforeAfterSlider.tsx.
 
 ---
 
-#### 7. Portfolio URL Issues — **New**
+#### 7. Portfolio Data Issues — **Week 2 unresolved**
 
 | Item | File | Issue |
 |------|------|-------|
-| `ata-accountancy` (#07) | `src/lib/portfolio-data.ts` | `url` uses `http://` — not HTTPS. Verify if live site has SSL; update to `https://`. |
-| `gmg-design` (#09) | `src/lib/portfolio-data.ts` | `url` points to `https://dmckreatif.com` — agency's own domain. Visitors clicking "Visit Site" stay on the same page. Replace with the actual client URL. |
+| `ata-accountancy` (#07) | `src/lib/portfolio-data.ts:209` | URL uses `http://ataaccountancy.com` — should be HTTPS |
+| `gmg-design` (#09) | `src/lib/portfolio-data.ts:253` | URL points to `https://dmckreatif.com` — self-referential; replace with the actual client URL |
 
 ---
 
-#### 8. CaseStudiesPage Listing Images Missing `width`/`height` — **New**
-`src/pages/CaseStudiesPage.tsx` — card listing images lack explicit `width` and `height` attributes. This causes Cumulative Layout Shift (CLS) in browsers that don't fully respect CSS aspect-ratio before the image loads.
+#### 8. BreadcrumbList Null Item Bug — **P1 from CLAUDE.md, unconfirmed fix**
+`src/lib/seo-schemas.ts` `buildBreadcrumbSchema()` — edge case can produce `null` ListItem entries. A malformed BreadcrumbList generates Search Console rich result errors.
 
-**Fix:** Add `width={1200}` and `height={675}` to card `<img>` elements (matches the actual asset dimensions used across the portfolio).
-
----
-
-#### 9. Supabase Client Initialized Globally — **P0 from CLAUDE.md, ongoing**
-`src/lib/supabase.ts` is imported at module level by 6 lib files, triggering SDK initialization on every page load for all visitors — the majority of whom never authenticate. Adds unnecessary bundle overhead and network latency.
-
-**Fix:** Move `createClient()` inside a lazy getter; load only on routes wrapped by `AuthGuard` / `AdminGuard`.
+**Fix:** Add `.filter(Boolean)` or null guard on `listItems` array before building `itemListElement`.
 
 ---
 
-#### 10. Root Redirect & HSTS Missing — **P1 from CLAUDE.md, ongoing**
-No `.htaccess` handles:
-- Root `/` → `/{browser-locale}/` server-side redirect (blank SPA shell risk on direct navigation)
-- `Strict-Transport-Security` (HSTS) header
+#### 9. Sitemap `lastmod` Staleness — Non-blog pages
+All non-blog pages in the sitemap show `lastmod: 2026-03-02` (77 days ago). Blog posts use individual article dates correctly. Static pages (services, about, pricing, portfolio, contact) have not had their `lastmod` updated, even though content may have changed.
+
+**Fix:** Update `lastmod` for static pages to `2026-05-18`.
 
 ---
 
-#### 11. Organization Schema Not Using `@graph` Pattern — **P1 from CLAUDE.md, ongoing**
-Multiple JSON-LD scripts are injected per page via separate `<JsonLd>` components. Google's documentation recommends a single `@graph` array for correct entity relationship linking.
+#### 10. `SoftwareApplication` Schema — Review Author Type
+`src/lib/seo-schemas.ts` `buildTechnologySchema()` sets the review `author` as `{ "@type": "Organization" }`. Google's SoftwareApplication rich results eligibility requires `Person` as review author type.
+
+**Fix:** Change to `{ "@type": "Person", "name": "Musa Kerem Demirci" }` in `buildTechnologySchema()`.
 
 ---
 
-#### 12. Short Meta Description — `headless-wordpress` Tech Page — **New**
-`headless-wordpress` technology detail meta description is only **87 characters** — well below the recommended 150–160 range. Short descriptions are often auto-rewritten by Google with lower-quality text.
-
-**Fix:** Extend to 150–160 characters in `src/i18n/locales/en.json` under `seo.techDetail.headless-wordpress.description`.
+#### 11. Locale-Specific Blog Posts: `x-default` Points to Self — **Week 3 unresolved**
+FR/NL/DE-only blog posts in `sitemap.xml` include only `hreflang="{locale}"` + `hreflang="x-default"` with `x-default` pointing to the same locale URL. Per Google guidelines, `x-default` for locale-exclusive content should point to the canonical fallback (`/en/blog/`), not the same single-locale URL.
 
 ---
 
-#### 13. Meta Description Boilerplate Ending — **New**
-Approximately 20% of service and technology meta descriptions in `en.json` end with the phrase `"for European businesses."` While not identical full strings, near-duplicate endings are a weak quality signal. Diversify endings to reflect the specific service and target market more precisely.
+#### 12. Supabase Client Initialized Globally — **P0 from CLAUDE.md, ongoing**
+`src/lib/supabase.ts` is imported at module level, initializing the Supabase SDK for every visitor on every page — including the majority who never authenticate. Adds unnecessary bundle weight and network connection for all users.
+
+**Fix:** Move `createClient()` inside a lazy getter; initialize only on routes wrapped by `AuthGuard` / `AdminGuard`.
 
 ---
 
-#### 14. Locale-Specific Blog Posts: `x-default` Points to Self — **Week 2 unresolved**
-DE/FR/NL-only blog posts in `sitemap.xml` include only `hreflang="{locale}"` + `hreflang="x-default"` — with `x-default` pointing to the same locale URL. Per Google guidelines, `x-default` for locale-exclusive content should point to the blog index (`/en/blog/`) rather than the single-locale post URL.
+#### 13. Organization Schema Not Using `@graph` Pattern — **P1 from CLAUDE.md, ongoing**
+Multiple separate `<JsonLd>` components inject separate `<script type="application/ld+json">` blocks per page. Google recommends a single `@graph` array for correct entity relationship linking across schemas on the same page.
 
 ---
 
-#### 15. `SoftwareApplicationSchema` Review Author Type
-`src/lib/seo-schemas.ts` — `buildSoftwareApplicationSchema()` sets the review `author` as type `Organization`. Google's SoftwareApplication rich results eligibility favors `Person` as review author type.
-
-**Fix:** Change review `author` to `{ "@type": "Person", "name": "..." }` in the schema builder.
+#### 14. `headless-wordpress` Tech Page Meta Description Too Short
+`seo.techDetail.headless-wordpress.description` in `src/i18n/locales/en.json` is only ~87 characters. Recommended: 150–160 characters. Short descriptions are often auto-rewritten by Google with lower-quality text.
 
 ---
 
-#### 16. Blog Posts from December 2025 Approaching Freshness Threshold
-11 articles published 2025-12-01 to 2025-12-31 are now 4.5–5 months old and will cross the 6-month stale threshold in late May / early June 2026. Articles with "2025" or "2026" in their titles or H1s are especially vulnerable to searcher bounce from perceived outdated content.
-
-**Prioritized refresh list:**
-1. `state-of-web-development-2026` — title claims currency, dated Dec 2025
-2. Any article with "2025 trends" or "this year" language in the body
+#### 15. Meta Description Boilerplate Endings
+~20% of service and technology meta descriptions in `en.json` end with the phrase `"for European businesses."` Near-duplicate endings across pages weaken differentiation. Diversify to reflect specific service value propositions and regional specificity.
 
 ---
 
 ### 🟢 Passed Checks
 
-- **Robots.txt** — Correctly configured; allows all crawlers + 9 named AI bots (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, etc.); blocks CCBot, admin/auth/editor routes ✅
-- **H1 LCP Fix** — `HeroSection.tsx` H1 is outside the Framer Motion tree for instant LCP paint ✅
-- **Hreflang** — Implemented in both `<SeoHead>` HTML head and `sitemap.xml` for all 4 locales + `x-default`; EN-only content correctly restricts hreflang to `["en"]` ✅
-- **OpenGraph & Twitter Card** — All 32+ public page components emit `og:title`, `og:description`, `og:image` (1200×630), `og:locale`, `og:locale:alternate`, Twitter `summary_large_image` ✅
-- **Canonical URLs** — Set on every page via `SeoHead.tsx` ✅
-- **Schema Coverage** — 17 schema types across 820 lines of `seo-schemas.ts`; static `@graph` in `index.html` for site-level entities ✅
-- **FAQPage Schema Removed** — Correctly absent; Google restricted FAQ rich results to government/healthcare (August 2023) ✅
-- **Auth/Dashboard Pages Properly Blocked** — Login, register, forgot-password, reset-password, editor, dashboard, admin all have `noindex` or are disallowed in `robots.txt` ✅
-- **Sitemap Structure** — 446 URLs, trailing slashes consistent, all locale variants with hreflang annotations; about/ sub-pages included (28 URLs across 4 locales × 7 sub-pages) ✅
+- **Robots.txt** — Correctly configured; allows all search crawlers + 9 named AI bots (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot, etc.); properly blocks auth/admin/dashboard/editor routes ✅
+- **HSTS Header** — `.htaccess` contains `Strict-Transport-Security: max-age=31536000; includeSubDomains; preload` ✅
+- **www Redirect** — `.htaccess` correctly redirects `www.dmckreatif.com` → `dmckreatif.com` via 301 ✅
+- **Root Redirect** — `.htaccess` has `RewriteRule ^$ /en/ [R=301,L]` ✅
+- **Hreflang in HTML + Sitemap** — Implemented in both `SeoHead.tsx` and `sitemap.xml` for all 4 locales + `x-default`; EN-only content correctly restricts hreflang to `["en"]` ✅
+- **OpenGraph & Twitter Card** — All public page components emit `og:title`, `og:description`, `og:image` (1200×630), `og:locale`, `og:locale:alternate`, Twitter `summary_large_image` ✅
+- **Canonical URLs** — Set on every page via `SeoHead.tsx`; supports `canonicalLocale` override for EN-only content ✅
+- **Schema Coverage** — 17+ schema types across 820 lines of `seo-schemas.ts`; ProfessionalService, BreadcrumbList, Service, BlogPosting, SoftwareApplication, WebPage, AboutPage, ContactPage, OfferCatalog ✅
+- **Sitemap URL Count** — 446 URLs, trailing slashes consistent, hreflang annotations on all locale variants ✅
 - **About Sub-pages in Sitemap** — team, process, why-us, partners, careers, musa-kerem-demirci all present × 4 locales ✅
-- **Portfolio Images** — All WebP format in `/public/portfolio/`; `ProjectCard.tsx` has proper `width`, `height`, `loading="lazy"` ✅
-- **Self-hosted Fonts** — Syne and DM Sans preloaded via `<link rel="preload" as="font">` in `index.html`; no Google Fonts dependency ✅
-- **CaseStudyDetailPage Hero** — Uses `loading="eager"` + `fetchPriority="high"` for LCP image ✅
-- **Client Logo Alt Text** — `ClientLogoBar.tsx` uses client name as alt text ✅
-- **GrapeJS Code-split** — Heavy GrapeJS editor is auth-guarded and lazy-loaded; should not appear in main bundle ✅
+- **Portfolio Images** — All WebP format in `/public/portfolio/`; proper `width`, `height`, `loading="lazy"` on portfolio card images ✅
+- **Template Detail Pages in Sitemap** — 20 template detail URLs (EN only with `x-default`); previously flagged as missing, now confirmed present ✅
+- **Self-hosted Fonts** — Syne and DM Sans preloaded in `index.html`; zero Google Fonts dependency ✅
+- **H1 LCP** — `HeroSection.tsx` H1 renders outside Framer Motion for immediate LCP paint ✅
+- **Auth/Dashboard Blocked** — Login, register, forgot-password, reset-password, editor, dashboard, admin all disallowed in `robots.txt` ✅
+- **CSP Header** — Content-Security-Policy set in `.htaccess`; `frame-ancestors 'none'` replaces X-Frame-Options ✅
+- **Gzip Compression** — `mod_deflate` configured in `.htaccess` for HTML, CSS, JS, JSON, SVG, XML ✅
+- **Cache Headers** — Immutable for hashed assets (JS/CSS: 1 year), images (1 month), HTML (no-cache) ✅
 - **i18n Route Structure** — All public pages under `/:locale/` prefix; root `/` redirects to `/en` ✅
-- **BreadcrumbList** — Implemented via `buildBreadcrumbSchema()` across detail pages ✅
-- **Sitemap `changefreq`/`priority` absence** — Acceptable; Google ignores these signals as of 2023 ✅
+- **Case Study Detail Pages** — 6 case studies present in sitemap (EN only with `x-default`) ✅
+- **BreadcrumbList on Detail Pages** — `buildBreadcrumbSchema()` used on service, blog, industry, tech, city detail pages ✅
+- **Blog Related Services Links** — `relatedServiceSlugs` renders "Related Services" cards at article bottom; bidirectional linking partially present ✅
+- **Cookie Banner** — GDPR-compliant `CookieBanner` component included in App.tsx layout ✅
+- **WhatsApp CTAs** — Persistent `WhatsAppButton` present sitewide ✅
 
 ---
 
@@ -173,149 +179,86 @@ DE/FR/NL-only blog posts in `sitemap.xml` include only `hreflang="{locale}"` + `
 |--------|-----------|-----------|-------|
 | Total page components | 38 | 38 | → |
 | Sitemap URLs | 446 | 446 | → |
-| Blog articles total | 30 EN + 9 FR + 6 NL + 6 DE = **51** | 52 | → |
-| Blog content gap | **50 days** | 43 days | ↓ |
-| Blog posts near 6-month threshold | **11** (Dec 2025) | 0 | ↓ |
-| Pages with complete meta (title+desc+OG+canonical) | ~32/38 | ~33/38 | ↓ |
-| Pages with correct noindex where needed | **~30/38** | ~33/38 | ↓ (new gaps found) |
+| Blog articles total | 52 (31 EN + 9 FR + 6 NL + 6 DE) | 51 | +1 |
+| Blog content gap | **64 days** | 50 days | ↓ |
+| Articles past 6-month threshold | **11** (Dec 2025 now crossed) | 0 triggered | ↓ |
+| Pages with complete meta | ~32/38 | ~32/38 | → |
+| Pages with correct noindex | ~28/38 | ~30/38 | ↓ |
 | Images with descriptive alt tags | ~14/15 | ~14/15 | → |
-| Schema types deployed | **17** | 7 (undercounted prev.) | ↑ |
+| Schema types deployed | 17 | 17 | → |
 | i18n locale coverage | 4/4 | 4/4 | → |
 | Hreflang (HTML + sitemap) | ✅ | ✅ | → |
 | Pre-rendering | ❌ | ❌ | → |
 | Supabase lazy load | ❌ | ❌ | → |
-| Sitemap lastmod staleness | **50 days** (last: 2026-03-15) | 56 days (partial improvement) | ↑ |
-| Internal linking score | 6/10 | 7/10 | ↓ |
+| Sitemap lastmod (non-blog) | **77 days stale** (2026-03-02) | 63 days stale | ↓ |
+| Internal linking score | 6/10 | 6/10 | → |
+| Portfolio image format | WebP ✅ | WebP ✅ | → |
+| HSTS header | ✅ | ✅ | → |
 
----
-
-### 📅 Monthly Deep Audit — May 2026
-
-#### 12. Full Internal Link Audit
-
-**Pages with insufficient internal links (< 3 inbound links):**
-
-| Page | Issue |
-|------|-------|
-| `/:locale/industries` | Not in main nav or footer; only reachable from homepage CTAs and sitemap |
-| `/:locale/technologies` | Not in main nav or footer; only reachable from service detail pages and sitemap |
-| `/:locale/case-studies` (FR/NL/DE) | Individual case study pages exist only in EN; other locales have only the listing page with no deep linking |
-| `/:locale/about/musa-kerem-demirci` | Author bio page only linked from blog post bylines |
-| `/:locale/about/partners` | Partners page only reachable from `/about/` listing |
-
-**One-directional link problem:**
-Blog articles reference related services via `relatedServiceSlugs`, which renders "Related Services" cards at the bottom of each post — **but service detail pages do not link back to relevant blog posts**. This means blog equity flows to services, but services pass no equity back. Recommended fix: add a "Related Articles" section (2–3 posts) to each `ServiceDetailPage.tsx` using the inverse of `relatedServiceSlugs`.
-
-**City service sub-pages:**
-City-specific service sub-pages (`/en/web-agency-amsterdam/seo/` etc.) exist only in EN in both the sitemap and in-page hreflang. FR/NL/DE locales have only the top-level city pages. This is likely intentional (incomplete translation) but represents a structural gap for non-EN city targeting.
-
----
-
-#### 13. Keyword Gap Analysis — European Market (10 Targets)
-
-**High Priority — attainable with existing content structure:**
-
-| # | Keyword | Volume Est. | Language | Gap |
-|---|---------|-------------|----------|-----|
-| 1 | `agence web belgique` | High | FR | No dedicated FR Belgium landing page |
-| 2 | `website laten maken belgie` | High | NL | No dedicated NL Belgium landing page |
-| 3 | `web agency london` | High | EN | London city page exists; needs stronger content |
-| 4 | `création site internet artisan` | Medium | FR | No service page targeting trades/artisans |
-| 5 | `refonte site web PME` | Medium | FR | No blog article or service page on site redesign |
-
-**Medium Priority — new content required:**
-
-| # | Keyword | Volume Est. | Language | Gap |
-|---|---------|-------------|----------|-----|
-| 6 | `seo agency europe` | Medium | EN | No dedicated "SEO agency" landing page (only SEO as a service) |
-| 7 | `react development europe` | Medium | EN | Tech page exists but not geo-targeted |
-| 8 | `ecommerce entwicklung deutschland` | Medium | DE | No DE-language e-commerce article |
-| 9 | `digital marketing bureau nederland` | Medium | NL | No NL-language digital marketing article |
-| 10 | `website redesign small business uk` | Low-Medium | EN | UK market underserved in blog content |
-
----
-
-#### 14. Structured Data Deep Check
-
-**BreadcrumbList null fix (P1 from CLAUDE.md):**
-`src/lib/seo-schemas.ts:208` — BreadcrumbList builder may output `null` breadcrumb items in edge cases. This was flagged in CLAUDE.md P1 but not yet investigated. A malformed BreadcrumbList with null ListItem positions causes Google Search Console rich result errors.
-
-**Recommended investigation:** Add a guard in `buildBreadcrumbSchema()` to filter null/undefined items before building the `itemListElement` array.
-
-**SoftwareApplication review author type:**
-`buildSoftwareApplicationSchema()` uses `{ "@type": "Organization" }` as review author. Google's SoftwareApp rich results eligibility favors `Person` authors. Change to `{ "@type": "Person", "name": "..." }`.
-
-**@graph pattern (P1 from CLAUDE.md, ongoing):**
-Currently multiple `<JsonLd>` components inject separate `<script type="application/ld+json">` blocks per page. Pages can have 2–4 separate schema scripts. Merging into a single `@graph` array improves entity disambiguation — Google parses all entities in a single `@graph` as related to the same web page.
-
-**Missing schemas identified:**
-- `IndustriesPage` — no JSON-LD (Week 5 unresolved)
-- `TechnologiesPage` — no JSON-LD (Week 5 unresolved)
-- `TemplateDetailPage` — has `SeoHead` but schema type not confirmed; should have `SoftwareApplication` or `Product` schema
-
-**Schema quality summary:**
-
-| Schema | Status | Notes |
-|--------|--------|-------|
-| ProfessionalService | ✅ | Static @graph in index.html; includes aggregateRating + 6 Reviews |
-| BreadcrumbList | ⚠️ | null item fix needed (CLAUDE.md P1) |
-| Service | ✅ | Per service detail page |
-| BlogPosting | ✅ | Per blog post; datePublished + dateModified present |
-| SoftwareApplication | ⚠️ | Review author should be Person not Organization |
-| WebPage | ✅ | Generic fallback for unlisted page types |
-| AboutPage | ✅ | |
-| ContactPage | ✅ | |
-| CollectionPage | ⚠️ | Missing on IndustriesPage and TechnologiesPage |
-| ProfessionalService (city) | ✅ | Geo-targeted for city pages |
-| ItemList | ❌ | Missing on IndustriesPage and TechnologiesPage |
-
----
-
-#### 15. Accessibility Audit
-
-**Heading hierarchy** (based on component survey):
-- `HeroSection.tsx` — H1 confirmed outside Framer Motion (LCP fix applied) ✅
-- Service, industry, tech, blog detail pages — each uses a single H1 from i18n title key ✅
-- Risk area: Blog post content files in `src/data/blog/content/en/*.ts` inject raw HTML strings. If any article's HTML starts with `<h2>` or skips heading levels, the heading hierarchy breaks. No automated validation exists for injected blog HTML.
-
-**Recommended fix:** Add a CI lint step or build-time check that validates blog content HTML strings start with an `<h2>` (not `<h1>` — the page-level H1 comes from the `BlogPostPage.tsx` component itself).
-
-**Aria labels:**
-Interactive elements in GrapeJS editor are auth-gated. Main site components (navigation, modals, forms) were not audited deeply this cycle. Flagged for next deep audit.
+**URL category breakdown (sitemap):**
+| Category | URLs |
+|----------|------|
+| Service detail pages (all locales) | 180 |
+| City/local SEO pages | 46 |
+| Technology detail pages | 52 |
+| Industry detail pages | 36 |
+| Blog posts (all locales) | 55 |
+| Template detail pages | 20 |
+| Core pages (home, about, blog, contact, etc.) | ~40 |
+| Country pages | 4 |
+| Case study detail pages | 6 |
+| About sub-pages | ~28 |
+| Legal/utility pages | ~12 |
 
 ---
 
 ### 📝 Content Recommendations
 
-5 article topics to close the content gap and capture high-value European keywords:
+5 article topics to close the 64-day content gap and capture high-value European keywords (same priorities as last report, still open):
 
 | # | Title | Target Keywords | Locale | Priority |
 |---|-------|----------------|--------|----------|
-| 1 | "Agence Web Bruxelles — Création de Site Professionnel pour PME Belges" | agence web bruxelles, création site web belgique | FR | **High** |
-| 2 | "Website Laten Maken in België — Complete Gids voor Ondernemers" | website laten maken belgie, webdesign bureau antwerpen | NL | **High** |
-| 3 | "Refonte de Site Web en 2026 : Quand et Comment Repenser Votre Présence Digitale" | refonte site web, redesign site internet france | FR | **High** |
-| 4 | "React vs WordPress in 2026: Which Is Right for Your European Business?" | react website europe, wordpress alternative 2026 | EN | Medium |
-| 5 | "E-Commerce Development for French and Belgian Markets: Platform Guide 2026" | ecommerce développement france, boutique en ligne belgique | EN/FR | Medium |
+| 1 | "Agence Web Belgique — Création de Site pour PME Belges en 2026" | agence web belgique, création site internet bruxelles | FR | **Urgent** |
+| 2 | "Website Laten Maken in België — Praktische Gids 2026 voor KMO" | website laten maken belgie, webbureau antwerpen | NL | **Urgent** |
+| 3 | "Refonte de Site Web PME : Quand et Comment Repenser Votre Présence Digitale" | refonte site web, redesign site internet france 2026 | FR | **High** |
+| 4 | "E-Commerce Entwicklung für deutsche Unternehmen — Plattformvergleich 2026" | ecommerce entwicklung deutschland, onlineshop erstellen | DE | **High** |
+| 5 | "Digital Marketing Bureau Nederland: Wat Werkt in 2026" | digital marketing nederland, online marketing bureau | NL | Medium |
 
 ---
 
 ### 📅 Action Items (prioritized)
 
-1. **[IMMEDIATE — 5 min]** Add `noIndex={true}` to `SeoHead` in 5 legal pages — **6 weeks overdue**
+1. **[IMMEDIATE — 5 min]** Add `noIndex={true}` to `SeoHead` in 5 legal pages (`src/pages/PrivacyPage.tsx`, `TermsPage.tsx`, `LegalNoticePage.tsx`, `CookiePolicyPage.tsx`, `RefundPolicyPage.tsx`) — **7 weeks overdue**
 2. **[IMMEDIATE — 10 min]** Add `<meta name="robots" content="noindex, nofollow" />` to `TemplateOrderPage.tsx` and `TemplateOrderConfirmPage.tsx`
-3. **[THIS WEEK]** Publish 1 blog article to break 50-day content gap (see recommendations above)
-4. **[THIS WEEK]** Add `CollectionPage` + `ItemList` JSON-LD to `IndustriesPage.tsx` and `TechnologiesPage.tsx`
-5. **[THIS WEEK]** Add `loading="lazy"` to `BeforeAfterSlider.tsx` lines 78 and 93
-6. **[THIS WEEK]** Fix portfolio item #09 self-referential URL in `src/lib/portfolio-data.ts`; verify #07 HTTP→HTTPS
-7. **[THIS WEEK]** Update sitemap `<lastmod>` for all non-blog URLs to `2026-05-04`
-8. **[THIS WEEK]** Investigate BreadcrumbList null item bug at `src/lib/seo-schemas.ts:208`
-9. **[THIS WEEK]** Extend `headless-wordpress` tech meta description from 87 → 150+ chars
-10. **[THIS MONTH]** Schedule refreshes for 11 December 2025 articles before they hit the 6-month threshold (deadline: late May / early June)
-11. **[THIS MONTH]** Add "Related Articles" section to `ServiceDetailPage.tsx` using inverse of `relatedServiceSlugs`
-12. **[ONGOING]** Implement pre-rendering (`vite-plugin-prerender`) — highest-impact P0
-13. **[ONGOING]** Lazy-initialize Supabase client (only on auth routes)
-14. **[ONGOING]** Configure `.htaccess` for root redirect + HSTS
-15. **[ONGOING]** Refactor schema output to single `@graph` pattern
+3. **[IMMEDIATE]** Publish 1 new blog article to break 64-day content gap (see content recommendations above)
+4. **[IMMEDIATE]** Update `dateModified` + add content refreshes to 6 articles that crossed the 6-month threshold: `roi-professional-web-design`, `core-web-vitals-explained`, `ai-web-development-2026`, `state-of-web-development-2026`, `multilingual-seo-europe`, `web-design-construction`
+5. **[THIS WEEK]** Add `loading="lazy"` to `BeforeAfterSlider.tsx` image elements (lines 78 and 93)
+6. **[THIS WEEK]** Add `CollectionPage` + `ItemList` JSON-LD to `IndustriesPage.tsx` and `TechnologiesPage.tsx`
+7. **[THIS WEEK]** Fix `src/lib/portfolio-data.ts`: item `ata-accountancy` HTTP → HTTPS; item `gmg-design` self-referential URL → actual client URL
+8. **[THIS WEEK]** Update sitemap `<lastmod>` for all non-blog URLs to `2026-05-18`
+9. **[THIS WEEK]** Investigate and fix BreadcrumbList null item edge case in `src/lib/seo-schemas.ts`
+10. **[THIS WEEK]** Extend `headless-wordpress` tech meta description from ~87 → 150+ chars in `src/i18n/locales/en.json`
+11. **[THIS WEEK]** Change `SoftwareApplication` review `author` from `Organization` to `Person` in `buildTechnologySchema()`
+12. **[THIS MONTH]** Add "Related Articles" section to `ServiceDetailPage.tsx` using inverse of `relatedServiceSlugs` (improves internal linking score from 6/10 toward 8/10)
+13. **[THIS MONTH]** Fix `x-default` hreflang on locale-specific blog posts — change from self-reference to `/en/blog/`
+14. **[ONGOING]** Implement pre-rendering (`vite-plugin-prerender`) — P0, highest single impact fix
+15. **[ONGOING]** Lazy-initialize Supabase client (only on auth routes)
+16. **[ONGOING]** Refactor schema output to single `@graph` pattern per page
+
+---
+
+### Scoring Breakdown
+
+| Area | Score | Max | Notes |
+|------|-------|-----|-------|
+| Sitemap completeness | 13 | 15 | 446 URLs, hreflang present; non-blog lastmod 77 days stale |
+| Schema markup | 12 | 15 | 17 types deployed; missing on IndustriesPage, TechnologiesPage; author type bug |
+| Meta tags quality | 15 | 20 | noindex missing on 5 legal pages + 2 order pages; ~87-char description on headless-wordpress |
+| Robots.txt | 5 | 5 | Complete, with AI bot allowlist and auth route disallows |
+| Performance/images | 12 | 15 | WebP portfolio images, lazy loading mostly correct; BeforeAfterSlider missing loading="lazy"; SPA not prerendered |
+| i18n/hreflang | 12 | 15 | HTML + sitemap hreflang implemented; x-default bug on locale-only posts |
+| Content freshness | 8 | 15 | 64-day gap; 11 articles now 6+ months old |
+| **Total** | **77** | **100** | |
 
 ---
 
@@ -323,6 +266,7 @@ Interactive elements in GrapeJS editor are auth-gated. Main site components (nav
 
 | Date | Score | Key Events |
 |------|-------|-----------|
-| 2026-05-04 | **79/100** | 2 new noindex gaps; content gap 50 days; blog freshness threshold approaching; monthly deep audit run |
+| 2026-05-18 | **77/100** | 11 Dec 2025 articles crossed 6-month threshold; content gap 64 days; no prior issues resolved; HSTS/root redirect confirmed present (previous false flag corrected) |
+| 2026-05-04 | 79/100 | 2 new noindex gaps; content gap 50 days; blog freshness threshold approaching; monthly deep audit run |
 | 2026-04-27 | 81/100 | H1 LCP fix confirmed ✅; sitemap lastmod partially updated; no new fixes |
 | 2026-04-20 | 81/100 | Score unchanged; 4 image issues + Supabase global init persisting |
